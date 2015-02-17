@@ -11,8 +11,8 @@ organization := "edu.cmu.lti.nlp"
 scalaVersion := "2.10.3"
 
 libraryDependencies ++= Seq(
-  "edu.stanford.nlp" % "stanford-corenlp" % "3.3.1",
-  "edu.stanford.nlp" % "stanford-corenlp" % "3.3.1" classifier "models"
+//  "edu.stanford.nlp" % "stanford-corenlp" % "3.3.1",
+  "edu.stanford.nlp" % "stanford-corenlp" % "3.5.0" classifier "models"
 //  "org.scala-lang" % "scala-swing" % "2.10.3"
 )
 
@@ -33,6 +33,12 @@ logLevel in run := Level.Error  // don't clutter stdout with [info]s
 ivyLoggingLevel in run := UpdateLogging.Quiet
 
 traceLevel in run := 0
+
+mergeStrategy in assembly := {
+  case PathList("edu", "stanford", "nlp", "util", "OneToOneMap.class") => MergeStrategy.first
+  case PathList("src", "edu", "stanford", "nlp", "util", "OneToOneMap.java") => MergeStrategy.first
+  case x => (mergeStrategy in assembly).value(x)
+}
 
 javaOptions in run ++= Seq(
   "-Xmx4g",
