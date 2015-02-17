@@ -3,7 +3,7 @@ package BetterSequenceDecoder
 import edu.cmu.lti.nlp.amr.{Node, Span, Graph}
 import nlp.experiments.SequenceSystem
 
-import scala.collection.mutable.ArrayBuffer
+import scala.collection.JavaConversions._
 
 /**
  * Created by keenon on 2/16/15.
@@ -18,11 +18,11 @@ object Decoder {
 
     val sentence = line.split(" ")
 
-    val start = 0
-    val end = 1
-    val amrStr = "(e / empty)"
+    val spans : java.util.Set[edu.stanford.nlp.util.Triple[Integer,Integer,String]] = sequenceSystem.getSpans(line)
 
-    graph.addSpan(sentence, start, end, amrStr)
+    for (span : edu.stanford.nlp.util.Triple[Integer,Integer,String] <- spans) {
+      graph.addSpan(sentence, span.first, span.second, span.third)
+    }
 
     if (graph.getNodeById.size == 0) {  // no invoked concepts
       graph = Graph.AMREmpty

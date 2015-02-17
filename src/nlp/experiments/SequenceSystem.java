@@ -15,6 +15,7 @@ import edu.stanford.nlp.util.Triple;
 import nlp.stamr.AMR;
 import nlp.word2vec.Word2VecLoader;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.*;
 import java.util.function.Function;
@@ -26,23 +27,66 @@ public class SequenceSystem {
 
     AMRPipeline pipeline = new AMRPipeline();
 
+    public static void main(String[] args) {
+        SequenceSystem system = new SequenceSystem();
+        System.out.println(system.getSpans("I want to test you now").toString());
+    }
+
     public SequenceSystem() {
         try {
             trainSystems();
-        } catch (IOException e) {
+        } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
     }
 
-    public void trainSystems() throws IOException {
-        List<LabeledSequence> nerPlusPlusData = AMRPipeline.loadSequenceData("realdata/release-train-seq.txt");
-        List<LabeledSequence> dictionaryData = AMRPipeline.loadManygenData("realdata/train-manygen.txt");
+    public void getNERSystemForData(String dataPath) throws IOException, ClassNotFoundException {
+        String classifierPath = dataPath.replaceAll(".txt", "-classifier.ser.gz");
+        File f = new File(classifierPath);
+        if (!f.exists()) {
+            System.out.println("Loading sequence data");
+            List<LabeledSequence> nerPlusPlusData = AMRPipeline.loadSequenceData(dataPath);
+            System.out.println("Generating NER++ training data");
+            List<Pair<Pair<LabeledSequence,Integer>,String>> nerPlusPlusForClassifier = AMRPipeline.getNERPlusPlusForClassifier(nerPlusPlusData);
+            pipeline.nerPlusPlus.sigma = 0.5;
+            System.out.println("Training NER++ classifier");
+            pipeline.nerPlusPlus.train(nerPlusPlusForClassifier);
+            System.out.println("Saving NER++ classifier");
+            pipeline.nerPlusPlus.writeToFile(classifierPath);
+        }
+        else {
+            System.out.println("Reading NER++ classifier");
+            pipeline.nerPlusPlus.readFromFile(classifierPath);
+        }
+    }
 
-        pipeline.nerPlusPlus.sigma = 0.5;
-        pipeline.nerPlusPlus.train(AMRPipeline.getNERPlusPlusForClassifier(nerPlusPlusData));
+    public void getManygenSystemForData(String dataPath) throws IOException, ClassNotFoundException {
+        String classifierPath = dataPath.replaceAll(".txt", "-classifier.ser.gz");
+        File f = new File(classifierPath);
+        if (!f.exists()) {
+            System.out.println("Loading manygen data");
+            List<LabeledSequence> dictionaryData = AMRPipeline.loadManygenData(dataPath);
 
-        pipeline.dictionaryLookup.type = LinearPipe.ClassifierType.BAYESIAN;
-        pipeline.dictionaryLookup.train(AMRPipeline.getDictionaryForClassifier(dictionaryData));
+            System.out.println("Generating manygen training data");
+            List<Pair<Triple<LabeledSequence,Integer,Integer>,String>> dictionaryForClassifier = AMRPipeline.getDictionaryForClassifier(dictionaryData);
+            pipeline.dictionaryLookup.type = LinearPipe.ClassifierType.BAYESIAN;
+            System.out.println("Training manygen classifier");
+            pipeline.dictionaryLookup.train(dictionaryForClassifier);
+            System.out.println("Saving manygen classifier");
+
+            pipeline.dictionaryLookup.writeToFile(classifierPath);
+        }
+        else {
+            System.out.println("Reading manygen classifier");
+            pipeline.nerPlusPlus.readFromFile(classifierPath);
+        }
+    }
+
+    public void trainSystems() throws IOException, ClassNotFoundException {
+        boolean trainOnSmallerSet = true;
+
+        getNERSystemForData(trainOnSmallerSet ? "data/train-400-seq.txt" : "data/release-train-seq.txt");
+        getManygenSystemForData("data/train-manygen.txt");
     }
 
     StanfordCoreNLP cachedCore = null;
@@ -70,9 +114,39 @@ public class SequenceSystem {
         return cachedCore;
     }
 
+    StanfordCoreNLP cachedFallbackCore = null;
+
+    public StanfordCoreNLP getCachedFallbackCoreNLP() {
+        if (cachedFallbackCore == null) {
+            Properties props = new Properties();
+            props.put("annotators", "tokenize, ssplit, pos, lemma, ner, regexner1, regexner2, parse, dcoref");
+            props.put("curator.host", "localhost"); // point to the curator host
+            props.put("curator.port", "9010"); // point to the curator port
+
+            props.put("customAnnotatorClass.regexner1", "edu.stanford.nlp.pipeline.TokensRegexNERAnnotator");
+            props.put("regexner1.mapping", "data/kbp_regexner_mapping_nocase.tab");
+            props.put("regexner1.validpospattern", "^(NN|JJ).*");
+            props.put("regexner1.ignorecase", "true");
+            props.put("regexner1.noDefaultOverwriteLabels", "CITY");
+
+            props.put("customAnnotatorClass.regexner2", "edu.stanford.nlp.pipeline.TokensRegexNERAnnotator");
+            props.put("regexner2.mapping", "data/kbp_regexner_mapping.tab");
+            props.put("regexner2.ignorecase", "false");
+            props.put("regexner2.noDefaultOverwriteLabels", "CITY");
+
+            cachedFallbackCore = new StanfordCoreNLP(props, false);
+        }
+        return cachedFallbackCore;
+    }
+
     public Set<Triple<Integer,Integer,String>> getSpans(String sentence) {
         Annotation annotation = new Annotation(sentence);
-        getCoreNLP().annotate(annotation);
+        try {
+            getCoreNLP().annotate(annotation);
+        }
+        catch (Exception e) {
+            getCachedFallbackCoreNLP().annotate(annotation);
+        }
 
         List<CoreLabel> tokensList = annotation.get(CoreAnnotations.TokensAnnotation.class);
         String[] tokens = new String[tokensList.size()];

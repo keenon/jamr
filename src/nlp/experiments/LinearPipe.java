@@ -1,5 +1,6 @@
 package nlp.experiments;
 
+import com.sun.corba.se.impl.orbutil.ObjectWriter;
 import edu.stanford.nlp.classify.*;
 import edu.stanford.nlp.ling.BasicDatum;
 import edu.stanford.nlp.ling.Datum;
@@ -713,5 +714,33 @@ public class LinearPipe<IN,OUT> {
         }
 
         bw.close();
+    }
+
+    public void writeToFile(String path) throws IOException {
+        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(path));
+        oos.writeDouble(sigma);
+        oos.writeDouble(epsilon);
+        oos.writeObject(type);
+        if (bucketClassifier != null) {
+            oos.writeBoolean(true);
+            oos.writeObject(bucketClassifier);
+        }
+        else {
+            oos.writeBoolean(false);
+        }
+        oos.writeObject(classifiers);
+    }
+
+    public void readFromFile(String path) throws IOException, ClassNotFoundException {
+        ObjectInputStream ois = new ObjectInputStream(new FileInputStream(path));
+        sigma = ois.readDouble();
+        epsilon = ois.readDouble();
+        type = (ClassifierType) ois.readObject();
+
+        boolean hasBucketClassifier = ois.readBoolean();
+        if (hasBucketClassifier) {
+            bucketClassifier = (Classifier<Integer, String>) ois.readObject();
+        }
+        classifiers = (List<Classifier<OUT, String>>) ois.readObject();
     }
 }

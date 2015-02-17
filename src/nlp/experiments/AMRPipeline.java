@@ -59,7 +59,7 @@ public class AMRPipeline {
 
     static {
         try {
-            embeddings = Word2VecLoader.loadData("realdata/google-300-fulldata.ser.gz");
+            embeddings = Word2VecLoader.loadData("data/google-300-fulldata.ser.gz");
             frameManager = new FrameManager("data/frames");
         } catch (IOException e) {
             e.printStackTrace();
