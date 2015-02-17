@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# cleans project
+$(dirname $0)/sbt clean
