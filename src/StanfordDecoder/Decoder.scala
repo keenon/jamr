@@ -1,6 +1,6 @@
-package BetterSequenceDecoder
+package edu.cmu.lti.nlp.amr.StanfordDecoder
 
-import edu.cmu.lti.nlp.amr.{Node, Span, Graph}
+import edu.cmu.lti.nlp.amr.Graph
 import nlp.experiments.SequenceSystem
 
 import scala.collection.JavaConversions._

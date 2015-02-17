@@ -44,12 +44,20 @@ mergeStrategy in assembly := {
   case PathList("src", "edu", "stanford", "nlp", "util", "OneToOneMap.java") => MergeStrategy.first
   case PathList("META-INF", "maven", "org.antlr", "antlr-runtime", "pom.properties") => MergeStrategy.first
   case PathList("META-INF", "maven", "org.antlr", "antlr-runtime", "pom.xml") => MergeStrategy.first
+  case PathList("META-INF", "maven", "de.jollyday", xs @ _*) => MergeStrategy.first
   case PathList("org", "antlr", "runtime", xs @ _*) => MergeStrategy.first
+  case PathList("com", "google", "protobuf", xs @ _*) => MergeStrategy.first
+  case PathList("edu", "berkeley", "nlp", xs @ _*) => MergeStrategy.first
+  case PathList("java_cup", xs @ _*) => MergeStrategy.first
+  case PathList("junit", xs @ _*) => MergeStrategy.first
+  case PathList("org", "ejml", xs @ _*) => MergeStrategy.first
+  case PathList("org", "hamcrest", xs @ _*) => MergeStrategy.first
+  case PathList("org", "junit", xs @ _*) => MergeStrategy.first
   case x => (mergeStrategy in assembly).value(x)
 }
 
 javaOptions in run ++= Seq(
-  "-Xmx4g",
+  "-Xmx8g",
   "-XX:MaxPermSize=256m",
   "-ea",
   "-Dfile.encoding=UTF-8",

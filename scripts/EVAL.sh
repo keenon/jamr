@@ -74,6 +74,22 @@ ${JAMR_HOME}/run AMRParser \
 
 ${JAMR_HOME}/run AMRParser \
   --stage1-oracle \
+  --stanford-chunk-gen \
+  --stage1-concept-table "${MODEL_DIR}/conceptTable.train" \
+  --stage1-weights "${STAGE1_WEIGHTS}" \
+  --stage2-weights "${STAGE2_WEIGHTS}" \
+  --dependencies "${OUTPUT}.deps" \
+  --training-data "${OUTPUT}.aligned.no_opN" \
+  --ner "${OUTPUT}.IllinoisNER" \
+  --tok "${OUTPUT}.snt.tok" \
+  -v 0 \
+  ${PARSER_OPTIONS} \
+  < "${INPUT}" \
+  > "${OUTPUT}.parsed-stanford-concepts" \
+  2> "${OUTPUT}.parsed-stanford-concepts.err"
+
+${JAMR_HOME}/run AMRParser \
+  --stage1-oracle \
   --stage1-concept-table "${MODEL_DIR}/conceptTable.train" \
   --stage1-weights "${STAGE1_WEIGHTS}" \
   --stage2-weights "${STAGE2_WEIGHTS}" \
@@ -92,6 +108,9 @@ rm "$OUTPUT.deps" "$OUTPUT.IllinoisNER" "$OUTPUT.tok" "$OUTPUT.snt.tok" "$OUTPUT
 echo ""
 echo "  ----- Evaluation: Smatch (all stages) -----" | tee "$OUTPUT.results"
 "${JAMR_HOME}/scripts/smatch_v1_0/smatch_modified.py" --pr -f "${OUTPUT}.parsed" "$TEST_FILE" 2>&1 | tee -a "$OUTPUT.results"
+echo "" | tee -a "$OUTPUT.results"
+echo "  ----- Evaluation: Smatch (stanford concept ID) -----" | tee -a "$OUTPUT.results"
+"${JAMR_HOME}/scripts/smatch_v1_0/smatch_modified.py" --pr -f "${OUTPUT}.parsed-stanford-concepts" "$TEST_FILE" 2>&1 | tee -a "$OUTPUT.results"
 echo "" | tee -a "$OUTPUT.results"
 echo "  ----- Evaluation: Smatch (gold concept ID) -----" | tee -a "$OUTPUT.results"
 "${JAMR_HOME}/scripts/smatch_v1_0/smatch_modified.py" --pr -f "${OUTPUT}.parsed-gold-concepts" "$TEST_FILE" 2>&1 | tee -a "$OUTPUT.results"

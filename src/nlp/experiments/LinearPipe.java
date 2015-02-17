@@ -150,7 +150,7 @@ public class LinearPipe<IN,OUT> {
         }
     }
 
-    private class Parmap<E> implements Runnable {
+    public class Parmap<E> implements Runnable {
         List<Pair<IN,OUT>> data;
         Object[] outs;
         int threadIdx;
@@ -728,6 +728,13 @@ public class LinearPipe<IN,OUT> {
         else {
             oos.writeBoolean(false);
         }
+        if (memorizedClassifier != null) {
+            oos.writeBoolean(true);
+            oos.writeObject(memorizedClassifier);
+        }
+        else {
+            oos.writeBoolean(false);
+        }
         oos.writeObject(classifiers);
         oos.close();
     }
@@ -741,6 +748,10 @@ public class LinearPipe<IN,OUT> {
         boolean hasBucketClassifier = ois.readBoolean();
         if (hasBucketClassifier) {
             bucketClassifier = (Classifier<Integer, String>) ois.readObject();
+        }
+        boolean hasMemorizedClassifier = ois.readBoolean();
+        if (hasMemorizedClassifier) {
+            memorizedClassifier = (TwoDimensionalCounter<String, OUT>) ois.readObject();
         }
         classifiers = (List<Classifier<OUT, String>>) ois.readObject();
         ois.close();

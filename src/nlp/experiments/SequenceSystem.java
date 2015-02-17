@@ -26,10 +26,11 @@ import java.util.function.Function;
 public class SequenceSystem {
 
     AMRPipeline pipeline = new AMRPipeline();
+    static boolean DEBUG = true;
 
     public static void main(String[] args) {
         SequenceSystem system = new SequenceSystem();
-        System.out.println(system.getSpans("China will sign a treaty with America on Friday, June 3").toString());
+        System.out.println(system.getSpans("China will sign a treaty with America on Friday June 3").toString());
     }
 
     public SequenceSystem() {
@@ -44,18 +45,18 @@ public class SequenceSystem {
         String classifierPath = dataPath.replaceAll(".txt", "-classifier.ser.gz");
         File f = new File(classifierPath);
         if (!f.exists()) {
-            System.out.println("Loading sequence data");
+            if (DEBUG) System.out.println("Loading sequence data");
             List<LabeledSequence> nerPlusPlusData = AMRPipeline.loadSequenceData(dataPath);
-            System.out.println("Generating NER++ training data");
+            if (DEBUG) System.out.println("Generating NER++ training data");
             List<Pair<Pair<LabeledSequence,Integer>,String>> nerPlusPlusForClassifier = AMRPipeline.getNERPlusPlusForClassifier(nerPlusPlusData);
             pipeline.nerPlusPlus.sigma = 0.5;
-            System.out.println("Training NER++ classifier");
+            if (DEBUG) System.out.println("Training NER++ classifier");
             pipeline.nerPlusPlus.train(nerPlusPlusForClassifier);
-            System.out.println("Saving NER++ classifier");
+            if (DEBUG) System.out.println("Saving NER++ classifier");
             pipeline.nerPlusPlus.writeToFile(classifierPath);
         }
         else {
-            System.out.println("Reading NER++ classifier");
+            if (DEBUG) System.out.println("Reading NER++ classifier");
             pipeline.nerPlusPlus.readFromFile(classifierPath);
         }
     }
@@ -64,21 +65,21 @@ public class SequenceSystem {
         String classifierPath = dataPath.replaceAll(".txt", "-classifier.ser.gz");
         File f = new File(classifierPath);
         if (!f.exists()) {
-            System.out.println("Loading manygen data");
+            if (DEBUG) System.out.println("Loading manygen data");
             List<LabeledSequence> dictionaryData = AMRPipeline.loadManygenData(dataPath);
 
-            System.out.println("Generating manygen training data");
+            if (DEBUG) System.out.println("Generating manygen training data");
             List<Pair<Triple<LabeledSequence,Integer,Integer>,String>> dictionaryForClassifier = AMRPipeline.getDictionaryForClassifier(dictionaryData);
             pipeline.dictionaryLookup.type = LinearPipe.ClassifierType.BAYESIAN;
-            System.out.println("Training manygen classifier");
+            if (DEBUG) System.out.println("Training manygen classifier");
             pipeline.dictionaryLookup.train(dictionaryForClassifier);
-            System.out.println("Saving manygen classifier");
+            if (DEBUG) System.out.println("Saving manygen classifier");
 
             pipeline.dictionaryLookup.writeToFile(classifierPath);
         }
         else {
-            System.out.println("Reading manygen classifier");
-            pipeline.nerPlusPlus.readFromFile(classifierPath);
+            if (DEBUG) System.out.println("Reading manygen classifier");
+            pipeline.dictionaryLookup.readFromFile(classifierPath);
         }
     }
 
