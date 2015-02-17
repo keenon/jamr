@@ -24,7 +24,7 @@ object Decoder {
     val spans : java.util.Set[edu.stanford.nlp.util.Triple[Integer,Integer,String]] = sequenceSystem.getSpans(line)
 
     for (span : edu.stanford.nlp.util.Triple[Integer,Integer,String] <- spans) {
-      graph.addSpan(sentence, span.first, span.second, span.third + 1)
+      graph.addSpan(sentence, span.first, span.second + 1, span.third)
     }
 
     if (graph.getNodeById.size == 0) {  // no invoked concepts
