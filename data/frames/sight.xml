@@ -1,0 +1,35 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="see">
+        <note>
+            Frames file for 'see' based on revamping Chris' old frames file.
+        </note>
+        
+        <roleset id="sight.01" name="view" vncls="30.2">
+            <roles>
+                <role descr="viewer" n="0">
+                    <vnrole vncls="30.2" vntheta="Experiencer"/>
+                </role>
+                <role descr="thing viewed" n="1">
+                    <vnrole vncls="30.2" vntheta="Stimulus"/>
+                </role>
+            </roles>
+            
+            <example name="found">
+                <text>
+                    [No major oil concentrations]-1 have been sighted *-1 recently more than
+                    6 miles northwest of the source of the vessel, so much of it i naturally
+                    dissipating and evaporating.
+                </text>
+                <rel>sighted</rel>
+                <arg n="1"> *-1 --no major oil...</arg>
+                <arg f="TMP" n="M">recently</arg>
+                <arg f="LOC" n="M">more than 6 miles northwest of the source of the
+                    vessel
+                </arg>
+                
+            </example>
+        </roleset>
+        <note>frame by Perryn</note>
+    </predicate>
+</frameset>

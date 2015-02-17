@@ -1,0 +1,65 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="freeze">
+        <roleset id="freeze.01" name="cause to be frozen" vncls="26.5 45.4">
+            <roles>
+                <role descr="causer of freezing" n="0">
+                    <vnrole vncls="26.5" vntheta="Agent"/>
+                    <vnrole vncls="45.4" vntheta="Agent"/>
+                </role>
+                <role descr="thing freezing" n="1">
+                    <vnrole vncls="26.5" vntheta="Material"/>
+                    <vnrole vncls="45.4" vntheta="Patient"/>
+                </role>
+                <role descr="totally unnecessary secondary predication on arg1" n="2"/>
+            </roles>
+            
+            <example name="metaphorical freezing">
+                <inflection aspect="ns" form="infinitive" person="ns" tense="ns" voice="ns"/>
+                <text>
+                    Under the Racketeer Influenced and Corrupt Organizations law, or
+                    RICO, [the government]-1 has the authority *trace*-1 to seek *trace*-1 to
+                    freeze or seize a defendant's assets before trial.  
+                </text>
+                <arg n="0">*trace*</arg>
+                <rel>freeze</rel>
+                <arg n="1">a defendant 's assets</arg>
+            </example>
+            
+            <example name="all args" src="wind.01">
+                <text>
+                    John froze the water solid.
+                </text>
+                <arg n="0">John</arg>
+                <rel>froze</rel>
+                <arg n="1">the water</arg>
+                <arg n="2">solid</arg>
+            </example>
+        </roleset>
+        
+        <roleset id="freeze.02" name="block" vncls="-">
+            <roles>
+                <role descr="blocker, Agent" n="0"/>
+                <role descr="Theme (action or object being stopped)" n="1"/>
+                <role descr="attribute of arg1" n="2"/>
+                <role descr="Instrument" n="3"/>
+            </roles>
+            
+            <example name="passive">
+                <inflection aspect="ns" form="participle" person="third" tense="past" voice="passive"/>
+                <text>
+                    John-1 was frozen *trace*-1 out of graduating by his advisor's
+                    animosity.  And the fact that John didn't do any of his work.
+                </text>
+                <rel>frozen</rel>
+                <arg n="1">*trace*</arg>
+                <arg n="2">out of graduating</arg>
+                <arg n="3">by his advisor's animosity</arg>
+            </example>
+            
+            <note>
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

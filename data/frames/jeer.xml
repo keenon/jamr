@@ -1,0 +1,27 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="jeer">
+        <note>
+            Automatically created based on framefiles: frown (40.2)
+        </note>
+        <roleset id="jeer.01" name="laugh" vncls="40.2">
+            <roles>
+                <role descr="jeer-er" n="0">
+                    <vnrole vncls="40.2" vntheta="Agent"/>
+                </role>
+                <role descr="jeered at" n="1">
+                    <vnrole vncls="40.2" vntheta="Cause"/><vnrole vncls="40.2" vntheta="Recipient"/>
+                </role>
+            </roles>
+            <example name="All args" src="web usage" type="">
+                <text>They jeered at him for bringing the child.</text>
+                <note></note>
+                <arg f="" n="0">They</arg>
+                <rel f="">jeered</rel>
+                <arg f="" n="1">at him</arg>
+                <arg f="CAU" n="m">for bringing the child</arg>
+            </example>
+            <note>Edited by hwangd</note>
+        </roleset>
+    </predicate>
+</frameset>

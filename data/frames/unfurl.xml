@@ -1,0 +1,51 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="unfurl">
+        <note>
+            Frames file for 'unfurl' based on internet usage examples, expansion
+            via VerbNet.Verbnet entry 45.4, comparison with 'unfold.'
+        </note>
+        
+        <roleset id="unfurl.01" name="(cause to) become unfurled" vncls="45.4">
+            <roles>
+                <role descr="Agent, cause of unfurling" n="0">
+                    
+                    <vnrole vncls="45.4" vntheta="Agent"/>
+                </role>
+                
+                <role descr="Entity unfurled" n="1">
+                    
+                    <vnrole vncls="45.4" vntheta="Patient"/>
+                </role>
+                
+            </roles>
+            
+            <example name="transitive">
+                <text>
+                    From the tallest tower, they unfurled a banner which read 'Property Act
+                    - Housing for local people.' 
+                </text>
+                <arg n="M" f="DIR">From the tallest tower</arg>
+                <arg n="0">they</arg>
+                <rel>unfurled</rel>
+                <arg n="1">a banner which read 'Property Act - Housing for local people</arg>
+            </example>
+            
+            <example name="unaccusative, unfurling flowers">
+                <text>
+                    [The bright golden petals]-1 seemed to sense she was there and *-1 slowly
+                    unfurled to face her.
+                </text>
+                <arg n="1">*-1</arg>
+                <arg n="M" f="MNR">slowly</arg>
+                <rel>unfurled</rel>
+                <arg n="M" f="PRP">to face her</arg>
+            </example>
+            
+            <note>
+                Frame created by Claire
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

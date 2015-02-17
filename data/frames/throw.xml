@@ -1,0 +1,234 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="throw">
+        <note>
+            Frames file for 'throw' based on sentences in financial subcorpus.
+            Verbnet entry throw-17.1, other framed members include fire kick and
+            pass.  Comparison to 'cast'.
+        </note>
+        
+        <roleset id="throw.01" name="throw" vncls="17.1">
+            <roles>
+                <role descr="thrower" n="0">
+                    
+                    <vnrole vncls="17.1" vntheta="Agent"/>
+                </role>
+                
+                <role descr="thing thrown" n="1">
+                    
+                    <vnrole vncls="17.1" vntheta="Patient"/>
+                </role>
+                
+                <role descr="thrown at, to, over, etc" n="2">
+                    
+                    <vnrole vncls="17.1" vntheta="Destination"/>
+                </role>
+                
+            </roles>
+            
+            <example name="idiom: throw in the towel">
+                <text>
+                    [Thermo Electron]-1 acquired some 6% of Milton Roy's common stock
+                    before *trace*-1 throwing in the towel and reducing its stake in
+                    early September. 
+                </text>
+                <arg n="0">*trace*</arg>
+                <rel>throwing</rel>
+                <arg n="2">in</arg>
+                <arg n="1">the towel</arg>
+                <arg f="TMP" n="M">in early September</arg>
+            </example>
+            
+            <example name="throw into doubt">
+                <text>
+                    In the wake of Campeau's problems, prices of junk bonds tumbled,
+                    *trace* throwing into doubt the ability of corporate acquirers to
+                    finance large takeovers with the help of junk bond sales. 
+                </text>
+                <arg n="0">*trace*</arg>
+                <rel>throwing</rel>
+                <arg n="2">into doubt</arg>
+                <arg n="1">the ability of corporate acquirers to finance large
+                    takeovers with the help of junk bond sales
+                </arg>
+            </example>
+            
+            <note>
+                The trace points to the event of &quot;prices of junk bonds tumbled&quot;, which
+                is not a constituent in the tree.  Therefore the trace gets no target.
+            </note>
+            
+            <example name="another direction">
+                <text>
+                    ``[Stocks]-1 were being thrown *trace*-1 out of windows at any price.'' 
+                </text>
+                <rel>thrown</rel>
+                <arg n="1">*trace*</arg>
+                <arg n="2">out of windows</arg>
+                <arg n="M">at any price</arg>
+            </example>
+            
+            <note>
+            </note>
+            
+        </roleset>
+        
+        <roleset id="throw.03" name="hold" vncls="-">
+            <roles>
+                <role descr="holder" n="0"/>
+                <role descr="thing held" n="1"/>
+            </roles>
+            
+            <example name="throw a party">
+                <text>
+                    In an invention that drives Verdi purists bananas, Violetta lies
+                    dying in bed during the prelude, rising deliriously when then she
+                    remembers the great parties *trace-1* [she]-2 used *trace-2* to throw
+                    *trace-3*. 
+                </text>
+                <arg n="0">*trace-2*</arg>
+                <rel>throw</rel>
+                <arg n="1">*trace-3*</arg>
+                <arg n="M" f="RCL">*trace-1* -&gt;  the great parties</arg>
+            </example>
+            
+            <note>
+            </note>
+            
+        </roleset>
+    </predicate>
+    
+    <predicate lemma="throw_away">
+        <roleset id="throw.07" name="toss, get rid of" vncls="-">
+            <roles>
+                <role descr="thrower" n="0"/>
+                <role descr="thing gotten rid of" n="1"/>
+            </roles>
+            
+            <example name="Transitive">
+                <text>
+                    ... you should throw it away.
+                </text>
+                <arg n="0">you</arg>
+                <arg n="m" f="MOD">should</arg>
+                <rel>[throw] [away]</rel>
+                <arg n="1">it</arg>
+            </example>
+            <note>
+                Frame created by Jena
+            </note>
+            
+        </roleset>
+    </predicate>
+    
+    <predicate lemma="throw_in">
+        
+        <roleset id="throw.02" name="include" vncls="-">
+            <roles>
+                <role descr="agent, entity causing some grouping" n="0"/>
+                <role descr="theme, thing being included in some group" n="1"/>
+                <role descr="group" n="2"/>
+            </roles>
+            
+            <example name="and a set of Ginsu knives">
+                <text>
+                    *trace* Throw in its railroad, minerals, pipeline and oil assets,
+                    he and others argued, and the Chicago-based conglomerate should be
+                    worth 30 a share. 
+                </text>
+                <arg n="0">*trace*</arg>
+                <rel>[ Throw] [ in]</rel>
+                <arg n="1">its railroad, minerals, pipeline and oil
+                    assets
+                </arg>
+            </example>
+            
+            <note>
+                No target for this trace, since it's an imperative.
+            </note>
+            
+        </roleset>
+    </predicate>
+    
+    <predicate lemma="throw_out">
+        <roleset id="throw.04" name="say" vncls="-">
+            <roles>
+                <role descr="Sayer" n="0"/>
+                <role descr="Utterance" n="1"/>
+                <role descr="Hearer" n="2"/>
+            </roles>
+            
+            <example name="Transitive">
+                <text>
+                    Every once in a while someone will throw out a gentlemanly &quot;Can
+                    you make it a little cheaper?&quot; as they are handing me their money.
+                </text>
+                <arg n="m" f="TMP">Every once in a while</arg>
+                <arg n="0">someone</arg>
+                <arg n="m" f="MOD">will</arg>
+                <rel>[throw] [out]</rel>
+                <arg n="1">a gentlemanly &quot;Can you make it a little cheaper?;</arg>
+                <arg n="m" f="TMP">as they hand me their money</arg>
+            </example>
+            <note>
+                Frame edited by Arrick
+            </note>
+            
+        </roleset>
+        <roleset id="throw.06" name="toss, get rid of" vncls="-">
+            <roles>
+                <role descr="thrower" n="0"/>
+                <role descr="thing gotten rid of" n="1"/>
+            </roles>
+            
+            <example name="Transitive">
+                <text>
+                    ...a year's worth of food that-2 we-3 may end up *-3 throwing *T*-2 out.
+                </text>
+                <arg n="m" f="RCL">that-2 -> a year's worth of food</arg>
+                <arg n="0">*-3</arg>
+                <rel>[throwing] [out]</rel>
+                <arg n="1">*T*-2</arg>
+            </example>
+            <note>
+                Frame created by Jena
+            </note>
+            
+        </roleset>
+    </predicate>
+    
+    <predicate lemma="throw_up">
+        
+        <roleset id="throw.05" vncls="-" name="puke with object">
+            <roles>
+                <role n="0"  descr="puker"/>
+                <role n="1"  descr="former contents of stomach"/>
+            </roles>
+            
+            <example name="if it isn't steriods it's something else...">
+                
+                <text>
+                    [*PRO*-2]-1 Overcome *-1 by hunger pains [Sellers]-2 would eat massive amounts
+                    of food and then throw it up *PRO*-2 to make weight.
+                </text>
+                <arg n="m" f="ADV">*PRO*-2 Overcome *-1 by hunger pains</arg>
+                <arg n="0"        >Sellers</arg>
+                <arg n="m" f="MOD">would</arg>
+                <arg n="m" f="TMP">then</arg>
+                <rel              >[throw] [up]</rel>
+                <arg n="1"        >it</arg>
+                <arg n="m" f="PRP">*PRO*-2 to make weight</arg>
+            </example>
+            
+            <note>
+                Predicate added by Arrick
+            </note>
+            
+        </roleset>
+    </predicate>
+    
+    <note>
+        Other senses will undoubtedly appear.
+    </note>
+    
+</frameset>

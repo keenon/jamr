@@ -1,0 +1,35 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="scutter">
+        
+        <roleset framnet="" id="scutter.01" name="scutter" vncls="51.3.2">
+            <roles>
+                <role descr="entity moved, scutterer" f="" n="1">
+                    <vnrole vncls="51.3.2" vntheta="theme"/>
+                </role>
+                <role descr="EXT" f="" n="2"/>
+                <role descr="start point, or path" f="" n="3"/>
+                <role descr="end point" f="" n="4">
+                    <vnrole vncls="51.3.2" vntheta="location"/>
+                </role>
+                
+                <note/>
+            </roles>
+            <example name="from Google" src="web usage" type="">
+                <text>They scuttered swiftly towards the fire, raising and lowering their faces with erratic jerks, while the bean seeds rattled softly
+                    in the turtle shells.
+                </text>
+                <note/>
+                <arg f="" n="1">They</arg>
+                <rel f="">scuttered</rel>
+                <arg f="adv" n="m">swiftly</arg>
+                <arg f="" n="3">towards the fire</arg>
+                <arg f="adv" n="m">raising and lowering their faces with erratic jerks</arg>
+                <arg f="tmp" n="m">while teh bean seeds rattled softly in the turtle shells</arg>
+            </example>
+            <note>hand-checked by Kevin</note>
+        </roleset>
+        <note>Automatically created based on framefiles: zoom (51.3.2)</note>
+    </predicate>
+    <note/>
+</frameset>

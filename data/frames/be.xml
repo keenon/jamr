@@ -1,0 +1,129 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="be">
+        <note>
+            Frames file for 'be' based on sentences in wsj.  No Verbnet entry.
+        </note>
+        
+        <roleset id="be.01" vncls="-" name="copula">
+            <roles>
+                <role n="1"  descr="topic"/>
+                <role n="2"  descr="comment"/>
+            </roles>
+            
+            <example name="poor John">
+                <inflection person="third" tense="present" aspect="ns" voice="active" form="full"/>
+                <text>
+                    John is an idiot.
+                </text>
+                <arg n="1"        >John</arg>
+                <rel              >is</rel>
+                <arg n="2"        >an idiot</arg>
+            </example>
+            
+            <note>
+            </note>
+            
+        </roleset>
+        
+        <roleset id="be.02" vncls="-" name="existential">
+            <roles>
+                <role n="1"  descr="thing that is"/>
+            </roles>
+            
+            <example name="what it is, what it was, what it shall be">
+                <inflection person="third" tense="present" aspect="ns" voice="active" form="full"/>
+                <text>
+                    John doesn't think, therefore he isn't.
+                </text>
+                <arg n="1"        >he</arg>
+                <rel              >is</rel>
+                <arg n="m" f="NEG">n't</arg>
+            </example>
+            
+            <example name="with support">
+                <inflection person="third" tense="present" aspect="ns" voice="active" form="full"/>
+                <text>
+                    There's a foul odor in the air whenever John's around.
+                </text>
+                <arg n="1"        >a foul odor in the air</arg>
+                <rel              >'s</rel>
+                <arg n="m" f="TMP">whenever John's around</arg>
+            </example>
+            
+            <note>
+            </note>
+            
+        </roleset>
+        
+        <roleset id="be.03" vncls="-" name="auxiliary">
+            <roles>
+                <note>do not tag--no arguments!</note>
+            </roles>
+            
+            <example name="one of many">
+                <inflection person="ns" tense="ns" aspect="ns" voice="ns" form="ns"/>
+                <text>
+                    John is eating.
+                </text>
+                <note>
+                    Do not tag!
+                </note>
+            </example>
+        </roleset>
+    </predicate>
+    
+    <predicate lemma="be_like">
+        <note>
+            This usage is common in data that contains spoken English.  Examples taken
+            from EBC.
+        </note>
+        
+        <roleset id="be.04" vncls="-" name="be_like: multiword expression akin to &quot;say&quot;">
+            <roles>
+                <role n="O"  descr="speaker"/>
+                <role n="1"  descr="utterance"/>
+            </roles>
+            
+            <example name="definitely spoken">
+                <text>
+                    When it comes to ABC *T*-1 they be like A B.
+                </text>
+                <arg n="m" f="TMP">When it comes to ABC *T*-1</arg>
+                <arg n="0"        >they</arg>
+                <rel              >[ be] [ like]</rel>
+                <arg n="1"        >A B</arg>
+            </example>
+            
+            <example name="say">
+                <text>
+                    And I 'm like why 's the door open *T*?
+                </text>
+                <arg n="m" f="DIS">And</arg>
+                <arg n="0"        >I</arg>
+                <rel              >[ 'm] [ like]</rel>
+                <arg n="1"        >why 's the door open *T*?</arg>
+            </example>
+            
+            <example name="definitely spoken">
+                <text>
+                    When it comes to ABC *T*-1 they be like A B.
+                </text>
+                <arg n="m" f="TMP">When it comes to ABC *T*-1</arg>
+                <arg n="0"        >they</arg>
+                <rel              >[ be] [ like]</rel>
+                <arg n="1"        >A B</arg>
+            </example>
+            
+            <example name="one more example">
+                <text>
+                    I know 0 my producers are probably like ah uh.
+                </text>
+                <arg n="0"        >my producers</arg>
+                <rel              >[ are] [ like]</rel>
+                <arg n="1"        >ah uh</arg>
+            </example>
+            
+        </roleset>
+    </predicate>
+</frameset>

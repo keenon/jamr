@@ -1,0 +1,29 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="tinkle">
+        <note>
+            Frames file for 'tinkle' based on sentences in brown.
+        </note>
+        
+        <roleset id="tinkle.01" vncls="-" name="make a high tinny sound">
+            <roles>
+                <role n="1"  descr="emitter of sound"/>
+            </roles>
+            
+            <example name="alcohol">
+                <inflection person="ns" tense="ns" aspect="ns" voice="ns" form="ns"/>
+                <text>
+                    He came through from the Fleet Bar , which [*T*-1] was stag , with the ice cubes tinkling in a glass [0] he carried [*T*-2] .
+                </text>
+                <arg n="1">the ice cubes</arg>
+                <rel>tinkling</rel>
+                <arg n="M" f="LOC">in a glass [0] he carried [*T*-2]</arg>
+            </example>
+            
+            <note>
+                framed by Ben
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

@@ -1,0 +1,47 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="grieve">
+        <note>
+            Frames file for  'grieve' based on internet usage examples, automatic
+            expansion via VN.  Verbnet entry 31.1and 31.3-3, 31.3-8. 
+        </note>
+        
+        <roleset id="grieve.01" name="(cause to) feel extreme sadness"
+ vncls="31.1 31.3">
+            <roles>
+                <role descr="causer of grief" n="0">
+                    <vnrole vncls="31.1" vntheta="Cause"/>
+                </role>
+                <role descr="saddened entity" n="1">
+                    <vnrole vncls="31.1" vntheta="Experiencer"/>
+                </role>
+                <role descr="instrument or manner if separate from arg 0" n="2"/>
+            </roles>
+            
+            <example name="Over">
+                <text>
+                    Margot doesn't want them to grieve over her passing.
+                </text>
+                <arg n="0">them</arg>
+                <rel>grieve</rel>
+                <arg n="1">over her passing</arg>
+            </example>
+            
+            <example name="All Arguments">
+                <text>
+                    John grieved Mary greatly by refusing to flush.
+                </text>
+                <arg n="0">John</arg>
+                <rel>grieved</rel>
+                <arg n="1">Mary</arg>
+                <arg n="M" f="EXT">greatly</arg>
+                <arg n="2">by refusing to flush</arg>
+            </example>
+            
+            <note>
+                Frame created by Claire
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

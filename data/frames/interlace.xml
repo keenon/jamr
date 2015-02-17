@@ -1,0 +1,49 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="interlace">
+        <note>
+            Frames file for 'interlace' based on sentences in brown.
+        </note>
+        
+        <roleset id="interlace.01" vncls="22.2-2-1" name="mix, weave together">
+            <roles>
+                <role n="0"  descr="cause of interlacing">
+                    <vnrole vncls="22.2-2-1" vntheta="Agent"/>
+                </role>
+                <role n="1"  descr="first or all things woven together">
+                    <vnrole
+  vncls="22.2-2-1" vntheta="Patient1"/>
+                </role>
+                <role n="2"  descr="other thing, or end state">
+                    <vnrole vncls="22.2-2-1" vntheta="Patient2"/>
+                </role>
+            </roles>
+            
+            <example name="passive, separate objects">
+                <inflection person="ns" tense="present" aspect="ns" voice="passive" form="participle"/>
+                <text>
+                    Furthermore, the network in Figure 3 is only the basic net through
+                    which [other networks pertaining to logistics and the like]-1 are
+                    interlaced [*-1] [*T*-2]. 
+                </text>
+                <rel              >interlaced</rel>
+                <arg n="1"        >[*-1]</arg>
+                <arg n="2"        >[*T*-2]</arg>
+                <arg n="M" f="RCL">through which -&gt; only the basic net</arg>
+            </example>
+            
+            <example name="careful with passives">
+                <inflection person="ns" tense="ns" aspect="ns" voice="passive" form="participle"/>
+                <text>
+                    But it is the wooden sculpture from Bali, the one representing two
+                    men with their heads bent backward and [their bodies]-2 interlaced [*-2]
+                    by a fish, that I particularly call to your attention. 
+                </text>
+                <rel              >interlaced</rel>
+                <arg n="1"        >[*-2]</arg>
+                <arg n="2">by a fish</arg>
+            </example>
+            
+        </roleset>
+    </predicate>
+</frameset>

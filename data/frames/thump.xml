@@ -1,0 +1,62 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="thump">
+        <note>
+            Frames file for 'thump' based on sentences in brown.
+        </note>
+        
+        <roleset id="thump.01" vncls="-" name="hit">
+            <roles>
+                <role n="0"  descr="hitter"/>
+                <role n="1"  descr="thing hit"/>
+            </roles>
+            
+            <example name="tub thumping">
+                <inflection person="ns" tense="ns" aspect="ns" voice="active" form="infinitive"/>
+                <text>
+                    In an ideological argument, [the participants]-1 tend [*-1] to
+                    thump the table. 
+                </text>
+                <arg n="0"        >[*-1]</arg>
+                <rel              >thump</rel>
+                <arg n="1"        >the table</arg>
+            </example>
+        </roleset>
+        
+        <roleset id="thump.02" vncls="-" name="emit regular dull sounds">
+            <roles>
+                <role n="1"  descr="emitter of sound"/>
+            </roles>
+            
+            <example name="intransitive">
+                <inflection person="third" tense="past" aspect="progressive" voice="active" form="participle"/>
+                <text>
+                    It was nothing, though his heart was thumping wildly. 
+                </text>
+                <arg n="1"        >his heart</arg>
+                <rel              >thumping</rel>
+                <arg n="m" f="MNR">wildly</arg>
+            </example>
+            
+            <example name="with path">
+                <inflection person="ns" tense="ns" aspect="progressive" voice="active" form="participle"/>
+                <text>
+                    At 7:25 [two hotel doormen]-2 came [*-2] thumping down the steps,
+                    carrying a saw-horse to be set up as a barricade in front of the
+                    haberdashery store window next to the entranceway ... 
+                </text>
+                <arg n="1"        >[*-2]</arg>
+                <rel              >thumping</rel>
+                <arg n="m" f="DIR">down the stairs</arg>
+                <arg n="m" f="ADV">carrying a saw-horse to be set up as a barricade
+                    in front of the haberdashery store window next to the
+                    entranceway...
+                </arg>
+            </example>
+            
+            <note>
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

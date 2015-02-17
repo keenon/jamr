@@ -1,0 +1,32 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="verse">
+        <note>
+            Frames file for 'verse' based on frame file for 'familirize'.  No Verbnet entry.
+        </note>
+        
+        <roleset id="verse.01" name="make familiar" vncls="-">
+            <roles>
+                <role descr="agent, causer of familiarity" n="0"/>
+                <role descr="entity becoming familiar" n="1"/>
+                <role descr="familiar with" n="2"/>
+            </roles>
+            
+            <example name="no subject">
+                <text>
+                    [Matteo Ricci]-9 is regarded [*]-9 as one of the Westerners most deeply versed
+                    * in Chinese culture.
+                </text>
+                <arg n="1">* -> the Westerners</arg> 
+                <arg n="m" f="ADV">most deeply</arg>
+                <rel>versed</rel>
+                <arg n="2">in Chinese culture.</arg>
+            </example>
+            
+            <note>
+                Frame file created by Arrick
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

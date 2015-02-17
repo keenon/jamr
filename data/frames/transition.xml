@@ -1,0 +1,48 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="transition">
+        <note>
+            Frames file for 'transition' based on ebn instances.
+        </note>
+        
+        <roleset id="transition.01" name="change" vncls="26.6 45.4">
+            <roles>
+                <role descr="causer of change" n="0">
+                    
+                    <vnrole vncls="26.6" vntheta="Agent"/>
+                    <vnrole vncls="45.4" vntheta="Agent"/>
+                </role>
+                
+                <role descr="thing changing" n="1">
+                    
+                    <vnrole vncls="26.6" vntheta="Patient"/>
+                    <vnrole vncls="45.4" vntheta="Patient"/>
+                </role>
+                
+                <role descr="end state" n="2">
+                    
+                    <vnrole vncls="26.6" vntheta="Product"/>
+                </role>
+                
+                <role descr="start state" n="3">
+                    
+                    <vnrole vncls="26.6" vntheta="Material"/>
+                </role>
+                
+            </roles>
+            
+            <example name="good exercise">
+                <text>
+                    I-1 was able *-1 to transition from one exercise to another very
+                    seamlessly.
+                </text>
+                <arg n="0">*-1 -- I</arg>
+                <rel>transition</rel>
+                <arg n="3">from one exercise</arg>
+                <arg n="2">to another</arg>
+                <arg f="MNR" n="M">very seamlessly</arg>
+            </example>
+        </roleset>
+        <note>frame by Perryn</note>
+    </predicate>
+</frameset>

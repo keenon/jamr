@@ -1,0 +1,34 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="sheathe">
+        <note>
+            Frames file for 'sheathe' based on dictionary.com. Verbnet entry 9.10.
+        </note>
+        
+        <roleset id="sheathe.01" name="to put into a sheath" vncls="9.10">
+            <roles>
+                <role descr="sheather" n="0">
+                    <vnrole vncls="9.10" vntheta="Agent"/>
+                </role>
+                <role descr="thing sheathed" n="1">
+                    <vnrole vncls="9.10" vntheta="Theme"/>
+                </role>
+                <role descr="sheath, location" n="2">
+                    <vnrole vncls="9.10" vntheta="Location"/>
+                </role>
+            </roles>
+            
+            <example name="mideval weaponry">
+                <text>
+                    The good knight sheathed his sword in its scabbard.
+                </text>
+                <arg n="0">The good knight</arg>
+                <rel>sheathed</rel>
+                <arg n="1">his sword</arg>
+                <arg n="2">in its scabbard</arg>
+                
+            </example>
+        </roleset>
+        <note>frame by Perryn</note>
+    </predicate>
+</frameset>

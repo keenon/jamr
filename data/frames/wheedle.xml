@@ -1,0 +1,33 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="wheedle">
+        <note>
+            Frames file for 'wheedle' based on sentences in brown.
+        </note>
+        
+        <roleset id="wheedle.01" vncls="-" name="coax">
+            <roles>
+                <role n="0"  descr="coaxer"/>
+                <role n="1" descr="request"/>
+                <role n="2" descr="source of requested object/action"/>
+            </roles>
+            
+            <example name="transitive with source">
+                <inflection person="ns" tense="ns" aspect="ns" voice="ns" form="ns"/>
+                <text>
+                    Eileen must have wheedled a little out of Precious .
+                </text>
+                <arg n="0">Eileen</arg>
+                <arg n="M" f="MOD">must</arg>
+                <rel>wheedled</rel>
+                <arg n="1">a little</arg>
+                <arg n="2">out of Precious</arg>
+            </example>
+            
+            
+            <note>
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

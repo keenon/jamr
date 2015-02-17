@@ -1,0 +1,39 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="yearn">
+        <note>
+            Frames file for 'yearn' based on sentences in brown.
+        </note>
+        
+        <roleset id="yearn.01" vncls="-" name="strongly desire">
+            <roles>
+                <role n="0"  descr="desirer"/>
+                <role n="1" descr="object of desire"/>
+            </roles>
+            
+            <example name="transitive - verbal argument">
+                <inflection person="ns" tense="ns" aspect="ns" voice="ns" form="ns"/>
+                <text>
+                    He who [*T*-1] had tried so hard , who [*T*-2] had yearned so passionately [*-3] to be a great officer .
+                </text>
+                <arg n="M" f="RCL">who -&gt; He</arg>
+                <arg n="0">[*T*-2]</arg>
+                <rel>yearned</rel>
+                <arg n="M" f="MNR">so passionately</arg>
+                <arg n="1">[*-3] to be a great officer</arg>
+            </example>
+            
+            <example name="transitive - noun argument">
+                <inflection person="ns" tense="ns" aspect="ns" voice="ns" form="ns"/>
+                <text>
+                    Stevie yearned for a dog .
+                </text>
+                <arg n="0">Stevie</arg>
+                <rel>yearned</rel>
+                <arg n="1">for a dog</arg>
+            </example>
+            
+            
+        </roleset>
+    </predicate>
+</frameset>

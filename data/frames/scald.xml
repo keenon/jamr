@@ -1,0 +1,54 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="scald">
+        <note>
+            Frames file for 'scald' based on sentences in ECTB.
+            VN entry in cooking-45.3. Comparison to 'burn'. 
+        </note>
+        
+        <roleset id="scald.01" name="burn with hot liquid" vncls="45.3">
+            <roles>
+                <role descr="agent, scalder" n="0">
+                    
+                    <vnrole vncls="45.3" vntheta="Agent"/>
+                </role>
+                
+                <role descr="patient, thing scalded" n="1">
+                    
+                    <vnrole vncls="45.3" vntheta="Patient"/>
+                </role>
+                
+                <role descr="instrument (i.e. hot water, oil, latex)" n="2">
+                    
+                    <vnrole vncls="45.3" vntheta="Instrument"/>
+                </role>
+            </roles>
+            
+            
+            <example name="passive, theme only">
+                <text>
+                    Amazing girls still extended tiny hands into the hot springs [*-55] to test
+                    the temperature , but strangely cried out with sharp sounds on [*]-56 being scalded [*-56] .
+                </text>
+                <rel>scalded</rel>
+                <arg n="1">[*-56]</arg>
+            </example>
+            
+            
+            <note>
+                Framed by Neville.
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>
+
+
+
+
+
+
+
+
+
+

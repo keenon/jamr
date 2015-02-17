@@ -1,0 +1,55 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="sidle">
+        <note>
+            Frames file for 'sidle' based on frames file for 'stroll'.
+        </note>
+        
+        <roleset id="sidle.01" name="to walk sideways,ingratiate oneself to" vncls="51.3.2">
+            <roles>
+                <role descr="agent, rider (use only if arg1 is present)" n="0">
+                    <vnrole vncls="51.3.2" vntheta="Agent"/>
+                </role>
+                <role descr="thing sidled, walker" n="1">
+                    <vnrole vncls="51.3.2" vntheta="Theme"/>
+                </role>
+                <role descr="path, thing  sidled up to" n="1">
+                    <vnrole vncls="51.3.2" vntheta="Location"/>
+                </role>
+            </roles>
+            
+            <example name="Old West?">
+                <text>
+                    Wyatt sidled his horse up to Annie's side.
+                </text>
+                <arg n="0">Wyatt</arg>
+                <rel>sidled</rel>
+                <arg n="1">his horse</arg>
+                <arg n="2">up to Annie's side</arg>
+            </example>
+            
+            
+            <example name="Disney sense">
+                <text>
+                    Out past the strip malls and tract housing of western Palm Beach County,
+                    the lions have sidled up to tourists in sturdy cars since Disney World
+                    was still a figment.
+                </text>
+                <arg f="LOC" n="M">Out past the strip malls and tract housing of
+                    western Palm Beach County
+                </arg>
+                <arg n="1">the lions </arg>
+                <rel>have sidled</rel>
+                <arg n="2">up to tourists in sturdy cars</arg>
+                <arg f="TMP" n="M">since Disney World was still a figment</arg>
+            </example>
+            
+            
+        </roleset>
+    </predicate>
+    
+    <note>
+        frames created by Kev
+    </note>
+    
+</frameset>

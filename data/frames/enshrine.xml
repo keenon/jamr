@@ -1,0 +1,31 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="enshrine">
+        <note>
+            Frames file for 'enshrine' based on sentences in ebc.  No Verbnet entry.
+        </note>
+        
+        <roleset id="enshrine.01" name="hold sacred, enclose in shrine" vncls="-">
+            <roles>
+                <role descr="agent who enshrines" n="0"/>
+                <role descr="entity enshrined" n="1"/>
+            </roles>
+            <example name="enshrine">
+                <text>
+                    ...in their own constitution they have enshrined the universal
+                    declaration on human rights which *T* guarantees certain religious freedoms.
+                </text>
+                <arg n="m" f="LOC">in their own constitution</arg>
+                <arg n="0">they</arg>
+                <rel>enshrined</rel>
+                <arg n="1">the universal declaration on human rights which *T*
+                    guarantees certain religious freedoms
+                </arg>
+            </example>
+            <note>
+                Frame created by Arrick
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

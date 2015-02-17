@@ -1,0 +1,46 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="skate">
+        <note>
+            Frames file for 'skate' based on sentences in ULA Spoken.
+            Verbnet entry 51.4.1.
+        </note>
+        
+        <roleset id="skate.01" name="move on, or as if on, skates" vncls="51.4.1">
+            <roles>
+                <role descr="skater" n="0">
+                    <vnrole vncls="51.4.1" vntheta="Agent"/>
+                </role>
+                <role descr="Path" n="1">
+                    <vnrole vncls="51.4.1" vntheta="Location"/>
+                </role>
+            </roles>
+            
+            <example name="usually intransitive">
+                <text>
+                    And we could skate to the movie or ride a bicycle to the movie.
+                </text>
+                <arg n="M" f="DIS">And</arg>
+                <arg n="0">we</arg>
+                <arg n="M" f="MOD">could</arg>
+                <rel>skate</rel>
+                <arg n="M" f="DIR">to the movie</arg>
+            </example>
+            
+            <example name="with Arg 1">
+                <text>
+                    Mary skates home from work at the drive-in.  
+                </text>
+                <arg n="0">Mary</arg>
+                <rel>skates</rel>
+                <arg n="1">home</arg>
+                <arg n="M" f="DIR">from work at the drive-in.</arg>
+            </example>
+            
+            <note>
+                Frame By Claire
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

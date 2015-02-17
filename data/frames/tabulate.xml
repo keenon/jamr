@@ -1,0 +1,48 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="tabulate">
+        <note>
+            Frames file for 'tabulate' based on ebn instances.
+        </note>
+        
+        <roleset id="tabulate.01" name="arrange" vncls="26.1">
+            <roles>
+                <role descr="builder" n="0">
+                    
+                    <vnrole vncls="26.1" vntheta="Agent"/>
+                </role>
+                
+                <role descr="construction, item/material being arranged" n="1">
+                    
+                    <vnrole vncls="26.1" vntheta="Product"/>
+                </role>
+                
+                <role descr="start state" n="2">
+                    
+                    <vnrole vncls="26.1" vntheta="Material"/>
+                </role>
+                
+                <role descr="benefactive" n="3">
+                    
+                    <vnrole vncls="26.1" vntheta="Beneficiary"/>
+                </role>
+                
+                <role descr="end state" n="4">
+                    <vnrole vncls="26.1" vntheta="Product"/>
+                </role>
+            </roles>
+            
+            <example name="tabulate">
+                <text>
+                    In *PRO* tabulating what constitutes a legal vote, the standard to be
+                    used is th eone provided by the legislature.
+                </text>
+                <arg n="0">*PRO*</arg>
+                <rel>tabulating</rel>
+                <arg n="1">what constitutes a legal vote</arg>
+                
+            </example>
+        </roleset>
+        <note>frame by Perryn</note>
+    </predicate>
+</frameset>

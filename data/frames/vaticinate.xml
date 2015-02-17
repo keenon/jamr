@@ -1,0 +1,30 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="vaticinate">
+        
+        <roleset framnet="" id="vaticinate.01" name="vaticinate" vncls="29.5">
+            <roles>
+                <role descr="agent, prophet, vaticinator" f="" n="0">
+                    <vnrole vncls="29.5" vntheta="agent"/>
+                </role>
+                <role descr="prophecy" f="" n="1">
+                    <vnrole vncls="29.5" vntheta="theme"/>
+                </role>
+                <role descr="attributive" f="" n="2">
+                    <vnrole vncls="29.5" vntheta="predicate"/>
+                </role>
+                <note/>
+            </roles>
+            <example name="Regular usage" src="web usage" type="">
+                <text>Jim vaticinated on the shape of things to come.</text>
+                <note/>
+                <arg f="" n="0">Jim</arg>
+                <rel f="">vaticinated</rel>
+                <arg f="" n="2">on the shape of things to come</arg>
+            </example>
+            <note>hand-checked by Kevin</note>
+        </roleset>
+        <note>Automatically created based on framefiles: feel (29.5)</note>
+    </predicate>
+    <note/>
+</frameset>

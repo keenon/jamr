@@ -1,0 +1,33 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="scalp">
+        
+        <roleset framnet="" id="scalp.01" name="scalp" vncls="10.7">
+            <roles>
+                <role descr="scalper, agent" f="" n="0">
+                    <vnrole vncls="10.7" vntheta="agent"/>
+                </role>
+                
+                <role descr="scalped from what/whom, source" f="" n="1">
+                    <vnrole vncls="10.7" vntheta="source"/>
+                </role>
+                <role descr="thing removed/scalped, theme" f="" n="2">
+                    <vnrole vncls="10.7" vntheta="theme"/>
+                </role>
+                <note/>
+            </roles>
+            <example name="lawn-care usage" src="web usage" type="">
+                <text>He scalped the lawn area with the weedeater until it was bare dirt.</text>
+                <note/>
+                <arg f="" n="0">He</arg>
+                <rel f="">scalped</rel>
+                <arg f="" n="1">the lawn area</arg>
+                <arg f="mnr" n="m">with the weedeater</arg>
+                <arg f="tmp" n="m">until it was bare dirt</arg>
+            </example>
+            <note>hand-checked by Kevin</note>
+        </roleset>
+        <note>Automatically created based on framefiles: milk (10.7)</note>
+    </predicate>
+    <note/>
+</frameset>

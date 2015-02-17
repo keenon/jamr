@@ -1,0 +1,32 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="accurse">
+        <note>
+            Frames file for 'accurse' based on dictionary.com. Verbnet entry 33.
+        </note>
+        
+        <roleset id="accurse.01" name="to imprecate misery or evil upon" vncls="33">
+            <roles>
+                <role descr="speaker" n="0">
+                    <vnrole vncls="33" vntheta="Agent"/>
+                </role>
+                <role descr="misery or evil" n="1">
+                    <vnrole vncls="33" vntheta="Predicate"/>
+                </role>
+                <role descr="person or thing accursed" n="2">
+                    <vnrole vncls="33" vntheta="Theme"/>
+                </role>
+            </roles>
+            
+            <example name="very old english">
+                <text>
+                    John accursed the day they met.
+                </text>
+                <arg n="0">John</arg>
+                <rel>accursed</rel>
+                <arg n="2">the day they met</arg>
+                
+            </example>
+        </roleset>
+    </predicate>
+</frameset>

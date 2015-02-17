@@ -1,0 +1,52 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="experience">
+        <note>
+            Frames file for 'experience' based on sentences in financial
+            subcorpus.  No Verbnet entry, no Framenet entry.  Comparison with
+            detect and undergo.
+        </note>
+        
+        <roleset id="experience.01" name="have a sensation or experience" vncls="30.2">
+            <roles>
+                <role descr="experiencer" n="0">
+                    <vnrole vncls="30.2" vntheta="Experiencer"/>
+                </role>
+                <role descr="experienced" n="1">
+                    <vnrole vncls="30.2" vntheta="Stimulus"/>
+                </role>
+            </roles>
+            
+            <example name="typical">
+                <inflection aspect="progressive" form="participle" person="ns" tense="present" voice="active"/>
+                <text>
+                    Suppliers and subcontractors are experiencing heightened pressure
+                    to support delivery schedules. 
+                </text>
+                <arg n="0">Suppliers and subcontractors</arg>
+                <rel>experiencing</rel>
+                <arg n="1">heightened pressure  to support delivery
+                    schedules
+                </arg>
+            </example>
+            
+            <example name="passivized">
+                <inflection aspect="ns" form="participle" person="ns" tense="present" voice="passive"/>
+                <text>
+                    ``I believe that the perception that legislation in this area may
+                    be hastily approved contributed to the collapse of the UAL
+                    transaction, and [the resulting disruption]-1 in the financial markets
+                    experienced *trace*-1 this past Friday,'' Mr. Trump wrote members of
+                    Congress. 
+                </text>
+                <rel>experienced</rel>
+                <arg n="1">*trace*</arg>
+                <arg f="TMP" n="M">this past Friday</arg>
+            </example>
+            
+            <note>
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

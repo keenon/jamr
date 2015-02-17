@@ -1,0 +1,30 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="x-ray">
+        <note>
+            Frames file for 'x-ray' based on ebn instances.  
+        </note>
+        
+        <roleset id="x-ray.01" name="take a picture inside" vncls="25.4">
+            <roles>
+                <role descr="x-rayer" n="0">
+                    <vnrole vncls="25.4" vntheta="Agent"/>
+                </role>
+                <role descr="subject" n="1">
+                    <vnrole vncls="25.4" vntheta="Theme"/>
+                </role>
+            </roles>
+            
+            <example name="cheater">
+                <text>
+                    Major League Baseball took 76 of his bats and x-rayed them for cork.
+                </text>
+                <arg n="0">Major League Baseball</arg>
+                <rel>x-rayed</rel>
+                <arg n="1">them</arg>
+                <arg f="PRP" n="M">for cork</arg>
+            </example>
+            <note>frame by Perryn</note>
+        </roleset>
+    </predicate>
+</frameset>

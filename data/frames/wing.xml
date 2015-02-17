@@ -1,0 +1,39 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="wing">
+        <note>
+            Frames file for 'wing' based on Brown ULA.
+        </note>
+        
+        <roleset id="wing.01" name="fly through the air, travel via air" vncls="11.5-1 47.6 51.3.2 51.4.2">
+            <roles>
+                <role descr="causal agent" n="0">
+                    <vnrole vncls="47.6" vntheta="Agent"/>
+                    <vnrole vncls="51.3.2" vntheta="Agent"/>
+                    <vnrole vncls="11.5-1" vntheta="Agent"/>
+                    <vnrole vncls="51.4.2" vntheta="Agent"/>
+                </role>
+                <role descr="thing actually doing the flying" n="1">
+                    <vnrole vncls="47.6" vntheta="Theme"/>
+                    <vnrole vncls="51.3.2" vntheta="Theme"/>
+                    <vnrole vncls="11.5-1" vntheta="Theme"/>
+                    <vnrole vncls="51.4.2" vntheta="Theme"/>
+                </role>
+                <role descr="benefactive" n="2"/>
+            </roles>
+            
+            <example name="attack">
+                <text>
+                    They had winged over the Adriatic, they had taken Bari by complete
+                    surprise and now they-1 were battering her, *T*-1 attacking with deadly
+                    skill.
+                </text>
+                <arg n="1">they</arg>
+                <rel>winged</rel>
+                <arg f="DIR" n="M">over the Adriatic</arg>
+                
+            </example>
+        </roleset>
+        <note>frame by Perryn</note>
+    </predicate>
+</frameset>

@@ -1,0 +1,34 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="abhor">
+        <note>
+            Frames file for 'abhor' based on ebn instances.  
+        </note>
+        
+        <roleset id="abhor.01" name="despise" vncls="31.2">
+            <roles>
+                <role descr="despiser" n="0">
+                    <vnrole vncls="31.2" vntheta="Experiencer"/>
+                </role>
+                
+                <role descr="object of despisal" n="1">
+                    <vnrole vncls="31.2" vntheta="Theme"/>
+                </role>
+                
+            </roles>
+            
+            <example name="hate">
+                <text>
+                    We abhor terrorism in all its forms and manifestations.
+                </text>
+                <arg n="0">we</arg>
+                <rel>abhor</rel>
+                <arg n="1">terrorism in all its forms and manifestations</arg>
+            </example>
+            
+            <note>frame by Perryn
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

@@ -1,0 +1,60 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="scrawl">
+        <note>
+            Frames file for 'scrawl' based on sentences in brown.
+        </note>
+        
+        <roleset id="scrawl.01" vncls="-" name="write untidily">
+            <roles>
+                <role n="0"  descr="writer"/>
+                <role n="1"  descr="thing written"/>
+                <role n="2"  descr="surface"/>
+            </roles>
+            
+            <example name="all args">
+                <inflection person="ns" tense="past" aspect="perfect" voice="active" form="participle"/>
+                <text>
+                    Somebody had scrawled American Express, Piazza di Spagna?, across the
+                    envelope, and now Theresa had it, all as easily as if she had been
+                    the President of the Republic or the Pope. 
+                </text>
+                <arg n="0"        >Somebody</arg>
+                <rel              >scrawled</rel>
+                <arg n="1"        >American Express, Piazza di Spagna?</arg>
+                <arg n="2">across the envelope</arg>
+            </example>
+            
+        </roleset>
+    </predicate>
+    
+    <predicate lemma="scrawl_out">
+        
+        <roleset id="scrawl.02" vncls="-" name="write completely but untidily">
+            <roles>
+                <role n="0"  descr="writer"/>
+                <role n="1"  descr="thing written"/>
+            </roles>
+            
+            <example name="precise information">
+                <inflection person="ns" tense="ns" aspect="ns" voice="passive" form="participle"/>
+                <text>
+                    The ledger was full of most precise information: date of laying,
+                    length of incubation period, number of chick reaching the first week,
+                    second week, fifth week, weight of hen, size of rooster's wattles and
+                    so on, all scrawled out in a hand that looked more Chinese than
+                    English, the most jagged and sprawling Alex had ever seen. 
+                </text>
+                <arg n="1"        >all</arg>
+                <rel              >scrawled out</rel>
+                <arg n="m" f="MNR">in a hand that looked more Chinese than English,
+                    the most jagged and sprawling Alex had ever seen
+                </arg>
+            </example>
+            
+            <note>
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

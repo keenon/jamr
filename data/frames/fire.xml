@@ -1,0 +1,140 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="fire">
+        <note>
+            Frames file for 'fire' based on sentences in financial subcorpus.
+            Verbnet class throw-17.1, other framed members include 'hit',
+            'pass'.  That misses an entire roleset, though.
+        </note>
+        
+        <roleset id="fire.01" name="fire a gun" vncls="17.1">
+            <roles>
+                <role descr="shooter" n="0">
+                    <vnrole vncls="17.1" vntheta="Agent"/>
+                </role>
+                <role descr="gun" n="1">
+                    <vnrole vncls="17.1" vntheta="Patient"/>
+                </role>
+            </roles>
+            
+            <example name="metaphorical">
+                <text>
+                    With three minutes left on the clock, Mr. Aikman takes the snap,
+                    steps back and fires a 21-yard pass -- straight into the hands of
+                    an Atlanta defensive back. 
+                </text>
+                <arg f="TMP" n="M">With three minutes left on the clock</arg>
+                <arg n="0">Mr. Aikman</arg>
+                <rel>fires</rel>
+                <arg n="1">a 21-yard pass</arg>
+                <arg f="DIR" n="M">straight into the hands of an Atlanta
+                    defensive back
+                </arg>
+            </example>
+            
+            <note>
+            </note>
+            
+        </roleset>
+        
+        <roleset id="fire.02" name="cause to cease employment" vncls="10.10">
+            <roles>
+                <role descr="employer" n="0">
+                    <vnrole vncls="10.10" vntheta="Agent"/>
+                </role>
+                <role descr="ex-employee" n="1">
+                    <vnrole vncls="10.10" vntheta="Theme"/>
+                </role>
+                <role descr="job" n="2">
+                    <vnrole vncls="10.10" vntheta="Source"/>
+                </role>
+            </roles>
+            
+            <example name="most commonly passive">
+                <text>
+                    But people familiar with the agenda of the board's meeting last
+                    week in London said [Mr. McGovern]-1 was fired *trace*-1. 
+                </text>
+                <rel>fired</rel>
+                <arg n="1">*trace*</arg>
+            </example>
+            
+            <example name="passive with agent">
+                <text>
+                    The last time Columbia Pictures was looking for a studio chief,
+                    they note, Warner released producer David Puttnam from his
+                    contract, then took him back after he-1 was subsequently fired
+                    *trace*-1 by his bosses at Columbia.
+                </text>
+                <arg f="TMP" n="M">subsequently</arg>
+                <rel>fired</rel>
+                <arg n="1">*trace*</arg>
+                <arg n="0">by his bosses at Columbia</arg>
+            </example>
+            
+            <example name="with former job">
+                <text>
+                    John-1 was fired *trace*-1 from his job as chief burger-flipper.
+                </text>
+                <rel>fired</rel>
+                <arg n="1">*trace*</arg>
+                <arg n="2">from his job as chief burger-flipper</arg>
+            </example>
+            
+            <note>
+            </note>
+            
+        </roleset>
+        
+        <roleset id="fire.03" name="cause to burn or bake" vncls="17.1-1">
+            <roles>
+                <role descr="baker, agent" n="0">
+                    <vnrole vncls="17.1-1" vntheta="Agent"/>
+                </role>
+                <role descr="thing burning or baking" n="1">
+                    <vnrole vncls="17.1-1" vntheta="Theme"/>
+                </role>
+            </roles>
+            
+            <example name="pottery">
+                <text>
+                    John fired his play-doh sculpture in the microwave.
+                </text>
+                <arg n="0">John</arg>
+                <rel>fired</rel>
+                <arg n="1">his play-doh sculpture</arg>
+                <arg f="LOC" n="M">in the microwave</arg>
+            </example>
+            
+            <note>
+            </note>
+            
+        </roleset>
+        
+        <roleset id="fire.04" name="fuel or ignite" vncls="-">
+            <roles>
+                <role descr="ignitor, agent" n="0"/>
+                <role descr="thing ignited" n="1"/>
+                <role descr="instrument or manner" n="M"/>
+            </roles>
+            
+            <example name="non-agentive manner">
+                <text>
+                    Instead, they were model steam engines fired * by alcohol lamps which
+                    *T* were hand built, wheel by wheel, panel by panel, by Lin himself,
+                    some based * on his own designs, others scale models.
+                </text>
+                <rel>fired</rel>
+                <arg n="1">*trace*</arg>
+                <arg f="MNR" n="M">by alcohol lamps</arg>
+            </example>
+            
+            <note>
+                Frame edited by Arrick
+            </note>
+            
+        </roleset>
+    </predicate>
+    
+    
+</frameset>

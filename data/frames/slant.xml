@@ -1,0 +1,43 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="slant">
+        <note>
+            Frames file for 'slant' based on sentences in brown.
+        </note>
+        
+        <roleset id="slant.01" vncls="-" name="(cause to) not be level">
+            <roles>
+                <role n="0"  descr="causer of slant"/>
+                <role n="1"  descr="unlevel thing"/>
+            </roles>
+            
+            <example name="with cause">
+                <inflection person="ns" tense="ns" aspect="ns" voice="active" form="infinitive"/>
+                <text>
+                    In another approach to the same procedure, the content of the
+                    readings is analyzed so as to see how [the particular medium]-2 is likely
+                    [*-2] to slant her statements [*T*-3]. 
+                </text>
+                <arg n="0"        >[*-2]</arg>
+                <rel              >slant</rel>
+                <arg n="1"        >her statements</arg>
+                <arg n="m" f="MNR">[*T*-3]</arg>
+                <arg n="M" f="RCL">how</arg>
+            </example>
+            
+            <example name="adjectival">
+                <inflection person="ns" tense="ns" aspect="progressive" voice="active" form="participle"/>
+                <text>
+                    Snow buried the streets and covered the slanting rooftops, as
+                    John trudged toward St. Peter's. 
+                </text>
+                <rel              >slanting</rel>
+                <arg n="1"        >rooftops</arg>
+                <note>This is not one of my John sentences, but an honest-to-god
+                    corpus example.
+                </note>
+            </example>
+            
+        </roleset>
+    </predicate>
+</frameset>

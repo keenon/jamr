@@ -1,0 +1,37 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="silicify">
+        <note>
+            Frames file for 'silicify' based on internet usage examples, expansion via
+            VN. VerbNet entry 45.4. 
+        </note>
+        
+        
+        <roleset id="silicify.01" name="convert into or enrich with silica"
+ vncls="45.4">
+            <roles>
+                <role descr="cause of transformation" n="0">
+                    <vnrole vncls="45.4" vntheta="Agent"/>
+                </role>
+                <role descr="entity made into silica" n="1">
+                    <vnrole vncls="45.4" vntheta="Patient"/>
+                </role>
+            </roles>
+            
+            <example name="Adjectival">
+                <text>
+                    The scientists observed very rich and diverse fossils, with silicified
+                    marine faunas.
+                </text>
+                <rel>silicified</rel>
+                <arg n="1">marine faunas</arg>
+            </example>
+            
+        </roleset>
+    </predicate>
+    
+    <note>
+        Frame created by Claire
+    </note>
+    
+</frameset>

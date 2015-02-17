@@ -1,0 +1,28 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="cudgel">
+        <note>
+            Automatically created based on framefiles: flog (18.3)
+        </note>
+        <roleset id="cudgel.01" name="strike" vncls="18.3">
+            <roles>
+                <role descr="hitter" n="0">
+                    <vnrole vncls="18.3" vntheta="Agent"/>
+                </role>
+                <role descr="victim" n="1">
+                    <vnrole vncls="18.3" vntheta="Patient"/>
+                </role>
+                <role descr="resulting state" n="2"></role>
+            </roles>
+            <example name="All args" src="web usage" type="">
+                <text>Mercedes-Benz and Cerberus have cudgeled a once-proud automotive company into coma.</text>
+                <note/>
+                <arg f="" n="0">Mercedes-Benz and Ceberus</arg>
+                <rel f="">cudgeled</rel>
+                <arg f="" n="1">a once proud automotive company</arg>
+                <arg f="" n="2">into coma</arg>
+            </example>
+            <note>Edited by hwangd</note>
+        </roleset>
+    </predicate>
+</frameset>

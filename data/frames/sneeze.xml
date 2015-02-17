@@ -1,0 +1,29 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="sneeze">
+        <note>
+            Frames file for 'sneeze' based on sentences in ectb2. 
+            Verbnet entry 40.1.1
+        </note>
+        
+        <roleset id="sneeze.01" vncls="-" name="suddenly expel air through nose and mouth">
+            <roles>
+                <role n="0"  descr="person sneezing"/>
+            </roles>
+            
+            <example>
+                <text>
+                    Mary-1 can't stop *-1 sneezing.
+                </text>
+                <arg n="0">*-1</arg>
+                <rel>sneezing</rel>
+            </example>
+            
+            
+            <note>
+                Frame created by Jena.
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

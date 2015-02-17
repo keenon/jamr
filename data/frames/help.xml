@@ -1,0 +1,146 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="help">
+        <note>
+            Frames file for 'help' based on survey of initial sentences from big corpus
+        </note>
+        
+        <roleset id="help.01" name="help, aid" vncls="72-1"><roles>
+                <role descr="helper" n="0">
+                    <vnrole vncls="72-1" vntheta="Agent"/>
+                </role>
+                <role descr="project" n="1">
+                    <vnrole vncls="72-1" vntheta="Theme"/>
+                </role>
+                <role descr="benefactive" n="2"/>
+            </roles>
+            
+            <example name="sentential argument">
+                <text>
+                    Japanese money will help *trace* turn SE Asia into a more cohesive
+                    economic region.
+                </text>
+                <arg n="0">Japanese money</arg>
+                <arg f="MOD" n="m">will</arg>
+                <rel>help</rel>
+                <arg n="1">*trace* turn SE Asia into a more cohesive
+                    economic region.
+                </arg>
+            </example>
+            
+            <example name="nominal argument">
+                <text>
+                    She-1 was out *trace*-1 to help the poor underpriviledged child.
+                </text>
+                <arg n="0">*trace*</arg>
+                <rel>help</rel>
+                <arg n="1">the poor underpriviledged child</arg>
+            </example>
+            
+            <example name="passivized">
+                <text>
+                    The stocks of banking concerns weren't helped much by the announcement.
+                </text>
+                <arg n="1">The stocks of banking concerns</arg>
+                <arg f="NEG" n="m">n't</arg>
+                <rel>helped</rel>
+                <arg f="MNR" n="m">much</arg>
+                <arg n="0">by the announcement</arg>
+            </example>
+            
+            <note>
+                benefactive, only for when the benefactor and the project are split
+                under two nodes (no node contains both to the exclusion of other
+                material):
+            </note>
+            
+            <example name="benefactive">
+                <text>
+                    Mary helped John with his homework.
+                </text>
+                <arg n="0">Mary</arg>
+                <rel>helped</rel>
+                <arg n="2">John</arg>
+                <arg n="1">with his homework</arg>
+            </example>
+            
+            <example name="another transitive">
+                <text>
+                    You'll be helping a neighborhood S&amp;L in areas crucial to its survival.
+                </text>
+                <arg n="0">You</arg>
+                <arg f="MOD" n="m">'ll</arg>
+                <rel>helping</rel>
+                <arg n="1">a neighborhood S&amp;L</arg>
+                <arg f="LOC" n="m">in areas crucial to its survival</arg>
+            </example>
+            
+            <note>
+                Sometimes one logical argument is split across a zillion nodes:
+                
+                Manufacturers' backlogs rose 0.5% in September to $4.36 billion, *trace*
+                helped *trace* by defense spending.
+                
+                Logically, the Arg1 of help is &quot;Manufacturers' backlogs rose 0.5% in
+                September to $4.36 billion&quot;, but that material is spread across at least
+                three nodes.  The lower trace of 'help' is linked to &quot;Manufacturers'
+                backlogs&quot;, which is close enough to the truth for us to accept.
+                
+            </note>
+        </roleset>
+        <roleset id="help.02" name="avoid" vncls="72-1">
+            <roles>
+                <role descr="agent" n="0">
+                    <vnrole vncls="72-1" vntheta="Agent"/>
+                </role>
+                <role descr="thing (not) avoided" n="1">
+                    <vnrole vncls="72-1" vntheta="Theme"/>
+                </role>
+            </roles>
+            
+            <example name="can't help">
+                <text>
+                    He sometimes can't help * exclaiming in frustration.
+                </text>
+                <arg n="0">He</arg>
+                <arg f="TMP" n="m">sometimes</arg>
+                <arg f="NEG" n="m">n't</arg>
+                <rel>help</rel>
+                <arg n="1">* exclaiming in frustration</arg>
+            </example>
+            
+            <example name="can't help but..">
+                <text>
+                    I can't help but wonder why.
+                </text>
+                <arg n="0">I</arg>
+                <arg f="NEG" n="m">n't</arg>
+                <rel>help</rel>
+            </example>
+        </roleset>
+        
+    </predicate>
+    
+    <predicate lemma="help_out">
+        <roleset id="help.03" name="help, aid" vncls="72-1"><roles>
+                <role descr="helper" n="0">
+                    <vnrole vncls="72-1" vntheta="Agent"/>
+                </role>
+                <role descr="project" n="1">
+                    <vnrole vncls="72-1" vntheta="Theme"/>
+                </role>
+                <role descr="benefactive" n="2"/>
+            </roles>
+            
+            <example name="infinitival">
+                <text>
+                    Her mother would call her-1 to her side *-1 to help out.
+                </text>
+                <arg n="0">*-1</arg>
+                <rel>[help][out]</rel>
+            </example>
+            
+        </roleset>
+    </predicate>
+    
+</frameset>

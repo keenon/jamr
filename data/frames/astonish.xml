@@ -1,0 +1,43 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="astonish">
+        <note>
+            Frames file for 'astonish' based on sentences in brown.
+        </note>
+        
+        <roleset id="astonish.01" vncls="31.1" name="surprise, astound">
+            <roles>
+                <role n="0"  descr="causer of astonishment">
+                    <vnrole vncls="31.1" vntheta="Cause"/>
+                </role>
+                <role n="1"  descr="experiencer of astonishment">
+                    <vnrole vncls="31.1" vntheta="Experiencer"/>
+                </role>
+                <role n="2"  descr="instrument, if arg0 also present"/>
+            </roles>
+            
+            <example name="all args">
+                <inflection person="ns" tense="past" aspect="ns" voice="active" form="full"/>
+                <text>
+                    Then he astonished Matsuo by pushing and dragging himself
+                    until he sat. 
+                </text>
+                <arg n="m" f="TMP">Then</arg>
+                <arg n="0"        >he</arg>
+                <rel              >astonished</rel>
+                <arg n="1"        >Matsuo</arg>
+                <arg n="2"        >by pushing and dragging himself until he sat</arg>
+            </example>
+            
+            <example name="passive">
+                <inflection person="third" tense="past" aspect="ns" voice="passive" form="participle"/>
+                <text>
+                    [The Frenchman]*-1 was astonished [*-1].
+                </text>
+                <rel              >astonished</rel>
+                <arg n="1"        >[*-1]</arg>
+            </example>
+            
+        </roleset>
+    </predicate>
+</frameset>

@@ -1,0 +1,32 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="scorch">
+        <note>
+            Frames file for 'scorch' based on ebn instances.
+        </note>
+        
+        <roleset id="scorch.01" name="burn with fire" vncls="43.1 45.4">
+            <roles>
+                <role descr="fire" n="0">
+                    <vnrole vncls="43.1"
+  vntheta="Agent"/><vnrole vncls="45.4" vntheta="Agent"/>
+                </role>
+                <role descr="thing burning" n="1">
+                    <vnrole vncls="43.1"
+  vntheta="Theme"/><vnrole vncls="45.4" vntheta="Patient"/>
+                </role>
+            </roles>
+            
+            <example name="burned mass">
+                <text>
+                    Now the scorched hulk floats aimlessly in the Arab waterway next to
+                    Basra's dock yards.
+                </text>
+                <rel>scorched</rel>
+                <arg n="1">hulk</arg>
+                
+            </example>
+            <note>frame by Perryn</note>
+        </roleset>
+    </predicate>
+</frameset>

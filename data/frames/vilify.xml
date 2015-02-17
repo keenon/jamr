@@ -1,0 +1,30 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="vilify">
+        <note>
+            Frames file for 'vilify' based on dictionary.com. Verbnet entry 33.
+        </note>
+        
+        <roleset id="vilify.01" name="to speak ill of, slander" vncls="33">
+            <roles>
+                <role descr="vilifier, agent" n="0">
+                    <vnrole vncls="33" vntheta="Agent"/>
+                </role>
+                <role descr="entity vilified" n="1">
+                    <vnrole vncls="33" vntheta="Theme"/>
+                </role>
+            </roles>
+            
+            <example name="defame">
+                <text>
+                    The Nazi propaganda vilified the Jews.
+                </text>
+                <arg n="0">The Nazi propaganda</arg>
+                <rel>vilified</rel>
+                <arg n="1">the Jews</arg>
+                
+            </example>
+        </roleset>
+        <note>frame by Perryn</note>
+    </predicate>
+</frameset>

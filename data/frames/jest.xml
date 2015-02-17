@@ -1,0 +1,43 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="jest">
+        <note>
+            Frames file for 'jest' based on survey of sentences in ECTB2. Verbnet 36.1.
+        </note>
+        
+        <roleset id="jest.01" name="to joke" vncls="36.1">
+            <roles>
+                <role descr="joker" n="0">
+                    
+                    <vnrole vncls="36.1" vntheta="Actor1"/>
+                </role>
+                
+                <role descr="other party joking, joke with" n="1">
+                    
+                    <vnrole vncls="36.1" vntheta="Topic"/>
+                </role>
+                
+                <role descr="joke" n="2">
+                    
+                    <vnrole vncls="36.1" vntheta="Actor2"/>
+                </role>
+                
+            </roles>
+            
+            <example>
+                <inflection aspect="ns" form="ns" person="ns" tense="present" voice="active"/>
+                <text>
+                    Lien often jests "it's because I've never graduated from 'Make a Show' primary school that...
+                </text>
+                <arg n="0">Lien</arg>
+                <arg n="m" f="TMP">often</arg>
+                <rel>jests</rel>
+                <arg n="2">it's because I've never graduated from 'Make a Show' primary school that...</arg>
+            </example>
+            
+            <note>
+                Frame created by Jena.
+            </note>
+        </roleset>
+    </predicate>
+</frameset>

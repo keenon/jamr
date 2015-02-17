@@ -1,0 +1,44 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="ameliorate">
+        <note>
+            Frames file for 'ameliorate' based on internet usage examples, expansion
+            via verbnet. VN class 45.4.
+        </note>
+        
+        <roleset id="ameliorate.01" name="(cause to) be better, improved" vncls="45.4">
+            <roles>
+                <role descr="cause of improvement, agent" n="0">
+                    <vnrole vncls="45.4" vntheta="Agent"/>
+                </role>
+                <role descr="entity becoming better" n="1">
+                    <vnrole vncls="45.4" vntheta="Patient"/>
+                </role>
+                <role descr="instrument, if separate from agent" n="2">
+                    <vnrole vncls="45.4" vntheta="Instrument"/>
+                </role>
+            </roles>
+            
+            <example name="Macaulay">
+                <text>
+                    In every human being there is a wish *PRO* to ameliorate his own condition.
+                </text>
+                <arg n="0">*PRO* --> every human being</arg>
+                <rel>ameliorate</rel>
+                <arg n="1"> his own condition</arg>
+            </example>
+            
+            <example name="Wine, with instrument">
+                <text>
+                    Wine ameliorates by age
+                </text>
+                <arg n="1">Wine</arg>
+                <rel>ameliorates</rel>
+                <arg n="2">by age</arg>
+            </example>
+            
+            <note>Frame by Claire</note>
+            
+        </roleset>
+    </predicate>
+</frameset>

@@ -1,0 +1,55 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="thread">
+        <note>
+            Frames file for 'thread' based on sentences in brown.
+        </note>
+        
+        <roleset id="thread.01" vncls="-" name="move or cause to move in a non-linear fashion">
+            <roles>
+                <role n="0"  descr="causer of motion"/>
+                <role n="1"  descr="thing in motion"/>
+                <role n="2"  descr="medium of threading"/>
+            </roles>
+            
+            <example name="subject as arg0 + arg1">
+                <inflection person="ns" tense="ns" aspect="ns" voice="ns" form="ns"/>
+                <text>
+                    Often , [*-1] threading through the overcast , [he]-1 was forced [*-1] to fly close to the ground [*ICH*-3] by a low ceiling , [*-2] skimming above the Winooski or the White River along the line of the broken railroad .
+                </text>
+                <rel>threading</rel>
+                <arg n="2">through the overcast</arg>
+                <arg n="0">[*-1]</arg>
+            </example>
+            
+            
+            <example name="subject as arg0">
+                <inflection person="ns" tense="ns" aspect="ns" voice="ns" form="ns"/>
+                <text>
+                    He thought how [this dainty , fragile older woman]-1 [*-1] threading her way through the streets of Westminster on a day in June , enjoying the flowers in the shops , the greetings from old friends , but never really drawing a deep , passionate breath , was so like himself [*T*-2] .
+                </text>
+                <arg n="0">[*-1]</arg>
+                <rel>threading</rel>
+                <arg n="1">her way</arg>
+                <arg n="2">through the streets of Westminster</arg>
+            </example>
+            
+            
+            <example name="subject as arg1">
+                <inflection person="ns" tense="ns" aspect="ns" voice="ns" form="ns"/>
+                <text>
+                    [His eyes]-1 were threaded [*-1] by little filaments of red as if tiny veins had burst and flooded blood into them .
+                </text>
+                <rel>threaded</rel>
+                <arg n="2">[*-1]</arg>
+                <arg n="1">by little filaments of red</arg>
+            </example>
+            
+            
+            <note>
+                Framed by Ben.
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

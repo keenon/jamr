@@ -5,9 +5,9 @@
 /project/boot
 /project/project
 /experiments
-/models
+# /models
 # LDC data
-/data
+# /data
 # IntelliJ cruft
 .idea
 *.iml

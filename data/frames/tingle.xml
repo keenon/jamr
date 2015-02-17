@@ -1,0 +1,42 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="tingle">
+        <note>
+            Frames file for 'tingle' based on sentences in brown.
+        </note>
+        
+        <roleset id="tingle.01" vncls="-" name="experience prickling, stinging
+	 sensation">
+            <roles>
+                <role n="1"  descr="experiencer"/>
+                <role n="2"  descr="cause"/>
+            </roles>
+            
+            <example name="prepositional cause">
+                <inflection person="third" tense="past" aspect="progressive" voice="active" form="participle"/>
+                <text>
+                    He was again tingling with pleasure, seeing himself clearly in
+                    Slater's shoes. 
+                </text>
+                <arg n="1"        >He</arg>
+                <arg n="m" f="TMP">again</arg>
+                <rel              >tingling</rel>
+                <arg n="2">with pleasure</arg>
+            </example>
+            
+            <example name="location">
+                <inflection person="third" tense="past" aspect="progressive" voice="active" form="participle"/>
+                <text>
+                    He was tingling within.
+                </text>
+                <arg n="1"        >He</arg>
+                <rel              >tingling</rel>
+                <arg n="m" f="LOC">within</arg>
+            </example>
+            
+            <note>
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

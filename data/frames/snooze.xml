@@ -1,0 +1,27 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="snooze">
+        
+        <roleset framnet="" id="snooze.01" name="snooze" vncls="40.4">
+            <roles>
+                <role descr="snoozed" f="" n="0">
+                    <vnrole vncls="40.4" vntheta="agent"/>
+                </role>
+                <note/>
+                <role descr="theme (usually redundant/emphatic)" f="" n="1">
+                    <vnrole vncls="40.4" vntheta="theme"/>
+                </role>
+            </roles>
+            <example name="regular usage" src="web usage" type="">
+                <text>It felt like I must have snoozed for hours but instead it has only been 12 minutes.</text>
+                <note/>
+                <arg f="" n="0">I</arg>
+                <rel f="">snoozed</rel>
+                <arg f="tmp" n="m">for hours</arg>
+            </example>
+            <note>hand-checked by Kevin</note>
+        </roleset>
+        <note>Automatically created based on framefiles: doze (40.4)</note>
+    </predicate>
+    <note/>
+</frameset>

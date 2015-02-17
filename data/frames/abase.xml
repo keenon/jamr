@@ -1,0 +1,68 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="abase">
+        <note>
+            Frames file for 'abase' based on expansion via VerbNet. VerbNet entry 45.4.   
+        </note>
+        
+        <roleset id="abase.01" name="to lower in estimation, humble" vncls="45.4">
+            <roles>
+                <role descr="causer of humbling" n="0">
+                    <vnrole vncls="45.4" vntheta="Agent"/>
+                </role>
+                
+                <role descr="entity lowered, humbled" n="1">
+                    <vnrole vncls="45.4" vntheta="Patient"/>
+                </role>
+                
+                <role descr="instrument, if separate from arg 0" n="2">
+                    <vnrole vncls="45.4" vntheta="Instrument"/>
+                </role>
+                
+            </roles>
+            
+            
+            <example name="Biblical">
+                
+                <text>
+                    If He seem to frown, you are then to abase yourselves as miserable wretches. 
+                </text>
+                <arg n="M" f="ADV">If He seem to frown</arg>
+                <arg n="0">you</arg>
+                <arg n="M" f="TMP">then</arg>
+                <rel>abase</rel>
+                <arg n="1">yourselves</arg>
+                <arg n="M" f="PRD">as miserable wretches</arg>
+                
+            </example>
+            
+            
+            <example name="With Agent">
+                
+                <text>
+                    He felt they were degrading him by making him report to a supervisor.  
+                </text>
+                <arg n="0">they</arg>
+                <rel>degrading</rel>
+                <arg n="1">him</arg>
+                <arg n="M" f="MNR">by making him report to a supervisor</arg>
+            </example>
+            
+            <example name="All Arguments partially made-up">
+                
+                <text>
+                    Mary abased John by humiliating him in front of his judgmental cat.
+                </text>
+                <arg n="0">Mary</arg>
+                <rel>abased</rel>
+                <arg n="1">John</arg>
+                <arg n="2">by humiliating him in front of his judgmental cat</arg>
+            </example>
+        </roleset>
+    </predicate>
+    
+    <note>
+        frame created by Claire
+    </note>
+    
+</frameset>

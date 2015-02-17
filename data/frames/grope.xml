@@ -1,0 +1,53 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="grope">
+        <note>
+            Frames file for 'grope' based on sentences in wsj.  No access to
+            Verbnet at the moment.
+        </note>
+        
+        <roleset id="grope.01" name="grasp without looking" vncls="35.5 20-1">
+            <roles>
+                <role descr="groper" n="0">
+                    <vnrole vncls="35.5" vntheta="Agent"/><vnrole
+  vncls="20-1" vntheta="Agent"/>
+                </role>
+                <role descr="groped (at)" n="1">
+                    <vnrole vncls="35.5"
+  vntheta="Theme"/><vnrole vncls="20-1" vntheta="Experiencer"/>
+                </role>
+            </roles>
+            
+            <example name="intransitive">
+                <inflection aspect="ns" form="full" person="ns" tense="past" voice="active"/>
+                <text>
+                    More stocks opened over the ensuing half hour, as the 49 Big Board
+                    specialist firms in charge of keeping the market orderly groped to
+                    find buy orders from major brokerage firms to match the selling
+                    flood. 
+                </text>
+                <arg n="0">the 49 Big Board specialist firms in charge of
+                    keeping the market orderly
+                </arg>
+                <rel>groped</rel>
+                <arg f="PNC" n="M">to find buy orders from major brokerage
+                    firms to match the selling flood
+                </arg>
+            </example>
+            
+            <example name="finally!">
+                <inflection aspect="ns" form="full" person="ns" tense="past" voice="active"/>
+                <text>
+                    John groped Mary.  Then she broke his fingers.
+                </text>
+                <arg n="0">John</arg>
+                <rel>groped</rel>
+                <arg n="1">Mary</arg>
+            </example>
+            
+            <note>
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

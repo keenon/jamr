@@ -1,0 +1,47 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="actualize">
+        <note>
+            Frames file for 'actualize' based on sentences in ECTB.
+            No VN entry.
+        </note>
+        
+        <roleset id="actualize.01" name="make real or more real" vncls="">
+            <roles>
+                <role descr="agent" n="0"/>
+                
+                <role descr="thing actualized, theme" n="1"/>
+            </roles>
+            
+            
+            <example name="transitive">
+                <text>
+                    During the six years , nearly 6000 foreign - invested enterprises have gone
+                    into operation and production in Liaoning , and have accumulatively actualized
+                    a production value of nearly 270 billion yuan .
+                </text>
+                <rel>actualized</rel>
+                <arg n="1">a production value of nearly 270 billion yuan</arg>
+                <arg n="M" f="ADV">accumulatively</arg>
+                <arg n="0">nearly 6000 foreign - invested enterprises</arg>
+                <arg n="M" f="TMP">During the six years</arg>
+            </example>
+            
+            
+            <note>
+                Framed by Neville.
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>
+
+
+
+
+
+
+
+
+
+

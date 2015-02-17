@@ -1,0 +1,50 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="whine">
+        <note>
+            Frames file for 'whine' based on sentences in brown.
+        </note>
+        
+        <roleset id="whine.01" vncls="-" name="emit high-pitched continuous sound">
+            <roles>
+                <role n="0"  descr="emitter of noise, whiner"/>
+            </roles>
+            
+            <example name="straight intransitive">
+                <inflection person="ns" tense="past" aspect="ns" voice="active" form="full"/>
+                <text>
+                    Wires whined as a cold November blast rocked the silver wings,
+                    but the engine roar was reassuring to the pilot bundled in the open
+                    cockpit. 
+                </text>
+                <arg n="0"        >Wires</arg>
+                <rel              >whined</rel>
+                <arg n="m" f="TMP">as a cold November blast rocked the silver wings</arg>
+            </example>
+            
+            <example name="adjectival">
+                <inflection person="ns" tense="ns" aspect="progressive" voice="active" form="participle"/>
+                <text>
+                    He would no longer have to see that fat face, hear that whining voice. 
+                </text>
+                <rel              >whining</rel>
+                <arg n="0"        >voice</arg>
+            </example>
+            
+            <example name="with aspects of motion">
+                <inflection person="ns" tense="ns" aspect="progressive" voice="active" form="participle"/>
+                <text>
+                    When it was followed by a second , whining [*] even closer,
+                    Cobb swerved sharply aside into a depression. 
+                </text>
+                <arg n="0"        >a second</arg>
+                <rel              >whining</rel>
+                <arg n="m" f="LOC">even closer</arg>
+            </example>
+            
+            <note>
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

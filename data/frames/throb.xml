@@ -1,0 +1,43 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="throb">
+        <note>
+            Frames file for 'throb' based on sentences in brown.
+        </note>
+        
+        <roleset id="throb.01" vncls="-" name="pulse with increased pressure regularly">
+            <roles>
+                <role n="1"  descr="throbbing thing"/>
+            </roles>
+            
+            <example name="oh my throbbing head!">
+                <inflection person="ns" tense="past" aspect="ns" voice="active" form="full"/>
+                <text>
+                    ...it was like the bandaged wound on the back of his head
+                    which [*T*-1] occasionally throbbed; it was merely another part of his
+                    weakness. 
+                </text>
+                <arg n="1"        >[*T*-1]</arg>
+                <arg n="M" f="RCL">which -&gt; the bandaged wound on the
+                    back of his head
+                </arg>
+                <arg n="m" f="TMP">occasionally</arg>
+                <rel              >throbbed</rel>
+            </example>
+            
+            <example name="with resultative">
+                <inflection person="ns" tense="past" aspect="ns" voice="active" form="full"/>
+                <text>
+                    The engine throbbed into life.
+                </text>
+                <arg n="1"        >the engine</arg>
+                <rel              >throbbed</rel>
+                <arg n="m" f="PRD">into life</arg>
+            </example>
+            
+            <note>
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

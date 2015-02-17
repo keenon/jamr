@@ -1,0 +1,29 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="ululate">
+        <note>
+            Frames file for 'ululate' based on dictionary.com. Verbnet entry 38.
+        </note>
+        
+        <roleset id="ululate.01" name="to utter howling sounds, as in shrill,
+  wordless lamentation" vncls="38">
+            <roles>
+                
+                <role descr="ululate" n="0">
+                    <vnrole vncls="38" vntheta="Agent"/>
+                </role>
+                
+            </roles>
+            
+            <example name="Lamentation">
+                <text>
+                    Mary ululated all night in the wake of the news of John's death.
+                </text>
+                <arg n="0">Mary</arg>
+                <rel>ululate</rel>
+                
+            </example>
+        </roleset>
+        <note>frame by Perryn</note>
+    </predicate>
+</frameset>

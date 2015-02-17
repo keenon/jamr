@@ -1,0 +1,36 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="throng">
+        <note>
+            Frames file for 'throng' based on frame for 'swarm'.  Verbnet class
+            47.5.1, other members include abound, bustle, creep, swarm, teem.
+        </note>
+        
+        <roleset id="throng.01" vncls="-" name="move chaotically in a group">
+            <roles>
+                <role n="0"  descr="the swarmer"/>
+                <role n="1"  descr="location"/>
+            </roles>
+            
+            
+            <example name="ARG0 subject">
+                <text>
+                    All day long visitors throng the cluster of little stalls at the entrance
+                    to the City of God Temple.
+                </text>
+                <arg n="m" f="TMP">All day long</arg>
+                <arg n="0">visitors</arg>
+                <rel>throng</rel>
+                <arg n="1">the cluster of little stalls at the entrance to the City
+                    of God Temple
+                </arg>
+            </example>
+            <note>
+                Frame file created by Arrick
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>
+
+

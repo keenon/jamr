@@ -1,0 +1,47 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="well">
+        <note>
+            Frames file for 'well' based on sentences in brown.
+        </note>
+        
+        <roleset id="well.01" vncls="-" name="gather">
+            <roles>
+                <role n="1"  descr="liquidy thing"/>
+                <role n="2" descr="location of gathering"/>
+            </roles>
+            
+            <example name="crying">
+                <inflection person="ns" tense="ns" aspect="ns" voice="ns" form="ns"/>
+                <text>
+                    Hal felt sorry for Mary ; ; he had a time [*-1] keeping [the tears]-2 from [*-2] welling to his own eyes as he stood in the crowd in the observation dome .
+                </text>
+                <arg n="1">[*-2]</arg>
+                <rel>welling</rel>
+                <arg n="2">to his own eyes</arg>
+            </example>
+            
+            <note>
+            </note>
+            
+        </roleset>
+    </predicate>
+    <predicate lemma="well_up">
+        <roleset id="well.02" name="well_up: gather">
+            <roles>
+                <role n="1"  descr="liquidy thing"/>
+                <role n="2" descr="location of gathering"/>
+            </roles>
+            
+            <example name="abstract arg1">
+                <inflection person="ns" tense="ns" aspect="ns" voice="ns" form="ns"/>
+                <text>
+                    He explained his errand , but without [*] bothering much [*-2] to make it plausible , for he felt something [*ICH*-1] well up in him [which [*T*-3] was the reason why he had fled the army [*T*-4]]-1 .
+                </text>
+                <arg n="1">[something [*ICH*-1]]</arg>
+                <rel>[ well] [ up]</rel>
+                <arg n="2">in him</arg>
+            </example>
+        </roleset>
+    </predicate>
+</frameset>

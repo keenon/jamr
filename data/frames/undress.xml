@@ -1,0 +1,47 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="undress">
+        <note>
+            Frames file for 'undress' loosely based on frames file for 'dress'. 
+        </note>
+        
+        
+        <roleset id="undress.01" name="to remove clothes" vncls="41.1.1">
+            <roles>
+                <role descr="person removing clothes" n="0">
+                    <vnrole vncls="41.1.1" vntheta="Agent"/>
+                </role>
+                <role descr="person (soon to be not) wearing clothes" n="1">
+                    <vnrole vncls="41.1.1" vntheta="Patient"/>
+                </role>
+                <role descr="attribute, clothes removed" n="2"/>
+            </roles>
+            
+            
+            
+            <example name="transitive">
+                <text>
+                    Chloe undressed Burt with her eyes.
+                </text>
+                <arg n="0">Chloe</arg>
+                <rel>undressed</rel>
+                <arg n="1">Burt</arg>
+                <arg f="MNR" n="M">with her eyes</arg>
+            </example>
+            
+            
+            <example name="intransitive">
+                <text>
+                    Chloe undressed.
+                </text>
+                <arg n="0">Chloe</arg>
+                <rel>undressed</rel>
+            </example>
+        </roleset>
+    </predicate>
+    
+    <note>
+        frames created by Kev
+    </note>
+    
+</frameset>

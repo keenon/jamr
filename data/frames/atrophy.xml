@@ -1,0 +1,32 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="atrophy">
+        <note>
+            Frames file for 'atrophy' based on sentences from ectb 2.  Verbnet
+            class 45.4, other members include activate, age, balance, blur, darken,
+            hasten, laminate, magnetize, revive, ripen, sicken, stabilize, sour,
+            tilt, unwind, whiten.
+        </note>
+        
+        <roleset id="atrophy.01" name="become weakened" vncls="45.4">
+            <roles>
+                <role descr="thing weakened" n="1"/>
+            </roles>
+            
+            <example name="intransitive">
+                <text>
+                    This meant that urine could flow back into the kidney * causing the
+                    kidney to atrophy.
+                </text>
+                <arg n="1">the kidney</arg>
+                <rel>atrophy</rel>
+            </example>
+            
+            
+            <note>
+                Frame file created by Arrick
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

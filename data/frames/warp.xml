@@ -1,0 +1,30 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="warp">
+        <note>
+            Frames file for 'warp' based on sentences in brown.
+        </note>
+        
+        <roleset id="warp.01" vncls="-" name="bend out of shape">
+            <roles>
+                <role n="0"  descr="causer of bending"/>
+                <role n="1" descr="object being bent"/>
+            </roles>
+            
+            <example name="participle">
+                <inflection person="ns" tense="ns" aspect="ns" voice="ns" form="ns"/>
+                <text>
+                    She turned and walked stiffly into the parlor to the dainty-legged escritoire , warped and cracked now from fifty years in an atmosphere of sea spray .
+                </text>
+                <arg n="1">the dainty-legged escritoire</arg>
+                <rel>warped</rel>
+                <arg n="M" f="TMP">now</arg>
+                <arg n="M" f="CAU">from fifty years in an atmosphere of sea spray</arg>
+            </example>
+            
+            <note>
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

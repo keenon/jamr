@@ -1,0 +1,52 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="zip">
+        <note>
+            Frames file for 'zip' based on survey of sentences in the WSJ
+            corpus. 
+        </note>
+        
+        <roleset id="zip.01" name="to move very fast" vncls="-">
+            <roles>
+                <role descr="entity in motion" n="0"/>
+            </roles>
+            
+            
+            <example name="intransitive">
+                <inflection aspect="ns" form="full" person="ns" tense="present" voice="active"/>
+                <text>
+                    If [*-1] positioned over the brain 's motor-control area , the hand-held electromagnets generate nerve impulses that [*T*-309] zip down motor nerves and activate muscles , [*] making , say , a finger twitch .
+                </text>
+                <arg f="RCL" n="M">that -&gt; nerve impulses</arg>
+                <arg n="0">[*T*-309]</arg>
+                <rel>zip</rel>
+                <arg f="DIR" n="M">down motor nerves</arg>
+            </example>
+            
+            
+            
+        </roleset>
+        <roleset id="zip.02" name="zip_up" vncls="-">
+            <roles>
+                <role descr="one who zips up, agent" n="0"/>
+                <role descr="patient, entity being zipped up" n="1"/>
+            </roles>
+            
+            <example name="camping trip">
+                <text>
+                    Jaime zipped up his sleeping bag right before getting eaten by a bear.
+                </text>
+                <arg n="0">Jamie</arg>
+                <rel>zipped up</rel>
+                <arg n="0">his sleeping bag</arg>
+                <arg f="TMP" n="M">right before getting eaten by a bear.</arg>
+            </example>
+        </roleset>
+        
+    </predicate>
+    
+    <note>
+        frames created by Olga (and Kev)
+    </note>
+    
+</frameset>

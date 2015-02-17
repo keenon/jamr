@@ -1,0 +1,39 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="taxi">
+        <note>
+            Frames file for 'taxi' based on ebn instances.
+        </note>
+        
+        <roleset id="taxi.01" name="airplane moving on the ground" vncls="51.4.1 11.5">
+            <roles>
+                <role descr="agent, driver" n="0">
+                    <vnrole vncls="11.5" vntheta="Agent"/><vnrole vncls="51.4.1" vntheta="Agent"/>
+                </role>
+                <role descr="thing moved" n="1">
+                    <vnrole vncls="11.5" vntheta="Theme"/><vnrole vncls="51.4.1" vntheta="Theme"/>
+                </role>
+                <role descr="locations, or start point" n="2">
+                    <vnrole vncls="11.5" vntheta="Source"/><vnrole vncls="51.4.1" vntheta="Location"/>
+                </role>
+                <role descr="destination" n="3">
+                    <vnrole vncls="11.5" vntheta="Destination"/><vnrole vncls="51.4.1" vntheta="Location"/>
+                </role>
+            </roles>
+            
+            <example name="air force one">
+                <text>
+                    You're looking at the picture of [Air Force One]-1 taxiing in on the
+                    tarmac, *PRO*-1 getting ready for the president.
+                </text>
+                <arg n="0">Air Force One</arg>
+                <rel>taxiing</rel>
+                <arg f="DIR" n="M">in</arg>
+                <arg f="LOC" n="M">on the tarmac</arg>
+                <arg f="PRD" n="M">getting ready for the president</arg>
+                
+            </example>
+            <note>frame by Perryn</note>
+        </roleset>
+    </predicate>
+</frameset>

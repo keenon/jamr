@@ -1,0 +1,28 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="sire">
+        <note>
+            Frames file for 'sire' based on sentences in brown.
+        </note>
+        
+        <roleset id="sire.01" vncls="-" name="bring forth, generate">
+            <roles>
+                <role n="0"  descr="sire"/>
+                <role n="1"  descr="children"/>
+            </roles>
+            
+            
+            <example name="transitive">
+                <inflection person="ns" tense="ns" aspect="ns" voice="ns" form="ns"/>
+                <text>
+                    What hope [*T*-1] lay in the nephews , she asked the intensifying light out there [*T*-2] , with one married to a barren woman and [the other]-1 divorced [*] , [*]-1 having sired two girl children , with none [0] [*T*-3] to bear on the Packard name ? ?
+                </text>
+                <arg n="0">[*]</arg>
+                <rel>sired</rel>
+                <arg n="1">two girl children</arg>
+            </example>
+            
+        </roleset>
+    </predicate>
+</frameset>
+

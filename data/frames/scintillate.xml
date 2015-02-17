@@ -1,0 +1,31 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="scintillate">
+        
+        <roleset framnet="" id="scintillate.01" name="scintillate" vncls="43.1">
+            <roles>
+                <role descr="causer of scintillation, agent (transitive clauses only)" f="" n="0">
+                    <vnrole vncls="43.1" vntheta="agent"/>
+                </role>
+                <note/>
+                <role descr="thing scintillating, theme (intranstiive subject, transitive object)" f="" n="1">
+                    <vnrole vncls="43.1" vntheta="theme"/>
+                </role>
+                <role descr="location of scintillation" f="" n="2">
+                    <vnrole vncls="43.1" vntheta="location"/>
+                </role>
+            </roles>
+            <example name="regular usage (intransitive)" src="web usage" type="">
+                <text>It scintillated among the finest jeweller's workshops in Paris, New York, and St. Petersburg.</text>
+                <note/>
+                <arg f="" n="1">It</arg>
+                <rel f="">scintillated</rel>
+                <arg f="" n="2">among the finest jewller's workshops</arg>
+                <arg f="loc" n="m">in Paris, New York, and St. Petersburg</arg>
+            </example>
+            <note>hand-checked by Kevin</note>
+        </roleset>
+        <note>Automatically created based on framefiles: flame (43.1)</note>
+    </predicate>
+    <note/>
+</frameset>

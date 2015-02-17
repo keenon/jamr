@@ -1,0 +1,35 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="sedate">
+        <note>
+            Frames file for 'sedate' based on ebn instances.
+        </note>
+        
+        <roleset id="sedate.01" name="make calm with drugs" vncls="42.3">
+            <roles>
+                <role descr="sedator" n="0">
+                    <vnrole vncls="42.3" vntheta="Agent"/>
+                </role>
+                <role descr="sedated" n="1">
+                    <vnrole vncls="42.3" vntheta="Patient"/>
+                </role>
+                <role descr="instrument of sedation" n="2">
+                    <vnrole vncls="42.3" vntheta="Instrument"/>
+                </role>
+            </roles>
+            
+            <example name="what happens after hysterics">
+                <text>
+                    He-1 had to be setaded *-1 for a while.
+                </text>
+                <rel>sedated</rel>
+                <arg n="1">*-1 --he</arg>
+                <arg f="TMP" n="M">for a while</arg>
+                
+            </example>
+            
+            <note>frame by Perryn</note>
+            
+        </roleset>
+    </predicate>
+</frameset>

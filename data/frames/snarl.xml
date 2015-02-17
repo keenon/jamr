@@ -1,0 +1,41 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="snarl">
+        <note>
+            Frames file for 'snarl' based on sentences in brown.
+        </note>
+        
+        <roleset id="snarl.01" vncls="-" name="make sounds like a mad dog">
+            <roles>
+                <role n="0"  descr="mad dog"/>
+                <role n="1"  descr="utterance, when metaphorical"/>
+                <role n="2"  descr="hearer, possibly"/>
+            </roles>
+            
+            <example name="with dogs">
+                <inflection person="third" tense="past" aspect="progressive" voice="active" form="participle"/>
+                <text>
+                    At once a bevy of dogs was snapping and snarling around him.
+                </text>
+                <arg n="m" f="TMP">At once</arg>
+                <arg n="0"        >a bevy of dogs</arg>
+                <rel              >snarling</rel>
+                <arg n="m" f="LOC">around him</arg>
+            </example>
+            
+            <example name="with utterance">
+                <inflection person="ns" tense="past" aspect="ns" voice="active" form="full"/>
+                <text>
+                    [``Keep out of this'']-1, Purvis snarled [*T*-1].
+                </text>
+                <arg n="0"        >Purvis</arg>
+                <rel              >snarled</rel>
+                <arg n="1"        >[*T*-1]</arg>
+            </example>
+            
+            <note>
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

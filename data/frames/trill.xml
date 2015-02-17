@@ -1,0 +1,29 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="trill">
+        <note>
+            Frames file for 'trill' based on dictionary.com. Verbnet entry 38, 37.3.
+        </note>
+        
+        <roleset id="trill.01" name="to sing or play with a vibratory or quavering effect" vncls="38 37.3">
+            <roles>
+                
+                <role descr="trill-er" n="0">
+                    <vnrole vncls="38" vntheta="Agent"/><vnrole
+  vncls="37.3" vntheta="Agent"/>
+                </role>
+                
+            </roles>
+            
+            <example name="Opera Singer">
+                <text>
+                    The Opera singer trilled her way into history.
+                </text>
+                <arg n="0">The Opera singer</arg>
+                <rel>trilled</rel>
+                
+            </example>
+        </roleset>
+        <note>frame by Perryn</note>
+    </predicate>
+</frameset>

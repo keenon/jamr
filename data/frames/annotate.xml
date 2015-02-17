@@ -1,0 +1,30 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="annotate">
+        <note>
+            Frames file for 'annotate' based on dictionary.com. Verbnet entry 25.1.
+        </note>
+        
+        <roleset id="annotate.01" name="to supply with notes, comment upon" vncls="25.1">
+            <roles>
+                <role descr="commentor" n="0">
+                    <vnrole vncls="25.1" vntheta="Agent"/>
+                </role>
+                <role descr="thing commented on" n="1">
+                    <vnrole vncls="25.1" vntheta="Theme"/>
+                </role>
+            </roles>
+            
+            <example name="trusty annotators">
+                <text>
+                    The students annotate verbs all day, every day.
+                </text>
+                <arg n="0">The students</arg>
+                <rel>annotate</rel>
+                <arg n="1">verbs</arg>
+                
+            </example>
+        </roleset>
+        <note>frame by Perryn</note>
+    </predicate>
+</frameset>

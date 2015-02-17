@@ -1,0 +1,34 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="wolf_down">
+        <note>
+            Frames file for 'wolf' based on sentences in ectb2.  Verbnet entries
+            39.3 and 38; Framenet entries Ingestion and Perception noise.
+        </note>
+        
+        <roleset id="wolf.01" name="eat voraciously" vncls="39.3">
+            <roles>
+                <role descr="eater" n="0">
+                    <vnrole vncls="39.3" vntheta="Agent"/>
+                </role>
+                <role descr="food" n="1">
+                    <vnrole vncls="39.3" vntheta="Patient"/>
+                </role>
+            </roles>
+            <example>
+                <inflection aspect="progressive" form="participle" person="ns" tense="present" voice="passive"/>
+                <text>
+                    John wolfed down Mary's lunch.
+                </text>
+                <arg n="0">John</arg> 
+                <rel>[wolfed] [down]</rel>
+                <arg n="1">Mary's lunch</arg> 
+            </example>
+            
+            <note>
+                Frameset created by Jena.
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

@@ -1,0 +1,163 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="fight">
+        <note>
+            Frames file for 'fight' based on sentences in financial subcorpus.
+            Verbnet class fight 36.3, no mention of other members.  Comparison
+            with 'battle' and 'pit', since I just did those today.
+        </note>
+        
+        <roleset id="fight.01" name="fight" vncls="36.3">
+            <roles>
+                <role descr="first fighter" n="0">
+                    
+                    <vnrole vncls="36.3" vntheta="Actor1"/>
+                </role>
+                
+                <role descr="second fighter, if separate" n="1">
+                    
+                    <vnrole vncls="36.3" vntheta="Actor2"/>
+                </role>
+                
+                <role descr="spoils" n="2"/>
+            </roles>
+            
+            <example name="all args">
+                <text>
+                    But it isn't clear how long GM-1 would be willing *trace*-1 to fight
+                    Ford for Jaguar. 
+                </text>
+                <arg n="0">*trace*</arg>
+                <rel>fight</rel>
+                <arg n="1">Ford</arg>
+                <arg n="2">for Jaguar</arg>
+            </example>
+            
+            <example name="missing combatant">
+                <text>
+                    But the government's action, which caught Jaguar management
+                    flat-footed, may scuttle the GM minority deal by forcing it to
+                    fight for all of Jaguar. 
+                </text>
+                <arg n="0">it</arg>
+                <rel>fight</rel>
+                <arg n="2">for all of Jaguar</arg>
+            </example>
+            
+            <example name="missing spoils">
+                <text>
+                    But healthy skepticism vanishes when they-1 are solicited by an
+                    organized charity *trace*-1 to help fight cancer, famine, child
+                    abuse, or what have you. 
+                </text>
+                <arg n="0">*trace*</arg>
+                <rel>fight</rel>
+                <arg n="1">cancer, famine, child abuse, or what have you</arg> 
+            </example>
+            
+            <example name="intransitive">
+                <text>
+                    However, Judge Hastings has said he-1 will continue *trace*-1 to fight
+                    and is contemplating an appeal of any impeachment to the
+                    U.S. Supreme Court. 
+                </text>
+                <arg n="0">*trace*</arg>
+                <rel>fight</rel>
+            </example>
+            
+            <note>
+            </note>
+            
+        </roleset>
+    </predicate>
+    <predicate lemma="fight_back">
+        
+        
+        <roleset id="fight.04" name="fight back" vncls="36.3">
+            <roles>
+                <role descr="first fighter" n="0">
+                    
+                    <vnrole vncls="36.3" vntheta="Actor1"/>
+                </role>
+                
+                <role descr="second fighter, if separate" n="1">
+                    
+                    <vnrole vncls="36.3" vntheta="Actor2"/>
+                </role>
+                
+                <role descr="spoils" n="2"/>
+            </roles>
+            
+            <example>
+                <text>
+                    [The enemy]-1 was only able to defend itself, without [any strength] *0*-2 *-1 to fight back *-2
+                </text>
+                <arg n="0">*0*-2 -> any strength</arg>
+                <arg n="0">*-1</arg>
+                <rel>fight back</rel>
+                <arg n="m" f="ADV">*-2</arg>
+            </example>
+            
+            <note>
+                Frame created by Jena
+            </note>
+            
+        </roleset>
+    </predicate>
+    
+    <predicate lemma="fight_off">
+        
+        <roleset id="fight.02" name="repel, rebuff" vncls="-">
+            <roles>
+                <role descr="fighter" n="0"/>
+                <role descr="thing repelled" n="1"/>
+                <role descr="instrument" n="2"/>
+            </roles>
+            
+            <example name="no instrument">
+                <text>
+                    *trace*-1 To fight off predators, [B.A.T]-1 plans to spin off about $6
+                    billion in assets... 
+                </text>
+                <arg n="0">*trace*</arg>
+                <rel>[ fight] [ off]</rel>
+                <arg n="1">predators</arg>
+            </example>
+            
+            <note>
+                Don't know if instrument will be needed, but there it is just in case.
+            </note>
+            
+        </roleset>
+    </predicate>
+    
+    <predicate lemma="fight_on">
+        
+        <note>
+        </note>
+        
+        <roleset id="fight.03" name="continue fighting" vncls="36.4">
+            <roles>
+                <role descr="first fighter" n="0">
+                    <vnrole vncls="36.4" vntheta="Actor1"/>
+                </role>
+                
+                <role descr="second fighter, if separate" n="1">
+                    <vnrole vncls="36.4" vntheta="Actor2"/>
+                </role>
+            </roles>
+            
+            <example name="Fighter 1">
+                <text>
+                    * Seeing Meinung's people fight on and Liuchia's silently enduring, one
+                    can't help but ask, "Are the Hakka people fated * * to wander the world?
+                </text>
+                <arg n="0">*trace*</arg>
+                <rel>[ fight] [ on]</rel>
+            </example>
+            <note>
+                Frame edited by Arrick
+            </note>
+        </roleset>
+    </predicate>
+</frameset>

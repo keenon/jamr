@@ -1,0 +1,43 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="agglomerate">
+        <note>
+            Automatically created based on framefiles: fade (45.4)
+        </note>
+        <roleset id="agglomerate.01" name="make a cluster or pile" vncls="45.4">
+            <roles>
+                <role descr="agent, cause" n="0">
+                    <vnrole vncls="45.4" vntheta="Agent"/>
+                </role>
+                <role descr="clustering thing" n="1">
+                    <vnrole vncls="45.4" vntheta="Patient"/>
+                </role>
+                <role descr="instrument, method" n="2">
+                    <vnrole vncls="45.4" vntheta="Instrument"/>
+                </role>
+                
+            </roles>
+            <example name="Passive, Transitive" src="web usage" type="">
+                <text>[Poorly compressible crystals of acebutolol hydrochloride]-1
+                    were agglomerated *T*-1 by the spherical crystallization technique with a two-solvent system
+                </text>
+                <rel f="">agglomerated</rel>
+                <arg f="" n="0">*T*-1</arg>
+                <arg f="" n="1">crystals of acebutolol hydrochloride</arg>
+                <arg f="" n="2">by the sphrical crystallization technique with a two-solvent system</arg>
+                <note/>
+            </example>
+            <example name="Middle, Inransitive" src="web usage" type="">
+                <text>Coal is agglomerated during coal processing in a preparation plant.</text>
+                <arg f="" n="1">*T*-1</arg>
+                <rel f="">agglomerated</rel>
+                <arg f="tmp" n="m">during cola processing</arg>
+                <arg f="loc" n="m">in a preparation plant.</arg>
+                <note/>
+            </example>
+            
+            <note>Edited by hwangd</note>
+            
+        </roleset>
+    </predicate>
+</frameset>

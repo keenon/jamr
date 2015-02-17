@@ -1,0 +1,61 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="launch">
+        <note>
+            Frames file for 'launch' based on sentences in financial subcorpus.
+            No verbnet entry.  Comparison with 'introduce'
+        </note>
+        
+        <roleset id="launch.01" name="introduce, bring up, start" vncls="55.5-1">
+            <roles>
+                <role descr="starter, agent" n="0">
+                    <vnrole vncls="55.5-1" vntheta="Agent"/>
+                </role>
+                <role descr="thing being launched" n="1">
+                    <vnrole vncls="55.5-1" vntheta="Theme"/>
+                </role>
+            </roles>
+            
+            <example name="transitive">
+                <text>
+                    DD Acquisition has launched a suit in a Delaware court seeking the
+                    withdrawal of Dunkin's poison pill rights and employee stock
+                    ownership plans. 
+                </text>
+                <arg n="0">DD Acquisition</arg>
+                <rel>launched</rel>
+                <arg n="1">a suit</arg>
+                <arg f="LOC" n="M">in a Delaware court</arg>
+                <arg n="M" f="ADV">seeking the withdrawal of Dunkin's poison pill
+                    rights and employee stock ownership plans
+                </arg>
+            </example>
+            
+            <example name="frequently passivized">
+                <text>
+                    For example, stock-index futures began trading in Chicago in 1982,
+                    and within two years they were [the fastest-growing futures
+                    contract]-1 ever launched *trace*-1. 
+                </text>
+                <arg f="TMP" n="M">ever</arg>
+                <rel>launched</rel>
+                <arg n="1">*trace*</arg>
+            </example>
+            
+            <example name="might split up a constituent">
+                <text>
+                    Separately, the Ontario Supreme Court said it will postpone
+                    indefinitely a ruling on [the lawsuit]-1 launched *trace*-1 by the
+                    University of Toronto against Connaught in connection with the
+                    Merieux bid. 
+                </text>
+                <rel>launched</rel>
+                <arg n="1">*trace*</arg>
+                <arg n="0">by the University of Toronto</arg>
+                <arg n="1">against Connaught</arg>
+                <arg f="MNR" n="M">in connection with the Merieux bid</arg>
+            </example>
+            
+        </roleset>
+    </predicate>
+</frameset>

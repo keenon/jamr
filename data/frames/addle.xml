@@ -1,0 +1,32 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="addle">
+        <note>
+            Frames file for 'addle' based on sentences in ectb 2.  No Verbnet entry.
+            Comparison with 'confuse'.
+        </note>
+        
+        <roleset id="addle.01" name="(cause to) be confused" vncls="-">
+            <roles>
+                <role descr="agentive cause of confusion" n="0"/>
+                <role descr="entity experiencing confusion" n="1"/>
+                <role descr="confused about or over what?" n="2"/>
+            </roles>
+            
+            <example name="addle">
+                <text>
+                    The feeling that they were staring at me kind of addled my brain.
+                </text>
+                <arg n="0">The feeling that they were staring at me</arg>
+                <arg n="m" f="ADV">kind of</arg>
+                <rel>addled</rel>
+                <arg n="1">me</arg>
+            </example>
+            
+            <note>
+                Frame created by Arrick
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

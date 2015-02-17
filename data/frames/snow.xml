@@ -1,0 +1,32 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="snow">
+        <note>
+            Frames file for 'snow' based on sentences in brown.
+        </note>
+        
+        <roleset id="snow.01" vncls="-" name="weather phenomenon">
+            <roles>
+                <role n="0"  descr="cause of snow"/>
+                <role n="1"  descr="the snow itself"/>
+                <role n="2"  descr="poor schmo getting snowed on"/>
+            </roles>
+            
+            <example name="classic weather construction">
+                <inflection person="third" tense="past" aspect="progressive" voice="active" form="participle"/>
+                <text>
+                    He was mildly surprised to find it was snowing.
+                </text>
+                <rel              >snowing</rel>
+                <note>
+                    The 'it' is just a dummy--it doesn't have any real meaning, so leave it out.
+                </note>
+            </example>
+            
+            <note>
+                Comparison with 'rain' suggests the argument structure, but the corpus
+                doesn't provide examples.
+            </note>
+        </roleset>
+    </predicate>
+</frameset>

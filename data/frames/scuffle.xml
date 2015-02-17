@@ -1,0 +1,39 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="scuffle">
+        <note>
+            Frames file for 'scuffle' based on ebn instances.
+        </note>
+        
+        <roleset id="scuffle.01" name="fight" vncls="36.4-1">
+            <roles>
+                <role descr="first fighter" n="0">
+                    
+                    <vnrole vncls="36.4-1" vntheta="Actor1"/>
+                </role>
+                
+                <role descr="second fighter, if separate" n="1">
+                    
+                    <vnrole vncls="36.4-1" vntheta="Actor2"/>
+                </role>
+                
+                <role descr="spoils" n="2">
+                    <vnrole vncls="36.4-1" vntheta="Topic"/>
+                </role>
+            </roles>
+            
+            <example name="mob mentality">
+                <text>
+                    Across the country, they-1 were lining up *PRO*-1 jostling *RNR*-2, even
+                    scuffling *RNR*-2 [for the most wanted toy in America, which *T*-3 went
+                    on sale at midnight]-2.
+                </text>
+                <arg n="0">*PRO*-1 -- they</arg>
+                <arg f="ADV" n="M">even</arg>
+                <rel>scuffling</rel>
+                <arg n="2">*RNR*-2 -- for the most wanted toy...</arg>
+            </example>
+        </roleset>
+        <note>frame by Perryn</note>
+    </predicate>
+</frameset>

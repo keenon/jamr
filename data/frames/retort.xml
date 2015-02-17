@@ -1,0 +1,49 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="retort">
+        <note>
+            Frames file for 'retort' based on sentences in BROWN.
+            No VN entry.
+            Comparison to 'reply'.
+        </note>
+        
+        <roleset id="retort.01" name="reply" vncls="">
+            <roles>
+                <role descr="replier" n="0"/>
+                
+                <role descr="in response to" n="1"/>
+                
+                <role descr="answer" n="2"/>
+            </roles>
+            
+            
+            <example name="transitive, arg0 and arg2">
+                <inflection person="ns" tense="ns" aspect="ns" voice="ns" form="ns"/>
+                <text>
+                    `` That will have [*-1] to be in the hotel '' , the doctor retorted [*T*-2] ,
+                    [*-3] confirming Alex 's anticipations .
+                </text>
+                <rel>retorted</rel>
+                <arg n="0">the doctor</arg>
+                <arg n="2">[*T*-2] ->  That will have [*-1] to be in the hotel</arg>
+                <arg n="M" f="ADV">[*-3] confirming Alex 's anticipations</arg>
+            </example>
+            
+            
+            <note>
+                Framed by Neville.
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,37 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="transpire">
+        <note>
+            Frames file for 'transpire' based on sentences in ebc.  Verbnet entry
+            occurence-48.3, other framed members include; develop, happen, occur,
+            take place.
+        </note>
+        
+        <roleset id="transpire.01" name="occur, take place" vncls="48.3">
+            <roles>
+                <role descr="event" n="1">
+                    <vnrole vncls="48.3" vntheta="Theme"/>
+                </role>
+                <role descr="transpired between, location" n="2">
+                    <vnrole vncls="48.3" vntheta="Location"/>
+                </role>
+            </roles>
+            
+            <example name="nobody knows">
+                <text>
+                    ...what exactly *T*-4 transpired between him and the administrators
+                    before those shots were fired *-5 ?
+                </text>
+                <arg n="1">*T*-4</arg>
+                <rel>transpired</rel>
+                <arg n="2">between him and the adminstrators</arg>
+                <arg n="m" f="TMP">before those shots were fired *-5</arg>
+            </example>
+            
+            <note>
+                Frame created by Arrick
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

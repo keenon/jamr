@@ -1,0 +1,109 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="find">
+        <note>
+            Frames file for 'find' based on file created by Chris, survey of
+            initial sentences of big corpus, and minimal comparison with 'receive',
+            revised by Olga and Arrick
+        </note>
+        
+        <roleset id="find.01" name="discovery" vncls="13.5.1">
+            <roles>
+                <role descr="finder" n="0">
+                    <vnrole vncls="13.5.1" vntheta="Agent"/>
+                </role>
+                <role descr="thing found" n="1">
+                    <vnrole vncls="13.5.1" vntheta="Theme"/>
+                </role>
+                <role descr="benefactive, found for" n="2">
+                    <vnrole vncls="13.5.1" vntheta="Beneficiary"/>
+                </role>
+            </roles>
+            
+            <example name="basic transitive">
+                <text>
+                    I-1'd like *trace*-1 to find a flight that goes from Boston to Orlando.
+                </text>
+                <arg n="0">*trace*</arg>
+                <rel>find</rel>
+                <arg n="1">a flight that goes from Boston to Orlando</arg>
+            </example>
+            
+            <example name="found a sentence!">
+                <text>
+                    The study also found that the colony's consumers feel more
+                    pressured than those in any of the other surveyed markets.
+                </text>
+                <arg n="0">The study</arg>
+                <arg f="DIS" n="m">also</arg>
+                <rel>found</rel>
+                <arg n="1">the colony's consumers feel more pressured than
+                    those in any of the other surveyed markets
+                </arg>
+            </example>
+            
+            <note>
+                Note again that the &quot;that&quot; is not included in the argument just as for
+                all the verbs of saying.  If the complementizer is a wh-word (&quot;when&quot;,
+                &quot;who&quot;, etc) or &quot;if&quot;, then it will be included.
+            </note>
+        </roleset>
+        
+        <roleset id="find.02" name="witness,perceive" vncls="29.4">
+            <roles>
+                <role descr="finder" n="0">
+                    <vnrole vncls="29.4" vntheta="Agent"/>
+                </role>
+                <role descr="thing found" n="1">
+                    <vnrole vncls="29.4" vntheta="Theme"/>
+                </role>
+            </roles>
+            
+            
+            <example name="with a small clause">
+                <text>
+                    State courts found the rates illegal.
+                </text>
+                <arg n="0">State courts</arg>
+                <rel>found </rel>
+                <arg n="1">the rates illegal</arg>
+            </example>
+            
+        </roleset>
+    </predicate>
+    
+    <predicate lemma="find_out">
+        <note>
+            Frame for 'find_out' based on VerbNet class 84, other members include
+            figure_out, learn, study 
+        </note>
+        
+        <roleset id="find.03" name="discovery" vncls="84">
+            <roles>
+                <role descr="finder" n="0">
+                    <vnrole vncls="84" vntheta="Agent"/>
+                </role>
+                <role descr="thing found" n="1">
+                    <vnrole vncls="84" vntheta="Theme"/>
+                </role>
+                <role descr="source" n="2">
+                    <vnrole vncls="84" vntheta="Source"/>
+                </role>
+            </roles>
+            
+            <example name="discover">
+                <text>
+                    Most people have a strong deisre * to find out about it, so as a result
+                    they have * to pick up what they can *?* *T*-2.
+                </text>
+                <arg n="0">*trace*</arg>
+                <rel>[ find] [ out]</rel>
+                <arg n="1">about it</arg>
+            </example>
+            
+            <note>
+                Frame edited by Arrick
+            </note>
+        </roleset>
+    </predicate>
+</frameset>

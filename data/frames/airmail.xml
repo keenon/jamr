@@ -1,0 +1,40 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="airmail">
+        <note>
+            Frames file for 'airmail' based on dictionary.com. Verbnet entry 11.1
+        </note>
+        
+        <roleset id="airmail.01" name="send by air" vncls="11.1-1">
+            <roles>
+                <role descr="mailer" n="0">
+                    
+                    <vnrole vncls="11.1-1" vntheta="Agent"/>
+                </role>
+                
+                <role descr="letter" n="1">
+                    
+                    <vnrole vncls="11.1-1" vntheta="Theme"/>
+                </role>
+                
+                <role descr="mailed-to" n="2">
+                    
+                    <vnrole vncls="11.1-1" vntheta="Destination"/>
+                </role>
+                
+            </roles>
+            
+            <example name="faster way to mail">
+                <text>
+                    John airmailed Mary's letter to make sure it got to her.
+                </text>
+                <arg n="0">John</arg>
+                <rel>airmailed</rel>
+                <arg n="1">Mary's letter</arg>
+                <arg n="2">to her</arg>
+                
+            </example>
+        </roleset>
+        <note>frame by Perryn</note>
+    </predicate>
+</frameset>

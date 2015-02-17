@@ -1,0 +1,33 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="skewer">
+        <note>
+            Frames file for 'skewer' based on dictionary.com. Verbnet entry 9.10.
+        </note>
+        
+        <roleset id="skewer.01" name="to fasten with a skewer" vncls="9.10">
+            <roles>
+                <role descr="skewerer" n="0">
+                    <vnrole vncls="9.10" vntheta="Agent"/>
+                </role>
+                <role descr="thing skewered" n="1">
+                    <vnrole vncls="9.10" vntheta="Theme"/>
+                </role>
+                <role descr="skewer, location" n="2">
+                    <vnrole vncls="9.10" vntheta="Location"/>
+                </role>
+            </roles>
+            
+            <example name="cooking">
+                <text>
+                    The chef skewered the chicken to make his kabobs.
+                </text>
+                <arg n="0">The chef</arg>
+                <rel>skewered</rel>
+                <arg n="1">the chicken</arg>
+                
+            </example>
+        </roleset>
+        <note>frame by Perryn</note>
+    </predicate>
+</frameset>

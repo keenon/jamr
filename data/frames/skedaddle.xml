@@ -1,0 +1,31 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="skedaddle">
+        
+        
+        <roleset framnet="" id="skedaddle.01" name="skedaddle" vncls="51.3.2">
+            <roles>
+                <role descr="entity moved, skedaddler" f="" n="1">
+                    <vnrole vncls="51.3.2" vntheta="theme"/>
+                </role>
+                <role descr="Extent" f="" n="2"/>
+                <role descr="start point, or path" f="" n="3"/>
+                <role descr="end point" f="" n="4">
+                    <vnrole vncls="51.3.2" vntheta="location"/>
+                </role>
+                
+                <note/>
+            </roles>
+            <example name="from Google" src="web usage" type="">
+                <text>We skedaddled to a pub across the road.</text>
+                <note/>
+                <arg f="" n="1">We</arg>
+                <rel f="">skedaddled</rel>
+                <arg f="" n="4">to a pub across the road</arg>
+            </example>
+            <note>hand-checked by Kevin</note>
+        </roleset>
+        <note>Automatically created based on framefiles: fall (51.1), zoom (51.3.2)</note>
+    </predicate>
+    <note/>
+</frameset>

@@ -1,0 +1,44 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="transpose">
+        <note>
+            Frames file for 'transpose' based on old frames files for 'carry' and 'convey'
+        </note>
+        
+        <roleset id="transpose.01" name="move or switch (written) elements" vncls="-">
+            <roles>
+                <role descr="transposer, agent" n="0"/>
+                <role descr="thing(s) transposed" n="1"/>
+                <role descr="source, initial state/place" n="2"/>
+                <role descr="destination, final state/place" n="3"/>
+            </roles>
+            
+            <example name="Music">
+                <text>
+                    Stravinsky transposed the National Anthem from C major to E flat major.
+                </text>
+                <arg n="0">Stravinsky</arg>
+                <rel>transposed</rel>
+                <arg n="1">the National Anthem</arg>
+                <arg n="2">from C major</arg>
+                <arg n="3">to E flat major</arg>
+            </example>
+            
+            
+            <example name="Orthography">
+                <text>
+                    The two letters[1] were incorrectly transposed [t-1] in the word.
+                </text>
+                <arg f="MNR" n="m">incorrectly</arg>
+                <rel>transposed</rel>
+                <arg n="1">[t-1] (the two letters)</arg>
+                <arg f="LOC" n="m">in the word</arg>
+            </example>
+        </roleset>
+    </predicate>
+    
+    <note>
+        Added by Kev
+    </note>
+    
+</frameset>

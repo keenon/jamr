@@ -1,0 +1,62 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="chatter">
+        <note>
+            Frames file for 'chatter' based on sentences in brown.
+        </note>
+        
+        <roleset id="chatter.01" vncls="37.6 37.3" name="make rapid talking noises">
+            <roles>
+                <role n="0"  descr="emitter of noise, speaker">
+                    <vnrole vncls="37.6"
+  vntheta="Actor1"/><vnrole vncls="37.3" vntheta="Agent"/>
+                </role>
+                <role n="1"  descr="topic, if arg0=speaker">
+                    <vnrole vncls="37.6"
+  vntheta="Topic"/><vnrole vncls="37.3" vntheta="Topic"/>
+                </role>
+            </roles>
+            
+            <example name="usually intransitive">
+                <inflection person="ns" tense="past" aspect="ns" voice="active" form="full"/>
+                <text>
+                    Her teeth chattered so that she made three attempts at speech
+                    before she became intelligible. 
+                </text>
+                <arg n="0"        >Her teeth</arg>
+                <rel              >chattered</rel>
+                <arg n="m" f="ADV">so that she made three attempts at speech before
+                    she became intelligible
+                </arg>
+            </example>
+            
+            <example name="with manner">
+                <inflection person="ns" tense="past" aspect="both" voice="active" form="participle"/>
+                <text>
+                    Two women, who [*T*-2] had been chattering like parrots, were
+                    struck dumb. 
+                </text>
+                <arg f="RCL" n="M">who -gt; Two women</arg>
+                <arg n="0"        >[*T*-2]</arg>
+                <rel              >chattering</rel>
+                <arg n="m" f="MNR">like parrots</arg>
+            </example>
+            
+            <example name="with topic">
+                <inflection person="ns" tense="ns" aspect="progressive" voice="active" form="participle"/>
+                <text>
+                    [Maggie]*-1 was looking much happier already, [*-1] clearing a
+                    space on the table and chattering about how she could put up a
+                    typewriter right there... 
+                </text>
+                <arg n="0"        >[*-1]</arg>
+                <rel              >chattering</rel>
+                <arg n="1"        >about how she could put a typewriter right there</arg>
+            </example>
+            
+            <note>
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

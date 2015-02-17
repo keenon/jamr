@@ -1,0 +1,40 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <note/>
+    <predicate lemma="tinsel">
+        <note/>
+        <roleset framnet="-" id="tinsel.01" name="make sparkly by decorating with tinsel" vncls="9.9">
+            <roles>
+                <role descr="Causal agent" f="" n="0">
+                    <vnrole vncls="butter-9.9" vntheta="agent"/>
+                </role>
+                <note/>
+                <role descr="thing covered in tinsel" f="" n="1">
+                    <vnrole vncls="butter-9.9" vntheta="destination"/>
+                </role>
+                <role descr="the tinsel" f="" n="2">
+                    <vnrole vncls="butter-9.9" vntheta="theme"/>
+                </role>
+            </roles>
+            <note>Roleset based on internet search. Added because none existed. Member of Vncls 9.9. Comparison to ‘ornament’. Roleset by Julia.</note>
+            <example name="All args, metaphorical" src="All args, metaphorical" type="All args, metaphorical">
+                <inflection aspect="ns" form="full" person="third" tense="past" voice="active"/>
+                <text>Jazz buff Eastwood also tinseled the soundtrack with versions of some of Mercer's best-known songs.</text>
+                <note/>
+                <arg f="" n="0">Jazz buff Eastwood</arg>
+                <arg f="adv" n="m">also</arg>
+                <rel f="">tinseled</rel>
+                <arg f="" n="1">the soundtrack</arg>
+                <arg f="" n="2">with versions of some of Mercer's best-known songs.</arg>
+            </example>
+            <example name="theme as subject" src="theme as subject" type="theme as subject">
+                <inflection aspect="ns" form="full" person="third" tense="past" voice="ns"/>
+                <text>Mountain goat hair tinseled the low bushes all around.</text>
+                <note/>
+                <arg f="" n="2">Mountain goat hair</arg>
+                <rel f="">tinseled</rel>
+                <arg f="" n="1">the low bushes all around.</arg>
+            </example>
+        </roleset>
+    </predicate>
+</frameset>

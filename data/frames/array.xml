@@ -1,0 +1,29 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="array">
+        <note>
+            Frames file for 'array' based on sentences in ectb2.  No Verbnet entry.
+        </note>
+        
+        <roleset id="array.01" name="arrange in a line/orderly fashion" vncls="-">
+            <roles>
+                <role descr="agent" n="0"/>
+                <role descr="thing aligned" n="1"/>
+            </roles>
+            
+            <example name="no agent">
+                <text>
+                    [Flags from every participating country]-9 were arrayed *-9 at the festival...
+                </text>
+                <rel>arrayed</rel>
+                <arg n="1">*trace*-9</arg>
+                <arg n="m" f="LOC">at the festival...</arg>
+            </example>
+            
+            <note>
+                Frame created by Arrick
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

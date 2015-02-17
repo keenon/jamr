@@ -1,0 +1,39 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="sculpt">
+        <note>
+            Frames file for 'sculpt' based on sentences in ectb2.
+        </note>
+        
+        <roleset id="sculpt.01" name="build by molding" vncls="26.1">
+            <roles>
+                <role descr="sculptor" n="0">	
+                    <vnrole vncls="26.1" vntheta="Agent"/>
+                </role>
+                
+                <role descr="sculpture" n="1">	 	
+                    <vnrole vncls="26.1" vntheta="Product"/>
+                </role>
+                
+                <role descr="material, start state" n="2">	
+                    <vnrole vncls="26.1" vntheta="Material"/>
+                </role>
+                
+                <role descr="end state" n="4">
+                    <vnrole vncls="26.1" vntheta="Product"/>
+                </role>
+            </roles>
+            
+            <example>
+                <text>
+                    [Each figure]-1 had *-1 to be shaped, molded, kneaded, sculpted and painted *-1
+                </text>
+                <rel>assembling</rel>
+                <arg n="1">*-1</arg>
+            </example>
+            
+            <note>Frameset created by Jena.</note>
+            
+        </roleset>
+    </predicate>
+</frameset>

@@ -1,0 +1,34 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="whiten">
+        <note>
+            Frames file for 'whiten' based on frame file for 'activate'.   Verbnet
+            class 45.4, other members include activate, age, balance, blur, darken,
+            hasten, laminate, magnetize, revive, ripen, sicken, stabilize, sour,
+            tilt, unwind.
+        </note>
+        
+        <roleset id="whiten.01" name="make more white" vncls="45.4">
+            <roles>
+                <role descr="agent" n="0"/>
+                <role descr="patient" n="1"/>
+            </roles>
+            
+            <example name="whiten">
+                <text>
+                    [Many of the jade pieces in the pits]-9 were whitened [*]-9, for example,
+                    and the edges of the bronzes were curled and warped.
+                </text>
+                <arg n="1">[*]-9 -> Many of the jade peices in the pits</arg>
+                <arg n="m" f="ADV">for example</arg>
+                <rel>whitened</rel>
+            </example>
+            
+            
+            <note>
+                Frame file created by Arrick
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

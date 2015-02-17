@@ -1,0 +1,24 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="tweak">
+        
+        <roleset framnet="" id="tweak.01" name="tweak" vncls="20">
+            <roles>
+                <role descr="tweaker" f="" n="0"/>
+                <role descr="thing tweaked" f="" n="1"/>
+                <note/>
+            </roles>
+            <example name="from Google, NBA" src="web usage" type="">
+                <text>Varejao tweaked his ankle in Tuesday's win over the Pistons.</text>
+                <note/>
+                <arg f="" n="0">Varejao</arg>
+                <rel f="">tweaked</rel>
+                <arg f="" n="1">his ankle</arg>
+                <arg f="loc" n="m">in Tuesday's win over the Pistons</arg>
+            </example>
+            <note>hand-checked by Kev</note>
+        </roleset>
+        <note>Automatically created based on framefiles: massage (20)</note>
+    </predicate>
+    <note/>
+</frameset>

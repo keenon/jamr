@@ -1,0 +1,42 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="spatter">
+        <note>
+            Frames file for 'spatter' based on sentences in brown corpus. VerbNet class spray-9.7-1
+        </note>
+        
+        <roleset id="spatter.01" vncls="9.7-1" name="cover in spots of">
+            <roles>
+                <role descr="spatterer" n="0">
+                    <vnrole vncls="9.7-1" vntheta="Agent"/>
+                </role>
+                
+                <role descr="liquid being spattered" n="1">
+                    <vnrole vncls="9.7-1" vntheta="Theme"/>
+                </role>
+                
+                <role descr="entity spattered" n="2">
+                    <vnrole vncls="9.7-1" vntheta="Destination"/>
+                </role>
+            </roles>
+            
+            
+            <example name="passive">
+                <inflection person="ns" tense="ns" aspect="ns" voice="ns" form="ns"/>
+                <text>
+                    It should have been nearly as easy for her to remember that as it was for Big
+                    Hans to remember [*-2] going after the axe while he-1 was still spattered [*-1]
+                    with Pa 's yellow sick insides .
+                </text>
+                <rel>spattered</rel>
+                <arg n="2">[*-1]</arg>
+                <arg n="1">with Pa 's yellow sick insides</arg>
+            </example>
+            
+            <note>
+                Framed by Neville.
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

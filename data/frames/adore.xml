@@ -1,0 +1,36 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="adore">
+        <note>
+            Frames file for 'adore' based on sentences in EBC.  Verbnet entry
+            31.2, other members include admire, cherish, distrust, envy,
+            favor, grudge, loathe, love, pity, relish, savor, tolerate, value, and worship.
+        </note>
+        
+        <roleset id="adore.01" name="have fond feelings for" vncls="31.2">
+            <roles>
+                <role descr="adorer" n="0">
+                    <vnrole vncls="31.2" vntheta="Experiencer"/>
+                </role>
+                <role descr="thing adored" n="1">
+                    <vnrole vncls="31.2" vntheta="Cause"/>
+                </role>
+            </roles>
+            
+            <example name="both args">
+                <text>
+                    We both adore her very well and admire her immensely.
+                </text>
+                <arg n="0">We both</arg>
+                <rel>adore</rel>
+                <arg n="1">her</arg>
+                <arg n="m" f="MNR">very well</arg>
+            </example>
+            
+            <note>
+                Frame created by Arrick
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

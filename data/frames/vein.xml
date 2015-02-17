@@ -1,0 +1,31 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="vein">
+        <note>
+            Frames file for 'vein' based on sentences in brown.
+        </note>
+        
+        <roleset id="vein.01" vncls="-" name="make a vein-like pattern">
+            <roles>
+                <role n="0"  descr="causer of veins"/>
+                <role n="1"  descr="destination of veins"/>
+            </roles>
+            
+            <example name="sweetness of pity">
+                <inflection person="ns" tense="ns" aspect="ns" voice="ns" form="ns"/>
+                <text>
+                    He felt [the sweetness of pity]-1 flood through him , [*-1] veining his very flesh .
+                </text>
+                <arg n="0">[*-1]</arg>
+                <rel>veining</rel>
+                <arg n="1">his very flesh</arg>
+            </example>
+            
+            
+            <note>
+                wow.
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

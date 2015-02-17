@@ -1,0 +1,43 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="denigrate">
+        <note>
+            Frames file for 'denigrate' based on sentences in EBC.
+            Comparison with denounce and VN 33.
+        </note>
+        
+        <roleset id="denigrate.01" name="minimize, play down" vncls="33">
+            <roles>
+                <role descr="speaker" n="0">
+                    
+                    <vnrole vncls="33" vntheta="Agent"/>
+                </role>
+                
+                <role descr="subject" n="1">
+                    
+                    <vnrole vncls="33" vntheta="Theme"/>
+                </role>
+                
+                <role descr="grounds, reason" n="2">
+                    
+                    <vnrole vncls="33" vntheta="Cause"/>
+                </role>
+                
+            </roles>
+            
+            <example name="transitive">
+                <text>
+                    At the same time, it also actually denigrates Japan's image.
+                </text>
+                <arg n="m" f="TMP">At the same time</arg>
+                <arg n="0">it</arg>
+                <arg n="m" f="ADV">also</arg>
+                <arg n="m" f="ADV">actually</arg>
+                <rel>denigrates</rel>
+                <arg n="1">Japan's image</arg>
+            </example>
+            
+            <note>Frame created by Jena</note>
+        </roleset>
+    </predicate>
+</frameset>

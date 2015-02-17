@@ -1,0 +1,53 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="section">
+        <note>
+            Frames file for "section" loosely based on "disassemble" and "divide"
+            framesets.
+        </note>
+        
+        <roleset id="section.01" name="to divide" vncls="23.3">
+            <roles>
+                <role descr="entity dividing, agent" n="0"></role>
+                <role descr="entity divided, patient" n="1"></role>
+                <role descr="divided into what, end state, oblique" n="2"/>
+                <role descr="divided from what, source" n="3"/>
+            </roles>
+            
+            <example name="without end state">
+                <text>
+                    Sandy sectioned the pizza.
+                </text>
+                <arg n="0">Sandy</arg>
+                <rel>sectioned</rel>
+                <arg n="1">the pizza</arg>
+            </example>
+            
+            <example name="with end state">
+                <text>
+                    The viceroy sectioned up the territory into four large areas.
+                </text>
+                <arg n="0">The viceroy</arg>
+                <rel>sectioned up</rel>
+                <arg n="1">the territory</arg>
+                <arg n="2">into four large areas</arg>
+            </example>
+            
+            <example name="with source">
+                <text>
+                    The teacher sectioned off the unruly child from the rest.
+                </text>
+                <arg n="0">the teacher</arg>
+                <rel>sectioned off</rel>
+                <arg n="1">the unruly child</arg>
+                <arg n="3">from the rest</arg>
+            </example>
+            
+        </roleset>
+    </predicate>
+    
+    <note>
+        frames created by Kevin
+    </note>
+    
+</frameset>

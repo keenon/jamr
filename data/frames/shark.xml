@@ -1,0 +1,33 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="shark">
+        <note>
+            Frames file for 'shark' based on dictionary.com. Verbnet entry 13.7.
+        </note>
+        
+        <roleset id="shark.01" name="to hunt shark" vncls="13.7">
+            <roles>
+                <role descr="agent or causer" n="0">
+                    <vnrole vncls="13.7" vntheta="Agent"/>
+                </role>
+                
+                <role descr="entity gathered" n="1"/>
+                
+                <role descr="gathered into" n="2"/>
+                
+                <role descr="beneficiary" n="3"/>
+            </roles>
+            
+            <example name="brave soul">
+                <text>
+                    The crazy man sharked for dinner.
+                </text>
+                <arg n="0">The crazy man</arg>
+                <rel>sharked</rel>
+                <arg f="TMP" n="M">for dinner</arg>
+                
+            </example>
+        </roleset>
+        <note>frame by Perryn</note>
+    </predicate>
+</frameset>

@@ -1,0 +1,31 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="vaporize">
+        <note>
+            Frames file for 'vaporize' based on ebn instances. 
+        </note>
+        
+        <roleset id="vaporize.01" name="convert into vapor" vncls="45.4">
+            <roles>
+                <role descr="cause of mineralization" n="0">
+                    <vnrole vncls="45.4" vntheta="Agent"/>
+                </role>
+                <role descr="entity ionized" n="1">
+                    <vnrole vncls="45.4" vntheta="Patient"/>
+                </role>
+            </roles>
+            
+            <example name="look out below">
+                <text>
+                    [Most of the station]-1 is expected *-1 to vaporize as it comes down,
+                    some fragments splashing into the Pacific Ocean.
+                </text>
+                <arg n="1">*-1 -- Most of the station</arg>
+                <rel>vaporize</rel>
+                <arg f="TMP" n="M">as it comes down</arg>
+                
+            </example>
+        </roleset>
+        <note>frame by Perryn</note>
+    </predicate>
+</frameset>

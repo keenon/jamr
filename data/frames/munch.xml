@@ -1,0 +1,38 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="munch">
+        <note>
+            Frames file for 'munch' based on sentences in financial subcorpus.
+            No Verbnet entry.  Comparison with 'eat'.
+        </note>
+        
+        <roleset id="munch.01" name="eat casually" vncls="39.2-1">
+            <roles>
+                <role descr="consumer, eater" n="0">
+                    <vnrole vncls="39.2-1" vntheta="Agent"/>
+                </role>
+                <role descr="meal" n="1">
+                    <vnrole vncls="39.2-1" vntheta="Patient"/>
+                </role>
+            </roles>
+            
+            <example name="business casual?">
+                <inflection aspect="progressive" form="participle" person="ns" tense="ns" voice="active"/>
+                <text>
+                    *trace*-1 Munching pizza when they could and yelling until their
+                    voices gave out, [the two Benjamin Jacobson specialists at the Big
+                    Board's UAL trading post]-1 yesterday presided over what can only be
+                    described as a financial free-for-all. 
+                </text>
+                <arg n="0">*trace*</arg> 
+                <rel>Munching</rel>
+                <arg n="1">pizza</arg>
+                <arg f="TMP" n="M">when they could </arg>
+            </example>
+            
+            <note>
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

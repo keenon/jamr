@@ -1,0 +1,32 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="saw_up">
+        <note>
+            Frames file for 'saw_up' based on frame for 'chop_up.  Verbnet entry for
+            'saw' 21.1 and 23.2.
+        </note>
+        
+        <roleset id="saw.03" name="render into pieces">
+            <roles>
+                <role descr="sawer" n="0"/>
+                <role descr="sawed" n="1"/>
+                <role descr="instrument" n="2"/>
+            </roles>
+            
+            <example name="transitive">
+                <text>
+                    In the 19th centry, companies in teh ice business would send people to
+                    forzen lakes or rivers * to saw up the ice.
+                </text>
+                <arg n="0">*trace*</arg>
+                <rel>[saw] [up]</rel>
+                <arg n="1">the ice</arg>
+            </example>
+            
+            <note>
+                Frame created by Arrick
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

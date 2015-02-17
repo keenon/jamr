@@ -1,0 +1,29 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="yawn">
+        <note>
+            Frames file for '' based on sentences in brown.
+        </note>
+        
+        <roleset id="yawn.01" vncls="-" name="involuntarily open mouth wide">
+            <roles>
+                <role n="0"  descr="person yawning"/>
+            </roles>
+            
+            <example name="automatically generated">
+                <inflection person="ns" tense="ns" aspect="ns" voice="ns" form="ns"/>
+                <text>
+                    Then he would yawn and stretch and shout , `` All out .
+                </text>
+                <arg n="0">he</arg>
+                <arg n="M" f="MOD">would</arg>
+                <rel>yawn</rel>
+            </example>
+            
+            
+            <note>
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

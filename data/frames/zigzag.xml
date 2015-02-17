@@ -1,0 +1,40 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="zigzag">
+        <note>
+            Frames file for 'zigzag' based on sentences in brown.
+        </note>
+        
+        <roleset id="zigzag.01" vncls="-" name="(cause to) move in \/\/\/ fashion">
+            <roles>
+                <role n="0"  descr="cause of zigzagging"/>
+                <role n="1"  descr="entity in motion"/>
+            </roles>
+            
+            <example name="angels in the nursery?">
+                <inflection person="ns" tense="past" aspect="progressive" voice="active" form="participle"/>
+                <text>
+                    The Angels in the nursery were zigzagging wildly in all directions,
+                    seemingly at random.   
+                </text>
+                <arg n="1"        >The Angels in the nursery</arg>
+                <rel              >zigzagging</rel>
+                <arg n="m" f="MNR">wildly</arg>
+                <arg n="m" f="DIR">in all directions</arg>
+                <arg n="m" f="MNR">seemingly at random</arg>
+            </example>
+            
+            <example name="with cause">
+                <inflection person="ns" tense="ns" aspect="progressive" voice="active" form="participle"/>
+                <text>
+                    No sooner had I started drinking than [the driver]-2 started [*-2]
+                    zigzagging the truck. 
+                </text>
+                <arg n="0"        >[*-2]</arg>
+                <rel              >zigzagging</rel>
+                <arg n="1"        >the truck</arg>
+            </example>
+            
+        </roleset>
+    </predicate>
+</frameset>

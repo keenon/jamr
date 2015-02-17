@@ -1,0 +1,39 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="sovietize">
+        <note>
+            Frames file for 'sovietize' based on internet usage examples, expansion
+            via VerbNet.  VerbNet entry 45.4.
+        </note>
+        
+        <roleset id="sovietize.01" name="(cause to) change to a soviet form of
+  gov't" vncls="45.4">
+            <roles>
+                <role descr="causer, agent" n="0">
+                    <vnrole vncls="45.4" vntheta="Agent"/>
+                </role>
+                <role descr="entity sovietized" n="1">
+                    <vnrole vncls="45.4" vntheta="Patient"/>
+                </role>
+                <role descr="instrument" n="2">
+                    <vnrole vncls="45.4" vntheta="Instrument"/>
+                </role>
+            </roles>
+            
+            <example name="the one example">
+                
+                <text>
+                    Castro sovietized Cuba. 
+                </text>
+                <arg n="0">Castro</arg>
+                <rel>sovietized</rel>
+                <arg n="1">Cuba</arg>
+            </example>
+            
+            <note>
+                Frameset by Claire
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

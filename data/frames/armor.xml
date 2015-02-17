@@ -1,0 +1,51 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="armor">
+        <note>
+            Frames file for 'armor' based on dictionary.com. Verbnet entry 13.4.2.
+        </note>
+        
+        <roleset id="armor.01" name="equip with weapon/armor" vncls="13.4.2-1-1">
+            <roles>
+                <role descr="provider" n="0">
+                    
+                    <vnrole vncls="13.4.2-1-1" vntheta="Agent"/>
+                </role>
+                
+                <role descr="entity getting equipment" n="1">
+                    
+                    <vnrole vncls="13.4.2-1-1" vntheta="Recipient"/>
+                </role>
+                
+                <role descr="equipment" n="2">
+                    
+                    <vnrole vncls="13.4.2-1-1" vntheta="Theme"/>
+                </role>
+                
+            </roles>
+            
+            <example name="soldier">
+                <text>
+                    Those close to Miller believe *0* he was shot *-1 by an armored Israeli
+                    personnel carrier.
+                </text>
+                <rel>armored</rel>
+                <arg n="1">[personnel][carrier]</arg>
+                
+            </example>
+            
+            <example name="all args">
+                <text>
+                    Mary was armored by her servants in gold chainmail in perparation for her
+                    match agains the Black Knight.
+                </text>
+                <arg n="1">Mary</arg>
+                <rel>armored</rel>
+                <arg n="0">her servants</arg>
+                <arg n="2">gold chainmail</arg>
+                
+            </example>
+        </roleset>
+        <note>frame by Perryn</note>
+    </predicate>
+</frameset>

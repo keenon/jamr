@@ -1,0 +1,30 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="scar">
+        <note>
+            Frames file for 'scar'  based on dictionary.com. Verbnet entry 25.1. 
+        </note>
+        
+        <roleset id="scar.01" name="to leave lasting signs of damage on (a person)" vncls="25.1">
+            <roles> 
+                <role descr="agent" n="0">
+                    <vnrole vncls="25.1" vntheta="Agent"/>
+                </role>
+                <role descr="entity mutilated" n="1">
+                    <vnrole vncls="25.1" vntheta="Theme"/>
+                </role>
+            </roles>
+            
+            <example name="wound marks">
+                <text>
+                    Mary scarred John's arm with a kitchen knife.
+                </text>
+                <arg n="0">Mary</arg>
+                <rel>scarred</rel>
+                <arg n="1">John's arm</arg>
+                
+            </example>
+        </roleset>
+        <note>frame by Perryn</note>
+    </predicate>
+</frameset>

@@ -1,0 +1,53 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="ascertain">
+        <note>
+            Frames file for 'ascertain' based on sentences in ECTB.
+            No VN entry.
+        </note>
+        
+        <roleset id="ascertain.01" name="figure out" vncls="84">
+            <roles>
+                <role descr="ascertainer" n="0">
+                    <vnrole vncls="84" vntheta="Agent"/>
+                </role>
+                
+                <role descr="thing figured out" n="1">
+                    <vnrole vncls="84" vntheta="Theme"/>
+                </role>
+            </roles>
+            
+            
+            <example name="transitive">
+                <text>
+                    Yutaka Kawashima also suggested that the Universe Development Undertaking
+                    Group organize an inspection team [*] to thoroughly ascertain the reason why
+                    the satellite could not enter geosynchronous orbit [*T*-15] .
+                </text>
+                <rel>ascertain</rel>
+                <arg n="1">the reason why the satellite could not enter geosynchronous
+                    orbit [*T*-15]
+                </arg>
+                <arg n="M" f="ADV">thoroughly</arg>
+                <arg n="0">[*]</arg>
+            </example>
+            
+            
+            
+            <note>
+                Framed by Neville.
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>
+
+
+
+
+
+
+
+
+
+

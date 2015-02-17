@@ -1,0 +1,109 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="slug">
+        <note>
+            Frames file for 'slug' based on sentences in slug.
+        </note>
+        
+        <roleset id="slug.01" vncls="-" name="hit heavily">
+            <roles>
+                <role n="0"  descr="hitter"/>
+                <role n="1"  descr="hit"/>
+                <role n="2"  descr="hit with"/>
+            </roles>
+            
+            <example name="transitive">
+                <inflection person="ns" tense="future" aspect="ns" voice="active" form="full"/>
+                <text>
+                    If he pokes his nose in here I'll slug him''.
+                </text>
+                <arg n="0"        >I</arg>
+                <arg n="m" f="MOD">'ll</arg>
+                <rel              >slug</rel>
+                <arg n="1"        >him</arg>
+            </example>
+            
+            <example name="with instrument/weapon">
+                <inflection person="ns" tense="ns" aspect="progressive" voice="active" form="participle"/>
+                <text>
+                    ``[*] Running around in the moonlight almost naked and
+                    slugging a man with a rock''? 
+                </text>
+                <arg n="0"        >[*]</arg>
+                <rel              >slugging</rel>
+                <arg n="1"        >a man</arg>
+                <arg n="2">with a rock</arg>
+                <note>
+                    Classic attachment ambiguity there.
+                </note>
+            </example>
+            
+        </roleset>
+        
+        <roleset id="slug.02" vncls="-" name="shoot">
+            <roles>
+                <role n="0"  descr="shooter"/>
+                <role n="1"  descr="weapon"/>
+                <role n="2"  descr="target"/>
+            </roles>
+            
+            <example name="this is a weird usage">
+                <inflection person="ns" tense="past" aspect="ns" voice="active" form="full"/>
+                <text>
+                    Then he calmly and carefully slugged the remaining five shots
+                    into the venomous head -- caught in the wicker back of the chair, the
+                    eyes dead on him as the life finally went out of the brute. 
+                </text>
+                <arg n="m" f="TMP">Then</arg>
+                <arg n="0"        >he</arg>
+                <arg n="m" f="MNR">calmly and carefully</arg>
+                <rel              >slugged</rel>
+                <arg n="1"        >the remaining five shots</arg>
+                <arg n="2">into the venomous head -- caught in the wicker
+                    back of the chair, the eyes dead on him as the life finally went out
+                    of the brute
+                </arg>
+            </example>
+            
+            <note>
+            </note>
+            
+        </roleset>
+    </predicate>
+    
+    <predicate lemma="slug_out">
+        <note> Frame for 'slug_out' was based on sentences in ectb2.
+            Comparison to Verbnet 36.1 (i.e. argue).
+        </note>
+        
+        <roleset id="slug.03" name="(cause to) bear through blows" vncls="36.1">
+            <roles>
+                <role descr="first arguer" n="0">
+                    <vnrole vncls="36.1" vntheta="Actor1"/>
+                </role>
+                <role descr="second arguer" n="1">
+                    <vnrole vncls="36.1" vntheta="Actor2"/>
+                </role>
+                <role descr="topic at issue" n="2">
+                    <vnrole vncls="36.1" vntheta="Topic"/>
+                </role>
+                <role descr="usually 'it'" n="3" />
+            </roles>
+            
+            <example>
+                <text>
+                    The ruling and opposition parties slugging it out over the Fourth Nuclear Power Plant.
+                </text>
+                <arg n="0">The ruling and opposition parties</arg>
+                <rel>[slugging] [out]</rel>
+                <arg n="3">it</arg>
+                <arg n="2">over the Fourth Nuclear Power Plant</arg>
+            </example>
+            
+            <note>Frame created by Jena</note>
+        </roleset>
+    </predicate>
+    
+    
+    
+</frameset>

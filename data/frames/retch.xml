@@ -1,0 +1,30 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="retch">
+        <note>
+            Frames file for 'retch' based on survey of sentences in the WSJ
+            corpus. 
+        </note>
+        
+        <roleset id="retch.01" name="an involuntary spasm of inefectual vomiting" vncls="40.1.2-1">
+            <roles>
+                <role descr="retcher" n="0">
+                    <vnrole vncls="40.1.2-1" vntheta="Agent"/>
+                </role>
+                <role descr="thing being retched up" n="1">
+                    <vnrole vncls="40.1.2-1" vntheta="Theme"/>
+                </role>
+            </roles>
+            
+            <example name="become ill">
+                <text>
+                    He grew inarticulate with retching.
+                </text>
+                <arg n="0">he</arg>
+                <rel>retching</rel>
+                
+            </example>
+        </roleset>
+    </predicate>
+    <note>frame by Perryn</note>
+</frameset>

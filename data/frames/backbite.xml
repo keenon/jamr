@@ -1,0 +1,35 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="backbite">
+        <note>
+            Frames file for 'backbite' based on dictionary.com. Verbnet entry 33.
+        </note>
+        
+        <roleset id="backbite.01" name="to attack the character or reputation of
+  someone who is not present" vncls="33">
+            <roles>
+                <role descr="attacker, agent" n="0">
+                    <vnrole vncls="33" vntheta="Agent"/>
+                </role>
+                <role descr="entity attacked" n="1">
+                    <vnrole vncls="33"
+  vntheta="Theme"/>
+                </role>
+                <role descr="attacked about" n="2">
+                    <vnrole vncls="33" vntheta="Predicate"/>
+                </role>
+            </roles>
+            
+            <example name="meanness of others">
+                <text>
+                    John backbit Mary to his friends.
+                </text>
+                <arg n="0">John</arg>
+                <rel>backbit</rel>
+                <arg n="1">Mary</arg>
+                
+            </example>
+        </roleset>
+        <note>frame by Perryn</note>
+    </predicate>
+</frameset>

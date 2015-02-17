@@ -1,0 +1,31 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="truncheon">
+        
+        <roleset framnet="" id="truncheon.01" name="truncheon" vncls="18.3">
+            <roles>
+                <role descr="hitter, agent, truncheoner(s)" f="" n="0">
+                    <vnrole vncls="18.3" vntheta="agent"/>
+                </role>
+                <role descr="victim, patient" f="" n="1">
+                    <vnrole vncls="18.3" vntheta="patient"/>
+                </role>
+                <note/>
+                <role descr="instrument, truncheoned with what" f="" n="2">
+                    <vnrole vncls="18.3" vntheta=""/>
+                </role>
+            </roles>
+            <example name="from Google" src="web usage" type="">
+                <text>They truncheoned the civilian who filmed them to the ground.</text>
+                <note/>
+                <arg f="" n="0">They</arg>
+                <rel f="">trunchoned</rel>
+                <arg f="" n="1">the civilian who filmed them</arg>
+                <arg f="dir" n="m">to the ground</arg>
+            </example>
+            <note>hand-checked by Kevin</note>
+        </roleset>
+        <note>Automatically created based on framefiles: flog (18.3)</note>
+    </predicate>
+    <note/>
+</frameset>

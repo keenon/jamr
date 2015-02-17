@@ -1,0 +1,37 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="tile">
+        <note>
+            Frames file for 'tile' based loosely on frames file for 'thatch'. 
+            Verbnet classes 9.8 and 9.9.
+        </note>
+        
+        <roleset id="tile.01" name="cover a surface in tiles" vncls="9.8, 9.9">
+            <roles>
+                <role descr="applier" n="0">
+                    <vnrole vncls="9.8, 9.9" vntheta="Agent"/>
+                </role>
+                <role descr="location tiled" n="1">
+                    <vnrole vncls="9.8, 9.9" vntheta="Destination"/>
+                </role>
+                <role descr="material, stuff tiled with" n="2">
+                    <vnrole vncls="9.8, 9.9" vntheta="Theme"/>
+                </role>
+            </roles>
+            
+            <example>
+                <text>
+                    John tiled the floor with old coins.
+                </text>
+                <arg n="0">John</arg>
+                <rel>tiled</rel>
+                <arg n="1">the floor</arg>
+                <arg n="2">with old coins</arg> 
+            </example>
+            <note>
+                frameset created by Kev
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

@@ -1,0 +1,56 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="insert">
+        <note>
+            Frames file for 'insert' based on survey of sentences in the WSJ
+            corpus. 
+        </note>
+        
+        <roleset id="insert.01" name="to put or set into, between, or among" vncls="9.1-1">
+            <roles>
+                <role descr="inserter" n="0">
+                    <vnrole vncls="9.1-1" vntheta="Agent"/>
+                </role>
+                <role descr="entity inserted" n="1">
+                    <vnrole vncls="9.1-1" vntheta="Theme"/>
+                </role>
+                <role descr="location" n="2">
+                    <vnrole vncls="9.1-1" vntheta="Destination"/>
+                </role>
+            </roles>
+            
+            
+            <example name="passive">
+                <inflection aspect="ns" form="participle" person="ns" tense="present" voice="passive"/>
+                <text>
+                    At Plant Genetic Systems , researchers have isolated a pollen-inhibiting gene that [*T*-1]-20 can be inserted [*-20] in a plant [*] to confer male sterility .
+                </text>
+                <arg f="MOD" n="M">can</arg>
+                <rel>inserted</rel>
+                <arg n="1">[*-20]</arg>
+                <arg n="M" f="RCL">that -&gt;  a pollen-inhibiting gene</arg>
+                <arg n="2">in a plant</arg>
+                <arg f="PNC" n="M">[*] to confer male sterility</arg>
+            </example>
+            
+            
+            
+            <example name="all arguments">
+                <inflection aspect="ns" form="full" person="ns" tense="past" voice="active"/>
+                <text>
+                    Congress inserted the following into the Interior appropriation : `` None of the funds available under this title may be used [*-1] [*] to prepare reports on contacts between employees of the Dept. of the Interior and Members and committees of Congress and their staff . ''
+                </text>
+                <arg n="0">Congress</arg>
+                <rel>inserted</rel>
+                <arg n="1">the following</arg>
+                <arg n="2">into the Interior appropriation</arg>
+            </example>
+            
+        </roleset>
+    </predicate>
+    
+    <note>
+        frames created by Olga
+    </note>
+    
+</frameset>

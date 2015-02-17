@@ -1,0 +1,33 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="upholster">
+        <note>
+            Frames file for 'upholster' based on sentences in brown.
+        </note>
+        
+        <roleset id="upholster.01" vncls="-" name="add nice things to furniture">
+            <roles>
+                <role n="0"  descr="artisan"/>
+                <role n="1" descr="furniture"/>
+                <role n="2" descr="padding, springs, etc"/>
+            </roles>
+            
+            <example name="velvet sofas">
+                <inflection person="ns" tense="ns" aspect="ns" voice="ns" form="ns"/>
+                <text>
+                    One of the drawing-room shutters was partly open and he made out the shapes of chairs and sofas , which [*T*-2]-3 seemed [*-3]-1 to be upholstered [*-1] in brown or russet velvet .
+                </text>
+                <arg n="M" f="RCL">which -&gt; chairs and sofas</arg>
+                <arg n="1">[*-1]</arg>
+                <rel>upholstered</rel>
+                <arg n="2">in brown or russet velvet</arg>
+            </example>
+            
+            
+            
+            <note>
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

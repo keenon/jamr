@@ -1,0 +1,33 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="slobber">
+        <note>
+            Frames file for 'slobber' based on dictionary.com.  Verbnet entry
+            breathe-40.1.2. 
+        </note>
+        
+        <roleset id="slobber.01" name="let saliva or liquid spill from the mouth; drool" vncls="40.1.2-1">
+            <roles>
+                <role descr="drooler" n="0">
+                    <vnrole vncls="40.1.2-1"
+  vntheta="Agent"/>
+                </role>
+                <role descr="drool (cognate object)" n="1">
+                    <vnrole vncls="40.1.2-1"
+  vntheta="Theme"/>
+                </role>
+            </roles>
+            
+            <example name="dogs">
+                <text>
+                    The dog slobbered all over the baby.
+                </text>
+                <arg n="0">the dog</arg>
+                <rel>slobbered</rel>
+                <arg f="LOC" n="M">all over the baby</arg>
+                
+            </example>
+        </roleset>
+        <note>frame by Perryn</note>
+    </predicate>
+</frameset>

@@ -1,0 +1,156 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="count">
+        <note>
+            Frames file for 'count' based on sentences in financial subcorpus.
+            Verbnet classes 29.2, 29.6.
+        </note>
+        
+        <roleset id="count.01" name="enumerate" vncls="29.6">
+            <roles>
+                <role descr="counter" n="0">
+                    <vnrole vncls="29.6" vntheta="Agent"/>
+                </role>
+                <role descr="thing counted" n="1">
+                    <vnrole vncls="29.6" vntheta="Predicate"/>
+                </role>
+            </roles>
+            
+            <example name="Count von Count">
+                <text>
+                    But this is a production designed and directed by Franco
+                    Zeffirelli and paid for by Sybil Harrington, who *trace*-1 has no
+                    need *trace*-1 to count her pennies, unlike Violetta, down to 20
+                    louis at the opera's end. 
+                </text>
+                <arg n="0">*trace*</arg>
+                <arg n="M" f="RCL">who -&gt;  Sybil Harrington</arg>
+                <rel>count</rel>
+                <arg n="1">her pennies</arg>
+            </example>
+            
+            <note>
+            </note>
+        </roleset>
+        
+        <roleset id="count.02" name="include" vncls="-">
+            <roles>
+                <role descr="agent, entity causing some grouping" n="0"/>
+                <role descr="theme, thing being included in some group" n="1"/>
+                <role descr="group" n="2"/>
+            </roles>
+            
+            <example name="with group">
+                <text>
+                    Mr. Achenbaum has counted among his clients some of the most
+                    visible blue-chip advertisers in the country, including Nissan,
+                    Toyota, Seagram and Backer Spielvogel clients Hyundai and
+                    J.P. Morgan. 
+                </text>
+                <rel>counted</rel>
+                <arg n="2">among his clients</arg>
+                <arg n="1">some of the most visible blue-chip advertisers in
+                    the country, including Nissan, Toyota, Seagram and Backer
+                    Spielvogel clients Hyundai and J.P. Morgan
+                </arg>
+            </example>
+            
+            <example name="no group">
+                <text>
+                    *trace*-1 Not counting the extraordinary charge, [the company]-1 said it would
+                    have had a net loss of $3.1 million, or seven cents a share.  
+                </text>
+                <arg n="0">*trace*</arg>
+                <rel>counting</rel>
+                <arg n="1">the extraordinary charge</arg>
+            </example>
+            
+            <note>
+            </note>
+            
+        </roleset>
+        
+        <roleset id="count.03" name="rely, depend" vncls="70">
+            <roles>
+                <role descr="depender" n="0">
+                    <vnrole vncls="70" vntheta="Agent"/>
+                </role>
+                <role descr="depended on" n="1">
+                    <vnrole vncls="70" vntheta="Theme"/>
+                </role>
+                <role descr="secondary predication on arg1" n="2"/>
+            </roles>
+            
+            <example name="no secondary predication">
+                <text>
+                    Before the union rejected the company's offer and the strike was
+                    launched  with the graveyard shift of Oct. 4, Boeing had been
+                    counting on turning 96 aircraft out the door in the present
+                    period. 
+                </text>
+                <arg n="0">Boeing</arg>
+                <rel>counting</rel>
+                <arg n="1">on turning 96 aircraft out the door in the
+                    present period
+                </arg>
+            </example>
+            
+            <example name="with secondary predication">
+                <text>
+                    Commodore had been counting on its consumer business to stay
+                    sufficiently healthy to support its efforts in other areas -- mainly in
+                    getting schools and businesses to use its Amiga, which  has slick
+                    graphics yet has been slow to catch on because it isn't compatible
+                    with Apple Computer Inc. or International Business Machines
+                    Corp. hardware.
+                </text>
+                <arg n="0">Commodore</arg>
+                <rel>counting</rel>
+                <arg n="1">on its consumer business</arg>
+                <arg n="2">to stay sufficiently healthy to support its
+                    efforts in other areas -- mainly in getting schools and
+                    businesses to use its Amiga, which has slick graphics yet has
+                    been slow to catch on because it isn't compatible with Apple
+                    Computer Inc. or International Business Machines
+                    Corp. hardware
+                </arg>
+            </example>
+            
+            <note>
+                There's as least one example where treebank misparses &quot;count on&quot; as a
+                phrasal verb rather than verb+preposition.  Use [count] [on] as the
+                predicate in that/those example(s).
+            </note>
+            
+        </roleset>
+        <roleset id="count.04" name="matter" vncls="91">
+            <roles>
+                <role descr="thing" n="1">
+                    <vnrole vncls="91" vntheta="Cause"/>
+                </role>
+            </roles>
+            
+            <example name="positive">
+                <text>
+                    `` What *trace* counts is  the bottom line . ''
+                </text>
+                <arg n="1">*trace*</arg>
+                <arg n="M" f="RCL">What</arg>
+                <rel>counts</rel>
+            </example>
+            
+            <example name="negative">
+                <text>
+                    That doesn't count.
+                </text>
+                <arg n="1">That</arg>
+                <arg f="NEG" n="m">n't</arg>
+                <rel>count</rel>
+            </example>
+            
+            <note>
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

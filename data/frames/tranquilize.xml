@@ -1,0 +1,47 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="tranquilize">
+        <note>
+            Frames file for 'tranquilize' based on frame file for 'activate'.
+            Verbnet
+            class 45.4, other members include activate, age, balance, blur, darken,
+            hasten, laminate, magnetize, revive, ripen, sicken, stabilize, sour,
+            tilt, unwind, whiten.
+            
+        </note>
+        
+        <roleset id="tranquilize.01" name="(cause to) calm down" vncls="45.4">
+            <roles>
+                <role descr="agent" n="0"/>
+                <role descr="patient" n="1"/>
+            </roles>
+            
+            <example name="at peace">
+                <text>
+                    Nothing contributes so much to tranquilize the mind as a steady purpose.
+                </text>
+                <arg n="1">the mind</arg>
+                <rel>tranquilize</rel>
+                <arg n="0">a steady purpose.</arg>
+            </example>
+            <note>
+                the above example is from Mary Shelley, provided by google
+            </note>
+            
+            <example name="adjectival">
+                <text>
+                    During critical moments of anxiety and emotional unsteadiness, it can
+                    often exert a tranquilizing force, * holding onto a person so that he
+                    does n't fall down.
+                </text>
+                <rel>tranquilizing</rel>
+                <arg n="0">force</arg>
+            </example>
+            
+            <note>
+                Frame file created by Arrick
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

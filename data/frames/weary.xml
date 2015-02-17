@@ -1,0 +1,66 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="weary">
+        <note>
+            Frames file for 'weary' based on internet usage examples, membership in
+            VN.  Verbnet entries 31.1, 31.3-6.  Comparison with tire. 
+        </note>
+        
+        <roleset id="weary.01" name="(make) become tired" vncls="31.1">
+            <roles>
+                <role descr="causer of tiredness" n="0">
+                    <vnrole vncls="31.1" vntheta="Cause"/>
+                </role>
+                <role descr="tired entity" n="1">
+                    <vnrole vncls="31.1" vntheta="Experiencer"/>
+                </role>
+                <role descr="Instrment or Manner if separate from arg 0" n="2"/>
+            </roles>
+            
+            <example name="Basic Transitive">
+                <text>
+                    Long hours of work have wearied me.
+                </text>
+                <arg n="0">Long hours of work</arg>
+                <rel>wearied</rel>
+                <arg n="1">me</arg>
+            </example>
+            
+            <example name="All Arguments">
+                <text>
+                    John wearied Mary with his witless antics.
+                </text>
+                <arg n="0">John</arg>
+                <rel>wearied</rel>
+                <arg n="1">Mary</arg>
+                <arg n="2">with his witless antics</arg>
+            </example>
+        </roleset>
+        
+        <roleset id="weary.02" vncls="31.3-6" name="prepositional usage">
+            <roles>
+                <role n="0"  descr="tired entity">
+                    <vnrole vncls="31.3-6" vntheta="Experiencer"/>
+                </role>
+                <role n="1"  descr="cause of weariness">
+                    <vnrole vncls="31.3-6" vntheta="Cause"/>
+                </role>
+            </roles>
+            
+            <example name="Long Drive">
+                <text>
+                    We wearied of the desert scenery.
+                </text>
+                <arg n="0">We</arg>
+                <rel>wearied</rel>
+                <arg n="1">of the desert scenery</arg> 
+            </example>
+            
+        </roleset>
+    </predicate>
+    
+    <note>
+        Frame by Claire
+    </note>
+    
+</frameset>

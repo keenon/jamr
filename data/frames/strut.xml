@@ -1,0 +1,55 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="strut">
+        <note>
+            Frames file for 'strut' based on frames file for 'sidle'.
+        </note>
+        
+        <roleset id="strut.01" name="to walk proudly, like a peacock" vncls="51.3.2">
+            <roles>
+                <role descr="agent, rider (use only if arg1 is present)" n="0">
+                    <vnrole vncls="51.3.2" vntheta="Agent"/>
+                </role>
+                <role descr="thing strutted, walker" n="1">
+                    <vnrole vncls="51.3.2" vntheta="Theme"/>
+                </role>
+                <role descr="path, thing  strutted up to" n="1">
+                    <vnrole vncls="51.3.2" vntheta="Location"/>
+                </role>
+            </roles>
+            
+            <example name="Old West?">
+                <text>
+                    Wyatt strutted his horse up to Annie's side.
+                </text>
+                <arg n="0">Wyatt</arg>
+                <rel>strutted</rel>
+                <arg n="1">his horse</arg>
+                <arg n="2">up to Annie's side</arg>
+            </example>
+            
+            
+            <example name="Disney sense">
+                <text>
+                    Out past the strip malls and tract housing of western Palm Beach County,
+                    the peacocks have strutted up to tourists in sturdy cars since Disney World
+                    was still a figment.
+                </text>
+                <arg f="LOC" n="M">Out past the strip malls and tract housing of
+                    western Palm Beach County
+                </arg>
+                <arg n="1">the peacocks</arg>
+                <rel>have strutted</rel>
+                <arg n="2">up to tourists in sturdy cars</arg>
+                <arg f="TMP" n="M">since Disney World was still a figment</arg>
+            </example>
+            
+            
+        </roleset>
+    </predicate>
+    
+    <note>
+        frames created by Kev
+    </note>
+    
+</frameset>

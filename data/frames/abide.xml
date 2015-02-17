@@ -1,0 +1,31 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="abide">
+        <note>
+            Frames file for 'abide' based on sentences in wsj.  No Verbnet entry.
+        </note>
+        
+        <roleset id="abide.01" name="conform to" vncls="-">
+            <roles>
+                <role descr="conformer" n="0"/>
+                <role descr="thing conformed to" n="1"/>
+            </roles>
+            
+            <example name="lacking a clever title">
+                <inflection aspect="ns" form="infinitive" person="ns" tense="ns" voice="ns"/>
+                <text>
+                    Saturday, he amended his remarks to say that [he]-1 would continue
+                    *trace*-1 to abide by the cease-fire if the U.S. ends its financial
+                    support for the Contras. 
+                </text>
+                <arg n="0">*trace*-1</arg>
+                <rel>abide</rel>
+                <arg n="1">by the cease-fire</arg>
+            </example>
+            
+            <note>
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

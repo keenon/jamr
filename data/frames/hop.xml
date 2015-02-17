@@ -1,0 +1,50 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="hop">
+        <note>
+            Frames file for 'hop' based on sentences in ebc.  
+            Verbnet 51.3.2, 47.5.1-1; Framenet entry Self motion.
+        </note>
+        
+        <roleset id="hop.01" name="manner of motion" vncls="51.3.2 47.5.1-1">
+            <roles>
+                <role descr="hopper" n="0">
+                    <vnrole vncls="51.3.2" vntheta="Theme"/>
+                    <vnrole vncls="47.5.1-1"
+     vntheta="Theme"/>
+                </role>
+                <role descr="Source" n="3"/>
+                <role descr="Destination" n="4"/>
+            </roles>
+            
+            <example>
+                <text>
+                    *PRO* Hop onto a trolley with over a century of history.
+                </text>
+                <arg n="0">*PRO*</arg>
+                <rel>Hop</rel>
+                <arg n="m" f="DIR">onto a trolley with over a century of history</arg>
+            </example>
+            
+            <example name="Jump">
+                <text>
+                    The women said they had seen him waive an exhausted fairwell; but he may
+                    have been shooing away the fleas that-1 *T*-1 hopped from his yellow dog
+                    on to him.
+                </text>
+                
+                <arg f="RCL" n="M">that-1 the fleas</arg>
+                <arg n="0">*-1</arg>
+                <rel>hopped</rel>
+                <arg n="3">from his yellow dog</arg>
+                <arg n="4">on to him</arg>
+                
+                
+            </example>
+            <note>frame for 'hope' removed.
+                Created by Jena.
+            </note>
+            <note>frame edited by Perryn</note>
+        </roleset>
+    </predicate>
+</frameset>

@@ -1,0 +1,34 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="scud">
+        <note>
+            Frames file for 'scud' based on sentences in brown corpus. Comparison with
+            'walk.' No VerbNet entry.
+        </note>
+        
+        <roleset id="scud.01" vncls="" name="move swiftly">
+            <roles>
+                <role descr="thing in motion" n="0"/>
+                
+                <role descr="path" n="1"/>
+            </roles>
+            
+            <example name="intransitive">
+                <inflection person="ns" tense="ns" aspect="ns" voice="ns" form="ns"/>
+                <text>
+                    She remembered , suddenly , a night of savage moonlight and scudding clouds
+                    when she and Adelia , [*-1] having dared each other , had stolen out of their
+                    great safe house and come here , hand in hand , [*-1] hoping and fearing ghosts
+                    [*T*-2] .
+                </text>
+                <rel>scudding</rel>
+                <arg n="0">clouds</arg>
+            </example>
+            
+            <note>
+                Framed by Neville.
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

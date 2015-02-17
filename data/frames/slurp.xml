@@ -1,0 +1,37 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="slurp">
+        <note>
+            Frames file for 'slurp' based on sentences in brown corpus. VerbNet class chew-39.2-2
+        </note>
+        
+        <roleset id="slurp.01" vncls="39.2-2" name="drink noisily with sucking sound">
+            <roles>
+                <role descr="agent" n="0">
+                    <vnrole vncls="39.2-2" vntheta="Agent"/>
+                </role>
+                
+                <role descr="theme, entity slurped" n="1">
+                    <vnrole vncls="39.2-2" vntheta="Patient"/>
+                </role>
+            </roles>
+            
+            <example name="intransitive ">
+                <inflection person="ns" tense="ns" aspect="ns" voice="ns" form="ns"/>
+                <text>
+                    Grabski slurped his way to the bottom of the soup bowl .
+                </text>
+                <rel>slurped</rel>
+                <arg n="0">Grabski</arg>
+                <arg n="M" f="PRP">his way</arg>
+                <arg n="M" f="DIR">to the bottom of the soup bowl</arg>
+            </example>
+            
+            
+            <note>
+                Framed by Neville.
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

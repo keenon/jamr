@@ -1,0 +1,34 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="trounce">
+        <note>
+            Frames file for 'beat' based on ebn instances.
+        </note>
+        
+        <roleset id="trounce.01" name="win over some competitor" vncls="36.4">
+            <roles>
+                <role descr="winner" n="0">
+                    <vnrole vncls="36.4" vntheta="Actor1"/>
+                </role>
+                <role descr="loser" n="1">
+                    <vnrole vncls="36.4" vntheta="Actor2"/>
+                </role>
+                <role descr="competition" n="2">
+                    <vnrole vncls="36.4" vntheta="Topic"/>
+                </role>
+            </roles>
+            
+            <example name="election">
+                <text>
+                    [The 72-year-old leader of the right wing Likud Party]-1 is expected
+                    *-1 to trounce Ehud Barak in the upcoming election for Prime Minister.
+                </text>
+                <arg n="0">*-1 -- The 72-year-old...</arg>
+                <rel>trounce</rel>
+                <arg n="1">Ehud Barak</arg>
+                <arg n="2">in the upcoming election for Prime Minister</arg>
+            </example>
+        </roleset>
+        <note>frame by Perryn</note>
+    </predicate>
+</frameset>

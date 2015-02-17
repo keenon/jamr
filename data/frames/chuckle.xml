@@ -1,0 +1,61 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="chuckle">
+        <note>
+            Frames file for 'chuckle' based on sentences in wsj.  No Verbnet
+            entry. 
+        </note>
+        
+        <roleset id="chuckle.01" name="laugh quietly" vncls="40.2">
+            <roles>
+                <role descr="chuckler" n="0">
+                    <vnrole vncls="40.2" vntheta="Agent"/>
+                </role>
+            </roles>
+            
+            <example name="hyuck hyuck">
+                <inflection aspect="progressive" form="participle" person="ns" tense="ns" voice="active"/>
+                <text>
+                    ``Pickin' one or two,'' says [the guide]-1, *trace*-1 chuckling.
+                </text>
+                <arg n="0">*trace*-1</arg>
+                <rel>chuckling</rel>
+            </example>
+            
+            <note>
+            </note>
+            
+        </roleset>
+        
+        <roleset id="chuckle.02" name="mode of speaking" vncls="40.2">
+            <roles>
+                <role descr="speaker" n="0">
+                    <vnrole vncls="40.2" vntheta="Agent"/>
+                </role>
+                <role descr="utterance" n="1">
+                    <vnrole vncls="40.2" vntheta="Theme"/>
+                </role>
+                <role descr="hearer" n="2">
+                    <vnrole vncls="40.2" vntheta="Recipient"/>
+                </role>
+            </roles>
+            
+            <example name="missing hearer">
+                <inflection aspect="ns" form="full" person="third" tense="present" voice="active"/>
+                <text>
+                    ``[Long-term investing -- that's not Steinhardt's style]-1,'' chuckles
+                    *trace*-1 an investor who once worked at Steinhardt Partners. 
+                </text>
+                <rel>chuckles</rel>
+                <arg n="1">*trace*-1</arg> 
+                <arg n="0">an investor who  once worked at Steinhardt
+                    Partners
+                </arg>
+            </example>
+            
+            <note>
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

@@ -1,0 +1,39 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="shoplift">
+        <note>
+            Frames file for 'shoplift' based on dictionary.com. Verbnet entry 10.5. 
+        </note>
+        
+        
+        <roleset id="shoplift.01" name="to steal merchandise from a store" vncls="10.5">
+            <roles>
+                <role descr="thief, agent" n="0">
+                    <vnrole vncls="10.5" vntheta="Agent"/>
+                </role>
+                <role descr="thing stolen" n="1">
+                    <vnrole vncls="10.5" vntheta="Theme"/>
+                </role>
+                <role descr="stolen from" n="2">
+                    <vnrole vncls="10.5" vntheta="Source"/>
+                </role>
+                <role descr="stolen for" n="3">
+                    <vnrole vncls="10.5" vntheta="Beneficiary"/>
+                </role>
+            </roles>
+            
+            <example name="bad idea">
+                <text>
+                    John shoplifted a ring from the store for Mary.
+                </text>
+                <arg n="0">John</arg>
+                <rel>shoplifted</rel>
+                <arg n="1">a ring</arg>
+                <arg n="2">the store</arg>
+                <arg n="3">Mary</arg>
+                
+            </example>
+        </roleset>
+        <note>frame by Perryn</note>
+    </predicate>
+</frameset>

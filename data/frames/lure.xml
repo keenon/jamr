@@ -1,0 +1,64 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="lure">
+        <note>
+            Frames file for 'lure' based on sentences in financial subcorpus.
+            No verbnet entry.  Comparison with 'attract'.
+        </note>
+        
+        <roleset id="lure.01" name="attract, draw near" vncls="59-1">
+            <roles>
+                <role descr="attractor" n="0">
+                    <vnrole vncls="59-1" vntheta="Agent"/>
+                </role>
+                <role descr="thing attracted" n="1">
+                    <vnrole vncls="59-1" vntheta="Patient"/>
+                </role>
+                <role descr="thing attracted to, if separate from attractor,   or lured from" n="2"/>
+                <role descr="instrument, if separate from attractor" n="3"/>
+            </roles>
+            
+            <example name="basic transitive">
+                <text>
+                    They-1 are still trying *trace*-1 to lure back small investors spooked
+                    by the 1987 stock-market crash and the market's swings since then.  
+                </text>
+                <arg n="0">*trace*</arg>
+                <rel>lure</rel>
+                <arg f="DIR" n="M">back</arg>
+                <arg n="1">small investors spooked by the 1987 stock-market
+                    crash and the market's swings since then
+                </arg>
+            </example>
+            
+            <example name="lured from">
+                <text>
+                    United-1 paid him a $375,000 bonus *trace*-1 to lure him away from
+                    American Airlines. 
+                </text>
+                <arg n="0">*trace*</arg>
+                <rel>lure</rel>
+                <arg n="1">him</arg>
+                <arg n="2">away from American Airlines</arg>
+            </example>
+            
+            <example name="lured to, with instrument">
+                <text>
+                    Mary lured John to his doom with the promise of a peanut-butter
+                    sandwich.
+                </text>
+                <arg n="0">Mary</arg>
+                <rel>lured</rel>
+                <arg n="1">John</arg>
+                <arg n="2">to his doom</arg>
+                <arg n="3">with the promise of a peanut-butter sandwich.</arg>
+            </example>
+            
+            <note>
+                I'm gambling that lure-to and lure-from cannot cooccur.  If they do,
+                I'm screwed.
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

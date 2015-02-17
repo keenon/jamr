@@ -1,0 +1,45 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="decode">
+        
+        
+        <roleset framnet="" id="decode.01" name="translate a coded message into readable message" vncls="-">
+            <roles>
+                <role descr="causer of transformation, decoder" f="" n="0"/>
+                <role descr="message decoded" f="" n="1"/>
+                <role descr="end state, translation when separate mention from arg 1" f="" n="2"/>
+                <role descr="start state, code" f="" n="3"/>
+                <note/>
+            </roles>
+            
+            <example name="passive" src="passive" type="passive">
+                <inflection aspect="ns" form="ns" person="ns" tense="ns" voice="ns"/>
+                <text>My brother Misu, it seems that your insults are of two kinds: one encoded *none* and the other decoded *none*.</text>
+                <rel f="">decoded</rel>
+                <arg f="" n="1">*none* &amp;--&gt; the other</arg>
+                
+                <note/>
+            </example>
+            
+            
+            
+            
+            
+            
+            
+            <note/>
+            <example name="All Arguments" src="All Arguments" type="All Arguments">
+                <inflection aspect="ns" form="ns" person="ns" tense="ns" voice="ns"/>
+                <text>Mary and John decoded the message from binary into Farsi.</text>
+                <note/>
+                <arg f="" n="0">Mary and John</arg>
+                <rel f="">decoded</rel>
+                <arg f="" n="1">the message</arg>
+                <arg f="" n="2">from binary</arg>
+                <arg f="" n="3">into Farsi.</arg>
+            </example>
+        </roleset>
+        <note>Frames file for 'decode' based on sentences in Webtext 2.5-2.  No Verbnet entry.  Comparison with 'translate'.</note>
+    </predicate>
+    <note/>
+</frameset>

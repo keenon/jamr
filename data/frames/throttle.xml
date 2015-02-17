@@ -1,0 +1,31 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="throttle">
+        <note>
+            Frames file for 'throttle' based on sentences in brown.
+        </note>
+        
+        <roleset id="throttle.01" vncls="-" name="squeeze, choke">
+            <roles>
+                <role n="0"  descr="squeezer"/>
+                <role n="1"  descr="person or thing being squeezed"/>
+            </roles>
+            
+            <example name="abstract">
+                <inflection person="ns" tense="ns" aspect="ns" voice="ns" form="ns"/>
+                <text>
+                    He is throttling the liberty [0] my father gave his life [*] to win [*T*-1] '' ! !
+                </text>
+                <arg n="0">He</arg>
+                <rel>throttling</rel>
+                <arg n="1">the liberty [0] my father gave his life [*] to win [*T*-1]</arg>
+            </example>
+            
+            
+            <note>
+                framed by Ben
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

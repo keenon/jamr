@@ -1,0 +1,52 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="tickle">
+        <note>
+            Frame file for "tickle" loosely based on frame for "paw"
+        </note>
+        
+        <roleset id="tickle.01" name="to touch in such a way as to induce laughter
+  and/or crying" vncls="20.1">
+            <note>
+                includes metaphorical usages
+            </note>
+            <roles>
+                <role descr="tickler, agent" n="0">
+                    <vnrole vncls="20.1" vntheta="Agent"/>
+                </role>
+                <role descr="thing tickled, patient" n="1">
+                    <vnrole vncls="20.1" vntheta="Patient"/>
+                </role>
+                <role descr="instrument of tickling" n="2">
+                    <vnrole vncls="20.1" vntheta="Instrument"/>
+                </role>
+            </roles>
+            
+            <example name="without instrument">
+                <text>
+                    Greg tickled Marsha for a whole episode of the Brady Bunch.
+                </text>
+                <arg n="0">Greg</arg>
+                <rel>tickled</rel>
+                <arg n="1">Marsha</arg>
+                <arg n="m" f="TMP">for a whole episode of the Brady Bunch</arg>
+            </example>
+            
+            <example name="with instrument">
+                <text>
+                    The kitten tickled Norm's face with its whiskers.
+                </text>
+                <arg n="0">the kitten</arg>
+                <rel>tickled</rel>
+                <arg n="1">Norm's face</arg>
+                <arg n="2">with its whiskers</arg>
+            </example>
+            
+        </roleset>
+    </predicate>
+    
+    <note>
+        frames created by Kevin
+    </note>
+    
+</frameset>

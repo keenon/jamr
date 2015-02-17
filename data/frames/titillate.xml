@@ -1,0 +1,28 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="titillate">
+        <note>
+            Frames file for 'titillate' based on sentences in brown.
+        </note>
+        
+        <roleset id="titillate.01" vncls="-" name="pleasurably excite">
+            <roles>
+                <role n="0"  descr="causer of titillation"/>
+                <role n="1"  descr="experiencer of titillation"/>
+            </roles>
+            
+            <example name="event as cause">
+                <inflection person="ns" tense="ns" aspect="ns" voice="ns" form="ns"/>
+                <text>
+                    How titillating it [*EXP*-4] was [*T*-3] [*] to go among people who [*T*-1] did not know him as the composer , but who [*T*-2] talked in the most glowing terms of the promise of the piece after [*] having heard the first rehearsals .
+                </text>
+                <rel>titillating</rel>
+                <arg n="0">[*] to go among people who [*T*-1] did not know him as the composer , but who [*T*-2] talked in the most glowing terms of the promise of the piece after [*] having heard the first rehearsals</arg>
+            </example>
+            
+            <note>
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

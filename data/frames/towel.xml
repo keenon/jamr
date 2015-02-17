@@ -1,0 +1,37 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="towel">
+        
+        
+        <roleset framnet="" id="towel.01" name="towel" vncls="10.4.2,41.2.2">
+            <roles>
+                <role descr="toweler, agent" f="" n="0">
+                    <vnrole vncls="10.4.2" vntheta="agent"/>
+                    <vnrole vncls="41.2.2" vntheta="agent"/>
+                </role>
+                <role descr="thing toweled (e.g., water)" f="" n="1">
+                    <vnrole vncls="10.4.2" vntheta="theme"/>
+                    <vnrole vncls="41.2.2" vntheta="patient"/>
+                </role>
+                <role descr="toweled from what (surface dried)" f="" n="2">
+                    <vnrole vncls="10.4.2" vntheta="source"/>
+                </role>
+                <note/>
+                <role descr="instrument, towel" f="" n="3">
+                    <vnrole vncls="10.4.2" vntheta="instrument"/>
+                </role>
+            </roles>
+            <example name="Regular usage" src="web usage" type="">
+                <text>Naruto sighed as he toweled the water from his face.</text>
+                <note/>
+                <arg f="" n="0">he</arg>
+                <rel f="">toweled</rel>
+                <arg f="" n="1">the water</arg>
+                <arg f="" n="2">from his face</arg>
+            </example>
+            <note>hand-checked by Kevin</note>
+        </roleset>
+        <note>Automatically created based on framefiles: tease (41.2.2), mop (10.4.2)</note>
+    </predicate>
+    <note/>
+</frameset>

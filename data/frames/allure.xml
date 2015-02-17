@@ -1,0 +1,36 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="allure">
+        <note>
+            Frames file for 'allure' based on ditionary.com. Verbnet entry 59.
+        </note>
+        
+        <roleset id="allure.01" name="to attract or tempt by something flattering
+  or desirable" vncls="59">
+            <roles>
+                <role descr="allurer, agent" n="0">
+                    <vnrole vncls="59" vntheta="Agent"/>
+                </role>
+                <role descr="allured thing(s) or person" n="1">
+                    <vnrole vncls="59"
+  vntheta="Patient"/>
+                </role>
+                <role descr="allured with, behavior or thing" n="2">
+                    <vnrole vncls="59" vntheta="Proposition"/>
+                </role>
+            </roles>
+            
+            <example name="come hither">
+                <text>
+                    Mary allured John with her famous chocolate cake.
+                </text>
+                <arg n="0">Mary</arg>
+                <rel>alllured</rel>
+                <arg n="1">John</arg>
+                <arg n="2">her famous chocolate cake</arg>
+                
+            </example>
+        </roleset>
+        <note>frame by Perryn</note>
+    </predicate>
+</frameset>

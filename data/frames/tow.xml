@@ -1,0 +1,36 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="tow">
+        <note>
+            Frames for 'tow' based on ebn instances.
+        </note>
+        
+        <roleset id="tow.01" name="(try to) cause motion" vncls="11.4">
+            <roles>
+                <role descr="puller" n="0">
+                    <vnrole vncls="11.4" vntheta="Agent"/>
+                </role>
+                <role descr="thing pulled" n="1">
+                    <vnrole vncls="11.4" vntheta="Theme"/>
+                </role>
+                <role descr="DIR or attribute of arg1" n="2"/>
+                <role descr="EXT, distance moved" n="3"/>
+            </roles>
+            
+            <example name="boat">
+                <text>
+                    Out in the harbor, preparations are being made to attach cables to the
+                    tanker so that it-3 can be floated and towed *-3 out to sea.
+                </text>
+                <arg f="MOD" n="M">can</arg>
+                <rel>towed</rel>
+                <arg n="1">*-3 --it</arg>
+                <arg n="2">out to sea</arg>
+            </example>
+            
+            <note>frame by Perryn
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

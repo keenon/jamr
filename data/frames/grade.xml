@@ -1,0 +1,54 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="grade">
+        <note>
+            Frames file for 'grade' based on sentences in ECTB2.
+            Verbnet entry 29.10.
+        </note>
+        
+        <roleset id="grade.01" name="assign a grade" vncls="29.10">
+            <roles>
+                <role descr="grader" n="0">
+                    
+                    <vnrole vncls="29.10" vntheta="Agent"/>
+                </role>
+                
+                <role descr="thing graded" n="1">
+                    
+                    <vnrole vncls="29.10" vntheta="Theme"/>
+                </role>
+                
+                <role descr="secondary attribute" n="2">
+                    
+                    <vnrole vncls="29.10" vntheta="Predicate"/>
+                </role>
+                
+            </roles>
+            
+            <example name="typical usage">
+                <text>
+                    The teacher graded the paper.
+                </text>
+                <arg n="0">The teacher</arg>
+                <rel>graded</rel>
+                <arg n="1">the paper</arg>
+            </example>
+            
+            <example name="classify">
+                <text>
+                    44 percent of the users graded it as moderately potent.
+                </text>
+                <arg n="0">44 percent of the users</arg>
+                <rel>graded</rel>
+                <arg n="1">it</arg>
+                <arg n="2">as moderately potent</arg>
+            </example>
+            
+            
+            <note>
+                Created by Jena.
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

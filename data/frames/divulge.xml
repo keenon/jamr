@@ -1,0 +1,39 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="divulge">
+        <note>
+            Frames file for 'divulge' based on EBC. Comparison with disclose and VN 37.7.
+        </note>
+        
+        <roleset id="divulge.01" name="disclose something" vncls="37.7">
+            <roles>
+                <role descr="Sayer" n="0">
+                    <vnrole vncls="37.7" vntheta="Agent"/>
+                </role>
+                <role descr="Utterance" n="1">
+                    <vnrole vncls="37.7" vntheta="Topic"/>
+                </role>
+                <role descr="Hearer" n="2">
+                    <vnrole vncls="37.7" vntheta="Recipient"/>
+                </role>
+            </roles>
+            
+            <example name="transitive">
+                <text>
+                    Since they are under interrogation, it means they may have divulged 
+                    the secret.
+                </text>
+                <arg n="0">they</arg>
+                <arg n="m" f="MOD">may</arg>
+                <rel>divulged</rel>
+                <arg n="1">the secret</arg>
+            </example>
+            
+            <note>
+                Frame created by Jena
+            </note>
+            
+            
+        </roleset>
+    </predicate>
+</frameset>

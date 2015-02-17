@@ -1,0 +1,60 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="transcend">
+        <note>
+            Frames file for 'transcend' based on frame file for 'surpass'.  Verbnet
+            class 90, other members include exceed, excel, outnumber, outwit,
+            overrun, succeed, surpass, top.  Comparison with 'surpass'
+        </note>
+        
+        <roleset id="transcend.01" name="go beyond (may be spiritual/mystical)" vncls="90">
+            <roles>
+                <role descr="thing going beyond" n="0"/>
+                <role descr="thing transcended" n="1"/>
+            </roles>
+            
+            <example name="semi-spiritual">
+                <text>
+                    There is also a sense, as one worker at BEST says *?*, of *
+                    transcending time and space, a feeling *0* only people who *T* 've been
+                    there can understand *T*.
+                </text>
+                <arg n="0">*</arg>
+                <rel>transcending</rel>
+                <arg n="1">time and space</arg>
+                <arg n="m" f="ADV">a feeling *0* only people who *T* 've been there
+                    can understand *T*
+                </arg>
+            </example>
+            
+            <example name="non-spiritual">
+                <text>
+                    As [Taiwan]-9 attempts [*]-9 to transcend May Forth, the mainland is
+                    eager * to return to it.
+                </text>
+                <arg n="0">[*]-9</arg> 
+                <rel>transcend</rel>
+                <arg n="1">May Forth</arg>
+            </example>
+            
+            <example name="no subject">
+                <text>
+                    But rather than * stirring rage and tragic acts of revenge, [those
+                    sentiments]-9 have been transcended [*]-9, so that Green Island is now
+                    site of Asia's first monument to human rights.
+                </text>
+                <rel>transcended</rel>
+                <arg n="1">[*]-9 -> those sentiments</arg>
+                <arg n="m" f="PRP">so that Green Island is now site of Asia's first
+                    monument to human rights.
+                </arg>
+            </example>
+            
+            
+            <note>
+                Frame file created by Arrick
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

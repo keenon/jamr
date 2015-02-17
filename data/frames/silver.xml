@@ -1,0 +1,40 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="silver">
+        <note>
+            Frames file for 'silver' based on internet usage examples, expansion via
+            VerbNet. VerbNet classes 45.4, 9.9.
+        </note>
+        
+        <roleset id="silver.01" name="(cause to) be silver in color or coating" vncls="45.4">
+            <roles>
+                <role descr="causer of transformation" n="0">
+                    <vnrole vncls="45.4" vntheta="Agent"/>
+                    <vnrole vncls="9.9" vntheta="Agent"/>
+                </role>
+                <role descr="thing becoming silver" n="1">
+                    <vnrole vncls="45.4" vntheta="Patient"/>
+                    <vnrole vncls="9.9" vntheta="Destination"/>
+                </role>
+                <role descr="instrument or manner separate from arg 0" n="2">
+                    <vnrole vncls="45.4" vntheta="Instrument"/>
+                    <vnrole vncls="9.9" vntheta="Theme"/>
+                </role>
+            </roles>
+            
+            <example name="unaccusative">
+                <text>
+                    John's hair silvered with age. 
+                </text>
+                <arg n="1">John's hair</arg>
+                <rel>silvered</rel>
+                <arg n="M" f="MNR">with age</arg>
+            </example>
+            
+            <note>
+                Frame created by Claire
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

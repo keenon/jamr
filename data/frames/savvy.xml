@@ -1,0 +1,28 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <note>
+        Frames file for 'savvy' loosely based on frames file for 'know'.
+    </note>
+    
+    <predicate lemma="savvy">
+        <roleset id="savvy.01" name="understand" vncls="29.5 29.9-1-1 29.2-1">
+            <roles>
+                <role descr="knower" n="0"></role>
+                <role descr="thing known or thought" n="1"></role>
+                <role descr="attribute of arg1" n="2"></role>
+            </roles>
+            
+            <example name="Old West?">
+                <text>
+                    He savvied wild horses.
+                </text>
+                <arg n="0">He</arg>
+                <rel>savvied</rel>
+                <arg n="1">wild horses</arg>
+            </example>
+            
+        </roleset>
+        
+    </predicate>
+    
+</frameset>

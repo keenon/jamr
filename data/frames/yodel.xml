@@ -1,0 +1,37 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="yodel">
+        <note>
+            Frames file for 'yodel' based on frame file for 'sing'.  Verbnet class
+            37.3, other members include babble, bark, cackle, chant, lisp, moan,
+            prattle, rasp, screech, sing, thunder, vociferate, whisper, yap.
+        </note>
+        
+        <roleset id="yodel.01" name="yodel" vncls="37.3">
+            <roles>
+                <role descr="yodeler" n="0">
+                    <vnrole vncls="37.3" vntheta="Agent"/>
+                </role>
+                <role descr="song" n="1">
+                    <vnrole vncls="37.3" vntheta="Topic"/>
+                </role>
+                <role descr="hearer" n="2">
+                    <vnrole vncls="37.3" vntheta="Recipient"/>
+                </role>
+            </roles>
+            
+            <example name="let's yodel">
+                <text>
+                    * Let 's 'yodel'
+                </text>
+                <arg n="0">'s</arg>
+                <rel>yodel</rel>
+            </example>
+            <note>
+                Frame created by Arrick
+            </note>
+            
+        </roleset>
+    </predicate>
+    
+</frameset>

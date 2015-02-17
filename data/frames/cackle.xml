@@ -1,0 +1,47 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="cackle">
+        <note>
+            Frames file for 'cackle' based on sentences in BROWN.
+            VN entry in class animal_sounds-38.
+        </note>
+        
+        <roleset id="cackle.01" name="make the noise of a hen" vncls="38">
+            <roles>
+                <role descr="cackler" n="0">
+                    
+                    <vnrole vncls="38" vntheta="Agent"/>
+                </role>
+            </roles>
+            
+            
+            <example name="intransitive">
+                <text>
+                    He stroked the hens and they responded with delighted clucks , he gobbled with
+                    the turkeys and they at once were all attention , he quacked with the ducks ,
+                    and cackled with a pair of exceedingly flattered geese .
+                </text>
+                <arg n="0">he</arg>
+                <rel>cackled</rel>
+                <arg n="M" f="ADV">with a pair of exceedingly flattered geese</arg>
+            </example>
+            
+            
+            
+            <note>
+                Framed by Neville.
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,57 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="twine">
+        <note>
+            Frames file for 'twine' based on sentences in brown.
+        </note>
+        
+        <roleset id="twine.01" vncls="-" name="wrap">
+            <roles>
+                <role n="0"  descr="cause, agent"/>
+                <role n="1"  descr="string-like object"/>
+                <role n="2"  descr="hub, axis, ball"/>
+            </roles>
+            
+            <example name="sorta like 'create'">
+                <inflection person="ns" tense="past" aspect="ns" voice="active" form="full"/>
+                <text>
+                    Hence the title of the book, referring to the soldiers and subjects
+                    of the king; on the fatal battlefield of Poltava, to quote from the
+                    novel, ``the wreath [0] he twined [*T*-1] for himself slipped down
+                    upon his people''. 
+                </text>
+                <arg n="m" f="RCL">[0] -&gt; the wreath</arg>
+                <arg n="0"        >he</arg>
+                <rel              >twined</rel>
+                <arg n="1"        >[*T*-1]</arg>
+                <arg n="m" f="ADV">for himself</arg>
+            </example>
+            
+            <example name="with location">
+                <inflection person="ns" tense="ns" aspect="ns" voice="passive" form="participle"/>
+                <text>
+                    We'd know him by his stretch pants and the flowers [0] he'd wear
+                    [*T*-1]-1 twined [*]-1 in his hair. 
+                </text>
+                <arg n="m" f="RCL">[0] -&gt; the flowers</arg>
+                <rel              >twined</rel>
+                <arg n="1"        >[*]</arg>
+                <arg n="m" f="LOC">in his hair</arg>
+            </example>
+            
+            <example name="canonically with 'around'">
+                <inflection person="ns" tense="past" aspect="ns" voice="active" form="full"/>
+                <text>
+                    It enclosed her clammy hands and twined around her ankles.
+                </text>
+                <arg n="1"        >It</arg>
+                <rel              >twined</rel>
+                <arg n="2">around her ankles</arg>
+            </example>
+            
+            <note>
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

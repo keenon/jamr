@@ -1,0 +1,34 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="sneer">
+        
+        <roleset framnet="" id="sneer.01" name="sneer" vncls="40.2">
+            <roles>
+                <role descr="sneerer, agent" f="" n="0">
+                    <vnrole vncls="40.2" vntheta="agent"/>
+                </role>
+                <note/>
+                <role descr="theme (usually redundant, e.g., &quot;a sneer&quot;)" f="" n="1">
+                    <vnrole vncls="40.2" vntheta="theme"/>
+                </role>
+                <role descr="cause of or reason for sneering" f="" n="2">
+                    <vnrole vncls="40.2" vntheta="cause"/>
+                </role>
+                <role descr="recipient of sneer, sneered-at" f="" n="3">
+                    <vnrole vncls="40.2" vntheta="recipient"/>
+                </role>
+            </roles>
+            <example name="regular usage (with theme)" src="web usage" type="">
+                <text>She sneered her contempt at her little sister's efforts.</text>
+                <note/>
+                <arg f="" n="0">She</arg>
+                <rel f="">sneered</rel>
+                <arg f="" n="1">her contempt</arg>
+                <arg f="" n="3">at her little sister's effort</arg>
+            </example>
+            <note>hand-checked by Kevin</note>
+        </roleset>
+        <note>Automatically created based on framefiles: frown (40.2)</note>
+    </predicate>
+    <note/>
+</frameset>

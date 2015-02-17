@@ -1,0 +1,33 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="scrunch_up">
+        <note>
+            Frames file for 'scrunch_up' based on frame for 'crumple'.  No Verbnet
+            entry for 'scrunch_up'  Verbnet entry for 'scrunch' 21.2.
+        </note>
+        
+        <roleset id="scrunch.01" name="break down, fold, wrinkle" vncls="-">
+            <roles>
+                <role descr="causer of damage" n="0"/>
+                <role descr="thing crumpled" n="1"/>
+            </roles>
+            
+            <example name="rollie-pollie">
+                <text>
+                    [ The students]-9 do their best [ *]-9 to scrunch up [ *]-9 as small as
+                    they can *?*.
+                </text>
+                <arg n="0">[ *]-9</arg>
+                <rel>[ scrunch] [ up]</rel>
+                <arg f="ADV" n="M">[ *]-9 as small as they can *?*.</arg>
+            </example>
+            
+            
+        </roleset>
+    </predicate>
+    
+    <note>
+        frame created by Arrick
+    </note>
+    
+</frameset>

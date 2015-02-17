@@ -1,0 +1,38 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="wobble">
+        <note>
+            Frames file for 'wobble' based on sentences in brown.
+        </note>
+        
+        <roleset id="wobble.01" vncls="-" name="stay in place, unsteadily">
+            <roles>
+                <role n="0"  descr="unsteady thing"/>
+            </roles>
+            
+            <example name="with location">
+                <inflection person="ns" tense="past" aspect="ns" voice="active" form="full"/>
+                <text>
+                    He hit Roberts with his left fist in the ribs and the razor cut
+                    toward him feebly, then wobbled in mid-air. 
+                </text>
+                <arg n="0"        >the razor</arg>
+                <arg n="m" f="TMP">then</arg>
+                <rel              >wobbled</rel>
+                <arg n="m" f="LOC">in mid-air</arg>
+            </example>
+            
+            <example name="weird usage">
+                <inflection person="ns" tense="ns" aspect="progressive" voice="active" form="participle"/>
+                <text>
+                    She stood up, pulled the coat from her shoulders and started to slide
+                    it off, then let out a high-pitched scream and I let out a
+                    low-pitched, wobbling sound like a muffler blowing out. 
+                </text>
+                <rel              >wobbling</rel>
+                <arg n="0"        >sound</arg>
+            </example>
+            
+        </roleset>
+    </predicate>
+</frameset>

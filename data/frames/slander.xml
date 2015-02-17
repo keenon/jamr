@@ -1,0 +1,30 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="slander">
+        <note>
+            Frames file for 'slander' based on dictionary.com. Verbnet entry 33.
+        </note>
+        
+        <roleset id="slander.01" name="to defame" vncls="33">
+            <roles>
+                <role descr="defamer, agent" n="0">
+                    <vnrole vncls="33" vntheta="Agent"/>
+                </role>
+                <role descr="entity defamed" n="1">
+                    <vnrole vncls="33" vntheta="Theme"/>
+                </role>
+            </roles>
+            
+            <example name="false report">
+                <text>
+                    John slandered Mary by telling everyone she loves smut.
+                </text>
+                <arg n="0">John</arg>
+                <rel>slandered</rel>
+                <arg n="1">Mary</arg>
+                
+            </example>
+        </roleset>
+        <note>frame by Perryn</note>
+    </predicate>
+</frameset>

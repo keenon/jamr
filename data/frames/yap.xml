@@ -1,0 +1,30 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="yap">
+        <note>
+            Frames file for 'yap' based on dictionary.com. Verbnet entry 38, 37.3.
+        </note>
+        
+        <roleset id="yap.01" name="to bark sharply, shrilly, or snappishly"
+  vncls="38 37.3">
+            <roles>
+                
+                <role descr="yapper" n="0">
+                    <vnrole vncls="38" vntheta="Agent"/><vnrole
+  vncls="37.3" vntheta="Agent"/>
+                </role>
+                
+            </roles>
+            
+            <example name="Puppy">
+                <text>
+                    John's dog yaps at squirrels.
+                </text>
+                <arg n="0">John's dog</arg>
+                <rel>yaps</rel>
+                
+            </example>
+        </roleset>
+        <note>frame by Perryn</note>
+    </predicate>
+</frameset>

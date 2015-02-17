@@ -1,0 +1,39 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="scriptwrite">
+        <note>
+            Frames file for 'scriptwrite' based on sentences in ectb2.
+        </note>
+        
+        <roleset id="scriptwrite.01" name="write script" vncls="25.2 26.7-2 37.1-1">
+            <roles>
+                <role descr="writer" n="0">
+                    <vnrole vncls="26.7-2" vntheta="Agent"/>
+                    <vnrole vncls="25.2" vntheta="Agent"/>
+                </role>
+                <role descr="thing written" n="1">
+                    <vnrole vncls="26.7-2" vntheta="Theme"/>
+                    <vnrole vncls="25.2" vntheta="Theme"/>
+                </role>
+                <role descr="benefactive" n="2">
+                    <vnrole vncls="26.7-2" vntheta="Beneficiary"/>
+                </role>
+            </roles>
+            
+            <example name="adjectival">
+                <text>
+                    scriptwriting and directing couple
+                </text>
+                <rel>scriptwriting</rel>
+                <arg n="0">couple</arg>
+            </example>
+            
+            <note>
+                Frameset created by Jena.
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>
+
+

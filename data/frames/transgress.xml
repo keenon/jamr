@@ -1,0 +1,22 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <note/>
+    <predicate lemma="transgress">
+        <note>Frames file for 'Transgress' based on instances in Webtext 25.2, Frames added by Kev</note>
+        <roleset framnet="" id="transgress.01" name="To violate a command or law" vncls="">
+            <roles>
+                <role descr="Transgressor, Agent" f="" n="0"/>
+                <note/>
+                <role descr="Thing transgressed, law or command violated" f="" n="1"/>
+            </roles>
+            <note/>
+            <example name="Intransitive usage from Webtext" src="Intransitive usage from Webtext" type="Intransitive usage from Webtext">
+                <inflection aspect="ns" form="ns" person="ns" tense="ns" voice="ns"/>
+                <text>But we do not say anything except that troubles will befall a person who *T*-1 transgresses.</text>
+                <note/>
+                <arg f="" n="0">*T*</arg>
+                <rel f="">transgresses</rel>
+            </example>
+        </roleset>
+    </predicate>
+</frameset>

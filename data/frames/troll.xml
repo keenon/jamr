@@ -1,0 +1,31 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="troll">
+        
+        <roleset framnet="" id="troll.01" name="troll" vncls="35.2">
+            <roles>
+                <role descr="troller, agent" f="" n="0">
+                    <vnrole vncls="35.2" vntheta="agent"/>
+                </role>
+                <role descr="area trolled, location" f="" n="1">
+                    <vnrole vncls="35.2" vntheta="location"/>
+                </role>
+                <note/>
+                <role descr="thing trolled for, theme" f="" n="2">
+                    <vnrole vncls="35.2" vntheta="theme"/>
+                </role>
+            </roles>
+            <example name="from Google" src="web usage" type="">
+                <text>I keep hearing people say that they trolled the river using rattletraps and things like that.</text>
+                <note/>
+                <arg f="" n="0">They</arg>
+                <rel f="">trolled</rel>
+                <arg f="" n="1">the river</arg>
+                <arg f="mnr" n="m">using rattletraps and things like that</arg>
+            </example>
+            <note>hand-checked by Kev</note>
+        </roleset>
+        <note>Automatically created based on framefiles: excavate (35.2)</note>
+    </predicate>
+    <note/>
+</frameset>

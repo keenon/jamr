@@ -1,0 +1,42 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="traverse">
+        <note>
+            Frames file for 'traverse' based on sentences in brown.
+        </note>
+        
+        <roleset id="traverse.01" vncls="-" name="cross">
+            <roles>
+                <role n="0"  descr="traveller"/>
+                <role n="1"  descr="wide area"/>
+            </roles>
+            
+            <example name="pretty boring verb, but pretty">
+                <inflection person="ns" tense="past" aspect="ns" voice="active" form="full"/>
+                <text>
+                    Then we drove on, until there was no more road and we
+                    traversed dry rice fields, bouncing across their squat earth walls. 
+                </text>
+                <arg n="0"        >we</arg>
+                <rel              >traversed</rel>
+                <arg n="1"        >dry rice fields</arg>
+                <arg n="m" f="ADV">bouncing across their squat earth walls</arg>
+            </example>
+            
+            <example name="passive with split constituent">
+                <inflection person="third" tense="present" aspect="progressive" voice="passive" form="participle"/>
+                <text>
+                    [A third, one of at least equal and perhaps even greater
+                    importance,]-4 is now being traversed [*-4]: American immersion and
+                    involvement in world affairs. 
+                </text>
+                <rel              >traversed</rel>
+                <arg n="1"        >[*-4] [American immersion and involvement in world affairs]</arg>
+            </example>
+            
+            <note>
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

@@ -1,0 +1,49 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="wreathe">
+        <note>
+            Frames file for 'wreathe' based on sentences in brown.
+        </note>
+        
+        <roleset id="wreathe.01" vncls="-" name="to encircle or decorate with">
+            <roles>
+                <role n="0"  descr="placer of wreath"/>
+                <role n="1" descr="location where wreath is placed"/>
+                <role n="2" descr="wreath or wreath-like object"/>
+            </roles>
+            
+            <example name="passive">
+                <inflection person="ns" tense="ns" aspect="ns" voice="ns" form="ns"/>
+                <text>
+                    [The figure]-1 was wreathed [*-1] in an extraordinary luminescence .
+                </text>
+                <rel>wreathed</rel>
+                <arg n="1">[*-1]</arg>
+                <arg n="2">in an extraordinary luminescence</arg>
+            </example>
+            
+            
+            <note>
+                ARG0 should be very rare.
+            </note>
+            
+        </roleset>
+        
+        <roleset id="wreathe.02" name="to move with slow, curvy movements">
+            <roles>
+                <role n="0" descr="mover"/>
+            </roles>
+            
+            <example name="pain">
+                <inflection person="ns" tense="ns" aspect="ns" voice="ns" form="ns"/>
+                <text>
+                    John wreathed in pain after Mary punched him.
+                </text>
+                <arg n="0">John</arg>
+                <rel>wreathed</rel>
+                <arg n="M" f="MNR">in pain</arg>
+                <arg n="M" f="TMP">after Mary punched him</arg>
+            </example>
+        </roleset>
+    </predicate>
+</frameset>

@@ -1,0 +1,64 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="slop">
+        <note>
+            Frames file for 'slop' based on sentences in brown.
+        </note>
+        
+        <roleset id="slop.01" vncls="-" name="pour untidily">
+            <roles>
+                <role n="0"  descr="pourer"/>
+                <role n="1"  descr="liquid"/>
+                <role n="2"  descr="source container"/>
+                <role n="3"  descr="destination container"/>
+            </roles>
+            
+            <example name="with destination">
+                <inflection person="ns" tense="past" aspect="ns" voice="active" form="full"/>
+                <text>
+                    Rourke hastily slopped whiskey into his glass on top of half-melted ice-cubes.
+                </text>
+                <arg n="0"        >Rourke</arg>
+                <arg n="m" f="MNR">hastily</arg>
+                <rel              >slopped</rel>
+                <arg n="1"        >whiskey</arg>
+                <arg n="3">into his glass</arg>
+                <arg n="m" f="LOC">on top of half-melted ice-cubes</arg>
+            </example>
+            
+            <example name="with source">
+                <inflection person="ns" tense="ns" aspect="progressive" voice="active" form="participle"/>
+                <text>
+                    And then came the water -- not rain, but solid sheets that sluiced
+                    down like water slopping from a bucket. 
+                </text>
+                <arg n="1"        >water</arg>
+                <rel              >slopping</rel>
+                <arg n="2">from a bucket</arg>
+            </example>
+        </roleset>
+        
+        <roleset id="slop.02" vncls="-" name="make noises like a liquid in a
+  container">
+            <roles>
+                <role n="0"  descr="liquid"/>
+                <role n="1"  descr="container or surface"/>
+            </roles>
+            
+            <example name="I wonder if this should be 'slap'">
+                <inflection person="ns" tense="present" aspect="ns" voice="active" form="full"/>
+                <text>
+                    They cringed under sodden covers, listening to the waves slop against
+                    the bottom. 
+                </text>
+                <arg n="0"        >the waves</arg>
+                <rel              >slop</rel>
+                <arg n="1">against the bottom</arg>
+            </example>
+            
+            <note>
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

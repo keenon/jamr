@@ -1,0 +1,27 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="urinate">
+        <note>
+            Frames file for 'urinate' based on dictionary.com.  Verbnet entry 40.1.2-1.
+        </note>
+        
+        <roleset id="urinate.01" vncls="40.1.2-1" name="relieve one's bladder">
+            <roles>
+                <role n="0"  descr="person in the bathroom">
+                    <vnrole vncls="40.1.2-1" vntheta="Agent"/>
+                </role>
+            </roles>
+            
+            <example name="John again">
+                <text>
+                    John urinated in Mary's flower garden.
+                </text>
+                <arg n="0">John</arg>
+                <rel>urinated</rel>
+                <arg f="LOC" n="M">Mary's flower garden</arg>
+                
+            </example>
+        </roleset>
+        <note>frame by Perryn</note>
+    </predicate>
+</frameset>

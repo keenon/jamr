@@ -1,0 +1,52 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="thicken">
+        <note>
+            Frames file for 'thicken' based on sentences in brown.
+        </note>
+        
+        <roleset id="thicken.01" vncls="-" name="(cause to) become thicker">
+            <roles>
+                <role n="0"  descr="cause, agent"/>
+                <role n="1"  descr="thing becoming thick"/>
+                <role n="2"  descr="instrument"/>
+            </roles>
+            
+            <example name="unaccusative">
+                <inflection person="ns" tense="past" aspect="ns" voice="active" form="full"/>
+                <text>
+                    Watching, they waited until the squall thickened and began to move in
+                    a long drifting slant across the dry burning land. 
+                </text>
+                <arg n="1"        >the squall</arg>
+                <rel              >thickened</rel>
+            </example>
+            
+            <example name="accusative">
+                <inflection person="ns" tense="past" aspect="ns" voice="active" form="full"/>
+                <text>
+                    For a moment, anger darkened the hallway about her, and when she
+                    found her voice, anger thickened it. 
+                </text>
+                <arg n="0"        >anger</arg>
+                <rel              >thickened</rel>
+                <arg n="1"        >it</arg>
+            </example>
+            
+            <example name="instrumental">
+                <inflection person="ns" tense="past" aspect="ns" voice="active" form="full"/>
+                <text>
+                    John thickened the gravy with library paste.
+                </text>
+                <arg n="0"        >John</arg>
+                <rel              >thickened</rel>
+                <arg n="1"        >the gravy</arg>
+                <arg n="2">with library paste</arg>
+            </example>
+            
+            <note>
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

@@ -1,0 +1,52 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="sicken">
+        <note>
+            Frames file for 'sicken' based on sentences in brown corpus. VerbNet class amuse-31.1
+        </note>
+        
+        <roleset id="sicken.01" vncls="31.1" name="make feel disgust">
+            <roles>
+                <role descr="cause, reason for feeling" n="0">
+                    <vnrole vncls="31.1" vntheta="Cause"/>
+                </role>
+                
+                <role descr="experiencer, entity feeling sick" n="1">
+                    <vnrole vncls="31.1" vntheta="Experiencer"/>
+                </role>
+            </roles>
+            
+            
+            <example name="passive, no agent">
+                <inflection person="ns" tense="ns" aspect="ns" voice="ns" form="ns"/>
+                <text>
+                    Watson-1 turned away , [*-1] sickened for the first time in many months .
+                </text>
+                <arg n="1">[*-1]</arg>
+                <arg n="M" f="ADV">for the first time in many months</arg>
+                <rel>sickened</rel>
+            </example>
+            
+            
+            <example name="passive, with agent">
+                <inflection person="ns" tense="ns" aspect="ns" voice="ns" form="ns"/>
+                <text>
+                    In the brief moment [*ICH*-5] [*ICH*-6] [0] I had [*T*-3] [0] [*] to talk to
+                    them [*T*-4] before I took my post on the ring of defenses , I indicated [0] I-1
+                    was sickened [*-1] by the methods [0] men employed [*T*-2] [*-7] to live and
+                    trade on the river .
+                </text>
+                <arg n="0">by the methods [0] men employed [*T*-2] [*-7] to live
+                    and trade on the river
+                </arg>
+                <arg n="1">[*-1]</arg>
+                <rel>sickened</rel>
+            </example>
+            
+            <note>
+                Framed by Neville.
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

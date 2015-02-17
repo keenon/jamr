@@ -1,0 +1,26 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="sleet">
+        
+        <roleset framnet="" id="sleet.01" name="sleet" vncls="57">
+            <roles>
+                <role descr="causer of sleet (*not* &quot;it&quot;) (e.g., &quot;cats and dogs&quot;)" f="" n="1">
+                    <vnrole vncls="57" vntheta="theme"/>
+                </role>
+                
+                <note/>
+            </roles>
+            
+            <note>hand-checked by Kevin</note>
+            <example name="regular usage" src="web usage" type="">
+                <inflection aspect="ns" form="ns" person="ns" tense="ns" voice="ns"/>
+                <text>It was sleeting outside.</text>
+                <note/>
+                <rel f="">sleeting</rel>
+                <arg f="loc" n="m">outside</arg>
+            </example>
+        </roleset>
+        <note>Automatically created based on framefiles: fog (57)</note>
+    </predicate>
+    <note/>
+</frameset>

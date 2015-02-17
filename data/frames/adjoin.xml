@@ -1,0 +1,56 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="adjoin">
+        <note>
+            Frames file for 'adjoin' based on sentences in brown.
+        </note>
+        
+        <roleset id="adjoin.01" vncls="47.8-1" name="be immediately next to">
+            <roles>
+                <role n="1"  descr="(first) thing(s)">
+                    <vnrole vncls="47.8-1"
+  vntheta="Theme1"/>
+                </role>
+                <role n="2"  descr="second thing, if separate">
+                    <vnrole vncls="47.8-1" vntheta="Theme2"/>
+                </role>
+            </roles>
+            
+            <example name="separate args">
+                <inflection person="third" tense="present" aspect="ns" voice="active" form="full"/>
+                <text>
+                    It was built by the Pasterns, and stands on the acre of
+                    ground that [*T*-1] adjoins our property. 
+                </text>
+                <arg n="1"        >[*T*-1]</arg>
+                <arg n="M" f="RCL">      that -&gt; the acre of ground</arg>
+                <rel              >adjoins</rel>
+                <arg n="2"        >our property</arg>
+            </example>
+            
+            <example name="only one thing mentioned">
+                <inflection person="ns" tense="ns" aspect="progressive" voice="active" form="participle"/>
+                <text>
+                    Their having family ties on our plantation &amp; the adjoining
+                    one would be a stronger inducement''. 
+                </text>
+                <rel              >adjoining</rel>
+                <arg n="1"        >one</arg>
+            </example>
+            
+            <example name="merged args">
+                <inflection person="ns" tense="ns" aspect="progressive" voice="active" form="participle"/>
+                <text>
+                    If a child loses a molar at the age of two, the adjoining
+                    teeth may shift toward the empty space... 
+                </text>
+                <rel              >adjoining</rel>
+                <arg n="1"        >teeth</arg>
+            </example>
+            
+            <note>
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

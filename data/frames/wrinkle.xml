@@ -1,0 +1,44 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="wrinkle">
+        <note>
+            Frames file for 'bend' based on sentences in wsj.  Verbnet entries
+            47.6, 26.5, 50, and 45.2; Framenet entries Body movement, Posture,
+            and Path shape.  Fortunately all of these fit into a single rolest.
+            I think.
+        </note>
+        
+        <roleset id="wrinkle.01" name="(cause to) form creases" vncls="45.2">
+            <roles>
+                <role descr="wrinkler, causer" n="0">
+                    <vnrole vncls="45.2" vntheta="Agent"/>
+                </role>
+                <role descr="thing becoming wrinkled" n="1">
+                    <vnrole vncls="45.2" vntheta="Patient"/>
+                </role>
+                <role descr="instrument, thing used to wrinkle (rare)" n="2">
+                    <vnrole vncls="45.2" vntheta="Instrument"/>
+                </role>
+            </roles>
+            
+            <example name="external causation">
+                <text>
+                    Herb wrinkled his nose with disgust.
+                </text>
+                <arg n="0">Herb</arg>
+                <rel>wrinkled</rel>
+                <arg n="1">his nose</arg>
+                <arg f="MNR" n="M">with disgust</arg>
+            </example>
+            
+            <example name="internal causation">
+                <text>
+                    The fabric wrinkled around his ankles.
+                </text>
+                <arg n="1">the fabric</arg>
+                <rel>wrinkled</rel>
+                <arg f="LOC" n="M">around his ankles</arg>
+            </example>
+        </roleset>
+    </predicate>
+</frameset>

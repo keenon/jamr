@@ -1,0 +1,33 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="apprentice">
+        <note>
+            Frames file for 'apprentice' based on dictionary.com. Verbnet entry 29.7. 
+        </note>
+        
+        <roleset id="apprentice.01" name="to bind or place with an employer or
+  craftsman for instruction in trade" vncls="29.7">
+            <roles>
+                <role descr="apprentice" n="0">
+                    <vnrole vncls="29.7" vntheta="Agent"/>
+                </role>
+                <role descr="skill" n="1">
+                    <vnrole vncls="29.7" vntheta="Theme"/>
+                </role>
+                <role descr="employer or craftsman" n="2"/>
+            </roles>
+            
+            <example name="carpentry">
+                <text>
+                    John apprenticed with his father to become a carpenter.
+                </text>
+                <arg n="0">John</arg>
+                <rel>apprenticed</rel>
+                <arg n="2">his father</arg>
+                <arg n="1">carpenter</arg>
+                
+            </example>
+        </roleset>
+        <note>frame by Perryn</note>
+    </predicate>
+</frameset>

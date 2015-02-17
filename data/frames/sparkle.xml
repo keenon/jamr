@@ -1,0 +1,39 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="sparkle">
+        <note>
+            Frames file for 'sparkle' based on frame file for 'shimmer'.  Verbnet entry
+            43.1, other members include beam, burn, flash, flicker, glare, glisten,
+            incandesce, sparkle, twinkle.
+        </note>
+        
+        <roleset id="sparkle.01" name="emit light, sparkle" vncls="43.1">
+            <roles>
+                <role descr="source of light" n="1"/>
+            </roles>
+            
+            <example name="sparkle">
+                <text>
+                    From a distance the T and C Tower sparkles in the southern Taiwan sunshine.
+                </text>
+                <arg n="m" f="DIR">From a distance</arg>
+                <arg n="1">the T and C Tower</arg>
+                <rel>sparkles</rel>
+                <arg f="LOC" n="m">in the southern Taiwan sunshine.</arg>
+            </example>
+            
+            <example name="adjectival">
+                <text>
+                    Thick and viscous crude oil blackens the once sparkling wilderness.
+                </text>
+                <rel>sparkling</rel>
+                <arg n="1">wilderness</arg>
+            </example>
+            
+            <note>
+                Frame created by Arrick
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

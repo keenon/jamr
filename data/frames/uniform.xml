@@ -1,0 +1,33 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="uniform">
+        <note>
+        </note>
+        
+        <roleset id="uniform.01" name="to provide with uniforms" vncls="41.1.1">
+            <roles>
+                <role descr="causer of non-nudity, agent" n="0"></role>
+                <role descr="person(s) dressed" n="1"></role>
+                <role descr="clothes, uniform" n="2"/>
+            </roles>
+            
+            <example name="is this really a verb?">
+                <text>
+                    He uniformed the members in fine regalia at his own expense.
+                </text>
+                <arg n="0">He</arg>
+                <rel>uniformed</rel>
+                <arg n="1">the members</arg>
+                <arg n="2">in fine regalia</arg>
+                <arg f="ADV" n="m">at his own expense</arg>
+            </example>
+            
+            
+        </roleset>
+    </predicate>
+    
+    <note>
+        frame created by Kev
+    </note>
+    
+</frameset>

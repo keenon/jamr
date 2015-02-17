@@ -1,0 +1,31 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <note/>
+    <predicate lemma="nose">
+        <note/>
+        <roleset framnet="Seeking" id="nose.01" name="search or inquire in a meddlesome way" vncls="35.6">
+            <roles>
+                <role descr="snooper" f="" n="0">
+                    <vnrole vncls="ferret-35.6" vntheta="agent"/>
+                </role>
+                <note/>
+                <role descr="thing searched for" f="" n="1">
+                    <vnrole vncls="ferret-35.6" vntheta="theme"/>
+                </role>
+                <role descr="location, source" f="" n="2">
+                    <vnrole vncls="ferret-35.6" vntheta="location"/>
+                </role>
+            </roles>
+            <note>Roleset based on internet search. Added because none existed. Member of Vncls 35.6. Comparison to ‘ferret’. Roleset by Julia.</note>
+            <example name="All args" src="internet" type="-">
+                <inflection aspect="progressive" form="gerund" person="third" tense="past" voice="active"/>
+                <text>I was nosing around the kitchen for something to make for my son's lunch.</text>
+                <note/>
+                <arg f="" n="0">I</arg>
+                <rel f="">was nosing</rel>
+                <arg f="" n="1">around the kitchen</arg>
+                <arg f="" n="2">for something to make for my son's lunch.</arg>
+            </example>
+        </roleset>
+    </predicate>
+</frameset>

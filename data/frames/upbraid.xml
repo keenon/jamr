@@ -1,0 +1,34 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="upbraid">
+        <note>
+            Frames file for 'upbraid' based on dictionary.com. Verbnet entry 33.
+        </note>
+        
+        <roleset id="upbraid.01" name="to find fault with or reproach severely" vncls="33">
+            <roles>
+                <role descr="upbraider" n="0">
+                    <vnrole vncls="33" vntheta="Agent"/>
+                </role>
+                <role descr="guilty party" n="1">
+                    <vnrole vncls="33" vntheta="Theme"/>
+                </role>
+                <role descr="crime, fault" n="2">
+                    <vnrole vncls="33" vntheta="Predicate"/>
+                </role>
+            </roles>
+            
+            <example name="military standards">
+                <text>
+                    The military tribunal upbraided the soldier for his cowardice.
+                </text>
+                <arg n="0">The military tribunal</arg>
+                <rel>upbraided</rel>
+                <arg n="1">the soldier</arg>
+                <arg n="2">his cowardice</arg>
+                
+            </example>
+        </roleset>
+        <note>frame by Perryn</note>
+    </predicate>
+</frameset>

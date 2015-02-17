@@ -1,0 +1,39 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="apprehend">
+        <note>
+            Frames file for 'apprehend' based on sentences in ectb2.
+            No appropriate Verbnet entry.
+        </note>
+        
+        <roleset id="apprehend.01" name="seize, take into custody" vncls="87.2-1">
+            <roles>
+                <role descr="agent, apprehendor" n="0">
+                    <vnrole vncls="87.2-1" vntheta="Experiencer"/>
+                </role>
+                <role descr="criminal,entity seized" n="1">
+                    <vnrole vncls="87.2-1" vntheta="Predicate"/>
+                </role>
+                <role descr="crime, or attribute of arg 1" n="2">
+                    <vnrole vncls="87.2-1" vntheta="Proposition"/>
+                </role>
+            </roles>
+            
+            <example name="Passive">
+                
+                <text>
+                    Immediately after the interview, he-1 was apprehended *-1 again by the 
+                    Jordanian authority. 
+                </text>
+                <arg f="TMP" n="M">Immediately after the interview</arg> 
+                <rel>apprehended</rel>
+                <arg n="1">*-1</arg>
+                <arg f="TMP" n="M">again</arg>
+                <arg n="0">by the Jordanian authority</arg>
+            </example>
+            
+        </roleset>
+    </predicate>
+    
+    <note>Frame by Claire</note>
+</frameset>

@@ -1,0 +1,65 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="hinder">
+        <note>
+            Frames file for 'hinder' based on sentences in financial subcorpus.
+            No Verbnet entry.  Comparison with restrain and hold (back).
+        </note>
+        
+        <roleset id="hinder.01" name="(try to) stop, prevent" vncls="67">
+            <roles>
+                <role descr="stopper, preventer" n="0">
+                    <vnrole vncls="67" vntheta="Agent"/>
+                </role>
+                <role descr="Theme (action or object being prevented)" n="1">
+                    <vnrole
+  vncls="67" vntheta="Theme"/>
+                </role>
+                <role descr="secondary predication on arg1 or action" n="2"/>
+                <role descr="instrument, if separate from arg0" n="3"/>
+            </roles>
+            
+            <example name="transitive">
+                <text>
+                    Prudential-Bache's Mr. Rodgers said he doesn't see the industry's
+                    capacity-expansion program hindering takeover activity. 
+                </text>
+                <arg n="0">the industry's capacity-expansion program</arg>
+                <rel>hindering</rel>
+                <arg n="1">takeover activity</arg>
+            </example>
+            
+            <example name="with secondary predication">
+                <text>
+                    While ``the tone'' of domestic and international air-freight
+                    markets remains sound, [seasonal factors]-1 are likely *trace*-1 to
+                    hinder Burlington Air from matching third-quarter results in the
+                    fourth quarter, Pittston said. 
+                </text>
+                <arg n="0">*trace*</arg>
+                <rel>hinder</rel>
+                <arg n="1">Burlington Air</arg>
+                <arg n="2">from matching third-quarter results in the
+                    fourth quarter
+                </arg>
+            </example>
+            
+            <example name="with instrument?">
+                <text>
+                    John hindered Mary from studying with his incessant pleas for sex.
+                </text>
+                <arg n="0">        John</arg>
+                <rel>hindered</rel>
+                <arg n="1">Mary</arg>
+                <arg n="2">from studying</arg>
+                <arg n="3">with his incessant pleas for sex</arg>
+            </example>
+            
+            <note>
+                I'm going to get in trouble for this example, I just know it.  Only
+                use &quot;instrument&quot; when it is clearly separate from the agent.
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

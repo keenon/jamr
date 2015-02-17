@@ -1,0 +1,38 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="thud">
+        <note>
+            Frames file for 'thud' based on sentences frames file for 'thump'.
+        </note>
+        
+        <roleset id="thud.01" vncls="18.4, 43.2" name="hit, make a thudding sound">
+            <roles>
+                <role n="0"  descr="thing thudding"/>
+                <role n="1"  descr="thing hit (NOT Location)"/>
+            </roles>
+            
+            <example name="When the levee breaks">
+                <text>
+                    Waves thudded against the seawall.
+                </text>
+                <arg n="0"        >waves</arg>
+                <rel              >thudded</rel>
+                <arg n="1"        >against the seawall</arg>
+            </example>
+            
+            <example name="Nervousness">
+                <text>
+                    Josephine's heart thudded inside her chest.
+                </text>
+                <arg n="0">Josephine's heart</arg>
+                <rel>thudded</rel>
+                <arg f="LOC" n="m">inside her chest</arg>
+            </example>
+            
+            <note>
+                Added by Kev
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

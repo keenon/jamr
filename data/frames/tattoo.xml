@@ -1,0 +1,30 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="tattoo">
+        <note>
+            Frames file for 'tattoo' based on dictionary.com. Verbnet entry 25.1.
+        </note>
+        
+        <roleset id="tattoo.01" name="to mark the skin with permanent colors and patterns" vncls="29.1">
+            <roles>
+                <role descr="tattooer, applier of design" n="0">
+                    <vnrole vncls="25.1" vntheta="Agent"/>
+                </role>
+                <role descr="tattooed, person design is applied to" n="1">
+                    <vnrole vncls="25.1" vntheta="Theme"/>
+                </role>
+            </roles>
+            
+            <example name="prison tats">
+                <text>
+                    The inmates tattoo each other with gang signs.
+                </text>
+                <arg n="0">the inmates</arg>
+                <rel>tattoo</rel>
+                <arg n="1">each other</arg>
+                
+            </example>
+        </roleset>
+        <note>frame by Perryn</note>
+    </predicate>
+</frameset>

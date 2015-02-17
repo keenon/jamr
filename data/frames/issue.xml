@@ -1,0 +1,91 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="issue">
+        <note>
+            Frames file for 'issue' based on survey of initial sentences of big
+            corpus
+        </note>
+        
+        <roleset id="issue.01" name="emit" vncls="13.3 13.4.1 48.1.1">
+            <roles>
+                <role descr="issuer" n="0">
+                    
+                    
+                    <vnrole vncls="13.3" vntheta="Agent"/>
+                    <vnrole vncls="13.4.1" vntheta="Agent"/>
+                </role>
+                
+                <role descr="thing issued" n="1">
+                    
+                    
+                    <vnrole vncls="13.3" vntheta="Theme"/>
+                    <vnrole vncls="48.1.1" vntheta="Theme"/>
+                    <vnrole vncls="13.4.1" vntheta="Theme"/>
+                </role>
+                
+                <role descr="issued to" n="2">
+                    
+                    
+                    <vnrole vncls="13.3" vntheta="Recipient"/>
+                    <vnrole vncls="13.4.1" vntheta="Recipient"/>
+                </role>
+                
+                <role descr="attribute, issued as or at" n="3">
+                    <vnrole vncls="48.1.1" vntheta="Location"/>
+                </role>
+            </roles>
+            
+            <example name="active">
+                <text>
+                    Mrs. Hills must issue another review of the performance of those countries.
+                </text>
+                <arg n="0">Mrs. Hills</arg>
+                <arg f="MOD" n="m">must</arg>
+                <rel>issue</rel>
+                <arg n="1">another review of the performance of those
+                    countries
+                </arg>
+            </example>
+            
+            <example name="passive">
+                <text>
+                    ...[a report]-1 issued *trace*-1 earlier this year by McGraw-Hill's FW
+                    Dodge group.
+                </text>
+                <arg n="1">*trace*</arg>
+                <rel>issued</rel>
+                <arg f="TMP" n="m">earlier this year</arg>
+                <arg n="0">by McGraw-Hill's FW Dodge group.</arg>
+            </example>
+            
+            <note>
+                also works for relative clauses
+            </note>
+            
+            <example name="with benefactive">
+                <text>
+                    [The warnings]-1, issued *trace*-1 to at least 100 criminal defense
+                    lawyers in several major cities in the last week, ...
+                </text>
+                <arg n="1">*trace*</arg>
+                <rel>issued</rel>
+                <arg n="2">to at least 100 criminal defense lawyers</arg>
+                <arg f="LOC" n="m">in several major cities</arg>
+                <arg f="TMP" n="m">in the last week</arg>
+            </example>
+            
+            <example name="with attribute">
+                <text>
+                    [The debentures]-1 are being issued *trace*-1 at an issue price of $849
+                    for each $1000 principal amount.
+                </text>
+                <arg n="1">*trace*</arg>
+                <rel>issued</rel>
+                <arg n="3">at an issue price of $849
+                    for each $1000 principal amount.
+                </arg>
+            </example>
+            
+        </roleset>
+    </predicate>
+</frameset>

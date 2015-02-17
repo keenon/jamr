@@ -1,0 +1,44 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="twirl">
+        <note>
+            Frames file for 'twirl' based on sentences in brown.
+        </note>
+        
+        <roleset id="twirl.01" vncls="-" name="(cause to) move in a circle quickly">
+            <roles>
+                <role n="0"  descr="cause of twirling"/>
+                <role n="1"  descr="thing twirling"/>
+                <role n="2"  descr="axis"/>
+            </roles>
+            
+            <example name="usually without axis">
+                <inflection person="ns" tense="ns" aspect="ns" voice="ns" form="gerund"/>
+                <text>
+                    [Carroll]-1 diagnosed Mrs. Hull by [*-1] taking a drop of blood
+                    from her ear and putting it on his ``radionic'' machine and twirling
+                    some knobs (fee $50). 
+                </text>
+                <arg n="0"        >[*-1]</arg>
+                <rel              >twirling</rel>
+                <arg n="1"        >some knobs</arg>
+            </example>
+            
+            <example name="sometimes with axis">
+                <inflection person="third" tense="past" aspect="progressive" voice="active" form="participle"/>
+                <text>
+                    She had picked up the quirt and was twirling it around her
+                    wrist and smiling at him. 
+                </text>
+                <arg n="0"        >She</arg>
+                <rel              >twirling</rel>
+                <arg n="1"        >it</arg>
+                <arg n="2">around her wrist</arg>
+            </example>
+            
+            <note>
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

@@ -1,0 +1,41 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="snuggle">
+        <note>
+            Frames file for 'snuggle' based on sentences in brown.
+        </note>
+        
+        <roleset id="snuggle.01" vncls="-" name="snuggle">
+            <roles>
+                <role n="0"  descr="snuggler"/>
+                <role n="1"  descr="snuggled with"/>
+            </roles>
+            
+            <example name="snuggle into">
+                <inflection person="ns" tense="past" aspect="ns" voice="active" form="full"/>
+                <text>
+                    He snuggled into the blanket.
+                </text>
+                <arg n="0"        >He</arg>
+                <rel              >snuggled</rel>
+                <arg n="1">into the blanket</arg>
+            </example>
+            
+            <example name="snuggle against">
+                <inflection person="ns" tense="past" aspect="ns" voice="active" form="full"/>
+                <text>
+                    ``I think I'll sleep in this morning'', she said drowsily, and as she
+                    snuggled against him, he wondered if she ever went to church. 
+                </text>
+                <arg n="0"        >she</arg>
+                <rel              >snuggled</rel>
+                <arg n="1">against him</arg>
+            </example>
+            
+            <note>
+                a pretty good variety of prepositions for arg1.
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

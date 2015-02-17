@@ -1,0 +1,53 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="collide">
+        <note>
+            Frames file for 'collide' based on sentences in ECTB.
+            VN entry in 36.1-correspond, but not same sense at all.
+        </note>
+        
+        <roleset id="collide.01" name="make contact with" vncls="18.4">
+            <roles>
+                <role descr="theme, thing in motion" n="0">
+                    <vnrole vncls="18.4" vntheta="Theme"/>
+                </role>
+                
+                <role descr="thing hit" n="1">
+                    <vnrole vncls="18.4" vntheta="Location"/>
+                </role>
+                
+            </roles>
+            
+            
+            
+            <example name="transitive">
+                <inflection person="ns" tense="ns" aspect="ns" voice="ns" form="ns"/>
+                <text>
+                    According to astronomy experts , the observation and study of this comet
+                    colliding with Jupiter will help both the in - depth revelation of Jupiter 's
+                    mysteries of the rosy clouds , the great red spot , and corona and also help in
+                    [*] developing research on the odds , forecast accuracy and explosive effects , etc. of comets and asteroids ' collision with Earth .
+                </text>
+                <rel>colliding</rel>
+                <arg n="1">with Jupiter</arg>
+                <arg n="0">this comet</arg>
+            </example>
+            
+            
+            <note>
+                Framed by Neville.
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>
+
+
+
+
+
+
+
+
+
+

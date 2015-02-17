@@ -1,0 +1,38 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="thieve">
+        <note>
+            Frames file for 'thieve' based on sentences in brown.
+        </note>
+        
+        <roleset id="thieve.01" vncls="-" name="steal, be a thief">
+            <roles>
+                <role n="0"  descr="thief"/>
+            </roles>
+            
+            <example name="usually adjectival">
+                <inflection person="ns" tense="ns" aspect="progressive" voice="active" form="participle"/>
+                <text>
+                    There have been cooing doves, chattering magpies, thieving jackdaws,
+                    a proud peacock, a silly goose, and a harpy eagle -- whom I was silly
+                    enough to mate with and who is now busy tearing at my vitals''. 
+                </text>
+                <rel              >thieving</rel>
+                <arg n="0"        >jackdaws</arg>
+            </example>
+            
+            <example name="occasionally nominal">
+                <inflection person="ns" tense="ns" aspect="ns" voice="ns" form="gerund"/>
+                <text>
+                    It was responsible and sometimes dangerous work because the thieving
+                    is awful in the port of New York. 
+                </text>
+                <rel              >thieving</rel>
+            </example>
+            
+            <note>
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

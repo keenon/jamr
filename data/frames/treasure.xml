@@ -1,0 +1,51 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="treasure">
+        <note>
+            Frames file for 'treasure' based on sentences in ECTB.
+            VN entry in admire-31.2.
+        </note>
+        
+        <roleset id="treasure.01" name="cherish" vncls="31.2">
+            <roles>
+                <role descr="experiencer, treasurer" n="0">
+                    
+                    <vnrole vncls="31.2" vntheta="Experiencer"/>
+                </role>
+                
+                <role descr="treasured" n="1">
+                    
+                    <vnrole vncls="31.2" vntheta="Cause"/>
+                </role>
+            </roles>
+            
+            
+            <example name="transitive">
+                <text>
+                    American friends Mr. Sackler and his wife , have wholeheartedly contributed a
+                    lot to [*] carrying forward our art of calligraphy , and hope [*-8] to introduce this brilliant art to the
+                    world , [*] to let more friends learn and treasure it .
+                </text>
+                <rel>treasure</rel>
+                <arg n="1">it</arg>
+                <arg n="0">more friends</arg>
+            </example>
+            
+            
+            <note>
+                Framed by Neville.
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,100 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="block">
+        <note>
+            Frames file for 'block' based on survey of initial sentences of big
+            corpus and comparison with 'stop'
+        </note>
+        
+        <roleset id="block.01" name="oppose, halt, stop" vncls="9.8 16">
+            <roles>
+                <role descr="blocker, Agent" n="0">
+                    <vnrole vncls="16" vntheta="Agent"/>
+                    <vnrole vncls="9.8" vntheta="Agent"/>
+                </role>
+                <role descr="Theme (action or object being stopped)" n="1">
+                    <vnrole vncls="16" vntheta="Patient"/>
+                    <vnrole vncls="9.8" vntheta="Theme"/>
+                </role>
+                <role descr="secondary predication" n="2"/>
+                <role descr="Instrument" n="3"/>
+            </roles>
+            
+            <example name="simple transitive">
+                <text>
+                    It's now easier for the Transportation Department to block leveraged
+                    buy-outs in the airline industry.
+                </text>
+                <arg n="0">the Transportation Department</arg>
+                <rel>block</rel>
+                <arg n="1">leveraged buy-outs in the airline industry.</arg>
+            </example>
+            
+            <example name="instrumental subject">
+                <text>
+                    Low test scores can block students' promotions.
+                </text>
+                <arg n="3">Low test scores</arg>
+                <arg f="MOD" n="m">can</arg>
+                <rel>block</rel>
+                <arg n="1">students' promotions</arg>
+            </example>
+            
+            <example name="with secondary predication">
+                <text>
+                    [The proposed Soviet redefinition]-2 is aimed at *trace*-2 blocking the US
+                    from developing lighter, more transportable high-technology tanks.
+                </text>
+                <arg n="3">*trace*-2</arg>
+                <rel>blocking</rel>
+                <arg n="1">the US</arg>
+                <arg n="2">from developing lighter, more transportable
+                    high-technology tanks
+                </arg>
+            </example>
+            
+            <example name="everything all together">
+                <text>
+                    John blocked Mary from completing her dissertation with his constant
+                    pestering.
+                </text>
+                <arg n="0">John</arg>
+                <rel>blocked</rel>
+                <arg n="1">Mary</arg>
+                <arg n="2">from completing her dissertation</arg>
+                <arg n="3">with his constant pestering.</arg>
+            </example>
+            
+        </roleset>
+    </predicate>
+    <predicate lemma="block_up">
+        <note>
+            Frames file for 'block up' based on sentences in ebc.
+        </note>
+        
+        <roleset id="block.02" name="oppose, halt, stop" vncls="9.8 16">
+            <roles>
+                <role descr="blocker, Agent" n="0">
+                    <vnrole vncls="16" vntheta="Agent"/>
+                    <vnrole vncls="9.8" vntheta="Agent"/>
+                </role>
+                <role descr="Theme (action or object being stopped)" n="1">
+                    <vnrole vncls="16" vntheta="Patient"/>
+                    <vnrole vncls="9.8" vntheta="Theme"/>
+                </role>
+                <role descr="secondary predication" n="2"/>
+                <role descr="Instrument" n="3"/>
+            </roles>
+            
+            <example>
+                <text>
+                    Waste discharged * has currently blocked this up.
+                </text>
+                <arg n="3">Waste discharged *</arg>
+                <arg n="m" f="TMP">currently</arg>
+                <rel>blocked up</rel>
+                <arg n="1">this</arg>
+            </example>
+        </roleset>
+    </predicate>
+</frameset>

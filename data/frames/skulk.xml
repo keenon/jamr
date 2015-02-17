@@ -1,0 +1,38 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="skulk">
+        <note>
+            Frames file for 'skulk' based on sentences in brown corpus. Comparison with
+            'walk.' VerbNet class run-51.3.2
+        </note>
+        
+        <roleset id="skulk.01" vncls="51.3.2" name="move in a stealthy manner">
+            <roles>
+                <role descr="agent, skulker" n="0">
+                    <vnrole vncls="51.3.2" vntheta="Agent"/>
+                </role>
+                
+                <role descr="path" n="1">
+                    <vnrole vncls="51.3.2" vntheta="Location"/>
+                </role>
+            </roles>
+            
+            
+            <example name="intransitive">
+                <inflection person="ns" tense="ns" aspect="ns" voice="ns" form="ns"/>
+                <text>
+                    Why had he-1 crossed the dark water [*T*-1] , [*] to bring back a group of
+                    reclaimed soldiers or [*]-1 to skulk in a foul-smelling hole ? ?
+                </text>
+                <rel>skulk</rel>
+                <arg n="M" f="LOC">in a foul-smelling hole</arg>
+                <arg n="0">[*]</arg>
+            </example>
+            
+            <note>
+                Framed by Neville.
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

@@ -1,0 +1,31 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="sashay">
+        
+        <roleset framnet="" id="sashay.01" name="sashay" vncls="51.3.2">
+            <roles>
+                <role descr="entity sashaying" f="" n="1">
+                    <vnrole vncls="51.3.2" vntheta="theme"/>
+                </role>
+                
+                <role descr="start point, or path" f="" n="3"/>
+                <role descr="end point" f="" n="4">
+                    <vnrole vncls="51.3.2" vntheta="location"/>
+                </role>
+                
+                <note/>
+            </roles>
+            <example name="from Google" src="web usage" type="">
+                <text>He sashayed out into the street, delighting in the explosions he begat.</text>
+                <note/>
+                <arg f="" n="1">He</arg>
+                <rel f="">sashayed</rel>
+                <arg f="" n="2">out into the street</arg>
+                <arg f="adv" n="m">delighting in the explosions he begat</arg>
+            </example>
+            <note>hand-checked by Kevin</note>
+        </roleset>
+        <note>Automatically created based on framefiles: zoom (51.3.2)</note>
+    </predicate>
+    <note/>
+</frameset>

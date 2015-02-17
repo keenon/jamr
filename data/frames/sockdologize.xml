@@ -1,0 +1,41 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="sockdologize">
+        <note>
+            Frames file for 'sockdologize' based on sentences in BROWN.
+            As far as I know, Harry Hawk in Our American Cousin is the only person to
+            utter this.
+        </note>
+        
+        <roleset id="sockdologize.01" name="???" vncls="">
+            <roles>
+                <role descr="Arg0" n="0"/>
+            </roles>
+            
+            
+            <example name="gerund">
+                <text>
+                    `` Well , I guess [0] I know enough [*-1] to turn you inside out , you
+                    sockdologizing old mantrap '' ! !
+                </text>
+                <rel>sockdologizing</rel>
+                <arg n="0">you</arg>
+            </example>
+            
+            <note>
+                Framed by Neville.
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>
+
+
+
+
+
+
+
+
+
+

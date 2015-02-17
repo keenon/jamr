@@ -1,0 +1,30 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="warble">
+        <note>
+            Frames file for 'warble' based on dictionary.com. Verbnet entry 38, 37.3.
+        </note>
+        
+        <roleset id="warble.01" name="to sing with trills, quavers, or melodic
+  embellishments" vncls="38 37.3">
+            <roles>
+                
+                <role descr="warbler" n="0">
+                    <vnrole vncls="38" vntheta="Agent"/><vnrole
+  vncls="37.3" vntheta="Agent"/>
+                </role>
+                
+            </roles>
+            
+            <example name="Canary">
+                <text>
+                    The canary warbled the day away.
+                </text>
+                <arg n="0">The canary</arg>
+                <rel>warbled</rel>
+                
+            </example>
+        </roleset>
+        <note>frame by Perryn</note>
+    </predicate>
+</frameset>

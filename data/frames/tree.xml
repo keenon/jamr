@@ -1,0 +1,34 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="tree">
+        <note>
+            Frames file for 'tree' based on dictionary.com. Verbnet entry 9.10.
+        </note>
+        
+        <roleset id="tree.01" name="to drive up a tree" vncls="9.10">
+            <roles>
+                <role descr="driver" n="0">
+                    <vnrole vncls="9.10" vntheta="Agent"/>
+                </role>
+                <role descr="thing driven" n="1">
+                    <vnrole vncls="9.10" vntheta="Theme"/>
+                </role>
+                <role descr="tree, location" n="2">
+                    <vnrole vncls="9.10" vntheta="Location"/>
+                </role>
+            </roles>
+            
+            <example name="poor cat">
+                <text>
+                    The dog treed the cat in the neighbor's yard.
+                </text>
+                <arg n="0">The dog</arg>
+                <rel>treed</rel>
+                <arg n="1">the cat</arg>
+                <arg n="2">in the neighbor's yard</arg>
+                
+            </example>
+        </roleset>
+        <note>frame by Perryn</note>
+    </predicate>
+</frameset>

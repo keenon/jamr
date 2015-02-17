@@ -1,0 +1,31 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="spat">
+        
+        <roleset framnet="" id="spat.01" name="spat" vncls="36.4">
+            <roles>
+                <role descr="first fighter" f="" n="0">
+                    <vnrole vncls="36.4" vntheta="actor1"/>
+                </role>
+                <role descr="second fighter, if separate" f="" n="1">
+                    <vnrole vncls="36.4" vntheta="actor2"/>
+                </role>
+                <note/>
+                <role descr="topic, spatted over what" f="" n="2">
+                    <vnrole vncls="" vntheta="topic"/>
+                </role>
+            </roles>
+            <example name="from Google" src="web usage" type="">
+                <text>As sisters do, they spatted over clothing, over the bathroom in the morning, over everything.</text>
+                <note/>
+                <arg f="adv" n="m">As sisters do</arg>
+                <arg f="" n="0">they</arg>
+                <rel f="">spatted</rel>
+                <arg f="" n="2">over clothing, over the bathroom in the morning, over everything</arg>
+            </example>
+            <note>hand-checked by Kevin</note>
+        </roleset>
+        <note>Automatically created based on framefiles: fight (36.4)</note>
+    </predicate>
+    <note/>
+</frameset>

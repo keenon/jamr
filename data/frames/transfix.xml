@@ -1,0 +1,46 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="transfix">
+        <note>
+            Frames file for 'transfix' based on internet usage examples, membership
+            in VN. VerbNet entry 31.1, comparison with 'captivate.'
+        </note>
+        
+        <roleset id="transfix.01" name="to make motionless, as if fixed" vncls="31.1">
+            <roles>
+                <role descr="causer of transfixation" n="0">
+                    <vnrole vncls="31.1" vntheta="Cause"/>
+                </role>
+                <role descr="transfixed entity" n="1">
+                    <vnrole vncls="31.1" vntheta="Experiencer"/>
+                </role>
+                <role descr="instrument, if separate from arg 0" n="2"/>
+            </roles>
+            
+            <example name="transitive">
+                <text>
+                    Colorful images transfixed John's gaze.
+                </text>
+                <arg n="0">colorful images</arg>
+                <rel>transfixed</rel>
+                <arg n="1">John's gaze</arg>
+            </example>
+            
+            <example name="Passive, descriptive">
+                <text>
+                    Mary looked up to see herself, [hard eyes]-1 transfixed *-1 in an evil
+                    stare.
+                </text>
+                <rel>transfixed</rel>
+                <arg n="1">*-1</arg>
+                <arg n="M" f="PRD">in an evil stare</arg>
+            </example>
+            
+        </roleset>
+    </predicate>
+    
+    <note>
+        frame created by Claire
+    </note>
+    
+</frameset>

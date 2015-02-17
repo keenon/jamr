@@ -1,0 +1,28 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="woof">
+        <note>
+            Frames file for 'woof' based on dictionary.com. Verbnet entry 38.
+        </note>
+        
+        <roleset id="woof.01" name="make the noise 'woof'" vncls="38">
+            <roles>
+                
+                <role descr="woofer" n="0">
+                    <vnrole vncls="38" vntheta="Agent"/>
+                </role>
+                
+            </roles>
+            
+            <example name="Big Dog">
+                <text>
+                    The Saint Bernard woofed a big, deep woof.
+                </text>
+                <arg n="0">The Saint Bernard</arg>
+                <rel>woofed</rel>
+                
+            </example>
+        </roleset>
+        <note>frame by Perryn</note>
+    </predicate>
+</frameset>

@@ -1,0 +1,35 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="abut">
+        <note>
+            Frames file for 'abut' based on sentences in ectb.  No Verbnet entry.
+            Consulted verb 'border' and Verbnet entry 47.8.
+        </note>
+        
+        <roleset id="abut.01" name="be one the edge of" vncls="47.8">
+            <roles>
+                <role descr="edge of what" n="1">
+                    <vnrole vncls="47.8" vntheta="Theme1"/>
+                </role>
+                <role descr="thing on the edge" n="2">
+                    <vnrole vncls="47.8" vntheta="Theme2"/>
+                </role>
+            </roles>
+            
+            <example name="border with">
+                <text>
+                    It abuts Sanchih Rural Township to the northeast.
+                </text>
+                <arg n="1">It</arg>
+                <rel>abuts</rel>
+                <arg n="2">Sanchih Rural Township</arg>
+                <arg n="m" f="DIR">to the northeast</arg>
+            </example>
+            
+            <note>
+                Created by Jena.
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

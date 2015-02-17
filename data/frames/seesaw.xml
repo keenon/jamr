@@ -1,0 +1,41 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="seesaw">
+        <note>
+            Frames file for 'fluctuate' based on sentences in ectb2.
+            No Verbnet entry, but compared to 'fluctuate' from entry 45.6.
+        </note>
+        
+        <roleset id="seesaw.01" name="teeter or move up and down" vncls="45.6">
+            <roles>
+                <role descr="thing moving" n="1">
+                    
+                    <vnrole vncls="45.6" vntheta="Patient"/>
+                </role>
+                
+                <role descr="EXT or MNR" n="2">
+                    
+                    <vnrole vncls="45.6" vntheta="Extent"/>
+                </role>
+                
+                <role descr="one side" n="3"/>
+                <role descr="other side" n="4"/>
+                <role descr="medium/range" n="5"/>
+            </roles>
+            
+            <example name="with range">
+                <text>
+                    [Your moods]-3 begin *-3 to seesaw between those of youth and midde age.
+                </text>
+                <arg n="1">*-3</arg>
+                <rel>seesaw</rel>
+                <arg n="5">between those of youth and middle age</arg>
+            </example>
+            
+            <note>
+                Frameset by Jena.
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

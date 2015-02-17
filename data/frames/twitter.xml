@@ -1,0 +1,32 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="twitter">
+        <note>
+            Frames file for 'twitter' based on dictionary.com. Verbnet entry 38, 37.3.
+        </note>
+        
+        <roleset id="twitter.01" name="to utter a succesion of small, tremulous
+  sounds, as a bird" vncls="38 37.3">
+            <roles>
+                
+                <role descr="twitter-er" n="0">
+                    <vnrole vncls="38"
+  vntheta="Agent"/><vnrole vncls="37.3" vntheta="Agent"/>
+                </role>
+                
+            </roles>
+            
+            <example name="Sparrows">
+                <text>
+                    The sparrows in my window twitter in the morning.
+                </text>
+                <arg n="0">The sparrows</arg>
+                <arg f="LOC" n="M">in my window</arg>
+                <rel>twitter</rel>
+                <arg f="TMP" n="M">in the morning</arg>
+                
+            </example>
+        </roleset>
+        <note>frame by Perryn</note>
+    </predicate>
+</frameset>

@@ -1,0 +1,57 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="shame">
+        <note>
+            Frames file for 'shame' based on internet usage examples, expansion 
+            via VN.  Verbnet entry amuse-31.1, force-59-1, judgement-33. Comparison with
+            encourage.
+        </note>
+        
+        <roleset id="shame.01" name="drive or impel by sense of shame" vncls="59-1">
+            <roles>
+                <role descr="causer of shame" n="0">
+                    <vnrole vncls="59-1" vntheta="Agent"/>
+                </role>
+                <role descr="shamed agent" n="1">
+                    <vnrole vncls="59-1" vntheta="Patient"/>
+                </role>
+                <role descr="action impelled through shame" n="2">
+                    <vnrole vncls="59-1" vntheta="Proposition"/>
+                </role>
+            </roles>
+            
+            <example name="All Arguments">
+                <text>
+                    John shamed mary into going. 
+                </text>
+                <arg n="0">John</arg>
+                <rel>shamed</rel>
+                <arg n="1">Mary</arg>
+                <arg n="2">into going</arg>
+            </example>
+        </roleset>
+        
+        <roleset id="shame.02" name="favor" vncls="31.1, 33">
+            <roles>
+                <role descr="Cause of shame" n="0">
+                    <vnrole vncls="31.1" vntheta="Cause"/>
+                </role>
+                <role descr="entity shamed" n="1">
+                    <vnrole vncls="31.1" vntheta="Experiencer"/>
+                </role>
+                <role descr="Instrument or Grounds for shame" n="2"/>
+            </roles>
+            
+            <example name="transitive, with instrument">
+                <text>
+                    John shamed his family with his cowardice.
+                </text>
+                <arg n="0">John</arg>
+                <rel>shamed</rel>
+                <arg n="1">his family</arg> 
+                <arg n="2">with his cowardice</arg>
+            </example>
+            
+        </roleset>
+    </predicate>
+</frameset>

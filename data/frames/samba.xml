@@ -1,0 +1,31 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="samba">
+        
+        <roleset framnet="" id="samba.01" name="samba" vncls="51.5">
+            <roles>
+                <role descr="causer of samba-ing (transitive uses only)" f="" n="0">
+                    <vnrole vncls="51.5" vntheta="agent"/>
+                </role>
+                <role descr="person(s) doing the samba (intransitive subject, transitive object)" f="" n="1">
+                    <vnrole vncls="51.5" vntheta="theme"/>
+                </role>
+                <note/>
+                <role descr="location or path of samba-ing" f="" n="2">
+                    <vnrole vncls="51.5" vntheta="location"/>
+                </role>
+            </roles>
+            <example name="intransitive usage with location" src="web usage" type="">
+                <text>They sambaed in a dark, smoky club, looking deeply into one another's eyes.</text>
+                <note/>
+                <arg f="" n="1">They</arg>
+                <rel f="">sambaed</rel>
+                <arg f="" n="2">in a dark, smoky club</arg>
+                <arg f="adv" n="m">looking deeply into one another's eyes</arg>
+            </example>
+            <note>hand-checked by Kevin</note>
+        </roleset>
+        <note>Automatically created based on framefiles: tango (51.5)</note>
+    </predicate>
+    <note/>
+</frameset>

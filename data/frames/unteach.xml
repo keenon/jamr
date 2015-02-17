@@ -1,0 +1,34 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="unteach">
+        <note>
+            Frames file for 'unteach' based on sentences in brown.
+        </note>
+        
+        <roleset id="unteach.01" vncls="-" name="make forget learning">
+            <roles>
+                <role n="0"  descr="unteacher"/>
+                <role n="1"  descr="subject"/>
+                <role n="2"  descr="(former) student"/>
+                
+            </roles>
+            
+            <example name="transitive">
+                <inflection person="ns" tense="ns" aspect="ns" voice="ns" form="ns"/>
+                <text>
+                    `` And God help anyone who [*T*-1]-2 tries [*-2] to unteach you '' ! ! Grumbled [*T*-3] Michelangelo ; ; yet he knew that he had nothing [0] [*] to grumble about [*T*-4] , for Argiento made few demands on him .
+                </text>
+                <arg n="M" f="RCL">who -&gt; anyone</arg>
+                <arg n="0">[*-2]</arg>
+                <rel>unteach</rel>
+                <arg n="2">you</arg>
+            </example>
+            
+            
+            <note>
+                frames created by Ben. c.f. 'teach'
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

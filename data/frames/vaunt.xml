@@ -1,0 +1,30 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="vaunt">
+        <note>
+            Frames file for 'vaunt' based on frame file for 'boast'.  No Verbnet entry.
+        </note>
+        
+        <roleset id="vaunt.01" name="be loudly proud of" vncls="-">
+            <roles>
+                <role descr="boaster" n="0"/>
+                <role descr="thing proud of" n="1"/>
+                <role descr="attribute" n="2"/>
+            </roles>
+            
+            <example name="hubris">
+                <text>
+                    [How come]-2 [they]-1 are vaunted [*]-1 as local specialties [*T*]-2 ?
+                </text>
+                <arg n="1">[*]-1 -> they</arg>
+                <rel>vaunted</rel>
+                <arg n="2">as local specialties</arg>
+                <arg n="m" f="CAU">[*T*]-2</arg>
+            </example>
+            <note>
+                Frame file created by Arrick
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

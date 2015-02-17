@@ -1,0 +1,27 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="sojourn">
+        
+        <roleset framnet="" id="sojourn.01" name="sojourn" vncls="56">
+            <roles>
+                <role descr="vacationer(s)" f="" n="0">
+                    <vnrole vncls="56" vntheta="theme"/>
+                </role>
+                <role descr="location of vacation" f="" n="1">
+                    <vnrole vncls="56" vntheta="location"/>
+                </role>
+                <note/>
+            </roles>
+            <example name="from Google" src="web usage" type="">
+                <text>They sojourned in Asia as well as Europe.</text>
+                <note/>
+                <arg f="" n="0">They</arg>
+                <rel f="">sojourned</rel>
+                <arg f="" n="1">in Asia as well as Europe</arg>
+            </example>
+            <note>hand-checked by Kevin</note>
+        </roleset>
+        <note>Automatically created based on framefiles: vacation (56)</note>
+    </predicate>
+    <note/>
+</frameset>

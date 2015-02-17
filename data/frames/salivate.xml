@@ -1,0 +1,38 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="salivate">
+        <note>
+            Frames file for 'salivate' based on sentences in ULA Written.
+            Based on 'anguish.'
+        </note>
+        
+        <roleset id="salivate.01" name="mouth watering" vncls="31.3">
+            <roles>
+                <role descr="entity experiencing salivation" n="0">
+                    
+                    <vnrole vncls="31.3" vntheta="Experiencer"/>
+                </role>
+                
+                <role descr="cause of salivation" n="1">
+                    
+                    <vnrole vncls="31.3" vntheta="Cause"/>
+                </role>
+                
+            </roles>
+            
+            <example name="Pavlov's Dog">
+                <text>
+                    The later analogue is the bell causing the dog to salivate in expectation
+                    of food. 
+                </text>
+                <arg n="0">the dog</arg>
+                <rel>salivate</rel>
+                <arg n="1">in expectation of food</arg> 
+            </example>
+            
+            <note> created by Claire</note>
+            
+        </roleset>
+        
+    </predicate>
+</frameset>

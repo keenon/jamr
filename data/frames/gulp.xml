@@ -1,0 +1,58 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="gulp">
+        <note>
+            Frames file for 'gulp' based on sentences in brown.
+        </note>
+        
+        <roleset id="gulp.01" vncls="39.3-2" name="swig">
+            <roles>
+                <role n="0"  descr="drinker">
+                    <vnrole vncls="39.3-2" vntheta="Agent"/>
+                </role>
+                <role n="1"  descr="drink">
+                    <vnrole vncls="39.3-2" vntheta="Patient"/>
+                </role>
+            </roles>
+            
+            <example name="transitive">
+                <inflection person="ns" tense="ns" aspect="ns" voice="ns" form="ns"/>
+                <text>
+                    He came home [*-1] overheated , ran straight to the ice-chest , and gulped shivery cold water .
+                </text>
+                <arg n="0">He</arg>
+                <rel>gulped</rel>
+                <arg n="1">shivery cold water</arg>
+            </example>
+        </roleset>
+    </predicate>
+    <predicate lemma="gulp_down">
+        <roleset id="gulp.02" name="gulp_down: gulp all the way" vncls="39.3-2">
+            <roles>
+                <role n="0"  descr="drinker">
+                    <vnrole vncls="39.3-2" vntheta="Agent"/>
+                </role>
+                <role n="1"  descr="drink">
+                    <vnrole vncls="39.3-2" vntheta="Patient"/>
+                </role>
+            </roles>
+            
+            <example name="the only way to do it">
+                <inflection person="ns" tense="ns" aspect="ns" voice="ns" form="ns"/>
+                <text>
+                    Timothy Rourke gulped down the whiskey hastily and joined him , [*-1] asking , `` Who are we going [*-2] to call on [*T*-3] in the Northeast section '' ? ?
+                </text>
+                <arg n="0">Timothy Rourke</arg>
+                <rel>[ gulped] [ down]</rel>
+                <arg n="1">the whiskey</arg>
+                <arg n="M" f="MNR">hastily</arg>
+            </example>
+            
+            
+            <note>
+                Framed by Ben.
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

@@ -1,0 +1,63 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="slim">
+        <note>
+            Frames file for 'slim' based on ebn instances. 
+        </note>
+        
+        <roleset id="slim.01" name="to reduce, melt off, lose weight" vncls="45.4">
+            <roles>
+                <role descr="causer" n="0">
+                    <vnrole vncls="45.4" vntheta="Agent"/>
+                </role>
+                <role descr="entity slimming down" n="1">
+                    <vnrole vncls="45.4" vntheta="Patient"/>
+                </role>
+            </roles>
+            
+            <example name="Barbie">
+                <text>
+                    Toymaker Mattel, Inc. refined Barbie's gravity-defying proportions by
+                    *PRO* slimming her bust and hips and widening her waist, as well as *PRO*
+                    giving her a new nose.
+                </text>
+                <arg n="0">*PRO* -- Toymaker Mattel</arg>
+                <rel>slimming</rel>
+                <arg n="1">her bust and hips</arg>
+                
+            </example>
+        </roleset>
+        <note>frame by Perryn</note>
+    </predicate>
+    <predicate lemma="slim_down">
+        <note>
+            Frames file for 'slim' based on survey of sentences in the WSJ
+            corpus.
+        </note>
+        
+        <roleset id="slim.01" name="to reduce, melt off, lose weight" vncls="-">
+            <roles>
+                <role descr="causer" n="0"/>
+                <role descr="entity slimming down" n="1"/>
+            </roles>
+            
+            <example name="intransitive">
+                <inflection aspect="progressive" form="participle" person="ns" tense="present" voice="active"/>
+                <text>
+                    But Akzo is still slimming down : It recently announced plans [*] to eliminate about 1,700 fiber-related jobs in the Netherlands and West Germany .
+                </text>
+                <arg f="DIS" n="M">But</arg>
+                <arg n="1">Akzo</arg>
+                <arg f="TMP" n="M">still</arg>
+                <rel>[ slimming] [ down]</rel>
+            </example>
+            
+            
+            
+        </roleset>
+        <note>
+            frame created by Olga
+        </note>
+    </predicate>
+    
+</frameset>

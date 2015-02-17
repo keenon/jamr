@@ -1,0 +1,46 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="cock">
+        <note>
+            Frames file for 'cock' based on sentences in brown.
+        </note>
+        
+        <roleset id="cock.01" vncls="40.3.2" name="set at an angle">
+            <roles>
+                <role n="0"  descr="setter at angle">
+                    <vnrole vncls="40.3.2" vntheta="Agent"/>
+                </role>
+                <role n="1"  descr="angled thing">
+                    <vnrole vncls="40.3.2" vntheta="Patient"/>
+                </role>
+            </roles>
+            
+            <example name="cocked cap">
+                <inflection person="ns" tense="past" aspect="ns" voice="active" form="full"/>
+                <text>
+                    He, too, cocked his cap at a jaunty angle, jingled marbles in
+                    his pocket, and swaggered down Main Street. 
+                </text>
+                <arg n="0"        >He</arg>
+                <arg n="m" f="DIS">too</arg>
+                <rel              >cocked</rel>
+                <arg n="1"        >his cap</arg>
+                <arg n="m" f="MNR">at a jaunty angle</arg>
+            </example>
+            
+            <example name="cocked head">
+                <inflection person="ns" tense="past" aspect="ns" voice="active" form="full"/>
+                <text>
+                    He stood up, cocked his head and eyed Gun coldly.
+                </text>
+                <arg n="0"        >He</arg>
+                <rel              >cocked</rel>
+                <arg n="1"        >his head</arg>
+            </example>
+            
+            <note>
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

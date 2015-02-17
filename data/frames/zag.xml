@@ -1,0 +1,30 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="zag">
+        <note>
+            Frames file for 'zag' based on sentences in brown.
+        </note>
+        
+        <roleset id="zag.01" vncls="51.3.2" name="(cause to) move in \/\/\/ fashion">
+            <roles>
+                <role n="0"  descr="cause of zagging">
+                    <vnrole vncls="51.3.2" vntheta="Agent"/>
+                </role>
+                <role n="1"  descr="entity in motion">
+                    <vnrole vncls="51.3.2" vntheta="Theme"/>
+                </role>
+            </roles>
+            
+            <example name="I'll zag">
+                <text>
+                    It's been zigging and zagging between green and red.
+                </text>
+                <arg n="1">It's</arg>
+                <rel>zagging</rel>
+                <arg f="DIR" n="M">between green and red</arg>
+                
+            </example>
+            <note>frame by Perryn</note>
+        </roleset>
+    </predicate>
+</frameset>

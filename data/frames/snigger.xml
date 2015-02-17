@@ -1,0 +1,61 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="snigger">
+        <note>
+            Frames file for 'snigger' based on frames file for 'snicker'.
+        </note>
+        
+        <roleset id="snigger.01" vncls="40.2" name="laugh in a covert manner">
+            <roles>
+                <role descr="snickerer" n="0">
+                    <vnrole vncls="40.2" vntheta="Agent"/>
+                </role>
+                
+                <role descr="cognate object" n="1">
+                    <vnrole vncls="40.2" vntheta="Theme"/>
+                </role>
+                
+                <role descr="source of amusement" n="2">
+                    <vnrole vncls="40.2" vntheta="Recipient"/>
+                </role>
+                
+                <role descr="end state of Arg0, result of snickering" n="3"/>
+            </roles>
+            
+            
+            <example name="intransitive (-)">
+                <inflection person="ns" tense="ns" aspect="ns" voice="ns" form="ns"/>
+                <text>
+                    It spread to most of the audience and was often viewed [*-2] by visiting
+                    whites who [*T*-1] sniggered behind handkerchief and afterward discussed Negro
+                    religion .
+                </text>
+                <rel>sniggered</rel>
+                <arg n="0">[*T*-1]</arg>
+                <arg n="M" f="RCL">who -&gt;  visiting whites</arg>
+                <arg n="M" f="LOC">behind handkerchief</arg>
+            </example>
+            
+            
+            <example name="with source (-)">
+                <inflection person="ns" tense="ns" aspect="ns" voice="ns" form="ns"/>
+                <text>
+                    L'Unita and Hoy published identical denunciations of Short 's elevation ,
+                    l'Osservatore Romano and the Christian Science Monitor ignored it , Times of
+                    India snickered at it , and the Manchester Guardian simply reported it -- the
+                    Fosterites in England were few but extremely militant .
+                </text>
+                <rel>snickered</rel>
+                <arg n="2">at it</arg>
+                <arg n="0">Times of India</arg>
+            </example>
+            
+            <note>
+                Framed by Kev
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>
+
+

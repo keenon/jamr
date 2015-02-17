@@ -1,0 +1,46 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="tarry">
+        <note>
+            Frames file for 'tarry' based on frame for "dawdle".  Verbnet entry 53.1.
+        </note>
+        
+        <roleset id="tarry.01" vncls="53.1" name="not be prompt">
+            <roles>
+                <role n="0"  descr="one who tarries">
+                    <vnrole vncls="53.1"
+  vntheta="Agent"/>
+                </role>
+                <role n="1"  descr="thing tarried over">
+                    <vnrole vncls="53.1" vntheta="Theme"/>
+                </role>
+            </roles>
+            
+            <example name="Biblical">
+                <text>
+                    He doubtless tarried over those psalms messianic in character for years.
+                </text>
+                <arg n="0">He</arg>
+                <arg n="m" f="DIS">doubtless</arg>
+                <rel>tarried</rel>
+                <arg n="1">over those psalms messianic in character</arg>
+                <arg n="m" f="TMP">for years</arg>
+            </example>
+            
+            <example name="Intransitive">
+                <text>
+                    Gus tarried in Baltimore while on his way to Washington.
+                </text>
+                <arg n="0"        >Gus</arg>
+                <rel              >tarried</rel>
+                <arg n="m" f="LOC">in Baltimore</arg>
+                <arg n="m" f="TMP">while on his way to Washington</arg>
+            </example>
+            
+            <note>
+                Added by Kevin
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

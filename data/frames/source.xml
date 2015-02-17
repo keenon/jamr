@@ -1,0 +1,73 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="source">
+        <note>
+            Frames for 'source' based on ectb2.
+            No Verbnet entry. Comparison to 'obtain' (VN 13.5.2-1) 
+            and 'provide' (VN 13.4.1).
+        </note>
+        <roleset id="source.01" name="obtain or use" vncls="-">
+            <roles>
+                <role descr="obtainer" n="0">
+                    <vnrole vncls="13.5.2-1" vntheta="Agent"/>
+                </role>
+                <role descr="thing obtained" n="1">
+                    <vnrole vncls="13.5.2-1" vntheta="Theme"/>
+                </role>
+                <role descr="source" n="2">
+                    <vnrole vncls="13.5.2-1" vntheta="Source"/>
+                </role>
+            </roles>
+            
+            <example name="infinitive">
+                <text>
+                    ... they-2 continued *-2 to source raw materials and semi-finished
+                    goods from Taiwan.
+                </text>
+                <arg n="0">*-1</arg>
+                <rel>source</rel>
+                <arg n="1">raw materials and semi-finished goods</arg>
+                <arg n="2">from Taiwan</arg>
+            </example>
+            <example name="adjectival">
+                <text>
+                    foreign-sourced news
+                </text>
+                <rel>sourced</rel>
+                <arg n="2">foreign</arg>
+                <arg n="1">news</arg>
+            </example>
+            
+            <note> Frame created by Jena</note>
+        </roleset>
+        
+        <roleset id="source.02" name="provide, be a source of" vncls="-">
+            <roles>
+                <role descr="provider" n="0">
+                    <vnrole vncls="13.4.1" vntheta="Agent"/>
+                </role>
+                
+                <role descr="thing provided" n="1">
+                    <vnrole vncls="13.4.1" vntheta="Theme"/>
+                </role>
+                
+                <role descr="entity provided for (benefactive)" n="2">
+                    <vnrole vncls="13.4.1" vntheta="Recipient"/>
+                </role>
+            </roles>
+            
+            
+            <example name="straight transitive">
+                <text>
+                    The company sources virtually of the necessary raw materials and parts
+                    on the mainland.
+                </text>
+                <arg n="0">The company</arg>
+                <rel>sources</rel>
+                <arg n="1">virtually all of the necessary raw materials and parts</arg>
+                <arg f="LOC" n="2">on the mainland</arg>
+            </example>
+            <note> Frame created by Jena</note>
+        </roleset>
+    </predicate>
+</frameset>

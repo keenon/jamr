@@ -1,0 +1,79 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="gouge">
+        <note>
+            Frames file for 'gouge' based on sentences in brown.
+        </note>
+        
+        <roleset id="gouge.01" vncls="21.2-1" name="put deep grooves or scratches
+into a surface">
+            <roles>
+                <role n="0"  descr="causer of gouges">
+                    <vnrole vncls="21.2-1" vntheta="Agent"/>
+                </role>
+                <role n="1"  descr="surface">
+                    <vnrole vncls="21.2-1" vntheta="Patient"/>
+                </role>
+            </roles>
+            
+            <example name="adessive">
+                <inflection person="ns" tense="ns" aspect="progressive" voice="active" form="participle"/>
+                <text>
+                    What had he thought of, to go to John, grovel and beg
+                    understanding? To confess with a canvas chair as a prie-dieu, [*-2]
+                    gouging at his heart until a rough and stupid hand bade him rise and
+                    go? 
+                </text>
+                <arg n="0"        >[*-2]</arg>
+                <rel              >gouging</rel>
+                <arg n="1">at his heart</arg>
+                <arg n="m" f="TMP">until a rough and stupid hand bade him rise and go</arg>
+            </example>
+            
+            <example name="more commonly transitive">
+                <inflection person="ns" tense="past" aspect="ns" voice="active" form="full"/>
+                <text>
+                    Quickly but carefully lowering my duffel bag over the low
+                    side-rack, I stepped on the running board; it flopped down, sprang
+                    back up and gouged my shin. 
+                </text>
+                <arg n="0"        >it</arg>
+                <rel              >gouged</rel>
+                <arg n="1"        >my shin</arg>
+            </example>
+            
+            <note>
+            </note>
+            
+        </roleset>
+        
+        <roleset id="gouge.02" vncls="-" name="extort money, swindle">
+            <roles>
+                <role n="0"  descr="petty crook"/>
+                <role n="1"  descr="money"/>
+                <role n="2"  descr="source"/>
+            </roles>
+            
+            <example name="the one example">
+                <inflection person="ns" tense="past" aspect="ns" voice="active" form="full"/>
+                <text>
+                    There I was, a retired wobbly and structural iron worker who
+                    [*T*-1] 'd never gouged a cent off a fellow worker in my thirty years
+                    in the movement. 
+                </text>
+                <arg n="0"        >[*T*-1]</arg>
+                <arg n="M" f="RCL">who -&gt; a retired wobbly and structural
+                    iron worker
+                </arg>
+                <rel              >gouged</rel>
+                <arg n="1"        >a cent</arg>
+                <arg n="2">off a fellow worker</arg>
+                <arg n="m" f="TMP">in my thirty years in the movement</arg>
+            </example>
+            
+            <note>
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

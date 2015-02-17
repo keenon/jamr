@@ -1,0 +1,53 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="gnaw">
+        <note>
+            Frames file for 'gnaw' based on sentences in brown.
+        </note>
+        
+        <roleset id="gnaw.01" vncls="39.2-1" name="bite, chew on">
+            <roles>
+                <role n="0"  descr="gnawer">
+                    <vnrole vncls="39.2-1" vntheta="Agent"/>
+                </role>
+                <role n="1"  descr="thing chewed">
+                    <vnrole vncls="39.2-1" vntheta="Patient"/>
+                </role>
+            </roles>
+            
+            <example name="with PP">
+                <inflection person="ns" tense="ns" aspect="ns" voice="ns" form="ns"/>
+                <text>
+                    Clumps of brush that they passed [*T*-2] were [so many enchained demons]-1 straining in anger [*]-1 to tear [*RNR*-1] and gnaw on [*RNR*-1] [his bones]-1 .
+                </text>
+                <arg n="0">[*]</arg>
+                <rel>gnaw</rel>
+                <arg n="1">on [*RNR*-1]</arg>
+            </example>
+        </roleset>
+        
+        
+        <roleset id="gnaw.02" vncls="39.2-1" name="to cause persistent worry or pain">
+            <roles>
+                <role n="0"  descr="causer">
+                    <vnrole vncls="39.2-1" vntheta="Agent"/>
+                </role>
+                <role n="1"  descr="gnawed at">
+                    <vnrole vncls="39.2-1" vntheta="Patient"/>
+                </role>
+            </roles>
+            
+            
+            <example name="gnaw at">
+                <inflection person="ns" tense="ns" aspect="ns" voice="ns" form="ns"/>
+                <text>
+                    Day by day , week by week , month by month , the betrayal gnawed at Andrei 's heart .
+                </text>
+                <arg n="1">the betrayal</arg>
+                <rel>gnawed</rel>
+                <arg n="2">at Andrei 's heart</arg>
+            </example>
+            
+        </roleset>
+    </predicate>
+</frameset>

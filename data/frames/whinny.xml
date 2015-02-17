@@ -1,0 +1,28 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="whinny">
+        <note>
+            Frames file for 'whinny' based on dictionary.com. Verbnet entry 38.
+        </note>
+        
+        <roleset id="whinny.01" name="the characteristic sound of a horse; neigh" vncls="38">
+            <roles>
+                
+                <role descr="whinny-er" n="0">
+                    <vnrole vncls="38" vntheta="Agent"/>
+                </role>
+                
+            </roles>
+            
+            <example name="Mr. Ed">
+                <text>
+                    Mr. Ed whinnied to clear his throat.
+                </text>
+                <arg n="0">Mr. Ed</arg>
+                <rel>whinnied</rel>
+                
+            </example>
+        </roleset>
+        <note>frame by Perryn</note>
+    </predicate>
+</frameset>

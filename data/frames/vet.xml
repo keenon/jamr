@@ -1,0 +1,35 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="vet">
+        <note>
+            Frames file for 'vet' based on sentences in ebc.  No Verbnet entry.
+            Comparison to 'investigate' and 'examine'.
+        </note>
+        
+        <roleset id="vet.01" name="examine closely" vncls="">
+            <roles>
+                <role descr="examiner" n="0"/>
+                <role descr="examined" n="1"/>
+                <role descr="examined for" n="2"/>
+            </roles>
+            
+            <example name="">
+                
+                <text>
+                    For the -- for the vetting procedure we have now established a uh h
+                    procedure uh [0]-1 *T*-1 to scrutinize *RNR*-2 and meticulously vet *RNR*-2
+                    [our uh intellegence agencies ' uh recruits]-2.
+                </text>
+                <arg n="0">*T*-1</arg>
+                <arg n="m" f="MNR">meticulously</arg>
+                <rel>vet</rel>
+                <arg n="1">*RNR*-2</arg>
+            </example>
+            
+            <note>
+                Frame created by Arrick
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

@@ -1,0 +1,42 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="avail">
+        <note>
+            Frames file for 'avail' based on sentences in brown.
+        </note>
+        
+        <roleset id="avail.01" vncls="-" name="provide, often 'take advantage of'">
+            <roles>
+                <role n="0"  descr="one providing, taking advantage"/>
+                <role n="1"  descr="recipient, often reflexive pronoun"/>
+                <role n="2"  descr="thing provided, taken advantage of"/>
+            </roles>
+            
+            <example name="typical usage">
+                <inflection person="ns" tense="present" aspect="progressive" voice="active" form="participle"/>
+                <text>
+                    I'm not giving you a chance, Bill, but availing myself of your
+                    generous offer of assistance. 
+                </text>
+                <arg n="0"        >I</arg>
+                <rel              >availing</rel>
+                <arg n="1" f="REC">myself</arg>
+                <arg n="2">of your generous offer of assistance</arg>
+            </example>
+            
+            <example name="without reflexive">
+                <inflection person="ns" tense="future" aspect="ns" voice="active" form="full"/>
+                <text>
+                    Furthermore -- and this, to me, strikes an especially warming note --
+                    it shall avail the vandals naught [*] to throw away or dispose of
+                    their loot. 
+                </text>
+                <rel              >avail</rel>
+                <arg n="2"        >the vandals</arg>
+                <arg n="1"        >naught</arg>
+                <arg n="0"        >[*] to throw away or dispose of their loot</arg>
+            </example>
+            
+        </roleset>
+    </predicate>
+</frameset>

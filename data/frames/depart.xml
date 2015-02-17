@@ -1,0 +1,48 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="depart">
+        
+        
+        <roleset framnet="" id="depart.01" name="to go away, leave" vncls="51.1-1">
+            <roles>
+                <role descr="entity leaving, agent" f="" n="0">
+                    <vnrole vncls="51.1-1" vntheta="theme"/>
+                </role>
+                <role descr="departed from" f="" n="1">
+                    <vnrole vncls="51.1-1" vntheta="location"/>
+                </role>
+                <note/>
+                <role descr="departed for, destination" f="" n="2"/>
+            </roles>
+            
+            
+            <example name="both arguments" src="both arguments" type="both arguments">
+                <inflection aspect="ns" form="participle" person="ns" tense="ns" voice="active"/>
+                <text>[*-1] Departing from decades of Soviet dogma , [the new system]-1 would lead to big differences in pay between workers and almost certainly to unemployment .</text>
+                <rel f="">Departing</rel>
+                <arg f="" n="1">from decades of Soviet dogma</arg>
+                <arg f="" n="0">[*-1]</arg>
+                <note/>
+            </example>
+            
+            
+            <note/>
+            <example name="With destination" src="With destination" type="With destination">
+                <inflection aspect="ns" form="ns" person="ns" tense="ns" voice="ns"/>
+                <text>[He]-1's moved on since his acquittal, like Gary Glitter did after his 1999 conviction, *PRO*-1 having departed last June for a Bahrain "vacation" from which he's yet to emerge.</text>
+                <note/>
+                <arg f="" n="0">*PRO*-1</arg>
+                <rel f="">departed</rel>
+                <arg f="tmp" n="m">last June</arg>
+                <arg f="" n="2">for a Bahrain "vacation" from which he's yet to emerge</arg>
+            </example>
+        </roleset>
+        <note>Frames file for 'depart' based on survey of sentences in the WSJ
+            corpus.
+        </note>
+    </predicate>
+    
+    
+    
+    <note>frames created by Olga</note>
+</frameset>

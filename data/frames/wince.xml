@@ -1,0 +1,39 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="wince">
+        <note>
+            Frames file for 'wince' based on sentences in brown.
+        </note>
+        
+        <roleset id="wince.01" vncls="-" name="To shrink or start involuntarily, as in pain or distress">
+            <roles>
+                <role n="0"  descr="wincer"/>
+                <role n="1"  descr="prepositional arg"/>
+            </roles>
+            
+            <example name="basic">
+                <inflection person="ns" tense="past" aspect="ns" voice="active" form="full"/>
+                <text>
+                    The fat man winced.
+                </text>
+                <arg n="0"        >the fat man</arg>
+                <rel              >winced</rel>
+            </example>
+            
+            <example name="often with 'in' phrase">
+                <inflection person="ns" tense="ns" aspect="progressive" voice="active" form="participle"/>
+                <text>
+                    ``In dull domestic radiance I watch [her staring face]-1, still blind, /
+                    Start [*-1] wincing in obedience /  To dirty waters, counters, pots
+                    and pans, / Waiting below stairs, in her mind''.  
+                </text>
+                <arg n="0"        >[*-1]</arg>
+                <rel              >wincing</rel>
+                <arg n="1">in obedience / To dirty waters, counters, pots and
+                    pans, / Waiting below stairs, in her mind
+                </arg>
+            </example>
+            
+        </roleset>
+    </predicate>
+</frameset>

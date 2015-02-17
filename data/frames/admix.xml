@@ -1,0 +1,35 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="admix">
+        <note>
+            Frames file for 'admix' based on dictionary.com. Verbnet entry 22.1.
+        </note>
+        
+        <roleset id="admix.01" name="to mingle or add to something else" vncls="22.1-1">
+            <roles>
+                <role descr="agent, mixer" n="0">
+                    <vnrole vncls="22.1-1" vntheta="Agent"/>
+                </role>
+                <role descr="ingredient one" n="1">
+                    <vnrole vncls="22.1-1" vntheta="Patient1"/>
+                </role>
+                <role descr="ingredient two" n="2">
+                    <vnrole vncls="22.1-1" vntheta="Patient2"/>
+                </role>
+                <role descr="end product" n="3"/>
+            </roles>
+            
+            <example name="cooking">
+                <text>
+                    Mary admixed some parsley to John's stew.
+                </text>
+                <arg n="0">Mary</arg>
+                <rel>admixed</rel>
+                <arg n="1">some parsley</arg>
+                <arg n="2">John's stew</arg>
+                
+            </example>
+        </roleset>
+        <note>frame by Perryn</note>
+    </predicate>
+</frameset>

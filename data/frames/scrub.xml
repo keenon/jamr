@@ -1,0 +1,81 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="scrub">
+        <note>
+            Frames file for 'scrub' based on sentences in brown.
+        </note>
+        
+        <roleset id="scrub.01" vncls="-" name="clean with some difficulty">
+            <roles>
+                <role n="0"  descr="cleaner, scrubber"/>
+                <role n="1"  descr="was dirty, now clean"/>
+            </roles>
+            
+            <example name="object drop">
+                <inflection person="ns" tense="ns" aspect="ns" voice="active" form="infinitive"/>
+                <text>
+                    They-1 love [*-1] to dust, scrub, polish, wax floors, move the
+                    furniture around from place to place, take down the curtains, put up
+                    new ones and have themselves a real ball. 
+                </text>
+                <arg n="0"        >[*-1]</arg>
+                <rel              >scrub</rel>
+            </example>
+            
+            <example name="more often transitive">
+                <inflection person="ns" tense="present" aspect="ns" voice="active" form="full"/>
+                <text>
+                    [*] Scrub the studio once a week.
+                </text>
+                <arg n="0"        >[*]</arg>
+                <rel              >Scrub</rel>
+                <arg n="1"        >the studio</arg>
+                <arg n="m" f="TMP">once a week</arg>
+            </example>
+            
+            <example name="adessive">
+                <inflection person="ns" tense="past" aspect="ns" voice="active" form="full"/>
+                <text>
+                    He scrubbed absent-mindedly at the pans and reflected on how
+                    things had turned out. 
+                </text>
+                <arg n="0"        >He</arg>
+                <rel              >scrubbed</rel>
+                <arg n="m" f="MNR">absent-mindedly</arg>
+                <arg n="1">at the pans</arg>
+            </example>
+            
+            <note>
+            </note>
+            
+        </roleset>
+    </predicate>
+    
+    <predicate lemma="scrub_up">
+        
+        <roleset id="scrub.02" vncls="-" name="achieve cleanliness, with difficulty">
+            <roles>
+                <role n="0"  descr="scrubber"/>
+                <role n="1"  descr="was dirty, now clean"/>
+            </roles>
+            
+            <example name="I don't think this is good English">
+                <inflection person="ns" tense="ns" aspect="ns" voice="active" form="full"/>
+                <text>
+                    Soon as the Burnsides moved on, he'd lead Rex down by the
+                    river; there he could shave and scrub himself up for the evening. 
+                </text>
+                <arg n="m" f="LOC">there</arg>
+                <arg n="0"        >he</arg>
+                <arg n="m" f="MOD">could</arg>
+                <rel              >[scrub][up]</rel>
+                <arg n="1" f="REC">himself</arg>
+                <arg n="m" f="PNC">for the evening</arg>
+            </example>
+            
+            <note>
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

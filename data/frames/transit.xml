@@ -1,0 +1,29 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="transit">
+        <note>
+            Frames file for 'transit' based on ebn instances.
+        </note>
+        
+        <roleset id="transit.01" name="travel" vncls="48.3">
+            <roles>
+                <role descr="thing passing" n="1">
+                    <vnrole vncls="48.3" vntheta="Theme"/>
+                </role>
+            </roles>
+            
+            <example name="travel through">
+                <text>
+                    No US hips have transited through the canal since before the October 12th
+                    attack on the US estroyer Cole in Aden.
+                </text>
+                <arg n="1">no US ships</arg>
+                <rel>transited</rel>
+                <arg f="DIR" n="M">since before the October 12th attack on the US
+                    destroyer Cole in Aden
+                </arg>
+            </example>
+        </roleset>
+        <note>Frame by Perryn</note>
+    </predicate>
+</frameset>

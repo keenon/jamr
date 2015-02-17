@@ -1,0 +1,43 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="correlate">
+        <note>
+            Frames file for 'correlate' based on sentences in ULA written.  Verbnet
+            entries 22.2-2-1 and 86.1. Comparison with 'alternate.'
+        </note>
+        <roleset id="correlate.01" name="to be mutually related" vncls="22.2 86.1">
+            <roles>
+                <role descr="causer of relation" n="0">
+                    <vnrole vncls="22.2" vntheta="Agent"/>
+                    <vnrole vncls="86.1" vntheta="Agent"/>
+                </role>
+                <role descr="topic, first entity in relation" n="1">
+                    <vnrole vncls="22.2" vntheta="Patient1"/>
+                    <vnrole vncls="86.1" vntheta="Theme1"/>
+                </role>
+                <role descr="with what? second entity in relation" n="2">
+                    <vnrole vncls="22.2" vntheta="Patient2"/>
+                    <vnrole vncls="86.1" vntheta="Theme2"/>
+                </role>
+            </roles>
+            
+            <example name="Linguist Favorite: sign and signified">
+                <text>
+                    In this restricted sense, signs-1 are causally correlated *-1 with that
+                    which is signified.
+                </text>
+                <arg n="M" f="MNR">In this restricted sense</arg>
+                <arg n="M" f="MNR">causally</arg>
+                <rel>correlated</rel>
+                <arg n="1">*-1</arg>
+                <arg n="2">with that which is signified</arg> 
+            </example>
+            
+            
+            <note>
+                Frame created by Claire
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

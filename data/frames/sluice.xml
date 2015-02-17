@@ -1,0 +1,65 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="sluice down">
+        <note>
+            Frames file for 'sluice' based on sentences in BROWN.
+            No VN entry.
+        </note>
+        
+        <roleset id="sluice.01" name="clean as if by using a sluice" vncls="">
+            <roles>
+                <role descr="sluicer" n="0"/>
+                
+                <role descr="thing sluiced, location" n="1"/>
+            </roles>
+            
+            <example name="transitive">
+                <text>
+                    `` So that 's sculpture '' , commented [*T*-1] Argiento wryly , when he had
+                    sluiced down the floor for a week [*T*-2] , `` [*] making mud pies '' .
+                </text>
+                <rel>[ sluiced] [ down]</rel>
+                <arg n="0">he</arg>
+                <arg n="1">the floor</arg>
+                <arg n="M" f="TMP">for a week</arg>
+                <arg n="M" f="TMP">[*T*-2]</arg>
+                <arg n="M" f="RCL">when</arg>
+            </example>
+            
+        </roleset>
+        
+        <roleset id="sluice.02" name="flow as if a sluice has opened" vncls="">
+            <roles>
+                <role descr="substance" n="1"/>
+            </roles>
+            
+            
+            <example name="unaccusative">
+                <text>
+                    And then came the water -- not rain , but solid sheets that [*T*-1] sluiced
+                    down like water slopping from a bucket .
+                </text>
+                <rel>[ sluiced] [ down]</rel>
+                <arg n="M" f="MNR">like water slopping from a bucket</arg>
+                <arg n="1">[*T*-1]</arg>
+                <arg n="M" f="RCL">that -&gt;  solid sheets</arg>
+            </example>
+            
+            <note>
+                Framed by Neville.
+            </note>
+            
+        </roleset>
+        
+    </predicate>
+</frameset>
+
+
+
+
+
+
+
+
+
+

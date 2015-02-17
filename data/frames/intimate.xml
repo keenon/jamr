@@ -1,0 +1,50 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="intimate">
+        <note>
+            Frames file for 'intimate' based on sentences in wsj.  No Verbnet entry.
+        </note>
+        
+        <roleset id="intimate.01" name="suggest subtly" vncls="37.7">
+            <roles>
+                <role descr="suggester" n="0">
+                    <vnrole vncls="37.7" vntheta="Agent"/>
+                </role>
+                <role descr="suggestion" n="1">
+                    <vnrole vncls="37.7" vntheta="Topic"/>
+                </role>
+                <role descr="hearer" n="2">
+                    <vnrole vncls="37.7" vntheta="Recipient"/>
+                </role>
+            </roles>
+            
+            <example name="no hearer">
+                <inflection aspect="ns" form="full" person="ns" tense="present" voice="active"/>
+                <text>
+                    Let me immediately put limits to whatever nostalgic notions that
+                    may intimate [*T*-1]. 
+                </text>
+                <arg n="0">that</arg>
+                <arg f="MOD" n="M">may</arg>
+                <rel>intimate</rel>
+                <arg n="1">[*T*-1]</arg>
+                <arg n="M" f="RCL">that -&gt; whatever nostalgic notions</arg>
+            </example>
+            
+            <example name="with hearer">
+                <inflection aspect="ns" form="full" person="ns" tense="past" voice="active"/>
+                <text>
+                    John intimated to Mary something that made her blush furiously.
+                </text>
+                <arg n="0">John</arg>
+                <rel>intimated</rel>
+                <arg n="2">to Mary</arg>
+                <arg n="1">something that made her blush furiously</arg>
+            </example>
+            
+            <note>
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

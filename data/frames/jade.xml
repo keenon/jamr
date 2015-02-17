@@ -1,0 +1,38 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="jade">
+        <note>
+            Frames file for 'jade' based on internet usage examples, expansion via
+            VN.  Verbnet entries 31.1.  Comparison with 'weary.' 
+        </note>
+        
+        <roleset id="jade.01" name="(make) become tired, weary of something"
+ vncls="31.1">
+            <roles>
+                <role descr="causer of jadedness" n="0">
+                    <vnrole vncls="31.1" vntheta="Cause"/>
+                </role>
+                <role descr="jaded entity" n="1">
+                    <vnrole vncls="31.1" vntheta="Experiencer"/>
+                </role>
+                <role descr="Instrument or Manner if separate from arg 0" n="2"/>
+            </roles>
+            
+            <example name="Basic Transitive">
+                <text>
+                    John proposed to Mary, but she-1 was jaded *-1 by many failed
+                    relationships.
+                </text>
+                <rel>jaded</rel>
+                <arg n="1">*-1</arg>
+                <arg n="0">by many failed relationships</arg>
+            </example>
+            
+        </roleset>
+    </predicate>
+    
+    <note>
+        Frame by Claire
+    </note>
+    
+</frameset>

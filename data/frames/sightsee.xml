@@ -1,0 +1,48 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="sightsee">
+        <note>
+            Frames file for 'sightsee' based on sentences in ECTB.
+            No VN comparison.
+        </note>
+        
+        <roleset id="sightsee.01" name="travel about looking at sights of interest" vncls="">
+            <roles>
+                <role descr="wanderer" n="0"/>
+            </roles>
+            
+            
+            
+            <example name="instransitive">
+                <text>
+                    [*-16] Aiming at the development requirements of the Gansu tourism industry ,
+                    People 's Insurance Co. actively promotes travel insurance for overseas tourists , and took the lead
+                    [*ICH*-17] at home in [*] providing insurance for individual overseas tourists , which [*T*-18] made [*] sure
+                    that all those who [*T*-19] came sightseeing in Gansu Province during the " eighth five - year plan " period
+                    had insurance .
+                </text>
+                <rel>sightseeing</rel>
+                <arg n="M" f="LOC">in Gansu Province</arg>
+                <arg n="M" f="TMP">during the " eighth five - year plan " period</arg>
+                <arg n="0">[*T*-19]</arg>
+                <arg n="M" f="RCL">who -&gt;  all those</arg>
+            </example>
+            
+            
+            <note>
+                Framed by Neville.
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>
+
+
+
+
+
+
+
+
+
+

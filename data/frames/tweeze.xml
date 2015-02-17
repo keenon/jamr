@@ -1,0 +1,32 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="tweeze">
+        <note>
+            Frames file for 'tweeze' based on a survey of sentences in my brain.
+        </note>
+        
+        
+        <roleset id="tweeze.01" name="to capture, obtain" vncls="10.5 13.5.2 15.1-1">
+            <roles>
+                <role descr="one doing the tweezing" n="0"></role>
+                <role descr="thing(s) tweezed" n="1"></role>
+                <role descr="instrument, tweezed with (unlikely)" n="2"></role>
+            </roles>
+            
+            <example name="ouch!">
+                <text>
+                    Sal tweezed all his nose hairs in under five minutes.
+                </text>
+                <arg n="0">Sal</arg>
+                <rel>tweezed</rel>
+                <arg n="1">all his nose hairs</arg>
+                <arg f="TMP" n="M">in under five minutes</arg>
+            </example>
+        </roleset>
+    </predicate>
+    
+    <note>
+        frame created by Kev
+    </note>
+    
+</frameset>

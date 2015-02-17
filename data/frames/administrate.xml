@@ -1,0 +1,46 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="administrate">
+        <note>
+            Frames file for 'administrate' based on sentences in ECTB.
+            No VN entry.
+        </note>
+        
+        <roleset id="administrate.01" name="manage" vncls="">
+            <roles>
+                <role descr="agent, manager" n="0"/>
+                
+                <role descr="theme, process/thing being managed" n="1"/>
+            </roles>
+            
+            
+            <example name="arb control, no object">
+                <inflection person="ns" tense="ns" aspect="ns" voice="ns" form="ns"/>
+                <text>
+                    [The foreign investment management departments and justice
+                    organizations]-1 insist on *trace*-1 administrating according to law and handling cases according to law , so that they have effectively
+                    protected rights and interests of each party .
+                </text>
+                <rel>administrating</rel>
+                <arg n="0">*trace*-1</arg>
+                <arg n="M" f="MNR">according to law</arg>
+            </example>
+            
+            
+            <note>
+                Framed by Neville.
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>
+
+
+
+
+
+
+
+
+
+

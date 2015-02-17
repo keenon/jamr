@@ -1,0 +1,51 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="crystalize">
+        <note>
+            Frames file for 'crystalize' based on frame file for 'activate'.  Verbnet
+            class 45.4, other members include activate, age, balance, blur, darken,
+            hasten, laminate, magnetize, revive, ripen, sicken, stabilize, sour,
+            tilt, unwind, whiten.
+        </note>
+        
+        <roleset id="crystallize.01" name="bring together, solidfy (physically or metaphorically)" vncls="45.4">
+            <roles>
+                <role descr="agent" n="0">
+                    <vnrole vncls="45.4" vntheta="Agent"/>
+                </role>
+                <role descr="patient" n="1">
+                    <vnrole vncls="45.4" vntheta="Patient"/>
+                </role>
+                <role descr="source" n="2"/>
+            </roles>
+            
+            <example name="crystallize">
+                <text>
+                    Since [the company] has [*]-9 got the crystallize the inverstors ' and
+                    staff 's talents and energies, its vision for the future has * to be attainable.
+                </text>
+                <arg n="1">[*]-9</arg>
+                <rel>crystallize</rel>
+                <arg n="1">the investors ' and staff 's talents and energies.</arg>
+            </example>
+            
+            <example name="with source">
+                <text>
+                    In September of last year two ideas for programs crystallized out of the
+                    journalistic blood of her heart.
+                </text>
+                <arg n="m" f="TMP">In September of last year</arg>
+                <arg n="1">two ideas for programs</arg>
+                <rel>crystallized</rel>
+                <arg n="2">out of the journalistic blood of her heart.</arg>
+            </example>
+            
+            
+            
+            <note>
+                Frame file created by Arrick
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

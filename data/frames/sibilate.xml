@@ -1,0 +1,19 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    
+    <predicate lemma="sibilate">
+        
+        <roleset framnet="" id="sibilate.01" name="Utter a sibilant or hissing sound." vncls="">
+            <roles>
+                <role descr="Speaker" f="" n="0"/>
+                
+                <role descr="sibilated sound" f="" n="1"/>
+                <note/>
+            </roles>
+            
+            <note>Roleset based on internet search. Added due to parallel expansion of verbnet, propbank, and sense groupings. No verbnet class. No framenet mappings. Framed by Katie.</note>
+        </roleset>
+        <note/>
+    </predicate>
+    <note/>
+</frameset>

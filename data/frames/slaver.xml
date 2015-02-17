@@ -1,0 +1,29 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="slaver">
+        <note>
+            Frames file for 'slaver' based on sentences in brown corpus. No VerbNet entry.
+        </note>
+        
+        <roleset id="slaver.01" vncls="" name="slobber">
+            <roles>
+                <role descr="slobberer" n="0"/>
+            </roles>
+            
+            <example name="intransitive">
+                <inflection person="ns" tense="ns" aspect="ns" voice="ns" form="ns"/>
+                <text>
+                    He gloated , and his lips slavered .
+                </text>
+                <rel>slavered</rel>
+                <arg n="0">his lips</arg>
+            </example>
+            
+            
+            <note>
+                Framed by Neville.
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

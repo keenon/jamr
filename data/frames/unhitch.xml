@@ -1,0 +1,32 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="unhitch">
+        <note>
+            Frames file for 'unhitch' based on sentences in brown.
+        </note>
+        
+        <roleset id="unhitch.01" vncls="-" name="unfasten">
+            <roles>
+                <role n="0"  descr="causer of unfastening"/>
+                <role n="1"  descr="horse (or whatever)"/>
+                <role n="2"  descr="location of former hitching"/>
+            </roles>
+            
+            <example name="transitive from source">
+                <inflection person="ns" tense="ns" aspect="ns" voice="ns" form="ns"/>
+                <text>
+                    Billie had unhitched the mules from both Tom Brannon 's and his father 's wagon .
+                </text>
+                <arg n="0">Billie</arg>
+                <rel>unhitched</rel>
+                <arg n="1">the mules</arg>
+                <arg n="2">from both Tom Brannon 's and his father 's wagon</arg>
+            </example>
+            
+            
+            <note>
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

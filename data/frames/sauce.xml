@@ -1,0 +1,47 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <note/>
+    <predicate lemma="sauce">
+        <note/>
+        <roleset framnet="" id="sauce.01" name="Add zest to" vncls="">
+            <roles>
+                <role descr="Chef" f="" n="0"/>
+                <note>This does not apply solely to food.</note>
+                <role descr="Base food" f="" n="1"/>
+                <role descr="Sauce or topping" f="" n="2"/>
+            </roles>
+            <note>Roleset based on internet search. Added due to parallel expansion of verbnet, propbank, and sense groupings. Verbnet class fill-9.8. No framenet class. Framed by Katie.</note>
+            <example name="Example without arg 0" src="Example without arg 0" type="Example without arg 0">
+                <inflection aspect="ns" form="ns" person="ns" tense="ns" voice="ns"/>
+                <text>Cook for the longer time if the pasta is to be sauced and eaten immediately.</text>
+                <note/>
+                <arg f="" n="1">pasta</arg>
+                <rel f="">sauced</rel>
+            </example>
+            <example name="Example with both arg 1 and 2" src="Example with both arg 1 and 2" type="Example with both arg 1 and 2">
+                <inflection aspect="ns" form="ns" person="ns" tense="ns" voice="ns"/>
+                <text>Thin, tender ravioli was sauced in a delicate cream flecked with lemon zest.</text>
+                <note/>
+                <arg f="" n="1">Thin, tender ravioli</arg>
+                <rel f="">sauced</rel>
+                <arg f="" n="2">in a delicate cream flecked with lemon zest.</arg>
+            </example>
+        </roleset>
+        <roleset framnet="" id="sauce.02" name="" vncls="">
+            <roles>
+                <role descr="Impudent one" f="" n="0"/>
+                <note/>
+                <role descr="recipient of impudence" f="" n="1"/>
+            </roles>
+            <note>Roleset based on internet search. Added due to parallel expansion of verbnet, propbank, and sense groupings. No verbnet class. No framenet class. Framed by Katie.</note>
+            <example name="Example with all arguments" src="Example with all arguments" type="Example with all arguments">
+                <inflection aspect="ns" form="ns" person="ns" tense="ns" voice="ns"/>
+                <text>[Bare-breasted beauties *1] parade around the stage, wiggling, sighing, shaking, and [ * 1] saucing the house</text>
+                <note/>
+                <arg f="" n="0">[* 1]</arg>
+                <rel f="">saucing</rel>
+                <arg f="" n="1">the house.</arg>
+            </example>
+        </roleset>
+    </predicate>
+</frameset>

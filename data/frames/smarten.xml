@@ -1,0 +1,69 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <note>Frame file for 'smarten' based on expansion via VerbNet. VN class 45.4.</note>
+    <predicate lemma="smarten">
+        <roleset id="smarten.01" name="(cause to) be more intelligent, quick,
+  and/or stylish" vncls="45.4">
+            <roles>
+                <role descr="cause of transformation, agent" n="0">
+                    <vnrole vncls="45.4" vntheta="Agent"/>
+                </role>
+                <role descr="entity now stylish, quick, or smart" n="1">
+                    <vnrole vncls="45.4" vntheta="Patient"/>
+                </role>
+                <role descr="Instrument or Manner if separate from arg 0" n="2">
+                    <vnrole vncls="45.4" vntheta="Instrument"/>
+                </role>
+                <role descr="subject, smarten about what?" n="3"/>
+            </roles>
+            
+            <example name="Quicken">
+                <text>
+                    The driver smartened the pace by cracking his whip over the carriage horses.
+                </text>
+                <arg n="0">The driver</arg>
+                <rel>smartened</rel>
+                <arg n="1">the pace</arg>
+                <arg n="2">by cracking his whip over the carriage horses</arg>
+            </example>
+        </roleset>
+    </predicate>
+    
+    <predicate lemma="smarten_up">
+        <roleset id="smarten.02" name="(cause to) be more intelligent, quick,
+        and/or stylish" vncls="-">
+            <roles>
+                <role descr="cause of transformation, agent" n="0"/>
+                <role descr="entity now stylish, quick, or smart" n="1"/>
+                <role descr="Instrument or Manner if separate from arg 0" n="2"/>
+                <role descr="subject, smarten up about/to what?" n="3"/>
+            </roles>
+            
+            <example name="Intelligence, with subject">
+                <text>
+                    Someone-1 has *-1 to smarten him up about dealing with people.
+                </text>
+                <arg n="0">Someone</arg>
+                <rel>[smarten][up]</rel>
+                <arg n="1">him</arg>
+                <arg n="3">about dealing with people</arg> 
+            </example>
+            
+            <example name="Clothing, with instrument">
+                <text>
+                    Before meeting her parents, Mary smartened John up with some new clothes.
+                </text>
+                <arg n="M" f="TMP">Before meeting her parents</arg>
+                <arg n="0">Mary</arg>
+                <rel>[smartened][up]</rel>
+                <arg n="1">John</arg>
+                <arg n="2">with some new clothes</arg>
+            </example>
+            
+            <note>
+                Frame by Claire
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

@@ -1,0 +1,33 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="hike">
+        <note>
+            Frames file for 'hike' based on sentences in ectb.
+            Based on Verbnet frame 51.3.2, 'creep', and 'swim'
+        </note>
+        
+        <roleset id="hike.01" name="walk for pleasure or exercise" vncls="51.3.2">
+            <roles>
+                <role descr="causer of motion" n="0">
+                    <vnrole vncls="51.3.2" vntheta="Agent"/>
+                </role>
+                <role descr="path of motion; location" n="1">
+                    <vnrole vncls="51.3.2" vntheta="Location"/>
+                </role>
+            </roles>
+            
+            <example>
+                <text>
+                    The main attractions include * hiking on Mt. Kuanyin, Formosa Wonderworld, and the Liao
+                    Tiading Temple.
+                </text>
+                <arg n="0">*</arg> 
+                <rel>hiking</rel>
+                <arg n="1">on Mt. Kuanyin</arg> 
+            </example>
+            <note>
+                Created by Jena.
+            </note>
+        </roleset>
+    </predicate>
+</frameset>

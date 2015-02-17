@@ -1,0 +1,29 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="soulsearch">
+        <note>
+            Frames file for 'soulsearch' based on sentences in ebc.  No Verbnet
+            entry.  Comarison to 'search'.
+        </note>
+        
+        <roleset id="soulsearch.01" name="look inward, search for inspriation,
+  motivation, etc." vncls="35.2">
+            <roles>
+                <role descr="soulsearcher" n="0"/>
+            </roles>
+            
+            <example name="">
+                <text>
+                    He says 0 daily he-1 spent *PRO*-1 studying and questioning and soulsearching.
+                </text>
+                <arg n="0">*PRO*-1</arg>
+                <rel>soulsearching</rel>
+            </example>
+            
+            <note>
+                Frame created by Arrick
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

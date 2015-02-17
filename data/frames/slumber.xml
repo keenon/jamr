@@ -1,0 +1,30 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="slumber">
+        <note>
+            Frames file for 'slumber' based on frame for 'sleep'.  Verbnet class
+            40.4, other members include doze, nap, sleep, snooze.
+        </note>
+        
+        <roleset id="slumber.01" vncls="40.4" name="sleep">
+            <roles>
+                <role n="0"  descr="sleeper"/>
+                <role n="1" descr= "cognate object"/>
+            </roles>
+            
+            <example name="sleepy-time">
+                <text>
+                    Will the people slumber still or stir to rage?
+                </text>
+                <arg n="0"        >the people</arg>
+                <rel              >slumber</rel>
+                <arg n="m" f="TMP">still</arg>
+            </example>
+        </roleset>
+    </predicate>
+    
+    <note>
+        Frame file created by Arrick
+    </note>
+    
+</frameset>

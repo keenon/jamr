@@ -1,0 +1,41 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="actuate">
+        <note>
+            Frames file for 'actuate' based on sentences in ULA Brown.  No Verbnet
+            entry, comparison with 'activate.'
+        </note>
+        
+        <roleset id="actuate.01" name="put into action or motion" vncls="-">
+            <roles>
+                <role descr="agent causing of actuation" n="0"/>
+                <role descr="entity set into action or motion" n="1"/>
+            </roles>
+            
+            <example name="Active">
+                <text>
+                    [The star]-1 was close enough *PRO*-1 to actuate deceleration.
+                </text>
+                <arg n="0">*PRO*-1</arg>
+                <rel>actuate</rel>
+                <arg n="1">deceleration</arg>
+            </example>
+            
+            
+            <example name="Sentential Complement">
+                <text>
+                    He was void of any of these feelings which-1 *-1 actuate men to do good. 
+                </text>
+                <arg n="M" f="RCL">which --> any of these feelings</arg>
+                <arg n="0">*-1</arg>
+                <rel>actuate</rel>
+                <arg n="1">[men][to do good]</arg>
+            </example>
+            
+            <note>
+                Frame By Claire
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

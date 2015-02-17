@@ -1,0 +1,45 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="aggrieve">
+        <note>
+            Frames file for 'aggrieve' based on internet usage examples, expansion
+            via VN.  Verbnet entry 31.1 (verbs of emotion).Comparison with 'offend.'
+        </note>
+        
+        <roleset id="aggrieve.01" name="cause grief or injury" vncls="31.1">
+            <roles>
+                <role descr="offender" n="0">
+                    <vnrole vncls="31.1" vntheta="Cause"/>
+                </role>
+                <role descr="aggrieved" n="1">
+                    <vnrole vncls="31.1" vntheta="Experiencer"/>
+                </role>
+                <role descr="instrument, if separate from arg0" n="2"/>
+            </roles>
+            
+            <example name="Adjectival, Legal">
+                <text>
+                    The aggrieved party would have to take a civil action against you. 
+                </text>
+                <rel>aggrieved</rel>
+                <arg n="1">party</arg>
+            </example>
+            
+            <example name="with instrument">
+                <text>
+                    Mary aggrieved John greatly by refusing his proposal.
+                </text>
+                <arg n="0">Mary</arg>
+                <rel>aggrieved</rel>
+                <arg n="1">John</arg>
+                <arg n="M" f="EXT">greatly</arg>
+                <arg n="2">by refusing his proposal</arg>
+            </example>
+            
+            <note>
+                Frame by Claire
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

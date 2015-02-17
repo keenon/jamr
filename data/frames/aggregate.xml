@@ -1,0 +1,37 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="aggregate">
+        <note>
+            Frames file for 'aggregate' based on dictionary.com.
+        </note>
+        
+        <roleset id="aggregate.01" name="to bring together, collect into one sum,
+  mass, or body" vncls="47.5.2">
+            <roles>
+                <role descr="entity aggregating something" n="0">
+                    
+                    <vnrole vncls="47.5.2" vntheta="Agent"/>
+                </role>
+                
+                <role descr="thing/stuff aggregated" n="1">
+                    
+                    <vnrole vncls="47.5.2" vntheta="Theme"/>
+                </role>
+                
+                <role descr="price" n="3"/>
+            </roles>
+            
+            <example name="gather">
+                <text>
+                    John aggregated the legos into a bucket.
+                </text>
+                <arg n="0">John</arg>
+                <rel>aggregated</rel>
+                <arg n="1">the legos</arg>
+                <arg f="LOC" n="M">into a bucket</arg>
+                
+            </example>
+        </roleset>
+        <note>frame by Perryn</note>
+    </predicate>
+</frameset>

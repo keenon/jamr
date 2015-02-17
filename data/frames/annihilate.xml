@@ -1,0 +1,40 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="annihilate">
+        <note>
+            Frames file for 'annihilate' based on dictionary.com. Verbnet entry 44.
+        </note>
+        
+        <roleset id="annihilate.01" name="destroy utterly" vncls="44">
+            <roles>
+                <role descr="destroyer" n="0">
+                    
+                    <vnrole vncls="44" vntheta="Agent"/>
+                </role>
+                
+                <role descr="thing destroyed" n="1">
+                    
+                    <vnrole vncls="44" vntheta="Patient"/>
+                </role>
+                
+                <role descr="instrument of destruction" n="2">
+                    
+                    <vnrole vncls="44" vntheta="Instrument"/>
+                </role>
+                
+            </roles>
+            
+            <example name="military">
+                <text>
+                    The army annihilated the small city with a few well-placed bombs.
+                </text>
+                <arg n="0">The army</arg>
+                <rel>annihilate</rel>
+                <arg n="1">the small city</arg>
+                <arg n="2">a few well-placed bombs</arg>
+                
+            </example>
+        </roleset>
+        <note>frame by Perryn</note>
+    </predicate>
+</frameset>

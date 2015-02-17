@@ -1,0 +1,30 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="taiwanize">
+        <note>
+            Frames file for 'taiwanize' based on frame file for 'westernize'. No
+            Verbnet entry.
+        </note>
+        
+        <roleset id="taiwanize.01" name="make more Taiwan-like" vncls="45.4">
+            <roles>
+                <role descr="agent" n="0"/>
+                <role descr="patient" n="1"/>
+            </roles>
+            
+            <example name="taiwanize">
+                <text>
+                    [Taiwanese TV]-9 Gets Taiwanized [*]-9!
+                </text>
+                <arg n="1">[*]-9</arg>
+                <rel>taiwanized</rel>
+            </example>
+            
+            
+            <note>
+                Frame file created by Arrick
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

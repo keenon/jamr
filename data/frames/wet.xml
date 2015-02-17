@@ -1,0 +1,62 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="wet">
+        <note>
+            Frames file for 'wet' based on sentences in brown.
+        </note>
+        
+        <roleset id="wet.01" vncls="-" name="cause to be wet">
+            <roles>
+                <role n="0"  descr="cause"/>
+                <role n="1"  descr="now-wet thing"/>
+                <role n="2"  descr="liquid"/>
+            </roles>
+            
+            <example name="uncommonly with liquid">
+                <inflection person="ns" tense="ns" aspect="progressive" voice="active" form="participle"/>
+                <text>
+                    Saliva gathered in the mouth after a night's sleep was
+                    considered poisonous; [*] wetting a wart with this saliva on wakening
+                    the first thing in the morning was supposed to cause it to disappear
+                    after only a few treatments, and strangely enough many warts did just
+                    that. 
+                </text>
+                <arg n="0"        >[*]</arg>
+                <rel              >wetting</rel>
+                <arg n="1"        >a wart</arg>
+                <arg n="2">with this saliva</arg>
+                <arg n="m" f="TMP">on wakening</arg>
+                <arg n="m" f="TMP">first thing in the morning</arg>
+            </example>
+            
+            <example name="with location">
+                <inflection person="ns" tense="past" aspect="ns" voice="active" form="full"/>
+                <text>
+                    He improvised as he went along, completing a life-size clay
+                    figure, then bought yards of an inexpensive material from a draper,
+                    wet the lightweight cloth in a basin and covered it over with clay
+                    that Argiento brought from the bank of the Tiber, to the consistency
+                    of thick mud. 
+                </text>
+                <arg n="0"        >He</arg>
+                <rel              >wet</rel>
+                <arg n="1"        >the lightweight cloth</arg>
+                <arg n="m" f="LOC">in a basin</arg>
+            </example>
+            
+            <example name="usually just transitive">
+                <inflection person="ns" tense="past" aspect="ns" voice="active" form="full"/>
+                <text>
+                    He cleared his throat and wet his lips.
+                </text>
+                <arg n="0"        >He</arg>
+                <rel              >wet</rel>
+                <arg n="1"        >his lips</arg>
+            </example>
+            
+            <note>
+            </note>
+            
+        </roleset>
+    </predicate>
+</frameset>

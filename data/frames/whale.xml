@@ -1,0 +1,33 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+    <predicate lemma="whale">
+        <note>
+            Frames file for 'whale' based on dictionary.com. Verbnet entry 13.7.
+        </note>
+        
+        <roleset id="whale.01" name="to hunt or fish for whale" vncls="13.7">
+            <roles>
+                <role descr="agent or causer" n="0">
+                    <vnrole vncls="13.7" vntheta="Agent"/>
+                </role>
+                
+                <role descr="entity gathered" n="1"/>
+                
+                <role descr="gathered into" n="2"/>
+                
+                <role descr="beneficiary" n="3"/>
+            </roles>
+            
+            <example name="poor Greenpeace">
+                <text>
+                    The evil hunters whaled with abandon.
+                </text>
+                <arg n="0">The hunters</arg>
+                <rel>whaled</rel>
+                <arg f="MNR" n="M">with abandon</arg>
+                
+            </example>
+        </roleset>
+        <note>frame by Perryn</note>
+    </predicate>
+</frameset>
