@@ -15,7 +15,7 @@ import edu.cmu.lti.nlp.amr.ConceptInvoke.PhraseConceptPair
 /****************************** Driver Program *****************************/
 object AMRParser {
 
-    val VERSION = "JAMR dev v0.3"
+    val VERSION = "JAMR dev v0.3 mod v0.1"
 
     val usage = """Usage:
     // TODO: remove --tok so that the parser calls the tokenizer
@@ -202,26 +202,33 @@ scala -classpath . edu.cmu.lti.nlp.amr.AMRParser --stage2-decode -w weights -l l
                                                            line.split(" "),
                                                            dependencies(i),
                                                            ner))
+
+                // This is a test to see if we can hijack the machinery of AMRParser
+
+                val betterSequenceGraph = BetterSequenceDecoder.Decoder.decode(line)
+
+                val stage1ResultGraph = betterSequenceGraph
+
                 logger(1, "Concepts:")
-                for ((id, node) <- stage1Result.graph.getNodeById) {
+                for ((id, node) <- stage1ResultGraph.getNodeById) {
                     logger(1, "id = "+id+" concept = "+node.concept)
                 }
                 logger(0, "Spans:")
-                for ((span, i) <- stage1Result.graph.spans.sortBy(x => x.words.toLowerCase).zipWithIndex) {
+                for ((span, i) <- stage1ResultGraph.spans.sortBy(x => x.words.toLowerCase).zipWithIndex) {
                     logger(0, "Span "+span.start.toString+"-"+span.end.toString+":  "+span.words+" => "+span.amr)
                 }
                 logger(0, "")
 
-                stage1Result.graph.normalizeInverseRelations
-                stage1Result.graph.addVariableToSpans
+                stage1ResultGraph.normalizeInverseRelations
+                stage1ResultGraph.addVariableToSpans
 
-                var decoderResultGraph = stage1Result.graph  // TODO: in future just do decoderResult.graph instead (when BasicFeatureVector is removed from stage1)
+                var decoderResultGraph = stage1ResultGraph  // TODO: in future just do decoderResult.graph instead (when BasicFeatureVector is removed from stage1)
 
                     // TODO: clean up this code
 
                 if (!options.contains('stage1Only)) {
                     val decoder = stage2.get
-                    decoderResultGraph = decoder.decode(new Input(stage1Result.graph,   // TODO: what about stage1Oracle
+                    decoderResultGraph = decoder.decode(new Input(stage1ResultGraph,   // TODO: what about stage1Oracle
                                                              tok.split(" "),
                                                              dependencies(i))).graph
                 }//endif (!options.contains('stage1Only))
@@ -240,7 +247,7 @@ scala -classpath . edu.cmu.lti.nlp.amr.AMRParser --stage2-decode -w weights -l l
                     }
                     logger(0, "")
                     if (options.contains('stage1Eval)) {
-                        for (span <- stage1Result.graph.spans) {
+                        for (span <- stage1ResultGraph.spans) {
                             //if (oracleResult.graph.spans.count(x => x.start == span.start && x.end == span.end /*&& x.amr.prettyString(detail = 0, pretty = false).replaceAll("""\([^ ]* :name ""","") == span.amr.prettyString(detail = 0, pretty = false).replaceAll("""\([^ ]* :name ""","")*/) > 0) {
                             //if (oracleResult.graph.spans.count(x => x.start == span.start && x.end == span.end && x.amr.prettyString(detail = 0, pretty = false, vars = Set()).replaceAll("""\([^ ]* :name ""","") == span.amr.prettyString(detail = 0, pretty = false, vars = Set()).replaceAll("""\([^ ]* :name ""","")) > 0) {
                             if (oracleResult.graph.spans.count(x => x.start == span.start && x.end == span.end && x.amr.toString == span.amr.toString) > 0) {
@@ -254,11 +261,11 @@ scala -classpath . edu.cmu.lti.nlp.amr.AMRParser --stage2-decode -w weights -l l
                             }
                         }
                         for (span <- oracleResult.graph.spans) {
-                            if (stage1Result.graph.spans.count(x => x.start == span.start && x.end == span.end && x.amr.toString == span.amr.toString) == 0) {
+                            if (stage1ResultGraph.spans.count(x => x.start == span.start && x.end == span.end && x.amr.toString == span.amr.toString) == 0) {
                                 logger(0, "Missing span: "+span.words+" => "+span.amr)
                             }
                         }
-                        spanF1.predicted += stage1Result.graph.spans.size
+                        spanF1.predicted += stage1ResultGraph.spans.size
                         spanF1.total += oracleResult.graph.spans.size
                     }
                     logger(0, "Dependencies:\n"+dependencies(i)+"\n")

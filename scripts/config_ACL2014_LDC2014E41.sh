@@ -18,7 +18,7 @@ export TRAIN_FILE="${JAMR_HOME}/data/LDC2014E41_DEFT_Phase_1_AMR_Annotation_R4/d
 export DEV_FILE="${JAMR_HOME}/data/LDC2014E41_DEFT_Phase_1_AMR_Annotation_R4/data/split/dev/dev.txt"
 export TEST_FILE="${JAMR_HOME}/data/LDC2014E41_DEFT_Phase_1_AMR_Annotation_R4/data/split/test/test.txt"
 
-export MODEL_DIR="${JAMR_HOME}/models/ACL2014_LDC2014E41"  # ideally keep this the same as the config_SOMETHING.sh
+export MODEL_DIR="${JAMR_HOME}/models/ACL2014_LDC2013E117"  # ideally keep this the same as the config_SOMETHING.sh
 
 # The options specified below will override any options specified in the scripts
 # CONCEPT_ID_TRAINING_OPTIONS and RELATION_ID_TRAINING_OPTIONS will override PARSER_OPTIONS
