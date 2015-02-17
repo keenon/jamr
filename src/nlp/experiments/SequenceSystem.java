@@ -26,7 +26,7 @@ import java.util.function.Function;
 public class SequenceSystem {
 
     AMRPipeline pipeline = new AMRPipeline();
-    static boolean DEBUG = true;
+    static boolean DEBUG = false;
 
     public static void main(String[] args) {
         SequenceSystem system = new SequenceSystem();
