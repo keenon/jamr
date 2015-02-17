@@ -33,6 +33,7 @@ scala -classpath . edu.cmu.lti.nlp.amr.AMRParser --stage2-decode -w weights -l l
             case "--stage1-oracle" :: l =>               parseOptions(map + ('stage1Oracle -> "true"), l)
             case "--stage1-train" :: l =>                parseOptions(map + ('stage1Train -> "true"), l)
             case "--stage1-eval" :: l =>                 parseOptions(map + ('stage1Eval -> "true"), l)
+            case "--stanford-chunk-gen" :: l =>          parseOptions(map + ('stanfordChunkGen -> "true"), l)
             case "--stage1-features" :: value :: l =>    parseOptions(map + ('stage1Features -> value), l)
             case "--stage1-weights" :: value :: l =>     parseOptions(map + ('stage1Weights -> value), l)
             case "--stage1-concept-table" :: v :: l =>   parseOptions(map + ('stage1ConceptTable -> v), l)
@@ -205,9 +206,12 @@ scala -classpath . edu.cmu.lti.nlp.amr.AMRParser --stage2-decode -w weights -l l
 
                 // This is a test to see if we can hijack the machinery of AMRParser
 
-                val betterSequenceGraph = BetterSequenceDecoder.Decoder.decode(line)
-
-                val stage1ResultGraph = betterSequenceGraph
+                val stage1ResultGraph = if (options.contains('stanfordChunkGen)) {
+                    BetterSequenceDecoder.Decoder.decode(line)
+                }
+                else {
+                    stage1Result.graph
+                }
 
                 logger(1, "Concepts:")
                 for ((id, node) <- stage1ResultGraph.getNodeById) {

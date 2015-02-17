@@ -365,10 +365,10 @@ public class LinearPipe<IN,OUT> {
             LinearClassifierFactory<Integer, String> bucketClassifierFactory = new LinearClassifierFactory<>();
             factory.setSigma(sigma);  // higher -> less regularization (default=1)
             factory.setVerbose(true);
-            factory.setMinimizerCreator(() -> new SGDToQNMinimizer(0.5, 1000, 50, -1));
+            //factory.setMinimizerCreator(() -> new SGDToQNMinimizer(0.5, 1000, 50, -1));
             bucketClassifierFactory.setSigma(sigma);  // higher -> less regularization (default=1)
             bucketClassifierFactory.setVerbose(true);
-            bucketClassifierFactory.setMinimizerCreator(() -> new SGDToQNMinimizer(0.5, 1000, 50, -1));
+            //bucketClassifierFactory.setMinimizerCreator(() -> new SGDToQNMinimizer(0.5, 1000, 50, -1));
 
             if (clusters.size() == 1) {
                 // trivial case, just do what we usually do
@@ -729,6 +729,7 @@ public class LinearPipe<IN,OUT> {
             oos.writeBoolean(false);
         }
         oos.writeObject(classifiers);
+        oos.close();
     }
 
     public void readFromFile(String path) throws IOException, ClassNotFoundException {
@@ -742,5 +743,6 @@ public class LinearPipe<IN,OUT> {
             bucketClassifier = (Classifier<Integer, String>) ois.readObject();
         }
         classifiers = (List<Classifier<OUT, String>>) ois.readObject();
+        ois.close();
     }
 }

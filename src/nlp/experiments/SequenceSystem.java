@@ -29,7 +29,7 @@ public class SequenceSystem {
 
     public static void main(String[] args) {
         SequenceSystem system = new SequenceSystem();
-        System.out.println(system.getSpans("I want to test you now").toString());
+        System.out.println(system.getSpans("China will sign a treaty with America on Friday, June 3").toString());
     }
 
     public SequenceSystem() {
@@ -83,7 +83,7 @@ public class SequenceSystem {
     }
 
     public void trainSystems() throws IOException, ClassNotFoundException {
-        boolean trainOnSmallerSet = true;
+        boolean trainOnSmallerSet = false;
 
         getNERSystemForData(trainOnSmallerSet ? "data/train-400-seq.txt" : "data/release-train-seq.txt");
         getManygenSystemForData("data/train-manygen.txt");
