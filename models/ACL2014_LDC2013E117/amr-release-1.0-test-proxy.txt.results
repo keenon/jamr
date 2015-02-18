@@ -1,0 +1,19 @@
+  ----- Evaluation: Smatch (all stages) -----
+Precision: 0.756
+Recall: 0.713
+Document F-score: 0.734
+
+  ----- Evaluation: Smatch (stanford concept ID) -----
+Precision: 0.690
+Recall: 0.593
+Document F-score: 0.638
+
+  ----- Evaluation: Smatch (gold concept ID) -----
+Precision: 0.908
+Recall: 0.832
+Document F-score: 0.868
+
+  ----- Evaluation: Spans -----
+Precision: NaN
+Recall: NaN
+F1: NaN

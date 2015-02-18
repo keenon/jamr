@@ -1,0 +1,478 @@
+# ::id PROXY_LTW_ENG_20070831_0072.1 ::date 2013-07-31T00:05:45 ::snt-type date ::annotator SDL-AMR-09 ::preferred
+# ::snt 2007-08-21
+# ::save-date Wed Jul 31, 2013 ::file PROXY_LTW_ENG_20070831_0072_1.txt
+(d / date-entity :year 2007 :month 8 :day 21)
+
+# ::id PROXY_LTW_ENG_20070831_0072.2 ::date 2013-07-31T02:43:16 ::snt-type country ::annotator SDL-AMR-09 ::preferred
+# ::snt Iran (Islamic Republic of) (IR)
+# ::save-date Wed Jul 31, 2013 ::file PROXY_LTW_ENG_20070831_0072_2.txt
+(c / country :name (n / name :op1 "Islamic" :op2 "Republic" :op3 "of" :op4 "Iran"))
+
+# ::id PROXY_LTW_ENG_20070831_0072.3 ::date 2013-07-31T02:55:27 ::snt-type topic ::annotator SDL-AMR-09 ::preferred
+# ::snt International; weapons; politics; proliferation; energy
+# ::save-date Wed Jul 31, 2013 ::file PROXY_LTW_ENG_20070831_0072_3.txt
+(a / and
+      :op1 (i / international)
+      :op2 (w / weapon)
+      :op3 (p / politics)
+      :op4 (p2 / proliferate-01)
+      :op5 (e / energy))
+
+# ::id PROXY_LTW_ENG_20070831_0072.4 ::date 2013-07-31T02:58:04 ::snt-type summary ::annotator SDL-AMR-09 ::preferred
+# ::snt The International Atomic Energy Agency reached an agreement with Iranian officials that stated there were no remaining issues and ambiguities regarding Iran's nuclear program and activities.
+# ::save-date Mon Aug 26, 2013 ::file PROXY_LTW_ENG_20070831_0072_4.txt
+(r3 / reach-01
+  :ARG0 (o / organization
+          :name (n / name
+                  :op1 "International"
+                  :op2 "Atomic"
+                  :op3 "Energy"
+                  :op4 "Agency"))
+  :ARG1 (a / agree-01
+          :ARG0 o
+          :ARG2 (p2 / person
+                  :ARG0-of (h / have-org-role-91
+                             :ARG1 (c / country
+                                     :name (n2 / name
+                                             :op1 "Iran"))
+                             :ARG2 (o2 / official)))
+          :ARG0-of (s / state-01
+                     :ARG1 (a2 / and
+                             :op1 (i / issue
+                                    :polarity -
+                                    :ARG1-of (r / remain-01))
+                             :op2 (a3 / ambiguity
+                                    :polarity -
+                                    :ARG1-of r)
+                             :ARG0-of (r2 / regard-01
+                                        :ARG1 (a4 / and
+                                                :op1 (p / program
+                                                       :mod (n3 / nucleus)
+                                                       :poss c)
+                                                :op2 (a5 / activity
+                                                       :mod n3
+                                                       :poss c)))))))
+
+# ::id PROXY_LTW_ENG_20070831_0072.5 ::date 2013-07-31T03:53:28 ::snt-type summary ::annotator SDL-AMR-09 ::preferred
+# ::snt U.S. and European officials suspect that Iran's civilian nuclear energy program masks an effort to obtain technology that could be used in the production of an atomic bomb.
+# ::save-date Mon Aug 26, 2013 ::file PROXY_LTW_ENG_20070831_0072_5.txt
+(s / suspect-01
+      :ARG0 (a / and
+            :op1 (p3 / person
+                  :ARG0-of (h / have-org-role-91
+                        :ARG1 (c / country :name (n / name :op1 "U.S."))
+                        :ARG2 (o / official)))
+            :op2 (p5 / person
+                  :ARG0-of (h2 / have-org-role-91
+                        :ARG1 (c2 / continent :name (n2 / name :op1 "Europe"))
+                        :ARG2 (o3 / official))))
+      :ARG1 (m / mask-01
+            :ARG1 (e2 / effort
+                  :purpose (o2 / obtain-01
+                        :ARG1 (t / technology
+                              :ARG1-of (u2 / use-01
+                                    :ARG2 (p2 / produce-01
+                                          :ARG1 (b / bomb
+                                                :mod (a2 / atom)))
+                                    :mod (p4 / possible)))))
+            :ARG2 (p / program
+                  :mod (e / energy
+                        :mod (n3 / nucleus)
+                        :mod (c3 / civilian))
+                  :poss (c4 / country :name (n4 / name :op1 "Iran")))))
+
+# ::id PROXY_LTW_ENG_20070831_0072.6 ::date 2013-07-31T04:32:23 ::snt-type body ::annotator SDL-AMR-09 ::preferred
+# ::snt U.S. and European officials suspect that Iran's civilian nuclear energy program masks an effort to obtain technology that could be used in the production of an atomic bomb.
+# ::save-date Mon Aug 26, 2013 ::file PROXY_LTW_ENG_20070831_0072_6.txt
+(s / suspect-01
+      :ARG0 (a / and
+            :op1 (p3 / person
+                  :ARG0-of (h / have-org-role-91
+                        :ARG1 (c / country :name (n / name :op1 "U.S."))
+                        :ARG2 (o / official)))
+            :op2 (p5 / person
+                  :ARG0-of (h2 / have-org-role-91
+                        :ARG1 (c2 / continent :name (n2 / name :op1 "Europe"))
+                        :ARG2 (o3 / official))))
+      :ARG1 (m / mask-01
+            :ARG1 (e2 / effort
+                  :purpose (o2 / obtain-01
+                        :ARG1 (t / technology
+                              :ARG1-of (u2 / use-01
+                                    :ARG2 (p2 / produce-01
+                                          :ARG1 (b / bomb
+                                                :mod (a2 / atom)))
+                                    :mod (p4 / possible)))))
+            :ARG2 (p / program
+                  :mod (e / energy
+                        :mod (n3 / nucleus)
+                        :mod (c3 / civilian))
+                  :poss (c4 / country :name (n4 / name :op1 "Iran")))))
+
+# ::id PROXY_LTW_ENG_20070831_0072.7 ::date 2013-07-31T04:35:04 ::snt-type body ::annotator SDL-AMR-09 ::preferred
+# ::snt U.S. and European officials may impose a 4th round of sanctions on Tehran when the U.N. Security Council considers the issue of Iran's nuclear energy program most likely in September 2007.
+# ::save-date Tue Sep 3, 2013 ::file PROXY_LTW_ENG_20070831_0072_7.txt
+(p / possible
+      :domain (i / impose-01
+            :ARG0 (a2 / and
+                  :op1 (p3 / person
+                        :ARG0-of (h / have-org-role-91
+                              :ARG1 (c / country :name (n / name :op1 "U.S."))
+                              :ARG2 (o3 / official)))
+                  :op2 (p4 / person
+                        :ARG0-of (h2 / have-org-role-91
+                              :ARG1 (c2 / continent :name (n2 / name :op1 "Europe"))
+                              :ARG2 (o4 / official))))
+            :ARG1 (r / round
+                  :ARG2-of (s / sanction-02
+                        :ARG0 a2
+                        :ARG1 (c3 / city :name (n3 / name :op1 "Tehran"))
+                        :time (c4 / consider-02
+                              :ARG0 (o2 / organization :name (n4 / name :op1 "U.N." :op2 "Security" :op3 "Council"))
+                              :ARG1 (i2 / issue
+                                    :topic (p2 / program
+                                          :mod (e / energy
+                                                :mod (n5 / nucleus))
+                                          :poss (c5 / country :name (n6 / name :op1 "Iran"))))
+                              :time (d / date-entity :year 2007 :month 9
+                                    :mod (l / likely
+                                          :mod (m / most)))))
+                  :ord (o / ordinal-entity :value 4))))
+
+# ::id PROXY_LTW_ENG_20070831_0072.8 ::date 2013-07-31T05:28:07 ::snt-type body ::annotator SDL-AMR-09 ::preferred
+# ::snt The International Atomic Energy Agency distributed limited copies of the IAEA report before a meeting on 11 September 2007 of the 35 members of the IAEA board.
+# ::save-date Fri Jan 17, 2014 ::file PROXY_LTW_ENG_20070831_0072_8.txt
+(d / distribute-01
+      :ARG0 (o / organization :name (n / name :op1 "International" :op2 "Atomic" :op3 "Energy" :op4 "Agency"))
+      :ARG1 (p2 / publication
+            :ARG2-of (c / copy-01
+                  :ARG1 (t / thing
+                        :ARG1-of (r / report-01
+                              :ARG0 (o2 / organization :name (n2 / name :op1 "IAEA")))))
+            :ARG1-of (l / limit-01))
+      :time (b / before
+            :op1 (m / meet-03
+                  :ARG0 (p / person :quant 35
+                        :ARG0-of (h / have-org-role-91
+                              :ARG1 (b2 / board
+                                    :poss o)
+                              :ARG2 (m2 / member)))
+                  :time (d2 / date-entity :year 2007 :month 9 :day 11))))
+
+# ::id PROXY_LTW_ENG_20070831_0072.9 ::date 2013-07-31T05:50:40 ::snt-type body ::annotator SDL-AMR-09 ::preferred
+# ::snt The findings reflect an agency agreement on 21 August 2007 with Tehran that Iranian officials began publicizing the week of 12 August 2007.
+# ::save-date Mon Aug 26, 2013 ::file PROXY_LTW_ENG_20070831_0072_9.txt
+(r / reflect-01
+      :ARG1 (t / thing
+            :ARG1-of (f / find-01))
+      :ARG2 (a / agree-01
+            :ARG0 (a2 / agency)
+            :ARG2 (c / city :name (n / name :op1 "Tehran"))
+            :time (d / date-entity :year 2007 :month 8 :day 21)
+            :ARG1-of (p / publicize-01
+                  :ARG0 (p2 / person
+                        :ARG0-of (h / have-org-role-91
+                              :ARG1 (c2 / country :name (n2 / name :op1 "Iran"))
+                              :ARG2 (o / official)))
+                  :ARG1-of (b / begin-01
+                        :ARG0 o)
+                  :time (w / week
+                        :mod (d2 / date-entity :year 2007 :month 8 :day 12)))))
+
+# ::id PROXY_LTW_ENG_20070831_0072.10 ::date 2013-07-31T06:10:12 ::snt-type body ::annotator SDL-AMR-09 ::preferred
+# ::snt The accord said that there were no remaining issues and ambiguities regarding Iran's nuclear program and activities.
+# ::save-date Thu Aug 1, 2013 ::file PROXY_LTW_ENG_20070831_0072_10.txt
+(s / say-01
+      :ARG0 (a / accord)
+      :ARG1 (a2 / and
+            :op1 (i / issue :polarity -
+                  :ARG1-of (r / remain-01)
+                  :ARG0-of (r2 / regard-01
+                        :ARG1 (a4 / and
+                              :op1 (p / program
+                                    :mod (n / nucleus)
+                                    :poss (c2 / country :name (n2 / name :op1 "Iran")))
+                              :op2 (a5 / activity
+                                    :mod n
+                                    :poss c2))))
+            :op2 (a3 / ambiguity :polarity -
+                  :ARG1-of r
+                  :ARG0-of r2)))
+
+# ::id PROXY_LTW_ENG_20070831_0072.11 ::date 2013-07-31T06:16:24 ::snt-type body ::annotator SDL-AMR-09 ::preferred
+# ::snt According to an account by Reuters news agency the IAEA report said the work plan is a significant step forward.
+# ::save-date Fri Jan 17, 2014 ::file PROXY_LTW_ENG_20070831_0072_11.txt
+(s / say-01
+      :ARG0 (a / account-01
+            :ARG0 (a2 / agency :name (n2 / name :op1 "Reuters")
+                  :mod (n / news)))
+      :ARG1 (s2 / say-01
+            :ARG0 (t / thing
+                  :ARG1-of (r / report-01
+                        :ARG0 (o / organization :name (n3 / name :op1 "IAEA"))))
+            :ARG1 (s3 / step-01
+                  :ARG1 (p / plan-01
+                        :ARG1 (w / work))
+                  :ARG2 (f / forward)
+                  :manner (s4 / significant))))
+
+# ::id PROXY_LTW_ENG_20070831_0072.12 ::date 2013-07-31T06:36:15 ::snt-type body ::annotator SDL-AMR-09 ::preferred
+# ::snt Reuters quoted a senior U.N. official as stating the Iranian government's efforts to enrich uranium had slowed.
+# ::save-date Mon Aug 26, 2013 ::file PROXY_LTW_ENG_20070831_0072_12.txt
+(q / quote-01
+      :ARG0 (p / publication :name (n / name :op1 "Reuters"))
+      :ARG1 (p2 / person
+            :ARG0-of (h / have-org-role-91
+                  :ARG1 (o2 / organization :name (n2 / name :op1 "U.N."))
+                  :ARG2 (o / official
+                        :mod (s / senior))))
+      :ARG2 (s2 / state-01
+            :ARG0 o
+            :ARG1 (s3 / slow-01
+                  :ARG1 (e / effort
+                        :poss (g / government-organization
+                              :ARG0-of (g2 / govern-01
+                                    :ARG1 (c / country :name (n3 / name :op1 "Iran"))))
+                        :purpose (e2 / enrich-01
+                              :ARG0 g
+                              :ARG1 (u / uranium))))))
+
+# ::id PROXY_LTW_ENG_20070831_0072.13 ::date 2013-07-31T07:23:21 ::snt-type body ::annotator SDL-AMR-09 ::preferred
+# ::snt The IAEA report stated that Iranian officials must continue to build confidence about the scope and nature of Iran's present and future nuclear program.
+# ::save-date Fri Jan 17, 2014 ::file PROXY_LTW_ENG_20070831_0072_13.txt
+(s / state-01
+      :ARG0 (t / thing
+            :ARG1-of (r / report-01
+                  :ARG0 (o3 / organization :name (n / name :op1 "IAEA"))))
+      :ARG1 (o / obligate-01
+            :ARG1 o2
+            :ARG2 (c / continue-01
+                  :ARG0 (p3 / person
+                        :ARG0-of (h / have-org-role-91
+                              :ARG1 (c2 / country :name (n2 / name :op1 "Iran"))
+                              :ARG2 (o2 / official)))
+                  :ARG1 (b / build-02
+                        :ARG0 o2
+                        :ARG1 (c3 / confidence
+                              :topic (a / and
+                                    :op1 (s2 / scope
+                                          :poss (p / program
+                                                :mod (n4 / nucleus)
+                                                :time (a2 / and
+                                                      :op1 (p2 / present)
+                                                      :op2 (f / future))
+                                                :poss c2))
+                                    :op2 (n3 / nature
+                                          :poss p)))))))
+
+# ::id PROXY_LTW_ENG_20070831_0072.14 ::date 2013-07-31T07:46:38 ::snt-type body ::annotator SDL-AMR-09 ::preferred
+# ::snt Iranian officials on 30 August 2007 stated cooperation with the IAEA possibly to prevent a further round of international sanctions.
+# ::save-date Mon Aug 26, 2013 ::file PROXY_LTW_ENG_20070831_0072_14.txt
+(s / state-01
+      :ARG0 (p3 / person
+            :ARG0-of (h / have-org-role-91
+                  :ARG1 (c / country :name (n / name :op1 "Iran"))
+                  :ARG2 (o / official)))
+      :ARG1 (c2 / cooperate-01
+            :ARG0 o
+            :ARG1 (o2 / organization :name (n2 / name :op1 "IAEA"))
+            :purpose (p / possible
+                  :domain (p2 / prevent-01
+                        :ARG1 (r / round
+                              :degree (f / further)
+                              :consist-of (s2 / sanction-02
+                                    :mod (i / international))))))
+      :time (d / date-entity :year 2007 :month 8 :day 30))
+
+# ::id PROXY_LTW_ENG_20070831_0072.15 ::date 2013-07-31T08:00:20 ::snt-type body ::annotator SDL-AMR-09 ::preferred
+# ::snt Iran's representative to the IAEA Ali Asghar SOLTANIEH stated to Tehran's Fars news agency that the report emphasized that there exists no sign or evidence indicating diversion of Iran's nuclear activities and that all of Iran's nuclear materials have been audited.
+# ::save-date Fri Jan 17, 2014 ::file PROXY_LTW_ENG_20070831_0072_15.txt
+(s / state-01
+      :ARG0 (p / person :name (n / name :op1 "Ali" :op2 "Asghar" :op3 "Soltanieh")
+            :ARG0-of (h / have-org-role-91
+                  :ARG1 (o / organization :name (n2 / name :op1 "IAEA"))
+                  :ARG3 (r / represent-01
+                        :ARG1 (c / country :name (n3 / name :op1 "Iran")))))
+      :ARG1 (e / emphasize-01
+            :ARG0 (t / thing
+                  :ARG0-of (r2 / report-01))
+            :ARG1 (a2 / and
+                  :op1 (e2 / exist-01
+                        :ARG1 (o2 / or
+                              :op1 (s2 / sign :polarity -
+                                    :ARG0-of (i / indicate-01
+                                          :ARG1 (d / divert-01
+                                                :ARG1 (a / activity
+                                                      :mod (n6 / nucleus)
+                                                      :poss c))))
+                              :op2 (e3 / evidence-01 :polarity -
+                                    :ARG0-of i)))
+                  :op2 (a3 / audit-01
+                        :ARG1 (m / material
+                              :mod n6
+                              :poss c
+                              :quant (a4 / all)))))
+      :ARG2 (p2 / publication :name (n7 / name :op1 "Fars" :op2 "News" :op3 "Agency")
+            :location (c2 / city :name (n5 / name :op1 "Tehran"))))
+
+# ::id PROXY_LTW_ENG_20070831_0072.16 ::date 2013-07-31T08:28:54 ::snt-type body ::annotator SDL-AMR-09 ::preferred
+# ::snt Some Nonproliferation Experts stated the IAEA was ceding too much to Iran.
+# ::save-date Fri Aug 2, 2013 ::file PROXY_LTW_ENG_20070831_0072_16.txt
+(s / state-01
+      :ARG0 (p / person
+            :ARG1-of (e / expert-41
+                  :ARG2 (p2 / proliferate-01 :polarity -))
+            :quant (s2 / some))
+      :ARG1 (c / cede-01
+            :ARG0 (o / organization :name (n / name :op1 "IAEA"))
+            :ARG1 (m / much
+                  :degree (t / too))
+            :ARG2 (c2 / country :name (n2 / name :op1 "Iran"))))
+
+# ::id PROXY_LTW_ENG_20070831_0072.17 ::date 2013-07-31T08:38:37 ::snt-type body ::annotator SDL-AMR-09 ::preferred
+# ::snt Arms-control experts David Albright and Jacqueline Shire of the Washington-based Institute for Science and International Security wrote in a criticism published the week of 19 August 2007 that the idea of closing files violates fundamental safeguards principles and that the agreement does not specify that Iranian officials would provide the IAEA access to key people, facilities, and documents that are needed to verify Iranian answers to the IAEA's questions.
+# ::save-date Mon Sep 16, 2013 ::file PROXY_LTW_ENG_20070831_0072_17.txt
+(w / write-01
+      :ARG0 (a / and
+            :op1 (p / person :name (n / name :op1 "David" :op2 "Albright")
+                  :ARG0-of (h2 / have-org-role-91
+                        :ARG1 (o / organization :name (n2 / name :op1 "Institute" :op2 "for" :op3 "Science" :op4 "and" :op5 "International" :op6 "Security")
+                              :ARG1-of (b / base-01
+                                    :location (c2 / city :name (n3 / name :op1 "Washington"))))
+                        :ARG3 (e / expert-41
+                              :ARG1 p
+                              :ARG2 (c / control-01
+                                    :ARG1 (a2 / arm)))))
+            :op2 (p2 / person :name (n4 / name :op1 "Jacqueline" :op2 "Shire")
+                  :ARG0-of (h3 / have-org-role-91
+                        :ARG1 o
+                        :ARG3 (e2 / expert-41
+                              :ARG1 p2
+                              :ARG2 c))))
+      :ARG1 (a3 / and
+            :op1 (v / violate-01
+                  :ARG0 (i / idea
+                        :topic (c3 / close-01
+                              :ARG1 (f / file)))
+                  :ARG1 (p3 / principle
+                        :ARG1-of (s / safeguard-01)
+                        :mod (f2 / fundamental)))
+            :op2 (s2 / specify-01 :polarity -
+                  :ARG0 (a4 / agree-01)
+                  :ARG1 (p4 / provide-01
+                        :ARG0 (p7 / person
+                              :ARG0-of (h / have-org-role-91
+                                    :ARG1 (c4 / country :name (n5 / name :op1 "Iran"))
+                                    :ARG2 (o2 / official)))
+                        :ARG1 (a5 / access-01
+                              :ARG0 n6
+                              :ARG1 (a6 / and
+                                    :op1 (p5 / person
+                                          :mod (k / key)
+                                          :ARG1-of (n7 / need-01
+                                                :purpose (v2 / verify-01
+                                                      :ARG1 (a7 / answer-01
+                                                            :ARG0 n5
+                                                            :ARG1 (q / question-01
+                                                                  :ARG0 o3)))))
+                                    :op2 (f3 / facility
+                                          :ARG1-of n7)
+                                    :op3 (d / document
+                                          :ARG1-of n7)))
+                        :ARG2 (o3 / organization :name (n6 / name :op1 "IAEA")))))
+      :location (c5 / criticize-01
+            :ARG1-of (p6 / publish-01
+                  :time (w2 / week
+                        :mod (d2 / date-entity :year 2007 :month 8 :day 19)))))
+
+# ::id PROXY_LTW_ENG_20070831_0072.18 ::date 2013-08-01T02:43:42 ::snt-type body ::annotator SDL-AMR-09 ::preferred
+# ::snt Independent experts stated Iran's latest agreement with the IAEA which gives inspectors access to more nuclear sites and information falls short of the West's demand to halt the production of concentrated uranium that could potentially be used for a bomb.
+# ::save-date Mon Sep 16, 2013 ::file PROXY_LTW_ENG_20070831_0072_18.txt
+(s / state-01
+      :ARG0 (p5 / person
+            :ARG0-of (d / depend-01 :polarity -)
+            :ARG1-of (e / expert-41))
+      :ARG1 (f / fall-01
+            :ARG1 (a / agree-01
+                  :ARG0 (c / country :name (n / name :op1 "Iran"))
+                  :ARG1 (a2 / access-01
+                        :ARG0 (p / person
+                              :ARG0-of (i / inspect-01))
+                        :ARG1 (a3 / and
+                              :op1 (s2 / site
+                                    :mod (n3 / nucleus)
+                                    :mod (m / more))
+                              :op2 (i2 / information)))
+                  :ARG2 (o / organization :name (n2 / name :op1 "IAEA"))
+                  :time (l / late
+                        :degree (m2 / most)))
+            :ARG3 (d2 / demand-01
+                  :ARG0 (w / world-region :name (n4 / name :op1 "West"))
+                  :ARG1 (h / halt-01
+                        :ARG1 (p2 / produce-01
+                              :ARG1 (u / uranium
+                                    :ARG1-of (c2 / concentrate-02)
+                                    :ARG1-of (u2 / use-01
+                                          :ARG2 (b / bomb)
+                                          :mod (p4 / potential)
+                                          :mod (p3 / possible))))))
+            :manner (s3 / short)))
+
+# ::id PROXY_LTW_ENG_20070831_0072.19 ::date 2013-08-01T04:08:59 ::snt-type body ::annotator SDL-AMR-09 ::preferred
+# ::snt U.S. State Department spokesman for the Bush administration Tom Casey stated that while the report may offer some new details or insight into the development of Iran's program Iranian officials have not met any international obligations regarding the nuclear program.
+# ::save-date Fri Jan 17, 2014 ::file PROXY_LTW_ENG_20070831_0072_19.txt
+(s / state-01
+      :ARG0 (p5 / person :name (n / name :op1 "Tom" :op2 "Casey")
+            :ARG0-of (h / have-org-role-91
+                  :ARG1 (g2 / government-organization :name (n2 / name :op1 "State" :op2 "Department")
+                        :poss (c / country :name (n3 / name :op1 "U.S."))
+                        :part-of (g / government-organization
+                              :ARG0-of (a / administrate-01)
+                              :mod (p / person :name (n4 / name :op1 "Bush"))))
+                  :ARG2 (s2 / spokesman)))
+      :ARG1 (c2 / contrast-01
+            :ARG1 (m / meet-01 :polarity -
+                  :ARG0 (p6 / person
+                        :ARG0-of (h2 / have-org-role-91
+                              :ARG1 (c3 / country :name (n5 / name :op1 "Iran"))
+                              :ARG2 (o3 / official)))
+                  :ARG1 (o4 / obligation
+                        :mod (i / international)
+                        :mod (a2 / any)
+                        :ARG0-of (r / regard-01
+                              :ARG1 (p3 / program
+                                    :mod (n6 / nucleus)))))
+            :ARG2 (p2 / possible
+                  :domain (o2 / offer-01
+                        :ARG0 (r2 / report)
+                        :ARG1 (o5 / or
+                              :op1 (d / detail-01
+                                    :ARG1 (d2 / develop-02
+                                          :ARG0 c3
+                                          :ARG1 (p4 / program))
+                                    :mod (s3 / some)
+                                    :mod (n7 / new))
+                              :op2 (i2 / insight
+                                    :prep-into d2
+                                    :mod s3
+                                    :mod n7))))))
+
+# ::id PROXY_LTW_ENG_20070831_0072.20 ::date 2013-07-31T11:53:18 ::snt-type body ::annotator SDL-AMR-09 ::preferred
+# ::snt Casey stated the fact that the nuclear program continues to move forward shows that the Iranian regime is continuing on a path of defiance of the international community.
+# ::save-date Fri Aug 2, 2013 ::file PROXY_LTW_ENG_20070831_0072_20.txt
+(s / state-01
+      :ARG0 (p / person :name (n / name :op1 "Casey"))
+      :ARG1 (c / continue-01
+            :ARG1 (p2 / program
+                  :mod (n2 / nucleus)
+                  :ARG0-of (m / move-01
+                        :ARG1 p2
+                        :ARG2 (f / forward)))
+            :ARG0-of (s2 / show-01
+                  :ARG1 (c2 / continue-01
+                        :ARG1 (r / regime
+                              :mod (c3 / country :name (n3 / name :op1 "Iran")))
+                        :path (d / defy-01
+                              :ARG0 r
+                              :ARG1 (c4 / community
+                                    :mod (i / international)))))))

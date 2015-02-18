@@ -1,0 +1,170 @@
+Stage1 features = List(bias, length, fromNERTagger, conceptGivenPhrase)
+features = List(rootConcept, rootDependencyPathv1, bias, typeBias, self, fragHead, edgeCount, distance, logDistance, posPathv3, dependencyPathv4, conceptBigram)
+connected = true
+Reading weights
+done
+Sentence: The International Atomic Energy Agency reached an agreement with Iranian officials that stated there were no remaining issues and ambiguities regarding Iran's nuclear program and activities.
+
+Oracle Span 1:  activities => activity
+Oracle Span 2:  agreement => agree-01
+Oracle Span 3:  ambiguities => ambiguity
+Oracle Span 4:  and => and
+Oracle Span 5:  and => and
+Oracle Span 6:  International Atomic Energy Agency => (organization :name (name :op "Agency" :op "Energy" :op "Atomic" :op "International"))
+Oracle Span 7:  Iran => (country :name (name :op "Iran"))
+Oracle Span 8:  issues => issue
+Oracle Span 9:  no => -
+Oracle Span 10:  nuclear => nucleus
+Oracle Span 11:  officials => (have-org-role-91 :ARG2 official)
+Oracle Span 12:  program => program
+Oracle Span 13:  reached => reach-01
+Oracle Span 14:  regarding => regard-01
+Oracle Span 15:  remaining => remain-01
+Oracle Span 16:  stated => state-01
+NER Entity: (organization :name (name :op "International" :op "Atomic" :op "Energy" :op "Agency"))
+NER Entity: (country :name (name :op "Iran"))
+Spans:
+Span 26-27:  activities => activity
+Span 7-8:  agreement => agree-01
+Span 19-20:  ambiguities => ambiguity
+Span 18-19:  and => and
+Span 25-26:  and => and
+Span 1-5:  International Atomic Energy Agency => (organization :name (name :op "Agency" :op "Energy" :op "Atomic" :op "International"))
+Span 21-22:  Iran => (country :name (name :op "Iran"))
+Span 17-18:  issues => issue
+Span 15-16:  no => -
+Span 23-24:  nuclear => nucleus
+Span 10-11:  officials => (have-org-role-91 :ARG2 official)
+Span 24-25:  program => program
+Span 5-6:  reached => reach-01
+Span 20-21:  regarding => regard-01
+Span 16-17:  remaining => remain-01
+Span 12-13:  stated => state-01
+
+Langrangian relaxation converged after 27 iterations. Delta = 0.0
+Oracle Span 26-27:  activities => activity
+Oracle Span 7-8:  agreement => agree-01
+Oracle Span 19-20:  ambiguities => ambiguity
+Oracle Span 18-19:  and => and
+Oracle Span 25-26:  and => and
+Oracle Span 1-5:  International Atomic Energy Agency => (organization :name (name :op "Agency" :op "Energy" :op "Atomic" :op "International"))
+Oracle Span 21-22:  Iran => (country :name (name :op "Iran"))
+Oracle Span 17-18:  issues => issue
+Oracle Span 15-16:  no => -
+Oracle Span 23-24:  nuclear => nucleus
+Oracle Span 10-11:  officials => (have-org-role-91 :ARG2 official)
+Oracle Span 24-25:  program => program
+Oracle Span 5-6:  reached => reach-01
+Oracle Span 20-21:  regarding => regard-01
+Oracle Span 16-17:  remaining => remain-01
+Oracle Span 12-13:  stated => state-01
+
+Dependencies:
+1	The	_	DT	DT	_	5	det	_	_
+2	International	_	NNP	NNP	_	5	nn	_	_
+3	Atomic	_	NNP	NNP	_	5	nn	_	_
+4	Energy	_	NNP	NNP	_	5	nn	_	_
+5	Agency	_	NNP	NNP	_	6	nsubj	_	_
+6	reached	_	VBD	VBD	_	0	root	_	_
+7	an	_	DT	DT	_	8	det	_	_
+8	agreement	_	NN	NN	_	6	dobj	_	_
+9	with	_	IN	IN	_	6	prep	_	_
+10	Iranian	_	JJ	JJ	_	11	amod	_	_
+11	officials	_	NNS	NNS	_	9	pobj	_	_
+12	that	_	WDT	WDT	_	13	nsubj	_	_
+13	stated	_	VBD	VBD	_	11	rcmod	_	_
+14	there	_	EX	EX	_	15	expl	_	_
+15	were	_	VBD	VBD	_	13	ccomp	_	_
+16	no	_	DT	DT	_	18	neg	_	_
+17	remaining	_	VBG	VBG	_	18	amod	_	_
+18	issues	_	NNS	NNS	_	15	nsubj	_	_
+19	and	_	CC	CC	_	18	cc	_	_
+20	ambiguities	_	NNS	NNS	_	18	conj	_	_
+21	regarding	_	VBG	VBG	_	20	prep	_	_
+22	Iran	_	NNP	NNP	_	25	poss	_	_
+23	's	_	POS	POS	_	22	possessive	_	_
+24	nuclear	_	JJ	JJ	_	25	amod	_	_
+25	program	_	NN	NN	_	21	pobj	_	_
+26	and	_	CC	CC	_	25	cc	_	_
+27	activities	_	NNS	NNS	_	25	conj	_	_
+28	.	_	.	.	_	6	punct	_	_
+
+Oracle:
+(a / agree-01, ARG0, o / organization)
+(a2 / and, op, a3 / ambiguity)
+(a2 / and, op, i / issue)
+(a4 / and, op, a5 / activity)
+(a4 / and, op, p / program)
+(a5 / activity, mod, n3 / nucleus)
+(a5 / activity, poss, c / country)
+(c / country, name, n2 / name)
+(h / have-org-role-91, ARG1, c / country)
+(h / have-org-role-91, ARG2, o2 / official)
+(i / issue, polarity, - / -)
+(n / name, op, "Agency")
+(n / name, op, "Atomic")
+(n / name, op, "Energy")
+(n / name, op, "International")
+(n2 / name, op, "Iran")
+(o / organization, name, n / name)
+(p / program, mod, n3 / nucleus)
+(p / program, poss, c / country)
+(r / remain-01, ARG1, a3 / ambiguity)
+(r / remain-01, ARG1, i / issue)
+(r2 / regard-01, ARG0, a2 / and)
+(r2 / regard-01, ARG1, a4 / and)
+(r3 / reach-01, ARG0, o / organization)
+(r3 / reach-01, ARG1, a / agree-01)
+(s / state-01, ARG0, a / agree-01)
+(s / state-01, ARG1, a2 / and)
+
+Input(Some(Graph((reach-01 :ARG1 (agree-01 :ARG0-of (state-01 :ARG1 (and :ARG0-of (regard-01 :ARG1 (and :op (activity :mod nucleus :poss country) :op (program :mod nucleus :poss country))) :op (ambiguity :polarity - :ARG1-of remain-01) :op (issue :ARG1-of remain-01 :polarity -))) :ARG2 (person :ARG0-of (have-org-role-91 :ARG2 official :ARG1 (country :name (name :op "Iran")))) :ARG0 organization) :ARG0 (organization :name (name :op "Agency" :op "Energy" :op "Atomic" :op "International"))),ArrayBuffer(Span(1,5,List(0, 1, 2, 3, 4, 5),International Atomic Energy Agency,(organization :name (name :op "Agency" :op "Energy" :op "Atomic" :op "International")),false), Span(21,22,List(6, 7, 8),Iran,(country :name (name :op "Iran")),false), Span(15,16,List(9),no,-,false), Span(5,6,List(10),reached,reach-01,false), Span(10,11,List(11, 12),officials,(have-org-role-91 :ARG2 official),false), Span(12,13,List(13),stated,state-01,false), Span(18,19,List(14),and,and,false), Span(20,21,List(15),regarding,regard-01,false), Span(25,26,List(16),and,and,false), Span(26,27,List(17),activities,activity,false), Span(24,25,List(18),program,program,false), Span(19,20,List(19),ambiguities,ambiguity,false), Span(17,18,List(20),issues,issue,false), Span(16,17,List(21),remaining,remain-01,false), Span(7,8,List(22),agreement,agree-01,false), Span(23,24,List(23),nuclear,nucleus,false)),Map(2 -> "Agency", 5 -> "International", 12 -> official, 15 -> regard-01, 8 -> "Iran", 21 -> remain-01, 18 -> program, 7 -> name, 17 -> activity, 1 -> name, 23 -> nucleus, 4 -> "Atomic", 11 -> have-org-role-91, 14 -> and, 20 -> issue, 6 -> country, 9 -> -, 0 -> organization, 22 -> agree-01, 16 -> and, 19 -> ambiguity, 10 -> reach-01, 3 -> "Energy", 13 -> state-01),Map(n -> name, h -> have-org-role-91, r3 -> reach-01, a3 -> ambiguity, s -> state-01, p -> program, r2 -> regard-01, n3 -> nucleus, a -> agree-01, a5 -> activity, o2 -> official, r -> remain-01, i -> issue, a2 -> and, - -> -, c -> country, o -> organization, n2 -> name, a4 -> and))),[Ljava.lang.String;@7334aada,Annotation([Ljava.lang.String;@1d9b7cce,[Ljava.lang.String;@4d9e68d0,[Ljava.lang.String;@42e99e4a),Annotation([Ljava.lang.String;@14dd9eb7,[Ljava.lang.String;@52e6fdee,[Ledu.cmu.lti.nlp.amr.Dependency;@6c80d78a),Annotation([Ljava.lang.String;@62150f9e,[Ljava.lang.String;@1a451d4d,[Ljava.lang.String;@7fa98a66),Annotation([Ljava.lang.String;@15ff3e9e,[Ljava.lang.String;@5fdcaa40,[Ledu.cmu.lti.nlp.amr.Entity;@6dc17b83))
+AMR:
+(a / agree-01, ARG0, o / organization)
+(a / agree-01, ARG1, n3 / nucleus)
+(a2 / and, op, a3 / ambiguity)
+(a2 / and, op, i / issue)
+(a4 / and, op, a5 / activity)
+(a4 / and, op, p / program)
+(c / country, name, n2 / name)
+(h / have-org-role-91, ARG1, c / country)
+(h / have-org-role-91, ARG2, o2 / official)
+(n / name, op, "Agency")
+(n / name, op, "Atomic")
+(n / name, op, "Energy")
+(n / name, op, "International")
+(n2 / name, op, "Iran")
+(o / organization, name, n / name)
+(p / program, poss, c / country)
+(r / remain-01, ARG1, i / issue)
+(r / remain-01, ARG6, - / -)
+(r2 / regard-01, ARG1, a3 / ambiguity)
+(r2 / regard-01, ARG2, p / program)
+(r3 / reach-01, ARG0, o2 / official)
+(r3 / reach-01, ARG1, a / agree-01)
+(s / state-01, ARG1, a2 / and)
+
+WARNING: makeIds can't find span Id: 0.0
+WARNING: makeIds can't find span Id: 0.0.0
+WARNING: makeIds can't find span Id: 0.0.0.3
+WARNING: makeIds can't find span Id: 0.0.0.2
+WARNING: makeIds can't find span Id: 0.0.0.1
+WARNING: makeIds can't find span Id: 0.0.0.0
+WARNING: makeIds can't find span Id: 0.1.0.0.0
+WARNING: makeIds can't find span Id: 0.1.0.0.0.0
+WARNING: makeIds can't find span Id: 0.1.0.0.0.0.0
+WARNING: makeIds can't find span Id: 0.1.1.0.0.0
+WARNING: makeIds can't find span Id: 0.1.0.0
+WARNING: makeIds can't find span Id: 0.1.0.0.1
+WARNING: makeIds can't find span Id: 0.1.1
+WARNING: makeIds can't find span Id: 0.1.1.0
+WARNING: makeIds can't find span Id: 0.1.1.0.2
+WARNING: makeIds can't find span Id: 0.1.1.0.2.0
+WARNING: makeIds can't find span Id: 0.1.1.0.2.0.1
+WARNING: makeIds can't find span Id: 0.1.1.0.2.0.0
+WARNING: makeIds can't find span Id: 0.1.1.0.1
+WARNING: makeIds can't find span Id: 0.1.1.0.0
+WARNING: makeIds can't find span Id: 0.1.1.0.0.1
+WARNING: makeIds can't find span Id: 0.1
+WARNING: makeIds can't find span Id: 0.1.1.0.2.0.0.0
+Decoded in 2,019,974 microseconds

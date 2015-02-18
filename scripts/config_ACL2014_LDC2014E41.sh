@@ -14,11 +14,15 @@ export WNHOME="${JAMR_HOME}/tools/WordNet-3.0"
 export SCALA="${JAMR_HOME}/tools/scala-2.11.2/bin/scala"
 export SMATCH="${JAMR_HOME}/scripts/smatch_v1_0/smatch_modified.py"
 
-export TRAIN_FILE="${JAMR_HOME}/data/LDC2014E41_DEFT_Phase_1_AMR_Annotation_R4/data/split/training/training.txt"
-export DEV_FILE="${JAMR_HOME}/data/LDC2014E41_DEFT_Phase_1_AMR_Annotation_R4/data/split/dev/dev.txt"
-export TEST_FILE="${JAMR_HOME}/data/LDC2014E41_DEFT_Phase_1_AMR_Annotation_R4/data/split/test/test.txt"
+#export TRAIN_FILE="${JAMR_HOME}/data/LDC2014E41_DEFT_Phase_1_AMR_Annotation_R4/data/split/training/training.txt"
+#export DEV_FILE="${JAMR_HOME}/data/LDC2014E41_DEFT_Phase_1_AMR_Annotation_R4/data/split/dev/dev.txt"
+#export TEST_FILE="${JAMR_HOME}/data/LDC2014E41_DEFT_Phase_1_AMR_Annotation_R4/data/split/test/test.txt"
 
-export MODEL_DIR="${JAMR_HOME}/models/ACL2014_LDC2013E117"  # ideally keep this the same as the config_SOMETHING.sh
+export TRAIN_FILE="${JAMR_HOME}/data/ldc-official/training/amr-release-1.0-training-proxy.txt"
+export DEV_FILE="${JAMR_HOME}/data/ldc-official/dev/amr-release-1.0-dev-proxy.txt"
+export TEST_FILE="${JAMR_HOME}/data/ldc-official/test/amr-release-1.0-test-proxy.txt"
+
+export MODEL_DIR="${JAMR_HOME}/models/PROXY"  # ideally keep this the same as the config_SOMETHING.sh
 
 # The options specified below will override any options specified in the scripts
 # CONCEPT_ID_TRAINING_OPTIONS and RELATION_ID_TRAINING_OPTIONS will override PARSER_OPTIONS

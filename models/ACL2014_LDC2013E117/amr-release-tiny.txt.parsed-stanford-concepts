@@ -1,0 +1,73 @@
+# ::snt The International Atomic Energy Agency reached an agreement with Iranian officials that stated there were no remaining issues and ambiguities regarding Iran's nuclear program and activities.
+# ::tok The International Atomic Energy Agency reached an agreement with Iranian officials that stated there were no remaining issues and ambiguities regarding Iran 's nuclear program and activities .
+# ::alignments 7-8|0.1 26-27|0.0.0.0.0.0.0.1 19-20|0.0.0.0.1 9-10|0.0.1.0.0.0+0.0.1.0.0+0.0.1.0 10-11|0.0.1.1+0.0.1+0.0 5-6|0 16-17|0.0.0.0.0.0 25-26|0.0.0.0.0.0.0 1-5|0.1.0.0.0+0.1.0.0.1+0.1.0.0.2+0.1.0.0.3+0.1.0.0+0.1.0 23-24|0.1.1 12-13|0.0.0 24-25|0.0.0.0.0.0.0.0 17-18|0.0.0.0.0 18-19|0.0.0.0 ::annotator JAMR dev v0.3 mod v0.1 ::date 2015-02-17T12:19:58.282
+# ::node	0	reach-01	5-6
+# ::node	0.0	person	10-11
+# ::node	0.0.0	state-01	12-13
+# ::node	0.0.0.0	and	18-19
+# ::node	0.0.0.0.0	issue	17-18
+# ::node	0.0.0.0.0.0	remain-01	16-17
+# ::node	0.0.0.0.0.0.0	and	25-26
+# ::node	0.0.0.0.0.0.0.0	program	24-25
+# ::node	0.0.0.0.0.0.0.1	activity	26-27
+# ::node	0.0.0.0.1	ambiguity	19-20
+# ::node	0.0.1	have-org-role-91	10-11
+# ::node	0.0.1.0	country	9-10
+# ::node	0.0.1.0.0	name	9-10
+# ::node	0.0.1.0.0.0	"Iran"	9-10
+# ::node	0.0.1.1	official	10-11
+# ::node	0.1	agree-01	7-8
+# ::node	0.1.0	organization	1-5
+# ::node	0.1.0.0	name	1-5
+# ::node	0.1.0.0.0	"Agency"	1-5
+# ::node	0.1.0.0.1	"Energy"	1-5
+# ::node	0.1.0.0.2	"International"	1-5
+# ::node	0.1.0.0.3	"Atomic"	1-5
+# ::node	0.1.1	nucleus	23-24
+# ::root	0	reach-01
+# ::edge	agree-01	ARG0	organization	0.1	0.1.0	
+# ::edge	agree-01	ARG1	nucleus	0.1	0.1.1	
+# ::edge	and	op1	issue	0.0.0.0	0.0.0.0.0	
+# ::edge	and	op1	remain-01	0.0.0.0.0.0.0	0.0.0.0.0.0	
+# ::edge	and	op2	ambiguity	0.0.0.0	0.0.0.0.1	
+# ::edge	and	op2	program	0.0.0.0.0.0.0	0.0.0.0.0.0.0.0	
+# ::edge	and	op3	activity	0.0.0.0.0.0.0	0.0.0.0.0.0.0.1	
+# ::edge	country	name	name	0.0.1.0	0.0.1.0.0	
+# ::edge	have-org-role-91	ARG0	person	0.0.1	0.0	
+# ::edge	have-org-role-91	ARG1	country	0.0.1	0.0.1.0	
+# ::edge	have-org-role-91	ARG2	official	0.0.1	0.0.1.1	
+# ::edge	name	op1	"Agency"	0.1.0.0	0.1.0.0.0	
+# ::edge	name	op1	"Iran"	0.0.1.0.0	0.0.1.0.0.0	
+# ::edge	name	op2	"Energy"	0.1.0.0	0.1.0.0.1	
+# ::edge	name	op3	"International"	0.1.0.0	0.1.0.0.2	
+# ::edge	name	op4	"Atomic"	0.1.0.0	0.1.0.0.3	
+# ::edge	organization	name	name	0.1.0	0.1.0.0	
+# ::edge	reach-01	ARG0	person	0	0.0	
+# ::edge	reach-01	ARG1	agree-01	0	0.1	
+# ::edge	remain-01	ARG1	issue	0.0.0.0.0.0	0.0.0.0.0	
+# ::edge	state-01	ARG0	person	0.0.0	0.0	
+# ::edge	state-01	ARG1	and	0.0.0	0.0.0.0	
+(r / reach-01 
+      :ARG0 (p / person 
+            :ARG0-of (s / state-01 
+                  :ARG1 (a5 / and 
+                        :op1 (i / issue 
+                              :ARG1-of (r2 / remain-01 
+                                    :op-of (a4 / and 
+                                          :op1 (p2 / program) 
+                                          :op2 (a2 / activity)))) 
+                        :op2 (a3 / ambiguity))) 
+            :ARG0-of (h / have-org-role-91 
+                  :ARG1 (c / country 
+                        :name (n / name 
+                              :op1 "Iran")) 
+                  :ARG2 (o / official))) 
+      :ARG1 (a / agree-01 
+            :ARG0 (o2 / organization 
+                  :name (n2 / name 
+                        :op1 "Agency" 
+                        :op2 "Energy" 
+                        :op3 "International" 
+                        :op4 "Atomic")) 
+            :ARG1 (n3 / nucleus)))
+

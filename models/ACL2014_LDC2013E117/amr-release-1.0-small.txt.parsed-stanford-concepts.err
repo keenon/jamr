@@ -1,0 +1,2722 @@
+Stage1 features = List(bias, length, fromNERTagger, conceptGivenPhrase)
+features = List(rootConcept, rootDependencyPathv1, bias, typeBias, self, fragHead, edgeCount, distance, logDistance, posPathv3, dependencyPathv4, conceptBigram)
+connected = true
+Reading weights
+done
+Sentence: 2007-08-21
+
+Oracle Span 1:  2007-08-21 => (date-entity :day 21 :month 8 :year 2007)
+mkDayMonthYear(2007-08-21,21,08,2007)
+Registering annotator regexner2 with class edu.stanford.nlp.pipeline.TokensRegexNERAnnotator
+Registering annotator regexner1 with class edu.stanford.nlp.pipeline.TokensRegexNERAnnotator
+Adding annotator tokenize
+TokenizerAnnotator: No tokenizer type provided. Defaulting to PTBTokenizer.
+Adding annotator ssplit
+edu.stanford.nlp.curator.CuratorAnnotatorImplementations:
+Adding annotator pos
+Reading POS tagger model from edu/stanford/nlp/models/pos-tagger/english-left3words/english-left3words-distsim.tagger ... done [0.9 sec].
+Adding annotator lemma
+Adding annotator ner
+Loading classifier from edu/stanford/nlp/models/ner/english.all.3class.distsim.crf.ser.gz ... done [4.6 sec].
+Loading classifier from edu/stanford/nlp/models/ner/english.muc.7class.distsim.crf.ser.gz ... done [3.1 sec].
+Loading classifier from edu/stanford/nlp/models/ner/english.conll.4class.distsim.crf.ser.gz ... done [3.0 sec].
+sutime.binder.1.
+Initializing JollyDayHoliday for sutime with classpath:edu/stanford/nlp/models/sutime/jollyday/Holidays_sutime.xml
+Reading TokensRegex rules from edu/stanford/nlp/models/sutime/defs.sutime.txt
+Reading TokensRegex rules from edu/stanford/nlp/models/sutime/english.sutime.txt
+Feb 17, 2015 12:21:57 PM edu.stanford.nlp.ling.tokensregex.CoreMapExpressionExtractor appendRules
+INFO: Ignoring inactive rule: null
+Feb 17, 2015 12:21:57 PM edu.stanford.nlp.ling.tokensregex.CoreMapExpressionExtractor appendRules
+INFO: Ignoring inactive rule: temporal-composite-8:ranges
+Reading TokensRegex rules from edu/stanford/nlp/models/sutime/english.holidays.sutime.txt
+Adding annotator regexner1
+TokensRegexNERAnnotator regexner1: Replace duplicate entry (higher priority): old=Entry{Deist RELIGION [ORGANIZATION, PERSON, MISC] 1.0}, new=Entry{Deist RELIGION [ORGANIZATION, PERSON, MISC] 3.0}
+TokensRegexNERAnnotator regexner1: Entry has multiple types: murder	CRIMINAL_CHARGE,CAUSE_OF_DEATH	11.  Taking type to be CRIMINAL_CHARGE
+TokensRegexNERAnnotator regexner1: Entry has multiple types: New York	CITY,STATE_OR_PROVINCE	LOCATION	2.  Taking type to be CITY
+TokensRegexNERAnnotator regexner1: Entry has multiple types: England	COUNTRY,STATE_OR_PROVINCE	LOCATION	1.  Taking type to be COUNTRY
+TokensRegexNERAnnotator regexner1: Entry has multiple types: Scotland	COUNTRY,STATE_OR_PROVINCE	LOCATION	1.  Taking type to be COUNTRY
+TokensRegexNERAnnotator regexner1: Replace duplicate entry (higher priority): old=Entry{SANDER TITLE [1] 0.0}, new=Entry{sander CITY [LOCATION] 1.0}
+TokensRegexNERAnnotator regexner1: Replace duplicate entry (higher priority): old=Entry{WINDER TITLE [1] 0.0}, new=Entry{winder CITY [LOCATION] 1.0}
+TokensRegexNERAnnotator regexner1: Replace duplicate entry (higher priority): old=Entry{CARVER TITLE [1] 0.0}, new=Entry{carver CITY [LOCATION] 1.0}
+TokensRegexNERAnnotator regexner1: Read 56933 unique entries out of 73409 from data/kbp_regexner_mapping_nocase.tab, 0 TokensRegex patterns.
+Adding annotator regexner2
+TokensRegexNERAnnotator regexner2: Read 478 unique entries out of 481 from data/kbp_regexner_mapping.tab, 0 TokensRegex patterns.
+Adding annotator parse
+Loading parser from serialized file edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz ...done [0.7 sec].
+Adding annotator dcoref
+Adding annotator srl
+Adding annotator nom
+Adding annotator prep
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Spans:
+Span 0-1:  2007-08-21 => (date-entity :year 2007 :month 8 :day 21)
+
+Langrangian relaxation converged after 1 iterations. Delta = 0.0
+Oracle Span 0-1:  2007-08-21 => (date-entity :day 21 :month 8 :year 2007)
+
+Dependencies:
+1	2007-08-21	_	NNP	NNP	_	0	root	_	_
+
+Oracle:
+(d / date-entity, day, 21)
+(d / date-entity, month, 8)
+(d / date-entity, year, 2007)
+
+Input(Some(Graph(null,ArrayBuffer(Span(0,1,List(3, 2, 1, 0),2007-08-21,(date-entity :year 2007 :month 8 :day 21),false)),Map(2 -> 8, 1 -> 2007, 0 -> date-entity, 3 -> 21),Map(2 -> 2007, 8 -> 8, d -> date-entity, 22 -> 21))),[Ljava.lang.String;@e6521dc,Annotation([Ljava.lang.String;@5bcda4c8,[Ljava.lang.String;@3cf1011a,[Ljava.lang.String;@50cd8f2d),Annotation([Ljava.lang.String;@77812f29,[Ljava.lang.String;@41dc2ef5,[Ledu.cmu.lti.nlp.amr.Dependency;@75911e05),Annotation([Ljava.lang.String;@4919437d,[Ljava.lang.String;@379fd510,[Ljava.lang.String;@1714fe90),Annotation([Ljava.lang.String;@6a88ab41,[Ljava.lang.String;@69091fc6,[Ledu.cmu.lti.nlp.amr.Entity;@20f770a2))
+AMR:
+(d / date-entity, day, 22 / 21)
+(d / date-entity, month, 8 / 8)
+(d / date-entity, year, 2 / 2007)
+
+Decoded in 29,342,330 microseconds
+Sentence: Iran (Islamic Republic of) (IR)
+
+WARNING ADDING ANOTHER SPAN TO NODE 0.0.1
+ArrayBuffer(0) + 1
+WARNING ADDING ANOTHER SPAN TO NODE 0.0.2
+ArrayBuffer(0) + 2
+WARNING ADDING ANOTHER SPAN TO NODE 0.0.3
+ArrayBuffer(0) + 3
+Oracle Span 1:  Iran => "Iran"
+Oracle Span 2:  Iran ( Islamic Republic of => (country :name (name :op "Iran" :op "of" :op "Republic" :op "Islamic"))
+Oracle Span 3:  of => "of"
+Oracle Span 4:  Republic => "Republic"
+NER Entity: (country :name (name :op "Iran"))
+NER Entity: (country :name (name :op "Iran"))
+Spans:
+Span 0-1:  Iran => (country :name (name :op "Iran"))
+
+Langrangian relaxation converged after 1 iterations. Delta = 0.0
+WARNING ADDING ANOTHER SPAN TO NODE 0.0.1
+ArrayBuffer(0) + 1
+WARNING ADDING ANOTHER SPAN TO NODE 0.0.2
+ArrayBuffer(0) + 2
+WARNING ADDING ANOTHER SPAN TO NODE 0.0.3
+ArrayBuffer(0) + 3
+Oracle Span 0-1:  Iran => "Iran"
+Oracle Span 0-5:  Iran ( Islamic Republic of => (country :name (name :op "Iran" :op "of" :op "Republic" :op "Islamic"))
+Oracle Span 4-5:  of => "of"
+Oracle Span 3-4:  Republic => "Republic"
+
+Dependencies:
+1	Iran	_	NNP	NNP	_	0	root	_	_
+2	(	_	(	(	_	4	punct	_	_
+3	Islamic	_	NNP	NNP	_	4	nn	_	_
+4	Republic	_	NNP	NNP	_	1	dep	_	_
+5	of	_	IN	IN	_	4	prep	_	_
+6	)	_	)	)	_	4	punct	_	_
+7	(	_	(	(	_	8	punct	_	_
+8	IR	_	NNP	NNP	_	1	appos	_	_
+9	)	_	)	)	_	8	punct	_	_
+
+Oracle:
+(c / country, name, n / name)
+(n / name, op, "Islamic")
+(n / name, op, I / "Iran")
+(n / name, op, R / "Republic")
+(n / name, op, o / "of")
+
+Input(Some(Graph(null,ArrayBuffer(Span(0,1,List(2, 1, 0),Iran,(country :name (name :op "Iran")),false)),Map(2 -> "Iran", 1 -> name, 0 -> country),Map(n -> name, c -> country))),[Ljava.lang.String;@79c6d64c,Annotation([Ljava.lang.String;@14f1c51e,[Ljava.lang.String;@b70252e,[Ljava.lang.String;@6bb463d2),Annotation([Ljava.lang.String;@240fbc5e,[Ljava.lang.String;@3ecc54f4,[Ledu.cmu.lti.nlp.amr.Dependency;@341f5f56),Annotation([Ljava.lang.String;@7cfd10f4,[Ljava.lang.String;@2549ae79,[Ljava.lang.String;@797e25d0),Annotation([Ljava.lang.String;@37d53046,[Ljava.lang.String;@23bbecf8,[Ledu.cmu.lti.nlp.amr.Entity;@4b69a490))
+AMR:
+(c / country, name, n / name)
+(n / name, op, "Iran")
+
+Decoded in 359,259 microseconds
+Sentence: International; weapons; politics; proliferation; energy
+
+Oracle Span 1:  ; => and
+Oracle Span 2:  energy => energy
+Oracle Span 3:  International => international
+Oracle Span 4:  politics => politics
+Oracle Span 5:  proliferation => proliferate-01
+Oracle Span 6:  weapons => weapon
+Spans:
+Span 8-9:   => energy
+Span 6-7:   => proliferate-01
+Span 4-5:  energy => politics
+Span 0-1:  International; => international
+Span 2-3:  politics; => weapon
+Span 1-2:  weapons; => and
+
+Langrangian relaxation converged after 1 iterations. Delta = 0.0
+Oracle Span 1-2:  ; => and
+Oracle Span 8-9:  energy => energy
+Oracle Span 0-1:  International => international
+Oracle Span 4-5:  politics => politics
+Oracle Span 6-7:  proliferation => proliferate-01
+Oracle Span 2-3:  weapons => weapon
+
+Dependencies:
+1	International	_	NNP	NNP	_	0	root	_	_
+2	;	_	:	:	_	1	punct	_	_
+3	weapons	_	NNS	NNS	_	1	dep	_	_
+4	;	_	:	:	_	3	punct	_	_
+5	politics	_	NNS	NNS	_	3	dep	_	_
+6	;	_	:	:	_	3	punct	_	_
+7	proliferation	_	NN	NN	_	3	dep	_	_
+8	;	_	:	:	_	7	punct	_	_
+9	energy	_	NN	NN	_	7	dep	_	_
+
+Oracle:
+(a / and, op, e / energy)
+(a / and, op, i / international)
+(a / and, op, p / politics)
+(a / and, op, p2 / proliferate-01)
+(a / and, op, w / weapon)
+
+Input(Some(Graph(null,ArrayBuffer(Span(8,9,List(0),,energy,false), Span(6,7,List(1),,proliferate-01,false), Span(2,3,List(2),politics;,weapon,false), Span(4,5,List(3),energy,politics,false), Span(0,1,List(4),International;,international,false), Span(1,2,List(5),weapons;,and,false)),Map(2 -> weapon, 5 -> and, 1 -> proliferate-01, 4 -> international, 0 -> energy, 3 -> politics),Map(w -> weapon, e -> energy, p2 -> politics, p -> proliferate-01, a -> and, i -> international))),[Ljava.lang.String;@6c047f6b,Annotation([Ljava.lang.String;@341e1c66,[Ljava.lang.String;@2c24e9ae,[Ljava.lang.String;@469b64de),Annotation([Ljava.lang.String;@92ba441,[Ljava.lang.String;@4d12642e,[Ledu.cmu.lti.nlp.amr.Dependency;@46f09dbb),Annotation([Ljava.lang.String;@5b50ac2f,[Ljava.lang.String;@f8d12a8,[Ljava.lang.String;@51603463),Annotation([Ljava.lang.String;@133f76b1,[Ljava.lang.String;@4d50812d,[Ledu.cmu.lti.nlp.amr.Entity;@2a2fd27d))
+AMR:
+(a / and, op, e / energy)
+(a / and, op, i / international)
+(a / and, op, p / proliferate-01)
+(a / and, op, p2 / politics)
+(a / and, op, w / weapon)
+
+Decoded in 286,839 microseconds
+Sentence: The International Atomic Energy Agency reached an agreement with Iranian officials that stated there were no remaining issues and ambiguities regarding Iran's nuclear program and activities.
+
+Oracle Span 1:  activities => activity
+Oracle Span 2:  agreement => agree-01
+Oracle Span 3:  ambiguities => ambiguity
+Oracle Span 4:  and => and
+Oracle Span 5:  and => and
+Oracle Span 6:  International Atomic Energy Agency => (organization :name (name :op "Agency" :op "Energy" :op "Atomic" :op "International"))
+Oracle Span 7:  Iran => (country :name (name :op "Iran"))
+Oracle Span 8:  issues => issue
+Oracle Span 9:  no => -
+Oracle Span 10:  nuclear => nucleus
+Oracle Span 11:  officials => (have-org-role-91 :ARG2 official)
+Oracle Span 12:  program => program
+Oracle Span 13:  reached => reach-01
+Oracle Span 14:  regarding => regard-01
+Oracle Span 15:  remaining => remain-01
+Oracle Span 16:  stated => state-01
+NER Entity: (organization :name (name :op "International" :op "Atomic" :op "Energy" :op "Agency"))
+NER Entity: (country :name (name :op "Iran"))
+Spans:
+Span 26-27:   => activity
+Span 25-26:  activities. => and
+Span 7-8:  agreement => agree-01
+Span 19-20:  ambiguities => ambiguity
+Span 24-25:  and => program
+Span 18-19:  and => and
+Span 1-5:  International Atomic Energy Agency => (organization :name (name :op "Atomic" :op "International" :op "Energy" :op "Agency"))
+Span 9-10:  Iranian => (country :name (name :op "Iran"))
+Span 17-18:  issues => issue
+Span 10-11:  officials => (person :ARG0-of (have-org-role-91 :ARG2 official))
+Span 23-24:  program => nucleus
+Span 5-6:  reached => reach-01
+Span 16-17:  remaining => remain-01
+Span 12-13:  stated => state-01
+
+Langrangian relaxation converged after 51 iterations. Delta = 0.0
+Oracle Span 26-27:  activities => activity
+Oracle Span 7-8:  agreement => agree-01
+Oracle Span 19-20:  ambiguities => ambiguity
+Oracle Span 18-19:  and => and
+Oracle Span 25-26:  and => and
+Oracle Span 1-5:  International Atomic Energy Agency => (organization :name (name :op "Agency" :op "Energy" :op "Atomic" :op "International"))
+Oracle Span 21-22:  Iran => (country :name (name :op "Iran"))
+Oracle Span 17-18:  issues => issue
+Oracle Span 15-16:  no => -
+Oracle Span 23-24:  nuclear => nucleus
+Oracle Span 10-11:  officials => (have-org-role-91 :ARG2 official)
+Oracle Span 24-25:  program => program
+Oracle Span 5-6:  reached => reach-01
+Oracle Span 20-21:  regarding => regard-01
+Oracle Span 16-17:  remaining => remain-01
+Oracle Span 12-13:  stated => state-01
+
+Dependencies:
+1	The	_	DT	DT	_	5	det	_	_
+2	International	_	NNP	NNP	_	5	nn	_	_
+3	Atomic	_	NNP	NNP	_	5	nn	_	_
+4	Energy	_	NNP	NNP	_	5	nn	_	_
+5	Agency	_	NNP	NNP	_	6	nsubj	_	_
+6	reached	_	VBD	VBD	_	0	root	_	_
+7	an	_	DT	DT	_	8	det	_	_
+8	agreement	_	NN	NN	_	6	dobj	_	_
+9	with	_	IN	IN	_	6	prep	_	_
+10	Iranian	_	JJ	JJ	_	11	amod	_	_
+11	officials	_	NNS	NNS	_	9	pobj	_	_
+12	that	_	WDT	WDT	_	13	nsubj	_	_
+13	stated	_	VBD	VBD	_	11	rcmod	_	_
+14	there	_	EX	EX	_	15	expl	_	_
+15	were	_	VBD	VBD	_	13	ccomp	_	_
+16	no	_	DT	DT	_	18	neg	_	_
+17	remaining	_	VBG	VBG	_	18	amod	_	_
+18	issues	_	NNS	NNS	_	15	nsubj	_	_
+19	and	_	CC	CC	_	18	cc	_	_
+20	ambiguities	_	NNS	NNS	_	18	conj	_	_
+21	regarding	_	VBG	VBG	_	20	prep	_	_
+22	Iran	_	NNP	NNP	_	25	poss	_	_
+23	's	_	POS	POS	_	22	possessive	_	_
+24	nuclear	_	JJ	JJ	_	25	amod	_	_
+25	program	_	NN	NN	_	21	pobj	_	_
+26	and	_	CC	CC	_	25	cc	_	_
+27	activities	_	NNS	NNS	_	25	conj	_	_
+28	.	_	.	.	_	6	punct	_	_
+
+Oracle:
+(a / agree-01, ARG0, o / organization)
+(a2 / and, op, a3 / ambiguity)
+(a2 / and, op, i / issue)
+(a4 / and, op, a5 / activity)
+(a4 / and, op, p / program)
+(a5 / activity, mod, n3 / nucleus)
+(a5 / activity, poss, c / country)
+(c / country, name, n2 / name)
+(h / have-org-role-91, ARG1, c / country)
+(h / have-org-role-91, ARG2, o2 / official)
+(i / issue, polarity, - / -)
+(n / name, op, "Agency")
+(n / name, op, "Atomic")
+(n / name, op, "Energy")
+(n / name, op, "International")
+(n2 / name, op, "Iran")
+(o / organization, name, n / name)
+(p / program, mod, n3 / nucleus)
+(p / program, poss, c / country)
+(r / remain-01, ARG1, a3 / ambiguity)
+(r / remain-01, ARG1, i / issue)
+(r2 / regard-01, ARG0, a2 / and)
+(r2 / regard-01, ARG1, a4 / and)
+(r3 / reach-01, ARG0, o / organization)
+(r3 / reach-01, ARG1, a / agree-01)
+(s / state-01, ARG0, a / agree-01)
+(s / state-01, ARG1, a2 / and)
+
+Input(Some(Graph(null,ArrayBuffer(Span(7,8,List(0),agreement,agree-01,false), Span(26,27,List(1),,activity,false), Span(19,20,List(2),ambiguities,ambiguity,false), Span(9,10,List(5, 4, 3),Iranian,(country :name (name :op "Iran")),false), Span(10,11,List(8, 7, 6),officials,(person :ARG0-of (have-org-role-91 :ARG2 official)),false), Span(5,6,List(9),reached,reach-01,false), Span(16,17,List(10),remaining,remain-01,false), Span(25,26,List(11),activities.,and,false), Span(1,5,List(17, 16, 15, 14, 13, 12),International Atomic Energy Agency,(organization :name (name :op "Atomic" :op "International" :op "Energy" :op "Agency")),false), Span(23,24,List(18),program,nucleus,false), Span(12,13,List(19),stated,state-01,false), Span(24,25,List(20),and,program,false), Span(17,18,List(21),issues,issue,false), Span(18,19,List(22),and,and,false)),Map(2 -> ambiguity, 5 -> "Iran", 12 -> organization, 15 -> "International", 8 -> official, 21 -> issue, 18 -> nucleus, 7 -> have-org-role-91, 17 -> "Agency", 1 -> activity, 4 -> name, 11 -> and, 14 -> "Atomic", 20 -> program, 6 -> person, 22 -> and, 0 -> agree-01, 9 -> reach-01, 16 -> "Energy", 19 -> state-01, 3 -> country, 10 -> remain-01, 13 -> name),Map(n -> name, h -> have-org-role-91, p2 -> program, a3 -> ambiguity, s -> state-01, p -> person, r2 -> remain-01, n3 -> nucleus, a -> agree-01, a5 -> and, o2 -> organization, i -> issue, a2 -> activity, r -> reach-01, c -> country, o -> official, n2 -> name, a4 -> and))),[Ljava.lang.String;@33d6a5a9,Annotation([Ljava.lang.String;@7a99d61a,[Ljava.lang.String;@ea10948,[Ljava.lang.String;@464981a6),Annotation([Ljava.lang.String;@40348f2b,[Ljava.lang.String;@7429a831,[Ledu.cmu.lti.nlp.amr.Dependency;@724404b5),Annotation([Ljava.lang.String;@788aefea,[Ljava.lang.String;@1c237a07,[Ljava.lang.String;@25722192),Annotation([Ljava.lang.String;@77c1f825,[Ljava.lang.String;@581bbc88,[Ledu.cmu.lti.nlp.amr.Entity;@5f6f06ce))
+AMR:
+(a / agree-01, ARG0, o2 / organization)
+(a / agree-01, ARG1, n3 / nucleus)
+(a4 / and, op, a2 / activity)
+(a4 / and, op, p2 / program)
+(a4 / and, op, r2 / remain-01)
+(a5 / and, op, a3 / ambiguity)
+(a5 / and, op, i / issue)
+(c / country, name, n / name)
+(h / have-org-role-91, ARG0, p / person)
+(h / have-org-role-91, ARG1, c / country)
+(h / have-org-role-91, ARG2, o / official)
+(n / name, op, "Iran")
+(n2 / name, op, "Agency")
+(n2 / name, op, "Atomic")
+(n2 / name, op, "Energy")
+(n2 / name, op, "International")
+(o2 / organization, name, n2 / name)
+(r / reach-01, ARG0, p / person)
+(r / reach-01, ARG1, a / agree-01)
+(r2 / remain-01, ARG1, i / issue)
+(s / state-01, ARG0, p / person)
+(s / state-01, ARG1, a5 / and)
+
+Decoded in 8,053,138 microseconds
+Sentence: U.S. and European officials suspect that Iran's civilian nuclear energy program masks an effort to obtain technology that could be used in the production of an atomic bomb.
+
+Oracle Span 1:  and => and
+Oracle Span 2:  atomic => atom
+Oracle Span 3:  bomb => bomb
+Oracle Span 4:  civilian => civilian
+Oracle Span 5:  could => possible
+Oracle Span 6:  effort => effort
+Oracle Span 7:  energy => energy
+Oracle Span 8:  European => (continent :name (name :op "Europe"))
+Oracle Span 9:  Iran => (country :name (name :op "Iran"))
+Oracle Span 10:  masks => mask-01
+Oracle Span 11:  nuclear => nucleus
+Oracle Span 12:  obtain => obtain-01
+Oracle Span 13:  officials => (have-org-role-91 :ARG2 official)
+Oracle Span 14:  production => produce-01
+Oracle Span 15:  program => program
+Oracle Span 16:  suspect => suspect-01
+Oracle Span 17:  technology => technology
+Oracle Span 18:  U.S. => (have-org-role-91 :ARG1 (country :name (name :op "U.S.")))
+Oracle Span 19:  used => use-01
+NER Entity: (country :name (name :op "U.S."))
+NER Entity: (country :name (name :op "Iran"))
+NER Entity: (thing :name (name :op "European"))
+Spans:
+Span 28-29:   => bomb
+Span 12-13:  an => (thing :ARG2-of mask-01)
+Span 1-2:  and => and
+Span 19-20:  be => possible
+Span 27-28:  bomb. => atom
+Span 2-3:  European => (organization :name (name :op "European"))
+Span 21-22:  in => use-01
+Span 11-12:  masks => program
+Span 8-9:  nuclear => civilian
+Span 24-25:  of => produce-01
+Span 3-4:  officials => (person :ARG0-of (have-org-role-91 :ARG2 official))
+Span 10-11:  program => energy
+Span 4-5:  suspect => suspect-01
+Span 16-17:  technology => obtain-01
+Span 17-18:  that => technology
+Span 14-15:  to => effort
+Span 0-1:  U.S. => (country :name (name :op "U.S."))
+
+Langrangian relaxation converged after 38 iterations. Delta = 0.0
+Oracle Span 1-2:  and => and
+Oracle Span 27-28:  atomic => atom
+Oracle Span 28-29:  bomb => bomb
+Oracle Span 8-9:  civilian => civilian
+Oracle Span 19-20:  could => possible
+Oracle Span 14-15:  effort => effort
+Oracle Span 10-11:  energy => energy
+Oracle Span 2-3:  European => (continent :name (name :op "Europe"))
+Oracle Span 6-7:  Iran => (country :name (name :op "Iran"))
+Oracle Span 12-13:  masks => mask-01
+Oracle Span 9-10:  nuclear => nucleus
+Oracle Span 16-17:  obtain => obtain-01
+Oracle Span 3-4:  officials => (have-org-role-91 :ARG2 official)
+Oracle Span 24-25:  production => produce-01
+Oracle Span 11-12:  program => program
+Oracle Span 4-5:  suspect => suspect-01
+Oracle Span 17-18:  technology => technology
+Oracle Span 0-1:  U.S. => (have-org-role-91 :ARG1 (country :name (name :op "U.S.")))
+Oracle Span 21-22:  used => use-01
+
+Dependencies:
+1	U.S.	_	NNP	NNP	_	4	nn	_	_
+2	and	_	CC	CC	_	1	cc	_	_
+3	European	_	JJ	JJ	_	1	conj	_	_
+4	officials	_	NNS	NNS	_	5	nsubj	_	_
+5	suspect	_	VBP	VBP	_	0	root	_	_
+6	that	_	IN	IN	_	13	mark	_	_
+7	Iran	_	NNP	NNP	_	12	poss	_	_
+8	's	_	POS	POS	_	7	possessive	_	_
+9	civilian	_	JJ	JJ	_	12	amod	_	_
+10	nuclear	_	JJ	JJ	_	12	amod	_	_
+11	energy	_	NN	NN	_	12	nn	_	_
+12	program	_	NN	NN	_	13	nsubj	_	_
+13	masks	_	VBZ	VBZ	_	5	ccomp	_	_
+14	an	_	DT	DT	_	15	det	_	_
+15	effort	_	NN	NN	_	13	dobj	_	_
+16	to	_	TO	TO	_	17	aux	_	_
+17	obtain	_	VB	VB	_	15	vmod	_	_
+18	technology	_	NN	NN	_	17	dobj	_	_
+19	that	_	WDT	WDT	_	22	nsubjpass	_	_
+20	could	_	MD	MD	_	22	aux	_	_
+21	be	_	VB	VB	_	22	auxpass	_	_
+22	used	_	VBN	VBN	_	18	rcmod	_	_
+23	in	_	IN	IN	_	22	prep	_	_
+24	the	_	DT	DT	_	25	det	_	_
+25	production	_	NN	NN	_	23	pobj	_	_
+26	of	_	IN	IN	_	25	prep	_	_
+27	an	_	DT	DT	_	29	det	_	_
+28	atomic	_	JJ	JJ	_	29	amod	_	_
+29	bomb	_	NN	NN	_	26	pobj	_	_
+30	.	_	.	.	_	5	punct	_	_
+
+Oracle:
+(b / bomb, mod, a2 / atom)
+(c / country, name, n / name)
+(c2 / continent, name, n2 / name)
+(c4 / country, name, n4 / name)
+(e / energy, mod, c3 / civilian)
+(e / energy, mod, n3 / nucleus)
+(e2 / effort, purpose, o2 / obtain-01)
+(h / have-org-role-91, ARG1, c / country)
+(h2 / have-org-role-91, ARG1, c2 / continent)
+(h2 / have-org-role-91, ARG2, o3 / official)
+(m / mask-01, ARG1, e2 / effort)
+(m / mask-01, ARG2, p / program)
+(n / name, op, "U.S.")
+(n2 / name, op, "Europe")
+(n4 / name, op, "Iran")
+(o2 / obtain-01, ARG1, t / technology)
+(p / program, mod, e / energy)
+(p / program, poss, c4 / country)
+(p2 / produce-01, ARG1, b / bomb)
+(s / suspect-01, ARG0, a / and)
+(s / suspect-01, ARG1, m / mask-01)
+(u2 / use-01, ARG1, t / technology)
+(u2 / use-01, ARG2, p2 / produce-01)
+(u2 / use-01, mod, p4 / possible)
+
+Input(Some(Graph(null,ArrayBuffer(Span(17,18,List(0),that,technology,false), Span(4,5,List(1),suspect,suspect-01,false), Span(10,11,List(2),program,energy,false), Span(14,15,List(3),to,effort,false), Span(0,1,List(6, 5, 4),U.S.,(country :name (name :op "U.S.")),false), Span(2,3,List(9, 8, 7),European,(organization :name (name :op "European")),false), Span(19,20,List(10),be,possible,false), Span(16,17,List(11),technology,obtain-01,false), Span(28,29,List(12),,bomb,false), Span(8,9,List(13),nuclear,civilian,false), Span(24,25,List(14),of,produce-01,false), Span(3,4,List(17, 16, 15),officials,(person :ARG0-of (have-org-role-91 :ARG2 official)),false), Span(11,12,List(18),masks,program,false), Span(12,13,List(20, 19),an,(thing :ARG2-of mask-01),false), Span(27,28,List(21),bomb.,atom,false), Span(21,22,List(22),in,use-01,false), Span(1,2,List(23),and,and,false)),Map(2 -> energy, 5 -> name, 12 -> bomb, 15 -> person, 8 -> name, 21 -> atom, 18 -> program, 7 -> organization, 17 -> official, 1 -> suspect-01, 23 -> and, 4 -> country, 11 -> obtain-01, 14 -> produce-01, 20 -> mask-01, 6 -> "U.S.", 22 -> use-01, 0 -> technology, 9 -> "European", 16 -> have-org-role-91, 19 -> thing, 3 -> effort, 10 -> possible, 13 -> civilian),Map(e -> energy, n -> name, h -> have-org-role-91, t -> technology, b -> bomb, o3 -> official, e2 -> effort, p2 -> produce-01, s -> suspect-01, m -> mask-01, p -> possible, a -> atom, p4 -> program, o2 -> obtain-01, t2 -> thing, a2 -> and, c -> country, u -> use-01, o -> organization, p3 -> person, n2 -> name, c2 -> civilian))),[Ljava.lang.String;@31c824df,Annotation([Ljava.lang.String;@7740e9b9,[Ljava.lang.String;@6df332a,[Ljava.lang.String;@2ba2fde1),Annotation([Ljava.lang.String;@5bbcca96,[Ljava.lang.String;@2b41fd79,[Ledu.cmu.lti.nlp.amr.Dependency;@54f8dd58),Annotation([Ljava.lang.String;@68897fd3,[Ljava.lang.String;@555cf02e,[Ljava.lang.String;@71d275c9),Annotation([Ljava.lang.String;@63d264b6,[Ljava.lang.String;@4006e8f8,[Ledu.cmu.lti.nlp.amr.Entity;@72e9bd56))
+AMR:
+(a2 / and, op, c / country)
+(a2 / and, op, p3 / person)
+(b / bomb, mod, a / atom)
+(c / country, name, n / name)
+(e2 / effort, purpose, o2 / obtain-01)
+(h / have-org-role-91, ARG0, p3 / person)
+(h / have-org-role-91, ARG1, o / organization)
+(h / have-org-role-91, ARG2, o3 / official)
+(m / mask-01, ARG0, p4 / program)
+(m / mask-01, ARG1, e2 / effort)
+(m / mask-01, ARG2, t2 / thing)
+(n / name, op, "U.S.")
+(n2 / name, op, "European")
+(o / organization, name, n2 / name)
+(o2 / obtain-01, ARG1, t / technology)
+(p / possible, domain, u / use-01)
+(p2 / produce-01, ARG1, b / bomb)
+(p4 / program, mod, c2 / civilian)
+(p4 / program, mod, e / energy)
+(s / suspect-01, ARG0, p3 / person)
+(s / suspect-01, ARG1, t2 / thing)
+(u / use-01, ARG1, t / technology)
+(u / use-01, ARG2, p2 / produce-01)
+
+Decoded in 2,138,829 microseconds
+Sentence: U.S. and European officials suspect that Iran's civilian nuclear energy program masks an effort to obtain technology that could be used in the production of an atomic bomb.
+
+Oracle Span 1:  and => and
+Oracle Span 2:  atomic => atom
+Oracle Span 3:  bomb => bomb
+Oracle Span 4:  civilian => civilian
+Oracle Span 5:  could => possible
+Oracle Span 6:  effort => effort
+Oracle Span 7:  energy => energy
+Oracle Span 8:  European => (continent :name (name :op "Europe"))
+Oracle Span 9:  Iran => (country :name (name :op "Iran"))
+Oracle Span 10:  masks => mask-01
+Oracle Span 11:  nuclear => nucleus
+Oracle Span 12:  obtain => obtain-01
+Oracle Span 13:  officials => (have-org-role-91 :ARG2 official)
+Oracle Span 14:  production => produce-01
+Oracle Span 15:  program => program
+Oracle Span 16:  suspect => suspect-01
+Oracle Span 17:  technology => technology
+Oracle Span 18:  U.S. => (have-org-role-91 :ARG1 (country :name (name :op "U.S.")))
+Oracle Span 19:  used => use-01
+NER Entity: (country :name (name :op "U.S."))
+NER Entity: (country :name (name :op "Iran"))
+NER Entity: (thing :name (name :op "European"))
+Spans:
+Span 28-29:   => bomb
+Span 12-13:  an => (thing :ARG2-of mask-01)
+Span 1-2:  and => and
+Span 19-20:  be => possible
+Span 27-28:  bomb. => atom
+Span 2-3:  European => (organization :name (name :op "European"))
+Span 21-22:  in => use-01
+Span 11-12:  masks => program
+Span 8-9:  nuclear => civilian
+Span 24-25:  of => produce-01
+Span 3-4:  officials => (person :ARG0-of (have-org-role-91 :ARG2 official))
+Span 10-11:  program => energy
+Span 4-5:  suspect => suspect-01
+Span 16-17:  technology => obtain-01
+Span 17-18:  that => technology
+Span 14-15:  to => effort
+Span 0-1:  U.S. => (country :name (name :op "U.S."))
+
+Langrangian relaxation converged after 38 iterations. Delta = 0.0
+Oracle Span 1-2:  and => and
+Oracle Span 27-28:  atomic => atom
+Oracle Span 28-29:  bomb => bomb
+Oracle Span 8-9:  civilian => civilian
+Oracle Span 19-20:  could => possible
+Oracle Span 14-15:  effort => effort
+Oracle Span 10-11:  energy => energy
+Oracle Span 2-3:  European => (continent :name (name :op "Europe"))
+Oracle Span 6-7:  Iran => (country :name (name :op "Iran"))
+Oracle Span 12-13:  masks => mask-01
+Oracle Span 9-10:  nuclear => nucleus
+Oracle Span 16-17:  obtain => obtain-01
+Oracle Span 3-4:  officials => (have-org-role-91 :ARG2 official)
+Oracle Span 24-25:  production => produce-01
+Oracle Span 11-12:  program => program
+Oracle Span 4-5:  suspect => suspect-01
+Oracle Span 17-18:  technology => technology
+Oracle Span 0-1:  U.S. => (have-org-role-91 :ARG1 (country :name (name :op "U.S.")))
+Oracle Span 21-22:  used => use-01
+
+Dependencies:
+1	U.S.	_	NNP	NNP	_	4	nn	_	_
+2	and	_	CC	CC	_	1	cc	_	_
+3	European	_	JJ	JJ	_	1	conj	_	_
+4	officials	_	NNS	NNS	_	5	nsubj	_	_
+5	suspect	_	VBP	VBP	_	0	root	_	_
+6	that	_	IN	IN	_	13	mark	_	_
+7	Iran	_	NNP	NNP	_	12	poss	_	_
+8	's	_	POS	POS	_	7	possessive	_	_
+9	civilian	_	JJ	JJ	_	12	amod	_	_
+10	nuclear	_	JJ	JJ	_	12	amod	_	_
+11	energy	_	NN	NN	_	12	nn	_	_
+12	program	_	NN	NN	_	13	nsubj	_	_
+13	masks	_	VBZ	VBZ	_	5	ccomp	_	_
+14	an	_	DT	DT	_	15	det	_	_
+15	effort	_	NN	NN	_	13	dobj	_	_
+16	to	_	TO	TO	_	17	aux	_	_
+17	obtain	_	VB	VB	_	15	vmod	_	_
+18	technology	_	NN	NN	_	17	dobj	_	_
+19	that	_	WDT	WDT	_	22	nsubjpass	_	_
+20	could	_	MD	MD	_	22	aux	_	_
+21	be	_	VB	VB	_	22	auxpass	_	_
+22	used	_	VBN	VBN	_	18	rcmod	_	_
+23	in	_	IN	IN	_	22	prep	_	_
+24	the	_	DT	DT	_	25	det	_	_
+25	production	_	NN	NN	_	23	pobj	_	_
+26	of	_	IN	IN	_	25	prep	_	_
+27	an	_	DT	DT	_	29	det	_	_
+28	atomic	_	JJ	JJ	_	29	amod	_	_
+29	bomb	_	NN	NN	_	26	pobj	_	_
+30	.	_	.	.	_	5	punct	_	_
+
+Oracle:
+(b / bomb, mod, a2 / atom)
+(c / country, name, n / name)
+(c2 / continent, name, n2 / name)
+(c4 / country, name, n4 / name)
+(e / energy, mod, c3 / civilian)
+(e / energy, mod, n3 / nucleus)
+(e2 / effort, purpose, o2 / obtain-01)
+(h / have-org-role-91, ARG1, c / country)
+(h2 / have-org-role-91, ARG1, c2 / continent)
+(h2 / have-org-role-91, ARG2, o3 / official)
+(m / mask-01, ARG1, e2 / effort)
+(m / mask-01, ARG2, p / program)
+(n / name, op, "U.S.")
+(n2 / name, op, "Europe")
+(n4 / name, op, "Iran")
+(o2 / obtain-01, ARG1, t / technology)
+(p / program, mod, e / energy)
+(p / program, poss, c4 / country)
+(p2 / produce-01, ARG1, b / bomb)
+(s / suspect-01, ARG0, a / and)
+(s / suspect-01, ARG1, m / mask-01)
+(u2 / use-01, ARG1, t / technology)
+(u2 / use-01, ARG2, p2 / produce-01)
+(u2 / use-01, mod, p4 / possible)
+
+Input(Some(Graph(null,ArrayBuffer(Span(17,18,List(0),that,technology,false), Span(4,5,List(1),suspect,suspect-01,false), Span(10,11,List(2),program,energy,false), Span(14,15,List(3),to,effort,false), Span(0,1,List(6, 5, 4),U.S.,(country :name (name :op "U.S.")),false), Span(2,3,List(9, 8, 7),European,(organization :name (name :op "European")),false), Span(19,20,List(10),be,possible,false), Span(16,17,List(11),technology,obtain-01,false), Span(28,29,List(12),,bomb,false), Span(8,9,List(13),nuclear,civilian,false), Span(24,25,List(14),of,produce-01,false), Span(3,4,List(17, 16, 15),officials,(person :ARG0-of (have-org-role-91 :ARG2 official)),false), Span(11,12,List(18),masks,program,false), Span(12,13,List(20, 19),an,(thing :ARG2-of mask-01),false), Span(27,28,List(21),bomb.,atom,false), Span(21,22,List(22),in,use-01,false), Span(1,2,List(23),and,and,false)),Map(2 -> energy, 5 -> name, 12 -> bomb, 15 -> person, 8 -> name, 21 -> atom, 18 -> program, 7 -> organization, 17 -> official, 1 -> suspect-01, 23 -> and, 4 -> country, 11 -> obtain-01, 14 -> produce-01, 20 -> mask-01, 6 -> "U.S.", 22 -> use-01, 0 -> technology, 9 -> "European", 16 -> have-org-role-91, 19 -> thing, 3 -> effort, 10 -> possible, 13 -> civilian),Map(e -> energy, n -> name, h -> have-org-role-91, t -> technology, b -> bomb, o3 -> official, e2 -> effort, p2 -> produce-01, s -> suspect-01, m -> mask-01, p -> possible, a -> atom, p4 -> program, o2 -> obtain-01, t2 -> thing, a2 -> and, c -> country, u -> use-01, o -> organization, p3 -> person, n2 -> name, c2 -> civilian))),[Ljava.lang.String;@3bd5b3bd,Annotation([Ljava.lang.String;@3b1aeb4e,[Ljava.lang.String;@7db40d04,[Ljava.lang.String;@32ca91d),Annotation([Ljava.lang.String;@1572ba9e,[Ljava.lang.String;@795e63e5,[Ledu.cmu.lti.nlp.amr.Dependency;@24df9de7),Annotation([Ljava.lang.String;@42ddbc20,[Ljava.lang.String;@42fb58af,[Ljava.lang.String;@48304a5e),Annotation([Ljava.lang.String;@10d8d61a,[Ljava.lang.String;@3f4b449d,[Ledu.cmu.lti.nlp.amr.Entity;@276d5dfb))
+AMR:
+(a2 / and, op, c / country)
+(a2 / and, op, p3 / person)
+(b / bomb, mod, a / atom)
+(c / country, name, n / name)
+(e2 / effort, purpose, o2 / obtain-01)
+(h / have-org-role-91, ARG0, p3 / person)
+(h / have-org-role-91, ARG1, o / organization)
+(h / have-org-role-91, ARG2, o3 / official)
+(m / mask-01, ARG0, p4 / program)
+(m / mask-01, ARG1, e2 / effort)
+(m / mask-01, ARG2, t2 / thing)
+(n / name, op, "U.S.")
+(n2 / name, op, "European")
+(o / organization, name, n2 / name)
+(o2 / obtain-01, ARG1, t / technology)
+(p / possible, domain, u / use-01)
+(p2 / produce-01, ARG1, b / bomb)
+(p4 / program, mod, c2 / civilian)
+(p4 / program, mod, e / energy)
+(s / suspect-01, ARG0, p3 / person)
+(s / suspect-01, ARG1, t2 / thing)
+(u / use-01, ARG1, t / technology)
+(u / use-01, ARG2, p2 / produce-01)
+
+Decoded in 2,033,437 microseconds
+Sentence: U.S. and European officials may impose a 4th round of sanctions on Tehran when the U.N. Security Council considers the issue of Iran's nuclear energy program most likely in September 2007.
+
+Oracle Span 1:  and => and
+Oracle Span 2:  considers => consider-02
+Oracle Span 3:  energy => energy
+Oracle Span 4:  European => (continent :name (name :op "Europe"))
+Oracle Span 5:  impose => impose-01
+Oracle Span 6:  Iran => (country :name (name :op "Iran"))
+Oracle Span 7:  issue => issue
+Oracle Span 8:  likely => likely
+Oracle Span 9:  may => possible
+Oracle Span 10:  most => most
+Oracle Span 11:  nuclear => nucleus
+Oracle Span 12:  officials => (have-org-role-91 :ARG2 official)
+Oracle Span 13:  program => program
+Oracle Span 14:  round => round
+Oracle Span 15:  sanctions => sanction-02
+Oracle Span 16:  September 2007 => (date-entity :month 9 :year 2007)
+Oracle Span 17:  Tehran => (city :name (name :op "Tehran"))
+Oracle Span 18:  U.N. Security Council => (organization :name (name :op "Council" :op "Security" :op "U.N."))
+Oracle Span 19:  U.S. => (have-org-role-91 :ARG1 (country :name (name :op "U.S.")))
+NER Entity: (country :name (name :op "U.S."))
+NER Entity: (country :name (name :op "Tehran"))
+NER Entity: (organization :name (name :op "U.N."))
+NER Entity: (country :name (name :op "Iran"))
+NER Entity: (thing :name (name :op "European"))
+Spans:
+Span 1-2:  and => and
+Span 18-19:  considers => consider-01
+Span 24-25:  energy => nucleus
+Span 2-3:  European => (organization :name (name :op "European"))
+Span 5-6:  impose => impose-01
+Span 28-29:  in => likely
+Span 20-21:  issue => issue
+Span 27-28:  likely => most
+Span 26-27:  most => program
+Span 3-4:  officials => (person :ARG0-of (have-org-role-91 :ARG2 official))
+Span 25-26:  program => energy
+Span 8-9:  round => round
+Span 10-11:  sanctions => sanction-01
+Span 12-13:  Tehran => (city :name (name :op "Tehran"))
+Span 15-18:  U.N. Security Council => (organization :name (name :op "U.N." :op "Security" :op "Council"))
+Span 0-1:  U.S. => (country :name (name :op "U.S."))
+Span 0-8:  U.S. and European officials may impose a 4th => (ordinal-entity :value 32.0)
+Span 0-31:  U.S. and European officials may impose a 4th round of sanctions on Tehran when the U.N. Security Council considers the issue of Iran's nuclear energy program most likely in September 2007. => (date-entity :year 2007 :month 9)
+
+Langrangian relaxation converged after 52 iterations. Delta = 0.0
+Oracle Span 1-2:  and => and
+Oracle Span 18-19:  considers => consider-02
+Oracle Span 25-26:  energy => energy
+Oracle Span 2-3:  European => (continent :name (name :op "Europe"))
+Oracle Span 5-6:  impose => impose-01
+Oracle Span 22-23:  Iran => (country :name (name :op "Iran"))
+Oracle Span 20-21:  issue => issue
+Oracle Span 28-29:  likely => likely
+Oracle Span 4-5:  may => possible
+Oracle Span 27-28:  most => most
+Oracle Span 24-25:  nuclear => nucleus
+Oracle Span 3-4:  officials => (have-org-role-91 :ARG2 official)
+Oracle Span 26-27:  program => program
+Oracle Span 8-9:  round => round
+Oracle Span 10-11:  sanctions => sanction-02
+Oracle Span 30-32:  September 2007 => (date-entity :month 9 :year 2007)
+Oracle Span 12-13:  Tehran => (city :name (name :op "Tehran"))
+Oracle Span 15-18:  U.N. Security Council => (organization :name (name :op "Council" :op "Security" :op "U.N."))
+Oracle Span 0-1:  U.S. => (have-org-role-91 :ARG1 (country :name (name :op "U.S.")))
+
+Dependencies:
+1	U.S.	_	NNP	NNP	_	4	nn	_	_
+2	and	_	CC	CC	_	1	cc	_	_
+3	European	_	JJ	JJ	_	1	conj	_	_
+4	officials	_	NNS	NNS	_	6	nsubj	_	_
+5	may	_	MD	MD	_	6	aux	_	_
+6	impose	_	VB	VB	_	0	root	_	_
+7	a	_	DT	DT	_	9	det	_	_
+8	4th	_	JJ	JJ	_	9	amod	_	_
+9	round	_	NN	NN	_	6	dobj	_	_
+10	of	_	IN	IN	_	9	prep	_	_
+11	sanctions	_	NNS	NNS	_	10	pobj	_	_
+12	on	_	IN	IN	_	11	prep	_	_
+13	Tehran	_	NNP	NNP	_	12	pobj	_	_
+14	when	_	WRB	WRB	_	19	advmod	_	_
+15	the	_	DT	DT	_	18	det	_	_
+16	U.N.	_	NNP	NNP	_	18	nn	_	_
+17	Security	_	NNP	NNP	_	18	nn	_	_
+18	Council	_	NNP	NNP	_	19	nsubj	_	_
+19	considers	_	VBZ	VBZ	_	6	advcl	_	_
+20	the	_	DT	DT	_	21	det	_	_
+21	issue	_	NN	NN	_	19	dobj	_	_
+22	of	_	IN	IN	_	21	prep	_	_
+23	Iran	_	NNP	NNP	_	27	poss	_	_
+24	's	_	POS	POS	_	23	possessive	_	_
+25	nuclear	_	JJ	JJ	_	27	amod	_	_
+26	energy	_	NN	NN	_	27	nn	_	_
+27	program	_	NN	NN	_	22	pobj	_	_
+28	most	_	RBS	RBS	_	29	advmod	_	_
+29	likely	_	JJ	JJ	_	27	amod	_	_
+30	in	_	IN	IN	_	19	prep	_	_
+31	September	_	NNP	NNP	_	30	pobj	_	_
+32	2007	_	CD	CD	_	31	num	_	_
+33	.	_	.	.	_	6	punct	_	_
+
+Oracle:
+(c / country, name, n / name)
+(c2 / continent, name, n2 / name)
+(c3 / city, name, n3 / name)
+(c4 / consider-02, ARG0, o2 / organization)
+(c4 / consider-02, ARG1, i2 / issue)
+(c4 / consider-02, time, d / date-entity)
+(c5 / country, name, n6 / name)
+(d / date-entity, mod, l / likely)
+(d / date-entity, month, 9)
+(d / date-entity, year, 2007)
+(e / energy, mod, n5 / nucleus)
+(h / have-org-role-91, ARG1, c / country)
+(h2 / have-org-role-91, ARG1, c2 / continent)
+(h2 / have-org-role-91, ARG2, o4 / official)
+(i / impose-01, ARG0, a2 / and)
+(i / impose-01, ARG1, r / round)
+(i2 / issue, topic, p2 / program)
+(l / likely, mod, m / most)
+(n / name, op, "U.S.")
+(n2 / name, op, "Europe")
+(n3 / name, op, "Tehran")
+(n4 / name, op, "Council")
+(n4 / name, op, "Security")
+(n4 / name, op, "U.N.")
+(n6 / name, op, "Iran")
+(o2 / organization, name, n4 / name)
+(p / possible, domain, i / impose-01)
+(p2 / program, mod, e / energy)
+(p2 / program, poss, c5 / country)
+(s / sanction-02, ARG0, a2 / and)
+(s / sanction-02, ARG1, c3 / city)
+(s / sanction-02, ARG2, r / round)
+(s / sanction-02, time, c4 / consider-02)
+
+Input(Some(Graph(null,ArrayBuffer(Span(10,11,List(0),sanctions,sanction-01,false), Span(28,29,List(1),in,likely,false), Span(12,13,List(4, 3, 2),Tehran,(city :name (name :op "Tehran")),false), Span(20,21,List(5),issue,issue,false), Span(0,1,List(8, 7, 6),U.S.,(country :name (name :op "U.S.")),false), Span(8,9,List(9),round,round,false), Span(24,25,List(10),energy,nucleus,false), Span(27,28,List(11),likely,most,false), Span(25,26,List(12),program,energy,false), Span(26,27,List(13),most,program,false), Span(2,3,List(16, 15, 14),European,(organization :name (name :op "European")),false), Span(0,31,List(19, 18, 17),U.S. and European officials may impose a 4th round of sanctions on Tehran when the U.N. Security Council considers the issue of Iran's nuclear energy program most likely in September 2007.,(date-entity :year 2007 :month 9),false), Span(5,6,List(20),impose,impose-01,false), Span(0,8,List(22, 21),U.S. and European officials may impose a 4th,(ordinal-entity :value 32.0),false), Span(15,18,List(27, 26, 25, 24, 23),U.N. Security Council,(organization :name (name :op "U.N." :op "Security" :op "Council")),false), Span(18,19,List(28),considers,consider-01,false), Span(3,4,List(31, 30, 29),officials,(person :ARG0-of (have-org-role-91 :ARG2 official)),false), Span(1,2,List(32),and,and,false)),Map(30 -> have-org-role-91, 2 -> city, 5 -> issue, 27 -> "Council", 12 -> energy, 8 -> "U.S.", 15 -> name, 21 -> ordinal-entity, 18 -> 2007, 24 -> name, 7 -> name, 1 -> likely, 17 -> date-entity, 23 -> organization, 26 -> "Security", 4 -> "Tehran", 11 -> most, 32 -> and, 14 -> organization, 29 -> person, 20 -> impose-01, 28 -> consider-01, 6 -> country, 9 -> round, 0 -> sanction-01, 22 -> 32.0, 16 -> "European", 19 -> 9, 10 -> nucleus, 3 -> name, 31 -> official, 25 -> "U.N.", 13 -> program),Map(e -> energy, n -> name, h -> have-org-role-91, 2 -> 2007, o3 -> organization, p2 -> person, n4 -> name, s -> sanction-01, m -> most, d -> date-entity, p -> program, a -> and, n3 -> nucleus, c3 -> consider-01, o2 -> ordinal-entity, i2 -> impose-01, r -> round, i -> issue, c -> city, l -> likely, 9 -> 9, o -> organization, o4 -> official, 3 -> 32.0, n2 -> name, c2 -> country, n5 -> name))),[Ljava.lang.String;@3d0496cd,Annotation([Ljava.lang.String;@3184b0c3,[Ljava.lang.String;@d39d75e,[Ljava.lang.String;@402f3fac),Annotation([Ljava.lang.String;@59847b9a,[Ljava.lang.String;@4d92dac1,[Ledu.cmu.lti.nlp.amr.Dependency;@e52770a),Annotation([Ljava.lang.String;@37b9fb33,[Ljava.lang.String;@4d9b0ef5,[Ljava.lang.String;@16049155),Annotation([Ljava.lang.String;@b734eb8,[Ljava.lang.String;@73eb4c86,[Ledu.cmu.lti.nlp.amr.Entity;@669218a8))
+AMR:
+(a / and, op, c2 / country)
+(a / and, op, p2 / person)
+(a / and, time, d / date-entity)
+(c / city, name, n / name)
+(c2 / country, name, n2 / name)
+(c3 / consider-01, ARG0, o3 / organization)
+(c3 / consider-01, ARG1, i / issue)
+(d / date-entity, month, 9 / 9)
+(d / date-entity, year, 2 / 2007)
+(e / energy, mod, n3 / nucleus)
+(h / have-org-role-91, ARG0, p2 / person)
+(h / have-org-role-91, ARG1, o / organization)
+(h / have-org-role-91, ARG2, o4 / official)
+(i / issue, poss, p / program)
+(i2 / impose-01, ARG0, p2 / person)
+(i2 / impose-01, ARG1, r / round)
+(i2 / impose-01, time, c3 / consider-01)
+(l / likely, degree, m / most)
+(m / most, calendar, p / program)
+(n / name, op, "Tehran")
+(n2 / name, op, "U.S.")
+(n4 / name, op, "European")
+(n5 / name, op, "Council")
+(n5 / name, op, "Security")
+(n5 / name, op, "U.N.")
+(o / organization, name, n4 / name)
+(o2 / ordinal-entity, condition, c3 / consider-01)
+(o2 / ordinal-entity, value, 3 / 32.0)
+(o3 / organization, name, n5 / name)
+(p / program, mod, e / energy)
+(s / sanction-01, ARG0, p2 / person)
+(s / sanction-01, ARG1, c / city)
+
+Decoded in 3,909,563 microseconds
+Sentence: The International Atomic Energy Agency distributed limited copies of the IAEA report before a meeting on 11 September 2007 of the 35 members of the IAEA board.
+
+Oracle Span 1:  11 September 2007 => (date-entity :day 11 :month 9 :year 2007)
+Oracle Span 2:  35 => 35
+Oracle Span 3:  before => before
+Oracle Span 4:  board => board
+Oracle Span 5:  copies => copy-01
+Oracle Span 6:  distributed => distribute-01
+Oracle Span 7:  IAEA => (organization :name (name :op "IAEA"))
+Oracle Span 8:  International Atomic Energy Agency => (organization :name (name :op "Agency" :op "Energy" :op "Atomic" :op "International"))
+Oracle Span 9:  limited => limit-01
+Oracle Span 10:  meeting => meet-03
+Oracle Span 11:  members => (have-org-role-91 :ARG2 member)
+Oracle Span 12:  report => (thing :ARG1-of report-01)
+NER Entity: (organization :name (name :op "International" :op "Atomic" :op "Energy" :op "Agency"))
+NER Entity: (organization :name (name :op "IAEA"))
+mkDayMonthYear(11	September	2007,11,September,2007)
+Spans:
+Span 12-13:  before => before
+Span 7-8:  copies => copy
+Span 5-6:  distributed => distribute-01
+Span 25-27:  IAEA board. => (organization :name (name :op "Board" :op "IAEA"))
+Span 1-5:  International Atomic Energy Agency => (organization :name (name :op "Atomic" :op "International" :op "Energy" :op "Agency"))
+Span 6-7:  limited => limit-01
+Span 14-15:  meeting => meet-01
+Span 22-23:  members => (have-org-role-91 :ARG2 member)
+Span 11-12:  report => report-01
+Span 0-1:  The => 1
+Span 0-17:  The International Atomic Energy Agency distributed limited copies of the IAEA report before a meeting on 11 => (date-entity :year 2007 :month 9 :day 11)
+
+Langrangian relaxation converged after 44 iterations. Delta = 0.0
+Oracle Span 16-19:  11 September 2007 => (date-entity :day 11 :month 9 :year 2007)
+Oracle Span 21-22:  35 => 35
+Oracle Span 12-13:  before => before
+Oracle Span 26-27:  board => board
+Oracle Span 7-8:  copies => copy-01
+Oracle Span 5-6:  distributed => distribute-01
+Oracle Span 10-11:  IAEA => (organization :name (name :op "IAEA"))
+Oracle Span 1-5:  International Atomic Energy Agency => (organization :name (name :op "Agency" :op "Energy" :op "Atomic" :op "International"))
+Oracle Span 6-7:  limited => limit-01
+Oracle Span 14-15:  meeting => meet-03
+Oracle Span 22-23:  members => (have-org-role-91 :ARG2 member)
+Oracle Span 11-12:  report => (thing :ARG1-of report-01)
+
+Dependencies:
+1	The	_	DT	DT	_	5	det	_	_
+2	International	_	NNP	NNP	_	5	nn	_	_
+3	Atomic	_	NNP	NNP	_	5	nn	_	_
+4	Energy	_	NNP	NNP	_	5	nn	_	_
+5	Agency	_	NNP	NNP	_	6	nsubj	_	_
+6	distributed	_	VBD	VBD	_	0	root	_	_
+7	limited	_	JJ	JJ	_	8	amod	_	_
+8	copies	_	NNS	NNS	_	6	dobj	_	_
+9	of	_	IN	IN	_	8	prep	_	_
+10	the	_	DT	DT	_	12	det	_	_
+11	IAEA	_	NNP	NNP	_	12	nn	_	_
+12	report	_	NN	NN	_	9	pobj	_	_
+13	before	_	IN	IN	_	6	prep	_	_
+14	a	_	DT	DT	_	15	det	_	_
+15	meeting	_	NN	NN	_	13	pobj	_	_
+16	on	_	IN	IN	_	15	prep	_	_
+17	11	_	CD	CD	_	18	num	_	_
+18	September	_	NNP	NNP	_	16	pobj	_	_
+19	2007	_	CD	CD	_	18	num	_	_
+20	of	_	IN	IN	_	18	prep	_	_
+21	the	_	DT	DT	_	23	det	_	_
+22	35	_	CD	CD	_	23	num	_	_
+23	members	_	NNS	NNS	_	20	pobj	_	_
+24	of	_	IN	IN	_	23	prep	_	_
+25	the	_	DT	DT	_	27	det	_	_
+26	IAEA	_	NNP	NNP	_	27	nn	_	_
+27	board	_	NN	NN	_	24	pobj	_	_
+28	.	_	.	.	_	6	punct	_	_
+
+Oracle:
+(b / before, op, m / meet-03)
+(b2 / board, poss, o / organization)
+(c / copy-01, ARG1, t / thing)
+(d / distribute-01, ARG0, o / organization)
+(d / distribute-01, time, b / before)
+(d2 / date-entity, day, 11)
+(d2 / date-entity, month, 9)
+(d2 / date-entity, year, 2007)
+(h / have-org-role-91, ARG1, b2 / board)
+(h / have-org-role-91, ARG2, m2 / member)
+(m / meet-03, time, d2 / date-entity)
+(n / name, op, "Agency")
+(n / name, op, "Atomic")
+(n / name, op, "Energy")
+(n / name, op, "International")
+(n2 / name, op, "IAEA")
+(o / organization, name, n / name)
+(o2 / organization, name, n2 / name)
+(r / report-01, ARG0, o2 / organization)
+(r / report-01, ARG1, t / thing)
+
+Input(Some(Graph(null,ArrayBuffer(Span(0,1,List(0),The,1,false), Span(1,5,List(6, 5, 4, 3, 2, 1),International Atomic Energy Agency,(organization :name (name :op "Atomic" :op "International" :op "Energy" :op "Agency")),false), Span(14,15,List(7),meeting,meet-01,false), Span(11,12,List(8),report,report-01,false), Span(7,8,List(9),copies,copy,false), Span(6,7,List(10),limited,limit-01,false), Span(25,27,List(14, 13, 12, 11),IAEA board.,(organization :name (name :op "Board" :op "IAEA")),false), Span(12,13,List(15),before,before,false), Span(22,23,List(17, 16),members,(have-org-role-91 :ARG2 member),false), Span(5,6,List(18),distributed,distribute-01,false), Span(0,17,List(22, 21, 20, 19),The International Atomic Energy Agency distributed limited copies of the IAEA report before a meeting on 11,(date-entity :year 2007 :month 9 :day 11),false)),Map(2 -> name, 5 -> "Energy", 12 -> name, 15 -> before, 8 -> report-01, 21 -> 9, 18 -> distribute-01, 7 -> meet-01, 17 -> member, 1 -> organization, 4 -> "International", 11 -> organization, 14 -> "IAEA", 20 -> 2007, 6 -> "Agency", 22 -> 11, 0 -> 1, 9 -> copy, 16 -> have-org-role-91, 19 -> date-entity, 3 -> "Atomic", 10 -> limit-01, 13 -> "Board"),Map(n -> name, h -> have-org-role-91, 2 -> 2007, 12 -> 11, b -> before, m2 -> member, m -> meet-01, d -> distribute-01, 1 -> 1, d2 -> date-entity, o2 -> organization, r -> report-01, c -> copy, l -> limit-01, 9 -> 9, o -> organization, n2 -> name))),[Ljava.lang.String;@68c21eca,Annotation([Ljava.lang.String;@3f7e5fca,[Ljava.lang.String;@40541900,[Ljava.lang.String;@2a5341d7),Annotation([Ljava.lang.String;@521f2e19,[Ljava.lang.String;@1f52bb9f,[Ledu.cmu.lti.nlp.amr.Dependency;@7fae3d6c),Annotation([Ljava.lang.String;@4fc396b7,[Ljava.lang.String;@648716b0,[Ljava.lang.String;@6e83d7fc),Annotation([Ljava.lang.String;@60c8d21d,[Ljava.lang.String;@33ed969d,[Ledu.cmu.lti.nlp.amr.Entity;@6f8324c6))
+AMR:
+(b / before, op, m / meet-01)
+(d / distribute-01, ARG0, o / organization)
+(d / distribute-01, ARG1, c / copy)
+(d / distribute-01, time, b / before)
+(d2 / date-entity, day, 12 / 11)
+(d2 / date-entity, month, 9 / 9)
+(d2 / date-entity, year, 2 / 2007)
+(h / have-org-role-91, ARG1, o2 / organization)
+(h / have-org-role-91, ARG2, m2 / member)
+(l / limit-01, ARG1, c / copy)
+(m / meet-01, ARG1, d2 / date-entity)
+(n / name, op, "Agency")
+(n / name, op, "Atomic")
+(n / name, op, "Energy")
+(n / name, op, "International")
+(n2 / name, op, "Board")
+(n2 / name, op, "IAEA")
+(o / organization, mod, 1 / 1)
+(o / organization, name, n / name)
+(o2 / organization, name, n2 / name)
+(r / report-01, ARG1, b / before)
+(r / report-01, time, h / have-org-role-91)
+
+Decoded in 1,806,634 microseconds
+Sentence: The findings reflect an agency agreement on 21 August 2007 with Tehran that Iranian officials began publicizing the week of 12 August 2007.
+
+Oracle Span 1:  12 August 2007 => (date-entity :day 12 :month 8 :year 2007)
+Oracle Span 2:  21 August 2007 => (date-entity :day 21 :month 8 :year 2007)
+Oracle Span 3:  agency => agency
+Oracle Span 4:  agreement => agree-01
+Oracle Span 5:  began => begin-01
+Oracle Span 6:  findings => (thing :ARG1-of find-01)
+Oracle Span 7:  Iranian => (country :name (name :op "Iran"))
+Oracle Span 8:  officials => (have-org-role-91 :ARG2 official)
+Oracle Span 9:  publicizing => publicize-01
+Oracle Span 10:  reflect => reflect-01
+Oracle Span 11:  Tehran => (city :name (name :op "Tehran"))
+Oracle Span 12:  week => week
+NER Entity: (country :name (name :op "Tehran"))
+NER Entity: (thing :name (name :op "Iranian"))
+mkDayMonthYear(21	August	2007,21,August,2007)
+mkDayMonthYear(12	August	2007,12,August,2007)
+Spans:
+Span 4-5:  agency => agency
+Span 5-6:  agreement => agreement
+Span 15-16:  began => begin-01
+Span 1-2:  findings => find-01
+Span 13-14:  Iranian => (country :name (name :op "Iran"))
+Span 14-15:  officials => (person :ARG0-of (have-org-role-91 :ARG2 official))
+Span 16-17:  publicizing => publicize-01
+Span 2-3:  reflect => reflect-01
+Span 11-12:  Tehran => (city :name (name :op "Tehran"))
+Span 0-8:  The findings reflect an agency agreement on 21 => (date-entity :year 2007 :month 8 :day 21)
+Span 0-18:  The findings reflect an agency agreement on 21 August 2007 with Tehran that Iranian officials began publicizing the => (date-entity :month 8 :day 12)
+
+Langrangian relaxation converged after 23 iterations. Delta = 0.0
+Oracle Span 20-23:  12 August 2007 => (date-entity :day 12 :month 8 :year 2007)
+Oracle Span 7-10:  21 August 2007 => (date-entity :day 21 :month 8 :year 2007)
+Oracle Span 4-5:  agency => agency
+Oracle Span 5-6:  agreement => agree-01
+Oracle Span 15-16:  began => begin-01
+Oracle Span 1-2:  findings => (thing :ARG1-of find-01)
+Oracle Span 13-14:  Iranian => (country :name (name :op "Iran"))
+Oracle Span 14-15:  officials => (have-org-role-91 :ARG2 official)
+Oracle Span 16-17:  publicizing => publicize-01
+Oracle Span 2-3:  reflect => reflect-01
+Oracle Span 11-12:  Tehran => (city :name (name :op "Tehran"))
+Oracle Span 18-19:  week => week
+
+Dependencies:
+1	The	_	DT	DT	_	2	det	_	_
+2	findings	_	NNS	NNS	_	3	nsubj	_	_
+3	reflect	_	VBP	VBP	_	0	root	_	_
+4	an	_	DT	DT	_	6	det	_	_
+5	agency	_	NN	NN	_	6	nn	_	_
+6	agreement	_	NN	NN	_	3	dobj	_	_
+7	on	_	IN	IN	_	3	prep	_	_
+8	21	_	CD	CD	_	7	pobj	_	_
+9	August	_	NNP	NNP	_	8	tmod	_	_
+10	2007	_	CD	CD	_	9	num	_	_
+11	with	_	IN	IN	_	8	prep	_	_
+12	Tehran	_	NNP	NNP	_	11	pobj	_	_
+13	that	_	IN	IN	_	16	mark	_	_
+14	Iranian	_	JJ	JJ	_	15	amod	_	_
+15	officials	_	NNS	NNS	_	16	nsubj	_	_
+16	began	_	VBD	VBD	_	3	ccomp	_	_
+17	publicizing	_	VBG	VBG	_	16	xcomp	_	_
+18	the	_	DT	DT	_	19	det	_	_
+19	week	_	NN	NN	_	17	dobj	_	_
+20	of	_	IN	IN	_	19	prep	_	_
+21	12	_	CD	CD	_	20	pobj	_	_
+22	August	_	NNP	NNP	_	17	tmod	_	_
+23	2007	_	CD	CD	_	22	num	_	_
+24	.	_	.	.	_	3	punct	_	_
+
+Oracle:
+(a / agree-01, ARG0, a2 / agency)
+(a / agree-01, ARG2, c / city)
+(a / agree-01, time, d / date-entity)
+(b / begin-01, ARG0, o / official)
+(b / begin-01, ARG1, p / publicize-01)
+(c / city, name, n / name)
+(c2 / country, name, n2 / name)
+(d / date-entity, day, 21)
+(d / date-entity, month, 8)
+(d / date-entity, year, 2007)
+(d2 / date-entity, day, 12)
+(d2 / date-entity, month, 8)
+(d2 / date-entity, year, 2007)
+(f / find-01, ARG1, t / thing)
+(h / have-org-role-91, ARG1, c2 / country)
+(h / have-org-role-91, ARG2, o / official)
+(n / name, op, "Tehran")
+(n2 / name, op, "Iran")
+(p / publicize-01, ARG1, a / agree-01)
+(p / publicize-01, time, w / week)
+(r / reflect-01, ARG1, t / thing)
+(r / reflect-01, ARG2, a / agree-01)
+(w / week, mod, d2 / date-entity)
+
+Input(Some(Graph(null,ArrayBuffer(Span(14,15,List(2, 1, 0),officials,(person :ARG0-of (have-org-role-91 :ARG2 official)),false), Span(2,3,List(3),reflect,reflect-01,false), Span(16,17,List(4),publicizing,publicize-01,false), Span(5,6,List(5),agreement,agreement,false), Span(0,18,List(8, 7, 6),The findings reflect an agency agreement on 21 August 2007 with Tehran that Iranian officials began publicizing the,(date-entity :month 8 :day 12),false), Span(4,5,List(9),agency,agency,false), Span(0,8,List(13, 12, 11, 10),The findings reflect an agency agreement on 21,(date-entity :year 2007 :month 8 :day 21),false), Span(11,12,List(16, 15, 14),Tehran,(city :name (name :op "Tehran")),false), Span(13,14,List(19, 18, 17),Iranian,(country :name (name :op "Iran")),false), Span(15,16,List(20),began,begin-01,false), Span(1,2,List(21),findings,find-01,false)),Map(2 -> official, 5 -> agreement, 12 -> 8, 15 -> name, 8 -> 12, 21 -> find-01, 18 -> name, 7 -> 8, 17 -> country, 1 -> have-org-role-91, 4 -> publicize-01, 11 -> 2007, 14 -> city, 20 -> begin-01, 6 -> date-entity, 0 -> person, 9 -> agency, 16 -> "Tehran", 19 -> "Iran", 3 -> reflect-01, 10 -> date-entity, 13 -> 21),Map(n -> name, h -> have-org-role-91, 2 -> 2007, b -> begin-01, 8 -> 8, p2 -> publicize-01, d -> date-entity, 1 -> 12, p -> person, a -> agreement, d2 -> date-entity, 82 -> 8, r -> reflect-01, a2 -> agency, c -> city, f -> find-01, 22 -> 21, o -> official, n2 -> name, c2 -> country))),[Ljava.lang.String;@688ecae0,Annotation([Ljava.lang.String;@38142597,[Ljava.lang.String;@5150798e,[Ljava.lang.String;@4a70fb20),Annotation([Ljava.lang.String;@54b7f144,[Ljava.lang.String;@4d164ed8,[Ledu.cmu.lti.nlp.amr.Dependency;@1f58d2fd),Annotation([Ljava.lang.String;@52bc93cd,[Ljava.lang.String;@39ea650f,[Ljava.lang.String;@46759c64),Annotation([Ljava.lang.String;@1fe3616d,[Ljava.lang.String;@29f7bba7,[Ledu.cmu.lti.nlp.amr.Entity;@43df618b))
+AMR:
+(a / agreement, mod, a2 / agency)
+(b / begin-01, ARG0, p / person)
+(b / begin-01, ARG1, p2 / publicize-01)
+(c / city, name, n / name)
+(c2 / country, name, n2 / name)
+(d / date-entity, day, 1 / 12)
+(d / date-entity, month, 8 / 8)
+(d2 / date-entity, day, 22 / 21)
+(d2 / date-entity, month, 82 / 8)
+(d2 / date-entity, year, 2 / 2007)
+(f / find-01, ARG1, d2 / date-entity)
+(h / have-org-role-91, ARG0, p / person)
+(h / have-org-role-91, ARG1, c2 / country)
+(h / have-org-role-91, ARG2, o / official)
+(n / name, op, "Tehran")
+(n2 / name, op, "Iran")
+(p2 / publicize-01, ARG0, c / city)
+(p2 / publicize-01, ARG1, d / date-entity)
+(r / reflect-01, ARG0, f / find-01)
+(r / reflect-01, ARG1, b / begin-01)
+(r / reflect-01, ARG2, a / agreement)
+
+Decoded in 1,273,275 microseconds
+Sentence: The accord said that there were no remaining issues and ambiguities regarding Iran's nuclear program and activities.
+
+Oracle Span 1:  accord => accord
+Oracle Span 2:  activities => activity
+Oracle Span 3:  ambiguities => ambiguity
+Oracle Span 4:  and => and
+Oracle Span 5:  and => and
+Oracle Span 6:  Iran => (country :name (name :op "Iran"))
+Oracle Span 7:  issues => issue
+Oracle Span 8:  no => -
+Oracle Span 9:  nuclear => nucleus
+Oracle Span 10:  program => program
+Oracle Span 11:  regarding => regard-01
+Oracle Span 12:  remaining => remain-01
+Oracle Span 13:  said => say-01
+NER Entity: (country :name (name :op "Iran"))
+Spans:
+Span 17-18:   => activity
+Span 1-2:  accord => accord
+Span 16-17:  activities. => and
+Span 10-11:  ambiguities => ambiguity
+Span 15-16:  and => program
+Span 9-10:  and => and
+Span 8-9:  issues => issue
+Span 14-15:  program => nucleus
+Span 7-8:  remaining => remain-01
+Span 2-3:  said => say-01
+
+Langrangian relaxation converged after 19 iterations. Delta = 0.0
+Oracle Span 1-2:  accord => accord
+Oracle Span 17-18:  activities => activity
+Oracle Span 10-11:  ambiguities => ambiguity
+Oracle Span 9-10:  and => and
+Oracle Span 16-17:  and => and
+Oracle Span 12-13:  Iran => (country :name (name :op "Iran"))
+Oracle Span 8-9:  issues => issue
+Oracle Span 6-7:  no => -
+Oracle Span 14-15:  nuclear => nucleus
+Oracle Span 15-16:  program => program
+Oracle Span 11-12:  regarding => regard-01
+Oracle Span 7-8:  remaining => remain-01
+Oracle Span 2-3:  said => say-01
+
+Dependencies:
+1	The	_	DT	DT	_	2	det	_	_
+2	accord	_	NN	NN	_	3	nsubj	_	_
+3	said	_	VBD	VBD	_	0	root	_	_
+4	that	_	IN	IN	_	6	mark	_	_
+5	there	_	EX	EX	_	6	expl	_	_
+6	were	_	VBD	VBD	_	3	ccomp	_	_
+7	no	_	DT	DT	_	9	neg	_	_
+8	remaining	_	VBG	VBG	_	9	amod	_	_
+9	issues	_	NNS	NNS	_	6	nsubj	_	_
+10	and	_	CC	CC	_	9	cc	_	_
+11	ambiguities	_	NNS	NNS	_	9	conj	_	_
+12	regarding	_	VBG	VBG	_	11	prep	_	_
+13	Iran	_	NNP	NNP	_	16	poss	_	_
+14	's	_	POS	POS	_	13	possessive	_	_
+15	nuclear	_	JJ	JJ	_	16	amod	_	_
+16	program	_	NN	NN	_	12	pobj	_	_
+17	and	_	CC	CC	_	16	cc	_	_
+18	activities	_	NNS	NNS	_	16	conj	_	_
+19	.	_	.	.	_	3	punct	_	_
+
+Oracle:
+(a2 / and, op, a3 / ambiguity)
+(a2 / and, op, i / issue)
+(a4 / and, op, a5 / activity)
+(a4 / and, op, p / program)
+(a5 / activity, mod, n / nucleus)
+(a5 / activity, poss, c2 / country)
+(c2 / country, name, n2 / name)
+(i / issue, polarity, - / -)
+(n2 / name, op, "Iran")
+(p / program, mod, n / nucleus)
+(p / program, poss, c2 / country)
+(r / remain-01, ARG1, a3 / ambiguity)
+(r / remain-01, ARG1, i / issue)
+(r2 / regard-01, ARG0, a3 / ambiguity)
+(r2 / regard-01, ARG0, i / issue)
+(r2 / regard-01, ARG1, a4 / and)
+(s / say-01, ARG0, a / accord)
+(s / say-01, ARG1, a2 / and)
+
+Input(Some(Graph(null,ArrayBuffer(Span(10,11,List(0),ambiguities,ambiguity,false), Span(16,17,List(1),activities.,and,false), Span(1,2,List(2),accord,accord,false), Span(17,18,List(3),,activity,false), Span(7,8,List(4),remaining,remain-01,false), Span(14,15,List(5),program,nucleus,false), Span(15,16,List(6),and,program,false), Span(2,3,List(7),said,say-01,false), Span(8,9,List(8),issues,issue,false), Span(9,10,List(9),and,and,false)),Map(2 -> accord, 5 -> nucleus, 8 -> issue, 7 -> say-01, 1 -> and, 4 -> remain-01, 6 -> program, 9 -> and, 0 -> ambiguity, 3 -> activity),Map(n -> nucleus, s -> say-01, a3 -> accord, p -> program, a -> ambiguity, a5 -> and, i -> issue, r -> remain-01, a2 -> and, a4 -> activity))),[Ljava.lang.String;@61d51e70,Annotation([Ljava.lang.String;@41bdc9cb,[Ljava.lang.String;@2169ee8,[Ljava.lang.String;@37f53c98),Annotation([Ljava.lang.String;@7e1a8288,[Ljava.lang.String;@51c6ff11,[Ledu.cmu.lti.nlp.amr.Dependency;@6711da1f),Annotation([Ljava.lang.String;@799e2b99,[Ljava.lang.String;@53bae8e0,[Ljava.lang.String;@3562abf1),Annotation([Ljava.lang.String;@5cca5e60,[Ljava.lang.String;@54806483,[Ledu.cmu.lti.nlp.amr.Entity;@50f97b1b))
+AMR:
+(a2 / and, op, a4 / activity)
+(a2 / and, op, p / program)
+(a5 / and, op, a / ambiguity)
+(a5 / and, op, i / issue)
+(p / program, mod, n / nucleus)
+(r / remain-01, ARG0, a3 / accord)
+(r / remain-01, ARG1, i / issue)
+(s / say-01, ARG0, a3 / accord)
+(s / say-01, ARG1, a2 / and)
+
+Decoded in 407,890 microseconds
+Sentence: According to an account by Reuters news agency the IAEA report said the work plan is a significant step forward.
+
+Oracle Span 1:  account => account-01
+Oracle Span 2:  agency => agency
+Oracle Span 3:  forward => forward
+Oracle Span 4:  IAEA => (organization :name (name :op "IAEA"))
+Oracle Span 5:  news => news
+Oracle Span 6:  plan => plan-01
+Oracle Span 7:  report => (thing :ARG1-of report-01)
+Oracle Span 8:  Reuters => (name :op "Reuters")
+Oracle Span 9:  said => say-01
+Oracle Span 10:  significant => significant
+Oracle Span 11:  step => step-01
+Oracle Span 12:  work => work
+NER Entity: (organization :name (name :op "Reuters"))
+NER Entity: (organization :name (name :op "IAEA"))
+Spans:
+Span 0-1:  According => accord-01
+Span 3-4:  account => account
+Span 19-20:  forward. => forward
+Span 6-7:  news => news
+Span 14-15:  plan => plan-01
+Span 10-11:  report => report-01
+Span 11-12:  said => say-01
+Span 17-18:  significant => significant
+Span 18-19:  step => step-01
+Span 13-14:  work => work-01
+
+Langrangian relaxation converged after 22 iterations. Delta = 0.0
+Oracle Span 3-4:  account => account-01
+Oracle Span 7-8:  agency => agency
+Oracle Span 19-20:  forward => forward
+Oracle Span 9-10:  IAEA => (organization :name (name :op "IAEA"))
+Oracle Span 6-7:  news => news
+Oracle Span 14-15:  plan => plan-01
+Oracle Span 10-11:  report => (thing :ARG1-of report-01)
+Oracle Span 5-6:  Reuters => (name :op "Reuters")
+Oracle Span 11-12:  said => say-01
+Oracle Span 17-18:  significant => significant
+Oracle Span 18-19:  step => step-01
+Oracle Span 13-14:  work => work
+
+Dependencies:
+1	According	_	VBG	VBG	_	12	prep	_	_
+2	to	_	TO	TO	_	1	pcomp	_	_
+3	an	_	DT	DT	_	4	det	_	_
+4	account	_	NN	NN	_	2	pobj	_	_
+5	by	_	IN	IN	_	4	prep	_	_
+6	Reuters	_	NNP	NNP	_	8	nn	_	_
+7	news	_	NN	NN	_	8	nn	_	_
+8	agency	_	NN	NN	_	5	pobj	_	_
+9	the	_	DT	DT	_	11	det	_	_
+10	IAEA	_	NNP	NNP	_	11	nn	_	_
+11	report	_	NN	NN	_	12	nsubj	_	_
+12	said	_	VBD	VBD	_	0	root	_	_
+13	the	_	DT	DT	_	15	det	_	_
+14	work	_	NN	NN	_	15	nn	_	_
+15	plan	_	NN	NN	_	19	nsubj	_	_
+16	is	_	VBZ	VBZ	_	19	cop	_	_
+17	a	_	DT	DT	_	19	det	_	_
+18	significant	_	JJ	JJ	_	19	amod	_	_
+19	step	_	NN	NN	_	12	ccomp	_	_
+20	forward	_	RB	RB	_	19	advmod	_	_
+21	.	_	.	.	_	12	punct	_	_
+
+Oracle:
+(a / account-01, ARG0, a2 / agency)
+(a2 / agency, mod, n / news)
+(a2 / agency, name, n2 / name)
+(n2 / name, op, "Reuters")
+(n3 / name, op, "IAEA")
+(o / organization, name, n3 / name)
+(p / plan-01, ARG1, w / work)
+(r / report-01, ARG0, o / organization)
+(r / report-01, ARG1, t / thing)
+(s / say-01, ARG0, a / account-01)
+(s3 / step-01, ARG1, p / plan-01)
+(s3 / step-01, ARG2, f / forward)
+(s3 / step-01, manner, s4 / significant)
+
+Input(Some(Graph(null,ArrayBuffer(Span(3,4,List(0),account,account,false), Span(18,19,List(1),step,step-01,false), Span(11,12,List(2),said,say-01,false), Span(13,14,List(3),work,work-01,false), Span(19,20,List(4),forward.,forward,false), Span(17,18,List(5),significant,significant,false), Span(0,1,List(6),According,accord-01,false), Span(6,7,List(7),news,news,false), Span(10,11,List(8),report,report-01,false), Span(14,15,List(9),plan,plan-01,false)),Map(2 -> say-01, 5 -> significant, 8 -> report-01, 7 -> news, 1 -> step-01, 4 -> forward, 6 -> accord-01, 9 -> plan-01, 0 -> account, 3 -> work-01),Map(n -> news, w -> work-01, s2 -> say-01, s -> step-01, p -> plan-01, a -> account, r -> report-01, a2 -> accord-01, s3 -> significant, f -> forward))),[Ljava.lang.String;@6c393676,Annotation([Ljava.lang.String;@44dcbf99,[Ljava.lang.String;@51850e3f,[Ljava.lang.String;@ae5726a),Annotation([Ljava.lang.String;@2fca7fc6,[Ljava.lang.String;@ecb3dd1,[Ledu.cmu.lti.nlp.amr.Dependency;@77c62ec1),Annotation([Ljava.lang.String;@56917471,[Ljava.lang.String;@2a59052a,[Ljava.lang.String;@7dab8005),Annotation([Ljava.lang.String;@3b5d1957,[Ljava.lang.String;@66b2d0b1,[Ledu.cmu.lti.nlp.amr.Entity;@4a0e918))
+AMR:
+(a2 / accord-01, ARG1, n / news)
+(a2 / accord-01, ARG2, a / account)
+(p / plan-01, ARG1, f / forward)
+(p / plan-01, mod, s / step-01)
+(s / step-01, ARG1, a2 / accord-01)
+(s / step-01, mod, s3 / significant)
+(s2 / say-01, ARG0, r / report-01)
+(s2 / say-01, ARG1, s / step-01)
+(w / work-01, ARG1, p / plan-01)
+
+Decoded in 489,313 microseconds
+Sentence: Reuters quoted a senior U.N. official as stating the Iranian government's efforts to enrich uranium had slowed.
+
+Oracle Span 1:  efforts => effort
+Oracle Span 2:  enrich => enrich-01
+Oracle Span 3:  government => (government-organization :ARG0-of govern-01)
+Oracle Span 4:  had => (person :ARG0-of have-org-role-91)
+Oracle Span 5:  Iranian => (country :name (name :op "Iran"))
+Oracle Span 6:  official => official
+Oracle Span 7:  quoted => quote-01
+Oracle Span 8:  Reuters => (publication :name (name :op "Reuters"))
+Oracle Span 9:  senior => senior
+Oracle Span 10:  slowed => slow-01
+Oracle Span 11:  stating => state-01
+Oracle Span 12:  U.N. => (organization :name (name :op "U.N."))
+Oracle Span 13:  uranium => uranium
+NER Entity: (organization :name (name :op "Reuters"))
+NER Entity: (organization :name (name :op "U.N."))
+NER Entity: (thing :name (name :op "Iranian"))
+Spans:
+Span 17-18:   => slow-01
+Span 10-11:  government's => (government-organization :ARG0-of govern-01)
+Span 15-16:  had => uranium
+Span 5-6:  official => (person :ARG0-of (have-org-role-91 :ARG2 official))
+Span 1-2:  quoted => quote-01
+Span 3-4:  senior => senior
+Span 7-8:  stating => state-01
+Span 12-13:  to => effort
+Span 4-5:  U.N. => (organization :name (name :op "U.N."))
+Span 14-15:  uranium => enrich-01
+
+Langrangian relaxation converged after 6 iterations. Delta = 0.0
+Oracle Span 12-13:  efforts => effort
+Oracle Span 14-15:  enrich => enrich-01
+Oracle Span 10-11:  government => (government-organization :ARG0-of govern-01)
+Oracle Span 16-17:  had => (person :ARG0-of have-org-role-91)
+Oracle Span 9-10:  Iranian => (country :name (name :op "Iran"))
+Oracle Span 5-6:  official => official
+Oracle Span 1-2:  quoted => quote-01
+Oracle Span 0-1:  Reuters => (publication :name (name :op "Reuters"))
+Oracle Span 3-4:  senior => senior
+Oracle Span 17-18:  slowed => slow-01
+Oracle Span 7-8:  stating => state-01
+Oracle Span 4-5:  U.N. => (organization :name (name :op "U.N."))
+Oracle Span 15-16:  uranium => uranium
+
+Dependencies:
+1	Reuters	_	NNP	NNP	_	18	nsubj	_	_
+2	quoted	_	VBN	VBN	_	1	vmod	_	_
+3	a	_	DT	DT	_	6	det	_	_
+4	senior	_	JJ	JJ	_	6	amod	_	_
+5	U.N.	_	NNP	NNP	_	6	nn	_	_
+6	official	_	NN	NN	_	2	dobj	_	_
+7	as	_	IN	IN	_	2	prep	_	_
+8	stating	_	VBG	VBG	_	7	pcomp	_	_
+9	the	_	DT	DT	_	11	det	_	_
+10	Iranian	_	JJ	JJ	_	11	amod	_	_
+11	government	_	NN	NN	_	13	poss	_	_
+12	's	_	POS	POS	_	11	possessive	_	_
+13	efforts	_	NNS	NNS	_	8	dobj	_	_
+14	to	_	TO	TO	_	8	prep	_	_
+15	enrich	_	JJ	JJ	_	16	amod	_	_
+16	uranium	_	NN	NN	_	14	pobj	_	_
+17	had	_	VBD	VBD	_	18	aux	_	_
+18	slowed	_	VBN	VBN	_	0	root	_	_
+19	.	_	.	.	_	18	punct	_	_
+
+Oracle:
+(c / country, name, n3 / name)
+(e / effort, poss, g / government-organization)
+(e / effort, purpose, e2 / enrich-01)
+(e2 / enrich-01, ARG0, g / government-organization)
+(e2 / enrich-01, ARG1, u / uranium)
+(g2 / govern-01, ARG0, g / government-organization)
+(g2 / govern-01, ARG1, c / country)
+(h / have-org-role-91, ARG0, p2 / person)
+(h / have-org-role-91, ARG1, o2 / organization)
+(h / have-org-role-91, ARG2, o / official)
+(n / name, op, "Reuters")
+(n2 / name, op, "U.N.")
+(n3 / name, op, "Iran")
+(o / official, mod, s / senior)
+(o2 / organization, name, n2 / name)
+(p / publication, name, n / name)
+(q / quote-01, ARG0, p / publication)
+(q / quote-01, ARG1, p2 / person)
+(q / quote-01, ARG2, s2 / state-01)
+(s2 / state-01, ARG0, o / official)
+(s2 / state-01, ARG1, s3 / slow-01)
+(s3 / slow-01, ARG1, e / effort)
+
+Input(Some(Graph(null,ArrayBuffer(Span(10,11,List(1, 0),government's,(government-organization :ARG0-of govern-01),false), Span(1,2,List(2),quoted,quote-01,false), Span(3,4,List(3),senior,senior,false), Span(17,18,List(4),,slow-01,false), Span(12,13,List(5),to,effort,false), Span(4,5,List(8, 7, 6),U.N.,(organization :name (name :op "U.N.")),false), Span(14,15,List(9),uranium,enrich-01,false), Span(5,6,List(12, 11, 10),official,(person :ARG0-of (have-org-role-91 :ARG2 official)),false), Span(7,8,List(13),stating,state-01,false), Span(15,16,List(14),had,uranium,false)),Map(2 -> quote-01, 5 -> effort, 12 -> official, 8 -> "U.N.", 7 -> name, 1 -> govern-01, 4 -> slow-01, 11 -> have-org-role-91, 14 -> uranium, 6 -> organization, 0 -> government-organization, 9 -> enrich-01, 3 -> senior, 10 -> person, 13 -> state-01),Map(e -> effort, n -> name, h -> have-org-role-91, q -> quote-01, s2 -> slow-01, e2 -> enrich-01, s -> senior, g2 -> govern-01, g -> government-organization, p -> person, o2 -> official, s3 -> state-01, u -> uranium, o -> organization))),[Ljava.lang.String;@37b2741,Annotation([Ljava.lang.String;@17d1ecd0,[Ljava.lang.String;@2a7f2165,[Ljava.lang.String;@652d6ca4),Annotation([Ljava.lang.String;@3fb61e6f,[Ljava.lang.String;@2719c225,[Ledu.cmu.lti.nlp.amr.Dependency;@74bebbaa),Annotation([Ljava.lang.String;@7a78a1d5,[Ljava.lang.String;@75b28d93,[Ljava.lang.String;@1c5371ea),Annotation([Ljava.lang.String;@1d31fa21,[Ljava.lang.String;@22f8865b,[Ledu.cmu.lti.nlp.amr.Entity;@43475982))
+AMR:
+(e / effort, poss, g / government-organization)
+(e2 / enrich-01, ARG1, u / uranium)
+(g2 / govern-01, ARG0, g / government-organization)
+(h / have-org-role-91, ARG0, p / person)
+(h / have-org-role-91, ARG1, o / organization)
+(h / have-org-role-91, ARG2, o2 / official)
+(n / name, op, "U.N.")
+(o / organization, name, n / name)
+(o2 / official, mod, s / senior)
+(q / quote-01, ARG1, s2 / slow-01)
+(q / quote-01, ARG2, s3 / state-01)
+(s2 / slow-01, ARG1, u / uranium)
+(s3 / state-01, ARG0, p / person)
+(s3 / state-01, ARG1, e / effort)
+
+Decoded in 413,674 microseconds
+Sentence: The IAEA report stated that Iranian officials must continue to build confidence about the scope and nature of Iran's present and future nuclear program.
+
+Oracle Span 1:  and => and
+Oracle Span 2:  and => and
+Oracle Span 3:  build => build-02
+Oracle Span 4:  confidence => confidence
+Oracle Span 5:  continue => continue-01
+Oracle Span 6:  future => future
+Oracle Span 7:  IAEA => (organization :name (name :op "IAEA"))
+Oracle Span 8:  Iran => (country :name (name :op "Iran"))
+Oracle Span 9:  nature => nature
+Oracle Span 10:  nuclear => nucleus
+Oracle Span 11:  officials => (have-org-role-91 :ARG2 official)
+Oracle Span 12:  present => present
+Oracle Span 13:  program => program
+Oracle Span 14:  report => (thing :ARG1-of report-01)
+Oracle Span 15:  scope => scope
+Oracle Span 16:  stated => state-01
+NER Entity: (organization :name (name :op "IAEA"))
+NER Entity: (country :name (name :op "Iran"))
+Spans:
+Span 24-25:   => program
+Span 15-16:  and => and
+Span 10-11:  build => build-01
+Span 11-12:  confidence => confidence
+Span 8-9:  continue => continue-01
+Span 21-22:  future => and
+Span 1-2:  IAEA => (organization :name (name :op "IAEA"))
+Span 5-6:  Iranian => (country :name (name :op "Iran"))
+Span 7-8:  must => muster-01
+Span 16-17:  nature => nature
+Span 6-7:  officials => (person :ARG0-of (have-org-role-91 :ARG2 official))
+Span 23-24:  program. => nucleus
+Span 2-3:  report => report-01
+Span 14-15:  scope => scope
+Span 3-4:  stated => state-01
+Span 0-21:  The IAEA report stated that Iranian officials must continue to build confidence about the scope and nature of Iran's present and => (date-entity :time present)
+Span 0-23:  The IAEA report stated that Iranian officials must continue to build confidence about the scope and nature of Iran's present and future nuclear => (date-entity :time future)
+
+Langrangian relaxation converged after 67 iterations. Delta = 0.0
+Oracle Span 15-16:  and => and
+Oracle Span 21-22:  and => and
+Oracle Span 10-11:  build => build-02
+Oracle Span 11-12:  confidence => confidence
+Oracle Span 8-9:  continue => continue-01
+Oracle Span 22-23:  future => future
+Oracle Span 1-2:  IAEA => (organization :name (name :op "IAEA"))
+Oracle Span 18-19:  Iran => (country :name (name :op "Iran"))
+Oracle Span 16-17:  nature => nature
+Oracle Span 23-24:  nuclear => nucleus
+Oracle Span 6-7:  officials => (have-org-role-91 :ARG2 official)
+Oracle Span 20-21:  present => present
+Oracle Span 24-25:  program => program
+Oracle Span 2-3:  report => (thing :ARG1-of report-01)
+Oracle Span 14-15:  scope => scope
+Oracle Span 3-4:  stated => state-01
+
+Dependencies:
+1	The	_	DT	DT	_	3	det	_	_
+2	IAEA	_	NNP	NNP	_	3	nn	_	_
+3	report	_	NN	NN	_	4	nsubj	_	_
+4	stated	_	VBD	VBD	_	0	root	_	_
+5	that	_	IN	IN	_	9	mark	_	_
+6	Iranian	_	JJ	JJ	_	7	amod	_	_
+7	officials	_	NNS	NNS	_	9	nsubj	_	_
+8	must	_	MD	MD	_	9	aux	_	_
+9	continue	_	VB	VB	_	4	ccomp	_	_
+10	to	_	TO	TO	_	11	aux	_	_
+11	build	_	VB	VB	_	9	xcomp	_	_
+12	confidence	_	NN	NN	_	11	dobj	_	_
+13	about	_	IN	IN	_	11	prep	_	_
+14	the	_	DT	DT	_	15	det	_	_
+15	scope	_	NN	NN	_	13	pobj	_	_
+16	and	_	CC	CC	_	15	cc	_	_
+17	nature	_	NN	NN	_	15	conj	_	_
+18	of	_	IN	IN	_	15	prep	_	_
+19	Iran	_	NNP	NNP	_	21	poss	_	_
+20	's	_	POS	POS	_	19	possessive	_	_
+21	present	_	NN	NN	_	18	pobj	_	_
+22	and	_	CC	CC	_	21	cc	_	_
+23	future	_	JJ	JJ	_	25	amod	_	_
+24	nuclear	_	JJ	JJ	_	25	amod	_	_
+25	program	_	NN	NN	_	21	conj	_	_
+26	.	_	.	.	_	4	punct	_	_
+
+Oracle:
+(a / and, op, n3 / nature)
+(a / and, op, s2 / scope)
+(a2 / and, op, f / future)
+(a2 / and, op, p2 / present)
+(b / build-02, ARG0, o2 / official)
+(b / build-02, ARG1, c3 / confidence)
+(c / continue-01, ARG1, b / build-02)
+(c2 / country, name, n2 / name)
+(c3 / confidence, topic, a / and)
+(h / have-org-role-91, ARG1, c2 / country)
+(h / have-org-role-91, ARG2, o2 / official)
+(n / name, op, "IAEA")
+(n2 / name, op, "Iran")
+(n3 / nature, poss, p / program)
+(o3 / organization, name, n / name)
+(p / program, mod, n4 / nucleus)
+(p / program, poss, c2 / country)
+(p / program, time, a2 / and)
+(r / report-01, ARG0, o3 / organization)
+(r / report-01, ARG1, t / thing)
+(s / state-01, ARG0, t / thing)
+(s2 / scope, poss, p / program)
+
+Input(Some(Graph(null,ArrayBuffer(Span(6,7,List(2, 1, 0),officials,(person :ARG0-of (have-org-role-91 :ARG2 official)),false), Span(7,8,List(3),must,muster-01,false), Span(1,2,List(6, 5, 4),IAEA,(organization :name (name :op "IAEA")),false), Span(3,4,List(7),stated,state-01,false), Span(14,15,List(8),scope,scope,false), Span(0,23,List(10, 9),The IAEA report stated that Iranian officials must continue to build confidence about the scope and nature of Iran's present and future nuclear,(date-entity :time future),false), Span(21,22,List(11),future,and,false), Span(0,21,List(13, 12),The IAEA report stated that Iranian officials must continue to build confidence about the scope and nature of Iran's present and,(date-entity :time present),false), Span(15,16,List(14),and,and,false), Span(5,6,List(17, 16, 15),Iranian,(country :name (name :op "Iran")),false), Span(2,3,List(18),report,report-01,false), Span(16,17,List(19),nature,nature,false), Span(23,24,List(20),program.,nucleus,false), Span(8,9,List(21),continue,continue-01,false), Span(11,12,List(22),confidence,confidence,false), Span(10,11,List(23),build,build-01,false), Span(24,25,List(24),,program,false)),Map(2 -> official, 5 -> name, 12 -> date-entity, 8 -> scope, 15 -> country, 21 -> continue-01, 18 -> report-01, 24 -> program, 7 -> state-01, 1 -> have-org-role-91, 17 -> "Iran", 23 -> build-01, 4 -> organization, 11 -> and, 14 -> and, 20 -> nucleus, 6 -> "IAEA", 9 -> date-entity, 0 -> person, 22 -> confidence, 16 -> name, 19 -> nature, 10 -> future, 3 -> muster-01, 13 -> present),Map(n -> name, h -> have-org-role-91, s2 -> scope, b -> build-01, p2 -> present, n4 -> nucleus, s -> state-01, m -> muster-01, d -> date-entity, p -> person, c3 -> confidence, n3 -> nature, a -> and, o2 -> organization, d2 -> date-entity, r -> report-01, a2 -> and, c -> country, f -> future, o -> official, p3 -> program, c2 -> continue-01, n2 -> name))),[Ljava.lang.String;@345de26a,Annotation([Ljava.lang.String;@98dedad,[Ljava.lang.String;@3c26bd69,[Ljava.lang.String;@574a8e5d),Annotation([Ljava.lang.String;@cdf786c,[Ljava.lang.String;@6ad90cdf,[Ledu.cmu.lti.nlp.amr.Dependency;@631d3918),Annotation([Ljava.lang.String;@60266b40,[Ljava.lang.String;@174d6330,[Ljava.lang.String;@35502af2),Annotation([Ljava.lang.String;@3f0f10b9,[Ljava.lang.String;@6c200073,[Ledu.cmu.lti.nlp.amr.Entity;@1008ba24))
+AMR:
+(a / and, op, d2 / date-entity)
+(a / and, op, s2 / scope)
+(a2 / and, op, n3 / nature)
+(a2 / and, op, s2 / scope)
+(b / build-01, ARG0, p / person)
+(b / build-01, ARG1, c3 / confidence)
+(b / build-01, ARG2, s2 / scope)
+(c / country, name, n2 / name)
+(c2 / continue-01, ARG1, b / build-01)
+(d / date-entity, time, f / future)
+(d2 / date-entity, time, p2 / present)
+(h / have-org-role-91, ARG0, p / person)
+(h / have-org-role-91, ARG1, c / country)
+(h / have-org-role-91, ARG2, o / official)
+(m / muster-01, ARG1, c2 / continue-01)
+(n / name, op, "IAEA")
+(n2 / name, op, "Iran")
+(n4 / nucleus, calendar, d / date-entity)
+(o2 / organization, name, n / name)
+(p3 / program, example, a / and)
+(r / report-01, ARG0, o2 / organization)
+(r / report-01, ARG1, d / date-entity)
+(s / state-01, ARG0, r / report-01)
+(s / state-01, ARG1, c2 / continue-01)
+
+Decoded in 3,112,944 microseconds
+Sentence: Iranian officials on 30 August 2007 stated cooperation with the IAEA possibly to prevent a further round of international sanctions.
+
+Oracle Span 1:  30 August 2007 => (date-entity :day 30 :month 8 :year 2007)
+Oracle Span 2:  cooperation => cooperate-01
+Oracle Span 3:  further => further
+Oracle Span 4:  IAEA => (organization :name (name :op "IAEA"))
+Oracle Span 5:  international => international
+Oracle Span 6:  Iranian => (country :name (name :op "Iran"))
+Oracle Span 7:  officials => (have-org-role-91 :ARG2 official)
+Oracle Span 8:  possibly => possible
+Oracle Span 9:  prevent => prevent-01
+Oracle Span 10:  round => round
+Oracle Span 11:  sanctions => sanction-02
+Oracle Span 12:  stated => state-01
+NER Entity: (organization :name (name :op "IAEA"))
+NER Entity: (thing :name (name :op "Iranian"))
+mkDayMonthYear(30	August	2007,30,August,2007)
+Spans:
+Span 7-8:  cooperation => cooperate-01
+Span 15-16:  further => further
+Span 10-11:  IAEA => (organization :name (name :op "IAEA"))
+Span 18-19:  international => international
+Span 0-1:  Iranian => (country :name (name :op "Iran"))
+Span 0-4:  Iranian officials on 30 => (date-entity :year 2007 :month 8 :day 30)
+Span 1-2:  officials => (person :ARG0-of (have-org-role-91 :ARG2 official))
+Span 11-12:  possibly => possibly
+Span 13-14:  prevent => prevent-01
+Span 16-17:  round => round
+Span 19-20:  sanctions. => (thing :ARG2-of sanction-02)
+Span 6-7:  stated => state-01
+
+Langrangian relaxation converged after 46 iterations. Delta = 0.0
+Oracle Span 3-6:  30 August 2007 => (date-entity :day 30 :month 8 :year 2007)
+Oracle Span 7-8:  cooperation => cooperate-01
+Oracle Span 15-16:  further => further
+Oracle Span 10-11:  IAEA => (organization :name (name :op "IAEA"))
+Oracle Span 18-19:  international => international
+Oracle Span 0-1:  Iranian => (country :name (name :op "Iran"))
+Oracle Span 1-2:  officials => (have-org-role-91 :ARG2 official)
+Oracle Span 11-12:  possibly => possible
+Oracle Span 13-14:  prevent => prevent-01
+Oracle Span 16-17:  round => round
+Oracle Span 19-20:  sanctions => sanction-02
+Oracle Span 6-7:  stated => state-01
+
+Dependencies:
+1	Iranian	_	JJ	JJ	_	2	amod	_	_
+2	officials	_	NNS	NNS	_	7	nsubj	_	_
+3	on	_	IN	IN	_	2	prep	_	_
+4	30	_	CD	CD	_	3	pobj	_	_
+5	August	_	NNP	NNP	_	2	tmod	_	_
+6	2007	_	CD	CD	_	5	num	_	_
+7	stated	_	VBD	VBD	_	0	root	_	_
+8	cooperation	_	NN	NN	_	7	dobj	_	_
+9	with	_	IN	IN	_	7	prep	_	_
+10	the	_	DT	DT	_	11	det	_	_
+11	IAEA	_	NNP	NNP	_	9	pobj	_	_
+12	possibly	_	RB	RB	_	14	advmod	_	_
+13	to	_	TO	TO	_	14	aux	_	_
+14	prevent	_	VB	VB	_	7	vmod	_	_
+15	a	_	DT	DT	_	17	det	_	_
+16	further	_	JJ	JJ	_	17	amod	_	_
+17	round	_	NN	NN	_	14	dobj	_	_
+18	of	_	IN	IN	_	17	prep	_	_
+19	international	_	JJ	JJ	_	20	amod	_	_
+20	sanctions	_	NNS	NNS	_	18	pobj	_	_
+21	.	_	.	.	_	7	punct	_	_
+
+Oracle:
+(c / country, name, n / name)
+(c2 / cooperate-01, ARG0, o / official)
+(c2 / cooperate-01, ARG1, o2 / organization)
+(c2 / cooperate-01, purpose, p / possible)
+(d / date-entity, day, 30)
+(d / date-entity, month, 8)
+(d / date-entity, year, 2007)
+(h / have-org-role-91, ARG1, c / country)
+(h / have-org-role-91, ARG2, o / official)
+(n / name, op, "Iran")
+(n2 / name, op, "IAEA")
+(o2 / organization, name, n2 / name)
+(p / possible, domain, p2 / prevent-01)
+(p2 / prevent-01, ARG1, r / round)
+(r / round, degree, f / further)
+(s / state-01, ARG1, c2 / cooperate-01)
+(s / state-01, time, d / date-entity)
+(s2 / sanction-02, consist, r / round)
+(s2 / sanction-02, mod, i / international)
+
+Input(Some(Graph(null,ArrayBuffer(Span(0,4,List(3, 2, 1, 0),Iranian officials on 30,(date-entity :year 2007 :month 8 :day 30),false), Span(11,12,List(4),possibly,possibly,false), Span(1,2,List(7, 6, 5),officials,(person :ARG0-of (have-org-role-91 :ARG2 official)),false), Span(6,7,List(8),stated,state-01,false), Span(18,19,List(9),international,international,false), Span(7,8,List(10),cooperation,cooperate-01,false), Span(0,1,List(13, 12, 11),Iranian,(country :name (name :op "Iran")),false), Span(16,17,List(14),round,round,false), Span(10,11,List(17, 16, 15),IAEA,(organization :name (name :op "IAEA")),false), Span(13,14,List(18),prevent,prevent-01,false), Span(19,20,List(20, 19),sanctions.,(thing :ARG2-of sanction-02),false), Span(15,16,List(21),further,further,false)),Map(2 -> 8, 5 -> person, 12 -> name, 15 -> organization, 8 -> state-01, 21 -> further, 18 -> prevent-01, 7 -> official, 17 -> "IAEA", 1 -> 2007, 4 -> possibly, 11 -> country, 14 -> round, 20 -> sanction-02, 6 -> have-org-role-91, 0 -> date-entity, 9 -> international, 16 -> name, 19 -> thing, 3 -> 30, 10 -> cooperate-01, 13 -> "Iran"),Map(n -> name, h -> have-org-role-91, 2 -> 2007, s2 -> sanction-02, t -> thing, 8 -> 8, p2 -> person, s -> state-01, d -> date-entity, p -> possibly, o2 -> organization, r -> round, i -> international, c -> cooperate-01, f -> further, o -> official, p3 -> prevent-01, 3 -> 30, n2 -> name, c2 -> country))),[Ljava.lang.String;@64e8a65,Annotation([Ljava.lang.String;@11a01e54,[Ljava.lang.String;@4c854872,[Ljava.lang.String;@128caa8),Annotation([Ljava.lang.String;@7347754a,[Ljava.lang.String;@628497c8,[Ledu.cmu.lti.nlp.amr.Dependency;@4249532),Annotation([Ljava.lang.String;@431e7294,[Ljava.lang.String;@bbba298,[Ljava.lang.String;@4d475ef0),Annotation([Ljava.lang.String;@6d6adf6f,[Ljava.lang.String;@5dd09a84,[Ledu.cmu.lti.nlp.amr.Entity;@b294cc4))
+AMR:
+(c / cooperate-01, ARG0, o2 / organization)
+(c / cooperate-01, ARG1, p3 / prevent-01)
+(c2 / country, name, n / name)
+(d / date-entity, day, 3 / 30)
+(d / date-entity, month, 8 / 8)
+(d / date-entity, year, 2 / 2007)
+(h / have-org-role-91, ARG0, p2 / person)
+(h / have-org-role-91, ARG1, c2 / country)
+(h / have-org-role-91, ARG2, o / official)
+(n / name, op, "Iran")
+(n2 / name, op, "IAEA")
+(o2 / organization, name, n2 / name)
+(p3 / prevent-01, ARG0, d / date-entity)
+(p3 / prevent-01, ARG1, r / round)
+(p3 / prevent-01, ARG6, p / possibly)
+(r / round, mod, f / further)
+(s / state-01, ARG0, p2 / person)
+(s / state-01, ARG1, c / cooperate-01)
+(s2 / sanction-02, ARG1, c2 / country)
+(s2 / sanction-02, ARG2, t / thing)
+(s2 / sanction-02, mod, i / international)
+
+Decoded in 1,722,186 microseconds
+Sentence: Iran's representative to the IAEA Ali Asghar SOLTANIEH stated to Tehran's Fars news agency that the report emphasized that there exists no sign or evidence indicating diversion of Iran's nuclear activities and that all of Iran's nuclear materials have been audited.
+
+Oracle Span 1:  activities => activity
+Oracle Span 2:  Ali Asghar SOLTANIEH => (person :name (name :op "Soltanieh" :op "Asghar" :op "Ali"))
+Oracle Span 3:  all => all
+Oracle Span 4:  and => and
+Oracle Span 5:  audited => audit-01
+Oracle Span 6:  diversion => divert-01
+Oracle Span 7:  emphasized => emphasize-01
+Oracle Span 8:  evidence => evidence-01
+Oracle Span 9:  exists => exist-01
+Oracle Span 10:  Fars news agency => (publication :name (name :op "Agency" :op "News" :op "Fars"))
+Oracle Span 11:  have => have-org-role-91
+Oracle Span 12:  IAEA => (organization :name (name :op "IAEA"))
+Oracle Span 13:  indicating => indicate-01
+Oracle Span 14:  Iran => (country :name (name :op "Iran"))
+Oracle Span 15:  materials => material
+Oracle Span 16:  no => -
+Oracle Span 17:  nuclear => nucleus
+Oracle Span 18:  or => or
+Oracle Span 19:  report => (thing :ARG0-of report-01)
+Oracle Span 20:  representative => represent-01
+Oracle Span 21:  sign => sign
+Oracle Span 22:  stated => state-01
+Oracle Span 23:  Tehran => (city :name (name :op "Tehran"))
+NER Entity: (person :name (name :op "Ali" :op "Asghar"))
+NER Entity: (organization :name (name :op "IAEA"))
+NER Entity: (country :name (name :op "Iran"))
+NER Entity: (organization :name (name :op "Fars"))
+NER Entity: (country :name (name :op "Tehran"))
+Spans:
+Span 41-42:   => material
+Span 44-45:   => audit-01
+Span 5-6:  Ali => (organization :name (name :op "IAEA"))
+Span 33-34:  all => activity
+Span 6-9:  Asghar SOLTANIEH stated => (person :name (name :op "Ali" :op "Asghar" :op "SOLTANIEH"))
+Span 40-41:  audited. => nucleus
+Span 26-27:  diversion => (thing :ARG0-of evidence-01)
+Span 24-25:  evidence => sign-01
+Span 11-12:  Fars => (city :name (name :op "Tehran"))
+Span 25-26:  indicating => or
+Span 0-1:  Iran's => (country :name (name :op "Iran"))
+Span 28-29:  Iran's => diversify-01
+Span 36-37:  nuclear => all
+Span 27-28:  of => indicate-01
+Span 34-35:  of => and
+Span 22-23:  sign => exist-01
+Span 18-19:  that => report
+Span 14-15:  that => (name :op "News")
+Span 32-33:  that => nucleus
+Span 19-20:  there => emphasize-01
+Span 2-3:  to => represent-01
+Span 9-10:  to => state-01
+
+Langrangian relaxation converged after 44 iterations. Delta = 0.0
+Oracle Span 33-34:  activities => activity
+Oracle Span 6-9:  Ali Asghar SOLTANIEH => (person :name (name :op "Soltanieh" :op "Asghar" :op "Ali"))
+Oracle Span 36-37:  all => all
+Oracle Span 34-35:  and => and
+Oracle Span 44-45:  audited => audit-01
+Oracle Span 28-29:  diversion => divert-01
+Oracle Span 19-20:  emphasized => emphasize-01
+Oracle Span 26-27:  evidence => evidence-01
+Oracle Span 22-23:  exists => exist-01
+Oracle Span 13-16:  Fars news agency => (publication :name (name :op "Agency" :op "News" :op "Fars"))
+Oracle Span 42-43:  have => have-org-role-91
+Oracle Span 5-6:  IAEA => (organization :name (name :op "IAEA"))
+Oracle Span 27-28:  indicating => indicate-01
+Oracle Span 0-1:  Iran => (country :name (name :op "Iran"))
+Oracle Span 41-42:  materials => material
+Oracle Span 23-24:  no => -
+Oracle Span 32-33:  nuclear => nucleus
+Oracle Span 25-26:  or => or
+Oracle Span 18-19:  report => (thing :ARG0-of report-01)
+Oracle Span 2-3:  representative => represent-01
+Oracle Span 24-25:  sign => sign
+Oracle Span 9-10:  stated => state-01
+Oracle Span 11-12:  Tehran => (city :name (name :op "Tehran"))
+
+Dependencies:
+1	Iran	_	NNP	NNP	_	3	poss	_	_
+2	's	_	POS	POS	_	1	possessive	_	_
+3	representative	_	NN	NN	_	10	nsubj	_	_
+4	to	_	TO	TO	_	3	prep	_	_
+5	the	_	DT	DT	_	9	det	_	_
+6	IAEA	_	NNP	NNP	_	9	nn	_	_
+7	Ali	_	NNP	NNP	_	9	nn	_	_
+8	Asghar	_	NNP	NNP	_	9	nn	_	_
+9	SOLTANIEH	_	NNP	NNP	_	4	pobj	_	_
+10	stated	_	VBD	VBD	_	0	root	_	_
+11	to	_	TO	TO	_	10	prep	_	_
+12	Tehran	_	NNP	NNP	_	16	poss	_	_
+13	's	_	POS	POS	_	12	possessive	_	_
+14	Fars	_	NNP	NNP	_	16	nn	_	_
+15	news	_	NN	NN	_	16	nn	_	_
+16	agency	_	NN	NN	_	11	pobj	_	_
+17	that	_	IN	IN	_	20	mark	_	_
+18	the	_	DT	DT	_	19	det	_	_
+19	report	_	NN	NN	_	20	nsubj	_	_
+20	emphasized	_	VBD	VBD	_	10	ccomp	_	_
+21	that	_	IN	IN	_	23	mark	_	_
+22	there	_	EX	EX	_	23	expl	_	_
+23	exists	_	VBZ	VBZ	_	20	ccomp	_	_
+24	no	_	DT	DT	_	25	neg	_	_
+25	sign	_	NN	NN	_	23	dobj	_	_
+26	or	_	CC	CC	_	25	cc	_	_
+27	evidence	_	NN	NN	_	25	conj	_	_
+28	indicating	_	VBG	VBG	_	25	vmod	_	_
+29	diversion	_	NN	NN	_	28	dobj	_	_
+30	of	_	IN	IN	_	29	prep	_	_
+31	Iran	_	NNP	NNP	_	34	poss	_	_
+32	's	_	POS	POS	_	31	possessive	_	_
+33	nuclear	_	JJ	JJ	_	34	amod	_	_
+34	activities	_	NNS	NNS	_	30	pobj	_	_
+35	and	_	CC	CC	_	23	cc	_	_
+36	that	_	IN	IN	_	45	mark	_	_
+37	all	_	DT	DT	_	45	nsubjpass	_	_
+38	of	_	IN	IN	_	37	prep	_	_
+39	Iran	_	NNP	NNP	_	42	poss	_	_
+40	's	_	POS	POS	_	39	possessive	_	_
+41	nuclear	_	JJ	JJ	_	42	amod	_	_
+42	materials	_	NNS	NNS	_	38	pobj	_	_
+43	have	_	VBP	VBP	_	45	aux	_	_
+44	been	_	VBN	VBN	_	45	auxpass	_	_
+45	audited	_	VBN	VBN	_	23	conj	_	_
+46	.	_	.	.	_	10	punct	_	_
+
+Oracle:
+(a / activity, mod, n6 / nucleus)
+(a / activity, poss, c / country)
+(a2 / and, op, a3 / audit-01)
+(a2 / and, op, e2 / exist-01)
+(a3 / audit-01, ARG1, m / material)
+(c / country, name, n3 / name)
+(c2 / city, name, n5 / name)
+(d / divert-01, ARG1, a / activity)
+(e / emphasize-01, ARG0, t / thing)
+(e / emphasize-01, ARG1, a2 / and)
+(e2 / exist-01, ARG1, o2 / or)
+(h / have-org-role-91, ARG0, p / person)
+(h / have-org-role-91, ARG1, o / organization)
+(h / have-org-role-91, ARG3, r / represent-01)
+(i / indicate-01, ARG0, e3 / evidence-01)
+(i / indicate-01, ARG0, s2 / sign)
+(i / indicate-01, ARG1, d / divert-01)
+(m / material, mod, n6 / nucleus)
+(m / material, poss, c / country)
+(m / material, quant, a4 / all)
+(n / name, op, "Ali")
+(n / name, op, "Asghar")
+(n / name, op, "Soltanieh")
+(n2 / name, op, "IAEA")
+(n3 / name, op, "Iran")
+(n5 / name, op, "Tehran")
+(n7 / name, op, "Agency")
+(n7 / name, op, "Fars")
+(n7 / name, op, "News")
+(o / organization, name, n2 / name)
+(o2 / or, op, e3 / evidence-01)
+(o2 / or, op, s2 / sign)
+(p / person, name, n / name)
+(p2 / publication, location, c2 / city)
+(p2 / publication, name, n7 / name)
+(r / represent-01, ARG1, c / country)
+(r2 / report-01, ARG0, t / thing)
+(s / state-01, ARG0, p / person)
+(s / state-01, ARG1, e / emphasize-01)
+(s / state-01, ARG2, p2 / publication)
+(s2 / sign, polarity, - / -)
+
+Input(Some(Graph(null,ArrayBuffer(Span(2,3,List(0),to,represent-01,false), Span(9,10,List(1),to,state-01,false), Span(18,19,List(2),that,report,false), Span(19,20,List(3),there,emphasize-01,false), Span(41,42,List(4),,material,false), Span(6,9,List(9, 8, 7, 6, 5),Asghar SOLTANIEH stated,(person :name (name :op "Ali" :op "Asghar" :op "SOLTANIEH")),false), Span(27,28,List(10),of,indicate-01,false), Span(0,1,List(13, 12, 11),Iran's,(country :name (name :op "Iran")),false), Span(14,15,List(15, 14),that,(name :op "News"),false), Span(40,41,List(16),audited.,nucleus,false), Span(22,23,List(17),sign,exist-01,false), Span(24,25,List(18),evidence,sign-01,false), Span(25,26,List(19),indicating,or,false), Span(33,34,List(20),all,activity,false), Span(36,37,List(21),nuclear,all,false), Span(5,6,List(24, 23, 22),Ali,(organization :name (name :op "IAEA")),false), Span(34,35,List(25),of,and,false), Span(26,27,List(27, 26),diversion,(thing :ARG0-of evidence-01),false), Span(32,33,List(28),that,nucleus,false), Span(28,29,List(29),Iran's,diversify-01,false), Span(11,12,List(32, 31, 30),Fars,(city :name (name :op "Tehran")),false), Span(44,45,List(33),,audit-01,false)),Map(30 -> city, 2 -> report, 5 -> person, 33 -> audit-01, 27 -> evidence-01, 12 -> name, 8 -> "Asghar", 15 -> "News", 21 -> all, 18 -> sign-01, 24 -> "IAEA", 7 -> "Ali", 1 -> state-01, 17 -> exist-01, 23 -> name, 26 -> thing, 4 -> material, 11 -> country, 32 -> "Tehran", 14 -> name, 29 -> diversify-01, 20 -> activity, 28 -> nucleus, 6 -> name, 9 -> "SOLTANIEH", 0 -> represent-01, 22 -> organization, 16 -> nucleus, 19 -> or, 10 -> indicate-01, 3 -> emphasize-01, 31 -> name, 25 -> and, 13 -> "Iran"),Map(e -> emphasize-01, n -> name, s2 -> sign-01, t -> thing, n7 -> name, e2 -> exist-01, n4 -> nucleus, a3 -> and, s -> state-01, m -> material, d -> diversify-01, r2 -> report, p -> person, n3 -> name, a -> activity, o2 -> organization, n6 -> nucleus, i -> indicate-01, r -> represent-01, a2 -> all, c -> country, o -> or, e3 -> evidence-01, n2 -> name, c2 -> city, a4 -> audit-01, n5 -> name))),[Ljava.lang.String;@c773c3c,Annotation([Ljava.lang.String;@25b6d9d0,[Ljava.lang.String;@3e25e99d,[Ljava.lang.String;@5275c589),Annotation([Ljava.lang.String;@67d68527,[Ljava.lang.String;@743da854,[Ledu.cmu.lti.nlp.amr.Dependency;@65c5de4f),Annotation([Ljava.lang.String;@196006f3,[Ljava.lang.String;@4a4c5745,[Ljava.lang.String;@532a2950),Annotation([Ljava.lang.String;@1856b2dc,[Ljava.lang.String;@19878bb,[Ledu.cmu.lti.nlp.amr.Entity;@2946e1b2))
+AMR:
+(a / activity, mod, n6 / nucleus)
+(a3 / and, op, a4 / audit-01)
+(a3 / and, op, d / diversify-01)
+(a3 / and, op, e2 / exist-01)
+(a4 / audit-01, ARG1, a2 / all)
+(c / country, name, n2 / name)
+(c2 / city, name, n7 / name)
+(d / diversify-01, ARG1, a / activity)
+(e / emphasize-01, ARG0, r2 / report)
+(e / emphasize-01, ARG1, a3 / and)
+(e2 / exist-01, ARG1, s2 / sign-01)
+(e3 / evidence-01, ARG0, t / thing)
+(e3 / evidence-01, ARG1, n4 / nucleus)
+(i / indicate-01, ARG1, d / diversify-01)
+(n / name, op, "Ali")
+(n / name, op, "Asghar")
+(n / name, op, "SOLTANIEH")
+(n2 / name, op, "Iran")
+(n3 / name, op, "News")
+(n3 / name, poss, c2 / city)
+(n5 / name, op, "IAEA")
+(n7 / name, op, "Tehran")
+(o / or, op, s2 / sign-01)
+(o / or, op, t / thing)
+(o2 / organization, name, n5 / name)
+(p / person, name, n / name)
+(p / person, poss, o2 / organization)
+(r / represent-01, ARG0, c / country)
+(r / represent-01, ARG1, p / person)
+(s / state-01, ARG0, p / person)
+(s / state-01, ARG1, e / emphasize-01)
+(s / state-01, ARG6, c2 / city)
+(s2 / sign-01, ARG1, m / material)
+
+Decoded in 3,653,071 microseconds
+Sentence: Some Nonproliferation Experts stated the IAEA was ceding too much to Iran.
+
+Oracle Span 1:  ceding => cede-01
+Oracle Span 2:  Experts => (person :ARG1-of expert-41)
+Oracle Span 3:  IAEA => (organization :name (name :op "IAEA"))
+Oracle Span 4:  Iran => (country :name (name :op "Iran"))
+Oracle Span 5:  much => much
+Oracle Span 6:  Some => some
+Oracle Span 7:  stated => state-01
+Oracle Span 8:  too => too
+NER Entity: (organization :name (name :op "IAEA"))
+NER Entity: (country :name (name :op "Iran"))
+Spans:
+Span 7-8:  ceding => (cede-01 :ARG1-of cause-01)
+Span 2-3:  Experts => (person :ARG1-of expert-41)
+Span 5-6:  IAEA => (organization :name (name :op "IAEA"))
+Span 11-12:  Iran. => (country :name (name :op "Iran"))
+Span 9-10:  much => much
+Span 0-1:  Some => some
+Span 3-4:  stated => state-01
+Span 8-9:  too => too
+
+Langrangian relaxation converged after 15 iterations. Delta = 0.0
+Oracle Span 7-8:  ceding => cede-01
+Oracle Span 2-3:  Experts => (person :ARG1-of expert-41)
+Oracle Span 5-6:  IAEA => (organization :name (name :op "IAEA"))
+Oracle Span 11-12:  Iran => (country :name (name :op "Iran"))
+Oracle Span 9-10:  much => much
+Oracle Span 0-1:  Some => some
+Oracle Span 3-4:  stated => state-01
+Oracle Span 8-9:  too => too
+
+Dependencies:
+1	Some	_	DT	DT	_	3	det	_	_
+2	Nonproliferation	_	NNP	NNP	_	3	nn	_	_
+3	Experts	_	NNS	NNS	_	4	nsubj	_	_
+4	stated	_	VBD	VBD	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	IAEA	_	NNP	NNP	_	8	nsubj	_	_
+7	was	_	VBD	VBD	_	8	aux	_	_
+8	ceding	_	VBG	VBG	_	4	ccomp	_	_
+9	too	_	RB	RB	_	10	advmod	_	_
+10	much	_	RB	RB	_	8	advmod	_	_
+11	to	_	TO	TO	_	8	prep	_	_
+12	Iran	_	NNP	NNP	_	11	pobj	_	_
+13	.	_	.	.	_	4	punct	_	_
+
+Oracle:
+(c / cede-01, ARG0, o / organization)
+(c / cede-01, ARG1, m / much)
+(c / cede-01, ARG2, c2 / country)
+(c2 / country, name, n2 / name)
+(e / expert-41, ARG1, p / person)
+(m / much, degree, t / too)
+(n / name, op, "IAEA")
+(n2 / name, op, "Iran")
+(o / organization, name, n / name)
+(p / person, quant, s2 / some)
+(s / state-01, ARG0, p / person)
+(s / state-01, ARG1, c / cede-01)
+
+Input(Some(Graph(null,ArrayBuffer(Span(3,4,List(0),stated,state-01,false), Span(8,9,List(1),too,too,false), Span(11,12,List(4, 3, 2),Iran.,(country :name (name :op "Iran")),false), Span(5,6,List(7, 6, 5),IAEA,(organization :name (name :op "IAEA")),false), Span(0,1,List(8),Some,some,false), Span(2,3,List(10, 9),Experts,(person :ARG1-of expert-41),false), Span(7,8,List(12, 11),ceding,(cede-01 :ARG1-of cause-01),false), Span(9,10,List(13),much,much,false)),Map(2 -> country, 5 -> organization, 12 -> cause-01, 8 -> some, 7 -> "IAEA", 1 -> too, 4 -> "Iran", 11 -> cede-01, 6 -> name, 0 -> state-01, 9 -> person, 3 -> name, 10 -> expert-41, 13 -> much),Map(e -> expert-41, n -> name, s2 -> some, t -> too, s -> state-01, m -> much, p -> person, c3 -> cause-01, c -> country, o -> organization, c2 -> cede-01, n2 -> name))),[Ljava.lang.String;@85761a6,Annotation([Ljava.lang.String;@77a9185f,[Ljava.lang.String;@47c57f8b,[Ljava.lang.String;@1909e0bc),Annotation([Ljava.lang.String;@2ae0e86a,[Ljava.lang.String;@15b47689,[Ledu.cmu.lti.nlp.amr.Dependency;@79617a93),Annotation([Ljava.lang.String;@2f3b7903,[Ljava.lang.String;@2356736,[Ljava.lang.String;@340349c7),Annotation([Ljava.lang.String;@46c40836,[Ljava.lang.String;@32c3828c,[Ledu.cmu.lti.nlp.amr.Entity;@1be65f35))
+AMR:
+(c / country, name, n / name)
+(c2 / cede-01, ARG0, o / organization)
+(c2 / cede-01, ARG1, c / country)
+(c2 / cede-01, ARG6, t / too)
+(c2 / cede-01, degree, m / much)
+(c3 / cause-01, ARG1, c2 / cede-01)
+(e / expert-41, ARG1, p / person)
+(e / expert-41, ARG6, s2 / some)
+(n / name, op, "Iran")
+(n2 / name, op, "IAEA")
+(o / organization, name, n2 / name)
+(s / state-01, ARG0, p / person)
+(s / state-01, ARG1, c2 / cede-01)
+
+Decoded in 369,460 microseconds
+Sentence: Arms-control experts David Albright and Jacqueline Shire of the Washington-based Institute for Science and International Security wrote in a criticism published the week of 19 August 2007 that the idea of closing files violates fundamental safeguards principles and that the agreement does not specify that Iranian officials would provide the IAEA access to key people, facilities, and documents that are needed to verify Iranian answers to the IAEA's questions.
+
+Oracle Span 1:  19 August 2007 => (date-entity :day 19 :month 8 :year 2007)
+Oracle Span 2:  access => access-01
+Oracle Span 3:  agreement => agree-01
+Oracle Span 4:  and => and
+Oracle Span 5:  and => and
+Oracle Span 6:  and => and
+Oracle Span 7:  answers => answer-01
+Oracle Span 8:  Arms => arm
+Oracle Span 9:  based => base-01
+Oracle Span 10:  closing => close-01
+Oracle Span 11:  control => control-01
+Oracle Span 12:  criticism => criticize-01
+Oracle Span 13:  David Albright => (person :name (name :op "Albright" :op "David"))
+Oracle Span 14:  documents => document
+Oracle Span 15:  experts => expert-41
+Oracle Span 16:  facilities => facility
+Oracle Span 17:  files => file
+Oracle Span 18:  fundamental => fundamental
+Oracle Span 19:  IAEA => (organization :name (name :op "IAEA"))
+Oracle Span 20:  idea => idea
+Oracle Span 21:  Institute for Science and International Security => (have-org-role-91 :ARG1 (organization :name (name :op "Security" :op "International" :op "and" :op "Science" :op "for" :op "Institute")))
+Oracle Span 22:  Iranian => (country :name (name :op "Iran"))
+Oracle Span 23:  Jacqueline Shire => (person :name (name :op "Shire" :op "Jacqueline"))
+Oracle Span 24:  key => key
+Oracle Span 25:  needed => (person :ARG1-of need-01)
+Oracle Span 26:  officials => (have-org-role-91 :ARG2 official)
+Oracle Span 27:  principles => principle
+Oracle Span 28:  provide => provide-01
+Oracle Span 29:  published => publish-01
+Oracle Span 30:  questions => question-01
+Oracle Span 31:  safeguards => safeguard-01
+Oracle Span 32:  specify => specify-01
+Oracle Span 33:  verify => verify-01
+Oracle Span 34:  violates => violate-01
+Oracle Span 35:  Washington => (city :name (name :op "Washington"))
+Oracle Span 36:  week => week
+Oracle Span 37:  wrote => write-01
+mkDayMonthYear(19	August	2007,19,August,2007)
+NER Entity: (organization :name (name :op "IAEA"))
+NER Entity: (person :name (name :op "David" :op "Albright"))
+Spans:
+Span 71-72:   => question
+Span 51-52:  access => access-01
+Span 40-41:  agreement => agree-01
+Span 56-57:  and => facility
+Span 13-14:  and => (and :op (person :ARG0-of have-org-role-91))
+Span 4-5:  and => and
+Span 37-38:  and => and
+Span 64-65:  answers => verify-01
+Span 59-60:  are => document
+Span 0-22:  Arms-control experts David Albright and Jacqueline Shire of the Washington-based Institute for Science and International Security wrote in a criticism published the => (date-entity :month 8 :day 19)
+Span 31-32:  closing => close-01
+Span 19-20:  criticism => criticize-01
+Span 2-4:  David Albright => (person :name (name :op "David" :op "Albright"))
+Span 55-56:  facilities, => and
+Span 32-33:  files => file
+Span 11-12:  for => person
+Span 34-35:  fundamental => fundamental
+Span 50-51:  IAEA => (organization :name (name :op "IAEA"))
+Span 29-30:  idea => idea
+Span 10-11:  Institute => institute
+Span 14-15:  International => (event :name (name :op "International"))
+Span 45-46:  Iranian => (country :name (name :op "Iran"))
+Span 5-7:  Jacqueline Shire => (person :name (name :op "Jacqueline" :op "Shire"))
+Span 53-54:  key => key
+Span 46-47:  officials => (person :ARG0-of (have-org-role-91 :ARG2 official))
+Span 36-37:  principles => principle
+Span 48-49:  provide => provide-01
+Span 20-21:  published => publish-01
+Span 35-36:  safeguards => safeguard-01
+Span 12-13:  Science => r2
+Span 15-16:  Security => security
+Span 43-44:  specify => specify-01
+Span 58-59:  that => and
+Span 66-67:  the => answer-01
+Span 65-66:  to => (country :name (name :op "Iran"))
+Span 62-63:  verify => need-01
+Span 33-34:  violates => violate-01
+Span 16-17:  wrote => write-01
+
+Langrangian relaxation converged after 48 iterations. Delta = 0.0
+Oracle Span 28-31:  19 August 2007 => (date-entity :day 19 :month 8 :year 2007)
+Oracle Span 55-56:  access => access-01
+Oracle Span 44-45:  agreement => agree-01
+Oracle Span 6-7:  and => and
+Oracle Span 41-42:  and => and
+Oracle Span 62-63:  and => and
+Oracle Span 70-71:  answers => answer-01
+Oracle Span 0-1:  Arms => arm
+Oracle Span 13-14:  based => base-01
+Oracle Span 35-36:  closing => close-01
+Oracle Span 2-3:  control => control-01
+Oracle Span 23-24:  criticism => criticize-01
+Oracle Span 4-6:  David Albright => (person :name (name :op "Albright" :op "David"))
+Oracle Span 63-64:  documents => document
+Oracle Span 3-4:  experts => expert-41
+Oracle Span 60-61:  facilities => facility
+Oracle Span 36-37:  files => file
+Oracle Span 38-39:  fundamental => fundamental
+Oracle Span 54-55:  IAEA => (organization :name (name :op "IAEA"))
+Oracle Span 33-34:  idea => idea
+Oracle Span 14-20:  Institute for Science and International Security => (have-org-role-91 :ARG1 (organization :name (name :op "Security" :op "International" :op "and" :op "Science" :op "for" :op "Institute")))
+Oracle Span 49-50:  Iranian => (country :name (name :op "Iran"))
+Oracle Span 7-9:  Jacqueline Shire => (person :name (name :op "Shire" :op "Jacqueline"))
+Oracle Span 57-58:  key => key
+Oracle Span 66-67:  needed => (person :ARG1-of need-01)
+Oracle Span 50-51:  officials => (have-org-role-91 :ARG2 official)
+Oracle Span 40-41:  principles => principle
+Oracle Span 52-53:  provide => provide-01
+Oracle Span 24-25:  published => publish-01
+Oracle Span 75-76:  questions => question-01
+Oracle Span 39-40:  safeguards => safeguard-01
+Oracle Span 47-48:  specify => specify-01
+Oracle Span 68-69:  verify => verify-01
+Oracle Span 37-38:  violates => violate-01
+Oracle Span 11-12:  Washington => (city :name (name :op "Washington"))
+Oracle Span 26-27:  week => week
+Oracle Span 20-21:  wrote => write-01
+
+Dependencies:
+1	Arms-control	_	NNP	NNP	_	4	nn	_	_
+2	experts	_	NNS	NNS	_	4	nn	_	_
+3	David	_	NNP	NNP	_	4	nn	_	_
+4	Albright	_	NNP	NNP	_	17	nsubj	_	_
+5	and	_	CC	CC	_	4	cc	_	_
+6	Jacqueline	_	NNP	NNP	_	7	nn	_	_
+7	Shire	_	NNP	NNP	_	4	conj	_	_
+8	of	_	IN	IN	_	4	prep	_	_
+9	the	_	DT	DT	_	11	det	_	_
+10	Washington-based	_	JJ	JJ	_	11	amod	_	_
+11	Institute	_	NNP	NNP	_	8	pobj	_	_
+12	for	_	IN	IN	_	11	prep	_	_
+13	Science	_	NNP	NNP	_	16	nn	_	_
+14	and	_	CC	CC	_	13	cc	_	_
+15	International	_	NNP	NNP	_	13	conj	_	_
+16	Security	_	NNP	NNP	_	12	pobj	_	_
+17	wrote	_	VBD	VBD	_	0	root	_	_
+18	in	_	IN	IN	_	17	prep	_	_
+19	a	_	DT	DT	_	20	det	_	_
+20	criticism	_	NN	NN	_	18	pobj	_	_
+21	published	_	VBN	VBN	_	20	vmod	_	_
+22	the	_	DT	DT	_	23	det	_	_
+23	week	_	NN	NN	_	21	dobj	_	_
+24	of	_	IN	IN	_	23	prep	_	_
+25	19	_	CD	CD	_	24	pobj	_	_
+26	August	_	NNP	NNP	_	21	tmod	_	_
+27	2007	_	CD	CD	_	26	num	_	_
+28	that	_	IN	IN	_	34	mark	_	_
+29	the	_	DT	DT	_	30	det	_	_
+30	idea	_	NN	NN	_	34	nsubj	_	_
+31	of	_	IN	IN	_	30	prep	_	_
+32	closing	_	VBG	VBG	_	33	amod	_	_
+33	files	_	NNS	NNS	_	31	pobj	_	_
+34	violates	_	VBZ	VBZ	_	21	ccomp	_	_
+35	fundamental	_	JJ	JJ	_	37	amod	_	_
+36	safeguards	_	NNS	NNS	_	37	nn	_	_
+37	principles	_	NNS	NNS	_	34	dobj	_	_
+38	and	_	CC	CC	_	34	cc	_	_
+39	that	_	IN	IN	_	44	mark	_	_
+40	the	_	DT	DT	_	41	det	_	_
+41	agreement	_	NN	NN	_	44	nsubj	_	_
+42	does	_	VBZ	VBZ	_	44	aux	_	_
+43	not	_	RB	RB	_	44	neg	_	_
+44	specify	_	VB	VB	_	34	conj	_	_
+45	that	_	IN	IN	_	49	mark	_	_
+46	Iranian	_	JJ	JJ	_	47	amod	_	_
+47	officials	_	NNS	NNS	_	49	nsubj	_	_
+48	would	_	MD	MD	_	49	aux	_	_
+49	provide	_	VB	VB	_	44	ccomp	_	_
+50	the	_	DT	DT	_	52	det	_	_
+51	IAEA	_	NNP	NNP	_	52	nn	_	_
+52	access	_	NN	NN	_	49	dobj	_	_
+53	to	_	TO	TO	_	49	prep	_	_
+54	key	_	JJ	JJ	_	55	amod	_	_
+55	people	_	NNS	NNS	_	53	pobj	_	_
+56	,	_	,	,	_	20	punct	_	_
+57	facilities	_	NNS	NNS	_	20	conj	_	_
+58	,	_	,	,	_	20	punct	_	_
+59	and	_	CC	CC	_	20	cc	_	_
+60	documents	_	NNS	NNS	_	20	conj	_	_
+61	that	_	WDT	WDT	_	63	nsubjpass	_	_
+62	are	_	VBP	VBP	_	63	auxpass	_	_
+63	needed	_	VBN	VBN	_	60	rcmod	_	_
+64	to	_	TO	TO	_	65	aux	_	_
+65	verify	_	VB	VB	_	63	xcomp	_	_
+66	Iranian	_	JJ	JJ	_	67	amod	_	_
+67	answers	_	NNS	NNS	_	65	dobj	_	_
+68	to	_	TO	TO	_	65	prep	_	_
+69	the	_	DT	DT	_	70	det	_	_
+70	IAEA	_	NNP	NNP	_	72	poss	_	_
+71	's	_	POS	POS	_	70	possessive	_	_
+72	questions	_	NNS	NNS	_	68	pobj	_	_
+73	.	_	.	.	_	17	punct	_	_
+
+Oracle:
+(a / and, op, p / person)
+(a / and, op, p2 / person)
+(a3 / and, op, s2 / specify-01)
+(a3 / and, op, v / violate-01)
+(a5 / access-01, ARG0, n6 / name)
+(a5 / access-01, ARG1, a6 / and)
+(a6 / and, op, d / document)
+(a6 / and, op, f3 / facility)
+(a6 / and, op, p5 / person)
+(a7 / answer-01, ARG0, n5 / name)
+(a7 / answer-01, ARG1, q / question-01)
+(b / base-01, ARG1, o / organization)
+(b / base-01, location, c2 / city)
+(c / control-01, ARG1, a2 / arm)
+(c2 / city, name, n3 / name)
+(c3 / close-01, ARG1, f / file)
+(c4 / country, name, n5 / name)
+(d2 / date-entity, day, 19)
+(d2 / date-entity, month, 8)
+(d2 / date-entity, year, 2007)
+(e2 / expert-41, ARG1, p2 / person)
+(e2 / expert-41, ARG2, c / control-01)
+(h / have-org-role-91, ARG1, c4 / country)
+(h / have-org-role-91, ARG2, o2 / official)
+(h2 / have-org-role-91, ARG0, p / person)
+(h2 / have-org-role-91, ARG1, o / organization)
+(i / idea, topic, c3 / close-01)
+(n / name, op, "Albright")
+(n / name, op, "David")
+(n2 / name, op, "Institute")
+(n2 / name, op, "International")
+(n2 / name, op, "Science")
+(n2 / name, op, "Security")
+(n2 / name, op, "and")
+(n2 / name, op, "for")
+(n3 / name, op, "Washington")
+(n4 / name, op, "Jacqueline")
+(n4 / name, op, "Shire")
+(n5 / name, op, "Iran")
+(n6 / name, op, "IAEA")
+(n7 / need-01, ARG1, d / document)
+(n7 / need-01, ARG1, f3 / facility)
+(n7 / need-01, ARG1, p5 / person)
+(n7 / need-01, purpose, v2 / verify-01)
+(o / organization, name, n2 / name)
+(o3 / organization, name, n6 / name)
+(p / person, name, n / name)
+(p2 / person, name, n4 / name)
+(p3 / principle, mod, f2 / fundamental)
+(p4 / provide-01, ARG1, a5 / access-01)
+(p4 / provide-01, ARG2, o3 / organization)
+(p5 / person, mod, k / key)
+(p6 / publish-01, ARG1, c5 / criticize-01)
+(p6 / publish-01, time, w2 / week)
+(q / question-01, ARG0, o3 / organization)
+(s / safeguard-01, ARG1, p3 / principle)
+(s2 / specify-01, ARG0, a4 / agree-01)
+(s2 / specify-01, ARG1, p4 / provide-01)
+(v / violate-01, ARG0, i / idea)
+(v / violate-01, ARG1, p3 / principle)
+(v2 / verify-01, ARG1, a7 / answer-01)
+(w / write-01, ARG0, a / and)
+(w / write-01, ARG1, a3 / and)
+(w / write-01, location, c5 / criticize-01)
+(w2 / week, mod, d2 / date-entity)
+
+Input(Some(Graph(null,ArrayBuffer(Span(15,16,List(0),Security,security,false), Span(48,49,List(1),provide,provide-01,false), Span(62,63,List(2),verify,need-01,false), Span(40,41,List(3),agreement,agree-01,false), Span(12,13,List(4),Science,r2,false), Span(32,33,List(5),files,file,false), Span(56,57,List(6),and,facility,false), Span(11,12,List(7),for,person,false), Span(14,15,List(10, 9, 8),International,(event :name (name :op "International")),false), Span(58,59,List(11),that,and,false), Span(51,52,List(12),access,access-01,false), Span(13,14,List(15, 14, 13),and,(and :op (person :ARG0-of have-org-role-91)),false), Span(50,51,List(18, 17, 16),IAEA,(organization :name (name :op "IAEA")),false), Span(4,5,List(19),and,and,false), Span(0,22,List(22, 21, 20),Arms-control experts David Albright and Jacqueline Shire of the Washington-based Institute for Science and International Security wrote in a criticism published the,(date-entity :month 8 :day 19),false), Span(33,34,List(23),violates,violate-01,false), Span(46,47,List(26, 25, 24),officials,(person :ARG0-of (have-org-role-91 :ARG2 official)),false), Span(53,54,List(27),key,key,false), Span(29,30,List(28),idea,idea,false), Span(66,67,List(29),the,answer-01,false), Span(55,56,List(30),facilities,,and,false), Span(36,37,List(31),principles,principle,false), Span(10,11,List(32),Institute,institute,false), Span(5,7,List(36, 35, 34, 33),Jacqueline Shire,(person :name (name :op "Jacqueline" :op "Shire")),false), Span(64,65,List(37),answers,verify-01,false), Span(71,72,List(38),,question,false), Span(2,4,List(42, 41, 40, 39),David Albright,(person :name (name :op "David" :op "Albright")),false), Span(37,38,List(43),and,and,false), Span(59,60,List(44),are,document,false), Span(20,21,List(45),published,publish-01,false), Span(31,32,List(46),closing,close-01,false), Span(19,20,List(47),criticism,criticize-01,false), Span(16,17,List(48),wrote,write-01,false), Span(65,66,List(51, 50, 49),to,(country :name (name :op "Iran")),false), Span(35,36,List(52),safeguards,safeguard-01,false), Span(45,46,List(55, 54, 53),Iranian,(country :name (name :op "Iran")),false), Span(43,44,List(56),specify,specify-01,false), Span(34,35,List(57),fundamental,fundamental,false)),Map(57 -> fundamental, 30 -> and, 39 -> person, 45 -> publish-01, 51 -> "Iran", 2 -> need-01, 5 -> file, 48 -> write-01, 33 -> person, 27 -> key, 54 -> name, 12 -> access-01, 8 -> event, 15 -> have-org-role-91, 42 -> "Albright", 36 -> "Shire", 21 -> 8, 18 -> "IAEA", 24 -> person, 53 -> country, 35 -> "Jacqueline", 41 -> "David", 56 -> specify-01, 7 -> person, 17 -> name, 1 -> provide-01, 50 -> name, 44 -> document, 23 -> violate-01, 38 -> question, 47 -> criticize-01, 4 -> r2, 26 -> official, 11 -> and, 32 -> institute, 14 -> person, 20 -> date-entity, 29 -> answer-01, 46 -> close-01, 52 -> safeguard-01, 34 -> name, 6 -> facility, 28 -> idea, 55 -> "Iran", 40 -> name, 49 -> country, 0 -> security, 9 -> name, 43 -> and, 22 -> 19, 16 -> organization, 37 -> verify-01, 19 -> and, 3 -> agree-01, 10 -> "International", 25 -> have-org-role-91, 31 -> principle, 13 -> and),Map(e -> event, a7 -> and, n -> need-01, w -> write-01, v2 -> verify-01, h -> have-org-role-91, q -> question, p5 -> principle, h2 -> have-org-role-91, s2 -> safeguard-01, k -> key, p8 -> publish-01, 8 -> 8, n7 -> name, p2 -> person, a3 -> access-01, n4 -> name, c4 -> country, s -> security, a6 -> answer-01, v -> violate-01, d -> date-entity, 1 -> 19, p -> provide-01, n3 -> name, a -> agree-01, c3 -> country, p4 -> person, o2 -> official, d2 -> document, n6 -> name, a5 -> and, p7 -> person, f3 -> fundamental, a8 -> and, i2 -> institute, i -> idea, r -> r2, a2 -> and, c -> close-01, s3 -> specify-01, f2 -> facility, p6 -> person, f -> file, o -> organization, p3 -> person, n2 -> name, c2 -> criticize-01, a4 -> and, n5 -> name))),[Ljava.lang.String;@7c6fbbde,Annotation([Ljava.lang.String;@19fd4e89,[Ljava.lang.String;@16986025,[Ljava.lang.String;@71d89bd1),Annotation([Ljava.lang.String;@70e87f7f,[Ljava.lang.String;@312feed,[Ledu.cmu.lti.nlp.amr.Dependency;@565e2fe2),Annotation([Ljava.lang.String;@636d20eb,[Ljava.lang.String;@504da87e,[Ljava.lang.String;@443cc10c),Annotation([Ljava.lang.String;@633ad756,[Ljava.lang.String;@69dac9a2,[Ledu.cmu.lti.nlp.amr.Entity;@546982bf))
+AMR:
+(a / agree-01, ARG0, a7 / and)
+(a / agree-01, ARG1, p5 / principle)
+(a3 / access-01, ARG1, f2 / facility)
+(a3 / access-01, ARG2, o / organization)
+(a3 / access-01, ARG6, k / key)
+(a3 / access-01, time, p / provide-01)
+(a4 / and, mod, r / r2)
+(a4 / and, op, p3 / person)
+(a5 / and, poss, p7 / person)
+(a6 / answer-01, ARG1, c3 / country)
+(a6 / answer-01, ARG6, q / question)
+(a6 / answer-01, purpose, n / need-01)
+(c / close-01, ARG0, a8 / and)
+(c / close-01, ARG1, i / idea)
+(c2 / criticize-01, ARG1, s / security)
+(c2 / criticize-01, ARG2, v / violate-01)
+(c3 / country, name, n6 / name)
+(c4 / country, name, n7 / name)
+(d / date-entity, day, 1 / 19)
+(d / date-entity, month, 8 / 8)
+(d2 / document, op, n / need-01)
+(e / event, mod, a4 / and)
+(e / event, mod, i2 / institute)
+(e / event, name, n2 / name)
+(e / event, purpose, c2 / criticize-01)
+(f2 / facility, op, a2 / and)
+(f3 / fundamental, op, s2 / safeguard-01)
+(h / have-org-role-91, ARG0, p3 / person)
+(h / have-org-role-91, ARG1, c4 / country)
+(h2 / have-org-role-91, ARG0, p4 / person)
+(h2 / have-org-role-91, ARG1, c4 / country)
+(h2 / have-org-role-91, ARG2, o2 / official)
+(n / need-01, ARG1, a2 / and)
+(n2 / name, op, "International")
+(n3 / name, op, "IAEA")
+(n4 / name, op, "Jacqueline")
+(n4 / name, op, "Shire")
+(n5 / name, op, "Albright")
+(n5 / name, op, "David")
+(n6 / name, op, "Iran")
+(n7 / name, op, "Iran")
+(o / organization, name, n3 / name)
+(p / provide-01, ARG1, a7 / and)
+(p6 / person, name, n4 / name)
+(p7 / person, name, n4 / name)
+(p7 / person, name, n5 / name)
+(p8 / publish-01, ARG0, p6 / person)
+(p8 / publish-01, ARG1, d / date-entity)
+(p8 / publish-01, ARG2, c2 / criticize-01)
+(r / r2, mod, p2 / person)
+(s2 / safeguard-01, ARG0, a8 / and)
+(s2 / safeguard-01, ARG1, p5 / principle)
+(s3 / specify-01, ARG1, v2 / verify-01)
+(v / violate-01, ARG1, p5 / principle)
+(v / violate-01, ARG6, f / file)
+(v2 / verify-01, ARG1, c3 / country)
+(w / write-01, ARG1, c2 / criticize-01)
+
+Decoded in 12,085,152 microseconds
+Sentence: Independent experts stated Iran's latest agreement with the IAEA which gives inspectors access to more nuclear sites and information falls short of the West's demand to halt the production of concentrated uranium that could potentially be used for a bomb.
+
+Oracle Span 1:  access => access-01
+Oracle Span 2:  agreement => agree-01
+Oracle Span 3:  and => and
+Oracle Span 4:  bomb => bomb
+Oracle Span 5:  concentrated => concentrate-02
+Oracle Span 6:  could => possible
+Oracle Span 7:  demand => demand-01
+Oracle Span 8:  experts => expert-41
+Oracle Span 9:  falls => fall-01
+Oracle Span 10:  halt => halt-01
+Oracle Span 11:  IAEA => (organization :name (name :op "IAEA"))
+Oracle Span 12:  information => information
+Oracle Span 13:  inspectors => (person :ARG0-of inspect-01)
+Oracle Span 14:  Iran => (country :name (name :op "Iran"))
+Oracle Span 15:  latest => (late :degree most)
+Oracle Span 16:  more => more
+Oracle Span 17:  nuclear => nucleus
+Oracle Span 18:  potentially => potential
+Oracle Span 19:  production => produce-01
+Oracle Span 20:  short => short
+Oracle Span 21:  sites => site
+Oracle Span 22:  stated => state-01
+Oracle Span 23:  uranium => uranium
+Oracle Span 24:  used => use-01
+Oracle Span 25:  West => (world-region :name (name :op "West"))
+NER Entity: (country :name (name :op "Iran"))
+NER Entity: (organization :name (name :op "IAEA"))
+Spans:
+Span 41-42:   => bomb
+Span 38-39:  a => use-01
+Span 12-13:  access => (person :ARG0-of inspect-01)
+Span 5-6:  agreement => (late :degree most)
+Span 17-18:  and => site
+Span 35-36:  be => possible
+Span 30-31:  concentrated => produce-01
+Span 33-34:  could => uranium
+Span 24-25:  demand => (world-region :name (name :op "West"))
+Span 1-2:  experts => (person :ARG1-of expert-41)
+Span 19-20:  falls => information
+Span 26-27:  halt => demand-01
+Span 0-1:  Independent => depend-01
+Span 18-19:  information => and
+Span 3-4:  Iran's => (country :name (name :op "Iran"))
+Span 15-16:  nuclear => more
+Span 21-22:  of => short
+Span 28-29:  production => halt-01
+Span 20-21:  short => fall-01
+Span 2-3:  stated => state-01
+Span 32-33:  that => concentrate-01
+Span 13-14:  to => access-01
+Span 9-10:  which => (organization :name (name :op "IAEA"))
+Span 6-7:  with => agree-01
+
+Langrangian relaxation converged after 78 iterations. Delta = 0.0
+Oracle Span 13-14:  access => access-01
+Oracle Span 6-7:  agreement => agree-01
+Oracle Span 18-19:  and => and
+Oracle Span 41-42:  bomb => bomb
+Oracle Span 32-33:  concentrated => concentrate-02
+Oracle Span 35-36:  could => possible
+Oracle Span 26-27:  demand => demand-01
+Oracle Span 1-2:  experts => expert-41
+Oracle Span 20-21:  falls => fall-01
+Oracle Span 28-29:  halt => halt-01
+Oracle Span 9-10:  IAEA => (organization :name (name :op "IAEA"))
+Oracle Span 19-20:  information => information
+Oracle Span 12-13:  inspectors => (person :ARG0-of inspect-01)
+Oracle Span 3-4:  Iran => (country :name (name :op "Iran"))
+Oracle Span 5-6:  latest => (late :degree most)
+Oracle Span 15-16:  more => more
+Oracle Span 16-17:  nuclear => nucleus
+Oracle Span 36-37:  potentially => potential
+Oracle Span 30-31:  production => produce-01
+Oracle Span 21-22:  short => short
+Oracle Span 17-18:  sites => site
+Oracle Span 2-3:  stated => state-01
+Oracle Span 33-34:  uranium => uranium
+Oracle Span 38-39:  used => use-01
+Oracle Span 24-25:  West => (world-region :name (name :op "West"))
+
+Dependencies:
+1	Independent	_	JJ	JJ	_	2	amod	_	_
+2	experts	_	NNS	NNS	_	3	nsubj	_	_
+3	stated	_	VBD	VBD	_	0	root	_	_
+4	Iran	_	NNP	NNP	_	7	poss	_	_
+5	's	_	POS	POS	_	4	possessive	_	_
+6	latest	_	JJS	JJS	_	7	amod	_	_
+7	agreement	_	NN	NN	_	3	dobj	_	_
+8	with	_	IN	IN	_	3	prep	_	_
+9	the	_	DT	DT	_	10	det	_	_
+10	IAEA	_	NNP	NNP	_	8	pobj	_	_
+11	which	_	WDT	WDT	_	12	nsubj	_	_
+12	gives	_	VBZ	VBZ	_	10	rcmod	_	_
+13	inspectors	_	NNS	NNS	_	12	iobj	_	_
+14	access	_	NN	NN	_	12	dobj	_	_
+15	to	_	TO	TO	_	14	prep	_	_
+16	more	_	JJR	JJR	_	18	amod	_	_
+17	nuclear	_	JJ	JJ	_	18	amod	_	_
+18	sites	_	NNS	NNS	_	15	pobj	_	_
+19	and	_	CC	CC	_	3	cc	_	_
+20	information	_	NN	NN	_	21	nsubj	_	_
+21	falls	_	VBZ	VBZ	_	3	conj	_	_
+22	short	_	JJ	JJ	_	21	dobj	_	_
+23	of	_	IN	IN	_	22	prep	_	_
+24	the	_	DT	DT	_	25	det	_	_
+25	West	_	NNP	NNP	_	27	poss	_	_
+26	's	_	POS	POS	_	25	possessive	_	_
+27	demand	_	NN	NN	_	23	pobj	_	_
+28	to	_	TO	TO	_	29	aux	_	_
+29	halt	_	VB	VB	_	27	vmod	_	_
+30	the	_	DT	DT	_	31	det	_	_
+31	production	_	NN	NN	_	29	dobj	_	_
+32	of	_	IN	IN	_	31	prep	_	_
+33	concentrated	_	JJ	JJ	_	34	amod	_	_
+34	uranium	_	NN	NN	_	32	pobj	_	_
+35	that	_	WDT	WDT	_	39	nsubjpass	_	_
+36	could	_	MD	MD	_	39	aux	_	_
+37	potentially	_	RB	RB	_	39	advmod	_	_
+38	be	_	VB	VB	_	39	auxpass	_	_
+39	used	_	VBN	VBN	_	31	rcmod	_	_
+40	for	_	IN	IN	_	39	prep	_	_
+41	a	_	DT	DT	_	42	det	_	_
+42	bomb	_	NN	NN	_	40	pobj	_	_
+43	.	_	.	.	_	3	punct	_	_
+
+Oracle:
+(a / agree-01, ARG0, c / country)
+(a / agree-01, ARG1, a2 / access-01)
+(a / agree-01, ARG2, o / organization)
+(a / agree-01, time, l / late)
+(a2 / access-01, ARG0, p / person)
+(a2 / access-01, ARG1, a3 / and)
+(a3 / and, op, i2 / information)
+(a3 / and, op, s2 / site)
+(c / country, name, n / name)
+(c2 / concentrate-02, ARG1, u / uranium)
+(d2 / demand-01, ARG0, w / world-region)
+(d2 / demand-01, ARG1, h / halt-01)
+(f / fall-01, ARG1, a / agree-01)
+(f / fall-01, ARG3, d2 / demand-01)
+(f / fall-01, manner, s3 / short)
+(h / halt-01, ARG1, p2 / produce-01)
+(i / inspect-01, ARG0, p / person)
+(l / late, degree, m2 / most)
+(n / name, op, "Iran")
+(n2 / name, op, "IAEA")
+(n4 / name, op, "West")
+(o / organization, name, n2 / name)
+(p2 / produce-01, ARG1, u / uranium)
+(s / state-01, ARG1, f / fall-01)
+(s2 / site, mod, m / more)
+(s2 / site, mod, n3 / nucleus)
+(u2 / use-01, ARG1, u / uranium)
+(u2 / use-01, ARG2, b / bomb)
+(u2 / use-01, mod, p3 / possible)
+(u2 / use-01, mod, p4 / potential)
+(w / world-region, name, n4 / name)
+
+Input(Some(Graph(null,ArrayBuffer(Span(5,6,List(1, 0),agreement,(late :degree most),false), Span(21,22,List(2),of,short,false), Span(17,18,List(3),and,site,false), Span(24,25,List(6, 5, 4),demand,(world-region :name (name :op "West")),false), Span(19,20,List(7),falls,information,false), Span(33,34,List(8),could,uranium,false), Span(12,13,List(10, 9),access,(person :ARG0-of inspect-01),false), Span(38,39,List(11),a,use-01,false), Span(20,21,List(12),short,fall-01,false), Span(1,2,List(14, 13),experts,(person :ARG1-of expert-41),false), Span(13,14,List(15),to,access-01,false), Span(0,1,List(16),Independent,depend-01,false), Span(6,7,List(17),with,agree-01,false), Span(28,29,List(18),production,halt-01,false), Span(35,36,List(19),be,possible,false), Span(41,42,List(20),,bomb,false), Span(2,3,List(21),stated,state-01,false), Span(26,27,List(22),halt,demand-01,false), Span(9,10,List(25, 24, 23),which,(organization :name (name :op "IAEA")),false), Span(30,31,List(26),concentrated,produce-01,false), Span(32,33,List(27),that,concentrate-01,false), Span(15,16,List(28),nuclear,more,false), Span(3,4,List(31, 30, 29),Iran's,(country :name (name :op "Iran")),false), Span(18,19,List(32),information,and,false)),Map(30 -> name, 2 -> short, 5 -> name, 27 -> concentrate-01, 12 -> fall-01, 8 -> uranium, 15 -> access-01, 21 -> state-01, 18 -> halt-01, 24 -> name, 7 -> information, 1 -> most, 17 -> agree-01, 23 -> organization, 26 -> produce-01, 4 -> world-region, 11 -> use-01, 32 -> and, 14 -> expert-41, 29 -> country, 20 -> bomb, 28 -> more, 6 -> "West", 9 -> person, 0 -> late, 22 -> demand-01, 16 -> depend-01, 19 -> possible, 10 -> inspect-01, 3 -> site, 31 -> "Iran", 25 -> "IAEA", 13 -> person),Map(e -> expert-41, n -> name, w -> world-region, h -> halt-01, s2 -> site, b -> bomb, m2 -> more, p2 -> person, a3 -> and, u2 -> use-01, s -> short, m -> most, d -> depend-01, p -> person, n3 -> name, a -> access-01, p4 -> produce-01, d2 -> demand-01, i2 -> inspect-01, i -> information, a2 -> agree-01, c -> concentrate-01, s3 -> state-01, u -> uranium, l -> late, f -> fall-01, o -> organization, p3 -> possible, c2 -> country, n2 -> name))),[Ljava.lang.String;@722d974a,Annotation([Ljava.lang.String;@23e7e29,[Ljava.lang.String;@4af04b10,[Ljava.lang.String;@1ea1c07),Annotation([Ljava.lang.String;@1fe35cb7,[Ljava.lang.String;@6edda654,[Ledu.cmu.lti.nlp.amr.Dependency;@263dd854),Annotation([Ljava.lang.String;@77e6e2b0,[Ljava.lang.String;@72e50e1f,[Ljava.lang.String;@7109e911),Annotation([Ljava.lang.String;@39be601c,[Ljava.lang.String;@790df6f9,[Ledu.cmu.lti.nlp.amr.Entity;@23c29a31))
+AMR:
+(a / access-01, ARG0, p / person)
+(a / access-01, ARG1, s2 / site)
+(a2 / agree-01, ARG0, c2 / country)
+(a2 / agree-01, ARG1, a / access-01)
+(a2 / agree-01, time, l / late)
+(a3 / and, op, f / fall-01)
+(a3 / and, op, s3 / state-01)
+(c / concentrate-01, ARG1, u / uranium)
+(c2 / country, name, n3 / name)
+(d / depend-01, ARG1, c2 / country)
+(d2 / demand-01, ARG0, w / world-region)
+(d2 / demand-01, ARG1, h / halt-01)
+(e / expert-41, ARG1, p2 / person)
+(f / fall-01, ARG0, i / information)
+(f / fall-01, ARG1, s / short)
+(h / halt-01, ARG1, p4 / produce-01)
+(i2 / inspect-01, ARG0, p / person)
+(l / late, degree, m / most)
+(n / name, op, "West")
+(n2 / name, op, "IAEA")
+(n3 / name, op, "Iran")
+(o / organization, name, n2 / name)
+(p3 / possible, domain, u2 / use-01)
+(p4 / produce-01, ARG1, u / uranium)
+(s2 / site, quant, m2 / more)
+(s3 / state-01, ARG0, p2 / person)
+(s3 / state-01, ARG1, a2 / agree-01)
+(s3 / state-01, medium, o / organization)
+(u / uranium, mod, p3 / possible)
+(u2 / use-01, ARG1, s2 / site)
+(u2 / use-01, ARG2, b / bomb)
+(w / world-region, name, n / name)
+
+Decoded in 5,661,620 microseconds
+Sentence: U.S. State Department spokesman for the Bush administration Tom Casey stated that while the report may offer some new details or insight into the development of Iran's program Iranian officials have not met any international obligations regarding the nuclear program.
+
+Oracle Span 1:  administration => administrate-01
+Oracle Span 2:  any => any
+Oracle Span 3:  Bush => (person :name (name :op "Bush"))
+Oracle Span 4:  details => detail-01
+Oracle Span 5:  development => develop-02
+Oracle Span 6:  have => (person :ARG0-of have-org-role-91)
+Oracle Span 7:  insight => insight
+Oracle Span 8:  international => international
+Oracle Span 9:  Iran => (country :name (name :op "Iran"))
+Oracle Span 10:  may => possible
+Oracle Span 11:  met => meet-01
+Oracle Span 12:  new => new
+Oracle Span 13:  nuclear => nucleus
+Oracle Span 14:  obligations => obligation
+Oracle Span 15:  offer => offer-01
+Oracle Span 16:  officials => official
+Oracle Span 17:  or => or
+Oracle Span 18:  program => program
+Oracle Span 19:  program => program
+Oracle Span 20:  regarding => regard-01
+Oracle Span 21:  report => report
+Oracle Span 22:  some => some
+Oracle Span 23:  spokesman => (have-org-role-91 :ARG2 spokesman)
+Oracle Span 24:  State Department => (government-organization :name (name :op "Department" :op "State"))
+Oracle Span 25:  stated => state-01
+Oracle Span 26:  Tom Casey => (person :name (name :op "Casey" :op "Tom"))
+Oracle Span 27:  U.S. => (country :name (name :op "U.S."))
+NER Entity: (person :name (name :op "Tom" :op "Casey"))
+NER Entity: (organization :name (name :op "U.S." :op "State" :op "Department"))
+NER Entity: (person :name (name :op "Bush"))
+NER Entity: (country :name (name :op "Iran"))
+Spans:
+Span 40-41:   => program
+Span 33-34:  any => met-01
+Span 6-7:  Bush => (person :name (name :op "Bush"))
+Span 2-3:  Department => organization
+Span 19-20:  details => detail-01
+Span 24-25:  development => develop-01
+Span 30-31:  have => (person :ARG0-of (have-org-role-91 :ARG2 official))
+Span 21-22:  insight => insist-01
+Span 34-35:  international => any
+Span 28-29:  Iranian => program
+Span 18-19:  new => new
+Span 35-36:  obligations => international
+Span 16-17:  offer => offer-01
+Span 29-30:  officials => (country :name (name :op "Iran"))
+Span 20-21:  or => or
+Span 39-40:  program. => nucleus
+Span 36-37:  regarding => obligation
+Span 14-15:  report => (thing :ARG1-of report-01)
+Span 17-18:  some => some
+Span 3-4:  spokesman => (person :ARG0-of (have-org-role-91 :ARG2 spokesman))
+Span 1-2:  State => (thing :ARG1-of state-01)
+Span 10-11:  stated => state-01
+Span 8-10:  Tom Casey => (person :name (name :op "Tom" :op "Casey"))
+Span 0-1:  U.S. => (country :name (name :op "U.S."))
+Span 12-13:  while => will-01
+
+Langrangian relaxation converged after 95 iterations. Delta = 0.0
+Oracle Span 7-8:  administration => administrate-01
+Oracle Span 34-35:  any => any
+Oracle Span 6-7:  Bush => (person :name (name :op "Bush"))
+Oracle Span 19-20:  details => detail-01
+Oracle Span 24-25:  development => develop-02
+Oracle Span 31-32:  have => (person :ARG0-of have-org-role-91)
+Oracle Span 21-22:  insight => insight
+Oracle Span 35-36:  international => international
+Oracle Span 26-27:  Iran => (country :name (name :op "Iran"))
+Oracle Span 15-16:  may => possible
+Oracle Span 33-34:  met => meet-01
+Oracle Span 18-19:  new => new
+Oracle Span 39-40:  nuclear => nucleus
+Oracle Span 36-37:  obligations => obligation
+Oracle Span 16-17:  offer => offer-01
+Oracle Span 30-31:  officials => official
+Oracle Span 20-21:  or => or
+Oracle Span 28-29:  program => program
+Oracle Span 40-41:  program => program
+Oracle Span 37-38:  regarding => regard-01
+Oracle Span 14-15:  report => report
+Oracle Span 17-18:  some => some
+Oracle Span 3-4:  spokesman => (have-org-role-91 :ARG2 spokesman)
+Oracle Span 1-3:  State Department => (government-organization :name (name :op "Department" :op "State"))
+Oracle Span 10-11:  stated => state-01
+Oracle Span 8-10:  Tom Casey => (person :name (name :op "Casey" :op "Tom"))
+Oracle Span 0-1:  U.S. => (country :name (name :op "U.S."))
+
+Dependencies:
+1	U.S.	_	NNP	NNP	_	4	nn	_	_
+2	State	_	NNP	NNP	_	4	nn	_	_
+3	Department	_	NNP	NNP	_	4	nn	_	_
+4	spokesman	_	NN	NN	_	11	nsubj	_	_
+5	for	_	IN	IN	_	4	prep	_	_
+6	the	_	DT	DT	_	10	det	_	_
+7	Bush	_	NNP	NNP	_	10	nn	_	_
+8	administration	_	NN	NN	_	10	nn	_	_
+9	Tom	_	NNP	NNP	_	10	nn	_	_
+10	Casey	_	NNP	NNP	_	5	pobj	_	_
+11	stated	_	VBD	VBD	_	0	root	_	_
+12	that	_	IN	IN	_	34	mark	_	_
+13	while	_	IN	IN	_	17	mark	_	_
+14	the	_	DT	DT	_	15	det	_	_
+15	report	_	NN	NN	_	17	nsubj	_	_
+16	may	_	MD	MD	_	17	aux	_	_
+17	offer	_	VB	VB	_	34	advcl	_	_
+18	some	_	DT	DT	_	20	det	_	_
+19	new	_	JJ	JJ	_	20	amod	_	_
+20	details	_	NNS	NNS	_	17	dobj	_	_
+21	or	_	CC	CC	_	20	cc	_	_
+22	insight	_	NN	NN	_	20	conj	_	_
+23	into	_	IN	IN	_	17	prep	_	_
+24	the	_	DT	DT	_	25	det	_	_
+25	development	_	NN	NN	_	23	pobj	_	_
+26	of	_	IN	IN	_	25	prep	_	_
+27	Iran	_	NNP	NNP	_	29	poss	_	_
+28	's	_	POS	POS	_	27	possessive	_	_
+29	program	_	NN	NN	_	26	pobj	_	_
+30	Iranian	_	JJ	JJ	_	31	amod	_	_
+31	officials	_	NNS	NNS	_	34	nsubj	_	_
+32	have	_	VBP	VBP	_	34	aux	_	_
+33	not	_	RB	RB	_	34	neg	_	_
+34	met	_	VBN	VBN	_	11	ccomp	_	_
+35	any	_	DT	DT	_	37	det	_	_
+36	international	_	JJ	JJ	_	37	amod	_	_
+37	obligations	_	NNS	NNS	_	34	dobj	_	_
+38	regarding	_	VBG	VBG	_	37	prep	_	_
+39	the	_	DT	DT	_	41	det	_	_
+40	nuclear	_	JJ	JJ	_	41	amod	_	_
+41	program	_	NN	NN	_	38	pobj	_	_
+42	.	_	.	.	_	11	punct	_	_
+
+Oracle:
+(c / country, name, n3 / name)
+(c3 / country, name, n5 / name)
+(d / detail-01, ARG1, d2 / develop-02)
+(d / detail-01, mod, n7 / new)
+(d / detail-01, mod, s3 / some)
+(d2 / develop-02, ARG0, c3 / country)
+(d2 / develop-02, ARG1, p4 / program)
+(g2 / government-organization, name, n2 / name)
+(g2 / government-organization, poss, c / country)
+(h / have-org-role-91, ARG0, p5 / person)
+(h / have-org-role-91, ARG1, g2 / government-organization)
+(h / have-org-role-91, ARG2, s2 / spokesman)
+(h2 / have-org-role-91, ARG0, p6 / person)
+(h2 / have-org-role-91, ARG1, c3 / country)
+(h2 / have-org-role-91, ARG2, o3 / official)
+(i2 / insight, mod, n7 / new)
+(i2 / insight, mod, s3 / some)
+(i2 / insight, prep-into, d2 / develop-02)
+(m / meet-01, ARG0, p6 / person)
+(m / meet-01, ARG1, o4 / obligation)
+(n / name, op, "Casey")
+(n / name, op, "Tom")
+(n2 / name, op, "Department")
+(n2 / name, op, "State")
+(n3 / name, op, "U.S.")
+(n4 / name, op, "Bush")
+(n5 / name, op, "Iran")
+(o2 / offer-01, ARG0, r2 / report)
+(o2 / offer-01, ARG1, o5 / or)
+(o4 / obligation, mod, a2 / any)
+(o4 / obligation, mod, i / international)
+(o5 / or, op, d / detail-01)
+(o5 / or, op, i2 / insight)
+(p / person, name, n4 / name)
+(p2 / possible, domain, o2 / offer-01)
+(p3 / program, mod, n6 / nucleus)
+(p5 / person, name, n / name)
+(r / regard-01, ARG0, o4 / obligation)
+(r / regard-01, ARG1, p3 / program)
+(s / state-01, ARG0, p5 / person)
+
+Input(Some(Graph(null,ArrayBuffer(Span(18,19,List(0),new,new,false), Span(16,17,List(1),offer,offer-01,false), Span(0,1,List(4, 3, 2),U.S.,(country :name (name :op "U.S.")),false), Span(12,13,List(5),while,will-01,false), Span(34,35,List(6),international,any,false), Span(2,3,List(7),Department,organization,false), Span(20,21,List(8),or,or,false), Span(28,29,List(9),Iranian,program,false), Span(39,40,List(10),program.,nucleus,false), Span(1,2,List(12, 11),State,(thing :ARG1-of state-01),false), Span(40,41,List(13),,program,false), Span(29,30,List(16, 15, 14),officials,(country :name (name :op "Iran")),false), Span(36,37,List(17),regarding,obligation,false), Span(14,15,List(19, 18),report,(thing :ARG1-of report-01),false), Span(3,4,List(22, 21, 20),spokesman,(person :ARG0-of (have-org-role-91 :ARG2 spokesman)),false), Span(21,22,List(23),insight,insist-01,false), Span(8,10,List(27, 26, 25, 24),Tom Casey,(person :name (name :op "Tom" :op "Casey")),false), Span(24,25,List(28),development,develop-01,false), Span(33,34,List(29),any,met-01,false), Span(30,31,List(32, 31, 30),have,(person :ARG0-of (have-org-role-91 :ARG2 official)),false), Span(17,18,List(33),some,some,false), Span(19,20,List(34),details,detail-01,false), Span(35,36,List(35),obligations,international,false), Span(6,7,List(38, 37, 36),Bush,(person :name (name :op "Bush")),false), Span(10,11,List(39),stated,state-01,false)),Map(39 -> state-01, 30 -> person, 2 -> country, 5 -> will-01, 33 -> some, 27 -> "Casey", 12 -> state-01, 8 -> or, 15 -> name, 36 -> person, 21 -> have-org-role-91, 18 -> thing, 24 -> person, 35 -> international, 7 -> organization, 1 -> offer-01, 17 -> obligation, 23 -> insist-01, 38 -> "Bush", 26 -> "Tom", 4 -> "U.S.", 11 -> thing, 32 -> official, 14 -> country, 29 -> met-01, 20 -> person, 34 -> detail-01, 28 -> develop-01, 6 -> any, 9 -> program, 0 -> new, 22 -> spokesman, 16 -> "Iran", 37 -> name, 19 -> report-01, 10 -> nucleus, 3 -> name, 31 -> have-org-role-91, 25 -> name, 13 -> program),Map(w -> will-01, n -> new, h -> have-org-role-91, h2 -> have-org-role-91, p5 -> person, s2 -> spokesman, t -> thing, o3 -> or, p2 -> program, n4 -> name, s -> state-01, s4 -> state-01, m -> met-01, d -> develop-01, o5 -> official, p -> program, n3 -> nucleus, a -> any, p4 -> person, n6 -> name, d2 -> detail-01, o2 -> organization, i2 -> international, t2 -> thing, r -> report-01, i -> insist-01, c -> country, s3 -> some, p6 -> person, o -> offer-01, o4 -> obligation, p3 -> person, n2 -> name, c2 -> country, n5 -> name))),[Ljava.lang.String;@437d286c,Annotation([Ljava.lang.String;@1c0e8c5a,[Ljava.lang.String;@6b6efa99,[Ljava.lang.String;@36348a37),Annotation([Ljava.lang.String;@1c20fad5,[Ljava.lang.String;@7424c957,[Ledu.cmu.lti.nlp.amr.Dependency;@68024f78),Annotation([Ljava.lang.String;@7af5057d,[Ljava.lang.String;@6118aea4,[Ljava.lang.String;@3324bda1),Annotation([Ljava.lang.String;@49a74d32,[Ljava.lang.String;@1bab6796,[Ledu.cmu.lti.nlp.amr.Entity;@3f6287c9))
+AMR:
+(c / country, name, n2 / name)
+(c2 / country, name, n4 / name)
+(d / develop-01, ARG1, p / program)
+(d2 / detail-01, ARG1, p6 / person)
+(d2 / detail-01, ARG6, s3 / some)
+(d2 / detail-01, mod, n / new)
+(h / have-org-role-91, ARG0, p3 / person)
+(h / have-org-role-91, ARG1, o2 / organization)
+(h / have-org-role-91, ARG2, s2 / spokesman)
+(h2 / have-org-role-91, ARG0, p5 / person)
+(h2 / have-org-role-91, ARG1, c / country)
+(h2 / have-org-role-91, ARG2, o5 / official)
+(i / insist-01, ARG0, t2 / thing)
+(m / met-01, ARG0, p5 / person)
+(m / met-01, ARG1, o4 / obligation)
+(n2 / name, op, "U.S.")
+(n4 / name, op, "Iran")
+(n5 / name, op, "Casey")
+(n5 / name, op, "Tom")
+(n6 / name, op, "Bush")
+(o / offer-01, ARG0, t2 / thing)
+(o / offer-01, ARG1, o3 / or)
+(o3 / or, op, d / develop-01)
+(o3 / or, op, d2 / detail-01)
+(o4 / obligation, mod, a / any)
+(o4 / obligation, mod, i2 / international)
+(p2 / program, mod, n3 / nucleus)
+(p2 / program, poss, c2 / country)
+(p4 / person, name, n5 / name)
+(p5 / person, mod, c2 / country)
+(p6 / person, name, n6 / name)
+(r / report-01, ARG1, t2 / thing)
+(s / state-01, ARG0, p3 / person)
+(s / state-01, ARG1, t / thing)
+(s4 / state-01, ARG0, p4 / person)
+(s4 / state-01, ARG1, m / met-01)
+(t / thing, poss, c / country)
+(w / will-01, ARG0, o / offer-01)
+(w / will-01, ARG1, m / met-01)
+
+Decoded in 8,434,015 microseconds
+Sentence: Casey stated the fact that the nuclear program continues to move forward shows that the Iranian regime is continuing on a path of defiance of the international community.
+
+Oracle Span 1:  Casey => (person :name (name :op "Casey"))
+Oracle Span 2:  community => community
+Oracle Span 3:  continues => continue-01
+Oracle Span 4:  continuing => continue-01
+Oracle Span 5:  forward => forward
+Oracle Span 6:  international => international
+Oracle Span 7:  Iranian => (country :name (name :op "Iran"))
+Oracle Span 8:  move => move-01
+Oracle Span 9:  nuclear => nucleus
+Oracle Span 10:  program => program
+Oracle Span 11:  regime => regime
+Oracle Span 12:  shows => show-01
+Oracle Span 13:  stated => state-01
+NER Entity: (person :name (name :op "Casey"))
+NER Entity: (thing :name (name :op "Iranian"))
+Spans:
+Span 0-1:  Casey => (person :name (name :op "Casey"))
+Span 27-28:  community. => community
+Span 8-9:  continues => continue-01
+Span 18-19:  continuing => continue-01
+Span 23-24:  defiance => define-01
+Span 11-12:  forward => forward
+Span 26-27:  international => international
+Span 15-16:  Iranian => (country :name (name :op "Iran"))
+Span 10-11:  move => move-01
+Span 6-7:  nuclear => nucleus
+Span 21-22:  path => path
+Span 7-8:  program => program
+Span 16-17:  regime => regime
+Span 12-13:  shows => show-01
+Span 1-2:  stated => state-01
+
+Langrangian relaxation converged after 58 iterations. Delta = 0.0
+Oracle Span 0-1:  Casey => (person :name (name :op "Casey"))
+Oracle Span 27-28:  community => community
+Oracle Span 8-9:  continues => continue-01
+Oracle Span 18-19:  continuing => continue-01
+Oracle Span 11-12:  forward => forward
+Oracle Span 26-27:  international => international
+Oracle Span 15-16:  Iranian => (country :name (name :op "Iran"))
+Oracle Span 10-11:  move => move-01
+Oracle Span 6-7:  nuclear => nucleus
+Oracle Span 7-8:  program => program
+Oracle Span 16-17:  regime => regime
+Oracle Span 12-13:  shows => show-01
+Oracle Span 1-2:  stated => state-01
+
+Dependencies:
+1	Casey	_	NNP	NNP	_	2	nsubj	_	_
+2	stated	_	VBD	VBD	_	0	root	_	_
+3	the	_	DT	DT	_	4	det	_	_
+4	fact	_	NN	NN	_	2	dobj	_	_
+5	that	_	IN	IN	_	9	mark	_	_
+6	the	_	DT	DT	_	8	det	_	_
+7	nuclear	_	JJ	JJ	_	8	amod	_	_
+8	program	_	NN	NN	_	9	nsubj	_	_
+9	continues	_	VBZ	VBZ	_	2	ccomp	_	_
+10	to	_	TO	TO	_	11	aux	_	_
+11	move	_	VB	VB	_	9	xcomp	_	_
+12	forward	_	RP	RP	_	11	prt	_	_
+13	shows	_	NNS	NNS	_	11	dobj	_	_
+14	that	_	IN	IN	_	19	mark	_	_
+15	the	_	DT	DT	_	17	det	_	_
+16	Iranian	_	JJ	JJ	_	17	amod	_	_
+17	regime	_	NN	NN	_	19	nsubj	_	_
+18	is	_	VBZ	VBZ	_	19	aux	_	_
+19	continuing	_	VBG	VBG	_	11	ccomp	_	_
+20	on	_	IN	IN	_	19	prep	_	_
+21	a	_	DT	DT	_	22	det	_	_
+22	path	_	NN	NN	_	20	pobj	_	_
+23	of	_	IN	IN	_	22	prep	_	_
+24	defiance	_	NN	NN	_	23	pobj	_	_
+25	of	_	IN	IN	_	24	prep	_	_
+26	the	_	DT	DT	_	28	det	_	_
+27	international	_	JJ	JJ	_	28	amod	_	_
+28	community	_	NN	NN	_	25	pobj	_	_
+29	.	_	.	.	_	2	punct	_	_
+
+Oracle:
+(c / continue-01, ARG1, p2 / program)
+(c2 / continue-01, ARG1, r / regime)
+(c3 / country, name, n3 / name)
+(c4 / community, mod, i / international)
+(m / move-01, ARG0, p2 / program)
+(m / move-01, ARG1, p2 / program)
+(m / move-01, ARG2, f / forward)
+(n / name, op, "Casey")
+(n3 / name, op, "Iran")
+(p / person, name, n / name)
+(p2 / program, mod, n2 / nucleus)
+(r / regime, mod, c3 / country)
+(s / state-01, ARG0, p / person)
+(s / state-01, ARG1, c / continue-01)
+(s2 / show-01, ARG0, c / continue-01)
+(s2 / show-01, ARG1, c2 / continue-01)
+
+Input(Some(Graph(null,ArrayBuffer(Span(15,16,List(2, 1, 0),Iranian,(country :name (name :op "Iran")),false), Span(10,11,List(3),move,move-01,false), Span(26,27,List(4),international,international,false), Span(12,13,List(5),shows,show-01,false), Span(16,17,List(6),regime,regime,false), Span(1,2,List(7),stated,state-01,false), Span(21,22,List(8),path,path,false), Span(8,9,List(9),continues,continue-01,false), Span(0,1,List(12, 11, 10),Casey,(person :name (name :op "Casey")),false), Span(11,12,List(13),forward,forward,false), Span(23,24,List(14),defiance,define-01,false), Span(27,28,List(15),community.,community,false), Span(6,7,List(16),nuclear,nucleus,false), Span(7,8,List(17),program,program,false), Span(18,19,List(18),continuing,continue-01,false)),Map(2 -> "Iran", 5 -> show-01, 12 -> "Casey", 15 -> community, 8 -> path, 18 -> continue-01, 7 -> state-01, 17 -> program, 1 -> name, 4 -> international, 11 -> name, 14 -> define-01, 6 -> regime, 0 -> country, 9 -> continue-01, 16 -> nucleus, 3 -> move-01, 10 -> person, 13 -> forward),Map(n -> name, s2 -> state-01, p2 -> person, c4 -> continue-01, s -> show-01, m -> move-01, d -> define-01, p -> path, n3 -> nucleus, c3 -> community, i -> international, r -> regime, c -> country, f -> forward, p3 -> program, c2 -> continue-01, n2 -> name))),[Ljava.lang.String;@4a8dc17a,Annotation([Ljava.lang.String;@7b744350,[Ljava.lang.String;@35437c4c,[Ljava.lang.String;@66146b9),Annotation([Ljava.lang.String;@2243d11e,[Ljava.lang.String;@7bf468c5,[Ledu.cmu.lti.nlp.amr.Dependency;@55fbdaeb),Annotation([Ljava.lang.String;@59a31a63,[Ljava.lang.String;@65d4eb68,[Ljava.lang.String;@3dbe1557),Annotation([Ljava.lang.String;@3699ac89,[Ljava.lang.String;@7728c83b,[Ledu.cmu.lti.nlp.amr.Entity;@3565e21d))
+AMR:
+(c / country, name, n / name)
+(c2 / continue-01, ARG0, p3 / program)
+(c2 / continue-01, ARG1, m / move-01)
+(c3 / community, mod, i / international)
+(c4 / continue-01, ARG0, r / regime)
+(c4 / continue-01, ARG1, p / path)
+(d / define-01, ARG0, p / path)
+(d / define-01, ARG1, c3 / community)
+(m / move-01, ARG1, s / show-01)
+(m / move-01, direction, f / forward)
+(n / name, op, "Iran")
+(n2 / name, op, "Casey")
+(p2 / person, name, n2 / name)
+(p3 / program, mod, n3 / nucleus)
+(r / regime, mod, c / country)
+(s / show-01, ARG1, c4 / continue-01)
+(s2 / state-01, ARG0, p2 / person)
+(s2 / state-01, ARG1, c2 / continue-01)
+
+Decoded in 1,692,101 microseconds

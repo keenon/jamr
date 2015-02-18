@@ -1,0 +1,187 @@
+Stage1 features = List(bias, length, fromNERTagger, conceptGivenPhrase)
+features = List(rootConcept, rootDependencyPathv1, bias, typeBias, self, fragHead, edgeCount, distance, logDistance, posPathv3, dependencyPathv4, conceptBigram)
+connected = true
+Reading weights
+done
+Sentence: The International Atomic Energy Agency reached an agreement with Iranian officials that stated there were no remaining issues and ambiguities regarding Iran's nuclear program and activities.
+
+Oracle Span 1:  activities => activity
+Oracle Span 2:  agreement => agree-01
+Oracle Span 3:  ambiguities => ambiguity
+Oracle Span 4:  and => and
+Oracle Span 5:  and => and
+Oracle Span 6:  International Atomic Energy Agency => (organization :name (name :op "Agency" :op "Energy" :op "Atomic" :op "International"))
+Oracle Span 7:  Iran => (country :name (name :op "Iran"))
+Oracle Span 8:  issues => issue
+Oracle Span 9:  no => -
+Oracle Span 10:  nuclear => nucleus
+Oracle Span 11:  officials => (have-org-role-91 :ARG2 official)
+Oracle Span 12:  program => program
+Oracle Span 13:  reached => reach-01
+Oracle Span 14:  regarding => regard-01
+Oracle Span 15:  remaining => remain-01
+Oracle Span 16:  stated => state-01
+NER Entity: (organization :name (name :op "International" :op "Atomic" :op "Energy" :op "Agency"))
+NER Entity: (country :name (name :op "Iran"))
+Registering annotator regexner2 with class edu.stanford.nlp.pipeline.TokensRegexNERAnnotator
+Registering annotator regexner1 with class edu.stanford.nlp.pipeline.TokensRegexNERAnnotator
+Adding annotator tokenize
+TokenizerAnnotator: No tokenizer type provided. Defaulting to PTBTokenizer.
+Adding annotator ssplit
+edu.stanford.nlp.curator.CuratorAnnotatorImplementations:
+Adding annotator pos
+Reading POS tagger model from edu/stanford/nlp/models/pos-tagger/english-left3words/english-left3words-distsim.tagger ... done [0.8 sec].
+Adding annotator lemma
+Adding annotator ner
+Loading classifier from edu/stanford/nlp/models/ner/english.all.3class.distsim.crf.ser.gz ... done [4.3 sec].
+Loading classifier from edu/stanford/nlp/models/ner/english.muc.7class.distsim.crf.ser.gz ... done [3.0 sec].
+Loading classifier from edu/stanford/nlp/models/ner/english.conll.4class.distsim.crf.ser.gz ... done [2.9 sec].
+sutime.binder.1.
+Initializing JollyDayHoliday for sutime with classpath:edu/stanford/nlp/models/sutime/jollyday/Holidays_sutime.xml
+Reading TokensRegex rules from edu/stanford/nlp/models/sutime/defs.sutime.txt
+Reading TokensRegex rules from edu/stanford/nlp/models/sutime/english.sutime.txt
+Feb 17, 2015 12:19:36 PM edu.stanford.nlp.ling.tokensregex.CoreMapExpressionExtractor appendRules
+INFO: Ignoring inactive rule: null
+Feb 17, 2015 12:19:36 PM edu.stanford.nlp.ling.tokensregex.CoreMapExpressionExtractor appendRules
+INFO: Ignoring inactive rule: temporal-composite-8:ranges
+Reading TokensRegex rules from edu/stanford/nlp/models/sutime/english.holidays.sutime.txt
+Adding annotator regexner1
+TokensRegexNERAnnotator regexner1: Replace duplicate entry (higher priority): old=Entry{Deist RELIGION [ORGANIZATION, PERSON, MISC] 1.0}, new=Entry{Deist RELIGION [ORGANIZATION, PERSON, MISC] 3.0}
+TokensRegexNERAnnotator regexner1: Entry has multiple types: murder	CRIMINAL_CHARGE,CAUSE_OF_DEATH	11.  Taking type to be CRIMINAL_CHARGE
+TokensRegexNERAnnotator regexner1: Entry has multiple types: New York	CITY,STATE_OR_PROVINCE	LOCATION	2.  Taking type to be CITY
+TokensRegexNERAnnotator regexner1: Entry has multiple types: England	COUNTRY,STATE_OR_PROVINCE	LOCATION	1.  Taking type to be COUNTRY
+TokensRegexNERAnnotator regexner1: Entry has multiple types: Scotland	COUNTRY,STATE_OR_PROVINCE	LOCATION	1.  Taking type to be COUNTRY
+TokensRegexNERAnnotator regexner1: Replace duplicate entry (higher priority): old=Entry{SANDER TITLE [1] 0.0}, new=Entry{sander CITY [LOCATION] 1.0}
+TokensRegexNERAnnotator regexner1: Replace duplicate entry (higher priority): old=Entry{WINDER TITLE [1] 0.0}, new=Entry{winder CITY [LOCATION] 1.0}
+TokensRegexNERAnnotator regexner1: Replace duplicate entry (higher priority): old=Entry{CARVER TITLE [1] 0.0}, new=Entry{carver CITY [LOCATION] 1.0}
+TokensRegexNERAnnotator regexner1: Read 56933 unique entries out of 73409 from data/kbp_regexner_mapping_nocase.tab, 0 TokensRegex patterns.
+Adding annotator regexner2
+TokensRegexNERAnnotator regexner2: Read 478 unique entries out of 481 from data/kbp_regexner_mapping.tab, 0 TokensRegex patterns.
+Adding annotator parse
+Loading parser from serialized file edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz ...done [0.8 sec].
+Adding annotator dcoref
+Adding annotator srl
+Adding annotator nom
+Adding annotator prep
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Spans:
+Span 26-27:   => activity
+Span 25-26:  activities. => and
+Span 7-8:  agreement => agree-01
+Span 19-20:  ambiguities => ambiguity
+Span 24-25:  and => program
+Span 18-19:  and => and
+Span 1-5:  International Atomic Energy Agency => (organization :name (name :op "Atomic" :op "International" :op "Energy" :op "Agency"))
+Span 9-10:  Iranian => (country :name (name :op "Iran"))
+Span 17-18:  issues => issue
+Span 10-11:  officials => (person :ARG0-of (have-org-role-91 :ARG2 official))
+Span 23-24:  program => nucleus
+Span 5-6:  reached => reach-01
+Span 16-17:  remaining => remain-01
+Span 12-13:  stated => state-01
+
+Langrangian relaxation converged after 51 iterations. Delta = 0.0
+Oracle Span 26-27:  activities => activity
+Oracle Span 7-8:  agreement => agree-01
+Oracle Span 19-20:  ambiguities => ambiguity
+Oracle Span 18-19:  and => and
+Oracle Span 25-26:  and => and
+Oracle Span 1-5:  International Atomic Energy Agency => (organization :name (name :op "Agency" :op "Energy" :op "Atomic" :op "International"))
+Oracle Span 21-22:  Iran => (country :name (name :op "Iran"))
+Oracle Span 17-18:  issues => issue
+Oracle Span 15-16:  no => -
+Oracle Span 23-24:  nuclear => nucleus
+Oracle Span 10-11:  officials => (have-org-role-91 :ARG2 official)
+Oracle Span 24-25:  program => program
+Oracle Span 5-6:  reached => reach-01
+Oracle Span 20-21:  regarding => regard-01
+Oracle Span 16-17:  remaining => remain-01
+Oracle Span 12-13:  stated => state-01
+
+Dependencies:
+1	The	_	DT	DT	_	5	det	_	_
+2	International	_	NNP	NNP	_	5	nn	_	_
+3	Atomic	_	NNP	NNP	_	5	nn	_	_
+4	Energy	_	NNP	NNP	_	5	nn	_	_
+5	Agency	_	NNP	NNP	_	6	nsubj	_	_
+6	reached	_	VBD	VBD	_	0	root	_	_
+7	an	_	DT	DT	_	8	det	_	_
+8	agreement	_	NN	NN	_	6	dobj	_	_
+9	with	_	IN	IN	_	6	prep	_	_
+10	Iranian	_	JJ	JJ	_	11	amod	_	_
+11	officials	_	NNS	NNS	_	9	pobj	_	_
+12	that	_	WDT	WDT	_	13	nsubj	_	_
+13	stated	_	VBD	VBD	_	11	rcmod	_	_
+14	there	_	EX	EX	_	15	expl	_	_
+15	were	_	VBD	VBD	_	13	ccomp	_	_
+16	no	_	DT	DT	_	18	neg	_	_
+17	remaining	_	VBG	VBG	_	18	amod	_	_
+18	issues	_	NNS	NNS	_	15	nsubj	_	_
+19	and	_	CC	CC	_	18	cc	_	_
+20	ambiguities	_	NNS	NNS	_	18	conj	_	_
+21	regarding	_	VBG	VBG	_	20	prep	_	_
+22	Iran	_	NNP	NNP	_	25	poss	_	_
+23	's	_	POS	POS	_	22	possessive	_	_
+24	nuclear	_	JJ	JJ	_	25	amod	_	_
+25	program	_	NN	NN	_	21	pobj	_	_
+26	and	_	CC	CC	_	25	cc	_	_
+27	activities	_	NNS	NNS	_	25	conj	_	_
+28	.	_	.	.	_	6	punct	_	_
+
+Oracle:
+(a / agree-01, ARG0, o / organization)
+(a2 / and, op, a3 / ambiguity)
+(a2 / and, op, i / issue)
+(a4 / and, op, a5 / activity)
+(a4 / and, op, p / program)
+(a5 / activity, mod, n3 / nucleus)
+(a5 / activity, poss, c / country)
+(c / country, name, n2 / name)
+(h / have-org-role-91, ARG1, c / country)
+(h / have-org-role-91, ARG2, o2 / official)
+(i / issue, polarity, - / -)
+(n / name, op, "Agency")
+(n / name, op, "Atomic")
+(n / name, op, "Energy")
+(n / name, op, "International")
+(n2 / name, op, "Iran")
+(o / organization, name, n / name)
+(p / program, mod, n3 / nucleus)
+(p / program, poss, c / country)
+(r / remain-01, ARG1, a3 / ambiguity)
+(r / remain-01, ARG1, i / issue)
+(r2 / regard-01, ARG0, a2 / and)
+(r2 / regard-01, ARG1, a4 / and)
+(r3 / reach-01, ARG0, o / organization)
+(r3 / reach-01, ARG1, a / agree-01)
+(s / state-01, ARG0, a / agree-01)
+(s / state-01, ARG1, a2 / and)
+
+Input(Some(Graph(null,ArrayBuffer(Span(7,8,List(0),agreement,agree-01,false), Span(26,27,List(1),,activity,false), Span(19,20,List(2),ambiguities,ambiguity,false), Span(9,10,List(5, 4, 3),Iranian,(country :name (name :op "Iran")),false), Span(10,11,List(8, 7, 6),officials,(person :ARG0-of (have-org-role-91 :ARG2 official)),false), Span(5,6,List(9),reached,reach-01,false), Span(16,17,List(10),remaining,remain-01,false), Span(25,26,List(11),activities.,and,false), Span(1,5,List(17, 16, 15, 14, 13, 12),International Atomic Energy Agency,(organization :name (name :op "Atomic" :op "International" :op "Energy" :op "Agency")),false), Span(23,24,List(18),program,nucleus,false), Span(12,13,List(19),stated,state-01,false), Span(24,25,List(20),and,program,false), Span(17,18,List(21),issues,issue,false), Span(18,19,List(22),and,and,false)),Map(2 -> ambiguity, 5 -> "Iran", 12 -> organization, 15 -> "International", 8 -> official, 21 -> issue, 18 -> nucleus, 7 -> have-org-role-91, 17 -> "Agency", 1 -> activity, 4 -> name, 11 -> and, 14 -> "Atomic", 20 -> program, 6 -> person, 22 -> and, 0 -> agree-01, 9 -> reach-01, 16 -> "Energy", 19 -> state-01, 3 -> country, 10 -> remain-01, 13 -> name),Map(n -> name, h -> have-org-role-91, p2 -> program, a3 -> ambiguity, s -> state-01, p -> person, r2 -> remain-01, n3 -> nucleus, a -> agree-01, a5 -> and, o2 -> organization, i -> issue, a2 -> activity, r -> reach-01, c -> country, o -> official, n2 -> name, a4 -> and))),[Ljava.lang.String;@5fbcc0ed,Annotation([Ljava.lang.String;@3a96dc38,[Ljava.lang.String;@2b1078d5,[Ljava.lang.String;@50fcd6d1),Annotation([Ljava.lang.String;@69fedf8b,[Ljava.lang.String;@6505b990,[Ledu.cmu.lti.nlp.amr.Dependency;@4d7ba335),Annotation([Ljava.lang.String;@7b07be15,[Ljava.lang.String;@649a3479,[Ljava.lang.String;@2c9bd843),Annotation([Ljava.lang.String;@3c69b4ee,[Ljava.lang.String;@7ad84260,[Ledu.cmu.lti.nlp.amr.Entity;@4fd498be))
+AMR:
+(a / agree-01, ARG0, o2 / organization)
+(a / agree-01, ARG1, n3 / nucleus)
+(a4 / and, op, a2 / activity)
+(a4 / and, op, p2 / program)
+(a4 / and, op, r2 / remain-01)
+(a5 / and, op, a3 / ambiguity)
+(a5 / and, op, i / issue)
+(c / country, name, n / name)
+(h / have-org-role-91, ARG0, p / person)
+(h / have-org-role-91, ARG1, c / country)
+(h / have-org-role-91, ARG2, o / official)
+(n / name, op, "Iran")
+(n2 / name, op, "Agency")
+(n2 / name, op, "Atomic")
+(n2 / name, op, "Energy")
+(n2 / name, op, "International")
+(o2 / organization, name, n2 / name)
+(r / reach-01, ARG0, p / person)
+(r / reach-01, ARG1, a / agree-01)
+(r2 / remain-01, ARG1, i / issue)
+(s / state-01, ARG0, p / person)
+(s / state-01, ARG1, a5 / and)
+
+Decoded in 37,505,483 microseconds

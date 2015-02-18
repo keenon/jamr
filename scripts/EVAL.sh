@@ -73,7 +73,8 @@ ${JAMR_HOME}/run AMRParser \
   2> "${OUTPUT}.parsed.err"
 
 ${JAMR_HOME}/run AMRParser \
-  --stage1-oracle \
+  --stage1-concept-table "${MODEL_DIR}/conceptTable.train" \
+  --stage1-weights "${STAGE1_WEIGHTS}" \
   --stanford-chunk-gen \
   --stage1-concept-table "${MODEL_DIR}/conceptTable.train" \
   --stage1-weights "${STAGE1_WEIGHTS}" \

@@ -1,0 +1,1534 @@
+# AMR release; corpus: xinhua; section: test; number of AMRs: 86 (generated on Mon Jan 27, 2014 at 20:44:15)
+
+# ::id nw.chtb_0302.1 ::date 2012-11-28T20:51:21 ::annotator SDL-AMR-09 ::preferred
+# ::snt Xinhua News Agency , Beijing , September 1st , by reporter Guojun Yang
+# ::save-date Mon Dec 16, 2013 ::file nw_chtb_0302_1.txt
+(b / byline-91
+      :ARG0 (p2 / publication :name (n / name :op1 "Xinhua" :op2 "News" :op3 "Agency"))
+      :ARG1 (p / person :name (n2 / name :op1 "Guojun" :op2 "Yang")
+            :ARG0-of (r / report-01))
+      :location (c2 / city :name (n3 / name :op1 "Beijing"))
+      :time (d / date-entity :month 9 :day 1))
+
+# ::id nw.chtb_0302.2 ::date 2012-11-28T20:52:04 ::annotator SDL-AMR-09 ::preferred
+# ::snt When meeting with Chavalit Yoncayu , vice-premier and concurrent Minister of Domestic Affairs of Thailand , at the Diaoyutai State Guesthouse today , Huaqing Liu , vice-chairman of the Central Military Commission said that China placed a great deal of importance in developing friendship with the government , people and Armed Forces of Thailand , especially the economic and trade cooperation between the two countries .
+# ::save-date Sun Dec 22, 2013 ::file nw_chtb_0302_2.txt
+(s / say-01
+      :ARG0 (p3 / person :name (n / name :op1 "Huaqing" :op2 "Liu")
+            :ARG0-of (h / have-org-role-91
+                  :ARG1 (g / government-organization :name (n2 / name :op1 "Central" :op2 "Military" :op3 "Commission"))
+                  :ARG2 (c / chairman
+                        :mod (v / vice))))
+      :ARG1 (p4 / place-01
+            :ARG0 (c7 / country :name (n3 / name :op1 "China"))
+            :ARG1 (i / importance
+                  :quant (d3 / deal
+                        :mod (g2 / great)))
+            :ARG2 (d4 / develop-02
+                  :ARG0 c7
+                  :ARG1 (a / and
+                        :op1 (f2 / friendship
+                              :prep-with (a2 / and
+                                    :op1 (g3 / government-organization
+                                          :ARG0-of (g4 / govern-01
+                                                :ARG1 (c8 / country :name (n4 / name :op1 "Thailand"))))
+                                    :op2 (p5 / person
+                                          :mod c8)
+                                    :op3 (m / military :name (n5 / name :op1 "Armed" :op2 "Forces")
+                                          :mod c8)))
+                        :op2 (c9 / cooperate-01
+                              :ARG0 c7
+                              :ARG1 c8
+                              :ARG2 (a3 / and
+                                    :op1 (e / economy)
+                                    :op2 (t2 / trade-01))
+                              :mod (e2 / especially)))))
+      :time (m2 / meet-03
+            :ARG0 p3
+            :ARG1 (p6 / person :name (n6 / name :op1 "Chavalit" :op2 "Yoncayu")
+                  :ARG0-of (h3 / have-org-role-91
+                        :ARG2 (p7 / premier
+                              :mod (v2 / vice)))
+                  :ARG0-of (h4 / have-org-role-91
+                        :ARG1 (g5 / government-organization :name (n7 / name :op1 "Domestic" :op2 "Affairs")
+                              :poss c8)
+                        :ARG2 (m3 / minister
+                              :mod (c2 / concurrent))))
+            :location (h2 / hotel :name (n8 / name :op1 "Diaoyutai" :op2 "State" :op3 "Guesthouse"))
+            :time (t4 / today)))
+
+# ::id nw.chtb_0302.3 ::date 2012-11-28T21:37:21 ::annotator SDL-AMR-09 ::preferred
+# ::snt Huaqing Liu said that , the people of China and Thailand have traditional friendship and the relationship between the two countries was also very friendly too .
+# ::save-date Tue Dec 17, 2013 ::file nw_chtb_0302_3.txt
+(s / say-01
+      :ARG0 (p2 / person :name (n / name :op1 "Huaqing" :op2 "Liu"))
+      :ARG1 (a / and
+            :op1 (h2 / have-03
+                  :ARG0 (a4 / and
+                        :op1 (p3 / person
+                              :mod (c4 / country :name (n2 / name :op1 "China")))
+                        :op2 (p / person
+                              :mod (c5 / country :name (n3 / name :op1 "Thailand"))))
+                  :ARG1 (f / friendship
+                        :mod (t2 / tradition)))
+            :op2 (f2 / friendly-41
+                  :ARG1 (r / relationship
+                        :mod (b / between
+                              :op1 c4
+                              :op2 c5))
+                  :mod (t / too)
+                  :degree (v / very)
+                  :mod (a2 / also))))
+
+# ::id nw.chtb_0302.4 ::date 2012-11-28T21:41:20 ::annotator SDL-AMR-09 ::preferred
+# ::snt He said that this visit by vice-premier Chavalit and mutual visits by other high - level leaders of China and Thailand were beneficial in promoting further development of relationships and the efficient cooperation in all fields between the two countries .
+# ::save-date Mon Dec 16, 2013 ::file nw_chtb_0302_4.txt
+(s / say-01
+      :ARG0 (h / he)
+      :ARG1 (b / benefit-01
+            :ARG0 (a / and
+                  :op1 (v / visit-01
+                        :ARG0 (p / person :name (n / name :op1 "Chavalit")
+                              :ARG0-of (h3 / have-org-role-91
+                                    :ARG2 (p2 / premier
+                                          :mod (v2 / vice))))
+                        :mod (t2 / this))
+                  :op2 (v3 / visit-01
+                        :ARG0 (a2 / and
+                              :op1 (p3 / person
+                                    :ARG0-of (l / lead-02
+                                          :ARG1 (c5 / country :name (n2 / name :op1 "China"))))
+                              :op2 (p5 / person
+                                    :ARG0-of (l3 / lead-02
+                                          :ARG1 (c6 / country :name (n3 / name :op1 "Thailand"))))
+                              :mod (o / other)
+                              :mod (l2 / level
+                                    :mod (h2 / high)))
+                        :mod (m / mutual)))
+            :ARG1 (p4 / promote-02
+                  :ARG0 a
+                  :ARG1 (a3 / and
+                        :op1 (d / develop-02
+                              :ARG1 (r / relationship)
+                              :degree (f / further))
+                        :op2 (c7 / cooperate-01
+                              :ARG0 c5
+                              :ARG1 c6
+                              :ARG2 (f2 / field
+                                    :mod (a4 / all))
+                              :ARG1-of (e / efficient-41))))))
+
+# ::id nw.chtb_0302.5 ::date 2012-11-28T21:45:10 ::annotator SDL-AMR-09 ::preferred
+# ::snt Chavalit said that he was extremely happy to meet vice-chairman Liu .
+# ::save-date Mon Dec 16, 2013 ::file nw_chtb_0302_5.txt
+(s / say-01
+      :ARG0 (p3 / person :name (n / name :op1 "Chavalit"))
+      :ARG1 (c2 / content-01
+            :ARG0 (m / meet-02
+                  :ARG0 p3
+                  :ARG1 (p / person :name (n2 / name :op1 "Liu")
+                        :ARG0-of (h / have-org-role-91
+                              :ARG2 (c / chairman
+                                    :mod (v / vice)))))
+            :ARG1 p3
+            :degree (e / extreme)))
+
+# ::id nw.chtb_0302.6 ::date 2012-11-28T21:46:57 ::annotator SDL-AMR-09 ::preferred
+# ::snt He said that in recent years , the development of China 's economy has accelerated , and the government and the people of Thailand feel extremely happy .
+# ::save-date Sun Dec 22, 2013 ::file nw_chtb_0302_6.txt
+(s / say-01
+      :ARG0 (h / he)
+      :ARG1 (a / and
+            :op1 (a2 / accelerate-01
+                  :ARG1 (d / develop-02
+                        :ARG1 (e / economy
+                              :poss (c4 / country :name (n / name :op1 "China")))))
+            :op2 (f / feel-01
+                  :ARG0 (a3 / and
+                        :op1 (g / government-organization
+                              :ARG0-of (g2 / govern-01
+                                    :ARG1 (c6 / country :name (n2 / name :op1 "Thailand"))))
+                        :op2 (p / person
+                              :mod c6))
+                  :ARG1 (c5 / content-01
+                        :ARG1 a3
+                        :degree (e2 / extreme)))
+            :time (y / year
+                  :mod (r / recent))))
+
+# ::id nw.chtb_0302.7 ::date 2012-11-28T21:48:56 ::annotator SDL-AMR-09 ::preferred
+# ::snt He said that he agreed with Huaqing Liu 's opinion that Thailand and China should further develop various forms of economic and trade cooperation .
+# ::save-date Mon Dec 16, 2013 ::file nw_chtb_0302_7.txt
+(s / say-01
+      :ARG0 (h2 / he)
+      :ARG1 (a / agree-01
+            :ARG0 h2
+            :ARG1 (o / opine-01
+                  :ARG0 (p2 / person :name (n / name :op1 "Huaqing" :op2 "Liu"))
+                  :ARG1 (r / recommend-01
+                        :ARG1 (d / develop-02
+                              :ARG0 (a2 / and
+                                    :op1 (c4 / country :name (n2 / name :op1 "Thailand"))
+                                    :op2 (c5 / country :name (n3 / name :op1 "China")))
+                              :ARG1 (a3 / and
+                                    :op1 (c6 / cooperate-01
+                                          :ARG2 (e / economy)
+                                          :mod (f / form
+                                                :mod (v / various)))
+                                    :op2 (c7 / cooperate-01
+                                          :ARG2 (t2 / trade-01)
+                                          :mod f))
+                              :degree (f2 / further))))))
+
+# ::id nw.chtb_0302.8 ::date 2012-11-28T21:52:48 ::annotator SDL-AMR-09 ::preferred
+# ::snt ( End )
+# ::save-date Wed Nov 28, 2012 ::file nw_chtb_0302_8.txt
+(e / end-01)
+
+# ::id nw.chtb_0303.1 ::date 2012-11-28T21:52:59 ::annotator SDL-AMR-09 ::preferred
+# ::snt Xinhua News Agency , Beijing , September 1st
+# ::save-date Mon Dec 16, 2013 ::file nw_chtb_0303_1.txt
+(b / byline-91
+      :ARG0 (p / publication :name (n / name :op1 "Xinhua" :op2 "News" :op3 "Agency"))
+      :location (c2 / city :name (n2 / name :op1 "Beijing"))
+      :time (d / date-entity :month 9 :day 1))
+
+# ::id nw.chtb_0303.2 ::date 2012-11-28T21:53:30 ::annotator SDL-AMR-09 ::preferred
+# ::snt Guofang Shen , The foreign ministry spokesperson , announced at a news conference held this afternoon that President Gentzs Aerpade of the Hungary Republic , would pay a State visit to China from September 14th to the 17th at the invitation of president Zemin Jiang .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0303_2.txt
+(a / announce-01
+      :ARG0 (p / person :name (n / name :op1 "Guofang" :op2 "Shen")
+            :ARG0-of (h / have-org-role-91
+                  :ARG1 (g4 / government-organization :name (n2 / name :op1 "Foreign" :op2 "Ministry"))
+                  :ARG2 (s / spokesperson)))
+      :ARG1 (v / visit-01
+            :ARG0 (p2 / person :name (n3 / name :op1 "Gentzs" :op2 "Aerpade")
+                  :ARG0-of (h3 / have-org-role-91
+                        :ARG1 (c3 / country :name (n4 / name :op1 "Hungary" :op2 "Republic"))
+                        :ARG2 (p3 / president)))
+            :ARG1 (c4 / country :name (n5 / name :op1 "China"))
+            :mod (s2 / state)
+            :duration (d / date-interval
+                  :op1 (d2 / date-entity :month 9 :day 14)
+                  :op2 (d3 / date-entity :month 9 :day 17))
+            :ARG2-of (i / invite-01
+                  :ARG0 (p4 / person :name (n6 / name :op1 "Zemin" :op2 "Jiang")
+                        :ARG0-of (h4 / have-org-role-91
+                              :ARG2 (p5 / president)))))
+      :time (c6 / conference
+            :mod (n7 / news)
+            :ARG1-of (h2 / hold-04
+                  :time (a2 / afternoon
+                        :mod (t / this)))))
+
+# ::id nw.chtb_0303.3 ::date 2012-11-28T21:56:48 ::annotator SDL-AMR-09 ::preferred
+# ::snt He also announced that Casymier Auye Muba , premier of the Gabon Republic , would pay a formal , friendly visit to China from September 6th to the 11th at the invitation of Peng Li , premier of the State Council .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0303_3.txt
+(a / announce-01
+      :ARG0 (h / he)
+      :ARG1 (v / visit-01
+            :ARG0 (p / person :name (n / name :op1 "Casymier" :op2 "Auye" :op3 "Muba")
+                  :ARG0-of (h2 / have-org-role-91
+                        :ARG1 (c4 / country :name (n2 / name :op1 "Gabon" :op2 "Republic"))
+                        :ARG2 (p2 / premier)))
+            :ARG1 (c5 / country :name (n3 / name :op1 "China"))
+            :mod (f / formal)
+            :ARG1-of (f2 / friendly-41)
+            :duration (d / date-interval
+                  :op1 (d2 / date-entity :month 9 :day 6)
+                  :op2 (d3 / date-entity :month 9 :day 11))
+            :ARG2-of (i / invite-01
+                  :ARG0 (p3 / person :name (n4 / name :op1 "Peng" :op2 "Li")
+                        :ARG0-of (h3 / have-org-role-91
+                              :ARG1 (g3 / government-organization :name (n5 / name :op1 "State" :op2 "Council"))
+                              :ARG2 (p4 / premier)))))
+      :mod (a2 / also))
+
+# ::id nw.chtb_0303.4 ::date 2012-11-28T21:58:53 ::annotator SDL-AMR-09 ::preferred
+# ::snt At the invitation of Peng Li , premier of the State Council , premier and first vice-president of the Tanzania United Republic , John Malsela will pay an official visit to China from September 9th to the 13th .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0303_4.txt
+(v / visit-01
+      :ARG0 (p4 / person :name (n / name :op1 "John" :op2 "Malsela")
+            :ARG0-of (h / have-org-role-91
+                  :ARG1 (c3 / country :name (n2 / name :op1 "Tanzania" :op2 "United" :op3 "Republic"))
+                  :ARG2 (a / and
+                        :op1 (p5 / premier)
+                        :op2 (p6 / president
+                              :mod (v2 / vice)
+                              :ord (o / ordinal-entity :value 1)))))
+      :ARG1 (c4 / country :name (n3 / name :op1 "China"))
+      :duration (d / date-interval
+            :op1 (d2 / date-entity :month 9 :day 9)
+            :op2 (d3 / date-entity :month 9 :day 13))
+      :mod (o2 / official)
+      :ARG2-of (i / invite-01
+            :ARG0 (p / person :name (n4 / name :op1 "Peng" :op2 "Li")
+                  :ARG0-of (h2 / have-org-role-91
+                        :ARG1 (g2 / government-organization :name (n5 / name :op1 "State" :op2 "Council"))
+                        :ARG2 (p2 / premier)))))
+
+# ::id nw.chtb_0303.5 ::date 2012-11-28T22:01:06 ::annotator SDL-AMR-09 ::preferred
+# ::snt ( End )
+# ::save-date Wed Nov 28, 2012 ::file nw_chtb_0303_5.txt
+(e / end-01)
+
+# ::id nw.chtb_0305.1 ::date 2012-11-28T22:01:15 ::annotator SDL-AMR-09 ::preferred
+# ::snt Xinhua News Agency , Bishket , April 23rd , by reporters Menjun Ju and Xiaoguang Hu
+# ::save-date Mon Dec 16, 2013 ::file nw_chtb_0305_1.txt
+(b / byline-91
+      :ARG0 (p3 / publication :name (n / name :op1 "Xinhua" :op2 "News" :op3 "Agency"))
+      :ARG1 (a / and
+            :op1 (p / person :name (n2 / name :op1 "Menjun" :op2 "Ju")
+                  :ARG0-of (r / report-01))
+            :op2 (p2 / person :name (n3 / name :op1 "Xiaoguang" :op2 "Hu")
+                  :ARG0-of r))
+      :location (c2 / city :name (n4 / name :op1 "Bishket"))
+      :time (d / date-entity :month 4 :day 23))
+
+# ::id nw.chtb_0305.2 ::date 2012-11-28T22:03:28 ::annotator SDL-AMR-09 ::preferred
+# ::snt Principles of parties concerned from China and Kirghizia signed six documents here today .
+# ::save-date Mon Dec 16, 2013 ::file nw_chtb_0305_2.txt
+(s / sign-01
+      :ARG0 (p / principle
+            :poss (p2 / party
+                  :ARG1-of (c3 / concern-01)
+                  :source (a / and
+                        :op1 (c4 / country :name (n / name :op1 "China"))
+                        :op2 (c5 / country :name (n2 / name :op1 "Kirghizia")))))
+      :ARG1 (d / document :quant 6)
+      :time (t / today)
+      :location (h / here))
+
+# ::id nw.chtb_0305.3 ::date 2012-11-28T22:11:54 ::annotator SDL-AMR-09 ::preferred
+# ::snt Premier Peng Li and Kirghizian President Akayev attended the signing ceremony .
+# ::save-date Mon Dec 16, 2013 ::file nw_chtb_0305_3.txt
+(a2 / attend-01
+      :ARG0 (a3 / and
+            :op1 (p / person :name (n2 / name :op1 "Peng" :op2 "Li")
+                  :ARG0-of (h / have-org-role-91
+                        :ARG2 (p2 / premier)))
+            :op2 (p3 / person :name (n3 / name :op1 "Akayev")
+                  :ARG0-of (h2 / have-org-role-91
+                        :ARG1 (c / country :name (n4 / name :op1 "Kirghizia"))
+                        :ARG2 (p4 / president))))
+      :ARG1 (c2 / ceremony
+            :mod (s / sign-01)))
+
+# ::id nw.chtb_0305.4 ::date 2012-12-11T22:23:38 ::annotator SDL-AMR-09 ::preferred
+# ::snt The six documents are : an agreement on Chinese providing a loan to the Kirghizia government , an agreement on forming a combined Economy and Trade Committee between the Sino - Kirghizian governments , an note exchange on the presenting of materials to Kirghizia by China , a cultural cooperation agreement between the two countries of China and Kirghizia , ratification letters on exchanging consular treaties between the two countries , an agreement on cooperating on the China Trade Promotion Council and the Kirghizian Chamber of Industry and Commerce .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0305_4.txt
+(i / include-91
+      :ARG1 (a / and
+            :op1 (a2 / agree-01
+                  :ARG1 (l / loan-01
+                        :ARG0 (p2 / person
+                              :mod c7)
+                        :ARG2 (g2 / government-organization
+                              :ARG0-of (g3 / govern-01
+                                    :ARG1 (c5 / country :name (n4 / name :op1 "Kirghizia"))))))
+            :op2 (a3 / agree-01
+                  :ARG1 (f / form-01
+                        :ARG0 (a4 / and
+                              :op1 (g5 / government-organization
+                                    :ARG0-of (g6 / govern-01
+                                          :ARG1 (c7 / country :name (n6 / name :op1 "China"))))
+                              :op2 (g7 / government-organization
+                                    :ARG0-of (g8 / govern-01
+                                          :ARG1 c5)))
+                        :ARG1 (g4 / government-organization :name (n5 / name :op1 "Economy" :op2 "and" :op3 "Trade" :op4 "Committee")
+                              :ARG3-of (c6 / combine-01))))
+            :op3 (e2 / exchange-01
+                  :mod (n7 / note)
+                  :topic (p3 / present-01
+                        :ARG0 c7
+                        :ARG1 (m / material)
+                        :ARG2 c5))
+            :op4 (a5 / agree-01
+                  :ARG0 (a6 / and
+                        :op1 c7
+                        :op2 c5)
+                  :ARG1 (c8 / cooperate-01
+                        :ARG0 c7
+                        :ARG1 (c9 / culture)
+                        :ARG2 c5))
+            :op5 (l2 / letter
+                  :ARG0-of (r / ratify-01)
+                  :topic (e3 / exchange-01
+                        :ARG0 c7
+                        :ARG1 (t / treaty
+                              :mod (c10 / consul))
+                        :ARG2 c5))
+            :op6 (a7 / agree-01
+                  :ARG1 (c11 / cooperate-01
+                        :ARG2 (a8 / and
+                              :op1 (g9 / government-organization :name (n8 / name :op1 "Trade" :op2 "Promotion" :op3 "Council")
+                                    :poss c7)
+                              :op2 (g10 / government-organization :name (n9 / name :op1 "Chamber" :op2 "of" :op3 "Industry" :op4 "and" :op5 "Commerce")
+                                    :poss c5)))))
+      :ARG2 (d / document :quant 6))
+
+# ::id nw.chtb_0305.5 ::date 2012-12-11T22:48:26 ::annotator SDL-AMR-09 ::preferred
+# ::snt After the signing ceremony , Kirghizian President Akayev and Premier Peng Li respectively answered questions from reporters .
+# ::save-date Mon Dec 16, 2013 ::file nw_chtb_0305_5.txt
+(a2 / answer-01
+      :ARG0 (a3 / and
+            :op1 (p / person :name (n2 / name :op1 "Akayev")
+                  :ARG0-of (h / have-org-role-91
+                        :ARG1 (c / country :name (n3 / name :op1 "Kirghizia"))
+                        :ARG2 (p2 / president)))
+            :op2 (p3 / person :name (n4 / name :op1 "Peng" :op2 "Li")
+                  :ARG0-of (h2 / have-org-role-91
+                        :ARG2 (p4 / premier))))
+      :ARG1 (t / thing
+            :ARG1-of (q / question-01
+                  :ARG0 (p6 / person
+                        :ARG0-of (r2 / report-01))))
+      :mod (r / respective)
+      :time (a4 / after
+            :op1 (c2 / ceremony
+                  :mod (s / sign-01))))
+
+# ::id nw.chtb_0305.6 ::date 2012-12-11T22:51:30 ::annotator SDL-AMR-09 ::preferred
+# ::snt Akayev highly commended the results of the conference with Peng Li
+# ::save-date Mon Dec 16, 2013 ::file nw_chtb_0305_6.txt
+(c / commend-01
+      :ARG0 (p / person :name (n / name :op1 "Akayev"))
+      :ARG1 (t / thing
+            :ARG2-of (r2 / result-01
+                  :ARG1 (c5 / conference
+                        :prep-with (p3 / person :name (n3 / name :op1 "Peng" :op2 "Li")))))
+      :degree (h / high))
+
+# ::id nw.chtb_0305.7 ::date 2012-12-11T22:53:52 ::annotator SDL-AMR-09 ::preferred
+# ::snt He expressed that , this visit by Premier Peng Li would promote the peace , security and stability of the Central Asian region .
+# ::save-date Tue Jan 21, 2014 ::file nw_chtb_0305_7.txt
+(e / express-01
+      :ARG0 (h / he)
+      :ARG1 (p3 / promote-02
+            :ARG0 (v / visit-01
+                  :ARG0 (p / person :name (n / name :op1 "Peng" :op2 "Li")
+                        :ARG0-of (h2 / have-org-role-91
+                              :ARG2 (p2 / premier)))
+                  :mod (t / this))
+            :ARG1 (a / and
+                  :op1 (p5 / peace
+                        :poss (w / world-region :name (n2 / name :op1 "Central" :op2 "Asia")))
+                  :op2 (s / security
+                        :poss w)
+                  :op3 (s2 / stability
+                        :poss w))))
+
+# ::id nw.chtb_0305.8 ::date 2012-12-11T22:56:01 ::annotator SDL-AMR-09 ::preferred
+# ::snt He felt that , the recently signed documents were very important in enforcing good neighborhood relations and friendly cooperation between both countries .
+# ::save-date Mon Dec 16, 2013 ::file nw_chtb_0305_8.txt
+(f / feel-02
+      :ARG0 (h / he)
+      :ARG1 (i / important
+            :purpose (e / enforce-01
+                  :ARG1 (a / and
+                        :op1 (r2 / relation
+                              :mod (n / neighborhood)
+                              :mod (g / good))
+                        :op2 (c / cooperate-01
+                              :ARG0 (c2 / country
+                                    :mod (b / both))
+                              :ARG1-of (f2 / friendly-41))))
+            :domain (d / document
+                  :ARG1-of (s / sign-01
+                        :time (r / recent)))
+            :degree (v / very)))
+
+# ::id nw.chtb_0305.9 ::date 2012-12-11T23:01:51 ::annotator SDL-AMR-09 ::preferred
+# ::snt Premier Peng Li said that , this visit had improved mutual friendship and understanding and set a good foundation for further cooperation between China and Kirghizia .
+# ::save-date Mon Dec 16, 2013 ::file nw_chtb_0305_9.txt
+(s / say-01
+      :ARG0 (p / person :name (n / name :op1 "Peng" :op2 "Li")
+            :ARG0-of (h / have-org-role-91
+                  :ARG2 (p2 / premier)))
+      :ARG1 (a / and
+            :op1 (i / improve-01
+                  :ARG0 (v / visit-01
+                        :mod (t / this))
+                  :ARG1 (a2 / and
+                        :op1 (f / friendship)
+                        :op2 (u / understand-01)
+                        :mod (m / mutual)))
+            :op2 (s2 / set-02
+                  :ARG0 v
+                  :ARG1 (f2 / foundation
+                        :mod (g2 / good)
+                        :purpose (c3 / cooperate-01
+                              :ARG0 (c4 / country :name (n2 / name :op1 "China"))
+                              :ARG1 (c5 / country :name (n3 / name :op1 "Kirghizia"))
+                              :degree (f3 / further))))))
+
+# ::id nw.chtb_0305.10 ::date 2012-12-11T23:04:12 ::annotator SDL-AMR-09 ::preferred
+# ::snt He expressed hopes that the Central Asian region would be stable and developed , and that the standard of living of the people would continuously improve .
+# ::save-date Tue Jan 21, 2014 ::file nw_chtb_0305_10.txt
+(e / express-01
+      :ARG0 (h / he)
+      :ARG1 (h2 / hope-01
+            :ARG0 h
+            :ARG1 (a / and
+                  :op1 (a2 / and
+                        :op1 (s / stable
+                              :domain (w / world-region :name (n / name :op1 "Central" :op2 "Asia")))
+                        :op2 (d / develop-02
+                              :ARG1 w))
+                  :op2 (i / improve-01
+                        :ARG0 (s2 / standard
+                              :mod (l / live-01)
+                              :poss (p / person))
+                        :ARG1-of (c / continue-01)))))
+
+# ::id nw.chtb_0305.11 ::date 2012-12-11T23:11:13 ::annotator SDL-AMR-09 ::preferred
+# ::snt Peng Li hoped that the Kirghizian news media would relay greetings from the Chinese people to the Kirghizian people .
+# ::save-date Tue Dec 17, 2013 ::file nw_chtb_0305_11.txt
+(h / hope-01
+      :ARG0 (p / person :name (n2 / name :op1 "Peng" :op2 "Li"))
+      :ARG1 (r / relay-01
+            :ARG0 (m / media
+                  :mod (n3 / news)
+                  :mod (c3 / country :name (n4 / name :op1 "Kirghizia")))
+            :ARG1 (g / greet-01
+                  :ARG0 (p4 / person
+                        :mod (c4 / country :name (n5 / name :op1 "China")))
+                  :ARG1 (p5 / person
+                        :mod c3))))
+
+# ::id nw.chtb_0305.12 ::date 2012-12-11T23:12:51 ::annotator SDL-AMR-09 ::preferred
+# ::snt ( End )
+# ::save-date Tue Dec 11, 2012 ::file nw_chtb_0305_12.txt
+(e / end-01)
+
+# ::id nw.chtb_0318.1 ::date 2012-12-11T23:13:04 ::annotator SDL-AMR-09 ::preferred
+# ::snt Xinhua News Agency , Tokyo , September 1st , by reporter Yiguo Yu
+# ::save-date Mon Dec 16, 2013 ::file nw_chtb_0318_1.txt
+(b / byline-91
+      :ARG0 (p2 / publication :name (n / name :op1 "Xinhua" :op2 "News" :op3 "Agency"))
+      :ARG1 (p / person :name (n2 / name :op1 "Yiguo" :op2 "Yu")
+            :ARG0-of (r / report-01))
+      :location (c2 / city :name (n3 / name :op1 "Tokyo"))
+      :time (d / date-entity :month 9 :day 1))
+
+# ::id nw.chtb_0318.2 ::date 2012-12-11T23:14:33 ::annotator SDL-AMR-09 ::preferred
+# ::snt The Japanese delegation participating in the Sixth Far East and South Pacific Region Handicapped Sports Meet held a grand swearing in ceremony in Tokyo this afternoon .
+# ::save-date Sun Dec 22, 2013 ::file nw_chtb_0318_2.txt
+(h / hold-04
+      :ARG0 (d / delegation
+            :ARG0-of (p / participate-01
+                  :ARG1 (g / game :name (n / name :op1 "Far" :op2 "East" :op3 "and" :op4 "South" :op5 "Pacific" :op6 "Region" :op7 "Handicapped" :op8 "Sports" :op9 "Meet")
+                        :ord (o / ordinal-entity :value 6)))
+            :mod (c5 / country :name (n3 / name :op1 "Japan")))
+      :ARG1 (c3 / ceremony
+            :mod (s2 / swear-06)
+            :mod (g2 / grand))
+      :location (c4 / city :name (n2 / name :op1 "Tokyo"))
+      :time (a / afternoon
+            :mod (t2 / this)))
+
+# ::id nw.chtb_0318.3 ::date 2012-12-11T23:21:04 ::annotator SDL-AMR-09 ::preferred
+# ::snt A Japanese flag hung from the Chairman 's stage .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0318_3.txt
+(h / hang-01
+      :ARG1 (f / flag
+            :mod (c2 / country :name (n / name :op1 "Japan")))
+      :ARG2 (s / stage
+            :poss (p / person
+                  :ARG0-of (h2 / have-org-role-91
+                        :ARG2 (c3 / chairman)))))
+
+# ::id nw.chtb_0318.4 ::date 2012-12-11T23:21:52 ::annotator SDL-AMR-09 ::preferred
+# ::snt Sportsmen , coaches , doctors , nurses and officials of the delegation sat neatly below the stage .
+# ::save-date Mon Dec 16, 2013 ::file nw_chtb_0318_4.txt
+(s / sit-01
+      :ARG1 (a / and
+            :op1 (s2 / sportsman)
+            :op2 (p / person
+                  :ARG0-of (c / coach-01))
+            :op3 (d / doctor)
+            :op4 (n / nurse)
+            :op5 (p2 / person
+                  :ARG0-of (h / have-org-role-91
+                        :ARG1 (d2 / delegation)
+                        :ARG2 (o2 / official))))
+      :location (b / below
+            :op1 (s3 / stage))
+      :manner (n2 / neat))
+
+# ::id nw.chtb_0318.5 ::date 2012-12-11T23:24:22 ::annotator SDL-AMR-09 ::preferred
+# ::snt An atmosphere of confidence and eagerness for progress filled the ceremony ground .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0318_5.txt
+(f / fill-01
+      :ARG1 (g / ground
+            :location-of (c2 / ceremony))
+      :ARG2 (a / atmosphere
+            :consist-of (a2 / and
+                  :op1 (c / confident-41)
+                  :op2 (e / eager-41
+                        :ARG1 (p / progress-01)))))
+
+# ::id nw.chtb_0318.6 ::date 2012-12-11T23:25:50 ::annotator SDL-AMR-09 ::preferred
+# ::snt Vice-minister of the Japanese State Welfare Ministry , Souyasen , delivered a " bolstering departure speech " to the delegation .
+# ::save-date Mon Dec 16, 2013 ::file nw_chtb_0318_6.txt
+(d / deliver-01
+      :ARG0 (p / person :name (n / name :op1 "Souyasen")
+            :ARG0-of (h / have-org-role-91
+                  :ARG1 (g / government-organization :name (n2 / name :op1 "State" :op2 "Welfare" :op3 "Ministry")
+                        :mod (c / country :name (n3 / name :op1 "Japan")))
+                  :ARG2 (m / minister
+                        :mod (v / vice))))
+      :ARG1 (s2 / speech
+            :mod (d2 / depart-01)
+            :ARG0-of (b / bolster-01))
+      :ARG2 (d3 / delegation))
+
+# ::id nw.chtb_0318.7 ::date 2012-12-11T23:27:30 ::annotator SDL-AMR-09 ::preferred
+# ::snt Souya said , the Far South Sports Meet was an international sports meet that attracts the world 's attention , and the scale of this sports meet to be held in Beijing is the largest to date .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0318_7.txt
+(s2 / say-01
+      :ARG0 (p2 / person :name (n / name :op1 "Souya"))
+      :ARG1 (a / and
+            :op1 (m3 / meet
+                  :mod (s3 / sport)
+                  :mod (i / international)
+                  :ARG0-of (a2 / attract-01
+                        :ARG1 (a3 / attention
+                              :poss (w / world)))
+                  :domain (g / game :name (n2 / name :op1 "Far" :op2 "South" :op3 "Sports" :op4 "Meet"))
+                  :ARG1-of (h / hold-04
+                        :location (c2 / city :name (n3 / name :op1 "Beijing"))))
+            :op2 (l / large
+                  :degree (m2 / most)
+                  :time (t2 / to-date)
+                  :domain (s4 / scale
+                        :poss g))))
+
+# ::id nw.chtb_0318.8 ::date 2012-12-25T14:40:55 ::annotator SDL-AMR-09 ::preferred
+# ::snt He hoped that all the athletes would " fully demonstrate the strength and skill that they cultivate daily , as the competitors representing Japan , they should carry out competition with athletes from various countries honestly " .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0318_8.txt
+(a / and
+      :op1 (h / hope-01
+            :ARG0 (h2 / he)
+            :ARG1 (d / demonstrate-01
+                  :ARG0 (a2 / athlete
+                        :quant (a3 / all))
+                  :ARG1 (a4 / and
+                        :op1 (s / strength)
+                        :op2 (s2 / skill)
+                        :ARG1-of (c2 / cultivate-01
+                              :ARG0 a2
+                              :frequency (r3 / rate-entity-91
+                                    :ARG2 (t / temporal-quantity :quant 1
+                                          :unit (d2 / day)))))
+                  :degree (f / full)
+                  :ARG1-of (c / cause-01
+                        :ARG0 (r / recommend-01
+                              :ARG1 (c3 / compete-01
+                                    :ARG0 a2
+                                    :ARG1 (a5 / athlete
+                                          :source (c4 / country
+                                                :mod (v / various)))
+                                    :manner (h3 / honest)
+                                    :prep-as (p / person
+                                          :ARG0-of (c6 / compete-01)
+                                          :ARG0-of (r2 / represent-01
+                                                :ARG1 (c5 / country :name (n / name :op1 "Japan"))))))))))
+
+# ::id nw.chtb_0318.9 ::date 2012-12-29T12:55:32 ::annotator SDL-AMR-09 ::preferred
+# ::snt Souya emphasized , the Japanese delegation must make use of this opportunity of participation in the Beijing Far South Sports Meet " to deepen friendship with athletes from various countries , and expand the scope of international friendliness . "
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0318_9.txt
+(e2 / emphasize-01
+      :ARG0 (p2 / person :name (n / name :op1 "Souya"))
+      :ARG1 (o / obligate-01
+            :ARG1 (d / delegation
+                  :mod (c3 / country :name (n2 / name :op1 "Japan")))
+            :ARG2 (u / use-01
+                  :ARG0 d
+                  :ARG1 (o2 / opportunity
+                        :mod (t / this)
+                        :mod (p3 / participate-01
+                              :ARG0 d
+                              :ARG1 (g / game :name (n3 / name :op1 "Beijing" :op2 "Far" :op3 "South" :op4 "Sports" :op5 "Meet"))))
+                  :ARG2 (a / and
+                        :op1 (d2 / deepen-01
+                              :ARG0 d
+                              :ARG1 (f2 / friendship
+                                    :prep-with (a2 / athlete
+                                          :source (c4 / country
+                                                :mod (v / various)))))
+                        :op2 (e3 / expand-01
+                              :ARG0 d
+                              :ARG1 (s2 / scope
+                                    :poss (f / friendly-41
+                                          :mod (i / international))))))))
+
+# ::id nw.chtb_0318.10 ::date 2012-12-29T13:02:51 ::annotator SDL-AMR-09 ::preferred
+# ::snt Souya handed over the delegation flag of the Japanese delegation to the head of the delegation and Director of the Tokyo Handicapped Integrated Sports Center , Banminyan .
+# ::save-date Tue Dec 17, 2013 ::file nw_chtb_0318_10.txt
+(h / hand-02
+      :ARG0 (p3 / person :name (n / name :op1 "Souya"))
+      :ARG1 (f2 / flag
+            :poss (d / delegation
+                  :source (c2 / country :name (n2 / name :op1 "Japan")))
+            :mod (d2 / delegation))
+      :ARG2 (p / person :name (n3 / name :op1 "Banminyan")
+            :ARG0-of (h2 / head-01
+                  :ARG1 d)
+            :ARG0-of (h3 / have-org-role-91
+                  :ARG1 (s2 / sports-facility :name (n4 / name :op1 "Tokyo" :op2 "Handicapped" :op3 "Integrated" :op4 "Sports" :op5 "Center"))
+                  :ARG2 (d3 / director))))
+
+# ::id nw.chtb_0318.11 ::date 2012-12-29T13:07:07 ::annotator SDL-AMR-09 ::preferred
+# ::snt From this tight , orderly , warm and serious swearing in ceremony , this reporter felt that , the Japanese Handicapped Sports Team was a team that was well trained , disciplined and possessed fighting spirit .
+# ::save-date Sun Dec 22, 2013 ::file nw_chtb_0318_11.txt
+(f / feel-02
+      :ARG0 (p / person
+            :mod (t / this)
+            :ARG0-of (r / report-01))
+      :ARG1 (a / and
+            :op1 (t3 / train-01
+                  :ARG2 (t2 / team :name (n / name :op1 "Japanese" :op2 "Handicapped" :op3 "Sports" :op4 "Team"))
+                  :manner (g / good))
+            :op2 (d / discipline-01
+                  :ARG1 t3)
+            :op3 (p2 / possess-01
+                  :ARG1 (s / spirit
+                        :mod (f2 / fight-01))))
+      :ARG1-of (c2 / cause-01
+            :ARG0 (c3 / ceremony
+                  :mod (t4 / tight)
+                  :mod (o2 / orderly)
+                  :mod (w2 / warm)
+                  :ARG1-of (s2 / serious-41)
+                  :purpose (s3 / swear-06))))
+
+# ::id nw.chtb_0318.12 ::date 2012-12-29T13:17:15 ::annotator SDL-AMR-09 ::preferred
+# ::snt The Japanese delegation will fly to Beijing on the 2nd .
+# ::save-date Tue Dec 17, 2013 ::file nw_chtb_0318_12.txt
+(f / fly-01
+      :ARG1 (d2 / delegation
+            :mod (c3 / country :name (n / name :op1 "Japan")))
+      :destination (c4 / city :name (n2 / name :op1 "Beijing"))
+      :time (d3 / date-entity :day 2))
+
+# ::id nw.chtb_0318.13 ::date 2012-12-29T13:18:08 ::annotator SDL-AMR-09 ::preferred
+# ::snt After the closing ceremonies of the Sports Meet , they will continue to remain in Beijing for two days , to carry out interaction activities with relevant Chinese parties and visit and tour , and return to Japan on 13th .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0318_13.txt
+(a / and
+      :op1 (r / remain-01
+            :ARG1 (t2 / they)
+            :location (c6 / city :name (n / name :op1 "Beijing"))
+            :duration (t3 / temporal-quantity :quant 2
+                  :unit (d3 / day))
+            :ARG1-of (h / have-purpose-91
+                  :ARG2 (a4 / and
+                        :op1 (c7 / carry-03
+                              :ARG0 t2
+                              :ARG1 (a2 / activity
+                                    :mod (i / interact-01
+                                          :ARG0 t2
+                                          :ARG1 (p / party
+                                                :mod (c8 / country :name (n2 / name :op1 "China"))
+                                                :ARG1-of (r2 / relevant-41)))))
+                        :op3 (t4 / tour-01
+                              :ARG0 t2
+                              :ARG1 c6)
+                        :op1 (v / visit-01
+                              :ARG0 t2
+                              :ARG1 c6)))
+            :time (a3 / after
+                  :op1 (c11 / ceremony
+                        :ARG0-of (c / close-01
+                              :ARG1 (g / game :name (n4 / name :op1 "Sports" :op2 "Meet"))))))
+      :op2 (r3 / return-01
+            :ARG1 t2
+            :ARG4 (c9 / country :name (n3 / name :op1 "Japan"))
+            :time (d4 / date-entity :day 13)))
+
+# ::id nw.chtb_0318.14 ::date 2012-12-29T13:24:28 ::annotator SDL-AMR-09 ::preferred
+# ::snt ( End )
+# ::save-date Sat Dec 29, 2012 ::file nw_chtb_0318_14.txt
+(e / end-01)
+
+# ::id nw.chtb_0319.1 ::date 2012-12-29T13:24:43 ::annotator SDL-AMR-09 ::preferred
+# ::snt In the script " Mongolian handicapped athletes prepare for the Far South Sports Meet " broadcast today , the " Sports Association Chairman Lahagewasu " at the end of paragraph three should be changed to " Sports Association Chairman Lahagewasulen " .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0319_1.txt
+(r / recommend-01
+      :ARG1 (c2 / change-01
+            :ARG2 (p / person :name (n2 / name :op1 "Lahagewasulen")
+                  :ARG0-of (h / have-org-role-91
+                        :ARG1 (o / organization :name (n4 / name :op1 "Sports" :op2 "Association"))
+                        :ARG2 (c / chairman)))
+            :ARG3 (p3 / person :name (n5 / name :op1 "Lahagewasu")
+                  :ARG0-of (h2 / have-org-role-91
+                        :ARG1 o
+                        :ARG2 c)
+                  :location (e / end
+                        :op1 (p4 / paragraph :mod 3)))
+            :location (s / script
+                  :ARG1-of (b / broadcast-01
+                        :time (t / today))
+                  :ARG1-of (t2 / title-01
+                        :ARG2 (p5 / prepare-02
+                              :ARG0 (a / athlete
+                                    :ARG1-of (h3 / handicap-01)
+                                    :mod (c3 / country :name (n6 / name :op1 "Mongolia")))
+                              :ARG1 a
+                              :ARG2 (g / game :name (n7 / name :op1 "Far" :op2 "South" :op3 "Sports" :op4 "Meet")))))))
+
+# ::id nw.chtb_0319.2 ::date 2012-12-29T13:29:37 ::annotator SDL-AMR-09 ::preferred
+# ::snt Xinhua News Agency , August 31st .
+# ::save-date Tue Dec 17, 2013 ::file nw_chtb_0319_2.txt
+(b / byline-91
+      :ARG0 (p / publication :name (n / name :op1 "Xinhua" :op2 "News" :op3 "Agency"))
+      :time (d2 / date-entity :month 8 :day 31))
+
+# ::id nw.chtb_0322.1 ::date 2012-12-29T13:30:09 ::annotator SDL-AMR-09 ::preferred
+# ::snt Xinhua News Agency , Seoul , August 31st , by reporter Shuifu Tang
+# ::save-date Tue Dec 17, 2013 ::file nw_chtb_0322_1.txt
+(b / byline-91
+      :ARG0 (p / publication :name (n / name :op1 "Xinhua" :op2 "News" :op3 "Agency"))
+      :ARG1 (p2 / person :name (n2 / name :op1 "Shuifu" :op2 "Tang")
+            :ARG0-of (r / report-01))
+      :location (c3 / city :name (n3 / name :op1 "Seoul"))
+      :time (d2 / date-entity :month 8 :day 31))
+
+# ::id nw.chtb_0322.2 ::date 2012-12-29T13:32:27 ::annotator SDL-AMR-09 ::preferred
+# ::snt The first " Le Tian Cup " China and Korea Go competition started today at Fushan , the second largest city of Korea .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0322_2.txt
+(s / start-01
+      :ARG1 (c6 / compete-01 :name (n6 / name :op1 "Le" :op2 "Tian" :op3 "Cup")
+            :ARG0 (c5 / country :name (n5 / name :op1 "China"))
+            :ARG1 c4
+            :mod (g2 / game :name (n2 / name :op1 "Go")))
+      :location (c3 / city :name (n3 / name :op1 "Fushan")
+            :mod (l2 / large
+                  :degree (m / most)
+                  :compared-to (c4 / country :name (n4 / name :op1 "Korea"))
+                  :ord (o / ordinal-entity :value 2)))
+      :time (t / today))
+
+# ::id nw.chtb_0322.3 ::date 2012-12-29T13:54:58 ::annotator SDL-AMR-09 ::preferred
+# ::snt In the first round of competition , the Chinese team defeated the relatively stronger Korean team with a score of 4 : 3 .
+# ::save-date Tue Dec 17, 2013 ::file nw_chtb_0322_3.txt
+(d / defeat-01
+      :ARG0 (t / team
+            :mod (c4 / country :name (n / name :op1 "China")))
+      :ARG1 (t2 / team
+            :mod (c5 / country :name (n2 / name :op1 "Korea"))
+            :mod (s / strong
+                  :degree (m / more)
+                  :compared-to t
+                  :degree (r2 / relative)))
+      :time (r / round
+            :part-of (c / compete-01)
+            :ord (o / ordinal-entity :value 1))
+      :quant (s2 / score-entity :op1 4 :op2 3))
+
+# ::id nw.chtb_0322.4 ::date 2012-12-29T13:57:34 ::annotator SDL-AMR-09 ::preferred
+# ::snt In the competition today , both sides each have 7 Go players participating .
+# ::save-date Tue Dec 17, 2013 ::file nw_chtb_0322_4.txt
+(h / have-03
+      :ARG0 (s / side
+            :mod (b / both)
+            :mod (e2 / each))
+      :ARG1 (p2 / person :quant 7
+            :ARG0-of (p3 / play-01
+                  :ARG1 (g / game :name (n / name :op1 "Go")))
+            :ARG0-of (c / compete-01
+                  :time (t / today))))
+
+# ::id nw.chtb_0322.5 ::date 2012-12-29T13:59:53 ::annotator SDL-AMR-09 ::preferred
+# ::snt Weiping Nie ( 9th level ) , Xiaoguang Liu ( 9th level ) , Hao Chang ( 6th level ) and Dayuan Cao ( 9th level ) from the Chinese team defeated Guibing Cui ( 6th level ) , Xiuying Zhang ( 9th level ) , Fengzhu Xu ( 9th level ) and Xuange Lin ( 8th level ) from the Korean team respectively .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0322_5.txt
+(d2 / defeat-01
+      :ARG0 (a / and
+            :op1 (p9 / person :name (n / name :op1 "Weiping" :op2 "Nie")
+                  :mod (l / level
+                        :ord (o / ordinal-entity :value 9)))
+            :op2 (p10 / person :name (n2 / name :op1 "Xiaoguang" :op2 "Liu")
+                  :mod l)
+            :op3 (p11 / person :name (n3 / name :op1 "Hao" :op2 "Chang")
+                  :mod (l2 / level
+                        :ord (o2 / ordinal-entity :value 6)))
+            :op4 (p12 / person :name (n4 / name :op1 "Dayuan" :op2 "Cao")
+                  :mod l)
+            :part-of (t / team
+                  :mod (c4 / country :name (n5 / name :op1 "China"))))
+      :ARG1 (a2 / and
+            :op1 (p13 / person :name (n6 / name :op1 "Guibing" :op2 "Cui")
+                  :mod l2)
+            :op2 (p14 / person :name (n7 / name :op1 "Xiuying" :op2 "Zhang")
+                  :mod l)
+            :op3 (p15 / person :name (n8 / name :op1 "Fengzhu" :op2 "Xu")
+                  :mod l)
+            :op4 (p16 / person :name (n9 / name :op1 "Xuange" :op2 "Lin")
+                  :mod (l3 / level
+                        :ord (o3 / ordinal-entity :value 8)))
+            :part-of (t2 / team
+                  :mod (c5 / country :name (n10 / name :op1 "Korea"))))
+      :mod (r / respective))
+
+# ::id nw.chtb_0322.6 ::date 2012-12-29T14:08:53 ::annotator SDL-AMR-09 ::preferred
+# ::snt Among which , Weiping Nie , Xiaoguang Liu and Hao Chang both achieved victories in the middle games .
+# ::save-date Sun Dec 22, 2013 ::file nw_chtb_0322_6.txt
+(w / win-01
+      :ARG0 (a2 / and
+            :op1 (p4 / person :name (n / name :op1 "Xiaoguang" :op2 "Liu"))
+            :op2 (p5 / person :name (n2 / name :op1 "Hao" :op2 "Chang"))
+            :op3 (p6 / person :name (n3 / name :op1 "Weiping" :op2 "Nie")))
+      :time (g / game
+            :mod (m / middle))
+      :ARG1-of (i / include-91))
+
+# ::id nw.chtb_0322.7 ::date 2012-12-29T14:13:02 ::annotator SDL-AMR-09 ::preferred
+# ::snt Dayuan Cao achieved victory with an advantage of seven and a half ' mu ' .
+# ::save-date Tue Dec 17, 2013 ::file nw_chtb_0322_7.txt
+(w / win-01
+      :ARG0 (p2 / person :name (n / name :op1 "Dayuan" :op2 "Cao"))
+      :manner (a2 / advantage
+            :consist-of (m / mu :quant 7.5)))
+
+# ::id nw.chtb_0322.8 ::date 2012-12-29T14:17:26 ::annotator SDL-AMR-09 ::preferred
+# ::snt Xunxuan Cao ( 9th level ) , Changhao Li ( 7th level ) and Changhe Liu ( 6th level ) from the Korean team defeated Jing Liu ( 5th level ) , Xiaocun Ma ( 9th level ) and Jianhong Wang ( 7th level ) from the Chinese team respectively .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0322_8.txt
+(d / defeat-01
+      :ARG0 (a / and
+            :op1 (p7 / person :name (n / name :op1 "XunXuan" :op2 "Cao")
+                  :mod (l / level
+                        :ord (o / ordinal-entity :value 9)))
+            :op2 (p8 / person :name (n2 / name :op1 "Changhao" :op2 "Li")
+                  :mod (l2 / level
+                        :ord (o2 / ordinal-entity :value 7)))
+            :op3 (p9 / person :name (n3 / name :op1 "Changhe" :op2 "Liu")
+                  :mod (l3 / level
+                        :ord (o3 / ordinal-entity :value 6)))
+            :part-of (t / team
+                  :mod (c6 / country :name (n4 / name :op1 "Korea"))))
+      :ARG1 (a2 / and
+            :op1 (p10 / person :name (n5 / name :op1 "Jing" :op2 "Lui")
+                  :mod (l4 / level
+                        :ord (o4 / ordinal-entity :value 5)))
+            :op2 (p11 / person :name (n6 / name :op1 "Xiaocun" :op2 "Ma")
+                  :mod l)
+            :op3 (p12 / person :name (n7 / name :op1 "Jianhong" :op2 "Wang")
+                  :mod l2)
+            :part-of (t2 / team
+                  :mod (c7 / country :name (n8 / name :op1 "China"))))
+      :mod (r / respective))
+
+# ::id nw.chtb_0322.9 ::date 2012-12-29T14:26:39 ::annotator SDL-AMR-09 ::preferred
+# ::snt Among which , Xunxuan Cao achieved a victory in the middle game .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0322_9.txt
+(w / win-01
+      :ARG0 (p2 / person :name (n / name :op1 "XunXuan" :op2 "Cao"))
+      :time (g / game
+            :mod (m / middle))
+      :ARG1-of (i / include-91))
+
+# ::id nw.chtb_0322.10 ::date 2012-12-29T14:27:38 ::annotator SDL-AMR-09 ::preferred
+# ::snt Changhao Li and Changhe Liu achieved victories with advantages of six and a half ' mu ' and seven and a half ' mu ' respectively .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0322_10.txt
+(a / and
+      :op1 (w / win-01
+            :ARG0 (p3 / person :name (n / name :op1 "Changhao" :op2 "Li"))
+            :manner (a3 / advantage
+                  :consist-of (m / mu :quant 6.5)))
+      :op2 (w2 / win-01
+            :ARG0 (p4 / person :name (n2 / name :op1 "Changhe" :op2 "Liu"))
+            :manner (a5 / advantage
+                  :consist-of (m2 / mu :quant 7.5)))
+      :mod (r / respective))
+
+# ::id nw.chtb_0322.11 ::date 2012-12-29T14:29:36 ::annotator SDL-AMR-09 ::preferred
+# ::snt When receiving reporters telephone interviews , Runan Wang , leader of the Chinese delegation presented that , overall speaking , the strength of the Korean team was stronger than the Chinese team .
+# ::save-date Tue Dec 17, 2013 ::file nw_chtb_0322_11.txt
+(p / present-00
+      :ARG0 (p2 / person :name (n / name :op1 "Runan" :op2 "Wang")
+            :ARG0-of (l / lead-02
+                  :ARG1 (d / delegation
+                        :source (c4 / country :name (n2 / name :op1 "China")))))
+      :ARG1 (s3 / strong
+            :degree (m / more)
+            :compared-to (s4 / strength
+                  :poss (t2 / team
+                        :mod c4))
+            :domain (s2 / strength
+                  :poss (t / team
+                        :mod (c5 / country :name (n3 / name :op1 "Korea"))))
+            :condition (s5 / speak-01
+                  :manner (o / overall)))
+      :time (r2 / receive-01
+            :ARG0 p2
+            :ARG1 (i / interview-01
+                  :ARG0 p3
+                  :instrument (t4 / telephone))
+            :ARG2 (p3 / person
+                  :ARG0-of (r3 / report-01))))
+
+# ::id nw.chtb_0322.12 ::date 2012-12-29T14:34:48 ::annotator SDL-AMR-09 ::preferred
+# ::snt However , the Chinese team performed better today , and therefore achieved victory .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0322_12.txt
+(c5 / contrast-01
+      :ARG2 (p / perform-01
+            :ARG0 (t / team
+                  :mod (c3 / country :name (n / name :op1 "China")))
+            :manner (g2 / good
+                  :degree (m2 / more))
+            :ARG0-of (c6 / cause-01
+                  :ARG1 (w / win-01
+                        :ARG0 t))
+            :time (t2 / today)))
+
+# ::id nw.chtb_0322.13 ::date 2012-12-29T14:38:41 ::annotator SDL-AMR-09 ::preferred
+# ::snt The performance of our young competitor , Hao Chang , was especially outstanding today , defeating Fengzhu Xu of the Korean team in the middle game .
+# ::save-date Tue Dec 17, 2013 ::file nw_chtb_0322_13.txt
+(s / stand-06
+      :ARG1 (p4 / perform-01
+            :ARG0 (p3 / person :name (n / name :op1 "Hao" :op2 "Chang")
+                  :ARG0-of (c2 / compete-01)
+                  :mod (y / young)
+                  :ARG0-of (d / defeat-01
+                        :ARG1 (p5 / person :name (n2 / name :op1 "Fengzhu" :op2 "Xu")
+                              :part-of (t / team
+                                    :mod (c3 / country :name (n3 / name :op1 "Korea"))))
+                        :time (g / game
+                              :mod (m / middle)))
+                  :poss (w / we)))
+      :time (t2 / today)
+      :degree (e / especially))
+
+# ::id nw.chtb_0322.14 ::date 2012-12-29T15:39:17 ::annotator SDL-AMR-09 ::preferred
+# ::snt Fengzhu Xu has won many championships in international competitions before .
+# ::save-date Sun Dec 22, 2013 ::file nw_chtb_0322_14.txt
+(w / win-01
+      :ARG0 (p2 / person :name (n / name :op1 "Fengzhu" :op2 "Xu"))
+      :ARG1 (c / championship
+            :quant (m / many))
+      :time (b / before)
+      :part-of (c2 / compete-01
+            :mod (i / international)))
+
+# ::id nw.chtb_0322.15 ::date 2012-12-29T15:40:07 ::annotator SDL-AMR-09 ::preferred
+# ::snt He had achieved complete victory in nine games with Chinese Go players before .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0322_15.txt
+(w / win-01
+      :ARG0 (h / he)
+      :ARG1 (g / game :quant 9
+            :ARG1-of (p / play-01
+                  :ARG0 (a2 / and
+                        :op1 (p2 / person
+                              :mod (c4 / country :name (n / name :op1 "China"))
+                              :ARG0-of (p3 / play-01
+                                    :ARG1 (g2 / game :name (n2 / name :op1 "Go"))))
+                        :op2 h)))
+      :degree (c / complete)
+      :time (b / before))
+
+# ::id nw.chtb_0322.16 ::date 2012-12-29T15:43:54 ::annotator SDL-AMR-09 ::preferred
+# ::snt The Go teams from China and Korea will shift to Seoul on September 1st , and will hold the second competition in the Le Tian Hotel on the 2nd .
+# ::save-date Tue Dec 17, 2013 ::file nw_chtb_0322_16.txt
+(a / and
+      :op1 (s2 / shift-01
+            :ARG1 (a2 / and
+                  :op1 (t / team
+                        :mod (c5 / country :name (n2 / name :op1 "China"))
+                        :mod (g2 / game :name (n5 / name :op1 "Go")))
+                  :op2 (t2 / team
+                        :mod (c6 / country :name (n / name :op1 "Korea"))
+                        :mod g2))
+            :ARG2 (c7 / city :name (n3 / name :op1 "Seoul"))
+            :time (d3 / date-entity :month 9 :day 1))
+      :op2 (c / compete-01
+            :ARG0 t
+            :ARG1 t2
+            :ord (o / ordinal-entity :value 2)
+            :location (h2 / hotel :name (n4 / name :op1 "Le" :op2 "Tian" :op3 "Hotel"))
+            :time (d4 / date-entity :day 2)))
+
+# ::id nw.chtb_0322.17 ::date 2012-12-29T15:48:41 ::annotator SDL-AMR-09 ::preferred
+# ::snt According to the rules discussed and agreed upon by both sides , if the two teams draw with 7 : 7 , then the final result will be determined by the result of the competition between Weiping Nie of the Chinese team and Xunxuan Cao of the Korean team .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0322_17.txt
+(d2 / determine-01
+      :ARG0 (t4 / thing
+            :ARG2-of (r3 / result-01
+                  :ARG1 (c4 / compete-01
+                        :ARG0 (p3 / person :name (n / name :op1 "Weiping" :op2 "Nie")
+                              :part-of (t / team
+                                    :mod (c5 / country :name (n2 / name :op1 "China"))))
+                        :ARG1 (p4 / person :name (n3 / name :op1 "XunXuan" :op2 "Cao")
+                              :part-of (t2 / team
+                                    :mod (c6 / country :name (n4 / name :op1 "Korea")))))))
+      :ARG1 (r2 / result-01
+            :mod (f / final))
+      :condition (d3 / draw-00
+            :ARG0 t
+            :ARG1 t2
+            :quant (s / score-entity :op1 7 :op2 7))
+      :ARG1-of (c / conform-01
+            :ARG2 (r / rule
+                  :ARG1-of (d / discuss-01
+                        :ARG0 (s2 / side
+                              :mod (b / both)))
+                  :ARG1-of (a / agree-01
+                        :ARG0 s2))))
+
+# ::id nw.chtb_0322.18 ::date 2012-12-29T15:57:24 ::annotator SDL-AMR-09 ::preferred
+# ::snt The prize money of the competition this time is 100,000 US dollars , the team that wins will get 70,000 US dollars , while the team that loses will get 30,000 US dollars .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0322_18.txt
+(m / multi-sentence
+      :snt1 (m4 / monetary-quantity :quant 100000
+            :unit (d4 / dollar
+                  :mod (c4 / country :name (n4 / name :op1 "United" :op2 "States")))
+            :domain (m5 / money
+                  :mod (p / prize)
+                  :poss (c / compete-01))
+            :time (t / time
+                  :mod (t2 / this)))
+      :snt2 (a / and
+            :op1 (g / get-01
+                  :ARG0 (t3 / team
+                        :ARG0-of (w / win-01))
+                  :ARG1 (m6 / monetary-quantity :quant 70000
+                        :unit (d / dollar
+                              :mod c4)))
+            :op2 (g2 / get-01
+                  :ARG0 (t4 / team
+                        :ARG0-of (l / lose-03))
+                  :ARG1 (m7 / monetary-quantity :quant 30000
+                        :unit (d2 / dollar
+                              :mod c4)))))
+
+# ::id nw.chtb_0322.19 ::date 2012-12-29T16:02:12 ::annotator SDL-AMR-09 ::preferred
+# ::snt ( End )
+# ::save-date Sat Dec 29, 2012 ::file nw_chtb_0322_19.txt
+(e / end-01)
+
+# ::id nw.chtb_0324.1 ::date 2012-12-29T16:02:23 ::annotator SDL-AMR-09 ::preferred
+# ::snt Xinhua News Agency , Rome , September 1st , by reporters Aiguo Yang and Changrui Huang
+# ::save-date Tue Dec 17, 2013 ::file nw_chtb_0324_1.txt
+(b / byline-91
+      :ARG0 (p / publication :name (n / name :op1 "Xinhua" :op2 "News" :op3 "Agency"))
+      :ARG1 (a2 / and
+            :op1 (p3 / person :name (n2 / name :op1 "Aiguo" :op2 "Yang"))
+            :op2 (p4 / person :name (n3 / name :op1 "Changrui" :op2 "Huang"))
+            :ARG0-of (r2 / report-01))
+      :location (c4 / city :name (n4 / name :op1 "Rome"))
+      :time (d2 / date-entity :month 9 :day 1))
+
+# ::id nw.chtb_0324.2 ::date 2012-12-29T16:03:28 ::annotator SDL-AMR-09 ::preferred
+# ::snt The 1 - meter diving board preliminaries of the Seventh World Swimming Championship were held here this morning .
+# ::save-date Tue Dec 17, 2013 ::file nw_chtb_0324_2.txt
+(h / hold-04
+      :ARG0 (p / preliminary
+            :subevent-of (g / game :name (n / name :op1 "Seventh" :op2 "World" :op3 "Swimming" :op4 "Championship"))
+            :topic (b / board
+                  :mod (d3 / distance-quantity :quant 1
+                        :unit (m2 / meter))
+                  :instrument-of (d2 / dive-01)))
+      :location (h2 / here)
+      :time (m3 / morning
+            :mod (t / this)))
+
+# ::id nw.chtb_0324.3 ::date 2012-12-29T16:06:17 ::annotator SDL-AMR-09 ::preferred
+# ::snt Chinese competitor Lan Wei and Sheng Chen both received qualification for the semi-finals .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0324_3.txt
+(q / qualify-02
+      :ARG1 (a / and
+            :op1 (p3 / person :name (n / name :op1 "Lan" :op2 "Wei"))
+            :op2 (p4 / person :name (n2 / name :op1 "Sheng" :op2 "Chen"))
+            :ARG0-of (c3 / compete-01)
+            :mod (c4 / country :name (n3 / name :op1 "China")))
+      :ARG2 (f / final
+            :mod (s2 / semi)))
+
+# ::id nw.chtb_0324.4 ::date 2012-12-29T16:08:05 ::annotator SDL-AMR-09 ::preferred
+# ::snt In the preliminaries , Wei Lan , who is 26 years old this year , from Guangdong , with outstanding skill , occupied the lead position with a total score of 355.35 points .
+# ::save-date Tue Jan 21, 2014 ::file nw_chtb_0324_4.txt
+(o / occupy-01
+      :ARG0 (p2 / person :name (n / name :op1 "Wei" :op2 "Lan")
+            :source (p / province :name (n2 / name :op1 "Guangdong"))
+            :prep-with (s / skill
+                  :ARG1-of (s3 / stand-06))
+            :ARG1-of (a / age-01
+                  :ARG2 (t / temporal-quantity :quant 26
+                        :unit (y / year))
+                  :time (y2 / year
+                        :mod (t3 / this))))
+      :ARG1 (p3 / position
+            :mod (l / lead-01))
+      :ARG2 (s2 / score-01
+            :ARG0 p2
+            :ARG1 (p4 / point :quant 355.35)
+            :mod (t2 / total))
+      :location (p5 / preliminary))
+
+# ::id nw.chtb_0324.5 ::date 2012-12-29T20:57:29 ::annotator SDL-AMR-09 ::preferred
+# ::snt Sheng Chen , who is 19 years old this year , from Hubei , is temporarily in the sixth position , the a total score of 342.60 points .
+# ::save-date Thu Jan 23, 2014 ::file nw_chtb_0324_5.txt
+(p / position-01
+      :ARG1 (p3 / person :name (n / name :op1 "Sheng" :op2 "Chen")
+            :source (p4 / province :name (n2 / name :op1 "Hubei"))
+            :ARG0-of (s2 / score-01
+                  :ARG1 (p2 / point :quant 342.60)
+                  :mod (t3 / total))
+            :ARG1-of (a / age-01
+                  :ARG2 (t / temporal-quantity :quant 19
+                        :unit (y / year))
+                  :time (y2 / year
+                        :mod (t4 / this))))
+      :ord (o / ordinal-entity :value 6)
+      :duration (t2 / temporary))
+
+# ::id nw.chtb_0324.6 ::date 2012-12-29T21:28:53 ::annotator SDL-AMR-09 ::preferred
+# ::snt The competitor who is temporarily in second place is the German athlete Bao Lizuo , with a total score of 355.02 points , slightly lower than Wei Lan .
+# ::save-date Sun Jan 12, 2014 ::file nw_chtb_0324_6.txt
+(p / person
+      :ARG0-of (c2 / compete-01)
+      :ARG1-of (p2 / place-01
+            :ord (o / ordinal-entity :value 2)
+            :duration (t / temporary))
+      :domain (a / athlete :name (n / name :op1 "Bao" :op2 "Lizuo")
+            :mod (c3 / country :name (n2 / name :op1 "Germany"))
+            :ARG0-of (s / score-01
+                  :ARG1 (p4 / point
+                        :mod (l / low
+                              :degree (m / more
+                                    :degree (s2 / slight))
+                              :compared-to (p5 / person :name (n3 / name :op1 "Wei" :op2 "Lan")))
+                        :quant (x / 355.02
+                              :ARG2-of (t2 / total-01
+                                    :ARG1 p4))))))
+
+# ::id nw.chtb_0324.7 ::date 2012-12-29T21:31:27 ::annotator SDL-AMR-09 ::preferred
+# ::snt The competitor from Zimbabwe , Si Aiwan , who is temporarily in third place , has a total score of 354.39 points .
+# ::save-date Sun Jan 12, 2014 ::file nw_chtb_0324_7.txt
+(s / score-01
+      :ARG0 (p3 / person :name (n / name :op1 "Si" :op2 "Aiwan")
+            :ARG0-of (c2 / compete-01)
+            :source (c3 / country :name (n2 / name :op1 "Zimbabwe"))
+            :ARG1-of (p / place-01
+                  :ord (o / ordinal-entity :value 3)
+                  :duration (t / temporary)))
+      :ARG1 (p4 / point
+            :quant (x / 354.39
+                  :ARG2-of (t2 / total-01
+                        :ARG1 p4))))
+
+# ::id nw.chtb_0324.8 ::date 2012-12-29T21:37:02 ::annotator SDL-AMR-09 ::preferred
+# ::snt After the competition , the chief coach of the Chinese diving team said to our agency 's reporter : " Sheng Chen is a little nervous today . "
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0324_8.txt
+(s2 / say-01
+      :ARG0 (p2 / person
+            :ARG0-of (c3 / coach-01
+                  :ARG1 (t / team
+                        :ARG0-of (d / dive-01)
+                        :mod (c4 / country :name (n / name :op1 "China")))
+                  :mod (c5 / chief)))
+      :ARG1 (n2 / nervous-41
+            :ARG1 (p4 / person :name (n3 / name :op1 "Sheng" :op2 "Chen"))
+            :degree (l / little)
+            :time (t2 / today))
+      :ARG2 (p3 / person
+            :ARG0-of (h / have-org-role-91
+                  :ARG1 (a / agency
+                        :poss (w / we))
+                  :ARG3 (r / report-01)))
+      :time (a2 / after
+            :op1 (c / compete-01)))
+
+# ::id nw.chtb_0324.9 ::date 2012-12-29T21:40:46 ::annotator SDL-AMR-09 ::preferred
+# ::snt He also said : " Our athletes are not very used to carrying out competition under strong sunlight . "
+# ::save-date Tue Dec 17, 2013 ::file nw_chtb_0324_9.txt
+(s / say-01
+      :ARG0 (h / he)
+      :ARG1 (u2 / use-02 :polarity -
+            :ARG0 (a2 / athlete
+                  :poss (w / we))
+            :ARG1 (c2 / compete-01
+                  :ARG0 a2
+                  :location (u / under
+                        :op1 (s2 / sunlight
+                              :mod (s3 / strong))))
+            :degree (v / very))
+      :mod (a3 / also))
+
+# ::id nw.chtb_0324.10 ::date 2012-12-29T21:48:54 ::annotator SDL-AMR-09 ::preferred
+# ::snt At home , they carry out indoor training mostly .
+# ::save-date Sun Dec 22, 2013 ::file nw_chtb_0324_10.txt
+(t2 / train-01
+      :ARG2 (t / they)
+      :location (i / indoor)
+      :degree (m / most)
+      :location (h / home))
+
+# ::id nw.chtb_0324.11 ::date 2012-12-29T21:49:56 ::annotator SDL-AMR-09 ::preferred
+# ::snt Looks like we still need to train more outdoors . "
+# ::save-date Tue Dec 17, 2013 ::file nw_chtb_0324_11.txt
+(l / look-02
+      :ARG1 (n / need-01
+            :ARG0 (w / we)
+            :ARG1 (t / train-01
+                  :ARG0 w
+                  :ARG2 w
+                  :quant (m / more)
+                  :location (o / outdoor))
+            :mod (s / still)))
+
+# ::id nw.chtb_0324.12 ::date 2012-12-29T21:52:11 ::annotator SDL-AMR-09 ::preferred
+# ::snt He felt that , there were more new competitors from our country participating in this competition .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0324_12.txt
+(f / feel-02
+      :ARG0 (h / he)
+      :ARG1 (p / person
+            :quant (m / more)
+            :ARG0-of (c / compete-01)
+            :mod (n / new)
+            :source (c2 / country
+                  :poss (w / we))
+            :ARG0-of (p2 / participate-01
+                  :ARG1 (c3 / compete-01
+                        :mod (t / this)))))
+
+# ::id nw.chtb_0324.13 ::date 2012-12-29T21:54:03 ::annotator SDL-AMR-09 ::preferred
+# ::snt They still lack experience in international competitions .
+# ::save-date Tue Dec 17, 2013 ::file nw_chtb_0324_13.txt
+(l / lack-01
+      :ARG0 (t / they)
+      :ARG1 (e / experience-01
+            :ARG0 t
+            :ARG1 (c / compete-01
+                  :mod (i / international)))
+      :time (s / still))
+
+# ::id nw.chtb_0324.14 ::date 2012-12-29T21:55:31 ::annotator SDL-AMR-09 ::preferred
+# ::snt The preliminary competition for the women 's 10 - meter platform diving will be held this afternoon .
+# ::save-date Tue Dec 17, 2013 ::file nw_chtb_0324_14.txt
+(h / hold-04
+      :ARG1 (c / compete-01
+            :mod (p / preliminary)
+            :mod (d2 / dive-01
+                  :ARG0 (w / woman)
+                  :mod (p2 / platform
+                        :mod (d3 / distance-quantity :quant 10
+                              :unit (m2 / meter)))))
+      :time (a / afternoon
+            :mod (t / this)))
+
+# ::id nw.chtb_0324.15 ::date 2012-12-29T21:56:59 ::annotator SDL-AMR-09 ::preferred
+# ::snt Mingxia Fu , who won the championship for our country at the World Championship and the Olympic Games , and the competitor from Hebei , Bin Chi , who won the championship at the World Cup will participate in the competition .
+# ::save-date Thu Jan 23, 2014 ::file nw_chtb_0324_15.txt
+(p / participate-01
+      :ARG0 (a / and
+            :op1 (p4 / person :name (n / name :op1 "Mingxia" :op2 "Fu")
+                  :ARG0-of (w3 / win-01
+                        :ARG1 (c / championship)
+                        :beneficiary (c2 / country
+                              :poss (w4 / we))
+                        :location (g2 / game :name (n2 / name :op1 "World" :op2 "Championship"))
+                        :location (g3 / game :name (n3 / name :op1 "Olympic" :op2 "Games"))))
+            :op2 (p5 / person :name (n4 / name :op1 "Bin" :op2 "Chi")
+                  :ARG0-of (c3 / compete-01)
+                  :source (p2 / province :name (n5 / name :op1 "Hebei"))
+                  :ARG0-of (w5 / win-01
+                        :ARG1 (c4 / championship)
+                        :location (g4 / game :name (n6 / name :op1 "World" :op2 "Cup")))))
+      :ARG1 (c5 / compete-01))
+
+# ::id nw.chtb_0324.16 ::date 2012-12-29T22:03:54 ::annotator SDL-AMR-09 ::preferred
+# ::snt ( End )
+# ::save-date Sat Dec 29, 2012 ::file nw_chtb_0324_16.txt
+(e / end-01)
+
+# ::id nw.chtb_0325.1 ::date 2012-12-29T22:04:07 ::annotator SDL-AMR-09 ::preferred
+# ::snt Xinhua News Agency , Rome , September 1st , by reporters Changrui Huang and Aiguo Yang
+# ::save-date Tue Dec 17, 2013 ::file nw_chtb_0325_1.txt
+(b / byline-91
+      :ARG0 (p / publication :name (n / name :op1 "Xinhua" :op2 "News" :op3 "Agency"))
+      :ARG1 (a2 / and
+            :op1 (p3 / person :name (n2 / name :op1 "Changrui" :op2 "Huang")
+                  :ARG0-of (r2 / report-01))
+            :op2 (p4 / person :name (n3 / name :op1 "Aiguo" :op2 "Yang")
+                  :ARG0-of r2))
+      :time (d2 / date-entity :month 9 :day 1)
+      :location (c4 / city :name (n4 / name :op1 "Rome")))
+
+# ::id nw.chtb_0325.2 ::date 2012-12-29T22:05:02 ::annotator SDL-AMR-09 ::preferred
+# ::snt The performance of the female competitors of the Chinese diving team , Mingxia Fu and Bin Chi , in the first 6 rounds of the 10 - meter platform diving preliminary competition at the Seventh World Swimming Championships held here today was ideal , and hopes of entering the heats are in sight .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0325_2.txt
+(a / and
+      :op1 (i / ideal
+            :domain (p3 / perform-01
+                  :ARG0 (a2 / and
+                        :op1 (p4 / person :name (n / name :op1 "Mingxia" :op2 "Fu"))
+                        :op2 (p5 / person :name (n2 / name :op1 "Bin" :op2 "Chi"))
+                        :ARG0-of (c3 / compete-01)
+                        :mod (f / female)
+                        :part-of (t / team
+                              :mod (c4 / country :name (n3 / name :op1 "China"))
+                              :ARG0-of (d2 / dive-01)))
+                  :time (r / round :quant 6
+                        :part-of (c / compete-01
+                              :mod (p6 / preliminary)
+                              :mod (d3 / dive-01
+                                    :mod (p7 / platform
+                                          :mod (d4 / distance-quantity :quant 10
+                                                :unit (m3 / meter))))
+                              :subevent-of (g / game :name (n4 / name :op1 "Seventh" :op2 "World" :op3 "Swimming" :op4 "Championships"))
+                              :ARG1-of (h / hold-04
+                                    :location (h2 / here)
+                                    :time (t2 / today)))
+                        :ord (o / ordinal-entity :value 1))))
+      :op2 (i2 / in-sight
+            :domain (h3 / hope-01
+                  :ARG1 (e2 / enter-01
+                        :ARG0 a2
+                        :ARG1 (h4 / heat)))))
+
+# ::id nw.chtb_0325.3 ::date 2012-12-29T22:20:01 ::annotator SDL-AMR-09 ::preferred
+# ::snt At the time this reporter dispatched , in the first 6 rounds of competition , Mingxia Fu and Bin Chi are temporarily occupying the first and third positions with total scores of 339.12 and 290.19 points respectively .
+# ::save-date Sun Jan 12, 2014 ::file nw_chtb_0325_3.txt
+(a / and
+      :op1 (o / occupy-01
+            :ARG0 (p3 / person :name (n / name :op1 "Mingxia" :op2 "Fu"))
+            :ARG1 (p4 / position
+                  :ord (o3 / ordinal-entity :value 1))
+            :ARG2 (s / score-01
+                  :ARG0 p3
+                  :ARG1 (p5 / point
+                        :quant (x / 339.12
+                              :ARG2-of (t / total-01
+                                    :ARG1 p5)))))
+      :op2 (o2 / occupy-01
+            :ARG0 (p6 / person :name (n2 / name :op1 "Bin" :op2 "Chi"))
+            :ARG1 (p7 / position
+                  :ord (o4 / ordinal-entity :value 3))
+            :ARG2 (s2 / score-01
+                  :ARG0 p6
+                  :ARG1 (p8 / point :quant 290.19)
+                  :mod t))
+      :mod (r / respective)
+      :duration (t3 / temporary)
+      :time (d / dispatch-01
+            :ARG0 (p9 / person
+                  :ARG0-of (r2 / report-01)
+                  :mod (t2 / this)))
+      :time (r3 / round :quant 6
+            :part-of (c / compete-01)
+            :ord (o5 / ordinal-entity :value 1)))
+
+# ::id nw.chtb_0325.4 ::date 2012-12-29T22:23:53 ::annotator SDL-AMR-09 ::preferred
+# ::snt If accidents do not occur , their hopes of entering the heats are already in sight .
+# ::save-date Mon Jan 27, 2014 ::file nw_chtb_0325_4.txt
+(i / in-sight
+      :domain (h / hope-01
+            :ARG0 (t / they)
+            :ARG1 (e / enter-01
+                  :ARG0 t
+                  :ARG1 (h2 / heat)))
+      :time (a / already)
+      :condition (a2 / accident :polarity -))
+
+# ::id nw.chtb_0325.5 ::date 2012-12-29T22:31:52 ::annotator SDL-AMR-09 ::preferred
+# ::snt Occupying the second position is the US competitor , Richard .
+# ::save-date Tue Dec 17, 2013 ::file nw_chtb_0325_5.txt
+(o / occupy-01
+      :ARG0 (p2 / person :name (n / name :op1 "Richard")
+            :mod (c2 / country :name (n2 / name :op1 "United" :op2 "States"))
+            :ARG0-of (c3 / compete-01))
+      :ARG1 (p3 / position
+            :ord (o2 / ordinal-entity :value 2)))
+
+# ::id nw.chtb_0325.6 ::date 2012-12-29T22:32:54 ::annotator SDL-AMR-09 ::preferred
+# ::snt Her performance was 303.00 points .
+# ::save-date Tue Dec 17, 2013 ::file nw_chtb_0325_6.txt
+(p2 / point :quant 303.00
+      :domain (p / perform-01
+            :ARG0 (s / she)))
+
+# ::id nw.chtb_0325.7 ::date 2012-12-29T22:33:34 ::annotator SDL-AMR-09 ::preferred
+# ::snt In the preliminary men 's 1 - meter platform diving competition this morning , our competitors Lan Wei and Sheng Chen have already gained rights to the heats .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0325_7.txt
+(g / gain-02
+      :ARG0 (a / and
+            :op1 (p3 / person :name (n / name :op1 "Lan" :op2 "Wei"))
+            :op2 (p4 / person :name (n2 / name :op1 "Sheng" :op2 "Chen"))
+            :ARG0-of (c / compete-01
+                  :ARG1 (w / we)))
+      :ARG1 (e / entitle-01
+            :ARG1 (h / heat)
+            :ARG2 a)
+      :time (c2 / compete-01
+            :mod (p5 / preliminary)
+            :mod (d2 / dive-01
+                  :ARG0 (m2 / man)
+                  :mod (p6 / platform
+                        :mod (d3 / distance-quantity :quant 1
+                              :unit (m3 / meter)))))
+      :time (m4 / morning
+            :mod (t / this))
+      :time (a2 / already))
+
+# ::id nw.chtb_0325.8 ::date 2012-12-29T22:42:24 ::annotator SDL-AMR-09 ::preferred
+# ::snt The results of today 's preliminary women 's water - polo competition are : the Hungarian team defeated the Canadian team by 13 : 7 , the French team defeated the Brazilian team by 10 : 9 , the Australian team defeated the German team by 10 : 8 , the Russian team defeated the Dutch team by 7 : 6 , the US team defeated the Kazakhstani team by 10 : 5 , and the Italian team defeated the New Zealand team by 12 : 2 .
+# ::save-date Tue Dec 17, 2013 ::file nw_chtb_0325_8.txt
+(r2 / result-01
+      :ARG1 (c13 / compete-01
+            :ARG0 (w / woman)
+            :mod (p / preliminary)
+            :time (t / today)
+            :mod (p14 / polo
+                  :mod (w2 / water)))
+      :ARG2 (a2 / and
+            :op1 (d / defeat-01
+                  :ARG0 (t2 / team
+                        :mod (c14 / country :name (n5 / name :op1 "Hungary")))
+                  :ARG1 (t3 / team
+                        :mod (c15 / country :name (n6 / name :op1 "Canada")))
+                  :quant (s / score-entity :op1 13 :op2 7))
+            :op2 (d2 / defeat-01
+                  :ARG0 (t4 / team
+                        :mod (c16 / country :name (n7 / name :op1 "France")))
+                  :ARG1 (t5 / team
+                        :mod (c17 / country :name (n8 / name :op1 "Brazil")))
+                  :quant (s2 / score-entity :op1 10 :op2 9))
+            :op3 (d3 / defeat-01
+                  :ARG0 (t6 / team
+                        :mod (c18 / country :name (n9 / name :op1 "Australia")))
+                  :ARG1 (t7 / team
+                        :mod (c19 / country :name (n10 / name :op1 "Germany")))
+                  :quant (s3 / score-entity :op1 10 :op2 8))
+            :op4 (d4 / defeat-01
+                  :ARG0 (t8 / team
+                        :mod (c20 / country :name (n11 / name :op1 "Russia")))
+                  :ARG1 (t9 / team
+                        :mod (c21 / country :name (n12 / name :op1 "Netherlands")))
+                  :quant (s4 / score-entity :op1 7 :op2 6))
+            :op5 (d5 / defeat-01
+                  :ARG0 (t10 / team
+                        :mod (c22 / country :name (n13 / name :op1 "United" :op2 "States")))
+                  :ARG1 (t11 / team
+                        :mod (c23 / country :name (n14 / name :op1 "Kazakhstan")))
+                  :quant (s5 / score-entity :op1 10 :op2 5))
+            :op6 (d6 / defeat-01
+                  :ARG0 (t12 / team
+                        :mod (c24 / country :name (n15 / name :op1 "Italy")))
+                  :ARG1 (t13 / team
+                        :mod (c25 / country :name (n16 / name :op1 "New" :op2 "Zealand")))
+                  :quant (s6 / score-entity :op1 12 :op2 2))))
+
+# ::id nw.chtb_0325.9 ::date 2012-12-29T22:52:27 ::annotator SDL-AMR-09 ::preferred
+# ::snt There are 12 teams totally participating in the competition .
+# ::save-date Sun Jan 12, 2014 ::file nw_chtb_0325_9.txt
+(p / participate-01
+      :ARG0 (t / team
+            :quant (x / 12
+                  :ARG2-of (t2 / total-01
+                        :ARG1 t)))
+      :ARG1 (c / compete-01))
+
+# ::id nw.chtb_0325.10 ::date 2012-12-29T22:53:20 ::annotator SDL-AMR-09 ::preferred
+# ::snt ( End )
+# ::save-date Sat Dec 29, 2012 ::file nw_chtb_0325_10.txt
+(e / end-01)

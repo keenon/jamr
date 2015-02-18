@@ -160,6 +160,7 @@ public class AMRPipeline {
                     IndexedWord indexedWord = graph.getNodeByIndexSafe(pair.second + 1);
                     if (indexedWord == null) return "NON-DEP";
                     List<IndexedWord> l = graph.getPathToRoot(indexedWord);
+                    if (l == null) return "NO-PATH";
                     if (l.size() > 0) {
                         return l.get(0).word();
                     }
@@ -172,6 +173,7 @@ public class AMRPipeline {
                     IndexedWord indexedWord = graph.getNodeByIndexSafe(pair.second + 1);
                     if (indexedWord == null) return "NON-DEP";
                     List<IndexedWord> l = graph.getPathToRoot(indexedWord);
+                    if (l == null) return "NO-PATH";
                     if (l.size() > 0) {
                         return l.get(0).get(CoreAnnotations.PartOfSpeechAnnotation.class);
                     }
@@ -884,6 +886,38 @@ public class AMRPipeline {
         List<AMR> gen = new ArrayList<>();
         Set<Integer> blocked = new HashSet<>();
 
+        // Special case code to handle things like: 2008-01-03
+        if (tokens.length == 1) {
+            String token = tokens[0];
+            Pattern p = Pattern.compile("[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]");
+            if (p.matcher(token).matches()) {
+                String[] parts = token.split("-");
+                int year = Integer.parseInt(parts[0]);
+                int month = Integer.parseInt(parts[1]);
+                int day = Integer.parseInt(parts[2]);
+                AMR result = new AMR();
+                result.sourceText = tokens;
+
+                /*
+                (d / date-entity [0 = "2008-02-15"]
+                    :year 2008 [0 = "2008-02-15"]
+                    :month 2 [0 = "2008-02-15"]
+                    :day 15 [0 = "2008-02-15"])
+                 */
+
+                AMR.Node root = result.addNode("d", "date-entity", 0);
+                AMR.Node yearN = result.addNode(""+year, AMR.NodeType.VALUE);
+                AMR.Node monthN = result.addNode(""+month, AMR.NodeType.VALUE);
+                AMR.Node dayN = result.addNode(""+day, AMR.NodeType.VALUE);
+                result.addArc(root, yearN, "year");
+                result.addArc(root, monthN, "month");
+                result.addArc(root, dayN, "day");
+                gen.add(result);
+                blocked.add(0);
+                return gen;
+            }
+        }
+
         LabeledSequence labeledSequence = new LabeledSequence();
         labeledSequence.tokens = tokens;
         labeledSequence.annotation = annotation;
@@ -947,9 +981,11 @@ public class AMRPipeline {
                 if (!lastNerTag.equals("O")) {
                     AMR attempt = constructNERCluster(annotation, nerSpan, lastNerTag, false);
                     if (attempt != null) {
+                        /*
                         System.out.println("Generated a cluster from a formula!");
                         System.out.println("\""+getSequentialTokens(annotation, nerSpan)+"\"");
                         System.out.println(attempt.toString(AMR.AlignmentPrinting.ALL));
+                        */
                         gen.add(attempt);
                         blocked.addAll(nerSpan);
                     }
@@ -961,6 +997,7 @@ public class AMRPipeline {
             }
             lastNerTag = nerTag;
         }
+
 
         // Add all the dict elements
 
@@ -1315,36 +1352,6 @@ public class AMRPipeline {
     }
 
     public AMR runPipeline(String[] tokens, Annotation annotation) {
-        // Special case code to handle things like: 2008-01-03
-        if (tokens.length == 1) {
-            String token = tokens[0];
-            Pattern p = Pattern.compile("[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]");
-            if (p.matcher(token).matches()) {
-                String[] parts = token.split("-");
-                int year = Integer.parseInt(parts[0]);
-                int month = Integer.parseInt(parts[1]);
-                int day = Integer.parseInt(parts[2]);
-                AMR result = new AMR();
-                result.sourceText = tokens;
-
-                /*
-                (d / date-entity [0 = "2008-02-15"]
-                    :year 2008 [0 = "2008-02-15"]
-                    :month 2 [0 = "2008-02-15"]
-                    :day 15 [0 = "2008-02-15"])
-                 */
-
-                AMR.Node root = result.addNode("d", "date-entity", 0);
-                AMR.Node yearN = result.addNode(""+year, AMR.NodeType.VALUE);
-                AMR.Node monthN = result.addNode(""+month, AMR.NodeType.VALUE);
-                AMR.Node dayN = result.addNode(""+day, AMR.NodeType.VALUE);
-                result.addArc(root, yearN, "year");
-                result.addArc(root, monthN, "month");
-                result.addArc(root, dayN, "day");
-                return result;
-            }
-        }
-
         AMRNodeSet nodeSet = new AMRNodeSet();
         nodeSet.annotation = annotation;
         nodeSet.tokens = tokens;

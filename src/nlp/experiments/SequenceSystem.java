@@ -30,7 +30,12 @@ public class SequenceSystem {
 
     public static void main(String[] args) {
         SequenceSystem system = new SequenceSystem();
+        System.out.println("China will sign a treaty with America on Friday June 3");
         System.out.println(system.getSpans("China will sign a treaty with America on Friday June 3").toString());
+        System.out.println("2009-01-02");
+        System.out.println(system.getSpans("2009-01-02").toString());
+        System.out.println("I want to start dating other people and my son's father says if I do he will have nothing to do with his son.");
+        System.out.println(system.getSpans("I want to start dating other people and my son's father says if I do he will have nothing to do with his son.").toString());
     }
 
     public SequenceSystem() {
@@ -49,7 +54,8 @@ public class SequenceSystem {
             List<LabeledSequence> nerPlusPlusData = AMRPipeline.loadSequenceData(dataPath);
             if (DEBUG) System.out.println("Generating NER++ training data");
             List<Pair<Pair<LabeledSequence,Integer>,String>> nerPlusPlusForClassifier = AMRPipeline.getNERPlusPlusForClassifier(nerPlusPlusData);
-            pipeline.nerPlusPlus.sigma = 0.5;
+            // pipeline.nerPlusPlus.sigma = 0.5;
+            pipeline.nerPlusPlus.sigma = 1.0;
             if (DEBUG) System.out.println("Training NER++ classifier");
             pipeline.nerPlusPlus.train(nerPlusPlusForClassifier);
             if (DEBUG) System.out.println("Saving NER++ classifier");
@@ -86,8 +92,8 @@ public class SequenceSystem {
     public void trainSystems() throws IOException, ClassNotFoundException {
         boolean trainOnSmallerSet = false;
 
-        getNERSystemForData(trainOnSmallerSet ? "data/train-400-seq.txt" : "data/release-train-seq.txt");
-        getManygenSystemForData("data/train-manygen.txt");
+        getNERSystemForData(trainOnSmallerSet ? "data/train-400-seq.txt" : "data/deft-train-seq.txt");
+        getManygenSystemForData("data/deft-train-manygen.txt");
     }
 
     StanfordCoreNLP cachedCore = null;
@@ -165,6 +171,7 @@ public class SequenceSystem {
                 if (node.alignment > maxAlignment) maxAlignment = node.alignment;
             }
             String amrText = cluster.toStringForSmatch();
+            amrText = amrText.replaceAll("op[1-9]","op");
             spans.add(new Triple<>(minAlignment, maxAlignment, amrText));
         }
 

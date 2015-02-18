@@ -69,10 +69,11 @@ public class DumpSequence {
     }
 
     public static void dumpReleaseData() throws IOException {
-        AMR[] train = AMRSlurp.slurp("realdata/amr-release-1.0-training-proxy.txt", AMRSlurp.Format.LDC);
+        AMR[] train = AMRSlurp.slurp("data/deft-amr-release-r3-proxy-train.txt", AMRSlurp.Format.LDC);
         EasyFirstAligner.align(train);
-        dumpCONLL(train, "realdata/release-train-conll.txt");
-        dumpSequences(train, "realdata/release-train-seq.txt");
+        dumpCONLL(train, "data/deft-train-conll.txt");
+        dumpSequences(train, "data/deft-train-seq.txt");
+        dumpManygenDictionaries(train, "data/deft-train-manygen.txt");
     }
 
     public static void dumpTestData() throws IOException {

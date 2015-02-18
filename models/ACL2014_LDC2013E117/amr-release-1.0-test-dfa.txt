@@ -1,0 +1,4482 @@
+# AMR release; corpus: dfa; section: test; number of AMRs: 229 (generated on Mon Jan 27, 2014 at 20:44:07)
+
+# ::id DF-199-194215-653_0484.1 ::date 2013-08-30T09:02:09 ::annotator SDL-AMR-09 ::preferred
+# ::snt I am 24 and a mother of a 2 and a half year old.
+# ::save-date Wed Sep 18, 2013 ::file DF-199-194215-653_0484_1.txt
+(a / and
+      :op1 (a2 / age-01
+            :ARG1 (i / i)
+            :ARG2 (t / temporal-quantity :quant 24
+                  :unit (y2 / year)))
+      :op2 (m / mother
+            :mod i
+            :poss (p / person
+                  :ARG1-of (a3 / age-01
+                        :ARG2 (t3 / temporal-quantity :quant 2.5
+                              :unit (y / year))))))
+
+# ::id DF-199-194215-653_0484.2 ::date 2013-09-01T11:08:33 ::annotator SDL-AMR-09 ::preferred
+# ::snt Me and my son's father have been broken up since August.
+# ::save-date Sun Sep 1, 2013 ::file DF-199-194215-653_0484_2.txt
+(b / break-16
+      :ARG0 (i / i)
+      :ARG1 (f / father
+            :poss (s / son
+                  :poss i))
+      :duration (s2 / since
+            :op1 (d / date-entity :month 8)))
+
+# ::id DF-199-194215-653_0484.3 ::date 2013-09-01T11:21:12 ::annotator SDL-AMR-09 ::preferred
+# ::snt I want to start dating other people and my son's father says if I do he will have nothing to do with his son.
+# ::save-date Sun Sep 8, 2013 ::file DF-199-194215-653_0484_3.txt
+(a / and
+      :op1 (w / want-01
+            :ARG0 (i / i)
+            :ARG1 (s2 / start-01
+                  :ARG0 i
+                  :ARG1 (d / date-02
+                        :ARG0 i
+                        :ARG1 (p / person
+                              :mod (o / other)))))
+      :op2 (s / say-01
+            :ARG0 (f / father
+                  :poss (s3 / son
+                        :poss i))
+            :ARG1 (d2 / do-04
+                  :ARG0 f
+                  :ARG1 (s4 / son
+                        :poss f)
+                  :ARG2 (n / nothing)
+                  :condition d)))
+
+# ::id DF-199-194215-653_0484.4 ::date 2013-09-01T11:27:54 ::annotator SDL-AMR-09 ::preferred
+# ::snt He is very possesive and controlling but he has no right to be as we are not together.
+# ::save-date Sun Sep 8, 2013 ::file DF-199-194215-653_0484_4.txt
+(c / contrast-01
+      :ARG1 (a / and
+            :op1 (p / possessive
+                  :domain (h2 / he)
+                  :degree (v2 / very))
+            :op2 (c3 / controlling
+                  :domain h2
+                  :degree (v / very)))
+      :ARG2 (e / entitle-01 :polarity -
+            :ARG1 a
+            :ARG2 h2
+            :ARG1-of (c2 / cause-01
+                  :ARG0 (t / together
+                        :domain (w / we)))))
+
+# ::id DF-199-194215-653_0484.5 ::date 2013-09-01T11:38:32 ::annotator SDL-AMR-09 ::preferred
+# ::snt He has too much going on in his life right now and he thinks we can work when I have told him several times I dont love him and he does not love me.
+# ::save-date Wed Sep 18, 2013 ::file DF-199-194215-653_0484_5.txt
+(a / and
+      :op1 (g2 / go-00
+            :ARG1 (m / much
+                  :degree (t2 / too))
+            :ARG2 (h2 / he)
+            :location (l / life
+                  :poss h2)
+            :time (n / now
+                  :mod (r / right)))
+      :op2 (t / think-01
+            :ARG0 h2
+            :ARG1 (p / possible
+                  :domain (w / work-09
+                        :ARG1 (w2 / we)))
+            :concession (t3 / tell-01
+                  :ARG0 (i / i)
+                  :ARG1 (a2 / and
+                        :op1 (l2 / love-01 :polarity -
+                              :ARG0 i
+                              :ARG1 h2)
+                        :op2 (l3 / love-01 :polarity -
+                              :ARG0 h2
+                              :ARG1 i))
+                  :ARG2 h2
+                  :frequency (s2 / several))))
+
+# ::id DF-199-194215-653_0484.6 ::date 2013-09-01T11:47:37 ::annotator SDL-AMR-09 ::preferred
+# ::snt I want him to be there for his son without needing me too.
+# ::save-date Sun Sep 15, 2013 ::file DF-199-194215-653_0484_6.txt
+(w / want-01
+      :ARG0 (i / i)
+      :ARG1 (h / he
+            :location (t / there
+                  :beneficiary (s / son
+                        :poss h)))
+      :manner (n / need-01 :polarity -
+            :ARG0 h
+            :ARG1 i
+            :mod (t2 / too)))
+
+# ::id DF-199-194215-653_0484.7 ::date 2013-09-01T11:51:09 ::annotator SDL-AMR-09 ::preferred
+# ::snt But he has no one his family and him dont get along and have their own issues.
+# ::save-date Thu Sep 19, 2013 ::file DF-199-194215-653_0484_7.txt
+(m / multi-sentence
+      :snt1 (c / contrast-01
+            :ARG2 (h / have-03
+                  :ARG0 (h2 / he)
+                  :ARG1 (n / no-one)))
+      :snt2 (a / and
+            :op1 (g / get-18 :polarity -
+                  :ARG1 (f / family
+                        :poss h3)
+                  :ARG2 (h3 / he))
+            :op2 (h4 / have-03
+                  :ARG0 (a3 / and
+                        :op1 h3
+                        :op2 f)
+                  :ARG1 (i / issue))))
+
+# ::id DF-199-194215-653_0484.8 ::date 2013-09-01T11:59:04 ::annotator SDL-AMR-09 ::preferred
+# ::snt I don't want to be miserable anymore and the longer he is around the more miserable I will be.
+# ::save-date Sun Sep 15, 2013 ::file DF-199-194215-653_0484_8.txt
+(c / contrast-01
+      :ARG1 (w / want-01 :polarity -
+            :ARG0 (i / i)
+            :ARG1 (m / miserable
+                  :domain i)
+            :time (a / anymore))
+      :ARG2 (m2 / miserable
+            :degree (m3 / more)
+            :domain i
+            :condition (b2 / be-located-at-91
+                  :ARG1 (h / he)
+                  :ARG2 (a2 / around)
+                  :time (l / long
+                        :degree (m4 / more)))))
+
+# ::id DF-199-194215-653_0484.9 ::date 2013-09-01T12:09:39 ::annotator SDL-AMR-09 ::preferred
+# ::snt I dont want him to not be there for his son as he is a good father or he at least tries.
+# ::save-date Sun Sep 15, 2013 ::file DF-199-194215-653_0484_9.txt
+(w / want-01 :polarity -
+      :ARG0 (i / i)
+      :ARG1 (h / he
+            :location (t / there :polarity -
+                  :beneficiary (s / son
+                        :poss h)))
+      :ARG1-of (c / cause-01
+            :ARG0 (o / or
+                  :op1 (f / father
+                        :mod (g / good)
+                        :domain h)
+                  :op2 (t2 / try-01
+                        :ARG0 h
+                        :ARG1 f
+                        :manner (a / at-least)))))
+
+# ::id DF-199-194215-653_0484.10 ::date 2013-09-01T12:16:09 ::annotator SDL-AMR-09 ::preferred
+# ::snt I do believe every child needs both parents weather they are together or not.
+# ::save-date Sun Sep 8, 2013 ::file DF-199-194215-653_0484_10.txt
+(b / believe-01
+      :ARG0 (i / i)
+      :ARG1 (n / need-01
+            :ARG0 (c / child
+                  :mod (e / every))
+            :ARG1 (p / parent
+                  :mod (b2 / both))
+            :concession (o / or
+                  :op1 (t / together
+                        :domain p)
+                  :op2 (t2 / together :polarity -
+                        :domain p))))
+
+# ::id DF-199-194215-653_0484.11 ::date 2013-09-01T12:20:41 ::annotator SDL-AMR-09 ::preferred
+# ::snt But he thinks if he cant have me no one can.
+# ::save-date Thu Sep 19, 2013 ::file DF-199-194215-653_0484_11.txt
+(c / contrast-01
+      :ARG2 (t / think-01
+            :ARG0 (h / he)
+            :ARG1 (p / possible
+                  :domain (h2 / have-03
+                        :ARG0 (n / no-one)
+                        :ARG1 (i / i))
+                  :condition (p2 / possible :polarity -
+                        :domain (h3 / have-03
+                              :ARG0 h
+                              :ARG1 i)))))
+
+# ::id DF-199-194215-653_0484.12 ::date 2013-09-01T12:43:39 ::annotator SDL-AMR-09 ::preferred
+# ::snt What do I do to move on with my life.
+# ::save-date Sun Sep 15, 2013 ::file DF-199-194215-653_0484_12.txt
+(d / do-02
+      :ARG0 (i / i)
+      :ARG1 (a / amr-unknown)
+      :ARG2-of (m / move-01
+            :ARG0 i
+            :topic (l / life
+                  :poss i)))
+
+# ::id DF-199-194215-653_0484.13 ::date 2013-09-01T12:47:09 ::annotator SDL-AMR-09 ::preferred
+# ::snt Your ex is threatening you using your son... bad, bad, bad.
+# ::save-date Sun Sep 8, 2013 ::file DF-199-194215-653_0484_13.txt
+(b / bad
+      :degree (v / very)
+      :domain (t / threaten-01
+            :ARG0 (e / ex
+                  :poss y)
+            :ARG2 (y / you)
+            :ARG2-of (u / use-01
+                  :ARG0 e
+                  :ARG1 (s / son
+                        :poss y))))
+
+# ::id DF-199-194215-653_0484.14 ::date 2013-09-01T12:50:57 ::annotator SDL-AMR-09 ::preferred
+# ::snt You can't give in to that or it will just escalate.
+# ::save-date Sun Sep 15, 2013 ::file DF-199-194215-653_0484_14.txt
+(o3 / obligate-01
+      :ARG1 (g2 / give-09 :polarity -
+            :ARG0 (y / you)
+            :ARG1 (t / that))
+      :ARG1-of (c2 / cause-01
+            :ARG0 (e / escalate-01
+                  :ARG1 (i / it)
+                  :mod (j / just)
+                  :condition (g3 / give-09
+                        :ARG0 y
+                        :ARG1 t))))
+
+# ::id DF-199-194215-653_0484.15 ::date 2013-09-01T12:53:22 ::annotator SDL-AMR-09 ::preferred
+# ::snt You have a right to live your own life and be happy, so don't cave to his threats.
+# ::save-date Sun Sep 8, 2013 ::file DF-199-194215-653_0484_15.txt
+(e / entitle-01
+      :ARG1 (a / and
+            :op1 (l / live-01
+                  :ARG0 y
+                  :ARG1 (l2 / life
+                        :poss y))
+            :op2 (h2 / happy
+                  :domain y))
+      :ARG2 (y / you)
+      :ARG0-of (c / cause-01
+            :ARG1 (c2 / cave-00 :polarity -
+                  :ARG0 y
+                  :ARG1 (t / threaten-01
+                        :ARG0 (h3 / he)))))
+
+# ::id DF-199-194215-653_0484.16 ::date 2013-09-01T13:01:24 ::annotator SDL-AMR-09 ::preferred
+# ::snt If he really loves his son, he'll see him regardless, but this is just a typical control method that people like him use.
+# ::save-date Sun Sep 8, 2013 ::file DF-199-194215-653_0484_16.txt
+(c / contrast-01
+      :ARG1 (s / see-01
+            :ARG0 (h / he)
+            :ARG1 s2
+            :concession (r / regardless)
+            :condition (l / love-01
+                  :ARG0 h
+                  :ARG1 (s2 / son
+                        :poss h)
+                  :manner (r2 / real)))
+      :ARG2 (m / method
+            :purpose (c2 / control-01)
+            :mod (t / typical)
+            :mod (j / just)
+            :ARG1-of (u / use-01
+                  :ARG0 (p / person
+                        :example h))
+            :domain (t2 / this)))
+
+# ::id DF-199-194215-653_0484.17 ::date 2013-09-01T18:52:10 ::annotator SDL-AMR-09 ::preferred
+# ::snt Others say things like, "I'm going to kill myself if you leave me"... get it?
+# ::save-date Mon Jan 20, 2014 ::file DF-199-194215-653_0484_17.txt
+(m / multi-sentence
+      :snt1 (s / say-01
+            :ARG0 (p / person
+                  :mod (o / other))
+            :ARG1 (t / thing
+                  :ARG1-of (r / resemble-01
+                        :ARG2 (k / kill-01
+                              :ARG0 (i2 / i)
+                              :ARG1 i2
+                              :condition (l / leave-01
+                                    :ARG0 (y2 / you)
+                                    :ARG1 i2)))))
+      :snt2 (g / get-12 :mode interrogative
+            :ARG0 (i / it)
+            :ARG1 (y / you)))
+
+# ::id DF-199-194215-653_0484.18 ::date 2013-09-01T18:57:13 ::annotator SDL-AMR-09 ::preferred
+# ::snt Date.
+# ::save-date Sun Sep 1, 2013 ::file DF-199-194215-653_0484_18.txt
+(d / date-02 :mode imperative
+      :ARG0 (y / you))
+
+# ::id DF-199-194215-653_0484.19 ::date 2013-09-01T18:57:47 ::annotator SDL-AMR-09 ::preferred
+# ::snt Meet all kinds of people.
+# ::save-date Sun Sep 1, 2013 ::file DF-199-194215-653_0484_19.txt
+(m / meet-03 :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (k / kind
+            :mod (p / person)
+            :mod (a / all)))
+
+# ::id DF-199-194215-653_0484.20 ::date 2013-09-01T18:59:42 ::annotator SDL-AMR-09 ::preferred
+# ::snt Do what you want.
+# ::save-date Sun Sep 8, 2013 ::file DF-199-194215-653_0484_20.txt
+(d / do-02 :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (t / thing
+            :ARG1-of (w / want-01
+                  :ARG0 y)))
+
+# ::id DF-199-194215-653_0484.21 ::date 2013-09-01T19:03:22 ::annotator SDL-AMR-09 ::preferred
+# ::snt If the price is, he voluntarily walks out of both of your lives, you're probably better off without him.
+# ::save-date Wed Sep 18, 2013 ::file DF-199-194215-653_0484_21.txt
+(g / good
+      :degree (m / more)
+      :domain (y / you)
+      :mod (p / probable)
+      :condition (p2 / price-01
+            :ARG2 (w / walk-01
+                  :ARG0 (h / he)
+                  :direction (o / out
+                        :op1 (l / life
+                              :poss (y2 / you
+                                    :mod (b / both))))
+                  :ARG1-of (v / volunteer-01
+                        :ARG0 (h3 / he))))
+      :prep-without (h2 / he))
+
+# ::id DF-199-194215-653_0484.22 ::date 2013-09-01T19:08:00 ::annotator SDL-AMR-09 ::preferred
+# ::snt I'd agree - one other thing it is none of his business whether you date or not.
+# ::save-date Mon Jan 20, 2014 ::file DF-199-194215-653_0484_22.txt
+(m / multi-sentence
+      :snt1 (a2 / agree-01
+            :ARG0 (i / i))
+      :snt2 (t / thing :quant 1
+            :mod (o / other)
+            :domain (b / business :polarity -
+                  :poss (h / he)
+                  :domain (o3 / or
+                        :op1 (d / date-02
+                              :ARG0 (y / you))
+                        :op2 (d2 / date-02 :polarity -
+                              :ARG0 y)))))
+
+# ::id DF-199-194215-653_0484.23 ::date 2013-09-01T19:12:03 ::annotator SDL-AMR-09 ::preferred
+# ::snt I wouldn't tell him.
+# ::save-date Sun Sep 1, 2013 ::file DF-199-194215-653_0484_23.txt
+(t / tell-01 :polarity -
+      :ARG0 (i / i)
+      :ARG2 (h / he))
+
+# ::id DF-199-194215-653_0484.24 ::date 2013-09-01T19:13:15 ::annotator SDL-AMR-09 ::preferred
+# ::snt Not because of his threat - but because your personal life is none of his business.
+# ::save-date Sun Sep 15, 2013 ::file DF-199-194215-653_0484_24.txt
+(c / contrast-01
+      :ARG1 (c2 / cause-01 :polarity -
+            :ARG0 (t / threaten-01
+                  :ARG0 (h / he)))
+      :ARG2 (c3 / cause-01
+            :ARG0 (b / business :polarity -
+                  :domain (l / life
+                        :mod (p / personal)
+                        :poss (y / you))
+                  :poss h)))
+
+# ::id DF-199-194215-653_0484.25 ::date 2013-09-01T19:33:06 ::annotator SDL-AMR-09 ::preferred
+# ::snt Can you document his threats?
+# ::save-date Sun Sep 8, 2013 ::file DF-199-194215-653_0484_25.txt
+(p / possible :mode interrogative
+      :domain (d / document-01
+            :ARG0 (y / you)
+            :ARG1 (t2 / threaten-01
+                  :ARG0 (h / he))))
+
+# ::id DF-199-194215-653_0484.26 ::date 2013-09-01T19:34:52 ::annotator SDL-AMR-09 ::preferred
+# ::snt You really need to.
+# ::save-date Sun Sep 1, 2013 ::file DF-199-194215-653_0484_26.txt
+(n / need-01
+      :ARG0 (y / you)
+      :manner (r / real))
+
+# ::id DF-199-194215-653_0484.27 ::date 2013-09-01T19:35:55 ::annotator SDL-AMR-09 ::preferred
+# ::snt Quit taking his calls, make him leave voice mail.
+# ::save-date Sun Sep 15, 2013 ::file DF-199-194215-653_0484_27.txt
+(a / and
+      :op1 (q / quit-01 :mode imperative
+            :ARG0 (y / you)
+            :ARG1 (t / take-01
+                  :ARG0 y
+                  :ARG1 (c / call-02
+                        :ARG0 (h / he))))
+      :op2 (m / make-02 :mode imperative
+            :ARG0 y
+            :ARG1 (l / leave-02
+                  :ARG0 h
+                  :ARG1 (m2 / mail
+                        :mod (v / voice)))))
+
+# ::id DF-199-194215-653_0484.28 ::date 2013-09-01T19:40:18 ::annotator SDL-AMR-09 ::preferred
+# ::snt Make him email or text you.
+# ::save-date Sun Sep 1, 2013 ::file DF-199-194215-653_0484_28.txt
+(m / make-02 :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (o / or
+            :op1 (e / email-01
+                  :ARG0 (h / he)
+                  :ARG2 y)
+            :op2 (t / text-00
+                  :ARG0 (h2 / he)
+                  :ARG2 y)))
+
+# ::id DF-199-194215-653_0484.29 ::date 2013-09-01T19:42:36 ::annotator SDL-AMR-09 ::preferred
+# ::snt Keep those records.
+# ::save-date Sun Sep 1, 2013 ::file DF-199-194215-653_0484_29.txt
+(k / keep-01 :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (t / thing
+            :ARG1-of (r / record-01)
+            :mod (t2 / that)))
+
+# ::id DF-199-194215-653_0484.30 ::date 2013-09-01T19:44:20 ::annotator SDL-AMR-09 ::preferred
+# ::snt Get a lawyer and get a divorce.
+# ::save-date Sun Sep 1, 2013 ::file DF-199-194215-653_0484_30.txt
+(a / and
+      :op1 (g / get-01 :mode imperative
+            :ARG0 (y / you)
+            :ARG1 (l / lawyer))
+      :op2 (d / divorce-01 :mode imperative
+            :ARG0 y))
+
+# ::id DF-199-194215-653_0484.31 ::date 2013-09-01T19:46:40 ::annotator SDL-AMR-09 ::preferred
+# ::snt If you can't afford one, try legal aid.
+# ::save-date Sun Sep 8, 2013 ::file DF-199-194215-653_0484_31.txt
+(t / try-01 :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (a / aid-01
+            :mod (l / law))
+      :condition (p / possible :polarity -
+            :domain (a2 / afford-01
+                  :ARG0 y
+                  :ARG1 (o / one))))
+
+# ::id DF-199-194215-653_0484.32 ::date 2013-09-01T19:50:17 ::annotator SDL-AMR-09 ::preferred
+# ::snt Tell your ex that all communication needs to go through the lawyer.
+# ::save-date Sun Sep 8, 2013 ::file DF-199-194215-653_0484_32.txt
+(t / tell-01 :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (n / need-01
+            :ARG1 (g / go-06
+                  :ARG0 (c / communicate-01
+                        :quant (a / all))
+                  :path (l / lawyer)))
+      :ARG2 (e / ex
+            :poss y))
+
+# ::id DF-200-192392-456_1160.1 ::date 2013-09-01T19:54:19 ::annotator SDL-AMR-09 ::preferred
+# ::snt The bus drivers want exact change, the till people want exact change, the people who deliver your food want exact change...
+# ::save-date Sun Sep 1, 2013 ::file DF-200-192392-456_1160_1.txt
+(w / want-01
+      :ARG0 (a / and
+            :op1 (p / person
+                  :ARG0-of (d / drive-01
+                        :ARG1 (b / bus)))
+            :op2 (p2 / person
+                  :location (t / till))
+            :op3 (p3 / person
+                  :ARG0-of (d2 / deliver-01
+                        :ARG1 (f / food
+                              :poss (y / you)))))
+      :ARG1 (c / change
+            :mod (e / exact)))
+
+# ::id DF-200-192392-456_1160.2 ::date 2013-09-01T20:05:01 ::annotator SDL-AMR-09 ::preferred
+# ::snt Do they not realise that you don't get piles of change from the bank,
+# ::save-date Sun Sep 1, 2013 ::file DF-200-192392-456_1160_2.txt
+(r / realize-01 :polarity - :mode interrogative
+      :ARG0 (t / they)
+      :ARG1 (g / get-01 :polarity -
+            :ARG0 (y / you)
+            :ARG1 (p / pile
+                  :mod (c / change))
+            :ARG2 (b / bank)))
+
+# ::id DF-200-192392-456_1160.3 ::date 2013-09-01T20:08:46 ::annotator SDL-AMR-09 ::preferred
+# ::snt someone somewhere is going to have to take the notes?
+# ::save-date Sun Sep 1, 2013 ::file DF-200-192392-456_1160_3.txt
+(o / obligate-01 :mode interrogative
+      :ARG1 s
+      :ARG2 (t / take-01
+            :ARG0 (s / someone)
+            :ARG1 (n / note)
+            :location (s2 / somewhere)))
+
+# ::id DF-200-192392-456_1160.4 ::date 2013-08-30T09:02:53 ::annotator SDL-AMR-09 ::preferred
+# ::snt People are getting lazy.
+# ::save-date Sun Sep 1, 2013 ::file DF-200-192392-456_1160_4.txt
+(g / get-03
+      :ARG1 (p / person)
+      :ARG2 (l / lazy))
+
+# ::id DF-200-192392-456_1160.5 ::date 2013-09-01T03:00:50 ::annotator SDL-AMR-09 ::preferred
+# ::snt I do like to get as near as possible as i woudn't like to be couting coppers all day
+# ::save-date Sun Sep 15, 2013 ::file DF-200-192392-456_1160_5.txt
+(l / like-01
+      :ARG0 (i / i)
+      :ARG1 (n2 / near-01
+            :ARG1 i
+            :degree (p / possible))
+      :ARG1-of (c / cause-01
+            :ARG0 (l2 / like-01 :polarity -
+                  :ARG0 i
+                  :ARG1 (c2 / count-01
+                        :ARG0 i
+                        :ARG1 (c3 / copper)
+                        :duration (d2 / day
+                              :mod (a / all))))))
+
+# ::id DF-200-192392-456_1160.6 ::date 2013-09-01T03:14:38 ::annotator SDL-AMR-09 ::preferred
+# ::snt take a £20 note on the bus, they just tell you to get on cos theyre lazy as hell
+# ::save-date Sun Sep 15, 2013 ::file DF-200-192392-456_1160_6.txt
+(t4 / tell-01
+      :ARG0 (t3 / they)
+      :ARG1 (g / get-05
+            :ARG1 y2
+            :ARG2 (o / on))
+      :ARG2 (y2 / you)
+      :mod (j / just)
+      :ARG1-of (c / cause-01
+            :ARG0 (l / lazy
+                  :domain t3
+                  :degree (h / hell)))
+      :condition (t / take-01 :mode imperative
+            :ARG0 (y / you)
+            :ARG1 (n / note
+                  :quant (m2 / monetary-quantity :quant 20
+                        :unit (p / pound)))
+            :location (b / bus)))
+
+# ::id DF-200-192392-456_1160.7 ::date 2013-09-01T03:23:03 ::annotator SDL-AMR-09 ::preferred
+# ::snt its illegal to pay certain amounts in loads of coins. such as you can only pay something like 30pence in 1ps
+# ::save-date Wed Sep 18, 2013 ::file DF-200-192392-456_1160_7.txt
+(l3 / law :polarity -
+      :domain (p / pay-01
+            :ARG1 (a / amount
+                  :quant (c / certain))
+            :instrument (c2 / coin
+                  :quant (l / load))
+            :example (p2 / possible
+                  :domain (p3 / pay-01
+                        :ARG0 (y / you)
+                        :ARG1 (s / something
+                              :example (m / monetary-quantity :quant 30
+                                    :unit (p4 / pence)))
+                        :instrument (m2 / monetary-quantity :quant 1
+                              :unit (p5 / pence))
+                        :mod (o / only)))))
+
+# ::id DF-200-192400-625_6304.1 ::date 2013-09-01T03:41:29 ::annotator SDL-AMR-09 ::preferred
+# ::snt Hello I started university in September, didn't immediately gel with it obviously like most people.
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_6304_1.txt
+(m / multi-sentence
+      :snt1 (h / hello)
+      :snt2 (c / contrast-01
+            :ARG1 (s / start-01
+                  :ARG0 (i / i)
+                  :ARG1 (u / university)
+                  :time (d / date-entity :month 9))
+            :ARG2 (g / gel-00 :polarity -
+                  :ARG1 i
+                  :ARG2 u
+                  :time (i2 / immediate)
+                  :manner (o / obvious)
+                  :ARG1-of (r / resemble-01
+                        :ARG2 (p / person
+                              :mod (m2 / most))))))
+
+# ::id DF-200-192400-625_6304.2 ::date 2013-09-01T03:51:10 ::annotator SDL-AMR-09 ::preferred
+# ::snt However, I knew it would take me some time to adjust, because I have always been very introverted, and shy and especially anxious and all the rest of it.
+# ::save-date Wed Sep 25, 2013 ::file DF-200-192400-625_6304_2.txt
+(h / have-concession-91
+      :ARG2 (k / know-01
+            :ARG0 (i / i)
+            :ARG1 (t / take-10
+                  :ARG0 (a / adjust-01
+                        :ARG1 i)
+                  :ARG1 (t2 / time
+                        :mod (s / some))
+                  :ARG2 i)
+            :ARG1-of (c / cause-01
+                  :ARG0 (a3 / and
+                        :op1 (i2 / introvert
+                              :domain i
+                              :degree (v / very))
+                        :op2 (s2 / shy-01
+                              :ARG0 i)
+                        :op3 (a4 / anxious
+                              :domain i
+                              :degree (e / especially))
+                        :op4 (r / rest
+                              :mod (a5 / all))
+                        :time (a2 / always)))))
+
+# ::id DF-200-192400-625_6304.3 ::date 2013-09-01T04:03:10 ::annotator SDL-AMR-09 ::preferred
+# ::snt The first night I was here, all my housemates and I went out and it was the hardest thing I have ever ever had to do.
+# ::save-date Sun Sep 15, 2013 ::file DF-200-192400-625_6304_3.txt
+(a / and
+      :op1 (g / go-17
+            :ARG0 (a2 / and
+                  :op1 (h2 / housemate
+                        :poss i
+                        :quant (a3 / all))
+                  :op2 i)
+            :time (n / night
+                  :ord (o / ordinal-entity :value 1)
+                  :time-of (b / be-located-at-91
+                        :ARG1 (i / i)
+                        :ARG2 (h / here))))
+      :op2 (h3 / hard
+            :degree (m / most)
+            :domain g
+            :compared-to (t / thing
+                  :ARG1-of (d / do-02
+                        :ARG0 i
+                        :time (e / ever)
+                        :ARG1-of (o2 / obligate-01)))))
+
+# ::id DF-200-192400-625_6304.4 ::date 2013-09-01T04:10:01 ::annotator SDL-AMR-09 ::preferred
+# ::snt To go into the SU bar on my own, sober.
+# ::save-date Sun Sep 15, 2013 ::file DF-200-192400-625_6304_4.txt
+(g / go-06
+      :ARG0 (i / i)
+      :ARG2 (b / bar
+            :mod (u / union
+                  :mod (p / person
+                        :ARG0-of (s2 / study-01))))
+      :manner (o / own
+            :poss i)
+      :time (s / sober
+            :domain i))
+
+# ::id DF-200-192400-625_6304.5 ::date 2013-09-01T04:13:10 ::annotator SDL-AMR-09 ::preferred
+# ::snt Anyways more to the point; Here are the facts:
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_6304_5.txt
+(m2 / multi-sentence
+      :snt2 (f / fact
+            :location (h / here))
+      :snt1 (c / contrast-01
+            :ARG2 (p / point
+                  :degree (m / more))))
+
+# ::id DF-200-192400-625_6304.6 ::date 2013-09-01T04:16:59 ::annotator SDL-AMR-09 ::preferred
+# ::snt - I am not enjoying university having been here 5months or so; I'm disillusioned by the course, not enjoying the projects set, and I don't like the course delivery as much.
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_6304_6.txt
+(m2 / multi-sentence
+      :snt1 (e / enjoy-01 :polarity -
+            :ARG0 (i / i)
+            :ARG1 (u / university)
+            :time (a3 / after
+                  :op1 (b / be-located-at-91
+                        :ARG1 i
+                        :ARG2 (h / here)
+                        :duration (o / or-so
+                              :op1 (t / temporal-quantity :quant 5
+                                    :unit (m / month))))))
+      :snt2 (a / and
+            :op1 (d / disillusion-01
+                  :ARG0 (c / course)
+                  :ARG1 i)
+            :op2 (e2 / enjoy-01 :polarity -
+                  :ARG0 i
+                  :ARG1 (p2 / project
+                        :ARG1-of (s / set-02)))
+            :op3 (l / like-01 :polarity -
+                  :ARG0 i
+                  :ARG1 (d2 / deliver-01
+                        :ARG1 (c2 / course))
+                  :degree (m4 / much))))
+
+# ::id DF-200-192400-625_6304.7 ::date 2013-09-01T04:31:02 ::annotator SDL-AMR-09 ::preferred
+# ::snt The University made out it was much better than it seems.
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_6304_7.txt
+(m / make-12
+      :ARG0 (u / university)
+      :ARG1 (g / good
+            :degree (m2 / more
+                  :quant (m3 / much))
+            :compared-to (s / seem-01
+                  :ARG1 (i / it))
+            :domain i))
+
+# ::id DF-200-192400-625_6304.8 ::date 2013-09-01T04:33:14 ::annotator SDL-AMR-09 ::preferred
+# ::snt - I had a bad start to the first term; student finance was delayed, adding to my stress levels, I was so worried I was unable to progress with work, conclusively it all piled up.
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_6304_8.txt
+(m / multi-sentence
+      :snt1 (s2 / start-01
+            :ARG0 (i / i)
+            :ARG1 (t / term
+                  :ord (o / ordinal-entity :value 1))
+            :manner (b / bad))
+      :snt2 (a / and
+            :op1 (d / delay-01
+                  :ARG1 (f2 / finance
+                        :mod (p4 / person
+                              :ARG0-of (s / study-01)))
+                  :ARG0-of (a3 / add-02
+                        :ARG2 (l / level
+                              :mod (s3 / stress)
+                              :poss i)))
+            :op2 (w / worry-01
+                  :ARG1 i
+                  :degree (s4 / so)
+                  :ARG0-of (c2 / cause-01
+                        :ARG1 (c3 / capable-41 :polarity -
+                              :ARG2 (p3 / progress-01
+                                    :ARG1 (w2 / work-01
+                                          :ARG0 i)))))
+            :ARG1-of (c4 / cause-01
+                  :ARG0 (p2 / pile-01
+                        :ARG1 (a2 / all))
+                  :ARG1-of (c5 / conclude-01))))
+
+# ::id DF-200-192400-625_6304.9 ::date 2013-09-01T06:27:27 ::annotator SDL-AMR-09 ::preferred
+# ::snt - I was assigned a counselor through the university; had seen her for about 5-6weeks (block sessions), if I'm honest it didn't really work; because I was never open with her.
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_6304_9.txt
+(a / and
+      :op1 (a2 / assign-01
+            :ARG1 (p / person
+                  :ARG0-of (c / counsel-01))
+            :ARG2 (i / i)
+            :instrument (u / university))
+      :op2 (s / see-01
+            :ARG0 i
+            :ARG1 p
+            :duration (a3 / about
+                  :op1 (b2 / between
+                        :op1 (t / temporal-quantity :quant 5
+                              :unit (w / week))
+                        :op2 (t2 / temporal-quantity :quant 6
+                              :unit (w2 / week))))
+            :mod (s2 / session
+                  :mod (b / block)))
+      :op3 (w3 / work-02 :polarity -
+            :ARG1 s
+            :mod (r / real)
+            :ARG1-of (c2 / cause-01
+                  :ARG0 (o / open-03 :polarity -
+                        :ARG0 i
+                        :ARG3 p
+                        :time (e / ever)))
+            :condition (o2 / opine-01
+                  :ARG0 i
+                  :manner (h / honest))))
+
+# ::id DF-200-192400-625_6304.10 ::date 2013-09-01T06:54:52 ::annotator SDL-AMR-09 ::preferred
+# ::snt Only half-halfheartedly.
+# ::save-date Sun Sep 8, 2013 ::file DF-200-192400-625_6304_10.txt
+(h / heart
+      :degree (h2 / half-half)
+      :mod (o / only))
+
+# ::id DF-200-192400-625_6304.11 ::date 2013-09-01T06:55:57 ::annotator SDL-AMR-09 ::preferred
+# ::snt - Now the work-load is up to my neck, I have major deadlines to hit, I am depressed, the anxiety is resulting in me feeling miserable all the time.
+# ::save-date Sun Sep 8, 2013 ::file DF-200-192400-625_6304_11.txt
+(a / and
+      :op1 (l / load-01
+            :ARG1 i
+            :ARG2 (w / work)
+            :time (n / now)
+            :extent (n2 / neck
+                  :part-of (i / i)))
+      :op2 (o / obligate-01
+            :ARG2 (h / hit-02
+                  :ARG0 i
+                  :ARG1 (d2 / deadline
+                        :mod (m / major))))
+      :op3 (d / depress-01
+            :ARG1 i)
+      :op4 (r / result-01
+            :ARG1 (a2 / anxiety)
+            :ARG2 (f / feel-01
+                  :ARG0 i
+                  :ARG1 (m2 / miserable)
+                  :duration (t / time
+                        :mod (a3 / all)))))
+
+# ::id DF-200-192400-625_6304.12 ::date 2013-09-01T07:02:28 ::annotator SDL-AMR-09 ::preferred
+# ::snt In no longer have a counselor because you can only have them for so many sessions at a time, and I doubt it will help much this time, if it hasn't already.
+# ::save-date Sun Sep 15, 2013 ::file DF-200-192400-625_6304_12.txt
+(a / and
+      :op1 (h / have-03
+            :ARG0 (i / i)
+            :ARG1 (p / person
+                  :ARG0-of (c / counsel-01))
+            :time (n / no-longer)
+            :ARG1-of (c2 / cause-01
+                  :ARG0 (p2 / possible
+                        :domain (h2 / have-03
+                              :ARG0 (y / you)
+                              :ARG1 p
+                              :duration (s / session
+                                    :quant (s2 / so-many
+                                          :frequency (t / time)))
+                              :mod (o / only)))))
+      :op2 (d / doubt-01
+            :ARG0 i
+            :ARG1 (h3 / help-01
+                  :ARG0 h
+                  :ARG2 i
+                  :degree (m2 / much)
+                  :time (t2 / time
+                        :mod (t3 / this))
+                  :condition (h4 / help-01 :polarity -
+                        :ARG0 h
+                        :ARG1 i
+                        :time (a2 / already)))))
+
+# ::id DF-200-192400-625_6304.13 ::date 2013-09-01T07:13:33 ::annotator SDL-AMR-09 ::preferred
+# ::snt - I lack motivation, don't feel comfortable with any of my lecturers, feel like I want to give in, but can't bring myself to it, because I will end up in a dead end job, and I aspired to 'be someone'.
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_6304_13.txt
+(a / and
+      :op1 (l / lack-01
+            :ARG0 (i / i)
+            :ARG1 (m / motivation))
+      :op2 (f / feel-01 :polarity -
+            :ARG0 i
+            :ARG1 (c2 / comfortable)
+            :ARG2 (p / person
+                  :ARG0-of (l2 / lecture-01
+                        :ARG1 i)))
+      :op3 (c / contrast-01
+            :ARG1 (f2 / feel-01
+                  :ARG0 i
+                  :ARG1 (w / want-01
+                        :ARG0 i
+                        :ARG1 (g / give-09
+                              :ARG0 i)))
+            :ARG2 (c4 / capable-41 :polarity -
+                  :ARG1 i
+                  :ARG2 (b / bring-05
+                        :ARG0 i
+                        :ARG1 (g2 / give-09
+                              :ARG0 i))
+                  :ARG1-of (c3 / cause-01
+                        :ARG0 (a3 / and
+                              :op1 (e / end-03
+                                    :ARG1 i
+                                    :ARG2 (j / job
+                                          :ARG4-of (e2 / end-02
+                                                :ARG1-of (d / die-01))))
+                              :op2 (a2 / aspire-01
+                                    :ARG0 i
+                                    :ARG1 (s / someone
+                                          :domain i)))))))
+
+# ::id DF-200-192400-625_6304.14 ::date 2013-09-01T07:32:30 ::annotator SDL-AMR-09 ::preferred
+# ::snt - I would rather be dead than not be educated, and live a life I want to live (and dropping out of uni would make matters worse).
+# ::save-date Sun Sep 15, 2013 ::file DF-200-192400-625_6304_14.txt
+(a / and
+      :op1 (p / prefer-01
+            :ARG0 (i / i)
+            :ARG1 (d / die-01
+                  :ARG1 i)
+            :ARG2 (a2 / and
+                  :op1 (e / educate-01 :polarity -
+                        :ARG1 i)
+                  :op2 (l / live-01 :polarity -
+                        :ARG0 i
+                        :ARG1 (l2 / life
+                              :mod (w2 / want-01
+                                    :ARG0 i
+                                    :ARG1 (l3 / live-01
+                                          :ARG0 i
+                                          :ARG1 l2))))))
+      :op3 (w / worsen-01
+            :ARG0 (d2 / drop-04
+                  :ARG0 i
+                  :ARG1 (u / university))
+            :ARG1 (m / matter)))
+
+# ::id DF-200-192400-625_6304.15 ::date 2013-09-01T08:02:56 ::annotator SDL-AMR-09 ::preferred
+# ::snt - I'm 21yrs old (turn 22 this year), don't have much time left for failing need to do something.
+# ::save-date Sun Sep 8, 2013 ::file DF-200-192400-625_6304_15.txt
+(a / and
+      :op1 (a2 / age-01
+            :ARG1 (i / i)
+            :ARG2 (t2 / temporal-quantity :quant 21
+                  :unit (y / year)))
+      :op2 (t / turn-02
+            :ARG1 i
+            :ARG3 (t3 / temporal-quantity :quant 22
+                  :unit (y2 / year))
+            :time (y3 / year
+                  :mod (t4 / this)))
+      :op3 (h / have-03 :polarity -
+            :ARG0 i
+            :ARG1 (t5 / time
+                  :mod (m / much)
+                  :ARG1-of (l / leave-06)
+                  :purpose (f / fail-01
+                        :ARG1 i)))
+      :op4 (o / obligate-01
+            :ARG2 (d / do-02
+                  :ARG0 i
+                  :ARG1 (s / something))))
+
+# ::id DF-200-192400-625_6304.16 ::date 2013-09-01T08:51:04 ::annotator SDL-AMR-09 ::preferred
+# ::snt I failed college once over, did another course so I could get to uni don't want to go through the system over and over and consistently fail.
+# ::save-date Sun Sep 8, 2013 ::file DF-200-192400-625_6304_16.txt
+(m / multi-sentence
+      :snt2 (w / want-01 :polarity -
+            :ARG0 i
+            :ARG1 (a2 / and
+                  :op1 (g2 / go-01
+                        :ARG1 i
+                        :path (s / system)
+                        :frequency (o2 / over-and-over))
+                  :op2 (f2 / fail-01
+                        :ARG0 i
+                        :manner (c3 / consistent))))
+      :snt1 (a3 / and
+            :op1 (f / fail-01
+                  :ARG1 (i / i)
+                  :ARG2 (c / college)
+                  :time (o / once))
+            :op2 (d / do-02
+                  :ARG0 i
+                  :ARG1 (c2 / course
+                        :mod (a / another))
+                  :purpose (p / possible
+                        :domain (g / get-05
+                              :ARG1 i
+                              :ARG2 (u / university))))))
+
+# ::id DF-200-192400-625_6304.17 ::date 2013-09-01T09:02:24 ::annotator SDL-AMR-09 ::preferred
+# ::snt Can someone please give me some advice please?
+# ::save-date Wed Sep 18, 2013 ::file DF-200-192400-625_6304_17.txt
+(p / possible :mode interrogative :polite +
+      :domain (a2 / advise-01
+            :ARG0 (s / someone)
+            :ARG2 (i / i)
+            :mod (s2 / some)))
+
+# ::id DF-200-192400-625_6304.18 ::date 2013-09-01T09:06:13 ::annotator SDL-AMR-09 ::preferred
+# ::snt Perhaps go and see your doctor, and see if there's any way you can get your deadlines extended to try and ease the pressure a bit?
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_6304_18.txt
+(a / and
+      :op1 (a2 / and
+            :op1 (g / go-01 :mode imperative
+                  :ARG1 (y / you))
+            :op2 (s2 / see-01 :mode imperative
+                  :ARG0 y
+                  :ARG1 (d / doctor
+                        :poss y))
+            :mod (p / possible))
+      :op2 (s / see-01 :mode imperative
+            :ARG0 y
+            :ARG1 (w / way :mode interrogative
+                  :mod (p2 / possible
+                        :domain (g2 / get-04
+                              :ARG1 (e / extend-01
+                                    :ARG0 y
+                                    :ARG1 (d2 / deadline
+                                          :poss y)
+                                    :purpose (t2 / try-01
+                                          :ARG0 y
+                                          :ARG1 (e2 / ease-02
+                                                :ARG0 y
+                                                :ARG1 (p3 / pressure)
+                                                :degree (b / bit)))))))))
+
+# ::id DF-200-192400-625_6304.19 ::date 2013-09-01T09:28:48 ::annotator SDL-AMR-09 ::preferred
+# ::snt Send your tutors a similar email to this post (don't worry they've seen it all before - some much more uncomfortable admissions too - I know as I used to work in a Uni Dept admin) and they will consider mitigating circumstances.
+# ::save-date Sun Sep 15, 2013 ::file DF-200-192400-625_6304_19.txt
+(m / multi-sentence
+      :snt1 (a / and
+            :op1 (s / send-01 :mode imperative
+                  :ARG0 (y / you)
+                  :ARG1 (e / email
+                        :ARG1-of (r / resemble-01
+                              :ARG2 (p / post
+                                    :mod (t2 / this))))
+                  :ARG2 (t / tutor
+                        :poss y))
+            :op2 (c / consider-02
+                  :ARG0 t
+                  :ARG1 (c6 / circumstance
+                        :ARG0-of (m2 / mitigate-01))))
+      :snt2 (w / worry-02 :polarity - :mode imperative
+            :ARG0 (y2 / you)
+            :ARG1-of (c3 / cause-01
+                  :ARG0 (s2 / see-01
+                        :ARG0 (t3 / they)
+                        :ARG1 (a2 / all
+                              :ARG2-of (i / include-91
+                                    :ARG1 (t4 / thing
+                                          :ARG1-of (a3 / admit-02)
+                                          :quant (s3 / some)
+                                          :mod (c4 / comfortable :polarity -
+                                                :degree (m3 / more
+                                                      :quant (m4 / much))))))
+                        :time (b / before))))
+      :snt3 (k / know-01
+            :ARG0 i
+            :ARG1-of (c5 / cause-01
+                  :ARG0 (u / use-02
+                        :ARG1 (w2 / work-01
+                              :ARG0 i
+                              :ARG2 (d / department
+                                    :ARG0-of (a4 / administrate-01
+                                          :ARG1 (u2 / university))))))))
+
+# ::id DF-200-192400-625_6304.20 ::date 2013-09-01T10:06:59 ::annotator SDL-AMR-09 ::preferred
+# ::snt Break your work into manageable chunks.
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_6304_20.txt
+(b / break-01 :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (t / thing
+            :ARG1-of (w / work-01
+                  :ARG0 y))
+      :ARG3 (c / chunk
+            :ARG1-of (m / manage-01
+                  :ARG0 y
+                  :mod (p / possible))))
+
+# ::id DF-200-192400-625_6304.21 ::date 2013-09-01T10:09:45 ::annotator SDL-AMR-09 ::preferred
+# ::snt Concentrate on one bit of work at a time (obvs the most urgent assignment first).
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_6304_21.txt
+(c / concentrate-01 :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (b / bit :quant 1
+            :part-of (t2 / thing
+                  :ARG1-of (w / work-01))
+            :ARG0-of (m2 / mean-01
+                  :ARG1 (t3 / thing
+                        :ARG1-of (a / assign-01)
+                        :mod (u / urgent
+                              :degree (m / most))
+                        :time (o2 / ordinal-entity :value 1)
+                        :ARG1-of (o / obvious-41)))
+            :frequency (t / time)))
+
+# ::id DF-200-192400-625_6304.22 ::date 2013-09-01T10:14:08 ::annotator SDL-AMR-09 ::preferred
+# ::snt Don't shut yourself off from your housemates, and well done for trying new things from the very beginning now keep at it!
+# ::save-date Sun Sep 8, 2013 ::file DF-200-192400-625_6304_22.txt
+(m / multi-sentence
+      :snt1 (a / and
+            :op1 (s / shut-03 :polarity - :mode imperative
+                  :ARG0 (y2 / you)
+                  :ARG1 y
+                  :ARG2 (h / housemate
+                        :poss y))
+            :op2 (d / do-02 :mode imperative
+                  :ARG0 y
+                  :degree (w / well)
+                  :ARG1-of (c / cause-01
+                        :ARG0 (t / try-01
+                              :ARG0 y
+                              :ARG1 (t2 / thing
+                                    :mod (n2 / new))
+                              :time (f / from
+                                    :op1 (b2 / begin-01
+                                          :mod (v / very)))))))
+      :snt2 (k / keep-02 :mode imperative
+            :ARG0 (y / you)
+            :ARG1 (i / it)
+            :time (n / now)))
+
+# ::id DF-200-192400-625_6304.23 ::date 2013-09-01T10:42:42 ::annotator SDL-AMR-09 ::preferred
+# ::snt I'd reccomend you go and see your doctor too.
+# ::save-date Sun Sep 1, 2013 ::file DF-200-192400-625_6304_23.txt
+(r / recommend-01
+      :ARG0 (i / i)
+      :ARG1 (g / go-01
+            :ARG1 (y / you)
+            :purpose (s / see-01
+                  :ARG0 y
+                  :ARG1 (d / doctor
+                        :poss y)
+                  :mod (t / too))))
+
+# ::id DF-200-192400-625_6304.24 ::date 2013-09-01T10:45:57 ::annotator SDL-AMR-09 ::preferred
+# ::snt If you've always been an anxious person you might benefit from speaking to someone (my friend got therapy on the NHS for anxiety, so its really normal).
+# ::save-date Sat Jan 25, 2014 ::file DF-200-192400-625_6304_24.txt
+(m / multi-sentence
+      :snt1 (p / possible
+            :domain (b / benefit-01
+                  :ARG0 (s / speak-01
+                        :ARG0 y
+                        :ARG2 (s2 / someone))
+                  :ARG1 (y / you)
+                  :condition (a2 / anxious
+                        :domain (p2 / person
+                              :domain y)
+                        :time (a3 / always))))
+      :snt2 (g / get-01
+            :ARG0 (f / friend
+                  :poss (i / i))
+            :ARG1 (t / therapy)
+            :ARG2 (o / organization :name (n / name :op1 "NHS"))
+            :ARG0-of (c / cause-01
+                  :ARG1 (n2 / normal
+                        :domain (i2 / it)
+                        :degree (r / real)))
+            :ARG1-of (c2 / cause-01
+                  :ARG0 (a4 / anxiety))))
+
+# ::id DF-200-192400-625_6304.25 ::date 2013-09-01T10:56:58 ::annotator SDL-AMR-09 ::preferred
+# ::snt And try and get deadlines extended, if you're honest I'm sure your uni will allow it.
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_6304_25.txt
+(m / multi-sentence
+      :snt2 (k / know-01
+            :ARG0 (i / i)
+            :ARG1 (a / allow-01
+                  :ARG0 (u / university
+                        :poss (y2 / you))
+                  :ARG1 (i2 / it))
+            :condition (h / honest
+                  :domain y))
+      :snt1 (a2 / and
+            :op1 (t / try-01 :mode imperative
+                  :ARG0 (y / you)
+                  :ARG1 (g / get-04
+                        :ARG0 y
+                        :ARG1 (e / extend-01
+                              :ARG1 (d / deadline))))))
+
+# ::id DF-200-192400-625_6344.1 ::date 2013-09-05T01:17:37 ::annotator SDL-AMR-09 ::preferred
+# ::snt It's getting hard to keep strong and keep carrying on with life.
+# ::save-date Thu Sep 5, 2013 ::file DF-200-192400-625_6344_1.txt
+(g / get-03
+      :ARG1 (a / and
+            :op1 (k / keep-02
+                  :ARG1 (s / strong))
+            :op2 (k2 / keep-02
+                  :ARG1 (c / carry-02
+                        :ARG1 (l / live-01))))
+      :ARG2 (h / hard))
+
+# ::id DF-200-192400-625_6344.2 ::date 2013-09-05T02:00:51 ::annotator SDL-AMR-09 ::preferred
+# ::snt My mum is getting divorced - she had a horrible time with my step-father and her new found freedom has sent her round the bend.
+# ::save-date Mon Sep 16, 2013 ::file DF-200-192400-625_6344_2.txt
+(m / multi-sentence
+      :snt1 (d / divorce-01
+            :ARG0 (m2 / mum
+                  :poss (i / i)))
+      :snt2 (a / and
+            :op1 (h / have-03
+                  :ARG0 (s / she)
+                  :ARG1 (t / time
+                        :mod (h2 / horrible))
+                  :accompanier (s2 / step-father
+                        :poss (i2 / i)))
+            :op2 (s3 / send-02
+                  :ARG0 (f / free-41
+                        :ARG1 s
+                        :ARG1-of (f2 / find-01
+                              :ARG0 s)
+                        :mod (n / new))
+                  :ARG1 s
+                  :ARG2 (r / round-03
+                        :ARG1 s
+                        :ARG2 (b / bend)))))
+
+# ::id DF-200-192400-625_6344.3 ::date 2013-09-05T02:22:29 ::annotator SDL-AMR-09 ::preferred
+# ::snt She's epileptic and a manic depressive with a huge anger problem.
+# ::save-date Mon Sep 16, 2013 ::file DF-200-192400-625_6344_3.txt
+(a / and
+      :op1 (e / epilepsy
+            :domain (s / she))
+      :op2 (d / depress-01
+            :ARG1 s
+            :mod (m / manic)
+            :accompanier (p / problem
+                  :mod (a2 / anger)
+                  :mod (h / huge))))
+
+# ::id DF-200-192400-625_6344.4 ::date 2013-09-05T02:28:09 ::annotator SDL-AMR-09 ::preferred
+# ::snt She's horrible to me, constantly.
+# ::save-date Thu Sep 5, 2013 ::file DF-200-192400-625_6344_4.txt
+(h / horrible
+      :beneficiary (i / i)
+      :domain (s / she)
+      :manner (c / constant))
+
+# ::id DF-200-192400-625_6344.5 ::date 2013-09-05T02:29:48 ::annotator SDL-AMR-09 ::preferred
+# ::snt I can't cope with her outbursts and nasty hateful remarks when I'm at home.
+# ::save-date Thu Sep 5, 2013 ::file DF-200-192400-625_6344_5.txt
+(p / possible :polarity -
+      :domain (c / cope-01
+            :ARG0 (i / i)
+            :ARG1 (a / and
+                  :op1 (o / outburst
+                        :poss (s / she))
+                  :op2 (t / thing
+                        :ARG1-of (r / remark-01
+                              :ARG0 s)
+                        :mod (h / hateful)
+                        :mod (n / nasty))))
+      :time (b / be-located-at-91
+            :ARG1 i
+            :ARG2 (h2 / home)))
+
+# ::id DF-200-192400-625_6344.6 ::date 2013-09-05T02:30:27 ::annotator SDL-AMR-09 ::preferred
+# ::snt I'm 18, a full-time sixth former at a high pressure private school (on a 95% bursary) and I'm at breaking point.
+# ::save-date Sat Jan 25, 2014 ::file DF-200-192400-625_6344_6.txt
+(p5 / person
+      :ARG0-of (h2 / have-03
+            :ARG1 (b / bursary
+                  :mod (p / percentage-entity :value 95)))
+      :ARG0-of (s2 / study-01
+            :mod (t2 / time
+                  :mod (f2 / full))
+            :location (s / school
+                  :mod (p2 / private)
+                  :ARG0-of (p3 / pressure-01
+                        :mod (h / high)))
+            :prep-in (f / form
+                  :ord (o / ordinal-entity :value 6)))
+      :age (t / temporal-quantity :quant 18
+            :unit (y / year))
+      :location (p4 / point
+            :mod (b3 / break-01
+                  :ARG1 i))
+      :domain (i / i))
+
+# ::id DF-200-192400-625_6344.7 ::date 2013-09-05T03:02:16 ::annotator SDL-AMR-09 ::preferred
+# ::snt I can't do work at home, because she shouts at me.
+# ::save-date Thu Sep 5, 2013 ::file DF-200-192400-625_6344_7.txt
+(p / possible :polarity -
+      :domain (w / work-01
+            :ARG0 (i / i)
+            :location (h / home))
+      :ARG1-of (c / cause-01
+            :ARG0 (s / shout-01
+                  :ARG0 (s2 / she)
+                  :ARG2 i)))
+
+# ::id DF-200-192400-625_6344.8 ::date 2013-09-05T03:06:10 ::annotator SDL-AMR-09 ::preferred
+# ::snt So then my teachers get angry at me.
+# ::save-date Sat Jan 25, 2014 ::file DF-200-192400-625_6344_8.txt
+(a / anger-01
+      :ARG0 (i / i)
+      :ARG1 (p / person
+            :ARG0-of (t / teach-01
+                  :ARG2 i))
+      :time (t2 / then)
+      :ARG1-of (c / cause-01))
+
+# ::id DF-200-192400-625_6344.9 ::date 2013-09-05T03:12:56 ::annotator SDL-AMR-09 ::preferred
+# ::snt One minute she's lovely, and it's like having my mummy back, then the next, she turns into the most spiteful human alive.
+# ::save-date Wed Sep 18, 2013 ::file DF-200-192400-625_6344_9.txt
+(a / and
+      :op1 (l / lovely
+            :domain (s / she)
+            :time (m5 / minute
+                  :mod (o / one))
+            :ARG1-of (r / resemble-01
+                  :ARG2 (h / have-06
+                        :ARG0 i
+                        :ARG1 (m2 / mummy
+                              :poss (i / i))
+                        :mod (b / back))))
+      :op2 (t2 / turn-02
+            :ARG1 s
+            :ARG2 (h2 / human
+                  :mod (s2 / spiteful
+                        :degree (m3 / most))
+                  :ARG0-of (l2 / live-01))
+            :time (t3 / then)
+            :time (m4 / minute
+                  :mod (n / next))))
+
+# ::id DF-200-192400-625_6344.10 ::date 2013-09-05T07:53:36 ::annotator SDL-AMR-09 ::preferred
+# ::snt I'm not going to pass my A2 exams, I've already accepted defeat, that this year of my life is going to make me a failure.
+# ::save-date Thu Sep 5, 2013 ::file DF-200-192400-625_6344_10.txt
+(a / and
+      :op1 (p / pass-07 :polarity -
+            :ARG1 (i / i)
+            :ARG2 (e / exam :name (n / name :op1 "A2")
+                  :poss i))
+      :op2 (a2 / accept-01
+            :ARG0 i
+            :ARG1 (a3 / and
+                  :op1 (d / defeat-01
+                        :ARG1 i)
+                  :op2 (m / make-02
+                        :ARG0 (y / year
+                              :mod (t / this)
+                              :part-of (l / live-01
+                                    :ARG0 i))
+                        :ARG1 (f / fail-01
+                              :ARG1 i)))
+            :time (a4 / already)))
+
+# ::id DF-200-192400-625_6344.11 ::date 2013-09-05T09:56:56 ::annotator SDL-AMR-09 ::preferred
+# ::snt Maybe I can come back from this, who knows. I've got the most amazing university offers, but I can't even accept them - I'll never make the grades.
+# ::save-date Sun Sep 8, 2013 ::file DF-200-192400-625_6344_11.txt
+(m / multi-sentence
+      :snt1 (p / possible
+            :domain (p2 / possible
+                  :domain (c / come-01
+                        :ARG1 (i / i)
+                        :ARG3 (t / this)
+                        :direction (b / back)))
+            :ARG1-of (k / know-01
+                  :ARG0 (a3 / amr-unknown)))
+      :snt2 (c2 / contrast-01
+            :ARG1 (o / offer-01
+                  :ARG0 (u / university)
+                  :ARG2 (i2 / i)
+                  :ARG0-of (a / amaze-01
+                        :degree (m2 / most)))
+            :ARG2 (p3 / possible :polarity -
+                  :domain (a2 / accept-01
+                        :ARG0 i2
+                        :ARG1 o
+                        :mod (e / even))))
+      :snt3 (m3 / make-18 :polarity -
+            :ARG0 (i3 / i)
+            :ARG1 (g / grade)
+            :time (e2 / ever)))
+
+# ::id DF-200-192400-625_6344.12 ::script amr-snt-id-rep ::date 2013-08-23 ::annotator SDL-AMR-09 ::preferred
+# ::snt I wish I could wipe her out of my life - things would be so much better without her.
+# ::save-date Sun Sep 8, 2013 ::file DF-200-192400-625_6344_12.txt
+(m / multi-sentence
+      :snt1 (w2 / wish-01
+            :ARG0 (i2 / i)
+            :ARG1 (p / possible
+                  :domain (w3 / wipe-02
+                        :ARG0 i2
+                        :ARG1 (s / she)
+                        :source (l / live-01
+                              :ARG0 i2))))
+      :snt2 (g / good
+            :degree (m2 / more
+                  :degree (m3 / much
+                        :degree (s2 / so)))
+            :prep-without (s3 / she)
+            :domain (t / thing)))
+
+# ::id DF-200-192400-625_6344.13 ::date 2013-09-05T11:16:03 ::annotator SDL-AMR-09 ::preferred
+# ::snt But then, I think I'm just being selfish.
+# ::save-date Thu Sep 5, 2013 ::file DF-200-192400-625_6344_13.txt
+(c / contrast-01
+      :ARG2 (t / think-01
+            :ARG0 (i / i)
+            :ARG1 (s / selfish
+                  :domain i
+                  :mod (j / just))
+            :mod (t2 / then)))
+
+# ::id DF-200-192400-625_6344.14 ::date 2013-09-05T11:26:53 ::annotator SDL-AMR-09 ::preferred
+# ::snt But surely, my life isn't meant to be like this?
+# ::save-date Sun Sep 8, 2013 ::file DF-200-192400-625_6344_14.txt
+(c / contrast-01
+      :ARG2 (m / mean-01 :polarity - :mode interrogative
+            :ARG1 (r / resemble-01
+                  :ARG1 (l / live-01
+                        :ARG0 (i / i))
+                  :ARG2 (t / this))
+            :mod (s / sure)))
+
+# ::id DF-200-192400-625_6344.15 ::date 2013-09-05T11:37:49 ::annotator SDL-AMR-09 ::preferred
+# ::snt It should be so much better. B
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_6344_15.txt
+(m3 / multi-sentence
+      :snt1 (r / recommend-01
+            :ARG1 (g / good
+                  :degree (m / more
+                        :degree (m2 / much
+                              :degree (s / so)))
+                  :domain (i / it)))
+      :snt2 (b / b))
+
+# ::id DF-200-192400-625_6344.16 ::date 2013-09-05T11:39:09 ::annotator SDL-AMR-09 ::preferred
+# ::snt ut I feel as if I have no control over this downhill spiral.
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_6344_16.txt
+(c / contrast-01
+      :ARG2 (f / feel-01
+            :ARG0 (i / i)
+            :ARG1-of (r / resemble-01
+                  :ARG2 (c2 / control-01 :polarity -
+                        :ARG0 i
+                        :ARG1 (s / spiral
+                              :direction (d / downhill)
+                              :mod (t / this))))))
+
+# ::id DF-200-192400-625_6344.17 ::date 2013-09-05T03:13:50 ::annotator SDL-AMR-09 ::preferred
+# ::snt And I don't know what to do.
+# ::save-date Thu Sep 5, 2013 ::file DF-200-192400-625_6344_17.txt
+(a / and
+      :op2 (k / know-01 :polarity -
+            :ARG0 (i / i)
+            :ARG1 (t / thing
+                  :ARG1-of (d / do-02
+                        :ARG0 i))))
+
+# ::id DF-200-192400-625_6344.18 ::date 2013-09-05T03:16:09 ::annotator SDL-AMR-09 ::preferred
+# ::snt Thanks for reading.
+# ::save-date Sun Sep 8, 2013 ::file DF-200-192400-625_6344_18.txt
+(t / thank-01
+      :ARG1 (y / you)
+      :ARG2 (r / read-01
+            :ARG0 y))
+
+# ::id DF-200-192400-625_6344.19 ::date 2013-09-05T03:18:11 ::annotator SDL-AMR-09 ::preferred
+# ::snt It's nice to vent.
+# ::save-date Thu Sep 5, 2013 ::file DF-200-192400-625_6344_19.txt
+(n / nice-42
+      :ARG1 (v / vent-01))
+
+# ::id DF-200-192400-625_6344.20 ::date 2013-09-05T03:19:47 ::annotator SDL-AMR-09 ::preferred
+# ::snt You can't get her sectioned for that.
+# ::save-date Mon Sep 16, 2013 ::file DF-200-192400-625_6344_20.txt
+(p / possible :polarity -
+      :domain (g / get-04
+            :ARG0 (y / you)
+            :ARG1 (s / section-00
+                  :ARG0 y
+                  :ARG1 (s2 / she)
+                  :ARG1-of (c / cause-01
+                        :ARG0 (t / that)))))
+
+# ::id DF-200-192400-625_6344.21 ::date 2013-09-06T04:04:10 ::annotator SDL-AMR-09 ::preferred
+# ::snt Does she even have a history of mental illness or a diagnosis?
+# ::save-date Mon Sep 16, 2013 ::file DF-200-192400-625_6344_21.txt
+(h / have-03 :mode interrogative
+      :ARG0 (s / she)
+      :ARG1 (o / or
+            :op1 (h2 / history
+                  :consist-of (i / ill-41
+                        :ARG1 s
+                        :ARG2 (m / mental)))
+            :op2 (d / diagnose-01
+                  :ARG1 s))
+      :mod (e / even))
+
+# ::id DF-200-192400-625_6344.22 ::date 2013-09-06T04:08:51 ::annotator SDL-AMR-09 ::preferred
+# ::snt You don't know for sure that you won't get good grades so accept places if you can.
+# ::save-date Fri Sep 6, 2013 ::file DF-200-192400-625_6344_22.txt
+(k / know-01 :polarity -
+      :ARG0 (y / you)
+      :ARG1 (g / get-01 :polarity -
+            :ARG0 y
+            :ARG1 (g2 / grade
+                  :mod (g3 / good)))
+      :mod (s / sure)
+      :ARG0-of (c / cause-01
+            :ARG1 (a / accept-01
+                  :ARG0 y
+                  :ARG1 (p / place)
+                  :condition (p2 / possible
+                        :domain a))))
+
+# ::id DF-200-192400-625_6344.23 ::date 2013-09-06T04:18:06 ::annotator SDL-AMR-09 ::preferred
+# ::snt Life throws **** at you all the time.
+# ::save-date Mon Sep 16, 2013 ::file DF-200-192400-625_6344_23.txt
+(t / throw-01
+      :ARG0 (l / life)
+      :ARG1 (t3 / thing)
+      :ARG2 (y / you)
+      :time (t2 / time
+            :quant (a / all)))
+
+# ::id DF-200-192400-625_6344.24 ::date 2013-09-06T04:38:34 ::annotator SDL-AMR-09 ::preferred
+# ::snt If it's not someone in your family, it's an outsider.
+# ::save-date Fri Sep 6, 2013 ::file DF-200-192400-625_6344_24.txt
+(h / have-condition-91
+      :ARG1 (o / outsider)
+      :ARG2 (s / someone :polarity -
+            :part-of (f / family
+                  :poss (y / you))))
+
+# ::id DF-200-192400-625_6344.25 ::date 2013-09-06T04:45:54 ::annotator SDL-AMR-09 ::preferred
+# ::snt I had to deal with verbal abuse from my dad for a long 8 years before I came to uni and honestly, the only reason why I'm here is because it was the only way out.
+# ::save-date Sun Sep 8, 2013 ::file DF-200-192400-625_6344_25.txt
+(a / and
+      :op1 (o / obligate-01
+            :ARG2 (d / deal-01
+                  :ARG0 (i / i)
+                  :ARG1 (a2 / abuse-01
+                        :ARG0 (d2 / dad
+                              :poss i)
+                        :ARG1 i
+                        :mod (v / verbal))
+                  :duration (t2 / temporal-quantity :quant 8
+                        :unit (y2 / year)
+                        :mod (l / long))
+                  :time (b2 / before
+                        :op1 (c / come-01
+                              :ARG1 i
+                              :ARG4 (u / university)))))
+      :op2 (c2 / cause-01
+            :ARG0 (r / reason
+                  :mod (o4 / only)
+                  :domain (w / way
+                        :mod (o2 / only)
+                        :direction (o3 / out)
+                        :domain (i2 / it)))
+            :ARG1 (b / be-located-at-91
+                  :ARG1 i
+                  :ARG2 (h / here))
+            :mod (h2 / honest)))
+
+# ::id DF-200-192400-625_6344.26 ::date 2013-09-06T06:02:44 ::annotator SDL-AMR-09 ::preferred
+# ::snt Work hard if you really want out.
+# ::save-date Sun Sep 8, 2013 ::file DF-200-192400-625_6344_26.txt
+(h / have-condition-91
+      :ARG1 (w / work-01
+            :ARG0 (y / you)
+            :manner (h2 / hard))
+      :ARG2 (w2 / want-01
+            :ARG0 y
+            :ARG2 (o / out)
+            :mod (r / really)))
+
+# ::id DF-200-192400-625_6344.27 ::date 2013-09-06T06:07:17 ::annotator SDL-AMR-09 ::preferred
+# ::snt Really sounds like you need support from somewhere else if she can't give it to you consistently.
+# ::save-date Sun Sep 8, 2013 ::file DF-200-192400-625_6344_27.txt
+(s / sound-01
+      :ARG2 (n / need-01
+            :ARG0 (y / you)
+            :ARG1 (s2 / support-01
+                  :ARG1 y)
+            :source (s3 / somewhere
+                  :mod (e / else))
+            :ARG1-of (h / have-condition-91
+                  :ARG2 (p / possible :polarity -
+                        :domain (g / give-01
+                              :ARG0 (s4 / she)
+                              :ARG1 s2
+                              :ARG2 y
+                              :manner (c / consistent)))))
+      :mod (r2 / really))
+
+# ::id DF-200-192400-625_6344.28 ::date 2013-09-06T06:08:39 ::annotator SDL-AMR-09 ::preferred
+# ::snt You could call Childline or something similar?
+# ::save-date Fri Sep 6, 2013 ::file DF-200-192400-625_6344_28.txt
+(p / possible :mode interrogative
+      :domain (c / call-02
+            :ARG0 (y / you)
+            :ARG1 (o / or
+                  :op1 (o2 / organization :name (n / name :op1 "Childline"))
+                  :op2 (s / something
+                        :ARG1-of (r / resemble-01
+                              :ARG2 o2)))))
+
+# ::id DF-200-192400-625_6344.29 ::date 2013-09-06T06:27:28 ::annotator SDL-AMR-09 ::preferred
+# ::snt You could go to the library on saturdays and do a good 8 hours of studying there.
+# ::save-date Fri Sep 6, 2013 ::file DF-200-192400-625_6344_29.txt
+(a / and
+      :op1 (p / possible
+            :domain (g / go-01
+                  :ARG1 (y / you)
+                  :ARG4 (l / library)
+                  :time (d / date-entity
+                        :weekday (s / saturday))))
+      :op2 (s2 / study-01
+            :ARG0 y
+            :duration (g2 / good
+                  :op1 (t / temporal-quantity :quant 8
+                        :unit (h / hour)))
+            :location l))
+
+# ::id DF-200-192400-625_6344.30 ::date 2013-09-06T06:31:04 ::annotator SDL-AMR-09 ::preferred
+# ::snt Is there a friend's house you could go to- form a study group?
+# ::save-date Sun Sep 8, 2013 ::file DF-200-192400-625_6344_30.txt
+(p / possible :mode interrogative
+      :domain (g / go-01
+            :ARG1 (y / you)
+            :ARG4 (h / house
+                  :poss (f / friend))
+            :purpose (f2 / form-01
+                  :ARG1 (g2 / group
+                        :ARG0-of (s / study-01)))))
+
+# ::id DF-200-192400-625_6344.31 ::date 2013-09-06T06:36:16 ::annotator SDL-AMR-09 ::preferred
+# ::snt So you want her sectioned cos she is a bit of a pain in the arse and you've blamed all your problems on her?
+# ::save-date Mon Sep 16, 2013 ::file DF-200-192400-625_6344_31.txt
+(c / cause-01
+      :ARG0 (a2 / and
+            :op1 (p / pain
+                  :location (a / arse)
+                  :degree (b / bit)
+                  :domain s)
+            :op2 (b2 / blame-01
+                  :ARG0 y
+                  :ARG1 s
+                  :ARG2 (p2 / problem
+                        :quant (a3 / all)
+                        :poss y)))
+      :ARG1 (w / want-01 :mode interrogative
+            :ARG0 (y / you)
+            :ARG1 (s / section-00
+                  :ARG1 (s2 / she))))
+
+# ::id DF-200-192400-625_6344.32 ::date 2013-09-05T03:41:12 ::annotator SDL-AMR-09 ::preferred
+# ::snt I know what you're feeling.
+# ::save-date Thu Sep 5, 2013 ::file DF-200-192400-625_6344_32.txt
+(k / know-01
+      :ARG0 (i / i)
+      :ARG1 (t / thing
+            :ARG1-of (f / feel-01
+                  :ARG0 (y / you))))
+
+# ::id DF-200-192400-625_6344.33 ::date 2013-09-05T03:42:08 ::annotator SDL-AMR-09 ::preferred
+# ::snt My Mum was spat out of hell too.
+# ::save-date Thu Sep 5, 2013 ::file DF-200-192400-625_6344_33.txt
+(s / spit-01
+      :ARG1 (m / mum
+            :poss (i / i))
+      :source (h / hell)
+      :mod (t / too))
+
+# ::id DF-200-192400-625_6344.34 ::date 2013-09-06T06:42:08 ::annotator SDL-AMR-09 ::preferred
+# ::snt I highly recommend taking up smoking
+# ::save-date Fri Sep 6, 2013 ::file DF-200-192400-625_6344_34.txt
+(r / recommend-01
+      :ARG0 (i / i)
+      :ARG1 (t / take-13
+            :ARG1 (s / smoke-02))
+      :degree (h / high))
+
+# ::id DF-200-192400-625_6344.35 ::date 2013-09-06T06:46:42 ::annotator SDL-AMR-09 ::preferred
+# ::snt Oh grow up tsr and stop negging its was a joke!!!
+# ::save-date Sun Sep 8, 2013 ::file DF-200-192400-625_6344_35.txt
+(m / multi-sentence
+      :snt1 (a / and
+            :op1 (g / grow-04
+                  :ARG1 (p / person :name (n / name :op1 "tsr")))
+            :op2 (s / stop-01
+                  :ARG0 p
+                  :ARG1 (n2 / nag-01
+                        :ARG0 p))
+            :mod (o / oh :mode expressive))
+      :snt2 (j / joke
+            :domain (i / it)))
+
+# ::id DF-200-192400-625_6677.1 ::date 2013-09-06T10:16:31 ::annotator SDL-AMR-09 ::preferred
+# ::snt I think over the last year or 2 i've become a much weaker person and in a way have dulled down my personality inorder to try and make some friends at uni.
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_6677_1.txt
+(t4 / think-01
+      :ARG0 (i / i)
+      :ARG1 (a2 / and
+            :op1 (b / become-01
+                  :ARG1 i
+                  :ARG2 (p / person
+                        :mod (w / weak
+                              :degree (m / more
+                                    :degree (m2 / much))))
+                  :time (b2 / between
+                        :op1 (t / temporal-quantity :quant 1
+                              :unit (y / year)
+                              :mod (l / last))
+                        :op2 (t2 / temporal-quantity :quant 2
+                              :unit (y2 / year)
+                              :mod l)))
+            :op2 (d / dull-01
+                  :ARG0 i
+                  :ARG1 (p2 / personality
+                        :poss i)
+                  :mod (d2 / down)
+                  :purpose (t3 / try-01
+                        :ARG0 i
+                        :ARG1 (m3 / make-02
+                              :ARG0 i
+                              :ARG1 (f / friend
+                                    :quant (s / some))
+                              :location (u / university)))
+                  :manner (w2 / way)
+                  :time b2)))
+
+# ::id DF-200-192400-625_6677.2 ::date 2013-09-06T10:17:20 ::annotator SDL-AMR-09 ::preferred
+# ::snt But being overly-nice to people has lead them to believe that they can say or do whatever the hell they want to me...
+# ::save-date Sat Sep 7, 2013 ::file DF-200-192400-625_6677_2.txt
+(c / contrast-01
+      :ARG2 (l / lead-03
+            :ARG0 (n / nice-41
+                  :ARG2 (p / person)
+                  :mod (o / over))
+            :ARG1 p
+            :ARG2 (b / believe-01
+                  :ARG0 p
+                  :ARG1 (p2 / possible
+                        :domain (o2 / or
+                              :op1 (s / say-01
+                                    :ARG0 p
+                                    :ARG1 (w / whatever
+                                          :ARG1-of (w2 / want-01
+                                                :ARG0 p)
+                                          :mod (h / hell))
+                                    :ARG2 (i / i))
+                              :op2 (d / do-02
+                                    :ARG0 p
+                                    :ARG1 w
+                                    :ARG2 i))))))
+
+# ::id DF-200-192400-625_6677.3 ::date 2013-09-06T10:17:41 ::annotator SDL-AMR-09 ::preferred
+# ::snt they show absolutely no respect.
+# ::save-date Fri Sep 6, 2013 ::file DF-200-192400-625_6677_3.txt
+(s / show-01
+      :ARG0 (t / they)
+      :ARG1 (r / respect-01 :polarity -
+            :ARG0 t
+            :mod (a / absolute)))
+
+# ::id DF-200-192400-625_6677.4 ::date 2013-09-06T10:20:28 ::annotator SDL-AMR-09 ::preferred
+# ::snt e.g. i'll say hello to someone from uni and they'll ignore me, but 30 minutes later they'll decide they want my help with some work... and i'll give it to them.
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_6677_4.txt
+(e / exemplify-01
+      :ARG0 (c / contrast-01
+            :ARG1 (a / and
+                  :op1 (s / say-01
+                        :ARG0 (i / i)
+                        :ARG1 (h / hello)
+                        :ARG2 (s2 / someone
+                              :source (u / university)))
+                  :op2 (i2 / ignore-01
+                        :ARG0 s2
+                        :ARG1 i))
+            :ARG2 (a2 / and
+                  :op1 (d / decide-01
+                        :ARG0 s2
+                        :ARG1 (w / want-01
+                              :ARG0 s2
+                              :ARG1 (h2 / help-01
+                                    :ARG0 i
+                                    :ARG1 (w2 / work-01
+                                          :mod (s3 / some))
+                                    :ARG2 s2))
+                        :time (l / late
+                              :op1 (t / temporal-quantity :quant 30
+                                    :unit (m2 / minute))
+                              :degree (m / more)))
+                  :op2 (g / give-01
+                        :ARG0 i
+                        :ARG1 h2
+                        :ARG2 s2))))
+
+# ::id DF-200-192400-625_6677.5 ::date 2013-09-06T10:21:11 ::annotator SDL-AMR-09 ::preferred
+# ::snt It's causing alot of anger and distress in my life and is really starting to effect my concentration in uni.
+# ::save-date Sun Sep 8, 2013 ::file DF-200-192400-625_6677_5.txt
+(a / and
+      :op1 (c / cause-01
+            :ARG0 (i / it)
+            :ARG1 (a2 / and
+                  :op1 (a3 / anger
+                        :prep-in (l / life
+                              :poss (i2 / i))
+                        :quant (l2 / lot))
+                  :op2 (d / distress-01
+                        :prep-in l)))
+      :op2 (s / start-01
+            :ARG0 i
+            :ARG1 (a4 / affect-01
+                  :ARG0 i
+                  :ARG1 (c2 / concentration
+                        :poss i2
+                        :location (u / university)))
+            :mod (r / really)))
+
+# ::id DF-200-192400-625_6677.6 ::script amr-snt-id-rep ::date 2013-09-08 ::annotator SDL-AMR-09 ::preferred
+# ::snt has anyone got any experience in handling this sort of thing or how to go about gaining some respect again?
+# ::save-date Sat Sep 7, 2013 ::file DF-200-192400-625_6677_6.txt
+(g2 / get-02 :mode interrogative
+      :ARG0 (a2 / anyone)
+      :ARG1 (e2 / experience-01
+            :ARG0 a2
+            :ARG1 (o / or
+                  :op1 (h / handle-01
+                        :ARG0 a2
+                        :ARG1 (t / thing
+                              :mod (s / sort
+                                    :mod (t2 / this))))
+                  :op2 (t3 / thing
+                        :manner-of (g3 / go-06
+                              :ARG1 (g4 / gain-02
+                                    :ARG1 (r / respect-01
+                                          :mod (s2 / some))
+                                    :mod (a3 / again)))))
+            :mod (a4 / any)))
+
+# ::id DF-200-192400-625_6677.7 ::date 2013-09-05T03:28:46 ::annotator SDL-AMR-09 ::preferred
+# ::snt Just say no.
+# ::save-date Thu Sep 5, 2013 ::file DF-200-192400-625_6677_7.txt
+(s / say-01
+      :ARG0 (y / you)
+      :ARG1 (n / no)
+      :mod (j / just))
+
+# ::id DF-200-192400-625_6677.8 ::date 2013-09-06T11:26:27 ::annotator SDL-AMR-09 ::preferred
+# ::snt Do it gradually if it's not something you're particularly comfortable with.
+# ::save-date Thu Sep 19, 2013 ::file DF-200-192400-625_6677_8.txt
+(h / have-condition-91
+      :ARG1 (d / do-02
+            :ARG0 (y / you)
+            :ARG1 (i / it)
+            :manner (g / gradual))
+      :ARG2 (c / comfortable :polarity -
+            :domain y
+            :mod (p / particular)
+            :topic i))
+
+# ::id DF-200-192400-625_6677.9 ::date 2013-09-06T10:32:47 ::annotator SDL-AMR-09 ::preferred
+# ::snt You could start with 'No, sorry but I'm busy'
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_6677_9.txt
+(p / possible
+      :domain (s / start-01
+            :ARG0 (y / you)
+            :ARG2 (c / contrast-01
+                  :ARG1 (s2 / sorry-41
+                        :ARG1 (i / i)
+                        :ARG2 (h / have-polarity-91
+                              :ARG2 -))
+                  :ARG2 (b / busy
+                        :domain i))))
+
+# ::id DF-200-192400-625_6677.10 ::date 2013-09-06T10:36:13 ::annotator SDL-AMR-09 ::preferred
+# ::snt Of course, don't go over the top with it lest you go in completely the opposite direction.
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_6677_10.txt
+(g / go-01 :polarity -
+      :ARG1 (y / you)
+      :ARG2 (t / top
+            :mod (o / over))
+      :prep-with (i / it)
+      :mod (o3 / of-course)
+      :purpose (g2 / go-01 :polarity -
+            :ARG1 y
+            :direction (d / direction
+                  :ARG1-of (o2 / opposite-41
+                        :degree (c / complete)))))
+
+# ::id DF-200-192400-625_6677.11 ::date 2013-09-06T11:21:50 ::annotator SDL-AMR-09 ::preferred
+# ::snt If, in your mind, you're thinking no - say it.
+# ::save-date Fri Sep 6, 2013 ::file DF-200-192400-625_6677_11.txt
+(h / have-condition-91
+      :ARG1 (s / say-01
+            :ARG0 y
+            :ARG1 n)
+      :ARG2 (t / think-01
+            :ARG0 (y / you)
+            :ARG1 (n / no)
+            :prep-in (m / mind
+                  :poss (y2 / you))))
+
+# ::id DF-200-192400-625_6677.12 ::date 2013-09-07T11:04:53 ::annotator SDL-AMR-09 ::preferred
+# ::snt When they start to realise that you're not going to bend over backwards for them, they'll start respecting you more.
+# ::save-date Sun Sep 8, 2013 ::file DF-200-192400-625_6677_12.txt
+(s / start-01
+      :ARG0 (t / they)
+      :ARG1 (r / respect-01
+            :ARG0 t
+            :ARG1 (y / you)
+            :degree (m / more))
+      :time (s2 / start-01
+            :ARG0 t
+            :ARG1 (r2 / realize-01
+                  :ARG0 t
+                  :ARG1 (b / bend-01 :polarity -
+                        :ARG1 y
+                        :mod (o / over)
+                        :direction (b2 / backwards)
+                        :beneficiary t))))
+
+# ::id DF-200-192400-625_6677.13 ::date 2013-09-07T11:17:33 ::annotator SDL-AMR-09 ::preferred
+# ::snt well this is such a bad attitude really, of course you can be respected if you're nice but not to the point where you just let them do anything to you, that's not being nice it's being a fool.
+# ::save-date Sun Sep 8, 2013 ::file DF-200-192400-625_6677_13.txt
+(m / multi-sentence
+      :snt1 (a / attitude
+            :mod (b / bad
+                  :mod (s / such))
+            :domain (t / this)
+            :mod (r / really)
+            :mod (w / well))
+      :snt2 (p / possible
+            :domain (r2 / respect-01
+                  :ARG1 (y / you))
+            :condition (c / contrast-01
+                  :ARG1 (n / nice-41
+                        :ARG1 y)
+                  :ARG2 (n2 / nice-41 :polarity -
+                        :ARG1 y
+                        :extent (l / let-01
+                              :ARG0 y
+                              :ARG1 (d / do-02
+                                    :ARG0 (t2 / they)
+                                    :ARG1 (a2 / anything)
+                                    :ARG2 y)
+                              :mod (j / just))))
+            :mod (o / of-course))
+      :snt3 (c2 / contrast-01
+            :ARG1 (n3 / nice-41 :polarity -
+                  :domain (t3 / that))
+            :ARG2 (p2 / person
+                  :ARG1-of (f / fool-01)
+                  :domain t3)))
+
+# ::id DF-200-192400-625_7046.1 ::date 2013-09-07T11:19:21 ::annotator SDL-AMR-09 ::preferred
+# ::snt I don't know if anyone will read this, but I just feel desperate and feel the need to tell someone.
+# ::save-date Sun Sep 8, 2013 ::file DF-200-192400-625_7046_1.txt
+(c / contrast-01
+      :ARG1 (k / know-01 :polarity -
+            :ARG0 (i / i)
+            :ARG1 (r / read-01 :mode interrogative
+                  :ARG0 (a / anyone)
+                  :ARG1 (t / this)))
+      :ARG2 (a2 / and
+            :op1 (f / feel-01
+                  :ARG0 i
+                  :ARG1 (d / desperate)
+                  :mod (j / just))
+            :op2 (f2 / feel-01
+                  :ARG0 i
+                  :ARG1 (n / need-01
+                        :ARG0 i
+                        :ARG1 (t2 / tell-01
+                              :ARG0 i
+                              :ARG2 (s / someone))))))
+
+# ::id DF-200-192400-625_7046.2 ::date 2013-09-07T12:26:15 ::annotator SDL-AMR-09 ::preferred
+# ::snt This September I left home, and started at University. I was incredibly anxious about doing this, but rather delayed thinking about it until I got here! Now I'm here, and have been for over two weeks, I feel terribly overwhelmed by it all and feel unintelligent and socially awkward.
+# ::save-date Thu Sep 19, 2013 ::file DF-200-192400-625_7046_2.txt
+(m / multi-sentence
+      :snt1 (a / and
+            :op1 (l / leave-01
+                  :ARG0 (i / i)
+                  :ARG1 (h / home)
+                  :time (d / date-entity :month 9))
+            :op2 (s / start-01
+                  :ARG0 i
+                  :ARG2 (u / university)))
+      :snt2 (c / contrast-01
+            :ARG1 (a7 / anxious
+                  :domain (i2 / i)
+                  :topic (d2 / do-02
+                        :ARG0 i2
+                        :ARG1 (t3 / this))
+                  :degree (i4 / incredible))
+            :ARG2 (d3 / delay-01
+                  :ARG0 i2
+                  :ARG1 (t2 / think-01
+                        :ARG0 i2
+                        :ARG1 t3)
+                  :ARG2 (u2 / until
+                        :op1 (g / get-05
+                              :ARG1 i2
+                              :ARG2 (h2 / here)))))
+      :snt3 (a2 / and
+            :op1 (b / be-located-at-91
+                  :ARG1 (i3 / i)
+                  :ARG2 (h3 / here)
+                  :time (n / now))
+            :op2 (b2 / be-located-at-91
+                  :ARG1 i3
+                  :ARG2 h3
+                  :time (o / over
+                        :op1 (t / temporal-quantity :quant 2
+                              :unit (w / week)))))
+      :snt4 (a3 / and
+            :op1 (f / feel-01
+                  :ARG0 (i5 / i)
+                  :ARG1 (o2 / overwhelm-01
+                        :ARG0 (i6 / it
+                              :mod (a4 / all))
+                        :ARG1 i5
+                        :degree (t4 / terrible)))
+            :op2 (f2 / feel-01
+                  :ARG0 i5
+                  :ARG1 (a5 / and
+                        :op1 (i7 / intelligent-41 :polarity -
+                              :ARG1 i5)
+                        :op2 (a6 / awkward
+                              :mod (s2 / social))))))
+
+# ::id DF-200-192400-625_7046.3 ::date 2013-09-08T01:34:56 ::annotator SDL-AMR-09 ::preferred
+# ::snt I have been struggling emotionally for the majority of my life since moving to Secondary School, although I did lose my dad at around the age of 9 and always used to blame that for my feelings. I have had two periods of counselling in my life, over roughly 15 months from December 2009 until around March this year.
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_7046_3.txt
+(m2 / multi-sentence
+      :snt1 (s / struggle-01
+            :ARG0 (i / i)
+            :manner (e / emotional)
+            :duration (l / live-01
+                  :ARG0 i
+                  :quant (m3 / majority))
+            :concession (a / and
+                  :op1 (l2 / lose-02
+                        :ARG0 i
+                        :ARG1 (d3 / dad
+                              :poss i)
+                        :time (a2 / around
+                              :op1 (a3 / age-01
+                                    :ARG1 i
+                                    :ARG2 (t2 / temporal-quantity :quant 9
+                                          :unit (y / year)))))
+                  :op2 (b / blame-01
+                        :ARG0 i
+                        :ARG1 l2
+                        :ARG2 (t3 / thing
+                              :ARG1-of (f / feel-01
+                                    :ARG0 i))
+                        :time (a5 / always)))
+            :duration (s4 / since
+                  :op1 (m4 / move-01
+                        :ARG1 i
+                        :ARG2 (s2 / school
+                              :mod (s3 / secondary)))))
+      :snt2 (h / have-03
+            :ARG0 (i2 / i)
+            :ARG1 (p / period :quant 2
+                  :consist-of (c / counsel-01
+                        :ARG1 i2)
+                  :time (l3 / live-01
+                        :ARG0 i2))
+            :time (d4 / date-interval
+                  :op1 (d / date-entity :year 2009 :month 12)
+                  :op2 (y2 / year
+                        :mod (t4 / this)
+                        :mod (a4 / around
+                              :op1 (d2 / date-entity :month 3))))
+            :duration (r2 / roughly
+                  :op1 (t / temporal-quantity :quant 15
+                        :unit (m / month)))))
+
+# ::id DF-200-192400-625_7046.4 ::date 2013-09-08T02:06:59 ::annotator SDL-AMR-09 ::preferred
+# ::snt I feel at the moment like the problems in my life are incredibly overwhelming, and are making me ever more doubtful of my always low self-esteem. I have no ability to concentrate on work, often find myself becoming very quiet in social occasions, and doubt myself over anything and everything.
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_7046_4.txt
+(m / multi-sentence
+      :snt1 (f / feel-01
+            :ARG0 (i / i)
+            :ARG1 (t / thing
+                  :ARG1-of (r / resemble-01
+                        :ARG2 (a / and
+                              :op1 (o / overwhelm-01
+                                    :ARG0 (p / problem
+                                          :part-of (l / live-01
+                                                :ARG0 i))
+                                    :degree (c3 / credible :polarity -))
+                              :op2 (m2 / make-02
+                                    :ARG0 i
+                                    :ARG1 (d / doubt-01
+                                          :ARG0 i
+                                          :ARG1 (e / esteem
+                                                :mod (s / self)
+                                                :mod (l2 / low
+                                                      :time (a2 / always))
+                                                :poss i)
+                                          :degree (m3 / more
+                                                :mod (e2 / ever)))))))
+            :time (m4 / moment))
+      :snt2 (a3 / and
+            :op1 (c / capable-41 :polarity -
+                  :ARG1 (i3 / i)
+                  :ARG2 (c2 / concentrate-01
+                        :ARG0 i3
+                        :ARG1 (w / work-01)))
+            :op2 (f2 / find-01
+                  :ARG0 i3
+                  :ARG1 (b / become-01
+                        :ARG1 i3
+                        :ARG2 (q / quiet-01
+                              :ARG1 i3
+                              :degree (v / very)
+                              :time (o2 / occasion
+                                    :mod (s2 / society))))
+                  :frequency (o3 / often))
+            :op3 (d2 / doubt-01
+                  :ARG0 i3
+                  :ARG1 i3
+                  :topic (a4 / and
+                        :op1 (a5 / anything)
+                        :op2 (e3 / everything)))))
+
+# ::id DF-200-192400-625_7046.5 ::date 2013-09-08T02:45:30 ::annotator SDL-AMR-09 ::preferred
+# ::snt Neither of my counsellers have diagnosed me with depression, and both have suggested I do not suffer from it, but it is a huge worry to me, as depression was the cause of my dad's death, suicide.
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_7046_5.txt
+(c / contrast-01
+      :ARG1 (a / and
+            :op1 (d / diagnose-01 :polarity -
+                  :ARG0 (p / person :quant 2
+                        :ARG0-of (c2 / counsel-01
+                              :ARG1 i))
+                  :ARG1 (i / i)
+                  :ARG2 (d2 / depression))
+            :op2 (s / suggest-01
+                  :ARG0 p
+                  :ARG1 (s2 / suffer-01 :polarity -
+                        :ARG0 i
+                        :ARG1 d2)))
+      :ARG2 (w / worry-01
+            :ARG0 d2
+            :ARG1 i
+            :mod (h / huge)
+            :ARG1-of (c4 / cause-01
+                  :ARG0 (d3 / depression
+                        :ARG0-of (c5 / cause-01
+                              :ARG1 (d4 / die-01
+                                    :ARG1 (d5 / dad
+                                          :poss i)))
+                        :ARG0-of (c6 / cause-01
+                              :ARG1 (s3 / suicide
+                                    :poss d5))))))
+
+# ::id DF-200-192400-625_7046.6 ::date 2013-09-08T03:15:40 ::annotator SDL-AMR-09 ::preferred
+# ::snt I have tried to solve my problems before, and have found exercise and meditation particularly useful, and have also tried things like self-help books and tapes. But my general feeling, is, 'Is this what my life will be? My one chance at existance, my one chance of being a young man, I am wasting it!' And these feelings are beating away at me.
+# ::save-date Sun Sep 8, 2013 ::file DF-200-192400-625_7046_6.txt
+(m / multi-sentence
+      :snt1 (a / and
+            :op1 (t / try-01
+                  :ARG0 (i / i)
+                  :ARG1 (s / solve-01
+                        :ARG0 i
+                        :ARG1 (p / problem
+                              :poss i))
+                  :time (b / before))
+            :op2 (f / find-02
+                  :ARG0 i
+                  :ARG1 (u / useful
+                        :mod (p2 / particular)
+                        :domain (a2 / and
+                              :op1 (e / exercise)
+                              :op2 (m2 / meditation))))
+            :op3 (t2 / try-01
+                  :ARG0 i
+                  :ARG1 (t3 / thing
+                        :example (a3 / and
+                              :op1 (b2 / book
+                                    :ARG0-of (h / help-01
+                                          :mod (s2 / self)))
+                              :op2 (t4 / tape
+                                    :ARG0-of h)))
+                  :mod (a4 / also)))
+      :snt2 (c / contrast-01
+            :ARG2 (f2 / feel-01
+                  :ARG0 (i2 / i)
+                  :ARG1 (t5 / thing :mode interrogative
+                        :ARG1-of (l / live-01
+                              :ARG0 i2)
+                        :domain (t6 / this))
+                  :mod (g / general)))
+      :snt3 (w / waste-01 :mode expressive
+            :ARG0 (i3 / i)
+            :ARG1 (a5 / and
+                  :op1 (c2 / chance
+                        :poss i3
+                        :prep-at (e2 / exist-01
+                              :ARG1 i3)
+                        :mod (o / one))
+                  :op2 (c3 / chance
+                        :poss i3
+                        :consist-of (m3 / man
+                              :mod (y / young)
+                              :domain i3)
+                        :mod o)))
+      :snt4 (b3 / beat-02
+            :ARG1 (t7 / thing
+                  :ARG1-of (f3 / feel-01
+                        :ARG0 (i4 / i))
+                  :mod (t8 / this))
+            :ARG2 (a6 / away)
+            :prep-at i4))
+
+# ::id DF-200-192400-625_7046.7 ::date 2013-09-08T04:26:34 ::annotator SDL-AMR-09 ::preferred
+# ::snt I simply don't know what to do, and when I think of things to do, I never follow through with it. Friends often say I'm lazy, and I can't disagree a lot of the time. I feel like everything anyone could do to help, people have tried, and time and time again I fail.
+# ::save-date Thu Sep 19, 2013 ::file DF-200-192400-625_7046_7.txt
+(m / multi-sentence
+      :snt1 (a / and
+            :op1 (k / know-01 :polarity -
+                  :ARG0 (i / i)
+                  :ARG1 (t / thing
+                        :ARG1-of (d / do-02
+                              :ARG0 i))
+                  :mod (s / simple))
+            :op2 (f / follow-07 :polarity -
+                  :ARG0 i
+                  :ARG1 t3
+                  :time (t2 / think-01
+                        :ARG0 i
+                        :ARG1 (t3 / thing
+                              :ARG1-of (d2 / do-02
+                                    :ARG0 i)))
+                  :time (e / ever)))
+      :snt2 (a2 / and
+            :op1 (s2 / say-01
+                  :ARG0 (f2 / friend)
+                  :ARG1 (l / lazy
+                        :domain (i2 / i))
+                  :frequency (o / often))
+            :op2 (p / possible :polarity -
+                  :domain (d4 / disagree-01
+                        :ARG0 i2
+                        :time (t4 / time
+                              :quant (l2 / lot)))))
+      :snt3 (a4 / and
+            :op1 (f3 / feel-01
+                  :ARG0 (i3 / i)
+                  :ARG1 (t5 / thing
+                        :ARG1-of (r / resemble-01
+                              :ARG2 (t6 / try-01
+                                    :ARG0 (p2 / person)
+                                    :ARG1 (e2 / everything
+                                          :ARG1-of (d3 / do-02
+                                                :ARG0 (a5 / anyone)
+                                                :ARG2 (h / help-01)
+                                                :mod (p3 / possible)))))))
+            :op2 (f4 / fail-01
+                  :ARG1 i3
+                  :mod (a6 / again
+                        :op1 (t7 / time)
+                        :op2 (t8 / time)))))
+
+# ::id DF-200-192400-625_7046.8 ::date 2013-09-07T11:35:34 ::annotator SDL-AMR-09 ::preferred
+# ::snt Sorry to anyone whose read this jumbled mess, and I feel a bit like a self-seeking moaner, but I truly do feel desperate.
+# ::save-date Sat Sep 7, 2013 ::file DF-200-192400-625_7046_8.txt
+(a / and
+      :op1 (s / sorry-41
+            :ARG1 (i / i)
+            :beneficiary (a2 / anyone
+                  :ARG0-of (r / read-01
+                        :ARG1 (m / mess
+                              :ARG1-of (j / jumble-01)
+                              :mod (t / this)))))
+      :op2 (c / contrast-01
+            :ARG1 (f / feel-01
+                  :ARG0 i
+                  :ARG1 (r2 / resemble-01
+                        :ARG1 i
+                        :ARG2 (p / person
+                              :ARG0-of (m2 / moan-01)
+                              :ARG0-of (s2 / seek-01
+                                    :mod (s3 / self))))
+                  :degree (b / bit))
+            :ARG2 (f2 / feel-01
+                  :ARG0 i
+                  :ARG1 (d / desperate)
+                  :mod (t2 / true))))
+
+# ::id DF-200-192400-625_7046.9 ::date 2013-09-07T11:47:29 ::annotator SDL-AMR-09 ::preferred
+# ::snt Its not uncommon for people's existing feelings about themselves to become more intense when they are in new situations and feel the pressure to socialise with strangers and fit into new roles, i.e. being a university student.
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_7046_9.txt
+(c / common
+      :domain (b / become-01
+            :ARG1 (t / thing
+                  :ARG1-of (f / feel-01
+                        :ARG0 (p / person)
+                        :ARG2 p)
+                  :ARG1-of (e / exist-01))
+            :ARG2 (i / intense
+                  :degree (m / more))
+            :time (a / and
+                  :op1 (b2 / be-located-at-91
+                        :ARG1 p
+                        :ARG2 (s / situation
+                              :mod (n / new)))
+                  :op2 (f2 / feel-01
+                        :ARG0 p
+                        :ARG1 (p2 / pressure-01
+                              :ARG1 p
+                              :ARG2 (a2 / and
+                                    :op1 (s2 / socialize-01
+                                          :ARG0 p
+                                          :prep-with (s3 / stranger))
+                                    :op2 (f3 / fit-01
+                                          :ARG1 p
+                                          :location (r / role
+                                                :mod n
+                                                :example (p3 / person
+                                                      :ARG0-of (s4 / study-01
+                                                            :location (u / university)))))))))))
+
+# ::id DF-200-192400-625_7046.10 ::date 2013-09-07T12:57:33 ::annotator SDL-AMR-09 ::preferred
+# ::snt I am not a health professional and I can only speak from personal experience which is why I strongly suggest you see a qualified health professional about your feelings and worries about depression.
+# ::save-date Sun Sep 8, 2013 ::file DF-200-192400-625_7046_10.txt
+(a / and
+      :op1 (p / professional :polarity -
+            :mod (h / health)
+            :domain (i / i))
+      :op2 (p2 / possible
+            :domain (s / speak-01
+                  :ARG0 i
+                  :source (e / experience-01
+                        :ARG0 i)
+                  :mod (o / only))
+            :ARG0-of (c / cause-01
+                  :ARG1 (s2 / suggest-01
+                        :ARG0 i
+                        :ARG1 (s3 / see-01
+                              :ARG0 (y / you)
+                              :ARG1 (p3 / professional
+                                    :mod (h2 / health)
+                                    :ARG1-of (q / qualify-02))
+                              :topic (a2 / and
+                                    :op1 (t / thing
+                                          :ARG1-of (f / feel-01
+                                                :ARG0 y
+                                                :ARG2 (d / depression)))
+                                    :op2 (w / worry-02
+                                          :ARG0 y
+                                          :ARG1 d)))
+                        :manner (s4 / strong)))))
+
+# ::id DF-200-192400-625_7046.11 ::date 2013-09-07T12:17:56 ::annotator SDL-AMR-09 ::preferred
+# ::snt Most people feel unintelligent and awkward when they first get to uni- you're definitely not alone there. But I would really recommend that you get an appointment with your uni counselling services. It doesn't really matter whether anyone has told you that you are depressed or not, you are obviously having some problems at the minute and could use some support- labels aren't as important as your experiences. Meditation and exercise are really helpful, so definitely try to do those. But yeah, you will have to engage with help and life in general to get somewhere- but don't beat yourself up about feeling unmotivated to do anything at the minute, lots of people feel like this and hopefully it will pass as you begin to feel better. Being unkind to yourself will only make you feel worse- be kind to yourself and get some help.
+# ::save-date Thu Sep 19, 2013 ::file DF-200-192400-625_7046_11.txt
+(m / multi-sentence
+      :snt1 (f / feel-01
+            :ARG0 (p / person
+                  :quant (m2 / most))
+            :ARG1 (a / and
+                  :op1 (i / intelligent-41 :polarity -
+                        :ARG1 p)
+                  :op2 (a2 / awkward))
+            :time (g / get-05
+                  :ARG1 p
+                  :ARG2 (u / university)
+                  :ord (o5 / ordinal-entity :value 1))
+            :ARG0-of (c3 / cause-01
+                  :ARG1 (a4 / alone :polarity -
+                        :domain (y / you)
+                        :location u
+                        :mod (d / definite))))
+      :snt2 (c / contrast-01
+            :ARG2 (r / recommend-01
+                  :ARG0 (i2 / i)
+                  :ARG1 (g2 / get-01
+                        :ARG0 (y2 / you)
+                        :ARG1 (a5 / appointment
+                              :prep-with (s / service
+                                    :ARG0-of (c2 / counsel-01
+                                          :ARG1 y)
+                                    :location (u2 / university
+                                          :poss y))))
+                  :mod (r2 / really)))
+      :snt3 (m3 / matter-01 :polarity -
+            :ARG1 (t / tell-01
+                  :ARG0 (a3 / anyone)
+                  :ARG1 (o / or
+                        :op1 (d2 / depress-01
+                              :ARG1 y3)
+                        :op2 (d3 / depress-01 :polarity -
+                              :ARG1 y3))
+                  :ARG2 (y3 / you))
+            :mod (r3 / really))
+      :snt4 (a6 / and
+            :op1 (h / have-03
+                  :ARG0 (y4 / you)
+                  :ARG1 (p2 / problem
+                        :quant (s2 / some))
+                  :ARG1-of (o2 / obvious-41)
+                  :time (m10 / minute))
+            :op2 (p3 / possible
+                  :domain (u3 / use-01
+                        :ARG0 y4
+                        :ARG1 (s3 / support-01
+                              :ARG1 y4
+                              :mod (s4 / some)))))
+      :snt5 (i3 / important
+            :domain (t2 / thing
+                  :ARG2-of (l / label-01))
+            :ARG1-of (e / equal-01 :polarity -
+                  :ARG2 (t3 / thing
+                        :ARG1-of (e2 / experience-01
+                              :ARG0 (y5 / you)))))
+      :snt6 (h2 / help-01
+            :ARG0 (a7 / and
+                  :op1 (m4 / meditation)
+                  :op2 (e3 / exercise))
+            :mod (r4 / really)
+            :ARG0-of (c4 / cause-01
+                  :ARG1 (t4 / try-01
+                        :ARG0 (y6 / you)
+                        :ARG1 (d4 / do-02
+                              :ARG0 y6
+                              :ARG1 a7))))
+      :snt7 (c5 / contrast-01
+            :ARG2 (c6 / contrast-01
+                  :ARG1 (o3 / obligate-01
+                        :ARG2 (e4 / engage-01
+                              :ARG1 (y7 / you)
+                              :ARG2 (a8 / and
+                                    :op1 (h3 / help)
+                                    :op2 (l2 / life
+                                          :mod (g3 / general)))
+                              :purpose (g4 / get-05
+                                    :ARG1 y7
+                                    :ARG2 (s5 / somewhere))))
+                  :ARG2 (b / beat-00 :polarity -
+                        :ARG1 y7
+                        :ARG1-of (c7 / cause-01
+                              :ARG0 (f3 / feel-01
+                                    :ARG0 y7
+                                    :ARG1 (m5 / motivate-01 :polarity -
+                                          :ARG1 y7
+                                          :ARG2 (d5 / do-02
+                                                :ARG0 y7
+                                                :ARG1 (a9 / anything)
+                                                :time (m6 / minute))))))))
+      :snt8 (a10 / and
+            :op1 (f4 / feel-01
+                  :ARG0 (p4 / person
+                        :quant (l3 / lot))
+                  :ARG1 (t5 / thing
+                        :ARG1-of (r5 / resemble-01
+                              :ARG2 (t6 / this))))
+            :op2 (p5 / pass-03
+                  :ARG1 t5
+                  :ARG1-of (h5 / hope-01)
+                  :time (b3 / begin-01
+                        :ARG0 y8
+                        :ARG1 (f5 / feel-01
+                              :ARG0 (y8 / you)
+                              :ARG1 (g5 / good
+                                    :degree (m7 / more))))))
+      :snt9 (m8 / make-02
+            :ARG0 (k / kind-41 :polarity -
+                  :ARG1 (y9 / you)
+                  :ARG2 y9)
+            :ARG1 (f6 / feel-01
+                  :ARG0 y9
+                  :ARG1 (b2 / bad
+                        :degree (m9 / more)))
+            :mod (o4 / only))
+      :snt10 (a11 / and
+            :op1 (k2 / kind-41 :mode imperative
+                  :ARG1 (y10 / you)
+                  :ARG2 y10)
+            :op2 (g6 / get-01 :mode imperative
+                  :ARG0 y10
+                  :ARG1 (h4 / help-01
+                        :ARG2 y10
+                        :mod (s6 / some)))))
+
+# ::id DF-200-192400-625_7046.12 ::date 2013-09-06T10:37:15 ::annotator SDL-AMR-09 ::preferred
+# ::snt Good luck.
+# ::save-date Fri Sep 6, 2013 ::file DF-200-192400-625_7046_12.txt
+(l / luck
+      :mod (g / good))
+
+# ::id DF-200-192400-625_7046.13 ::date 2013-09-07T11:28:40 ::annotator SDL-AMR-09 ::preferred
+# ::snt I think a lot more people feel the same way as you do, but medicate themselves by using friends. Whilst it probably isn't a 'solution' as such, being around friends whilst being depressed is definitely better than being alone and being depressed. Either way, if you fancy a chat, feel free to PM
+# ::save-date Mon Sep 16, 2013 ::file DF-200-192400-625_7046_13.txt
+(m / multi-sentence
+      :snt1 (t / think-01
+            :ARG0 (i / i)
+            :ARG1 (c / contrast-01
+                  :ARG1 (f / feel-01
+                        :ARG0 (p / person
+                              :quant (l / lot
+                                    :degree (m2 / more)))
+                        :ARG1 (w / way
+                              :ARG1-of (s / same-41
+                                    :ARG2 (f2 / feel-01
+                                          :ARG0 (y / you)))))
+                  :ARG2 (m3 / medicate-01
+                        :ARG0 p
+                        :ARG1 p
+                        :instrument (u / use-01
+                              :ARG0 p
+                              :ARG1 (f3 / friend)))))
+      :snt2 (c2 / contrast-01
+            :ARG1 (s2 / solution :polarity -
+                  :mod (a / as-such)
+                  :domain b
+                  :mod (p3 / probable))
+            :ARG2 (g / good
+                  :degree (m4 / more)
+                  :domain (b / be-located-at-91
+                        :ARG1 (y2 / you)
+                        :ARG2 (a2 / around
+                              :op1 (f4 / friend))
+                        :time (d / depress-01
+                              :ARG1 y2))
+                  :compared-to (a3 / and
+                        :op1 (a4 / alone
+                              :domain y2)
+                        :op2 d)
+                  :mod (d2 / definite)))
+      :snt3 (h / have-condition-91
+            :ARG1 (f5 / feel-01
+                  :ARG0 (y3 / you)
+                  :ARG1 (f6 / free-41
+                        :ARG1 y3
+                        :ARG2 (p2 / PM)))
+            :ARG2 (f7 / fancy-02
+                  :ARG0 y3
+                  :ARG1 (c3 / chat-01
+                        :ARG0 y3))
+            :mod (w2 / way
+                  :mod (e / either))))
+
+# ::id DF-200-192400-625_7046.14 ::date 2013-09-07T11:33:11 ::annotator SDL-AMR-09 ::preferred
+# ::snt If i were you id focus on an idol. Someone you aspire to (not want to be them but someone who your admire and have respect for) e.g. someone who came from a bad background and ended up successful and happy with a family and married etc etc
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_7046_14.txt
+(m / multi-sentence
+      :snt1 (f / focus-01
+            :ARG0 (i / i)
+            :ARG2 (i2 / idol)
+            :condition (y / you
+                  :domain i))
+      :snt2 (a / aspire-01
+            :ARG0 (y2 / you)
+            :ARG1 (s / someone
+                  :example (s2 / someone
+                        :ARG1-of (c / come-03
+                              :ARG2 (b / background
+                                    :mod (b2 / bad)))
+                        :ARG1-of (e / end-03
+                              :ARG2 (a2 / and
+                                    :op1 (s3 / succeed-01
+                                          :ARG0 s2)
+                                    :op2 (h / happy
+                                          :domain s2)
+                                    :op3 (h2 / have-03
+                                          :ARG0 s2
+                                          :ARG1 (f2 / family))
+                                    :op4 (m2 / marry-01
+                                          :ARG1 s2)
+                                    :op5 (e2 / et-cetera))))))
+      :snt3 (c3 / contrast-01
+            :ARG1 (w / want-01 :polarity -
+                  :ARG0 (y3 / you)
+                  :ARG1 (t / they
+                        :domain y3))
+            :ARG2 (s4 / someone
+                  :ARG1-of (a3 / admire-01
+                        :ARG0 y3)
+                  :ARG1-of (r / respect-01
+                        :ARG0 y3))))
+
+# ::id DF-200-192400-625_7046.15 ::date 2013-09-07T11:48:39 ::annotator SDL-AMR-09 ::preferred
+# ::snt Focus on what you want to achieve in life, you havent stated what your studying, or indeed why....is it because you wanted the experience? Because your mum wanted yo to go? Because u need a degree for the career you want to do?
+# ::save-date Mon Sep 16, 2013 ::file DF-200-192400-625_7046_15.txt
+(m / multi-sentence
+      :snt1 (f / focus-01
+            :ARG0 (y / you)
+            :ARG2 (t / thing
+                  :ARG1-of (a / achieve-01
+                        :ARG0 y
+                        :prep-in (l / life))))
+      :snt2 (s / state-01 :polarity -
+            :ARG0 (y2 / you)
+            :ARG1 (o / or
+                  :op1 (t2 / thing
+                        :ARG1-of (s2 / study-01
+                              :ARG0 y2))
+                  :op2 (t3 / thing
+                        :ARG0-of (c / cause-01
+                              :ARG1 s2)
+                        :mod (i / indeed))))
+      :snt3 (c2 / cause-01
+            :ARG0 (w / want-01 :mode interrogative
+                  :ARG0 (y3 / you)
+                  :ARG1 (e / experience-01
+                        :ARG0 y3)))
+      :snt4 (c3 / cause-01
+            :ARG0 (w2 / want-01 :mode interrogative
+                  :ARG0 (m2 / mum
+                        :poss y4)
+                  :ARG1 (g / go-01
+                        :ARG1 (y4 / you))))
+      :snt5 (c4 / cause-01
+            :ARG0 (n / need-01 :mode interrogative
+                  :ARG0 (y5 / you)
+                  :ARG1 (d / degree)
+                  :prep-for (c5 / career
+                        :ARG1-of (w3 / want-01
+                              :ARG0 y5)))))
+
+# ::id DF-200-192400-625_7046.16 ::date 2013-09-08T08:31:17 ::annotator SDL-AMR-09 ::preferred
+# ::snt Either way, sum up why youre there and work your bottom off to get the best grades you can, cos once you get ur degree, you wil have something you can say "hey i didnt fail, it was hard work and i passed"
+# ::save-date Sun Sep 8, 2013 ::file DF-200-192400-625_7046_16.txt
+(a / and
+      :op1 (s / sum-01
+            :ARG0 (y / you)
+            :ARG1 (t / thing
+                  :ARG0-of (c / cause-01
+                        :ARG1 (b / be-located-at-91
+                              :ARG1 y
+                              :ARG2 (t2 / there)))))
+      :op2 (w / work-01
+            :ARG0 y
+            :ARG1 (b2 / bottom
+                  :poss y)
+            :purpose (g / get-01
+                  :ARG0 y
+                  :ARG1 (g2 / grade
+                        :mod (g3 / good
+                              :degree (m / most)
+                              :mod (p / possible)))))
+      :ARG1-of (c2 / cause-01
+            :ARG0 (h / have-03
+                  :ARG0 y
+                  :ARG1 (s2 / something
+                        :ARG1-of (s3 / say-01
+                              :ARG0 y
+                              :mod (p2 / possible))
+                        :example (a2 / and
+                              :op1 (f / fail-01 :polarity -
+                                    :ARG1 (i / i)
+                                    :mod (h2 / hey :mode expressive))
+                              :op2 (a3 / and
+                                    :op1 (w2 / work-01
+                                          :manner (h3 / hard)
+                                          :domain (i2 / it))
+                                    :op2 (p3 / pass-07
+                                          :ARG1 i))))
+                  :time (g4 / get-01
+                        :ARG0 y
+                        :ARG1 (d / degree
+                              :poss y))))
+      :mod (w3 / way
+            :mod (e / either)))
+
+# ::id DF-200-192400-625_7046.17 ::script amr-snt-id-rep ::date 2013-09-17 ::annotator SDL-AMR-09 ::preferred
+# ::snt X
+# ::save-date Mon Sep 16, 2013 ::file DF-200-192400-625_7046_17.txt
+(x / X)
+
+# ::id DF-200-192400-625_7046.18 ::date 2013-09-05T03:24:22 ::annotator SDL-AMR-09 ::preferred
+# ::snt hope this helps
+# ::save-date Thu Sep 5, 2013 ::file DF-200-192400-625_7046_18.txt
+(h / hope-01
+      :ARG0 (i / i)
+      :ARG1 (h2 / help-01
+            :ARG0 (t / this)))
+
+# ::id DF-200-192400-625_7200.1 ::date 2013-09-05T19:38:56 ::annotator SDL-AMR-09 ::preferred
+# ::snt I'm pretty much non-autistic (not diagnosed with dyspraxia but I think the doctor misdiagnosed), but I walk on my toes nearly all of the time.
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_7200_1.txt
+(c / contrast-01
+      :ARG1 (a / autistic :polarity -
+            :ARG0-of (m / mean-01
+                  :ARG1 (d4 / diagnose-01 :polarity -
+                        :ARG1 i
+                        :ARG2 (d2 / dyspraxia)
+                        :ARG1-of (c2 / contrast-01
+                              :ARG2 (t / think-01
+                                    :ARG0 i
+                                    :ARG1 (m2 / misdiagnose-01
+                                          :ARG0 (d3 / doctor))))))
+            :degree (p / pretty-much)
+            :domain (i / i))
+      :ARG2 (w / walk-01
+            :ARG0 i
+            :prep-on (t2 / toe
+                  :part-of i)
+            :frequency (t3 / time
+                  :quant (n / nearly
+                        :op1 (a2 / all)))))
+
+# ::id DF-200-192400-625_7200.2 ::date 2013-09-05T23:22:32 ::annotator SDL-AMR-09 ::preferred
+# ::snt It's more comfortable to me.
+# ::save-date Fri Sep 6, 2013 ::file DF-200-192400-625_7200_2.txt
+(c / comfortable
+      :degree (m / more)
+      :beneficiary (i / i)
+      :domain (i2 / it))
+
+# ::id DF-200-192400-625_7200.3 ::date 2013-09-06T00:06:29 ::annotator SDL-AMR-09 ::preferred
+# ::snt What made them decide toe-walking is a sign of autism since it seems so random and isn't always indicative?
+# ::save-date Sun Sep 15, 2013 ::file DF-200-192400-625_7200_3.txt
+(m / make-02
+      :ARG0 (a / amr-unknown)
+      :ARG1 (d / decide-01
+            :ARG0 (t / they)
+            :ARG1 (s / signal-01
+                  :ARG0 (w / walk-01
+                        :manner (t2 / toe))
+                  :ARG1 (a2 / autism)))
+      :ARG1-of (c / cause-01
+            :ARG0 (a3 / and
+                  :op1 (s2 / seem-01
+                        :ARG1 (r / random
+                              :degree (s3 / so)
+                              :domain w))
+                  :op2 (i / indicate-01 :polarity -
+                        :ARG0 w
+                        :time (a4 / always)))))
+
+# ::id DF-200-192400-625_7200.4 ::date 2013-09-06T00:13:18 ::annotator SDL-AMR-09 ::preferred
+# ::snt Well I might have signs of something on the autism spectrum but who doesn't have one or two?
+# ::save-date Sun Sep 15, 2013 ::file DF-200-192400-625_7200_4.txt
+(c / contrast-01
+      :ARG1 (p / possible
+            :domain (h / have-03
+                  :ARG0 (i / i)
+                  :ARG1 (t / thing
+                        :ARG0-of (s / signal-01
+                              :ARG1 (s2 / something
+                                    :location (s3 / spectrum
+                                          :mod (a / autism)))))))
+      :ARG2 (h2 / have-03 :polarity -
+            :ARG0 (a2 / amr-unknown)
+            :ARG1 (o2 / or
+                  :op1 (t2 / thing :quant 1
+                        :ARG0-of s)
+                  :op2 (t3 / thing :quant 2
+                        :ARG0-of s)))
+      :mod (w / well))
+
+# ::id DF-200-192400-625_7200.5 ::date 2013-09-06T00:29:10 ::annotator SDL-AMR-09 ::preferred
+# ::snt You guys know what I mean.
+# ::save-date Fri Sep 6, 2013 ::file DF-200-192400-625_7200_5.txt
+(k / know-01
+      :ARG0 (g / guy
+            :mod (y / you))
+      :ARG1 (t / thing
+            :ARG1-of (m / mean-01
+                  :ARG0 (i / i))))
+
+# ::id DF-200-192400-625_7200.6 ::date 2013-09-06T00:30:04 ::annotator SDL-AMR-09 ::preferred
+# ::snt Walking on toes can be a symptom of autism.
+# ::save-date Fri Sep 6, 2013 ::file DF-200-192400-625_7200_6.txt
+(p / possible
+      :domain (s / symptom
+            :mod (a / autism)
+            :domain (w / walk-01
+                  :prep-on (t / toe))))
+
+# ::id DF-200-192400-625_7200.7 ::date 2013-09-06T00:31:22 ::annotator SDL-AMR-09 ::preferred
+# ::snt Having a headache can be a symptom of brain tumours.
+# ::save-date Sat Sep 7, 2013 ::file DF-200-192400-625_7200_7.txt
+(p / possible
+      :domain (s / symptom
+            :mod (t / tumour
+                  :mod (b / brain))
+            :domain (h / headache)))
+
+# ::id DF-200-192400-625_7200.8 ::date 2013-09-06T00:33:00 ::annotator SDL-AMR-09 ::preferred
+# ::snt Feeling tired a lot can be a symptom of leukaemia.
+# ::save-date Fri Sep 6, 2013 ::file DF-200-192400-625_7200_8.txt
+(p / possible
+      :domain (s / symptom
+            :mod (l / leukaemia)
+            :domain (f / feel-01
+                  :ARG1 (t / tire-01
+                        :frequency (l2 / lot)))))
+
+# ::id DF-200-192400-625_7200.9 ::date 2013-09-06T00:34:31 ::annotator SDL-AMR-09 ::preferred
+# ::snt Symptoms don't always apply but if they happen in a lot of cases (which it clearly must do in this instance) it's worth noting, since otherwise nothing would ever get diagnosed.
+# ::save-date Mon Sep 16, 2013 ::file DF-200-192400-625_7200_9.txt
+(c / contrast-01
+      :ARG1 (a / apply-02 :polarity -
+            :ARG0 (s / symptom)
+            :time (a2 / always))
+      :ARG2 (r / recommend-01
+            :ARG1 (n / note-01)
+            :condition (h / happen-01
+                  :ARG1 s
+                  :frequency (c2 / case
+                        :quant (l / lot))
+                  :ARG1-of (i / infer-01
+                        :topic (i2 / instance
+                              :mod (t / this))
+                        :mod (c3 / clear)))
+            :ARG0-of (c4 / cause-01
+                  :ARG1 (d2 / diagnose-01
+                        :ARG2 (n2 / nothing)
+                        :time (e / ever)
+                        :condition (n3 / note-01 :polarity -)))))
+
+# ::id DF-200-192400-625_7200.10 ::date 2013-09-06T00:42:55 ::annotator SDL-AMR-09 ::preferred
+# ::snt I used to walk on my toes, but that was because I was born with strange toes that curled under and had to be straightened with surgery two years ago.
+# ::save-date Mon Sep 16, 2013 ::file DF-200-192400-625_7200_10.txt
+(c3 / contrast-01
+      :ARG1 (w / walk-01
+            :ARG0 (i / i)
+            :prep-on (t2 / toe
+                  :part-of i))
+      :ARG2 (c / cause-01
+            :ARG0 (b / bear-02
+                  :ARG1 i
+                  :prep-with (t3 / toe
+                        :mod (s / strange)
+                        :ARG1-of (c2 / curl-01
+                              :ARG2 (u / under))
+                        :ARG1-of (s2 / straighten-01
+                              :ARG2 (s3 / surgery)
+                              :ARG2-of (o / obligate-01)
+                              :time (b2 / before
+                                    :op1 (n / now)
+                                    :quant (t4 / temporal-quantity :quant 2
+                                          :unit (y2 / year))))))
+            :ARG1 w))
+
+# ::id DF-200-192400-625_7200.11 ::date 2013-09-06T00:47:45 ::annotator SDL-AMR-09 ::preferred
+# ::snt My brother's autistic but I haven't noticed this with him either, but the spectrum is so broad and I myself probably have mild asperger's because I have problems with communication and don't pick up on social reactions/body language.
+# ::save-date Thu Sep 19, 2013 ::file DF-200-192400-625_7200_11.txt
+(c / contrast-01
+      :ARG1 (c2 / contrast-01
+            :ARG1 (a / autistic
+                  :domain (b / brother
+                        :poss (i / i)))
+            :ARG2 (n / notice-01 :polarity -
+                  :ARG0 i
+                  :ARG1 (t / this
+                        :topic b)
+                  :mod (e / either)))
+      :ARG2 (a2 / and
+            :op1 (b2 / broad
+                  :degree (s / so)
+                  :domain (s2 / spectrum))
+            :op2 (p / probable
+                  :domain (h2 / have-03
+                        :ARG0 i
+                        :ARG1 (d / disease :name (n2 / name :op1 "asperger's")
+                              :mod (m2 / mild))
+                        :ARG0-of (c3 / cause-01
+                              :ARG1 (a5 / and
+                                    :op1 (h / have-03
+                                          :ARG0 i
+                                          :ARG1 (p2 / problem
+                                                :topic (c4 / communicate-01)))
+                                    :op2 (p3 / pick-04
+                                          :ARG1 (s4 / slash
+                                                :op1 (r / react-01
+                                                      :mod (s3 / society))
+                                                :op2 (l / language
+                                                      :mod (b3 / body))))))))))
+
+# ::id DF-200-192400-625_7200.12 ::date 2013-09-06T00:48:25 ::annotator SDL-AMR-09 ::preferred
+# ::snt But then I don't have a proper diagnosis and even having some symptoms might not mean you have a certain condition.
+# ::save-date Sun Sep 15, 2013 ::file DF-200-192400-625_7200_12.txt
+(c / contrast-01
+      :ARG2 (a / and
+            :op1 (h / have-03 :polarity -
+                  :ARG0 (i / i)
+                  :ARG1 (t2 / thing
+                        :mod (p / proper)
+                        :ARG2-of (d / diagnose-01)))
+            :op2 (h2 / have-03
+                  :ARG0 y
+                  :ARG1 (s / symptom
+                        :quant (s2 / some))
+                  :mod (e / even)
+                  :ARG0-of (m / mean-01 :polarity -
+                        :ARG1 (h3 / have-03
+                              :ARG0 (y / you)
+                              :ARG1 (c2 / condition
+                                    :mod (c3 / certain)))
+                        :mod (p2 / possible))))
+      :mod (t / then))
+
+# ::id DF-200-192400-625_7200.13 ::date 2013-09-06T00:51:14 ::annotator SDL-AMR-09 ::preferred
+# ::snt I walk on my toes not as much since years of being told not to.
+# ::save-date Fri Sep 6, 2013 ::file DF-200-192400-625_7200_13.txt
+(c / cause-01
+      :ARG0 (t / tell-01
+            :ARG1 (w2 / walk-01 :polarity -
+                  :prep-on (t3 / toe
+                        :part-of i))
+            :ARG2 (i / i)
+            :duration (m2 / multiple
+                  :op1 (t4 / temporal-quantity :quant 1
+                        :unit (y / year))))
+      :ARG1 (w / walk-01
+            :ARG0 i
+            :prep-on (t2 / toe
+                  :part-of i)
+            :frequency (m / much :polarity -)))
+
+# ::id DF-200-192400-625_7200.14 ::date 2013-09-06T00:55:06 ::annotator SDL-AMR-09 ::preferred
+# ::snt I have dyspraxia.
+# ::save-date Fri Sep 6, 2013 ::file DF-200-192400-625_7200_14.txt
+(h / have-03
+      :ARG0 (i / i)
+      :ARG1 (d / dyspraxia))
+
+# ::id DF-200-192400-625_7200.15 ::date 2013-09-06T00:55:38 ::annotator SDL-AMR-09 ::preferred
+# ::snt So maybe you are dyspraxic or have short tendons.
+# ::save-date Sun Sep 15, 2013 ::file DF-200-192400-625_7200_15.txt
+(p / possible
+      :mod (s / so)
+      :domain (o / or
+            :op1 (d / dyspraxic
+                  :domain y)
+            :op2 (h / have-03
+                  :ARG0 (y / you)
+                  :ARG1 (t / tendon
+                        :mod (s2 / short)))))
+
+# ::id DF-200-192400-625_7200.16 ::date 2013-09-06T01:01:33 ::annotator SDL-AMR-09 ::preferred
+# ::snt People who do dance/ gymnastics/ ballet etc have it drilled into them, to the point where I find it more comfortable now =P
+# ::save-date Wed Sep 18, 2013 ::file DF-200-192400-625_7200_16.txt
+(d / drill-02
+      :ARG1 (p / person
+            :ARG0-of (d2 / do-02
+                  :ARG1 (s / slash
+                        :op1 (d3 / dance-01)
+                        :op2 (g / gymnastics)
+                        :op3 (b / ballet)
+                        :op4 (e / et-cetera))))
+      :ARG2 (i / it)
+      :extent (f / find-02
+            :ARG0 i
+            :ARG1 (c / comfortable
+                  :degree (m / more)
+                  :time (n / now)
+                  :domain i)))
+
+# ::id DF-200-192400-625_7200.17 ::date 2013-09-06T01:08:22 ::annotator SDL-AMR-09 ::preferred
+# ::snt I wouldn't read too much into random "symptoms" like that
+# ::save-date Sun Sep 15, 2013 ::file DF-200-192400-625_7200_17.txt
+(r / read-01 :polarity -
+      :ARG0 (i / i)
+      :ARG2 (s / symptom
+            :mod (r2 / random)
+            :ARG1-of (r3 / resemble-01
+                  :ARG2 (t2 / that)))
+      :mod (m / much
+            :degree (t / too)))
+
+# ::id DF-200-192400-625_7557.1 ::date 2013-09-06T01:28:15 ::annotator SDL-AMR-09 ::preferred
+# ::snt hello, i am a 12 year old girl (13 in two days) who is addicted to self harming
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_7557_1.txt
+(m2 / multi-sentence
+      :snt1 (h2 / hello)
+      :snt2 (g / girl
+            :age (t2 / temporal-quantity :quant 12
+                  :unit (y / year)
+                  :ARG0-of (m / mean-01
+                        :ARG1 (a / age-01
+                              :ARG2 (t3 / temporal-quantity :quant 13
+                                    :unit (y2 / year))
+                              :time (a3 / after
+                                    :op1 (n / now)
+                                    :quant (t / temporal-quantity :quant 2
+                                          :unit (d2 / day))))))
+            :ARG1-of (a2 / addict-01
+                  :ARG2 (h / harm-01
+                        :ARG1 (s / self)))
+            :domain (i / i)))
+
+# ::id DF-200-192400-625_7557.2 ::date 2013-09-07T04:02:19 ::annotator SDL-AMR-09 ::preferred
+# ::snt i started when i was seven as i slit each firnger indevidually with sissors, and from that day i never stopped,
+# ::save-date Sun Sep 15, 2013 ::file DF-200-192400-625_7557_2.txt
+(a2 / and
+      :op1 (s / start-01
+            :ARG0 (i / i)
+            :ARG2 (s2 / slit-01
+                  :ARG0 i
+                  :ARG1 (f / finger
+                        :mod (e / each)
+                        :mod (i2 / individual))
+                  :ARG3 (s3 / scissors))
+            :time (a / age-01
+                  :ARG1 i
+                  :ARG2 (t / temporal-quantity :quant 7
+                        :unit (y / year))))
+      :op2 (s4 / stop-01 :polarity -
+            :ARG0 i
+            :time (e2 / ever)
+            :time (f2 / from
+                  :op1 (d / day
+                        :mod (t2 / that)))))
+
+# ::id DF-200-192400-625_7557.3 ::date 2013-09-07T04:07:16 ::annotator SDL-AMR-09 ::preferred
+# ::snt it has got worse as i have a scar on my leg as i slit in my ex boyfriends name with stables,as i wont stop cutting unless i bleed,
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_7557_3.txt
+(w / worsen-01
+      :ARG1 (i / it)
+      :ARG1-of (c / cause-01
+            :ARG0 (h / have-03
+                  :ARG0 (i2 / i)
+                  :ARG1 (s / scar-01
+                        :ARG1 (l / leg
+                              :part-of i2)
+                        :ARG1-of (c2 / cause-01
+                              :ARG0 (s2 / slit-01
+                                    :ARG0 i2
+                                    :ARG1 l
+                                    :ARG3 (s3 / staple)
+                                    :topic (n / name
+                                          :poss (b / boyfriend
+                                                :mod (e / ex)
+                                                :poss i2))
+                                    :ARG1-of (c3 / cause-01
+                                          :ARG0 (s4 / stop-01 :polarity -
+                                                :ARG0 i2
+                                                :ARG1 (c4 / cut-01)
+                                                :condition (b2 / bleed-01
+                                                      :ARG0 i2)))))))))
+
+# ::id DF-200-192400-625_7557.4 ::date 2013-09-07T04:13:30 ::annotator SDL-AMR-09 ::preferred
+# ::snt i have sevral slits on my arm,
+# ::save-date Sat Sep 7, 2013 ::file DF-200-192400-625_7557_4.txt
+(h / have-03
+      :ARG0 (i / i)
+      :ARG1 (s / slit
+            :location (a / arm
+                  :part-of i)
+            :quant (s2 / several)))
+
+# ::id DF-200-192400-625_7557.5 ::date 2013-09-07T04:14:19 ::annotator SDL-AMR-09 ::preferred
+# ::snt they healed, then i cut myself with staples i robbed from school and a razor.
+# ::save-date Sun Sep 15, 2013 ::file DF-200-192400-625_7557_5.txt
+(a / and
+      :op1 (h / heal-01
+            :ARG1 (t / they))
+      :op2 (c / cut-01
+            :ARG0 (i / i)
+            :ARG1 i
+            :ARG3 (a2 / and
+                  :op1 (s / staple
+                        :ARG2-of (r / rob-01
+                              :ARG0 i
+                              :ARG1 (s2 / school)))
+                  :op2 (r2 / razor))
+            :mod (t2 / then)))
+
+# ::id DF-200-192400-625_7557.6 ::date 2013-09-07T04:16:07 ::annotator SDL-AMR-09 ::preferred
+# ::snt when i cant find anything to cut with i take around 5 paracetmols and other drugs and i take them with larger and vodka.
+# ::save-date Mon Sep 16, 2013 ::file DF-200-192400-625_7557_6.txt
+(a2 / and
+      :op1 (t / take-01
+            :ARG0 (i / i)
+            :ARG1 (a4 / and
+                  :op1 (p / paracetamol
+                        :quant (a / around :op1 5))
+                  :op2 (d / drug
+                        :mod (o / other))))
+      :op1 (t2 / take-01
+            :ARG0 i
+            :ARG1 a4
+            :prep-with (a5 / and
+                  :op1 (l / lager)
+                  :op2 (v / vodka)))
+      :time (p2 / possible :polarity -
+            :domain (f / find-01
+                  :ARG1 (t3 / thing
+                        :instrument-of (c / cut-01)))))
+
+# ::id DF-200-192400-625_7557.7 ::date 2013-09-07T04:19:39 ::annotator SDL-AMR-09 ::preferred
+# ::snt as im writing this i am really tempted to cut my arm or burn myslef,
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_7557_7.txt
+(t / tempt-01
+      :ARG1 (i / i)
+      :ARG3 (o / or
+            :op1 (c / cut-01
+                  :ARG0 i
+                  :ARG1 (a / arm
+                        :part-of i))
+            :op2 (b / burn-01
+                  :ARG0 i
+                  :ARG1 i))
+      :time (w / write-01
+            :ARG0 i
+            :ARG1 (t2 / this)))
+
+# ::id DF-200-192400-625_7557.8 ::date 2013-09-07T04:21:17 ::annotator SDL-AMR-09 ::preferred
+# ::snt i am addicted,when ever one heals i cut again
+# ::save-date Sat Sep 7, 2013 ::file DF-200-192400-625_7557_8.txt
+(m / multi-sentence
+      :snt1 (a / addict-01
+            :ARG1 (i / i))
+      :snt2 (c / cut-01
+            :ARG0 i
+            :mod (a2 / again)
+            :time (h / heal-01
+                  :ARG1 (o / one)
+                  :time (e / ever))))
+
+# ::id DF-200-192400-625_7557.9 ::date 2013-09-07T04:31:40 ::annotator SDL-AMR-09 ::preferred
+# ::snt it think about it everyday,
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_7557_9.txt
+(t / think-01
+      :ARG0 (i / i)
+      :ARG1 (i2 / it)
+      :frequency (r / rate-entity-91
+            :ARG3 (t2 / temporal-quantity :quant 1
+                  :unit (d / day))))
+
+# ::id DF-200-192400-625_7557.10 ::date 2013-09-07T04:32:23 ::annotator SDL-AMR-09 ::preferred
+# ::snt i am 12 and i am already sick of my life.
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_7557_10.txt
+(a / and
+      :op1 (a2 / age-01
+            :ARG1 (i / i)
+            :ARG2 (t / temporal-quantity :quant 12
+                  :unit (y / year)))
+      :op2 (t2 / tire-01
+            :ARG0 (l / life
+                  :poss i)
+            :ARG1 i
+            :time (a3 / already)))
+
+# ::id DF-200-192400-625_7557.11 ::date 2013-09-07T04:33:56 ::annotator SDL-AMR-09 ::preferred
+# ::snt the source of this is that; when i was 7 my dad left,and he doesnt want to know me anymore,
+# ::save-date Sun Sep 15, 2013 ::file DF-200-192400-625_7557_11.txt
+(s / source-02
+      :ARG0 (a / and
+            :op1 (l / leave-01
+                  :ARG0 (d / dad
+                        :poss (i / i))
+                  :time (a2 / age-01
+                        :ARG1 i
+                        :ARG2 (t2 / temporal-quantity :quant 7
+                              :unit (y / year))))
+            :op2 (w / want-01 :polarity -
+                  :ARG0 d
+                  :ARG1 (k / know-01
+                        :ARG1 i)
+                  :time (a3 / anymore)))
+      :ARG1 (t / this))
+
+# ::id DF-200-192400-625_7557.12 ::date 2013-09-07T04:37:49 ::annotator SDL-AMR-09 ::preferred
+# ::snt he just cares about his new little girl and wife,his new life, where im not wanted.
+# ::save-date Sat Sep 7, 2013 ::file DF-200-192400-625_7557_12.txt
+(c / care-01
+      :ARG0 (h / he)
+      :ARG1 (a / and
+            :op1 (g / girl
+                  :mod (l / little)
+                  :mod (n / new)
+                  :poss h)
+            :op2 (w / wife
+                  :poss h)
+            :op3 (l2 / life
+                  :poss h
+                  :mod (n2 / new)
+                  :location-of (w2 / want-01 :polarity -
+                        :ARG1 (i / i))))
+      :mod (j / just))
+
+# ::id DF-200-192400-625_7557.13 ::date 2013-09-07T04:39:52 ::annotator SDL-AMR-09 ::preferred
+# ::snt my best mate died when i was 10
+# ::save-date Sat Sep 7, 2013 ::file DF-200-192400-625_7557_13.txt
+(d / die-01
+      :ARG1 (m / mate
+            :mod (g / good
+                  :degree (m2 / most))
+            :poss (i / i))
+      :time (a / age-01
+            :ARG1 i
+            :ARG2 (t / temporal-quantity :quant 10
+                  :unit (y / year))))
+
+# ::id DF-200-192400-625_7557.14 ::date 2013-09-07T04:41:03 ::annotator SDL-AMR-09 ::preferred
+# ::snt i had a reltionship with a boy who is 16 and i am forbidden to speak to him because of what happend and the age diffrience
+# ::save-date Sun Sep 15, 2013 ::file DF-200-192400-625_7557_14.txt
+(a / and
+      :op1 (h / have-03
+            :ARG0 (i / i)
+            :ARG1 (r / relationship
+                  :prep-with (b / boy :age 16)))
+      :op2 (f / forbid-01
+            :ARG1 (s / speak-01
+                  :ARG0 i
+                  :ARG2 b)
+            :ARG2 i
+            :ARG1-of (c / cause-01
+                  :ARG0 (a2 / and
+                        :op1 (t / thing
+                              :ARG1-of (h2 / happen-01))
+                        :op2 (d / differ-02
+                              :ARG1 (a3 / age))))))
+
+# ::id DF-200-192400-625_7557.15 ::date 2013-09-07T04:43:31 ::annotator SDL-AMR-09 ::preferred
+# ::snt also my mum suffers from bi polar and i have depression
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_7557_15.txt
+(a / and
+      :op1 (s / suffer-01
+            :ARG0 (m / mum
+                  :poss (i / i))
+            :ARG1 (d2 / disease :name (n / name :op1 "bipolar"))
+            :mod (a2 / also))
+      :op2 (h / have-03
+            :ARG0 i
+            :ARG1 (d / depression)))
+
+# ::id DF-200-192400-625_7557.16 ::date 2013-09-07T04:44:48 ::annotator SDL-AMR-09 ::preferred
+# ::snt i dont what to stop,
+# ::save-date Sat Sep 7, 2013 ::file DF-200-192400-625_7557_16.txt
+(w / want-01 :polarity -
+      :ARG0 (i / i)
+      :ARG1 (s / stop-01))
+
+# ::id DF-200-192400-625_7557.17 ::date 2013-09-07T04:45:46 ::annotator SDL-AMR-09 ::preferred
+# ::snt i dont care what i do to myself,i want to do it again and again to tourture myslef,i hate me.
+# ::save-date Mon Sep 16, 2013 ::file DF-200-192400-625_7557_17.txt
+(m / multi-sentence
+      :snt1 (c / care-01
+            :ARG0 (i / i)
+            :ARG1 (t / thing
+                  :ARG1-of (d / do-02
+                        :prep-to i)))
+      :snt2 (w / want-01
+            :ARG0 i
+            :ARG1 (d2 / do-02
+                  :ARG1 t
+                  :frequency (a / again-and-again)
+                  :purpose (t2 / torture-01
+                        :ARG0 i
+                        :ARG1 i)))
+      :snt3 (h / hate-01
+            :ARG0 i
+            :ARG1 i))
+
+# ::id DF-200-192400-625_7557.18 ::date 2013-09-07T04:48:39 ::annotator SDL-AMR-09 ::preferred
+# ::snt however,my best mate,i love him,loads,he means the world to me and if i do anything then he will,
+# ::save-date Mon Sep 16, 2013 ::file DF-200-192400-625_7557_18.txt
+(c / contrast-01
+      :ARG2 (a / and
+            :op1 (l / love-01
+                  :ARG0 (i / i)
+                  :ARG1 (m / mate
+                        :mod (g / good
+                              :degree (m3 / most))
+                        :poss i)
+                  :mod (l2 / loads))
+            :op2 (m2 / mean-01
+                  :ARG0 (h / he)
+                  :ARG1 (w / world)
+                  :ARG2 i)
+            :op3 (h2 / have-condition-91
+                  :ARG1 (d / do-02
+                        :ARG0 h
+                        :ARG1 a3)
+                  :ARG2 (d2 / do-02
+                        :ARG0 i
+                        :ARG1 (a3 / anything)))))
+
+# ::id DF-200-192400-625_7557.19 ::date 2013-09-07T04:53:06 ::annotator SDL-AMR-09 ::preferred
+# ::snt i dont tell him but he finds out,
+# ::save-date Sat Sep 7, 2013 ::file DF-200-192400-625_7557_19.txt
+(c / contrast-01
+      :ARG1 (t / tell-01
+            :ARG0 (i / i)
+            :ARG2 (h / he))
+      :ARG2 (f / find-03
+            :ARG0 h))
+
+# ::id DF-200-192400-625_7557.20 ::date 2013-09-07T04:54:28 ::annotator SDL-AMR-09 ::preferred
+# ::snt i dont want to hurt him,i dont want him to hurt himself
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_7557_20.txt
+(m / multi-sentence
+      :snt1 (w / want-01 :polarity -
+            :ARG0 (i / i)
+            :ARG1 (h / hurt-01
+                  :ARG1 (h2 / he)))
+      :snt2 (w2 / want-01 :polarity -
+            :ARG0 (i2 / i)
+            :ARG1 (h3 / hurt-01
+                  :ARG0 (h4 / he)
+                  :ARG1 h4)))
+
+# ::id DF-200-192400-625_7557.21 ::date 2013-09-07T04:56:21 ::annotator SDL-AMR-09 ::preferred
+# ::snt what do i do
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_7557_21.txt
+(d / do-02
+      :ARG0 (i / i)
+      :ARG1 (a / amr-unknown))
+
+# ::id DF-200-192400-625_7557.22 ::date 2013-09-07T04:56:58 ::annotator SDL-AMR-09 ::preferred
+# ::snt thanks you for reading
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_7557_22.txt
+(t / thank-01
+      :ARG0 (i / i)
+      :ARG1 (y / you)
+      :ARG2 (r / read-01
+            :ARG0 y))
+
+# ::id DF-200-192400-625_7557.23 ::date 2013-09-07T04:57:40 ::annotator SDL-AMR-09 ::preferred
+# ::snt Are you on any drugs or getting any therapy?
+# ::save-date Sun Sep 15, 2013 ::file DF-200-192400-625_7557_23.txt
+(o / or
+      :op1 (y2 / you
+            :prep-on (d / drug
+                  :mod (a / any)))
+      :op2 (g / get-01
+            :ARG0 d
+            :ARG1 (t / therapy
+                  :mod (a2 / any))))
+
+# ::id DF-200-192400-625_7557.24 ::date 2013-09-07T05:00:32 ::annotator SDL-AMR-09 ::preferred
+# ::snt It might be an idea to talk to your school nurse or your GP and tell them what's going on.
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_7557_24.txt
+(r / recommend-01
+      :ARG1 (a / and
+            :op1 (t / talk-01
+                  :ARG0 (y / you)
+                  :ARG2 (o / or
+                        :op1 (p / person
+                              :ARG0-of (h2 / have-org-role-91
+                                    :ARG1 (s / school
+                                          :poss y)
+                                    :ARG2 (n / nurse)))
+                        :op2 (p3 / practitioner
+                              :mod (g / general)
+                              :poss y)))
+            :op2 (t2 / tell-01
+                  :ARG1 (t3 / thing
+                        :ARG1-of (g2 / go-00))
+                  :ARG2 a)))
+
+# ::id DF-200-192400-625_7557.25 ::date 2013-09-07T05:38:43 ::annotator SDL-AMR-09 ::preferred
+# ::snt Perhaps there's a teacher at school who you trust and could tell.
+# ::save-date Mon Sep 16, 2013 ::file DF-200-192400-625_7557_25.txt
+(p / possible
+      :domain (p3 / person
+            :ARG2-of (t2 / trust-01
+                  :ARG0 (y / you))
+            :ARG2-of (t3 / tell-01
+                  :ARG0 y
+                  :mod (p2 / possible))
+            :ARG0-of (h / have-org-role-91
+                  :ARG1 (s / school)
+                  :ARG3 (t / teach-01))))
+
+# ::id DF-200-192400-625_7557.26 ::date 2013-09-07T05:41:19 ::annotator SDL-AMR-09 ::preferred
+# ::snt If you tell people they can help you,
+# ::save-date Sat Sep 7, 2013 ::file DF-200-192400-625_7557_26.txt
+(p / possible
+      :domain (h / help-01
+            :ARG0 (p2 / person)
+            :ARG1 (y / you))
+      :condition (t / tell-01
+            :ARG0 y
+            :ARG2 p2))
+
+# ::id DF-200-192400-625_7557.27 ::date 2013-09-07T05:42:42 ::annotator SDL-AMR-09 ::preferred
+# ::snt if you keep it bottled up inside it's likely to only get worse.
+# ::save-date Sun Sep 15, 2013 ::file DF-200-192400-625_7557_27.txt
+(l / likely
+      :domain (w / worsen-01
+            :ARG1 (i / it)
+            :mod (o / only))
+      :condition (k / keep-01
+            :ARG0 (y / you)
+            :ARG1 (i4 / it
+                  :ARG1-of (b / bottle-02)
+                  :location (i3 / inside))))
+
+# ::id DF-200-192400-625_7557.28 ::date 2013-09-07T05:44:43 ::annotator SDL-AMR-09 ::preferred
+# ::snt Trust me, it's better to get these things as early as possible rather than let them get even worse.
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_7557_28.txt
+(m / multi-sentence
+      :snt1 (t / trust-01
+            :ARG2 (i / i))
+      :snt2 (g / good
+            :degree (m3 / more)
+            :domain (g2 / get-01
+                  :ARG1 (t2 / thing
+                        :mod (t3 / this))
+                  :time (e / early
+                        :mod (p / possible))
+                  :ARG1-of (c / contrast-01
+                        :ARG2 (l / let-01
+                              :ARG1 (w / worsen-01
+                                    :ARG1 t2
+                                    :mod (e2 / even)))))))
+
+# ::id DF-200-192400-625_7557.29 ::date 2013-09-07T05:48:14 ::annotator SDL-AMR-09 ::preferred
+# ::snt Please don't do this,
+# ::save-date Wed Sep 18, 2013 ::file DF-200-192400-625_7557_29.txt
+(d / do-02 :polarity - :mode imperative :polite +
+      :ARG0 (y / you)
+      :ARG1 (t / this))
+
+# ::id DF-200-192400-625_7557.30 ::date 2013-09-07T05:49:22 ::annotator SDL-AMR-09 ::preferred
+# ::snt I'm 17 I started self harming last year, mainly cutting my arms, but I have stopped since the last few months,
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_7557_30.txt
+(c / contrast-01
+      :ARG1 (a / and
+            :op1 (a2 / age-01
+                  :ARG1 (i / i)
+                  :ARG2 (t2 / temporal-quantity :quant 17
+                        :unit (y / year)))
+            :op2 (s / start-01
+                  :ARG0 i
+                  :ARG1 (h / harm-01
+                        :ARG1 (s2 / self)
+                        :ARG0-of (m / mean-01
+                              :ARG1 (c2 / cut-01
+                                    :ARG1 (a3 / arm
+                                          :part-of i)
+                                    :mod (m3 / main))))
+                  :time (y2 / year
+                        :mod (l / last))))
+      :ARG2 (s3 / stop-01
+            :ARG0 i
+            :ARG1 h
+            :time (s4 / since
+                  :op1 (f / few
+                        :op1 (t3 / temporal-quantity :quant 1
+                              :unit (m4 / month)
+                              :mod (l2 / last))))))
+
+# ::id DF-200-192400-625_7557.31 ::date 2013-09-07T05:53:47 ::annotator SDL-AMR-09 ::preferred
+# ::snt its hard but you can do it.
+# ::save-date Sat Sep 7, 2013 ::file DF-200-192400-625_7557_31.txt
+(c / contrast-01
+      :ARG1 (h / hard
+            :domain (i2 / it))
+      :ARG2 (p / possible
+            :domain (d / do-02
+                  :ARG0 (y / you)
+                  :ARG1 i2)))
+
+# ::id DF-200-192400-625_7557.32 ::date 2013-09-07T05:55:09 ::annotator SDL-AMR-09 ::preferred
+# ::snt I feel so much happier, but seeing the scars is both a painful reminder of how I felt at that time, how strong my feelings were that I would want to do such a thing to myself!
+# ::save-date Mon Sep 16, 2013 ::file DF-200-192400-625_7557_32.txt
+(c / contrast-01
+      :ARG1 (f / feel-01
+            :ARG0 (i / i)
+            :ARG1 (h / happy
+                  :degree (m / more
+                        :quant (m2 / much
+                              :degree (s / so)))))
+      :ARG2 (r / remind-01
+            :ARG0 (s4 / see-01
+                  :ARG0 i
+                  :ARG1 (s5 / scar))
+            :ARG1 (a / and
+                  :op1 (t4 / thing
+                        :ARG1-of (f2 / feel-01
+                              :time (t / time
+                                    :mod (t2 / that))))
+                  :op2 (f3 / feeling
+                        :mod (s2 / strong
+                              :degree (s6 / so))
+                        :ARG0-of (c2 / cause-01
+                              :ARG1 (w / want-01
+                                    :ARG0 i
+                                    :ARG1 (d / do-02
+                                          :ARG1 (t3 / thing
+                                                :mod (s3 / such))
+                                          :prep-to i)))))
+            :ARG2 i
+            :ARG0-of (p / pain-01)))
+
+# ::id DF-200-192400-625_7557.33 ::date 2013-09-07T05:59:40 ::annotator SDL-AMR-09 ::preferred
+# ::snt And, also strength, you can do it, I found salvation in poetry writing and keeping a journal,
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_7557_33.txt
+(m / multi-sentence
+      :snt1 (a / and
+            :op2 (s / strength)
+            :mod (a2 / also))
+      :snt2 (p / possible
+            :domain (d / do-02
+                  :ARG0 (y / you)
+                  :ARG1 (i / it)))
+      :snt3 (f / find-01
+            :ARG0 (i2 / i)
+            :ARG1 (s2 / salvation
+                  :prep-in (a3 / and
+                        :op1 (w / write-01
+                              :ARG1 (p2 / poetry))
+                        :op2 (k / keep-03
+                              :ARG1 (j / journal))))))
+
+# ::id DF-200-192400-625_7557.34 ::date 2013-09-07T06:01:55 ::annotator SDL-AMR-09 ::preferred
+# ::snt self harming is addictive, but you can overcome it,
+# ::save-date Sun Sep 15, 2013 ::file DF-200-192400-625_7557_34.txt
+(c / contrast-01
+      :ARG1 (a / addict-01
+            :ARG2 (h / harm-01
+                  :ARG1 (s / self)))
+      :ARG2 (p / possible
+            :domain (o / overcome-01
+                  :ARG0 (y / you)
+                  :ARG1 h)))
+
+# ::id DF-200-192400-625_7557.35 ::date 2013-09-07T06:03:13 ::annotator SDL-AMR-09 ::preferred
+# ::snt remember your self harming does not define who you are.
+# ::save-date Sun Sep 15, 2013 ::file DF-200-192400-625_7557_35.txt
+(r / remember-01 :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (d / define-01 :polarity -
+            :ARG0 (h / harm-01
+                  :ARG1 (s / self))
+            :ARG1 (p / person
+                  :domain (y2 / you))))
+
+# ::id DF-200-192400-625_7557.36 ::date 2013-09-07T06:04:50 ::annotator SDL-AMR-09 ::preferred
+# ::snt You can overcome it.
+# ::save-date Sat Sep 7, 2013 ::file DF-200-192400-625_7557_36.txt
+(p / possible
+      :domain (o / overcome-01
+            :ARG0 (y / you)
+            :ARG1 (i / it)))
+
+# ::id DF-200-192400-625_7744.1 ::date 2013-09-07T05:47:00 ::annotator SDL-AMR-09 ::preferred
+# ::snt So I think Ive got a form of OCD because for the past year, I've found that everytime I go out, especially to Uni, I'm always checking my belongings to make sure I haven't lost or left anything.
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_7744_1.txt
+(c / cause-01
+      :ARG0 (f / find-01
+            :ARG0 (i / i)
+            :ARG1 (c2 / check-01
+                  :ARG0 i
+                  :ARG1 (t / thing
+                        :ARG0-of (b / belong-01
+                              :ARG1 i))
+                  :time (a / always)
+                  :purpose (i2 / insure-01
+                        :ARG0 i
+                        :ARG1 (o / or
+                              :op1 (l / lose-02 :polarity -
+                                    :ARG0 i
+                                    :ARG1 (a2 / anything))
+                              :op2 (l2 / leave-02 :polarity -
+                                    :ARG0 i
+                                    :ARG1 a2)))
+                  :frequency (r / rate-entity-91
+                        :ARG4 (g2 / go-17
+                              :ARG0 i
+                              :direction (u / university
+                                    :mod (e / especially)))))
+            :time (y / year
+                  :mod (p / past)))
+      :ARG1 (t3 / think-01
+            :ARG0 i
+            :ARG1 (g / get-02
+                  :ARG0 i
+                  :ARG1 (d / disease :name (n / name :op1 "OCD")
+                        :mod (f2 / form)))
+            :mod (s / so)))
+
+# ::id DF-200-192400-625_7744.2 ::date 2013-09-07T06:04:42 ::annotator SDL-AMR-09 ::preferred
+# ::snt I often have to check twice at one go, then after 30 seconds for some reason I cant resist checking again!
+# ::save-date Wed Sep 18, 2013 ::file DF-200-192400-625_7744_2.txt
+(a3 / and
+      :op1 (o / obligate-01
+            :ARG1 (i / i)
+            :ARG2 (c / check-01
+                  :ARG0 i
+                  :frequency (r3 / rate-entity-91
+                        :ARG1 2
+                        :ARG4 (g / go :quant 1)))
+            :frequency (o2 / often))
+      :op2 (c2 / capable-41 :polarity -
+            :ARG1 i
+            :ARG2 (r / resist-01
+                  :ARG0 i
+                  :ARG1 (c3 / check-01
+                        :ARG0 i
+                        :mod (a / again)))
+            :time (a2 / after
+                  :op1 (t / temporal-quantity :quant 30
+                        :unit (s / second)))
+            :time (t2 / then)
+            :ARG1-of (c4 / cause-01
+                  :ARG0 (r2 / reason
+                        :mod (s2 / some)))))
+
+# ::id DF-200-192400-625_7744.3 ::date 2013-09-07T06:20:11 ::annotator SDL-AMR-09 ::preferred
+# ::snt Why is this!?
+# ::save-date Thu Sep 12, 2013 ::file DF-200-192400-625_7744_3.txt
+(t / this
+      :ARG1-of (c / cause-01
+            :ARG0 (a / amr-unknown)))
+
+# ::id DF-200-192400-625_7744.4 ::date 2013-09-07T06:22:51 ::annotator SDL-AMR-09 ::preferred
+# ::snt Am I going crazy or something?
+# ::save-date Sat Sep 7, 2013 ::file DF-200-192400-625_7744_4.txt
+(o / or :mode interrogative
+      :op1 (g / go-08
+            :ARG1 (i / i)
+            :ARG2 (c / crazy))
+      :op2 (s / something))
+
+# ::id DF-200-192400-625_7744.5 ::date 2013-09-07T06:25:07 ::annotator SDL-AMR-09 ::preferred
+# ::snt It happens most often when I'm carrying many things, but that is rarely and even still daily I'm checking many times. And is this OCD to any extent?
+# ::save-date Sat Jan 25, 2014 ::file DF-200-192400-625_7744_5.txt
+(m / multi-sentence
+      :snt1 (a / and
+            :op1 (h / happen-01
+                  :ARG1 (i / it)
+                  :frequency (o / often
+                        :degree (m2 / most)
+                        :time-of (c / carry-01
+                              :ARG0 i
+                              :ARG1 (t / thing
+                                    :quant (m3 / many))
+                              :ARG1-of (c3 / contrast-01
+                                    :ARG2 (c4 / carry-01
+                                          :ARG0 i
+                                          :ARG1 t
+                                          :frequency (r / rare))))))
+            :op2 (c2 / check-01
+                  :ARG0 i
+                  :frequency (r2 / rate-entity-91
+                        :ARG1 (m5 / many)
+                        :ARG2 (t4 / temporal-quantity :quant 1
+                              :unit (d / day))
+                        :mod (s / still)
+                        :mod (e / even))))
+      :snt2 (d2 / disease :mode interrogative :name (n / name :op1 "OCD")
+            :domain (t3 / this)
+            :degree (e2 / extent
+                  :mod (a2 / any))))
+
+# ::id DF-200-192400-625_7744.6 ::date 2013-09-07T06:58:10 ::annotator SDL-AMR-09 ::preferred
+# ::snt What can I do about this?
+# ::save-date Thu Sep 12, 2013 ::file DF-200-192400-625_7744_6.txt
+(a / amr-unknown
+      :ARG1-of (d / do-02
+            :ARG0 (i / i)
+            :ARG2 (t / this)
+            :mod (p / possible)))
+
+# ::id DF-200-192400-625_7744.7 ::date 2013-09-07T08:23:49 ::annotator SDL-AMR-09 ::preferred
+# ::snt If I don't check, I get very very anxious, which does sort of go away after 15-30 mins, but often the anxiety is so much that I can't wait that long.
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_7744_7.txt
+(c / contrast-01
+      :ARG1 (g / get-03
+            :ARG1 (i / i)
+            :ARG2 (a / anxious
+                  :degree (v / very)
+                  :ARG1-of (g2 / go-01
+                        :direction (a2 / away)
+                        :mod (s / sort)
+                        :time (a3 / after
+                              :op1 (o / or
+                                    :op1 (t / temporal-quantity :quant 15
+                                          :unit (m / minute))
+                                    :op2 (t2 / temporal-quantity :quant 30
+                                          :unit (m2 / minute))))))
+            :condition (c2 / check-01 :polarity -
+                  :ARG0 i))
+      :ARG2 (a4 / anxiety
+            :quant (m3 / much
+                  :ARG0-of (c3 / cause-01
+                        :ARG1 (c4 / capable-41 :polarity -
+                              :ARG1 i
+                              :ARG2 (w / wait-01
+                                    :ARG1 i
+                                    :duration (l / long
+                                          :degree (t3 / that))))))
+            :time (o2 / often)))
+
+# ::id DF-200-192400-625_7744.8 ::date 2013-09-07T08:41:42 ::annotator SDL-AMR-09 ::preferred
+# ::snt I feel if I lost my wallet or phone, then I'm doomed or so I feel.
+# ::save-date Thu Sep 12, 2013 ::file DF-200-192400-625_7744_8.txt
+(o / or
+      :op1 (f / feel-02
+            :ARG0 (i / i)
+            :ARG1 (h / have-condition-91
+                  :ARG1 (d / doom-01
+                        :ARG1 i)
+                  :ARG2 (l / lose-02
+                        :ARG0 i
+                        :ARG1 (o2 / or
+                              :op1 (w / wallet
+                                    :poss i)
+                              :op2 (p / phone
+                                    :poss i)))))
+      :op2 (f2 / feel-02
+            :ARG0 i
+            :ARG1 d))
+
+# ::id DF-200-192400-625_7744.9 ::date 2013-09-07T08:47:38 ::annotator SDL-AMR-09 ::preferred
+# ::snt I just wish I could go out without worrying every 2 mins whether I've left or lost something.
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_7744_9.txt
+(w / wish-01
+      :ARG0 (i / i)
+      :ARG1 (c / capable-41
+            :ARG1 i
+            :ARG2 (g / go-17
+                  :ARG0 i
+                  :manner (w2 / worry-02 :polarity -
+                        :ARG0 i
+                        :ARG1 (o / or
+                              :op1 (l / leave-01
+                                    :ARG0 i
+                                    :ARG1 (s / something))
+                              :op2 (l2 / lose-02
+                                    :ARG0 i
+                                    :ARG1 s))
+                        :frequency (r / rate-entity-91
+                              :ARG3 (t / temporal-quantity :quant 2
+                                    :unit (m / minute))))))
+      :mod (j / just))
+
+# ::id DF-200-192400-625_7744.10 ::date 2013-09-07T08:52:51 ::annotator SDL-AMR-09 ::preferred
+# ::snt I really dont know what to do, and am afraid of going to the GP.
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_7744_10.txt
+(a / and
+      :op1 (k / know-01 :polarity -
+            :ARG0 (i / i)
+            :ARG1 (t / thing
+                  :ARG1-of (d / do-02
+                        :ARG0 i))
+            :mod (r / really))
+      :op2 (f / fear-01
+            :ARG0 i
+            :ARG1 (g / go-02
+                  :ARG0 i
+                  :ARG4 (p2 / practitioner
+                        :mod (g2 / general)))))
+
+# ::id DF-200-192400-625_7744.11 ::date 2013-09-07T09:21:46 ::annotator SDL-AMR-09 ::preferred
+# ::snt They've probably never heard of some compulsion like this and I just dont know what to do
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_7744_11.txt
+(a / and
+      :op1 (h / hear-01 :polarity -
+            :ARG0 (t / they)
+            :ARG1 (c / compulsion
+                  :mod (s / some)
+                  :ARG1-of (r / resemble-01
+                        :ARG2 (t2 / this)))
+            :time (e / ever)
+            :mod (p / probable))
+      :op2 (k / know-01 :polarity -
+            :ARG0 (i / i)
+            :ARG1 (t3 / thing
+                  :ARG1-of (d / do-02
+                        :ARG0 i))
+            :mod (j / just)))
+
+# ::id DF-200-192400-625_7744.12 ::date 2013-09-07T09:36:20 ::annotator SDL-AMR-09 ::preferred
+# ::snt Do any of you have a similar 'ritual'?
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_7744_12.txt
+(h / have-03 :mode interrogative
+      :ARG0 (p / person
+            :ARG1-of (i / include-91
+                  :ARG2 (y / you))
+            :mod (a / any))
+      :ARG1 (r / ritual
+            :ARG1-of (r2 / resemble-01)))
+
+# ::id DF-200-192400-625_7744.13 ::date 2013-09-07T09:40:18 ::annotator SDL-AMR-09 ::preferred
+# ::snt People would think I'm crazy, but it's very strangely difficult to get yourself out of this.
+# ::save-date Thu Sep 12, 2013 ::file DF-200-192400-625_7744_13.txt
+(c / contrast-01
+      :ARG1 (t / think-01
+            :ARG0 (p / person)
+            :ARG1 (c2 / crazy
+                  :domain (i / i)))
+      :ARG2 (d / difficult
+            :domain (g / get-05
+                  :ARG0 y
+                  :ARG1 (y / you)
+                  :ARG2 (o / out
+                        :source (t2 / this)))
+            :manner (s / strange
+                  :degree (v / very))))
+
+# ::id DF-200-192400-625_7744.14 ::date 2013-09-07T10:15:09 ::annotator SDL-AMR-09 ::preferred
+# ::snt What advice could you give me?
+# ::save-date Sat Sep 7, 2013 ::file DF-200-192400-625_7744_14.txt
+(a / advise-01
+      :ARG0 (y / you)
+      :ARG1 (i / i)
+      :ARG2 (a2 / amr-unknown)
+      :mod (p / possible))
+
+# ::id DF-200-192400-625_7744.15 ::date 2013-09-07T10:31:51 ::annotator SDL-AMR-09 ::preferred
+# ::snt I used to do this on my way to college-I had a list of items I knew I had on me and used to check compulsively on the bus.
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_7744_15.txt
+(m / multi-sentence
+      :snt1 (u / use-02
+            :ARG0 (i / i)
+            :ARG1 (d / do-02
+                  :ARG0 i
+                  :ARG1 (t / this)
+                  :time (w / way
+                        :destination (c / college)
+                        :poss i)))
+      :snt2 (a / and
+            :op1 (h / have-03
+                  :ARG1 (t2 / thing
+                        :ARG2-of (l / list-01
+                              :ARG1 (i2 / item
+                                    :ARG1-of (h2 / have-03
+                                          :ARG0 i
+                                          :ARG1-of (k / know-01
+                                                :ARG0 i)
+                                          :prep-on i)))))
+            :op2 (u2 / use-02
+                  :ARG0 i
+                  :ARG1 (c2 / check-01
+                        :ARG0 i
+                        :manner (c3 / compulsive)
+                        :location (b / bus)))))
+
+# ::id DF-200-192400-625_7744.16 ::date 2013-09-07T10:48:08 ::annotator SDL-AMR-09 ::preferred
+# ::snt I now have more severe anxiety and think this was just a warning sign so just try and wean yourself out of the habit while it's relatively fresh-definitely visit your doctor but also tell yourself not to keep checking these things (easier said than done I know).
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_7744_16.txt
+(m / multi-sentence
+      :snt2 (k2 / know-01
+            :ARG0 i
+            :ARG1 (e / easy
+                  :degree (m3 / more)
+                  :domain (s3 / say-01)
+                  :compared-to (d3 / do-02)))
+      :snt1 (a / and
+            :op1 (h / have-03
+                  :ARG0 (i / i)
+                  :ARG1 (a2 / anxiety
+                        :mod (s / severe
+                              :degree (m2 / more)))
+                  :time (n / now))
+            :op2 (t / think-01
+                  :ARG0 i
+                  :ARG1 (s2 / sign
+                        :ARG0-of (w / warn-01)
+                        :domain (t2 / this)))
+            :ARG0-of (c3 / cause-01
+                  :ARG1 (a3 / and
+                        :op1 (t3 / try-01
+                              :ARG0 (y3 / you)
+                              :ARG1 (w2 / wean-01
+                                    :ARG2 (h2 / habit)
+                                    :time (f / fresh
+                                          :domain h2
+                                          :mod (r / relative)))
+                              :mod (j / just))
+                        :op2 (v2 / visit-01 :mode imperative
+                              :ARG0 y3
+                              :ARG1 (d / doctor
+                                    :poss y3)
+                              :mod (d2 / definite)
+                              :ARG1-of (c / contrast-01
+                                    :ARG2 (t4 / tell-01
+                                          :ARG0 y3
+                                          :ARG1 (k / keep-01 :polarity -
+                                                :ARG0 y3
+                                                :ARG1 (c2 / check-01
+                                                      :ARG0 y3
+                                                      :ARG1 (t5 / thing
+                                                            :mod (t6 / this))))
+                                          :ARG2 y3)))))))
+
+# ::id DF-200-192400-625_7744.17 ::date 2013-09-07T11:49:34 ::annotator SDL-AMR-09 ::preferred
+# ::snt Doctors will have seen much worse cases so don't worry about that!
+# ::save-date Sat Sep 7, 2013 ::file DF-200-192400-625_7744_17.txt
+(c / cause-01
+      :ARG0 (s / see-01
+            :ARG0 (d / doctor)
+            :ARG1 (c2 / case
+                  :mod (b / bad
+                        :degree (m / more
+                              :quant (m2 / much)))))
+      :ARG1 (w / worry-02 :polarity - :mode imperative
+            :ARG0 (y / you)
+            :ARG1 (t / that)))
+
+# ::id DF-200-192400-625_7744.18 ::date 2013-09-07T11:58:29 ::annotator SDL-AMR-09 ::preferred
+# ::snt I did about OCD in psycology today :P
+# ::save-date Thu Sep 12, 2013 ::file DF-200-192400-625_7744_18.txt
+(d / do-02
+      :ARG0 (i / i)
+      :topic (d2 / disease :name (n / name :op1 "OCD"))
+      :time (p / psychology)
+      :time (t / today))
+
+# ::id DF-200-192400-625_7744.19 ::date 2013-09-07T12:00:15 ::annotator SDL-AMR-09 ::preferred
+# ::snt To get rid of it, one way could be just to avoid the compulsive act so don't check to see whether you have lost something, just leave it (:
+# ::save-date Mon Sep 16, 2013 ::file DF-200-192400-625_7744_19.txt
+(w / way
+      :mod (p / possible)
+      :instrument-of (r / rid-01
+            :ARG0 (y / you)
+            :ARG1 (i / it))
+      :domain (a / avoid-01
+            :ARG0 y
+            :ARG1 (a2 / act-01
+                  :ARG1 (c / compulsive))
+            :mod (j / just))
+      :ARG0-of (c2 / cause-01
+            :ARG1 (a3 / and
+                  :op1 (c3 / check-01 :mode imperative :polarity -
+                        :ARG0 y
+                        :ARG1 (l2 / lose-02
+                              :ARG0 y
+                              :ARG1 (s / something)))
+                  :op2 (l / leave-01 :mode imperative
+                        :ARG0 y
+                        :ARG1 (i2 / it)
+                        :mod (j2 / just)))))
+
+# ::id DF-200-192400-625_7744.20 ::date 2013-09-07T12:07:19 ::annotator SDL-AMR-09 ::preferred
+# ::snt Even though your anxiety levels would increase for a duration, they will gradualy decrease so hopefully, overtime your OCD will disappear (:
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_7744_20.txt
+(d2 / decrease-01
+      :ARG1 l
+      :mod (g / gradual)
+      :ARG0-of (c2 / cause-01
+            :ARG1 (d3 / disappear-01
+                  :ARG1 (d4 / disease :name (n / name :op1 "OCD")
+                        :poss y)
+                  :time (o / overtime)
+                  :ARG1-of (h / hope-01)))
+      :concession (i / increase-01
+            :ARG1 (l / level
+                  :mod (a / anxiety
+                        :poss (y / you)))
+            :duration (d / duration)))
+
+# ::id DF-200-192400-625_7744.21 ::date 2013-09-07T12:14:17 ::annotator SDL-AMR-09 ::preferred
+# ::snt To me that just sounds like you being overly anxious, as opposed to having really bad OCD.
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_7744_21.txt
+(s / sound-01
+      :ARG1 (t / that)
+      :ARG2 (a / anxious
+            :degree (o / overly)
+            :domain (y / you))
+      :ARG3 (i / i)
+      :ARG1-of (c / contrast-01
+            :ARG2 (h / have-03
+                  :ARG0 y
+                  :ARG1 (d / disease :name (n / name :op1 "OCD")
+                        :mod (b / bad
+                              :degree (r / really))))))
+
+# ::id DF-200-192400-625_7744.22 ::date 2013-09-07T12:18:32 ::annotator SDL-AMR-09 ::preferred
+# ::snt I am very obsessional to the point where I get up 20 times a night to check the locks in my house are all locked a particular way.
+# ::save-date Wed Sep 18, 2013 ::file DF-200-192400-625_7744_22.txt
+(o / obsess-01
+      :ARG0 (i / i)
+      :degree (v / very)
+      :extent (g / get-05
+            :ARG1 i
+            :ARG2 (u / up)
+            :frequency (r / rate-entity-91
+                  :ARG1 20
+                  :ARG2 (t / temporal-quantity :quant 1
+                        :unit (n / night)))
+            :purpose (c / check-01
+                  :ARG0 i
+                  :ARG1 (l / lock-01
+                        :ARG1 (l2 / lock
+                              :location (h / house
+                                    :poss i)
+                              :quant (a / all))
+                        :manner (p / particular)))))
+
+# ::id DF-200-192400-625_7744.23 ::date 2013-09-07T12:24:18 ::annotator SDL-AMR-09 ::preferred
+# ::snt Sometimes although I know they're locked I'm convinced they're not.
+# ::save-date Sat Sep 7, 2013 ::file DF-200-192400-625_7744_23.txt
+(c / convince-01
+      :ARG1 (i / i)
+      :ARG2 (l / lock-01 :polarity -
+            :ARG1 (t / they))
+      :time (s / sometimes)
+      :concession (k / know-01
+            :ARG0 i
+            :ARG1 (l2 / lock-01
+                  :ARG1 t)))
+
+# ::id DF-200-192400-625_7744.24 ::date 2013-09-07T12:27:40 ::annotator SDL-AMR-09 ::preferred
+# ::snt I think it becomes a real problem when the obsession starts to really interrupt your everyday routine.
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_7744_24.txt
+(t / think-01
+      :ARG0 (i / i)
+      :ARG1 (b / become-01
+            :ARG1 (i2 / it)
+            :ARG2 (p / problem
+                  :mod (r / real)))
+      :time (s / start-01
+            :ARG1 (i3 / interrupt-01
+                  :ARG0 (o / obsess-01)
+                  :ARG1 (r2 / routine
+                        :poss (y / you)
+                        :frequency (r4 / rate-entity-91
+                              :ARG3 (t2 / temporal-quantity :quant 1
+                                    :unit (d / day))))
+                  :mod (r3 / really))))
+
+# ::id DF-200-192400-625_7744.25 ::date 2013-09-07T12:30:31 ::annotator SDL-AMR-09 ::preferred
+# ::snt You definitely aren't crazy though don't worry and your GP will be understanding of the issue I'm sure.
+# ::save-date Mon Sep 16, 2013 ::file DF-200-192400-625_7744_25.txt
+(a / and
+      :op1 (c / cause-01
+            :ARG0 (c2 / crazy :polarity -
+                  :domain (y / you)
+                  :mod (d / definite))
+            :ARG1 (w / worry-02 :polarity - :mode imperative
+                  :ARG0 y))
+      :op2 (k / know-01
+            :ARG0 (i / i)
+            :ARG1 (u / understand-01
+                  :ARG0 (p / practitioner
+                        :mod (g / general)
+                        :poss y)
+                  :ARG1 (i2 / issue))))
+
+# ::id DF-200-192400-625_7744.26 ::date 2013-09-07T12:35:19 ::annotator SDL-AMR-09 ::preferred
+# ::snt I go to therapy (for other reasons also) and they have encouraged me to pick a number of times to check, obviously that is less than 20, and to stick to it and cut down that way.
+# ::save-date Wed Sep 18, 2013 ::file DF-200-192400-625_7744_26.txt
+(a / and
+      :op1 (g / go-01
+            :ARG1 (i / i)
+            :ARG4 (t / therapy)
+            :purpose (r / reason
+                  :mod (o / other)
+                  :mod (a2 / also)))
+      :op2 (e / encourage-01
+            :ARG0 (t2 / they)
+            :ARG1 i
+            :ARG2 (a3 / and
+                  :op1 (p / pick-01
+                        :ARG0 i
+                        :ARG1 (n2 / number
+                              :mod (l / less :compared-to 20
+                                    :mod (o2 / obvious))
+                              :frequency-of (c2 / check-01
+                                    :ARG0 i)))
+                  :op2 (s / stick-01
+                        :ARG1 i
+                        :ARG2 n2)
+                  :op3 (c / cut-02
+                        :ARG0 i
+                        :ARG4 n2))))
+
+# ::id DF-200-192400-625_7744.27 ::date 2013-09-07T12:46:04 ::annotator SDL-AMR-09 ::preferred
+# ::snt I think the idea is to teach me, I'm still 'okay' if I check 5 times or 20 times.
+# ::save-date Wed Sep 18, 2013 ::file DF-200-192400-625_7744_27.txt
+(t / think-01
+      :ARG0 (i / i)
+      :ARG1 (t2 / teach-01
+            :ARG1 (o / okay
+                  :domain i
+                  :mod (s / still)
+                  :concession (o2 / or
+                        :op1 (c / check-01 :frequency 5
+                              :ARG0 i)
+                        :op2 (c2 / check-01 :frequency 20
+                              :ARG0 i)))
+            :ARG2 i
+            :domain (i2 / idea)))
+
+# ::id DF-200-192400-625_7744.28 ::date 2013-09-07T12:50:53 ::annotator SDL-AMR-09 ::preferred
+# ::snt So far I have been a lot better, I think there is definitely hope of improvement for anyone that wants it.
+# ::save-date Thu Sep 12, 2013 ::file DF-200-192400-625_7744_28.txt
+(a2 / and
+      :op1 (g / good
+            :degree (m / more
+                  :quant (l / lot))
+            :domain (i / i)
+            :time (s / so-far))
+      :op2 (t / think-01
+            :ARG0 i
+            :ARG1 (h / hope-01
+                  :ARG1 (i2 / improve-01
+                        :ARG0 (a / anyone
+                              :ARG0-of (w / want-01
+                                    :ARG1 i2)))
+                  :mod (d / definite))))
+
+# ::id DF-200-192400-625_7806.1 ::date 2013-09-07T12:55:46 ::annotator SDL-AMR-09 ::preferred
+# ::snt Usually I'm pretty calm about things and like to take things as they come and not to worry too much.
+# ::save-date Sat Jan 25, 2014 ::file DF-200-192400-625_7806_1.txt
+(a / and
+      :op1 (c / calm
+            :mod (p / pretty)
+            :domain (i / i)
+            :topic (t / thing)
+            :mod (u / usual))
+      :op2 (l / like-02
+            :ARG0 i
+            :ARG1 (t2 / take-02
+                  :ARG0 i
+                  :ARG1 t
+                  :prep-as (c2 / come-01
+                        :ARG1 t)))
+      :op3 (w / worry-01 :polarity -
+            :ARG1 i
+            :quant (m / much
+                  :degree (t3 / too))))
+
+# ::id DF-200-192400-625_7806.2 ::date 2013-09-07T13:03:50 ::annotator SDL-AMR-09 ::preferred
+# ::snt However, over the last month or two I've found myself becoming really anxious about things, and I'm not talking about a mere out of the blue feeling of nervousness.
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_7806_2.txt
+(c / contrast-01
+      :ARG2 (a2 / and
+            :op1 (f / find-01
+                  :ARG0 (i / i)
+                  :ARG1 (b / become-01
+                        :ARG1 i
+                        :ARG2 (a / anxious
+                              :topic (t / thing)
+                              :mod (r / real)))
+                  :duration (o / or
+                        :op1 (t2 / temporal-quantity :quant 1
+                              :unit (m / month)
+                              :mod (l / last))
+                        :op2 (t3 / temporal-quantity :quant 2
+                              :unit (m2 / month)
+                              :mod l)))
+            :op2 (t4 / talk-01 :polarity -
+                  :ARG0 i
+                  :ARG1 (f2 / feel-01
+                        :ARG1 (n / nervous)
+                        :mod (m3 / mere)
+                        :mod (o2 / out-of-the-blue)))))
+
+# ::id DF-200-192400-625_7806.3 ::date 2013-09-07T13:17:09 ::annotator SDL-AMR-09 ::preferred
+# ::snt I have begun to feel irrationally panicky about a variety of things which beforehand wouldn't worry me too much or even cross my mind as something to cause alarm bells to ring in my head.
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_7806_3.txt
+(b / begin-01
+      :ARG0 (i / i)
+      :ARG1 (f / feel-01
+            :ARG0 i
+            :ARG1 (p / panic-01
+                  :ARG1 (t / thing
+                        :mod (v / variety)
+                        :ARG1-of (w / worry-02 :polarity -
+                              :ARG0 i
+                              :time (b2 / beforehand)
+                              :quant (m / much
+                                    :degree (t2 / too)))
+                        :ARG0-of (c / cross-01 :polarity -
+                              :ARG1 (m2 / mind
+                                    :poss i)
+                              :prep-as (s / something
+                                    :ARG0-of (c2 / cause-01
+                                          :ARG1 (r2 / ring-01
+                                                :ARG1 (b3 / bell
+                                                      :instrument-of (a / alarm-01))
+                                                :location (h / head
+                                                      :part-of i))))
+                              :mod (e / even)))
+                  :manner (r / rational :polarity -))))
+
+# ::id DF-200-192400-625_7806.4 ::date 2013-09-08T02:19:46 ::annotator SDL-AMR-09 ::preferred
+# ::snt I'm not sure if it's the change in lifestyle (going from care-free student to unemployed graduate) that is causing this or if it's a sign of other issues, but it's beginning to bug me as it's affecting my confidence and happiness.
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_7806_4.txt
+(c / contrast-01
+      :ARG1 (k / know-01 :polarity -
+            :ARG0 (i / i)
+            :ARG1 (o / or :mode interrogative
+                  :op1 (c2 / cause-01
+                        :ARG0 (c3 / change-01
+                              :ARG1 (l / lifestyle)
+                              :ARG1-of (m / mean-01
+                                    :ARG2 (g / go-01
+                                          :ARG3 (p3 / person
+                                                :ARG0-of (s / study-01)
+                                                :ARG1-of (f / free-41
+                                                      :ARG2 (c4 / care-01)))
+                                          :ARG4 (p2 / person
+                                                :ARG0-of (g2 / graduate-01)
+                                                :ARG1-of (e / employ-01 :polarity -)))))
+                        :ARG1 (t / this))
+                  :op2 (s2 / signal-01
+                        :ARG0 t
+                        :ARG1 (i2 / issue
+                              :mod (o2 / other)))))
+      :ARG2 (b / begin-01
+            :ARG1 (b2 / bug-01
+                  :ARG0 t
+                  :ARG1 i
+                  :ARG1-of (c5 / cause-01
+                        :ARG0 (a / affect-01
+                              :ARG1 (a2 / and
+                                    :op1 (c6 / confident-41
+                                          :ARG1 i)
+                                    :op2 (h / happy
+                                          :domain i))
+                              :ARG2 t)))))
+
+# ::id DF-200-192400-625_7806.5 ::date 2013-09-08T02:59:01 ::annotator SDL-AMR-09 ::preferred
+# ::snt I've spoken to a few people about it including my parents but they all think the same: that I'm going through a random phase and that I should hold off taking action until it is clear that it is a serious problem
+# ::save-date Thu Sep 12, 2013 ::file DF-200-192400-625_7806_5.txt
+(c / contrast-01
+      :ARG1 (s / speak-01
+            :ARG0 (i / i)
+            :ARG1 (i2 / it)
+            :ARG2 (p / person
+                  :quant (f / few)
+                  :ARG2-of (i3 / include-01
+                        :ARG1 (p2 / parent
+                              :poss i))))
+      :ARG2 (t / think-01
+            :ARG0 (p3 / person
+                  :quant (a / all))
+            :ARG1 (a2 / and
+                  :op1 (g / go-02
+                        :ARG0 i
+                        :ARG1 (p4 / phase
+                              :mod (r2 / random)))
+                  :op1 (r / recommend-01
+                        :ARG1 (h / hold-08
+                              :ARG0 i
+                              :ARG1 (a3 / act-02
+                                    :ARG0 i)
+                              :time (u / until
+                                    :op1 (c2 / clear
+                                          :domain (p5 / problem
+                                                :mod (s2 / serious)))))
+                        :ARG2 i))
+            :ARG1-of (s3 / same-41)))
+
+# ::id DF-200-192400-625_7806.6 ::date 2013-09-08T03:11:49 ::annotator SDL-AMR-09 ::preferred
+# ::snt So was wondering what's the best thing to do?
+# ::save-date Thu Sep 12, 2013 ::file DF-200-192400-625_7806_6.txt
+(w / wonder-01
+      :ARG1 (t / thing
+            :mod (g / good
+                  :degree (m / most))
+            :ARG1-of (d / do-02)
+            :domain (a / amr-unknown))
+      :mod (s / so))
+
+# ::id DF-200-192400-625_7806.7 ::date 2013-09-08T03:14:24 ::annotator SDL-AMR-09 ::preferred
+# ::snt Speak to a doctor about it and see if anti-anxiety pills could take the edge off of things?
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_7806_7.txt
+(a / and
+      :op1 (s / speak-01
+            :ARG0 (y / you)
+            :ARG1 (i / it)
+            :ARG2 (d / doctor))
+      :op2 (s2 / see-01
+            :ARG0 y
+            :ARG1 (t / take-07
+                  :ARG0 (p / pill
+                        :ARG0-of (c / counter-01
+                              :ARG1 (a2 / anxiety)))
+                  :ARG1 (e / edge)
+                  :mod (p2 / possible :mode interrogative)
+                  :source (t2 / thing))))
+
+# ::id DF-200-192400-625_7806.8 ::date 2013-09-08T03:18:21 ::annotator SDL-AMR-09 ::preferred
+# ::snt See if I can speak to a counsellor?
+# ::save-date Mon Sep 16, 2013 ::file DF-200-192400-625_7806_8.txt
+(s / see-01 :mode interrogative
+      :ARG0 (i2 / i)
+      :ARG1 (s2 / speak-01
+            :ARG0 (i / i)
+            :ARG2 (p / person
+                  :ARG0-of (c / counsel-01))
+            :mod (p2 / possible)))
+
+# ::id DF-200-192400-625_7806.9 ::date 2013-09-08T03:20:24 ::annotator SDL-AMR-09 ::preferred
+# ::snt Or should I take the advice given by the close people around me and just keep an eye on the anxiety until it becomes a problem?
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_7806_9.txt
+(o / or
+      :op2 (r / recommend-01 :mode interrogative
+            :ARG1 (a / and
+                  :op1 (t / take-01
+                        :ARG0 (i / i)
+                        :ARG1 (t2 / thing
+                              :ARG2-of (a2 / advise-01
+                                    :ARG0 (p / person
+                                          :mod (c / close)
+                                          :location (a3 / around
+                                                :op1 i)))))
+                  :op2 (e / eye-01
+                        :ARG0 i
+                        :ARG1 (a5 / anxiety)
+                        :time (u / until
+                              :op1 (b / become-01
+                                    :ARG1 (a4 / anxiety)
+                                    :ARG2 (p2 / problem)))
+                        :mod (j / just)))
+            :ARG2 i))
+
+# ::id DF-200-192400-625_7806.10 ::date 2013-09-08T03:27:17 ::annotator SDL-AMR-09 ::preferred
+# ::snt Well I woudnt try to keep an eye on ur anxiety for a start because that will make u tense and more likely to become more panicky (circle of demise there)
+# ::save-date Mon Sep 16, 2013 ::file DF-200-192400-625_7806_10.txt
+(m / multi-sentence
+      :snt1 (r / recommend-01
+            :ARG1 (t / try-01 :polarity -
+                  :ARG0 (i / i)
+                  :ARG1 (e / eye-01
+                        :ARG0 i
+                        :ARG1 (a / anxiety
+                              :poss (y / you)))
+                  :prep-for (s / start))
+            :ARG1-of (c / cause-01
+                  :ARG0 (m2 / make-01
+                        :ARG0 e
+                        :ARG1 (a2 / and
+                              :op1 (t2 / tense-01
+                                    :ARG1 i)
+                              :op2 (l / likely
+                                    :degree (m3 / more)
+                                    :domain (p2 / panic-01
+                                          :ARG1 y
+                                          :degree (m4 / more)))))))
+      :snt2 (c2 / circle
+            :mod (d / demise)
+            :location (t3 / there)))
+
+# ::id DF-200-192400-625_7806.11 ::date 2013-09-08T03:41:57 ::annotator SDL-AMR-09 ::preferred
+# ::snt what I would try to do is focus on something that is garunteed to make you smile or feel happier as soon as you start to feel a bit panicky about anything.
+# ::save-date Mon Sep 16, 2013 ::file DF-200-192400-625_7806_11.txt
+(r / recommend-01
+      :ARG0 (i / i)
+      :ARG1 (t / try-01
+            :ARG0 y
+            :ARG1 (f / focus-01
+                  :ARG0 y
+                  :ARG2 (s / something
+                        :ARG0-of (g / guarantee-01
+                              :ARG0-of (m / make-02
+                                    :ARG1 (o / or
+                                          :op1 (s2 / smile-01
+                                                :ARG0 (y / you))
+                                          :op2 (f2 / feel-01
+                                                :ARG0 y
+                                                :ARG1 (h / happy
+                                                      :degree (m2 / more)))))))
+                  :time (a / as-soon-as
+                        :op1 (s3 / start-01
+                              :ARG0 y
+                              :ARG1 (f3 / feel-01
+                                    :ARG0 y
+                                    :ARG1 (p / panic-01
+                                          :ARG1 y
+                                          :quant (b / bit)
+                                          :topic (a2 / anything))))))))
+
+# ::id DF-200-192400-625_7806.12 ::date 2013-09-08T04:44:07 ::annotator SDL-AMR-09 ::preferred
+# ::snt Or if u cant do that-when you start to feel panicky, get one of your friends to make you laugh (it works for me and i suffer from random panic attacks lol
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_7806_12.txt
+(m / multi-sentence
+      :snt1 (o / or
+            :op2 (g / get-04
+                  :ARG0 (y / you)
+                  :ARG1 (m2 / make-02
+                        :ARG0 (f / friend
+                              :ARG1-of (i3 / include-91
+                                    :ARG2 (f4 / friend
+                                          :poss y)))
+                        :ARG1 (l / laugh-01
+                              :ARG0 y))
+                  :time (s / start-01
+                        :ARG0 g
+                        :ARG1 (f3 / feel-01
+                              :ARG0 g
+                              :ARG1 (p / panic-01))))
+            :condition (c / capable-41 :polarity -
+                  :ARG1 y
+                  :ARG2 (d / do-02
+                        :ARG0 y
+                        :ARG1 (t / that))))
+      :snt2 (a / and
+            :op1 (w / work-09
+                  :ARG1 g
+                  :ARG2 (i4 / I))
+            :op2 (s2 / suffer-01
+                  :ARG0 (i / i)
+                  :ARG1 (a2 / attack
+                        :mod (p2 / panic-01)
+                        :mod (r / random)))
+            :mod (l2 / lol :mode expressive)))
+
+# ::id DF-200-192400-625_7806.13 ::date 2013-09-08T04:55:04 ::annotator SDL-AMR-09 ::preferred
+# ::snt This started happening to me, where I'd just start being really anxious over tiny things, although from the sound of things, not as severely as you.
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_7806_13.txt
+(s / start-01
+      :ARG1 (h / happen-01
+            :ARG1 (s2 / start-01
+                  :ARG1 (w / worry-01
+                        :ARG0 (t / thing
+                              :mod (t2 / tiny))
+                        :ARG1 (i / i)
+                        :mod (r / really))
+                  :concession (s3 / severe :polarity -
+                        :compared-to (y / you)
+                        :source (s4 / sound-01
+                              :ARG1 (t4 / thing))))))
+
+# ::id DF-200-192400-625_7806.14 ::date 2013-09-08T04:59:49 ::annotator SDL-AMR-09 ::preferred
+# ::snt What I find helps is just talking about what is making you anxious to someone else.
+# ::save-date Thu Sep 12, 2013 ::file DF-200-192400-625_7806_14.txt
+(f / find-01
+      :ARG0 (i / i)
+      :ARG1 (h / help-01
+            :ARG0 (t / talk-01
+                  :ARG1 (t2 / thing
+                        :ARG0-of (m / make-02
+                              :ARG1 (a / anxious
+                                    :domain (y / you))))
+                  :ARG2 (s / someone
+                        :mod (e / else))
+                  :mod (j / just))))
+
+# ::id DF-200-192400-625_7806.15 ::date 2013-09-08T05:02:38 ::annotator SDL-AMR-09 ::preferred
+# ::snt Perhaps not in a moany way but I found that mentioning the thing that I was worried about to my mum and seeing her react to the situation in a calm way (like I should have been reacting) made me feel better about it because I knew it wasn't a big deal and I didn't need to be anxious about it.
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_7806_15.txt
+(c / contrast-01
+      :ARG1 (f / find-01
+            :ARG0 (i / i)
+            :ARG1 (a / and
+                  :op1 (m / mention-01
+                        :ARG0 i
+                        :ARG1 (t / thing
+                              :ARG1-of (w / worry-02
+                                    :ARG0 i))
+                        :ARG2 (m2 / mum
+                              :poss i))
+                  :op2 (s / see-01
+                        :ARG0 i
+                        :ARG1 (r / react-01
+                              :ARG0 m2
+                              :ARG1 (s2 / situation)
+                              :ARG2 (w2 / way
+                                    :mod (c2 / calm
+                                          :ARG1-of (r3 / react-01
+                                                :ARG0 i
+                                                :ARG1-of (r2 / recommend-01
+                                                      :ARG2 i))))))
+                  :ARG0-of (m3 / make-02
+                        :ARG1 (f2 / feel-01
+                              :ARG0 i
+                              :ARG1 (g / good
+                                    :degree (m4 / more))
+                              :ARG2 t)
+                        :ARG0-of (c3 / cause-01
+                              :ARG1 (k / know-01
+                                    :ARG0 i
+                                    :ARG1 (a2 / and
+                                          :op1 (d / deal
+                                                :mod (b / big :polarity -)
+                                                :domain t)
+                                          :op2 (n / need-01 :polarity -
+                                                :ARG0 i
+                                                :ARG1 (a3 / anxious
+                                                      :topic t
+                                                      :domain i))))))))
+      :ARG2 (w4 / way
+            :mod (p / perhaps)
+            :mod (m5 / moan-01 :polarity -)))
+
+# ::id DF-200-192400-625_7806.16 ::date 2013-09-08T05:36:59 ::annotator SDL-AMR-09 ::preferred
+# ::snt However, if it gets worse, then yes, go to the doctor's.
+# ::save-date Mon Jan 20, 2014 ::file DF-200-192400-625_7806_16.txt
+(c / contrast-01
+      :ARG2 (g / go-02 :mode imperative
+            :ARG0 (y / you)
+            :ARG4 (d / doctor)
+            :condition (w / worsen-01
+                  :ARG1 (i / it))))
+
+# ::id DF-200-192400-625_7806.17 ::date 2013-09-08T05:39:36 ::annotator SDL-AMR-09 ::preferred
+# ::snt I have a friend who suffers from severe anxiety that can prevent her from leaving the house and doing things because she's so worried about what can go wrong.
+# ::save-date Thu Sep 12, 2013 ::file DF-200-192400-625_7806_17.txt
+(h / have-03
+      :ARG0 (i / i)
+      :ARG1 (f / friend
+            :ARG0-of (s / suffer-01
+                  :ARG1 (a / anxiety
+                        :mod (s2 / severe)
+                        :ARG3-of (p / prevent-01
+                              :ARG0 f
+                              :ARG1 (a2 / and
+                                    :op1 (l / leave-01
+                                          :ARG0 f
+                                          :ARG1 (h2 / house))
+                                    :op2 (d / do-02
+                                          :ARG0 f
+                                          :ARG1 (t / thing)))
+                              :mod (p2 / possible)
+                              :ARG1-of (c / cause-01
+                                    :ARG0 (w / worry-02
+                                          :ARG0 f
+                                          :ARG1 (t2 / thing
+                                                :ARG1-of (g / go-06
+                                                      :ARG2 (w2 / wrong)
+                                                      :mod (p3 / possible)))
+                                          :degree (s3 / so))))))))
+
+# ::id DF-200-192400-625_7806.18 ::date 2013-09-08T05:50:17 ::annotator SDL-AMR-09 ::preferred
+# ::snt The doctors gave her medication and it's made her much better.
+# ::save-date Sun Sep 8, 2013 ::file DF-200-192400-625_7806_18.txt
+(a / and
+      :op1 (g / give-01
+            :ARG0 (d / doctor)
+            :ARG1 (m2 / medication)
+            :ARG2 (s / she))
+      :op2 (m / make-02
+            :ARG0 m2
+            :ARG1 (g2 / good
+                  :degree (m3 / more
+                        :quant (m4 / much))
+                  :domain s)))
