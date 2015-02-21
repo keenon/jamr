@@ -701,7 +701,7 @@ public class AMRPipeline {
      * This is bunch of code lifted from Ditch for generating special case AMR stuff that we have reliable parsers for.
      */
 
-    private AMR constructNERCluster(Annotation annotation, List<Integer> nerList, String tag, boolean debug) {
+    private static AMR constructNERCluster(Annotation annotation, List<Integer> nerList, String tag, boolean debug) {
         tag = tag.toLowerCase();
         if (tag.equals("date")) { // || tag.equals("time") || tag.equals("duration")) {
             return constructDateCluster(annotation, nerList, tag, debug);
@@ -718,7 +718,7 @@ public class AMRPipeline {
         return null;
     }
 
-    private AMR constructDateCluster(Annotation annotation, List<Integer> dateList, String tag, boolean debug) {
+    private static AMR constructDateCluster(Annotation annotation, List<Integer> dateList, String tag, boolean debug) {
         AMR dateChunk = new AMR();
         if (tag.equals("date")) {
             tag = "date-entity";
@@ -806,7 +806,7 @@ public class AMRPipeline {
         return sb.toString();
     }
 
-    private AMR constructOrdinalCluster(Annotation annotation, List<Integer> ordinalList, boolean debug) {
+    private static AMR constructOrdinalCluster(Annotation annotation, List<Integer> ordinalList, boolean debug) {
         AMR chunk = new AMR();
         AMR.Node head = chunk.addNode("o", "ordinal-entity");
         Number n = null;
@@ -820,7 +820,7 @@ public class AMRPipeline {
         return chunk;
     }
 
-    private AMR constructNumberCluster(Annotation annotation, List<Integer> numberList, boolean debug) {
+    private static AMR constructNumberCluster(Annotation annotation, List<Integer> numberList, boolean debug) {
         AMR chunk = new AMR();
         Number n = null;
         try {
@@ -832,7 +832,7 @@ public class AMRPipeline {
         return chunk;
     }
 
-    private AMR constructEntityCluster(Annotation annotation, List<Integer> nerList, String tag, boolean debug) {
+    private static AMR constructEntityCluster(Annotation annotation, List<Integer> nerList, String tag, boolean debug) {
         AMR nerChunk = new AMR();
         AMR.Node root = nerChunk.addNode("" + tag.charAt(0), tag, nerList.get(0));
         AMR.Node name = nerChunk.addNode("n", "name", nerList.get(0));
@@ -882,7 +882,7 @@ public class AMRPipeline {
         return nerChunk;
     }
 
-    public List<AMR> predictClusters(String[] tokens, Annotation annotation) {
+    public static Pair<List<AMR>,Set<Integer>> getDeterministicChunks(String[] tokens, Annotation annotation) {
         List<AMR> gen = new ArrayList<>();
         Set<Integer> blocked = new HashSet<>();
 
@@ -914,17 +914,8 @@ public class AMRPipeline {
                 result.addArc(root, dayN, "day");
                 gen.add(result);
                 blocked.add(0);
-                return gen;
+                return new Pair<>(gen, blocked);
             }
-        }
-
-        LabeledSequence labeledSequence = new LabeledSequence();
-        labeledSequence.tokens = tokens;
-        labeledSequence.annotation = annotation;
-
-        String[] labels = new String[tokens.length];
-        for (int i = 0; i < tokens.length; i++) {
-            labels[i] = nerPlusPlus.predict(new Pair<>(labeledSequence, i));
         }
 
         // Force anything inside an -LRB- -RRB- to be NONE, which is how AMR generally handles it
@@ -933,18 +924,57 @@ public class AMRPipeline {
         for (int i = 0; i < tokens.length; i++) {
             if (tokens[i].equals("-LRB-")) {
                 inBrace = true;
-                labels[i] = "NONE";
                 blocked.add(i);
             }
             if (tokens[i].equals("-RRB-")) {
                 inBrace = false;
-                labels[i] = "NONE";
                 blocked.add(i);
             }
             if (inBrace) {
-                labels[i] = "NONE";
                 blocked.add(i);
             }
+        }
+
+        // Try generating anything that we can add with high precision
+
+        List<Integer> nerSpan = new ArrayList<>();
+        String lastNerTag = "O";
+
+        for (int i = 0; i < tokens.length; i++) {
+            String nerTag = annotation.get(CoreAnnotations.TokensAnnotation.class).get(i).get(CoreAnnotations.NamedEntityTagAnnotation.class);
+            if (nerTag == null) nerTag = "O";
+            if (blocked.contains(i)) nerTag = "O";
+            if (!nerTag.equals(lastNerTag)) {
+                if (!lastNerTag.equals("O")) {
+                    AMR attempt = constructNERCluster(annotation, nerSpan, lastNerTag, false);
+                    if (attempt != null) {
+                        gen.add(attempt);
+                        blocked.addAll(nerSpan);
+                    }
+                    nerSpan = new ArrayList<>();
+                }
+            }
+            if (!nerTag.equals("O")) {
+                nerSpan.add(i);
+            }
+            lastNerTag = nerTag;
+        }
+
+        return new Pair<>(gen, blocked);
+    }
+
+    public List<AMR> predictClusters(String[] tokens, Annotation annotation) {
+        Pair<List<AMR>,Set<Integer>> pair = getDeterministicChunks(tokens, annotation);
+        List<AMR> gen = pair.first;
+        Set<Integer> blocked = pair.second;
+
+        LabeledSequence labeledSequence = new LabeledSequence();
+        labeledSequence.tokens = tokens;
+        labeledSequence.annotation = annotation;
+
+        String[] labels = new String[tokens.length];
+        for (int i = 0; i < tokens.length; i++) {
+            labels[i] = nerPlusPlus.predict(new Pair<>(labeledSequence, i));
         }
 
         // First we get all adjacent DICT entries together...
@@ -966,36 +996,6 @@ public class AMRPipeline {
         }
         if (currentDict != null) {
             adjacentDicts.add(currentDict);
-        }
-
-        // Try generating anything that we can add with high precision
-
-        List<Integer> nerSpan = new ArrayList<>();
-        String lastNerTag = "O";
-
-        for (int i = 0; i < tokens.length; i++) {
-            String nerTag = annotation.get(CoreAnnotations.TokensAnnotation.class).get(i).get(CoreAnnotations.NamedEntityTagAnnotation.class);
-            if (nerTag == null) nerTag = "O";
-            if (blocked.contains(i)) nerTag = "O";
-            if (!nerTag.equals(lastNerTag)) {
-                if (!lastNerTag.equals("O")) {
-                    AMR attempt = constructNERCluster(annotation, nerSpan, lastNerTag, false);
-                    if (attempt != null) {
-                        /*
-                        System.out.println("Generated a cluster from a formula!");
-                        System.out.println("\""+getSequentialTokens(annotation, nerSpan)+"\"");
-                        System.out.println(attempt.toString(AMR.AlignmentPrinting.ALL));
-                        */
-                        gen.add(attempt);
-                        blocked.addAll(nerSpan);
-                    }
-                    nerSpan = new ArrayList<>();
-                }
-            }
-            if (!nerTag.equals("O")) {
-                nerSpan.add(i);
-            }
-            lastNerTag = nerTag;
         }
 
 
@@ -1060,6 +1060,10 @@ public class AMRPipeline {
             else if (labels[i].equals("LEMMA")) {
                 amr = createAMRSingleton(labeledSequence.annotation.get(CoreAnnotations.TokensAnnotation.class).
                         get(i).get(CoreAnnotations.LemmaAnnotation.class).toLowerCase());
+            }
+            else if (labels[i].equals("VALUE")) {
+                // amr = createAMRSingleton()
+                // TODO
             }
             if (amr != null) {
                 for (AMR.Node node : amr.nodes) {
@@ -1507,7 +1511,7 @@ public class AMRPipeline {
         AMRPipeline pipeline = new AMRPipeline();
 
         // List<LabeledSequence> nerPlusPlusDataTrain = loadSequenceData("data/train-500-seq.txt");
-        List<LabeledSequence> nerPlusPlusDataTrain = loadSequenceData("realdata/release-train-seq.txt");
+        List<LabeledSequence> nerPlusPlusDataTrain = loadSequenceData("data/deft-train-seq.txt");
         List<LabeledSequence> nerPlusPlusDataTest = loadSequenceData("data/dev-100-seq.txt");
 
         List<Pair<Pair<LabeledSequence,Integer>,String>> dataTrain = getNERPlusPlusForClassifier(nerPlusPlusDataTrain);
@@ -1656,8 +1660,8 @@ public class AMRPipeline {
     }
 
     public static void main(String[] args) throws IOException, InterruptedException {
-        justTrainArcType();
-        // justTrainNERPlusPlus();
+        // justTrainArcType();
+        justTrainNERPlusPlus();
 
         /*
         AMRPipeline pipeline = new AMRPipeline();

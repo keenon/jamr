@@ -1,8 +1,14 @@
 package nlp.stamr.datagen;
 
 import edu.stanford.nlp.ling.CoreAnnotations;
+import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.pipeline.Annotation;
+import edu.stanford.nlp.stats.ClassicCounter;
+import edu.stanford.nlp.stats.Counter;
+import edu.stanford.nlp.util.Pair;
+import nlp.experiments.AMRPipeline;
 import nlp.stamr.AMR;
+import nlp.stamr.AMRConstants;
 import nlp.stamr.AMRSlurp;
 import nlp.stamr.alignments.EasyFirstAligner;
 import edu.stanford.nlp.util.IdentityHashSet;
@@ -68,12 +74,32 @@ public class DumpSequence {
         AMRSlurp.burp("data/dev-"+dumpSize+"-subset.txt", AMRSlurp.Format.LDC, randomDump, AMR.AlignmentPrinting.NONE, false);
     }
 
+    private static void retokenizeAndAlign(AMR[] bank) {
+        for (AMR amr : bank) {
+            Annotation annotation = amr.multiSentenceAnnotationWrapper.sentences.get(0).annotation;
+            List<String> split = new ArrayList<>();
+            for (CoreLabel tok : annotation.get(CoreAnnotations.TokensAnnotation.class)) {
+                split.add(tok.word());
+            }
+            String[] toks = split.toArray(new String[split.size()]);
+            amr.sourceText = toks;
+        }
+        EasyFirstAligner.align(bank);
+    }
+
     public static void dumpReleaseData() throws IOException {
         AMR[] train = AMRSlurp.slurp("data/deft-amr-release-r3-proxy-train.txt", AMRSlurp.Format.LDC);
-        EasyFirstAligner.align(train);
-        dumpCONLL(train, "data/deft-train-conll.txt");
+        AMR[] dev = AMRSlurp.slurp("data/deft-amr-release-r3-proxy-dev.txt", AMRSlurp.Format.LDC);
+        retokenizeAndAlign(train);
+        retokenizeAndAlign(dev);
+
         dumpSequences(train, "data/deft-train-seq.txt");
         dumpManygenDictionaries(train, "data/deft-train-manygen.txt");
+        dumpCONLL(train, "data/deft-train-conll.txt");
+
+        dumpSequences(dev, "data/deft-dev-seq.txt");
+        dumpManygenDictionaries(dev, "data/deft-dev-manygen.txt");
+        dumpCONLL(dev, "data/deft-dev-conll.txt");
     }
 
     public static void dumpTestData() throws IOException {
@@ -152,7 +178,16 @@ public class DumpSequence {
     }
 
     public static String getType(AMR.Node node, int i, String[] tokens, Annotation annotation, AMR amr) {
-        if (node.type == AMR.NodeType.QUOTE) return "DICT";
+        // Single unaligned QUOTE nodes should be a bug in the aligner, but ok
+        if (node.type == AMR.NodeType.QUOTE) {
+            if (node.title.equals(tokens[i])) {
+                return "NAME";
+            }
+            else {
+                return "DICT";
+            }
+        }
+        if (node.type == AMR.NodeType.VALUE) return "VALUE";
 
         if (node.title.contains("-")) {
             String[] components = node.title.split("-");
@@ -198,19 +233,42 @@ public class DumpSequence {
             AMR.Node node = nodes.iterator().next();
             return getType(node, i, amr.sourceText, amr.multiSentenceAnnotationWrapper.sentences.get(0).annotation, amr);
         }
+        else {
+            boolean containsNERType = false;
+            boolean containsQuote = false;
+            for (AMR.Node node : nodes) {
+                if (node.type == AMR.NodeType.QUOTE) {
+                    if (node.title.equalsIgnoreCase(amr.sourceText[node.alignment])) {
+                        containsQuote = true;
+                    }
+                }
+                else if (AMRConstants.nerTaxonomy.contains(node.title)) {
+                    containsNERType = true;
+                }
+            }
+            if (containsQuote && !containsNERType) {
+                return "NAME";
+            }
+        }
 
         return "DICT";
     }
 
     public static void dumpSequences(AMR[] bank, String path) throws IOException {
         BufferedWriter bw = new BufferedWriter(new FileWriter(path));
+        Counter<String> typeCounter = new ClassicCounter<>();
         for (AMR amr : bank) {
+            Pair<List<AMR>,Set<Integer>> pair = AMRPipeline.getDeterministicChunks(amr.sourceText, amr.multiSentenceAnnotationWrapper.sentences.get(0).annotation);
+            Set<Integer> blocked = pair.second;
             for (int i = 0; i < amr.sourceText.length; i++) {
+                if (blocked.contains(i)) continue;
                 String type = getType(amr, i);
+                typeCounter.incrementCount(type);
                 bw.append(amr.sourceText[i]).append("\t").append(type).append("\n");
             }
             bw.append("\n");
         }
+        System.out.println(typeCounter.toString());
         bw.close();
     }
 

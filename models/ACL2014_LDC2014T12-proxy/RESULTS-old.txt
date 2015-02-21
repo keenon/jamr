@@ -1,0 +1,14 @@
+  ----- Evaluation on Test: Smatch (all stages) -----
+Precision: 0.678
+Recall: 0.592
+Document F-score: 0.632
+
+  ----- Evaluation on Test: Smatch (gold concept ID) -----
+Precision: 0.839
+Recall: 0.766
+Document F-score: 0.801
+
+  ----- Evaluation on Test: Spans -----
+Precision: 0.7141453831041258
+Recall: 0.7474809788196587
+F1: 0.7304330352657491

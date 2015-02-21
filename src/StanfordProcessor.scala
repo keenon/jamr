@@ -80,6 +80,7 @@ class StanfordProcessor {
 object RunStanfordParser extends App {
   val processor = new StanfordProcessor
 
+  // TODO: Multithread this, possibly using map, need to threadsafe a bunch of other code
   for (sentence <- Source.stdin.getLines()) {
     println(processor.parseToConll(sentence).replaceAllLiterally("\n\n","\n") + "\n")
   }
