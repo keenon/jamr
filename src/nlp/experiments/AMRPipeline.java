@@ -1,5 +1,7 @@
 package nlp.experiments;
 
+import edu.stanford.nlp.dcoref.CorefChain;
+import edu.stanford.nlp.dcoref.CorefCoreAnnotations;
 import nlp.cache.BatchCoreNLPCache;
 import nlp.cache.CoreNLPCache;
 import edu.stanford.nlp.classify.LogisticClassifier;
@@ -179,6 +181,37 @@ public class AMRPipeline {
                     }
                     else return "ROOT";
                 });
+                // Dependency child arcs set
+                add((pair) -> {
+                    SemanticGraph graph = pair.first.annotation.get(CoreAnnotations.SentencesAnnotation.class).get(0)
+                            .get(SemanticGraphCoreAnnotations.CollapsedCCProcessedDependenciesAnnotation.class);
+                    IndexedWord indexedWord = graph.getNodeByIndexSafe(pair.second + 1);
+                    if (indexedWord == null) return "NON-DEP";
+                    List<SemanticGraphEdge> edges = graph.getOutEdgesSorted(indexedWord);
+                    Set<String> arcs = new HashSet<String>();
+                    for (SemanticGraphEdge edge : edges) {
+                        arcs.add(edge.getRelation().toString());
+                    }
+                    return arcs;
+                });
+                // Dependency child arcs number indicator
+                add((pair) -> {
+                    SemanticGraph graph = pair.first.annotation.get(CoreAnnotations.SentencesAnnotation.class).get(0)
+                            .get(SemanticGraphCoreAnnotations.CollapsedCCProcessedDependenciesAnnotation.class);
+                    IndexedWord indexedWord = graph.getNodeByIndexSafe(pair.second + 1);
+                    if (indexedWord == null) return "NON-DEP";
+                    List<SemanticGraphEdge> edges = graph.getOutEdgesSorted(indexedWord);
+                    return Integer.toString(edges.size());
+                });
+                // Dependency child arcs soft number
+                add((pair) -> {
+                    SemanticGraph graph = pair.first.annotation.get(CoreAnnotations.SentencesAnnotation.class).get(0)
+                            .get(SemanticGraphCoreAnnotations.CollapsedCCProcessedDependenciesAnnotation.class);
+                    IndexedWord indexedWord = graph.getNodeByIndexSafe(pair.second + 1);
+                    if (indexedWord == null) return "NON-DEP";
+                    List<SemanticGraphEdge> edges = graph.getOutEdgesSorted(indexedWord);
+                    return (double)(edges.size());
+                });
                 // Dependency parent arc
                 add((pair) -> {
                     SemanticGraph graph = pair.first.annotation.get(CoreAnnotations.SentencesAnnotation.class).get(0)
@@ -201,10 +234,16 @@ public class AMRPipeline {
                             parent.get(CoreAnnotations.PartOfSpeechAnnotation.class);
                 });
 
-                // Closest frame similarity
-                add((pair) -> frameManager.getMaxSimilarity(pair.first.tokens[pair.second].toLowerCase()));
+                // Closest frame similarity to the lemma
+                add((pair) -> {
+                    String lemma = pair.first.annotation.get(CoreAnnotations.TokensAnnotation.class).get(pair.second).get(CoreAnnotations.LemmaAnnotation.class);
+                    return frameManager.getMaxSimilarity(lemma);
+                });
                 // Closest frame token
-                add((pair) -> frameManager.getClosestFrame(pair.first.tokens[pair.second].toLowerCase()));
+                add((pair) -> {
+                    String lemma = pair.first.annotation.get(CoreAnnotations.TokensAnnotation.class).get(pair.second).get(CoreAnnotations.LemmaAnnotation.class);
+                    return frameManager.getClosestFrame(lemma);
+                });
 
                 // Token NER
                 add((pair) -> pair.first.annotation.get(CoreAnnotations.TokensAnnotation.class).get(pair.second).get(CoreAnnotations.NamedEntityTagAnnotation.class));
@@ -251,9 +290,74 @@ public class AMRPipeline {
                     String arcName = graph.getAllEdges(parent, indexedWord).get(0).getRelation().toString();
 
                     char firstChar = pair.first.tokens[pair.second].charAt(0);
-                    if (arcName.startsWith("prep_") && parentIsNER) return "CAPITALIZED_OF_NER";
+                    if (arcName.startsWith("prep_") && parentIsNER) return "_OF_NER";
+                    else if (arcName.equals("appos") && parentIsNER) return "_OF_NER";
                     else if (arcName.startsWith("prep_") && Character.isUpperCase(firstChar)) return "CAPITALIZED_OF";
                     else return "NOT_PREP_NER";
+                });
+
+                // A dependency child exists with an appos or a prep_of, and we're an NER type
+                add((pair) -> {
+                    SemanticGraph graph = pair.first.annotation.get(CoreAnnotations.SentencesAnnotation.class).get(0)
+                            .get(SemanticGraphCoreAnnotations.CollapsedCCProcessedDependenciesAnnotation.class);
+
+                    if (!AMRConstants.nerTaxonomy.contains(pair.first.tokens[pair.second].toLowerCase())) return "UNRECOGNIZED_NER_TYPE";
+                    IndexedWord indexedWord = graph.getNodeByIndexSafe(pair.second + 1);
+                    if (indexedWord == null) return "NON-DEP";
+                    for (SemanticGraphEdge edge : graph.getOutEdgesSorted(indexedWord)) {
+                        String relName = edge.getRelation().toString();
+                        if (relName.startsWith("prep_") || relName.equals("appos")) {
+                            String word = edge.getDependent().word();
+                            if (Character.isUpperCase(word.charAt(0))) return "_OF_CAPITALIZED";
+                            else return "_OF_UNCAPITALIZED";
+                        }
+                    }
+                    return "NO_OUT_NAME_ARCS";
+                });
+
+                // Is this token a pronoun? could be a coref node!
+                add((pair) -> AMRConstants.pronouns.contains(pair.first.tokens[pair.second].toLowerCase()));
+
+                // Is this token part of a coref chain?
+                add((pair) -> {
+                    Map<Integer,CorefChain> chains = pair.first.annotation.get(CorefCoreAnnotations.CorefChainAnnotation.class);
+                    for (CorefChain chain : chains.values()) {
+                        List<CorefChain.CorefMention> mentions = chain.getMentionsInTextualOrder();
+                        for (int i = 0; i < mentions.size(); i++) {
+                            CorefChain.CorefMention mention = mentions.get(i);
+                            if (mention.headIndex == pair.second) {
+                                if (i == 0) return "FIRST-COREF";
+                                else return "COREF";
+                            }
+                        }
+                    }
+                    return "NON-COREF";
+                });
+
+                // Is this token part of a coref chain and a pronoun? That'd be a strong signal
+                add((pair) -> {
+                    Map<Integer,CorefChain> chains = pair.first.annotation.get(CorefCoreAnnotations.CorefChainAnnotation.class);
+                    for (CorefChain chain : chains.values()) {
+                        List<CorefChain.CorefMention> mentions = chain.getMentionsInTextualOrder();
+                        for (int i = 0; i < mentions.size(); i++) {
+                            CorefChain.CorefMention mention = mentions.get(i);
+                            if (mention.headIndex == pair.second) {
+                                if (AMRConstants.pronouns.contains(pair.first.tokens[pair.second].toLowerCase())) {
+                                    if (i == 0) return "FIRST-COREF-PRONOUN";
+                                    else return "COREF-PRONOUN";
+                                } else {
+                                    if (i == 0) return "FIRST-COREF-NON-PRONOUN";
+                                    else return "COREF-NON-PRONOUN";
+                                }
+                            }
+                        }
+                    }
+                    if (AMRConstants.pronouns.contains(pair.first.tokens[pair.second].toLowerCase())) {
+                        return "NON-COREF-PRONOUN";
+                    }
+                    else {
+                        return "NON-COREF-NON-PRONOUN";
+                    }
                 });
 
                 /*
@@ -918,6 +1022,68 @@ public class AMRPipeline {
         return nerChunk;
     }
 
+    private static AMR getDateSpanFromToken(String token, int i) {
+        Pattern p = Pattern.compile("([0-9][0-9][0-9][0-9][0-9][0-9])-([0-9][0-9][0-9][0-9][0-9][0-9])");
+        Matcher m = p.matcher(token);
+        if (m.matches()) {
+            AMR date1 = getDateFromToken(m.group(1), i);
+            AMR date2 = getDateFromToken(m.group(2), i);
+            AMR interval = new AMR();
+            AMR.Node root = interval.addNode("d", "date-interval");
+            Map<AMR.Node,AMR.Node> oldToNew1 = interval.subsumeContentsOf(date1);
+            Map<AMR.Node,AMR.Node> oldToNew2 = interval.subsumeContentsOf(date2);
+            interval.addArc(root, oldToNew1.get(date1.head), "op");
+            interval.addArc(root, oldToNew2.get(date2.head), "op");
+
+            for (AMR.Node node : interval.nodes) {
+                interval.giveNodeUniqueRef(node);
+            }
+            return interval;
+        }
+        return null;
+    }
+
+    private static AMR getDateFromToken(String token, int i) {
+        Pattern p1 = Pattern.compile("([0-9][0-9])([0-9][0-9])([0-9][0-9])");
+        Pattern p2 = Pattern.compile("([0-9][0-9][0-9][0-9])([0-9][0-9])([0-9][0-9])");
+        Matcher m1 = p1.matcher(token);
+        Matcher m2 = p2.matcher(token);
+
+        if (m1.matches() || m2.matches()) {
+            int year;
+            int month;
+            int day;
+            if (m1.matches()) {
+                year = Integer.parseInt(m1.group(1));
+                month = Integer.parseInt(m1.group(2));
+                day = Integer.parseInt(m1.group(3));
+            }
+            else {
+                year = Integer.parseInt(m2.group(1));
+                month = Integer.parseInt(m2.group(2));
+                day = Integer.parseInt(m2.group(3));
+            }
+
+            AMR date = new AMR();
+            AMR.Node root = date.addNode("d", "date-entity", i);
+            if (year < 20) {
+                AMR.Node yearNode = date.addNode(Integer.toString(2000 + year), AMR.NodeType.VALUE, i);
+                date.addArc(root, yearNode, "year");
+            }
+            if (month > 0) {
+                AMR.Node monthNode = date.addNode(Integer.toString(month), AMR.NodeType.VALUE, i);
+                date.addArc(root, monthNode, "month");
+            }
+            if (day > 0) {
+                AMR.Node dayNode = date.addNode(Integer.toString(day), AMR.NodeType.VALUE, i);
+                date.addArc(root, dayNode, "day");
+            }
+
+            return date;
+        }
+        return null;
+    }
+
     public static Pair<List<AMR>,Set<Integer>> getDeterministicChunks(String[] tokens, Annotation annotation) {
         List<AMR> gen = new ArrayList<>();
         Set<Integer> blocked = new HashSet<>();
@@ -968,6 +1134,21 @@ public class AMRPipeline {
             }
             if (inBrace) {
                 blocked.add(i);
+            }
+        }
+
+        for (int i = 0; i < tokens.length; i++) {
+            AMR dateInterval = getDateSpanFromToken(tokens[i], i);
+            if (dateInterval != null) {
+                blocked.add(i);
+                gen.add(dateInterval);
+            }
+            else {
+                AMR date = getDateFromToken(tokens[i], i);
+                if (date != null) {
+                    blocked.add(i);
+                    gen.add(date);
+                }
             }
         }
 

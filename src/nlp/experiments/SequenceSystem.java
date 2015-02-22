@@ -34,6 +34,8 @@ public class SequenceSystem {
         System.out.println(system.getSpans("China will sign a treaty with America on Friday June 3").toString());
         System.out.println("2009-01-02");
         System.out.println(system.getSpans("2009-01-02").toString());
+        System.out.println("I will go on vacation 141001-141101");
+        System.out.println(system.getSpans("I will go on vacation 141001-141101").toString());
         System.out.println("I want to start dating other people and my son's father says if I do he will have nothing to do with his son.");
         System.out.println(system.getSpans("I want to start dating other people and my son's father says if I do he will have nothing to do with his son.").toString());
         System.out.println("A newspaper report on January 1 , 2008 that Iran hanged two convicted drug traffickers in the southeastern city of Zahedan .");

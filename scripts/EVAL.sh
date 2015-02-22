@@ -59,7 +59,7 @@ ${JAMR_HOME}/run Aligner -v 1 < "$OUTPUT.tok" 2>&1 | egrep '^#|^ |^\(|^$' | sed 
 #### Parse ####
 
 echo "Parsing standard"
-${JAMR_HOME}/run AMRParser \
+: '${JAMR_HOME}/run AMRParser \
   --stage1-concept-table "${MODEL_DIR}/conceptTable.train" \
   --stage1-weights "${STAGE1_WEIGHTS}" \
   --stage2-weights "${STAGE2_WEIGHTS}" \
@@ -71,7 +71,7 @@ ${JAMR_HOME}/run AMRParser \
   ${PARSER_OPTIONS} \
   < "${INPUT}" \
   > "${OUTPUT}.parsed" \
-  2> "${OUTPUT}.parsed.err"
+  2> "${OUTPUT}.parsed.err"'
 
 echo "Parsing with Stanford chunks"
 ${JAMR_HOME}/run AMRParser \
@@ -92,7 +92,7 @@ ${JAMR_HOME}/run AMRParser \
   2> "${OUTPUT}.parsed-stanford-concepts.err"
 
 echo "Parsing with Gold chunks"
-${JAMR_HOME}/run AMRParser \
+: '${JAMR_HOME}/run AMRParser \
   --stage1-oracle \
   --stage1-concept-table "${MODEL_DIR}/conceptTable.train" \
   --stage1-weights "${STAGE1_WEIGHTS}" \
@@ -105,7 +105,7 @@ ${JAMR_HOME}/run AMRParser \
   ${PARSER_OPTIONS} \
   < "${INPUT}" \
   > "${OUTPUT}.parsed-gold-concepts" \
-  2> "${OUTPUT}.parsed-gold-concepts.err"
+  2> "${OUTPUT}.parsed-gold-concepts.err"'
 
 rm "$OUTPUT.deps" "$OUTPUT.IllinoisNER" "$OUTPUT.tok" "$OUTPUT.snt.tok" "$OUTPUT.snt" "$OUTPUT.aligned.no_opN"
 
