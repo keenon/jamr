@@ -944,12 +944,12 @@ public class AMRPipeline {
 
     private static AMR constructOrdinalCluster(Annotation annotation, List<Integer> ordinalList, boolean debug) {
         AMR chunk = new AMR();
-        AMR.Node head = chunk.addNode("o", "ordinal-entity");
+        AMR.Node head = chunk.addNode("o", "ordinal-entity", Collections.min(ordinalList));
         Number n = null;
         try {
             String number = getSequentialTokens(annotation, ordinalList);
             n = NumberNormalizer.wordToNumber(number);
-            System.out.println("Normalized \""+number+"\" to "+n);
+            // System.out.println("Normalized \""+number+"\" to "+n);
         }
         catch (Exception ignored) {}
         if (n == null) n = 1;
@@ -964,11 +964,11 @@ public class AMRPipeline {
         try {
             String number = getSequentialTokens(annotation, numberList);
             n = NumberNormalizer.wordToNumber(number);
-            System.out.println("Normalized \""+number+"\" to "+n);
+            // System.out.println("Normalized \""+number+"\" to "+n);
         }
         catch (Exception ignored) {}
         if (n == null) n = 1;
-        chunk.addNode(n.toString(), AMR.NodeType.VALUE);
+        chunk.addNode(n.toString(), AMR.NodeType.VALUE, Collections.min(numberList));
         return chunk;
     }
 
@@ -1197,7 +1197,7 @@ public class AMRPipeline {
             else {
                 labels[i] = "BLOCKED";
             }
-            System.out.println(tokens[i]+": "+labels[i]);
+            // System.out.println(tokens[i]+": "+labels[i]);
         }
 
         // First we get all adjacent DICT entries together...
