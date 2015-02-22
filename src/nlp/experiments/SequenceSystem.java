@@ -36,6 +36,8 @@ public class SequenceSystem {
         System.out.println(system.getSpans("2009-01-02").toString());
         System.out.println("I want to start dating other people and my son's father says if I do he will have nothing to do with his son.");
         System.out.println(system.getSpans("I want to start dating other people and my son's father says if I do he will have nothing to do with his son.").toString());
+        System.out.println("A newspaper report on January 1 , 2008 that Iran hanged two convicted drug traffickers in the southeastern city of Zahedan .");
+        System.out.println(system.getSpans("A newspaper report on January 1 , 2008 that Iran hanged two convicted drug traffickers in the southeastern city of Zahedan .").toString());
     }
 
     public SequenceSystem() {

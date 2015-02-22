@@ -4774,7 +4774,7 @@
 10	(m/military)	18	ARG0	15
 11	(p/partner-01)	3	ARG2	6
 12	(n/name)	9	name	0
-13	(c/country)	11	ARG0	0
+13	(c/country)	11	ARG0	11
 14	(o2/over)	18	path	16
 15	(w/war-01)	11	purpose	10
 16	(c3/country)	15	ARG1	8
@@ -15254,7 +15254,7 @@
 5	(r/require-01)	7	ARG1	7
 6	(o3/online)	12	medium	25
 7	(a/announce-01)	0	ROOT	1
-8	(c/country)	7	ARG0	13
+8	(c/country)	7	ARG0	4
 9	w	16	ARG1	5
 10	(c/country)	23	ARG0	13
 11	(p/pornography)	19	mod	23
@@ -33977,7 +33977,7 @@
 19	(r/report-01)	0	ROOT	3
 20	(d2/date-entity)	19	time	6
 21	(c/country)	17	mod	22
-22	(c/country)	32	mod	22
+22	(c/country)	32	mod	13
 23	(n4/name)	2	name	10
 24	(c/country)	33	ARG2	13
 25	(p2/person)	35	op	16
@@ -34546,7 +34546,7 @@
 29	(a/and)	11	ARG1	28
 30	(p/person)	13	ARG0	23
 31	(l/locate-02)	13	ARG2	31
-32	(p/person)	33	ARG1	0
+32	(p/person)	33	ARG1	23
 33	(u/undermine-01)	17	ARG1	7
 34	(d/destroy-01)	7	ARG2-of	36
 
@@ -35197,7 +35197,7 @@
 15	(c/country)	10	ARG0	13
 16	(w2/weapon)	22	ARG1	23
 17	"North"	20	op	2
-18	(c/country)	14	ARG0	8
+18	(c/country)	14	ARG0	13
 19	(o/operation)	10	ARG1	17
 20	(n2/name)	13	name	2
 21	(t/threaten-01)	14	ARG1	5
@@ -44077,7 +44077,7 @@
 12	"Kosovo"	2	op	18
 13	(n/name)	15	name	0
 14	(n3/name)	19	name	11
-15	(c2/country)	6	mod	23
+15	(c2/country)	6	mod	5
 16	(g2/geography)	5	mod	2
 17	(a2/and)	1	ARG2	10
 18	(c/crime)	6	mod	24
@@ -46564,7 +46564,7 @@
 2	(n3/name)	10	name	15
 3	(n2/nucleus)	18	mod	4
 4	(n/name)	5	name	0
-5	(c2/country)	16	ARG0	10
+5	(c2/country)	16	ARG0	2
 6	(m/match-01)	16	time	11
 7	"Pakistan"	4	op	0
 8	(c2/country)	12	ARG0	2
@@ -50091,7 +50091,7 @@
 10	(d/date-entity)	37	time	20
 11	(t2/threaten-01)	2	op	25
 12	(c4/civil)	37	mod	17
-13	(c2/country)	22	ARG2	10
+13	(c2/country)	22	ARG2	0
 14	(d2/depend-01)	32	ARG2	31
 15	(a/await-01)	18	ARG1-of	2
 16	"Taiwan"	21	op	2
@@ -56412,7 +56412,7 @@
 23	(n7/name)	26	name	0
 24	(m2/member)	10	ARG2	46
 25	(o4/organization)	1	ARG2	7
-26	(c4/country)	6	poss	21
+26	(c4/country)	6	poss	35
 27	"Asia"	39	op	27
 28	"Dadang"	42	op	4
 29	"ASEAN"	16	op	15
@@ -60623,7 +60623,7 @@
 9	(s/see-01)	15	purpose	16
 10	(m/missile)	15	ARG1	14
 11	(e/extend-01)	14	domain	22
-12	(m/missile)	2	op	14
+12	(m/missile)	2	op	18
 13	(y2/year)	4	unit	9
 14	(p/possible)	9	ARG1	20
 15	(t3/test-01)	2	op	13
@@ -61330,7 +61330,7 @@
 
 21	Pakistan claims it offers moral rather than material support to the rebels , whom it considers freedom fighters .
 1	(f2/free-41)	12	ARG2	16
-2	(c3/country)	4	ARG0	2
+2	(c3/country)	4	ARG0	14
 3	(r/rebel-01)	16	ARG0-of	11
 4	(c2/claim-01)	0	ROOT	1
 5	-	9	polarity	4
@@ -73069,7 +73069,7 @@
 20	(n3/name)	3	name	10
 21	"Act"	20	op	13
 22	(f/foreign)	28	mod	28
-23	(c/country)	5	poss	23
+23	(c/country)	5	poss	7
 24	"Ministry"	8	op	4
 25	(s/state-01)	0	ROOT	5
 26	(o/or)	16	location-of	20

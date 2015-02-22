@@ -16938,7 +16938,7 @@
 16	"Europe"	6	op	30
 17	(a4/arm)	8	ARG1	31
 18	14	29	day	5
-19	(c/country)	25	mod	9
+19	(c/country)	25	mod	21
 20	"Putin"	23	op	12
 21	"Conventional"	6	op	27
 22	(p2/president)	34	ARG2	11
@@ -26432,11 +26432,11 @@
 3	-	11	polarity	1
 4	(t/traffic-00)	1	op	6
 5	(o/opium)	9	ARG1	12
-6	(m/man)	14	ARG1	8
+6	(m/man)	14	ARG1	11
 7	(p/possess-01)	1	op	8
 8	(m/man)	9	ARG0	11
 9	(d/distribute-01)	1	op	11
-10	(m/man)	4	ARG0	8
+10	(m/man)	4	ARG0	11
 11	(i/identify-01)	6	ARG1-of	1
 12	(o/opium)	7	ARG1	12
 13	(o/opium)	4	ARG1	12
@@ -31557,7 +31557,7 @@
 13	Myanmar government has stated Myanmar will become opium-free by 2014 .
 1	(n/name)	4	name	0
 2	(d/date-entity)	13	time	5
-3	(c/country)	9	ARG1	0
+3	(c/country)	9	ARG1	4
 4	(c/country)	8	ARG1	4
 5	(s/state-01)	0	ROOT	3
 6	(c/country)	13	ARG1	4
@@ -35997,7 +35997,7 @@
 9	(a/authority)	3	ARG2	6
 10	(l/list)	3	ARG1	9
 11	(m2/man)	8	ARG0	19
-12	(m2/man)	3	ARG0	19
+12	(m2/man)	3	ARG0	0
 13	(i/intend-01)	4	ARG1-of	20
 14	(i2/imprison-01)	15	ARG0-of	22
 15	(p3/person)	10	consist-of	22
@@ -36010,7 +36010,7 @@
 4	(a2/allege-01)	10	ARG0	4
 5	(p3/person)	8	domain	10
 6	(p3/person)	1	ARG1	15
-7	(p3/person)	3	ARG0	15
+7	(p3/person)	3	ARG0	10
 8	(t/terrorist)	4	ARG1	3
 9	"Al-Faleh"	2	op	0
 10	(c/cover-04)	12	op	7

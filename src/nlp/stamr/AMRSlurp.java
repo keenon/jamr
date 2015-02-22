@@ -97,8 +97,10 @@ public class AMRSlurp {
         }
 
         AMR[] arr = bank.toArray(new AMR[bank.size()]);
+        /*
         if (annotationLocation != null)
             annotationManager.loadOrCreateAnnotations(arr, annotationLocation);
+            */
         return arr;
     }
 

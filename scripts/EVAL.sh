@@ -58,6 +58,7 @@ ${JAMR_HOME}/run Aligner -v 1 < "$OUTPUT.tok" 2>&1 | egrep '^#|^ |^\(|^$' | sed 
 
 #### Parse ####
 
+echo "Parsing standard"
 ${JAMR_HOME}/run AMRParser \
   --stage1-concept-table "${MODEL_DIR}/conceptTable.train" \
   --stage1-weights "${STAGE1_WEIGHTS}" \
@@ -72,6 +73,7 @@ ${JAMR_HOME}/run AMRParser \
   > "${OUTPUT}.parsed" \
   2> "${OUTPUT}.parsed.err"
 
+echo "Parsing with Stanford chunks"
 ${JAMR_HOME}/run AMRParser \
   --stage1-concept-table "${MODEL_DIR}/conceptTable.train" \
   --stage1-weights "${STAGE1_WEIGHTS}" \
@@ -89,6 +91,7 @@ ${JAMR_HOME}/run AMRParser \
   > "${OUTPUT}.parsed-stanford-concepts" \
   2> "${OUTPUT}.parsed-stanford-concepts.err"
 
+echo "Parsing with Gold chunks"
 ${JAMR_HOME}/run AMRParser \
   --stage1-oracle \
   --stage1-concept-table "${MODEL_DIR}/conceptTable.train" \

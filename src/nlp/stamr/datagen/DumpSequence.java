@@ -90,8 +90,10 @@ public class DumpSequence {
     public static void dumpReleaseData() throws IOException {
         AMR[] train = AMRSlurp.slurp("data/deft-amr-release-r3-proxy-train.txt", AMRSlurp.Format.LDC);
         AMR[] dev = AMRSlurp.slurp("data/deft-amr-release-r3-proxy-dev.txt", AMRSlurp.Format.LDC);
+        AMR[] test = AMRSlurp.slurp("data/deft-amr-release-r3-proxy-test.txt", AMRSlurp.Format.LDC);
         retokenizeAndAlign(train);
         retokenizeAndAlign(dev);
+        retokenizeAndAlign(test);
 
         dumpSequences(train, "data/deft-train-seq.txt");
         dumpManygenDictionaries(train, "data/deft-train-manygen.txt");
@@ -100,6 +102,10 @@ public class DumpSequence {
         dumpSequences(dev, "data/deft-dev-seq.txt");
         dumpManygenDictionaries(dev, "data/deft-dev-manygen.txt");
         dumpCONLL(dev, "data/deft-dev-conll.txt");
+
+        dumpSequences(test, "data/deft-test-seq.txt");
+        dumpManygenDictionaries(test, "data/deft-test-manygen.txt");
+        dumpCONLL(test, "data/deft-test-conll.txt");
     }
 
     public static void dumpTestData() throws IOException {
@@ -180,12 +186,12 @@ public class DumpSequence {
     public static String getType(AMR.Node node, int i, String[] tokens, Annotation annotation, AMR amr) {
         // Single unaligned QUOTE nodes should be a bug in the aligner, but ok
         if (node.type == AMR.NodeType.QUOTE) {
-            if (node.title.equals(tokens[i])) {
+            /*if (node.title.equals(tokens[i])) {
                 return "NAME";
             }
-            else {
+            else {*/
                 return "DICT";
-            }
+            //}
         }
         if (node.type == AMR.NodeType.VALUE) return "VALUE";
 
@@ -247,7 +253,7 @@ public class DumpSequence {
                 }
             }
             if (containsQuote && !containsNERType) {
-                return "NAME";
+                // return "NAME";
             }
         }
 
@@ -261,14 +267,17 @@ public class DumpSequence {
             Pair<List<AMR>,Set<Integer>> pair = AMRPipeline.getDeterministicChunks(amr.sourceText, amr.multiSentenceAnnotationWrapper.sentences.get(0).annotation);
             Set<Integer> blocked = pair.second;
             for (int i = 0; i < amr.sourceText.length; i++) {
-                if (blocked.contains(i)) continue;
                 String type = getType(amr, i);
-                typeCounter.incrementCount(type);
+                if (blocked.contains(i)) type = "BLOCKED";
+                else typeCounter.incrementCount(type);
                 bw.append(amr.sourceText[i]).append("\t").append(type).append("\n");
             }
             bw.append("\n");
         }
-        System.out.println(typeCounter.toString());
+        for (String type : typeCounter.keySet()) {
+            System.out.println(type);
+            System.out.println("\t"+typeCounter.getCount(type)+" - "+(typeCounter.getCount(type) / typeCounter.totalCount()));
+        }
         bw.close();
     }
 

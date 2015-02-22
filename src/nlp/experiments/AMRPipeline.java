@@ -59,7 +59,7 @@ public class AMRPipeline {
 
     static {
         try {
-            embeddings = Word2VecLoader.loadData("data/google-300-fulldata.ser.gz");
+            embeddings = Word2VecLoader.loadData("data/google-300-deft.ser.gz");
             frameManager = new FrameManager("data/frames");
         } catch (IOException e) {
             e.printStackTrace();
@@ -225,6 +225,38 @@ public class AMRPipeline {
                     return pair.first.annotation.get(CoreAnnotations.TokensAnnotation.class).get(pair.second).get(CoreAnnotations.NamedEntityTagAnnotation.class)+":"+rightNER;
                 });
 
+                add((pair) -> {
+                    if (AMRConstants.nerTaxonomy.contains(pair.first.tokens[pair.second].toLowerCase())) return "RECOGNIZED_NER_TYPE";
+                    else return "UNRECOGNIZED_NER_TYPE";
+                });
+
+                add((pair) -> {
+                    char firstChar = pair.first.tokens[pair.second].charAt(0);
+                    if (Character.isUpperCase(firstChar)) return "CAPITALIZED";
+                    else return "UNCAPITALIZED";
+                });
+
+                // Dependency parent arc is a prep_ to a known NER type, and we're captilized (city of Zahedan)
+                add((pair) -> {
+                    SemanticGraph graph = pair.first.annotation.get(CoreAnnotations.SentencesAnnotation.class).get(0)
+                            .get(SemanticGraphCoreAnnotations.CollapsedCCProcessedDependenciesAnnotation.class);
+
+                    IndexedWord indexedWord = graph.getNodeByIndexSafe(pair.second + 1);
+                    if (indexedWord == null) return "NON-DEP";
+                    IndexedWord parent = graph.getParent(indexedWord);
+                    if (parent == null) return "ROOT";
+
+                    boolean parentIsNER = AMRConstants.nerTaxonomy.contains(parent.word().toLowerCase());
+
+                    String arcName = graph.getAllEdges(parent, indexedWord).get(0).getRelation().toString();
+
+                    char firstChar = pair.first.tokens[pair.second].charAt(0);
+                    if (arcName.startsWith("prep_") && parentIsNER) return "CAPITALIZED_OF_NER";
+                    else if (arcName.startsWith("prep_") && Character.isUpperCase(firstChar)) return "CAPITALIZED_OF";
+                    else return "NOT_PREP_NER";
+                });
+
+                /*
                 // Get the SRL lemma here
                 add((pair) -> {
                     return getSRLSenseAtIndex(pair.first.annotation, pair.second);
@@ -801,7 +833,7 @@ public class AMRPipeline {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < list.size(); i++) {
             if (i != 0) sb.append(" ");
-            sb.append(annotation.get(CoreAnnotations.TokensAnnotation.class).get(list.get(i)));
+            sb.append(annotation.get(CoreAnnotations.TokensAnnotation.class).get(list.get(i)).word());
         }
         return sb.toString();
     }
@@ -811,7 +843,9 @@ public class AMRPipeline {
         AMR.Node head = chunk.addNode("o", "ordinal-entity");
         Number n = null;
         try {
-            n = NumberNormalizer.wordToNumber(getSequentialTokens(annotation, ordinalList));
+            String number = getSequentialTokens(annotation, ordinalList);
+            n = NumberNormalizer.wordToNumber(number);
+            System.out.println("Normalized \""+number+"\" to "+n);
         }
         catch (Exception ignored) {}
         if (n == null) n = 1;
@@ -824,7 +858,9 @@ public class AMRPipeline {
         AMR chunk = new AMR();
         Number n = null;
         try {
-            NumberNormalizer.wordToNumber(getSequentialTokens(annotation, numberList));
+            String number = getSequentialTokens(annotation, numberList);
+            n = NumberNormalizer.wordToNumber(number);
+            System.out.println("Normalized \""+number+"\" to "+n);
         }
         catch (Exception ignored) {}
         if (n == null) n = 1;
@@ -974,7 +1010,13 @@ public class AMRPipeline {
 
         String[] labels = new String[tokens.length];
         for (int i = 0; i < tokens.length; i++) {
-            labels[i] = nerPlusPlus.predict(new Pair<>(labeledSequence, i));
+            if (!blocked.contains(i)) {
+                labels[i] = nerPlusPlus.predict(new Pair<>(labeledSequence, i));
+            }
+            else {
+                labels[i] = "BLOCKED";
+            }
+            System.out.println(tokens[i]+": "+labels[i]);
         }
 
         // First we get all adjacent DICT entries together...
@@ -1036,6 +1078,18 @@ public class AMRPipeline {
                     }
                 }
             }
+            else {
+                // Just create a naked (name :op1 "QUOTE") entity here, in the hopes it gets attached sensibly
+                AMR name = new AMR();
+                AMR.Node root = name.addNode("n", "name", first);
+                for (int i = 0; i < dict.size(); i++) {
+                    AMR.Node quote = name.addNode(tokens[dict.get(i)], AMR.NodeType.QUOTE, dict.get(i));
+                    name.addArc(root, quote, "op"+(i+1));
+                }
+
+                gen.add(name);
+                blocked.addAll(dict);
+            }
         }
 
         // Do all non-dict elements
@@ -1062,8 +1116,11 @@ public class AMRPipeline {
                         get(i).get(CoreAnnotations.LemmaAnnotation.class).toLowerCase());
             }
             else if (labels[i].equals("VALUE")) {
-                // amr = createAMRSingleton()
-                // TODO
+                try {
+                    int j = Integer.parseInt(tokens[i]);
+                    amr = createAMRSingleton(Integer.toString(j), AMR.NodeType.VALUE);
+                }
+                catch (Exception e) {}
             }
             if (amr != null) {
                 for (AMR.Node node : amr.nodes) {
@@ -1512,7 +1569,7 @@ public class AMRPipeline {
 
         // List<LabeledSequence> nerPlusPlusDataTrain = loadSequenceData("data/train-500-seq.txt");
         List<LabeledSequence> nerPlusPlusDataTrain = loadSequenceData("data/deft-train-seq.txt");
-        List<LabeledSequence> nerPlusPlusDataTest = loadSequenceData("data/dev-100-seq.txt");
+        List<LabeledSequence> nerPlusPlusDataTest = loadSequenceData("data/deft-dev-seq.txt");
 
         List<Pair<Pair<LabeledSequence,Integer>,String>> dataTrain = getNERPlusPlusForClassifier(nerPlusPlusDataTrain);
         List<Pair<Pair<LabeledSequence,Integer>,String>> dataTest = getNERPlusPlusForClassifier(nerPlusPlusDataTest);
@@ -1926,6 +1983,7 @@ public class AMRPipeline {
         List<Pair<Pair<LabeledSequence,Integer>,String>> nerPlusPlusTrainingData = new ArrayList<>();
         for (LabeledSequence seq : nerPlusPlusData) {
             for (int i = 0; i < seq.tokens.length; i++) {
+                if (seq.labels[i].equals("BLOCKED")) continue;
                 Pair<Pair<LabeledSequence,Integer>,String> pair = new Pair<>();
                 pair.first = new Pair<>(seq, i);
                 pair.second = seq.labels[i];
