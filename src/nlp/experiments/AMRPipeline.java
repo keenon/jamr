@@ -56,8 +56,8 @@ public class AMRPipeline {
     // collisions, String is default case)
     /////////////////////////////////////////////////////
 
-    static Map<String,double[]> embeddings;
-    static FrameManager frameManager;
+    public static Map<String,double[]> embeddings;
+    public static FrameManager frameManager;
 
     static {
         try {
@@ -893,30 +893,29 @@ public class AMRPipeline {
         if (parts.length > 2) {
             try {
                 day = Integer.parseInt(parts[2]);
-            } catch (Exception ignored) {
-            }
+            } catch (Exception ignored) {}
         }
 
         if (year != -1) {
-            AMR.Node yearN = dateChunk.addNode(""+year, AMR.NodeType.VALUE);
+            AMR.Node yearN = dateChunk.addNode(""+year, AMR.NodeType.VALUE, Collections.min(dateList));
             dateChunk.addArc(root, yearN, "year");
         }
         if (month != -1) {
-            AMR.Node monthN = dateChunk.addNode(""+month, AMR.NodeType.VALUE);
+            AMR.Node monthN = dateChunk.addNode(""+month, AMR.NodeType.VALUE, Collections.min(dateList));
             dateChunk.addArc(root, monthN, "month");
         }
         if (week != -1) {
-            AMR.Node weekN = dateChunk.addNode(""+week, AMR.NodeType.VALUE);
+            AMR.Node weekN = dateChunk.addNode(""+week, AMR.NodeType.VALUE, Collections.min(dateList));
             dateChunk.addArc(root, weekN, "week");
         }
         if (day != -1) {
             if (isWeek) {
                 String weekday = AMRConstants.weekdays.get(day).toLowerCase();
-                AMR.Node dayN = dateChunk.addNode(""+weekday.charAt(0), weekday);
+                AMR.Node dayN = dateChunk.addNode(""+weekday.charAt(0), weekday, Collections.min(dateList));
                 dateChunk.addArc(root, dayN, "weekday");
             }
             else {
-                AMR.Node dayN = dateChunk.addNode("" + day, AMR.NodeType.VALUE);
+                AMR.Node dayN = dateChunk.addNode("" + day, AMR.NodeType.VALUE, Collections.min(dateList));
                 dateChunk.addArc(root, dayN, "day");
             }
         }
@@ -925,7 +924,7 @@ public class AMRPipeline {
         if (year == -1 && month == -1 && week == -1 && day == -1) {
             for (int i : dateList) {
                 String token = annotation.get(CoreAnnotations.TokensAnnotation.class).get(i).lemma();
-                AMR.Node word = dateChunk.addNode(""+token.charAt(0), token);
+                AMR.Node word = dateChunk.addNode(""+token.charAt(0), token, dateList.get(i));
                 dateChunk.addArc(root, word, "time");
             }
         }

@@ -1,5 +1,7 @@
 package nlp.stamr.datagen;
 
+import edu.stanford.nlp.dcoref.CorefChain;
+import edu.stanford.nlp.dcoref.CorefCoreAnnotations;
 import edu.stanford.nlp.ling.CoreAnnotations;
 import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.pipeline.Annotation;
@@ -184,16 +186,25 @@ public class DumpSequence {
     }
 
     public static String getType(AMR.Node node, int i, String[] tokens, Annotation annotation, AMR amr) {
-        // Single unaligned QUOTE nodes should be a bug in the aligner, but ok
         if (node.type == AMR.NodeType.QUOTE) {
-            /*if (node.title.equals(tokens[i])) {
+            if (node.title.equals(tokens[i])) {
                 return "NAME";
             }
-            else {*/
-                return "DICT";
-            //}
         }
-        if (node.type == AMR.NodeType.VALUE) return "VALUE";
+
+        if (node.title.equals("name")) {
+            if (amr.outgoingArcs.containsKey(node)) {
+                for (AMR.Arc arc :amr.outgoingArcs.get(node)) {
+                    if (arc.title.equals("op1")) {
+                        if (arc.tail.title.equals(tokens[i])) return "NAME";
+                    }
+                }
+            }
+        }
+
+        if (node.type == AMR.NodeType.VALUE) {
+            return "VALUE";
+        }
 
         if (node.title.contains("-")) {
             String[] components = node.title.split("-");
@@ -201,7 +212,9 @@ public class DumpSequence {
                 String senseTag = components[1];
                 try {
                     int ignored = Integer.parseInt(senseTag);
-                    return "VERB";
+                    if (AMRPipeline.frameManager.getClosestFrame(tokens[i]).equals(node.title)) {
+                        return "VERB";
+                    }
                 }
                 catch (Exception e) {
                     // do nothing
@@ -220,10 +233,23 @@ public class DumpSequence {
         }
 
         if (amr != null) {
-            for (AMR.Node otherNode : amr.nodes) {
-                if (otherNode != node) {
-                    if (otherNode.ref.equals(node.ref)) {
-                        return "COREF";
+            if (AMRConstants.pronouns.contains(tokens[i].toLowerCase())) {
+                if (annotation != null) {
+                    Map<Integer, CorefChain> chains = annotation.get(CorefCoreAnnotations.CorefChainAnnotation.class);
+                    for (CorefChain chain : chains.values()) {
+                        List<CorefChain.CorefMention> mentions = chain.getMentionsInTextualOrder();
+                        for (int j = 0; j < mentions.size(); j++) {
+                            CorefChain.CorefMention mention = mentions.get(j);
+                            if (mention.headIndex == i && j > 0) {
+                                for (AMR.Node otherNode : amr.nodes) {
+                                    if (otherNode != node) {
+                                        if (otherNode.ref.equals(node.ref)) {
+                                            return "COREF";
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }

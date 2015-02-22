@@ -703,6 +703,55 @@ public class AMR implements Serializable {
         return new Pair<AMR, Map<Node, Node>>(clone,oldToNew);
     }
 
+    public Set<Node> getMatchingSubtreeOrEmpty(AMR other) {
+        Set<Node> bestMatch = new IdentityHashSet<>();
+        for (Node node : depthFirstSearch()) {
+            Set<Node> match = getMatchingSubtree(other, other.head, node);
+            if (match.size() > bestMatch.size()) {
+                bestMatch = match;
+            }
+        }
+        return bestMatch;
+    }
+
+    private Set<Node> getMatchingSubtree(AMR other, Node otherNode, Node myNode) {
+        if (otherNode.equals(myNode)) {
+            List<Arc> otherNodeArcs = new ArrayList<>();
+            if (other.outgoingArcs.containsKey(otherNode)) {
+                otherNodeArcs.addAll(other.outgoingArcs.get(otherNode));
+            }
+            List<Arc> myNodeArcs = new ArrayList<>();
+            if (outgoingArcs.containsKey(myNode)) {
+                myNodeArcs.addAll(outgoingArcs.get(myNode));
+            }
+
+            Set<Node> totalMatchingChildren = new IdentityHashSet<>();
+            totalMatchingChildren.add(myNode);
+
+            for (Arc otherArc : otherNodeArcs) {
+                Arc myMatchingArc = null;
+                for (Arc myArc : myNodeArcs) {
+                    if (myArc.equals(otherArc)) myMatchingArc = myArc;
+                }
+                if (myMatchingArc == null) break;
+                myNodeArcs.remove(myMatchingArc);
+
+                Set<Node> matchingChildren = getMatchingSubtree(other, otherArc.tail, myMatchingArc.tail);
+                if (matchingChildren.size() >= 1) {
+                    totalMatchingChildren.addAll(matchingChildren);
+                }
+                else {
+                    break;
+                }
+            }
+
+            if (totalMatchingChildren.size() >= 1 + otherNodeArcs.size()) {
+                return totalMatchingChildren;
+            }
+        }
+        return new HashSet<>();
+    }
+
     public AMR cloneSubtree(Node node) {
         return cloneConnectedSubset(depthFirstSearchNode(node)).first;
     }

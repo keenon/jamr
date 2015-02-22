@@ -94,10 +94,10 @@ public class SequenceSystem {
     }
 
     public void trainSystems() throws IOException, ClassNotFoundException {
-        boolean trainOnSmallerSet = false;
+        boolean trainOnSmallerSet = true;
 
-        getNERSystemForData(trainOnSmallerSet ? "data/train-400-seq.txt" : "data/deft-train-seq.txt");
-        getManygenSystemForData("data/deft-train-manygen.txt");
+        getNERSystemForData(trainOnSmallerSet ? "data/train-seq.txt" : "data/deft-train-seq.txt");
+        getManygenSystemForData("data/train-manygen.txt");
     }
 
     StanfordCoreNLP cachedCore = null;
