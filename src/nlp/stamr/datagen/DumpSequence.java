@@ -2,6 +2,7 @@ package nlp.stamr.datagen;
 
 import edu.stanford.nlp.dcoref.CorefChain;
 import edu.stanford.nlp.dcoref.CorefCoreAnnotations;
+import edu.stanford.nlp.ie.NumberNormalizer;
 import edu.stanford.nlp.ling.CoreAnnotations;
 import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.pipeline.Annotation;
@@ -187,7 +188,7 @@ public class DumpSequence {
 
     public static String getType(AMR.Node node, int i, String[] tokens, Annotation annotation, AMR amr) {
         if (node.type == AMR.NodeType.QUOTE) {
-            if (node.title.equals(tokens[i])) {
+            if (node.title.equalsIgnoreCase(tokens[i])) {
                 return "NAME";
             }
         }
@@ -196,14 +197,36 @@ public class DumpSequence {
             if (amr.outgoingArcs.containsKey(node)) {
                 for (AMR.Arc arc :amr.outgoingArcs.get(node)) {
                     if (arc.title.equals("op1")) {
-                        if (arc.tail.title.equals(tokens[i])) return "NAME";
+                        if (arc.tail.title.equalsIgnoreCase(tokens[i])) return "NAME";
+                    }
+                }
+            }
+        }
+
+        if (AMRConstants.nerTaxonomy.contains(node.title)) {
+            if (amr.outgoingArcs.containsKey(node)) {
+                for (AMR.Arc arc : amr.outgoingArcs.get(node)) {
+                    if (arc.title.equals("name")) {
+                        AMR.Node name = arc.tail;
+                        if (amr.outgoingArcs.containsKey(name)) {
+                            for (AMR.Arc arc2 : amr.outgoingArcs.get(name)) {
+                                if (arc2.title.equals("op1")) {
+                                    if (arc2.tail.title.equalsIgnoreCase(tokens[i])) return "NAME";
+                                }
+                            }
+                        }
                     }
                 }
             }
         }
 
         if (node.type == AMR.NodeType.VALUE) {
-            return "VALUE";
+            try {
+                if (Integer.toString((Integer) NumberNormalizer.wordToNumber(tokens[i])).equals(node.title)) {
+                    return "VALUE";
+                }
+            }
+            catch (Exception ignored) {}
         }
 
         if (node.title.contains("-")) {

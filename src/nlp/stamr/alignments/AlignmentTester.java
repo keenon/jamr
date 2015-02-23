@@ -116,6 +116,28 @@ public class AlignmentTester {
         };
     }
 
+    public static double[] testBankRegenerative(AMR[] train, AMR[] test) {
+        AlignmentKeeper[] keepers = new AlignmentKeeper[test.length];
+        int correct = 0;
+        int total = 0;
+        for (int i = 0; i < test.length; i++) {
+            keepers[i] = new AlignmentKeeper();
+            keepers[i].saveAndConceal(test[i]);
+        }
+        RegenerativeAligner.align(train);
+        for (int i = 0; i < test.length; i++) {
+            correct += keepers[i].countCorrect(test[i]);
+            total += keepers[i].countMeasured(test[i]);
+            keepers[i].restore(test[i]);
+        }
+        double perc = (double)correct / (double) total;
+        System.out.println("Correct percentage: " + perc);
+
+        return new double[]{
+                perc
+        };
+    }
+
     public static double[] testBank(AMR[] bank, int folds) throws InterruptedException {
         return testBank(bank, folds, 64);
     }

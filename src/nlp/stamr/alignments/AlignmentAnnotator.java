@@ -129,9 +129,9 @@ public class AlignmentAnnotator {
     }
 
     public static void main(String[] args) throws IOException {
-        AMR[] train = AMRSlurp.slurp("data/training-500-subset.txt", AMRSlurp.Format.LDC);
-        AMR[] dev = AMRSlurp.slurp("data/real-train-300-subset.txt", AMRSlurp.Format.LDC);
-        new AlignmentAnnotator(train, dev, "data/real-train-300-subset.txt", false);
+        AMR[] train = AMRSlurp.slurp("data/deft-amr-100.txt", AMRSlurp.Format.LDC);
+        AMR[] dev = AMRSlurp.slurp("data/deft-amr-100.txt", AMRSlurp.Format.LDC);
+        new AlignmentAnnotator(train, dev, "data/deft-amr-100.txt", false);
     }
 
     public AlignmentAnnotator(AMR[] train, AMR[] dev, String outputPath, boolean preAligned) {
@@ -160,7 +160,10 @@ public class AlignmentAnnotator {
             }
         }
 
-        if (!preAligned) test();
+        if (!preAligned) {
+            runEM();
+            // test();
+        }
 
         screen = TerminalFacade.createScreen();
         screen.startScreen();
@@ -249,7 +252,9 @@ public class AlignmentAnnotator {
     }
 
     public void runEM() {
-        System.out.println("Assisting alignment by running EM");
+        System.out.println("Assisting alignment by running LP aligner");
+        RegenerativeAligner.align(bank);
+        /*
         try {
             EMAligner.align(bank, 2, 64);
         } catch (InterruptedException e) {
@@ -257,12 +262,15 @@ public class AlignmentAnnotator {
             e.printStackTrace();
             System.exit(1);
         }
+        */
     }
 
     public void test() {
         System.out.println("Running tests");
         try {
-            AlignmentTester.testBankRuleBased(train, bank);
+            AlignmentTester.testBankRegenerative(train, bank);
+
+            // AlignmentTester.testBankRuleBased(train, bank);
 
             // AlignmentTester.testBank(bank, 2, 64, 3, null);
 

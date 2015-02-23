@@ -703,10 +703,31 @@ public class AMR implements Serializable {
         return new Pair<AMR, Map<Node, Node>>(clone,oldToNew);
     }
 
-    public Set<Node> getMatchingSubtreeOrEmpty(AMR other) {
-        Set<Node> bestMatch = new IdentityHashSet<>();
+
+    public boolean connectedByName(Node n1, Node n2) {
+        return connectedByNamePrivate(n1, n2) || connectedByNamePrivate(n2, n1);
+    }
+
+    private boolean connectedByNamePrivate(Node type, Node quote) {
+        if (outgoingArcs.containsKey(type)) {
+            for (Arc arc : outgoingArcs.get(type)) {
+                if (arc.title.equals("name")) {
+                    Node name = arc.tail;
+                    if (outgoingArcs.containsKey(name)) {
+                        for (Arc arc2 : outgoingArcs.get(name)) {
+                            if (arc2.tail == quote) return true;
+                        }
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+    public Set<Pair<Node,Node>> getMatchingSubtreeOrEmpty(AMR other) {
+        Set<Pair<Node,Node>> bestMatch = new IdentityHashSet<>();
         for (Node node : depthFirstSearch()) {
-            Set<Node> match = getMatchingSubtree(other, other.head, node);
+            Set<Pair<Node,Node>> match = getMatchingSubtree(other, other.head, node);
             if (match.size() > bestMatch.size()) {
                 bestMatch = match;
             }
@@ -714,7 +735,7 @@ public class AMR implements Serializable {
         return bestMatch;
     }
 
-    private Set<Node> getMatchingSubtree(AMR other, Node otherNode, Node myNode) {
+    private Set<Pair<Node,Node>> getMatchingSubtree(AMR other, Node otherNode, Node myNode) {
         if (otherNode.equals(myNode)) {
             List<Arc> otherNodeArcs = new ArrayList<>();
             if (other.outgoingArcs.containsKey(otherNode)) {
@@ -725,8 +746,8 @@ public class AMR implements Serializable {
                 myNodeArcs.addAll(outgoingArcs.get(myNode));
             }
 
-            Set<Node> totalMatchingChildren = new IdentityHashSet<>();
-            totalMatchingChildren.add(myNode);
+            Set<Pair<Node,Node>> totalMatchingChildren = new IdentityHashSet<>();
+            totalMatchingChildren.add(new Pair<>(myNode, otherNode));
 
             for (Arc otherArc : otherNodeArcs) {
                 Arc myMatchingArc = null;
@@ -736,7 +757,7 @@ public class AMR implements Serializable {
                 if (myMatchingArc == null) break;
                 myNodeArcs.remove(myMatchingArc);
 
-                Set<Node> matchingChildren = getMatchingSubtree(other, otherArc.tail, myMatchingArc.tail);
+                Set<Pair<Node,Node>> matchingChildren = getMatchingSubtree(other, otherArc.tail, myMatchingArc.tail);
                 if (matchingChildren.size() >= 1) {
                     totalMatchingChildren.addAll(matchingChildren);
                 }
@@ -853,6 +874,20 @@ public class AMR implements Serializable {
         if (currentAdjacentSet.size() > 0) adjacentSets.add(currentAdjacentSet);
 
         return adjacentSets;
+    }
+
+    public Arc getAdjacentNodesArc(Node a, Node b) {
+        if (incomingArcs.containsKey(a)) {
+            for (Arc arc : incomingArcs.get(a)) {
+                if (arc.head == b) return arc;
+            }
+        }
+        if (outgoingArcs.containsKey(a)) {
+            for (Arc arc : outgoingArcs.get(a)) {
+                if (arc.tail == b) return arc;
+            }
+        }
+        return null;
     }
 
     public boolean nodesAdjacent(Node a, Node b) {

@@ -924,7 +924,7 @@ public class AMRPipeline {
         if (year == -1 && month == -1 && week == -1 && day == -1) {
             for (int i : dateList) {
                 String token = annotation.get(CoreAnnotations.TokensAnnotation.class).get(i).lemma();
-                AMR.Node word = dateChunk.addNode(""+token.charAt(0), token, dateList.get(i));
+                AMR.Node word = dateChunk.addNode(""+token.charAt(0), token, i);
                 dateChunk.addArc(root, word, "time");
             }
         }
@@ -967,7 +967,8 @@ public class AMRPipeline {
         }
         catch (Exception ignored) {}
         if (n == null) n = 1;
-        chunk.addNode(n.toString(), AMR.NodeType.VALUE, Collections.min(numberList));
+        if (n.doubleValue() == Math.round(n.doubleValue())) chunk.addNode(Integer.toString(n.intValue()), AMR.NodeType.VALUE, Collections.min(numberList));
+        else chunk.addNode(n.toString(), AMR.NodeType.VALUE, Collections.min(numberList));
         return chunk;
     }
 
