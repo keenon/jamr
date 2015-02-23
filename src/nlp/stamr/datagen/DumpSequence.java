@@ -15,6 +15,7 @@ import nlp.stamr.AMRConstants;
 import nlp.stamr.AMRSlurp;
 import nlp.stamr.alignments.EasyFirstAligner;
 import edu.stanford.nlp.util.IdentityHashSet;
+import nlp.stamr.alignments.RegenerativeAligner;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -87,7 +88,8 @@ public class DumpSequence {
             String[] toks = split.toArray(new String[split.size()]);
             amr.sourceText = toks;
         }
-        EasyFirstAligner.align(bank);
+        // EasyFirstAligner.align(bank);
+        RegenerativeAligner.align(bank);
     }
 
     public static void dumpReleaseData() throws IOException {

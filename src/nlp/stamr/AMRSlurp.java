@@ -312,8 +312,8 @@ public class AMRSlurp {
         }
     }
 
-    public static AMR parseAMRTree(String amr) {
-        ANTLRInputStream input = new ANTLRInputStream(amr);
+    public static AMR parseAMRTree(String amrText) {
+        ANTLRInputStream input = new ANTLRInputStream(amrText);
         AMRLexer lexer = new AMRLexer(input);
         CommonTokenStream tokens = new CommonTokenStream(lexer);
         AMRParser parser = new AMRParser(tokens);
@@ -321,6 +321,38 @@ public class AMRSlurp {
         ParseTree tree = parser.node();
         AMRVisitor visitor = new AMRVisitor();
         visitor.visit(tree);
+
+        // Fix a parsing bug with back-references, where a ref that comes before its main tag
+        // will get parsed as a VALUE instead of a REF, which will screw lots of things up
+
+        AMR amr = visitor.doc;
+
+        List<AMR.Node> dfs = amr.depthFirstSearch();
+        for (int i = 0; i < dfs.size(); i++) {
+            AMR.Node n = dfs.get(i);
+            for (int j = i+1; j < dfs.size(); j++) {
+                AMR.Node n2 = dfs.get(j);
+
+                // Fix early VALUE parses
+
+                if (n.type == AMR.NodeType.VALUE) {
+                    if (n2.ref.equals(n.title)) {
+                        if (n2.type == AMR.NodeType.ENTITY) {
+                            n.type = AMR.NodeType.ENTITY;
+                            n.ref = n2.ref;
+                            n.title = n2.title;
+                        }
+                    }
+                }
+
+                if (n.ref.equals(n2.ref)) {
+                    if (amr.outgoingArcs.containsKey(n2)) {
+                        amr.moveAllChildArcsTo(n2, n);
+                    }
+                }
+            }
+        }
+
         return visitor.doc;
     }
 

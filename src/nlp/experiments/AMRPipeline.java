@@ -1070,6 +1070,10 @@ public class AMRPipeline {
                 AMR.Node yearNode = date.addNode(Integer.toString(2000 + year), AMR.NodeType.VALUE, i);
                 date.addArc(root, yearNode, "year");
             }
+            else if (year > 0) {
+                AMR.Node yearNode = date.addNode(Integer.toString(1900 + year), AMR.NodeType.VALUE, i);
+                date.addArc(root, yearNode, "year");
+            }
             if (month > 0) {
                 AMR.Node monthNode = date.addNode(Integer.toString(month), AMR.NodeType.VALUE, i);
                 date.addArc(root, monthNode, "month");

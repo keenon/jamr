@@ -60,7 +60,12 @@ public class AMR implements Serializable {
         public boolean equals(Object o) {
             if (o instanceof Node) {
                 Node n = (Node)o;
-                return (n.title.equals(title)) && (n.type.equals(type)); // && (n.alignment == alignment);
+                if (n.type == NodeType.ENTITY) {
+                    return (n.title.equals(title)) && (n.type.equals(type)); // && (n.alignment == alignment);
+                }
+                else {
+                    return (n.title.equals(title)) && (n.type.equals(type)); // && (n.alignment == alignment);
+                }
             }
             else return false;
         }
@@ -908,6 +913,19 @@ public class AMR implements Serializable {
         if (node != head && incomingArcs.containsKey(node)) {
             flipArc(getParentArc(node), newArcName);
         }
+    }
+
+    public void moveAllChildArcsTo(AMR.Node source, AMR.Node dest) {
+        Set<Arc> moveOutgoingArcs = new IdentityHashSet<Arc>();
+        if (outgoingArcs.containsKey(source)) {
+            moveOutgoingArcs.addAll(outgoingArcs.get(source));
+        }
+        for (AMR.Arc arc : moveOutgoingArcs) {
+            if (arc.tail != dest) {
+                addArc(dest, arc.tail, arc.title);
+            }
+        }
+        removeArcs(moveOutgoingArcs);
     }
 
     public void moveAllArcsToAndRemove(AMR.Node source, AMR.Node dest) {

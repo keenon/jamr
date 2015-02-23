@@ -40,9 +40,11 @@
 				:op1 "Four" [16 = "four"]
 				:op2 "Corners" [17 = "corners"])
 			:topic (a / affair [14 = "affairs"]
-				:mod (c3 / current [34 = "the"]))
+				:mod (c3 / current [13 = "current"]))
 			:mod (f2 / flagship [12 = "flagship"])
-			:poss c2 [10 = "ABC"])
+			:poss (c2 / company [10 = "ABC"]
+				:name (n / name [8 = "ABC"]
+					:op1 "ABC" [8 = "ABC"])))
 		:ARG1 (a2 / and [30 = "and"]
 			:op1 (k / know-01 [21 = "knew"]
 				:ARG0 (p2 / person [20 = "Rakhimov"]
@@ -63,9 +65,7 @@
 				:ARG2 p2 [20 = "Rakhimov"])))
 	:topic (c / case [5 = "case"]
 		:ARG2-of (i2 / involve-01 [6 = "involving"]
-			:ARG1 (c2 / company [8 = "ABC"]
-				:name (n / name [8 = "ABC"]
-					:op1 "ABC" [8 = "ABC"])))))
+			:ARG1 c2 [8 = "ABC"])))
 
 # ::id PROXY_AFP_ENG_20030122_0522.16 ::date 2013-06-22T20:28:35 ::snt-type body ::annotator UCO-AMR-05 ::preferred
 # ::snt Pakistan 's government has been developing a nuclear program to match arch-rival India 's since the 1970s and only went public with the program in 980500 when testing 5 nuclear devices . 
@@ -342,8 +342,12 @@
 		:name (n / name
 			:op1 "Wen"))
 	:ARG1 (c6 / cooperate-01
-		:ARG0 c5
-		:ARG1 c7
+		:ARG0 (c5 / country
+			:name (n6 / name
+				:op1 "China"))
+		:ARG1 (c7 / country
+			:name (n3 / name
+				:op1 "Germany"))
 		:topic (f3 / field
 			:mod (t / this))
 		:purpose (u / utilize-01
@@ -364,9 +368,7 @@
 						:op1 "Gerhard"
 						:op2 "Schroeder")
 					:ARG0-of (h / have-org-role-91
-						:ARG1 (c7 / country
-							:name (n3 / name
-								:op1 "Germany"))
+						:ARG1 c7
 						:ARG2 (c8 / chancellor
 							:mod (f / federal))))
 				:ARG2 (s2 / support-01
@@ -377,9 +379,7 @@
 						:source (c4 / city
 							:name (n5 / name
 								:op1 "Hanau"))
-						:destination (c5 / country
-							:name (n6 / name
-								:op1 "China"))))))
+						:destination c5))))
 		:ARG2 p))
 
 # ::id PROXY_AFP_ENG_20030210_0248.26 ::date 2013-07-10T21:02:28 ::snt-type body ::annotator UCO-AMR-05 ::preferred
@@ -582,7 +582,12 @@
 		:name (n / name
 			:op1 "Tae"))
 	:ARG1 (i / instruct-01
-		:ARG0 p2
+		:ARG0 (p2 / person
+			:ARG0-of (h / have-org-role-91
+				:ARG1 (c / city
+					:name (n2 / name
+						:op1 "Pyongyang"))
+				:ARG2 (o3 / official)))
 		:ARG1 p
 		:ARG2 (a / allow-01
 			:ARG0 p
@@ -592,12 +597,7 @@
 					:mod (c2 / cargo)))
 			:prep-at (c3 / cost
 				:quant (a2 / all))))
-	:ARG2 (p2 / person
-		:ARG0-of (h / have-org-role-91
-			:ARG1 (c / city
-				:name (n2 / name
-					:op1 "Pyongyang"))
-			:ARG2 (o3 / official))))
+	:ARG2 p2)
 
 # ::id PROXY_AFP_ENG_20021102_0031.8 ::date 2013-07-19T16:14:11 ::snt-type body ::annotator UCO-AMR-05 ::preferred
 # ::snt Officials say more than 3400 people have been taken into custody since the crackdown began 021017 . 
@@ -1144,14 +1144,14 @@
 	:ARG1 (r / require-01
 		:ARG1 (l / license-01
 			:ARG1 (o2 / operate-01
-				:ARG1 w
+				:ARG1 (w / website
+					:quant (a / all)
+					:ARG1-of (b / base-01
+						:location (c / country
+							:name (n / name
+								:op1 "Vietnam"))))
 				:location c))
-		:ARG2 (w / website
-			:ARG1-of (b / base-01
-				:location (c / country
-					:name (n / name
-						:op1 "Vietnam")))
-			:quant (a / all))
+		:ARG2 w
 		:ARG1-of (c4 / cause-01
 			:ARG0 (t / try-01
 				:ARG0 (g / government-organization
@@ -1232,7 +1232,13 @@
 			:ARG1 (o / or
 				:op1 (d2 / depend-01
 					:polarity -
-					:ARG0 w)
+					:ARG0 (w / world-region
+						:ARG1-of (c3 / control-01
+							:ARG0 (c / country
+								:name (n / name
+									:op1 "India")))
+						:name (n4 / name
+							:op1 "Kashmir")))
 				:op2 (m2 / merge-01
 					:ARG1 w
 					:ARG2 (c2 / country
@@ -1241,13 +1247,7 @@
 						:mod (r / religious-group
 							:name (n6 / name
 								:op1 "Islam")))))))
-	:location (w / world-region
-		:name (n4 / name
-			:op1 "Kashmir")
-		:ARG1-of (c3 / control-01
-			:ARG0 (c / country
-				:name (n / name
-					:op1 "India"))))
+	:location w
 	:time (d / date-entity
 		:year 1989))
 
