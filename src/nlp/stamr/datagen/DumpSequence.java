@@ -78,7 +78,7 @@ public class DumpSequence {
         AMRSlurp.burp("data/dev-"+dumpSize+"-subset.txt", AMRSlurp.Format.LDC, randomDump, AMR.AlignmentPrinting.NONE, false);
     }
 
-    private static void retokenizeAndAlign(AMR[] bank) {
+    private static void retokenizeAndAlign(AMR[] bank, String outpath) throws IOException {
         for (AMR amr : bank) {
             Annotation annotation = amr.multiSentenceAnnotationWrapper.sentences.get(0).annotation;
             List<String> split = new ArrayList<>();
@@ -90,15 +90,16 @@ public class DumpSequence {
         }
         // EasyFirstAligner.align(bank);
         RegenerativeAligner.align(bank);
+        AMRSlurp.burp(outpath, AMRSlurp.Format.LDC, bank, AMR.AlignmentPrinting.ALL, false);
     }
 
     public static void dumpReleaseData() throws IOException {
         AMR[] train = AMRSlurp.slurp("data/deft-amr-release-r3-proxy-train.txt", AMRSlurp.Format.LDC);
         AMR[] dev = AMRSlurp.slurp("data/deft-amr-release-r3-proxy-dev.txt", AMRSlurp.Format.LDC);
         AMR[] test = AMRSlurp.slurp("data/deft-amr-release-r3-proxy-test.txt", AMRSlurp.Format.LDC);
-        retokenizeAndAlign(train);
-        retokenizeAndAlign(dev);
-        retokenizeAndAlign(test);
+        retokenizeAndAlign(train, "data/deft-amr-release-r3-proxy-train-aligned.txt");
+        retokenizeAndAlign(dev, "data/deft-amr-release-r3-proxy-dev-aligned.txt");
+        retokenizeAndAlign(test, "data/deft-amr-release-r3-proxy-test-aligned.txt");
 
         dumpSequences(train, "data/deft-train-seq.txt");
         dumpManygenDictionaries(train, "data/deft-train-manygen.txt");

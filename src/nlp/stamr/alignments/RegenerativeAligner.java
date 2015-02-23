@@ -259,6 +259,7 @@ public class RegenerativeAligner {
     private static ConstraintSet buildConstraintSet(AMR amr, boolean relaxContraints) throws GRBException {
         GRBEnv env = new GRBEnv();
         env.set(GRB.IntParam.OutputFlag, 0);
+        env.set(GRB.DoubleParam.TimeLimit, 1.5);
 
         GRBModel model = new GRBModel(env);
         GRBQuadExpr goalExpr = new GRBQuadExpr();
