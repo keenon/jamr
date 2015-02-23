@@ -161,8 +161,8 @@ public class AlignmentAnnotator {
         }
 
         if (!preAligned) {
-            runEM();
-            // test();
+            // runEM();
+            test();
         }
 
         screen = TerminalFacade.createScreen();

@@ -117,6 +117,7 @@ public class AlignmentTester {
     }
 
     public static double[] testBankRegenerative(AMR[] train, AMR[] test) {
+
         AlignmentKeeper[] keepers = new AlignmentKeeper[test.length];
         int correct = 0;
         int total = 0;
@@ -124,12 +125,15 @@ public class AlignmentTester {
             keepers[i] = new AlignmentKeeper();
             keepers[i].saveAndConceal(test[i]);
         }
-        RegenerativeAligner.align(train);
+
+        RegenerativeAligner.align(test);
+
         for (int i = 0; i < test.length; i++) {
             correct += keepers[i].countCorrect(test[i]);
             total += keepers[i].countMeasured(test[i]);
             keepers[i].restore(test[i]);
         }
+
         double perc = (double)correct / (double) total;
         System.out.println("Correct percentage: " + perc);
 

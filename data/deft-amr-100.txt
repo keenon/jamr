@@ -40,7 +40,7 @@
 				:op1 "Four" [16 = "four"]
 				:op2 "Corners" [17 = "corners"])
 			:topic (a / affair [14 = "affairs"]
-				:mod (c3 / current [13 = "current"]))
+				:mod (c3 / current [34 = "the"]))
 			:mod (f2 / flagship [12 = "flagship"])
 			:poss c2 [10 = "ABC"])
 		:ARG1 (a2 / and [30 = "and"]
@@ -76,7 +76,7 @@
 				:ARG1 (c / country [0 = "Pakistan"]
 					:name (n / name [0 = "Pakistan"]
 						:op1 "Pakistan" [0 = "Pakistan"]))))
-		:ARG1 (p / program [8 = "program"]
+		:ARG1 (p / program [23 = "program"]
 			:mod (n3 / nucleus [7 = "nuclear"]))
 		:purpose (m / match-01 [10 = "match"]
 			:ARG1 (p2 / program [8 = "program"]
@@ -185,42 +185,42 @@
 
 # ::id PROXY_AFP_ENG_20040508_0150.23 ::date 2013-05-21T14:48:30 ::snt-type body ::annotator SDL-AMR-09 ::preferred
 # ::snt International Police experts based in Tirana estimate the value of the narcotics in transit at over 2 billion dollars -LRB- about 1.6 billion euros -RRB- per year . 
-(e / estimate-01 [6 = "estimate"]
-	:ARG0 (p / person [2 = "experts"]
-		:ARG0-of (h / have-org-role-91 [2 = "experts"]
-			:ARG1 (o2 / organization [0 = "International"]
-				:name (n / name [0 = "International"]
-					:op1 "International" [0 = "International"]
-					:op2 "Police" [1 = "Police"]))
-			:ARG3 (e3 / expert-41 [2 = "experts"]
-				:ARG1 p [2 = "experts"]))
-		:ARG1-of (b / base-01 [3 = "based"]
-			:location (c / city [5 = "Tirana"]
-				:name (n2 / name [5 = "Tirana"]
-					:op1 "Tirana" [5 = "Tirana"]))))
-	:ARG1 (t2 / thing [6 = "estimate"]
-		:ARG2-of (v / value-01 [8 = "value"]
-			:ARG1 (n3 / narcotic [11 = "narcotics"]
-				:ARG1-of (t / transit-01 [13 = "transit"]))))
-	:ARG2 (r / rate-entity-91 [14 = "at"]
-		:ARG1 (o / over [15 = "over"]
-			:op1 (m / monetary-quantity [18 = "dollars"]
-				:quant 2000000000 [16 = "2"]
-				:unit (d / dollar [18 = "dollars"])))
-		:ARG2 (t3 / temporal-quantity [25 = "per"]
-			:quant 1 [25 = "per"]
-			:unit (y / year [26 = "year"]))))
+(e / estimate-01
+	:ARG0 (p / person
+		:ARG0-of (h / have-org-role-91
+			:ARG1 (o2 / organization
+				:name (n / name
+					:op1 "International"
+					:op2 "Police"))
+			:ARG3 (e3 / expert-41
+				:ARG1 p))
+		:ARG1-of (b / base-01
+			:location (c / city
+				:name (n2 / name
+					:op1 "Tirana"))))
+	:ARG1 (t2 / thing
+		:ARG2-of (v / value-01
+			:ARG1 (n3 / narcotic
+				:ARG1-of (t / transit-01))))
+	:ARG2 (r / rate-entity-91
+		:ARG1 (o / over
+			:op1 (m / monetary-quantity
+				:quant 2000000000
+				:unit (d / dollar)))
+		:ARG2 (t3 / temporal-quantity
+			:quant 1
+			:unit (y / year))))
 
 # ::id PROXY_AFP_ENG_20030330_0257.18 ::date 2013-07-06T18:50:31 ::snt-type body ::annotator UCO-AMR-03 ::preferred
 # ::snt Students use it to get through exam periods . 
-(u / use-01 [1 = "use"]
-	:ARG0 (p / person [0 = "Students"]
-		:ARG0-of (s / study-01 [0 = "Students"]))
-	:ARG1 (i / it [2 = "it"])
-	:ARG2 (g / get-13 [4 = "get"]
-		:ARG0 p [0 = "Students"]
-		:ARG1 (p2 / period [7 = "periods"]
-			:mod (e / exam [6 = "exam"]))))
+(u / use-01
+	:ARG0 (p / person
+		:ARG0-of (s / study-01))
+	:ARG1 (i / it)
+	:ARG2 (g / get-13
+		:ARG0 p
+		:ARG1 (p2 / period
+			:mod (e / exam))))
 
 # ::id PROXY_AFP_ENG_20040305_0056.6 ::date 2013-05-14T01:28:04 ::snt-type body ::annotator SDL-AMR-09 ::preferred
 # ::snt On 05 March 2004 Amnesty International called on the Lao Government to ensure that 100s of ethnic Hmong anti-government insurgents and their families who had reportedly surrendered were treated humanely . 

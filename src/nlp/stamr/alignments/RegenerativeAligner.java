@@ -18,6 +18,7 @@ import java.io.IOException;
 import java.util.*;
 
 import gurobi.*;
+import nlp.stamr.utils.MiscUtils;
 
 /**
  * Created by keenon on 2/22/15.
@@ -33,12 +34,15 @@ import gurobi.*;
  */
 public class RegenerativeAligner {
 
-    public static boolean DEBUG = false;
+    public static boolean DEBUG = true;
 
     public static void main(String[] args) throws IOException {
-        // AMR[] bank = AMRSlurp.slurp("data/deft-amr-100.txt", AMRSlurp.Format.LDC);
-        // dumpAlignmentProcess(bank);
+        cleanSubbank();
 
+        AMR[] bank = AMRSlurp.slurp("data/deft-amr-100.txt", AMRSlurp.Format.LDC);
+        dumpAlignmentProcess(new AMR[]{bank[3]});
+
+        /*
         AMR amr = AMRSlurp.parseAMRTree("(c / country :name (n / name :op1 \"Tajikistan\"))");
         amr.sourceText = "the country named Tajikistan".split(" ");
         AnnotationManager manager= new AnnotationManager();
@@ -47,6 +51,7 @@ public class RegenerativeAligner {
         dumpAlignmentProcess(new AMR[]{
                 amr
         });
+        */
     }
 
     private static void dumpAlignmentProcess(AMR[] minibank) {
@@ -59,6 +64,14 @@ public class RegenerativeAligner {
             }
             System.out.println(amr.toString(AMR.AlignmentPrinting.ALL));
         }
+    }
+
+    private static void cleanSubbank() throws IOException {
+        AMR[] bank = AMRSlurp.slurp("data/deft-amr-100.txt", AMRSlurp.Format.LDC);
+        for (int i = 10; i < bank.length; i++) {
+            for (AMR.Node n : bank[i].nodes) n.alignmentFixed = false;
+        }
+        AMRSlurp.burp("data/deft-amr-100.txt", AMRSlurp.Format.LDC, bank, AMR.AlignmentPrinting.FIXED_ONLY, false);
     }
 
     private static void burpSubbank() throws IOException {
@@ -194,7 +207,6 @@ public class RegenerativeAligner {
     }
 
     private static ConstraintSet buildConstraintSet(AMR amr, GRBEnv env) throws GRBException {
-
         GRBModel model = new GRBModel(env);
         GRBQuadExpr goalExpr = new GRBQuadExpr();
 
@@ -322,7 +334,7 @@ public class RegenerativeAligner {
         // Add a very small reward to bias known NER-type labels to align with ARG-adjacent nodes
         // This lets us automatically capture the "sailor" phenomenon.
 
-        Set<Pair<Integer,Integer>> dictVerbExceptions = new HashSet<>();
+        Set<Pair<Integer,Integer>> nerTypeExceptions = new HashSet<>();
         for (int i = 0; i < allowedNodes.size(); i++) {
             if (AMRConstants.nerTaxonomy.contains(allowedNodes.get(i).title)) {
                 for (int i2 = 0; i2 < allowedNodes.size(); i2++) {
@@ -334,7 +346,7 @@ public class RegenerativeAligner {
                                 if (alignmentType[i][j].equals("DICT") && alignmentType[i2][j].equals("VERB")) {
                                     if (DEBUG) System.out.println("Encouraging "+allowedNodes.get(i)+" and "+allowedNodes.get(i2)+" to align to "+tokens[allowedTokens.get(j)]+" together");
                                     goalExpr.addTerm(-0.25, vars[i][j], vars[i2][j]);
-                                    dictVerbExceptions.add(new Pair<>(i, i2));
+                                    nerTypeExceptions.add(new Pair<>(i, i2));
                                 }
                             }
                         }
@@ -381,15 +393,64 @@ public class RegenerativeAligner {
             }
         }
 
+        // Hard constraint that nodes that are not the first reference must be either COREF or identical to parent
+
+        List<AMR.Node> dfs = amr.depthFirstSearch();
+
+        for (int i = 0; i < allowedNodes.size(); i++) {
+            if (allowedNodes.get(i).type != AMR.NodeType.ENTITY) continue;
+            if (allowedNodes.get(i).title.equals("name")) continue;
+
+            int lowestIndexCoref = Integer.MAX_VALUE;
+
+            for (int i2 = 0; i2 < allowedNodes.size(); i2++) {
+                if (i == i2) continue;
+                if (allowedNodes.get(i2).type != AMR.NodeType.ENTITY) continue;
+                if (allowedNodes.get(i2).title.equals("name")) continue;
+                if (!allowedNodes.get(i2).ref.equals(allowedNodes.get(i).ref)) continue;
+
+                if (MiscUtils.indexOfIdentity(dfs,allowedNodes.get(i2)) < lowestIndexCoref)
+                    lowestIndexCoref = MiscUtils.indexOfIdentity(dfs,allowedNodes.get(i2));
+            }
+
+            if (lowestIndexCoref >= MiscUtils.indexOfIdentity(dfs,allowedNodes.get(i))) continue;
+
+            if (DEBUG) {
+                System.out.println("Found parent "+amr.getParentArc(allowedNodes.get(lowestIndexCoref))+" for node "+amr.getParentArc(allowedNodes.get(i)));
+            }
+
+            // i is the coref
+            // i2 is the parent ref
+
+            for (int j = 0; j < allowedTokens.size(); j++) {
+                GRBLinExpr dif = new GRBLinExpr();
+                dif.addTerm(1.0, vars[i][j]);
+                dif.addTerm(-1.0, vars[lowestIndexCoref][j]);
+
+                for (int k = 0; k < allowedTokens.size(); k++) {
+                    if (k == j) continue;
+                    if (alignmentType[i][k].equals("COREF")) {
+                        dif.addTerm(1.0, vars[i][k]);
+                    }
+                }
+
+                model.addConstr(0.0, GRB.GREATER_EQUAL, dif, "same-"+i+"-"+lowestIndexCoref+"-"+j);
+            }
+        }
+
         // Make sure we never assign two nodes to the same token that would imply different tag types for the sequence model
+        // Unless:
+        //    - we know that this is a DICT to VERB exception
+        //    - this is a DICT and NAME, where both nodes share the same title, cause then it's just a coref situation
 
         for (int j = 0; j < allowedTokens.size(); j++) {
             for (int i = 0; i < allowedNodes.size(); i++) {
                 outer: for (int i2 = 0; i2 < allowedNodes.size(); i2++) {
                     if (i == i2) continue;
-                    for (Pair<Integer,Integer> exception : dictVerbExceptions) {
+                    for (Pair<Integer,Integer> exception : nerTypeExceptions) {
                         if ((exception.first == i && exception.second == i2) || (exception.first == i2 && exception.second == i)) continue outer;
                     }
+
 
                     if (!alignmentType[i][j].equals(alignmentType[i2][j])) {
                         GRBLinExpr expr = new GRBLinExpr();

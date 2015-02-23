@@ -1,6 +1,7 @@
 package nlp.stamr.utils;
 
 import java.util.Collection;
+import java.util.List;
 
 /**
  * Place to keep util functions that don't seem to fit anywhere else
@@ -19,6 +20,13 @@ public class MiscUtils {
             if (b.equals(t)) return true;
         }
         return false;
+    }
+
+    public static <T> int indexOfIdentity(List<T> l, T t) {
+        for (int i = 0; i < l.size(); i++) {
+            if (l.get(i) == t) return i;
+        }
+        return -1;
     }
 
     public static <T> T getContainedEquals(Collection<T> a, T b) {
