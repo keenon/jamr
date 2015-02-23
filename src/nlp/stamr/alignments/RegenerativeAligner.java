@@ -34,7 +34,7 @@ import nlp.stamr.utils.MiscUtils;
  */
 public class RegenerativeAligner {
 
-    public static boolean DEBUG = true;
+    public static boolean DEBUG = false;
 
     public static void main(String[] args) throws IOException {
         cleanSubbank();
@@ -93,13 +93,10 @@ public class RegenerativeAligner {
 
     public static void align(AMR[] bank) {
         try {
-            GRBEnv env = new GRBEnv();
-            env.set(GRB.IntParam.OutputFlag, 0);
-
             ConstraintSet[] constraintSets = new ConstraintSet[bank.length];
             for (int i = 0; i < bank.length; i++) {
                 System.out.println("building constraint set "+i+"/"+bank.length);
-                constraintSets[i] = buildConstraintSet(bank[i], env);
+                constraintSets[i] = buildConstraintSet(bank[i]);
             }
 
             joinConstraintSets(constraintSets);
@@ -109,8 +106,6 @@ public class RegenerativeAligner {
             for (int i = 0; i < bank.length; i++) {
                 decodeConstraintSet(constraintSets[i]);
             }
-
-            env.dispose();
         } catch (GRBException e) {
             e.printStackTrace();
         }
@@ -124,6 +119,7 @@ public class RegenerativeAligner {
         Annotation annotation;
         List<AMR.Node> allowedNodes;
         List<Integer> allowedTokens;
+        GRBEnv env;
         GRBModel model;
         GRBQuadExpr goalExpr;
     }
@@ -149,6 +145,7 @@ public class RegenerativeAligner {
 
             // Dispose of model and environment
             set.model.dispose();
+            set.env.dispose();
         }
         catch (Exception e) {
             System.err.println("Had infeasible model, falling back to EasyFirstAligner");
@@ -206,7 +203,10 @@ public class RegenerativeAligner {
         }
     }
 
-    private static ConstraintSet buildConstraintSet(AMR amr, GRBEnv env) throws GRBException {
+    private static ConstraintSet buildConstraintSet(AMR amr) throws GRBException {
+        GRBEnv env = new GRBEnv();
+        // env.set(GRB.IntParam.OutputFlag, 0);
+
         GRBModel model = new GRBModel(env);
         GRBQuadExpr goalExpr = new GRBQuadExpr();
 
@@ -285,7 +285,7 @@ public class RegenerativeAligner {
             model.addConstr(expr, GRB.EQUAL, 1.0, "c" + i);
         }
 
-        // Make sure we never assign nodes that aren't immediately adjacent to the same token, or have the same name
+        // Make sure we never assign nodes that aren't immediately adjacent to the same token, or have the same name or ref
         // TODO: This may be slightly too restrictive - would be nice to come up with a linear "clustering" constraint
 
         for (int j = 0; j < allowedTokens.size(); j++) {
@@ -334,7 +334,7 @@ public class RegenerativeAligner {
         // Add a very small reward to bias known NER-type labels to align with ARG-adjacent nodes
         // This lets us automatically capture the "sailor" phenomenon.
 
-        Set<Pair<Integer,Integer>> nerTypeExceptions = new HashSet<>();
+        Set<Pair<Integer,Integer>> nerPairEqualityException = new HashSet<>();
         for (int i = 0; i < allowedNodes.size(); i++) {
             if (AMRConstants.nerTaxonomy.contains(allowedNodes.get(i).title)) {
                 for (int i2 = 0; i2 < allowedNodes.size(); i2++) {
@@ -346,7 +346,7 @@ public class RegenerativeAligner {
                                 if (alignmentType[i][j].equals("DICT") && alignmentType[i2][j].equals("VERB")) {
                                     if (DEBUG) System.out.println("Encouraging "+allowedNodes.get(i)+" and "+allowedNodes.get(i2)+" to align to "+tokens[allowedTokens.get(j)]+" together");
                                     goalExpr.addTerm(-0.25, vars[i][j], vars[i2][j]);
-                                    nerTypeExceptions.add(new Pair<>(i, i2));
+                                    nerPairEqualityException.add(new Pair<>(i, i2));
                                 }
                             }
                         }
@@ -410,10 +410,10 @@ public class RegenerativeAligner {
                 if (!allowedNodes.get(i2).ref.equals(allowedNodes.get(i).ref)) continue;
 
                 if (MiscUtils.indexOfIdentity(dfs,allowedNodes.get(i2)) < lowestIndexCoref)
-                    lowestIndexCoref = MiscUtils.indexOfIdentity(dfs,allowedNodes.get(i2));
+                    lowestIndexCoref = MiscUtils.indexOfIdentity(dfs, allowedNodes.get(i2));
             }
 
-            if (lowestIndexCoref >= MiscUtils.indexOfIdentity(dfs,allowedNodes.get(i))) continue;
+            if (lowestIndexCoref >= MiscUtils.indexOfIdentity(dfs, allowedNodes.get(i))) continue;
 
             if (DEBUG) {
                 System.out.println("Found parent "+amr.getParentArc(allowedNodes.get(lowestIndexCoref))+" for node "+amr.getParentArc(allowedNodes.get(i)));
@@ -435,19 +435,24 @@ public class RegenerativeAligner {
                 }
 
                 model.addConstr(0.0, GRB.GREATER_EQUAL, dif, "same-"+i+"-"+lowestIndexCoref+"-"+j);
+
+                // goalExpr.multAdd(-2.0, dif);
+                // goalExpr.addTerm(-2.0, vars[i][j], vars[lowestIndexCoref][j]);
+
+                nerPairEqualityException.add(new Pair<>(i, lowestIndexCoref));
             }
         }
 
         // Make sure we never assign two nodes to the same token that would imply different tag types for the sequence model
         // Unless:
         //    - we know that this is a DICT to VERB exception
-        //    - this is a DICT and NAME, where both nodes share the same title, cause then it's just a coref situation
+        //    - this is a coref situation and we need to be able to map to the same thing
 
         for (int j = 0; j < allowedTokens.size(); j++) {
             for (int i = 0; i < allowedNodes.size(); i++) {
                 outer: for (int i2 = 0; i2 < allowedNodes.size(); i2++) {
                     if (i == i2) continue;
-                    for (Pair<Integer,Integer> exception : nerTypeExceptions) {
+                    for (Pair<Integer,Integer> exception : nerPairEqualityException) {
                         if ((exception.first == i && exception.second == i2) || (exception.first == i2 && exception.second == i)) continue outer;
                     }
 
@@ -472,6 +477,7 @@ public class RegenerativeAligner {
         set.vars = vars;
         set.model = model;
         set.goalExpr = goalExpr;
+        set.env = env;
         return set;
     }
 
