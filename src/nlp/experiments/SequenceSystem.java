@@ -13,6 +13,7 @@ import edu.stanford.nlp.semgraph.SemanticGraphCoreAnnotations;
 import edu.stanford.nlp.util.Pair;
 import edu.stanford.nlp.util.Triple;
 import nlp.stamr.AMR;
+import nlp.stamr.AMRConstants;
 import nlp.word2vec.Word2VecLoader;
 
 import java.io.File;
@@ -59,7 +60,22 @@ public class SequenceSystem {
             if (DEBUG) System.out.println("Generating NER++ training data");
             List<Pair<Pair<LabeledSequence,Integer>,String>> nerPlusPlusForClassifier = AMRPipeline.getNERPlusPlusForClassifier(nerPlusPlusData);
             // pipeline.nerPlusPlus.sigma = 0.5;
-            pipeline.nerPlusPlus.sigma = 1.0;
+
+            pipeline.nerPlusPlus.approvalFunction = (in, out) -> {
+                if (out.equals("DICT")) {
+                    if (pipeline.dictionaryLookup.predict(new Triple<>(in.first, in.second, in.second)) == null) return false;
+                }
+                if (out.equals("VERB")) {
+                    if (AMRPipeline.blockedVerbs.contains(in.first.tokens[in.second])) return false;
+                }
+                if (out.equals("NAME")) {
+                    if (AMRPipeline.blockedNames.contains(in.first.tokens[in.second])) return false;
+                }
+                return true;
+            };
+
+            pipeline.nerPlusPlus.sigma = 3.0;
+
             if (DEBUG) System.out.println("Training NER++ classifier");
             pipeline.nerPlusPlus.train(nerPlusPlusForClassifier);
             if (DEBUG) System.out.println("Saving NER++ classifier");
@@ -94,10 +110,10 @@ public class SequenceSystem {
     }
 
     public void trainSystems() throws IOException, ClassNotFoundException {
-        boolean trainOnSmallerSet = false;
+        boolean trainOnProxy = false;
 
-        getNERSystemForData(trainOnSmallerSet ? "data/train-seq.txt" : "data/deft-train-seq.txt");
-        getManygenSystemForData("data/deft-train-manygen.txt");
+        getManygenSystemForData(trainOnProxy ? "data/train-proxy-manygen.txt" : "data/deft-train-manygen.txt");
+        getNERSystemForData(trainOnProxy ? "data/train-proxy-seq.txt" : "data/deft-train-seq.txt");
     }
 
     StanfordCoreNLP cachedCore = null;

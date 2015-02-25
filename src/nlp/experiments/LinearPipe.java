@@ -18,6 +18,7 @@ import java.io.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.BiConsumer;
+import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.regex.Pattern;
 
@@ -40,6 +41,8 @@ public class LinearPipe<IN,OUT> {
 
     List<OUT> outTypes;
     List<String> svmClassifiers;
+
+    public BiFunction<IN,OUT,Boolean> approvalFunction = (in,out) -> true;
 
     public boolean automaticallyReweightTrainingData = true;
     public double sigma = 1.0;
@@ -465,6 +468,19 @@ public class LinearPipe<IN,OUT> {
             return maxLikelihoodOut;
         }
         else {
+            Counter<OUT> outs = predictSoft(in);
+            double maxCount = Double.NEGATIVE_INFINITY;
+            OUT maxOut = null;
+            for (OUT out : outs.keySet()) {
+                if (outs.getCount(out) > maxCount) {
+                    maxCount = outs.getCount(out);
+                    maxOut = out;
+                }
+            }
+
+            return maxOut;
+
+            /*
             Counter<String> features = featurize(in);
             int predictedCluster = 0;
             if (classifiers.size() > 1) {
@@ -472,6 +488,7 @@ public class LinearPipe<IN,OUT> {
                 predictedCluster = bucketClassifier.classOf(bucketDatum);
             }
             return classifiers.get(predictedCluster).classOf(new RVFDatum<>(features));
+            */
         }
     }
 
@@ -499,7 +516,14 @@ public class LinearPipe<IN,OUT> {
         }
         else {
             if (classifiers.size() == 1) {
-                return classifiers.get(0).scoresOf(new RVFDatum<>(featurize(in)));
+                Counter<OUT> scores = classifiers.get(0).scoresOf(new RVFDatum<>(featurize(in)));
+                for (OUT out : scores.keySet()) {
+                    if (!approvalFunction.apply(in, out)) {
+                        scores.setCount(out, Double.NEGATIVE_INFINITY);
+                    }
+                }
+                Counters.logNormalizeInPlace(scores);
+                return scores;
             }
             else {
                 Counter<String> features = featurize(in);
@@ -512,7 +536,9 @@ public class LinearPipe<IN,OUT> {
                     Counter<OUT> localClasses = classifiers.get(i).scoresOf(new RVFDatum<OUT, String>(features));
                     Counters.logNormalizeInPlace(localClasses);
                     for (OUT out : localClasses.keySet()) {
-                        outClasses.incrementCount(out, Math.exp(localClasses.getCount(out) + logProbI));
+                        if (approvalFunction.apply(in, out)) {
+                            outClasses.incrementCount(out, Math.exp(localClasses.getCount(out) + logProbI));
+                        }
                     }
                 }
 

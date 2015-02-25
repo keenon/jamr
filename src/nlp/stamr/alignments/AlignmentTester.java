@@ -1,5 +1,7 @@
 package nlp.stamr.alignments;
 
+import edu.stanford.nlp.ling.CoreAnnotations;
+import edu.stanford.nlp.pipeline.Annotation;
 import nlp.stamr.AMR;
 import nlp.stamr.AMRSlurp;
 import nlp.stamr.ontonotes.SRLSlurp;
@@ -8,10 +10,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.IdentityHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Handles testing alignments
@@ -53,6 +52,8 @@ public class AlignmentTester {
     private static class AlignmentKeeper {
         Map<AMR.Node, Integer> mappings = new IdentityHashMap<AMR.Node, Integer>();
 
+        Map<Integer,Integer> reverseSplit = new HashMap<>();
+
         public void saveAndConceal(AMR amr) {
             amr.matchesCache.clear();
             mappings.clear();
@@ -61,6 +62,39 @@ public class AlignmentTester {
                     mappings.put(node,node.alignment);
                     node.alignmentFixed = false;
                     node.alignment = 0;
+                }
+            }
+
+            List<String> tokenized = new ArrayList<>();
+            Annotation annotation = amr.multiSentenceAnnotationWrapper.sentences.get(0).annotation;
+            for (int i = 0; i < annotation.get(CoreAnnotations.TokensAnnotation.class).size(); i++) {
+                tokenized.add(annotation.get(CoreAnnotations.TokensAnnotation.class).get(i).word());
+            }
+
+            int untokenizedCursor = 0;
+            int tokenizedCursor = 0;
+
+            while (tokenizedCursor < tokenized.size()) {
+                String currentTokenized = tokenized.get(tokenizedCursor);
+                String currentUntokenized = amr.sourceText[untokenizedCursor];
+
+                reverseSplit.put(tokenizedCursor, untokenizedCursor);
+
+                if (currentTokenized.equals(currentUntokenized)) {
+                    // String un
+                    tokenizedCursor++;
+                    untokenizedCursor++;
+                }
+                else if (currentUntokenized.startsWith(currentTokenized)) {
+                    tokenizedCursor++;
+                }
+                else if (currentUntokenized.endsWith(currentTokenized)) {
+                    tokenizedCursor++;
+                    untokenizedCursor++;
+                }
+                else {
+                    // We must be in the middle of an untokenized token
+                    tokenizedCursor++;
                 }
             }
         }

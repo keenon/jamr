@@ -32,6 +32,7 @@ public class DumpSequence {
         // getBetterRandomTrainSet();
         // getRandomDevSet();
         dumpReleaseData();
+        // dumpProxyData();
         // dumpMicrodata();
         // dumpPreAligned();
         // dumpPreAlignedDev();
@@ -94,24 +95,33 @@ public class DumpSequence {
     }
 
     public static void dumpReleaseData() throws IOException {
-        AMR[] train = AMRSlurp.slurp("data/deft-amr-release-r3-proxy-train.txt", AMRSlurp.Format.LDC);
-        AMR[] dev = AMRSlurp.slurp("data/deft-amr-release-r3-proxy-dev.txt", AMRSlurp.Format.LDC);
-        AMR[] test = AMRSlurp.slurp("data/deft-amr-release-r3-proxy-test.txt", AMRSlurp.Format.LDC);
-        retokenizeAndAlign(train, "data/deft-amr-release-r3-proxy-train-aligned.txt");
-        retokenizeAndAlign(dev, "data/deft-amr-release-r3-proxy-dev-aligned.txt");
-        retokenizeAndAlign(test, "data/deft-amr-release-r3-proxy-test-aligned.txt");
+        AMR[] train = AMRSlurp.slurp("data/deft-amr-release-r3-proxy-train-aligned.txt", AMRSlurp.Format.LDC);
+        AMR[] dev = AMRSlurp.slurp("data/deft-amr-release-r3-proxy-dev-aligned.txt", AMRSlurp.Format.LDC);
+        AMR[] test = AMRSlurp.slurp("data/deft-amr-release-r3-proxy-test-aligned.txt", AMRSlurp.Format.LDC);
+        // retokenizeAndAlign(train, "data/deft-amr-release-r3-proxy-train-aligned.txt");
+        // retokenizeAndAlign(dev, "data/deft-amr-release-r3-proxy-dev-aligned.txt");
+        // retokenizeAndAlign(test, "data/deft-amr-release-r3-proxy-test-aligned.txt");
 
-        dumpSequences(train, "data/deft-train-seq.txt");
+        // dumpSequences(train, "data/deft-train-seq.txt");
         dumpManygenDictionaries(train, "data/deft-train-manygen.txt");
-        dumpCONLL(train, "data/deft-train-conll.txt");
+        // dumpCONLL(train, "data/deft-train-conll.txt");
 
-        dumpSequences(dev, "data/deft-dev-seq.txt");
+        // dumpSequences(dev, "data/deft-dev-seq.txt");
         dumpManygenDictionaries(dev, "data/deft-dev-manygen.txt");
-        dumpCONLL(dev, "data/deft-dev-conll.txt");
+        // dumpCONLL(dev, "data/deft-dev-conll.txt");
 
-        dumpSequences(test, "data/deft-test-seq.txt");
+        // dumpSequences(test, "data/deft-test-seq.txt");
         dumpManygenDictionaries(test, "data/deft-test-manygen.txt");
-        dumpCONLL(test, "data/deft-test-conll.txt");
+        // dumpCONLL(test, "data/deft-test-conll.txt");
+    }
+
+    public static void dumpProxyData() throws IOException {
+        AMR[] train = AMRSlurp.slurp("data/amr-release-1.0-training-proxy-aligned.txt", AMRSlurp.Format.LDC);
+        // retokenizeAndAlign(train, "data/amr-release-1.0-training-proxy-aligned.txt");
+
+        // dumpSequences(train, "data/train-proxy-seq.txt");
+        dumpManygenDictionaries(train, "data/train-proxy-manygen.txt");
+        // dumpCONLL(train, "data/train-proxy-conll.txt");
     }
 
     public static void dumpTestData() throws IOException {
@@ -346,7 +356,7 @@ public class DumpSequence {
 
                 if (!type.equals(lastType)) {
                     if (lastType.startsWith("DICT")) {
-                        addToDict(dictStart, i-1, amr, dictionaries);
+                        addToDict(dictStart, i-1, amr, dictionaries, true);
                     }
                     if (type.startsWith("DICT")) dictStart = i;
                 }
@@ -357,7 +367,7 @@ public class DumpSequence {
             }
 
             if (lastType.startsWith("DICT")) {
-                addToDict(dictStart, amr.sourceText.length-1, amr, dictionaries);
+                addToDict(dictStart, amr.sourceText.length-1, amr, dictionaries, true);
             }
         }
 
@@ -392,7 +402,16 @@ public class DumpSequence {
                 ((double)multichoice / tokens));
     }
 
-    private static void addToDict(int start, int end, AMR amr, Map<String,List<String>> dictionaries) {
+    private static void addToDict(int start, int end, AMR amr, Map<String,List<String>> dictionaries, boolean split) {
+        // Add every possible sub-span to the dictionary that doesn't duplicate our current settings
+        if (split && start < end) {
+            for (int i = start; i <= end; i++) {
+                for (int j = i; j <= end; j++) {
+                    addToDict(i, j, amr, dictionaries, false);
+                }
+            }
+        }
+
         Set<AMR.Node> nodes = new IdentityHashSet<AMR.Node>();
 
         String sourceTokens = "";

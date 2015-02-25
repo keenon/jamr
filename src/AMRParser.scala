@@ -207,7 +207,7 @@ scala -classpath . edu.cmu.lti.nlp.amr.AMRParser --stage2-decode -w weights -l l
                 // This is a test to see if we can hijack the machinery of AMRParser
 
                 val stage1ResultGraph = if (options.contains('stanfordChunkGen)) {
-                    StanfordDecoder.Decoder.decode(line)
+                    StanfordDecoder.Decoder.decode(tok)
                 }
                 else {
                     stage1Result.graph

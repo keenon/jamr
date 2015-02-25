@@ -129,9 +129,9 @@ public class AlignmentAnnotator {
     }
 
     public static void main(String[] args) throws IOException {
-        AMR[] train = AMRSlurp.slurp("data/deft-amr-100.txt", AMRSlurp.Format.LDC);
-        AMR[] dev = AMRSlurp.slurp("data/deft-amr-100.txt", AMRSlurp.Format.LDC);
-        new AlignmentAnnotator(train, dev, "data/deft-amr-100.txt", false);
+        AMR[] train = null; // AMRSlurp.slurp("data/deft-amr-100.txt", AMRSlurp.Format.LDC);
+        AMR[] dev = AMRSlurp.slurp("data/training-500-subset.txt", AMRSlurp.Format.LDC);
+        new AlignmentAnnotator(train, dev, "data/null.txt", false);
     }
 
     public AlignmentAnnotator(AMR[] train, AMR[] dev, String outputPath, boolean preAligned) {

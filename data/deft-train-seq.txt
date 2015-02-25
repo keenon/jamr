@@ -1207,7 +1207,7 @@ president	IDENTITY
 Chung	BLOCKED
 Mong-Joon	BLOCKED
 said	DICT
-FIFA	NAME
+FIFA	DICT
 should	DICT
 not	NONE
 intervene	VERB
@@ -5262,7 +5262,7 @@ and	IDENTITY
 establishing	VERB
 security	IDENTITY
 in	NONE
-Afghanistan	NAME
+Afghanistan	DICT
 .	NONE
 
 Qanooni	BLOCKED
@@ -6635,7 +6635,7 @@ conflict	IDENTITY
 .	NONE
 
 The	NONE
-North	DICT
+North	NAME
 Korean	DICT
 government	VERB
 agreed	VERB
@@ -7286,7 +7286,7 @@ R.	BLOCKED
 Mohanty	BLOCKED
 stated	DICT
 that	NONE
-Hindustan	DICT
+Hindustan	NAME
 Aeronautics	DICT
 Limited	DICT
 's	NONE
@@ -7659,7 +7659,7 @@ rounds	LEMMA
 .	NONE
 
 If	NONE
-Japan	DICT
+Japan	NAME
 rises	VERB
 to	NONE
 the	NONE
@@ -8011,7 +8011,7 @@ would	DICT
 be	NONE
 easy	IDENTITY
 for	NONE
-Japan	NAME
+Japan	DICT
 to	NONE
 produce	VERB
 nuclear	DICT
@@ -8086,7 +8086,7 @@ wanted	VERB
 a	NONE
 fully	DICT
 democratic	IDENTITY
-China	NAME
+China	DICT
 and	NONE
 an	NONE
 environment	IDENTITY
@@ -9376,7 +9376,7 @@ intellectual	IDENTITY
 property	IDENTITY
 rights	IDENTITY
 in	NONE
-Southeast	DICT
+Southeast	NAME
 Asia	NAME
 with	NONE
 the	NONE
@@ -11398,7 +11398,7 @@ people	NONE
 and	IDENTITY
 goods	DICT
 between	NONE
-Pakistan	NAME
+Pakistan	DICT
 and	IDENTITY
 Afghanistan	DICT
 for	NONE
@@ -13086,7 +13086,7 @@ nuclear	DICT
 weapons	LEMMA
 by	NONE
 building	VERB
-Iran	DICT
+Iran	NAME
 's	NONE
 Bushehr	DICT
 atomic	DICT
@@ -16749,7 +16749,7 @@ government	VERB
 hailed	DICT
 cooperation	VERB
 of	NONE
-Arab	DICT
+Arab	NAME
 countries	LEMMA
 in	NONE
 fighting	VERB
@@ -18201,7 +18201,7 @@ also	IDENTITY
 included	DICT
 those	NONE
 of	NONE
-U.S.	NAME
+U.S.	DICT
 news	IDENTITY
 organizations	LEMMA
 including	DICT
@@ -21095,7 +21095,7 @@ said	DICT
 Thursday	BLOCKED
 that	NONE
 the	NONE
-UK	NAME
+UK	DICT
 government	DICT
 is	DICT
 deeply	DICT
@@ -21625,7 +21625,7 @@ of	NONE
 communication	VERB
 with	NONE
 the	NONE
-North	DICT
+North	NAME
 to	NONE
 defuse	VERB
 the	NONE
@@ -23133,7 +23133,7 @@ stated	DICT
 that	NONE
 Russia	NAME
 ,	NONE
-Japan	NAME
+Japan	DICT
 ,	NONE
 and	IDENTITY
 the	NONE
@@ -24528,7 +24528,7 @@ the	NONE
 3	BLOCKED
 wars	VERB
 between	NONE
-India	DICT
+India	NAME
 and	DICT
 Pakistan	DICT
 since	IDENTITY
@@ -25744,7 +25744,7 @@ the	NONE
 030128	BLOCKED
 attack	VERB
 on	NONE
-Italy	NAME
+Italy	DICT
 's	NONE
 Internet	IDENTITY
 network	IDENTITY
@@ -26271,7 +26271,7 @@ terrorism	IDENTITY
 is	NONE
 located	VERB
 near	IDENTITY
-India	DICT
+India	NAME
 due	DICT
 to	NONE
 the	NONE
@@ -26994,7 +26994,7 @@ returned	VERB
 last	BLOCKED
 week	BLOCKED
 from	NONE
-Amnesty	NAME
+Amnesty	DICT
 International	NAME
 's	NONE
 first	BLOCKED
@@ -27009,7 +27009,7 @@ is	NONE
 widely	DICT
 criticised	VERB
 for	NONE
-Myanmar	NAME
+Myanmar	DICT
 's	NONE
 poor	IDENTITY
 human	IDENTITY
@@ -27244,7 +27244,7 @@ against	NONE
 Iraq	DICT
 .	NONE
 
-South	NAME
+South	DICT
 African	DICT
 President	IDENTITY
 Thabo	BLOCKED
@@ -27265,7 +27265,7 @@ experts	DICT
 will	DICT
 depart	VERB
 to	NONE
-Iraq	DICT
+Iraq	NAME
 within	IDENTITY
 days	LEMMA
 to	NONE
@@ -27714,7 +27714,7 @@ government	DICT
 was	DICT
 discussed	DICT
 with	NONE
-UN	DICT
+UN	NAME
 Secretary-General	DICT
 Kofi	BLOCKED
 Annan	BLOCKED
@@ -28101,7 +28101,7 @@ NCRI	BLOCKED
 -RRB-	BLOCKED
 stated	DICT
 that	NONE
-Iran	NAME
+Iran	DICT
 was	NONE
 building	VERB
 banned	DICT
@@ -28340,7 +28340,7 @@ government	VERB
 was	DICT
 skeptical	DICT
 of	NONE
-Iran	DICT
+Iran	NAME
 's	NONE
 intentions	DICT
 and	IDENTITY
@@ -29798,7 +29798,7 @@ air	IDENTITY
 defenses	DICT
 come	NONE
 during	IDENTITY
-Kazakhstan	DICT
+Kazakhstan	NAME
 's	NONE
 air	DICT
 force	NAME
@@ -31372,7 +31372,7 @@ to	NONE
 the	NONE
 Pakistan-based	DICT
 former	IDENTITY
-Taliban	DICT
+Taliban	NAME
 members	LEMMA
 from	NONE
 Karachi	DICT
@@ -31583,7 +31583,7 @@ on	NONE
 .	NONE
 
 An	DICT
-Anti	DICT
+Anti	NAME
 Narcotics	NONE
 Force	NONE
 official	DICT
@@ -31627,7 +31627,7 @@ stated	DICT
 that	NONE
 when	DICT
 the	NONE
-Anti	NAME
+Anti	DICT
 Narcotics	NAME
 Force	NAME
 motioned	VERB
@@ -31652,7 +31652,7 @@ hour	IDENTITY
 .	NONE
 
 The	NONE
-Anti	DICT
+Anti	NAME
 Narcotics	NONE
 Force	NAME
 official	IDENTITY
@@ -31687,7 +31687,7 @@ driver	VERB
 .	NONE
 
 The	NONE
-Anti	NAME
+Anti	DICT
 Narcotics	NAME
 Force	NONE
 official	IDENTITY
@@ -31900,7 +31900,7 @@ employees	VERB
 of	NONE
 America	DICT
 ,	DICT
-England	NAME
+England	DICT
 ,	NONE
 Australia	DICT
 and	IDENTITY
@@ -33397,7 +33397,7 @@ progress	VERB
 of	NONE
 discussions	DICT
 between	NONE
-North	DICT
+North	NAME
 Korea	NAME
 and	DICT
 South	DICT
@@ -33457,7 +33457,7 @@ Kartman	BLOCKED
 stated	DICT
 that	NONE
 the	NONE
-North	DICT
+North	NAME
 Korean	NONE
 nuclear	DICT
 reactor	IDENTITY
@@ -34719,7 +34719,7 @@ that	NONE
 fact	DICT
 that	NONE
 the	NONE
-United	NAME
+United	DICT
 States	NAME
 was	NONE
 now	BLOCKED
@@ -34809,7 +34809,7 @@ Korean	DICT
 nuclear	DICT
 attack	VERB
 on	NONE
-Australia	DICT
+Australia	NAME
 if	NONE
 Australia	NAME
 took	DICT
@@ -34962,7 +34962,7 @@ Myong-Chol	BLOCKED
 warned	VERB
 that	NONE
 if	NONE
-Australia	NAME
+Australia	DICT
 took	DICT
 part	DICT
 in	NONE
@@ -34990,7 +34990,7 @@ position	IDENTITY
 is	NONE
 ,	NONE
 if	NONE
-Australia	DICT
+Australia	NAME
 becomes	NONE
 part	DICT
 of	NONE
@@ -35332,7 +35332,7 @@ Korea	NAME
 threat	DICT
 to	NONE
 strike	VERB
-Australia	DICT
+Australia	NAME
 with	NONE
 nuclear	DICT
 weapons	LEMMA
@@ -35367,7 +35367,7 @@ Korea	NAME
 threat	DICT
 to	NONE
 strike	VERB
-Australia	DICT
+Australia	NAME
 with	NONE
 nuclear	DICT
 weapons	LEMMA
@@ -35430,7 +35430,7 @@ Tokyo	DICT
 late	IDENTITY
 030714	BLOCKED
 that	NONE
-North	NAME
+North	DICT
 Korea	NAME
 would	NONE
 retaliate	VERB
@@ -35473,7 +35473,7 @@ Kim	BLOCKED
 Myong-Chol	BLOCKED
 stated	DICT
 that	NONE
-Australia	DICT
+Australia	NAME
 would	NONE
 be	NONE
 attacked	VERB
@@ -35501,7 +35501,7 @@ Korean	NONE
 position	IDENTITY
 was	NONE
 that	NONE
-North	NAME
+North	DICT
 Korea	NONE
 reserves	DICT
 the	NONE
@@ -35653,7 +35653,7 @@ against	NONE
 Australia	DICT
 or	IDENTITY
 that	NONE
-North	NAME
+North	DICT
 Korea	DICT
 has	NONE
 the	NONE
@@ -35855,7 +35855,7 @@ is	NONE
 not	NONE
 careful	VERB
 then	DICT
-Australia	DICT
+Australia	NAME
 will	DICT
 be	NONE
 harmed	VERB
@@ -35875,7 +35875,7 @@ Australian	NONE
 behavior	VERB
 and	IDENTITY
 that	NONE
-Australia	NAME
+Australia	DICT
 must	NONE
 be	NONE
 careful	IDENTITY
@@ -36025,7 +36025,7 @@ of	NONE
 nuclear	DICT
 ambitions	LEMMA
 and	IDENTITY
-North	NAME
+North	DICT
 Korea	NAME
 is	NONE
 now	BLOCKED
@@ -36738,7 +36738,7 @@ days	LEMMA
 2	DICT
 days	LEMMA
 after	IDENTITY
-North	NAME
+North	DICT
 Korean	DICT
 leader	DICT
 Kim	BLOCKED
@@ -38323,7 +38323,7 @@ unused	DICT
 plutonium-processing	DICT
 facility	IDENTITY
 to	NONE
-China	DICT
+China	NAME
 and	IDENTITY
 that	NONE
 the	NONE
@@ -38531,7 +38531,7 @@ others	LEMMA
 .	NONE
 
 A	NONE
-Siemens	NAME
+Siemens	DICT
 spokesman	IDENTITY
 in	NONE
 Germany	DICT
@@ -38591,7 +38591,7 @@ principle	DICT
 .	NONE
 
 A	NONE
-Siemens	DICT
+Siemens	NAME
 spokesman	IDENTITY
 in	NONE
 Germany	DICT
@@ -38707,7 +38707,7 @@ spokeswoman	IDENTITY
 for	NONE
 Germany	DICT
 's	NONE
-Federal	NAME
+Federal	DICT
 exports	NONE
 office	NONE
 confirmed	DICT
@@ -40013,7 +40013,7 @@ under	NONE
 pressure	VERB
 from	NONE
 the	NONE
-US	DICT
+US	NAME
 government	VERB
 since	IDENTITY
 the	NONE
@@ -40813,7 +40813,7 @@ to	NONE
 ineffective	DICT
 communication	VERB
 with	NONE
-Volkswagen	NAME
+Volkswagen	DICT
 's	NONE
 Chinese	DICT
 partners	VERB
@@ -42149,7 +42149,7 @@ this	IDENTITY
 threat	IDENTITY
 .	NONE
 
-Al-Qaeda	NAME
+Al-Qaeda	DICT
 is	DICT
 only	DICT
 1	BLOCKED
@@ -44116,7 +44116,7 @@ drug	IDENTITY
 network	IDENTITY
 operating	VERB
 between	IDENTITY
-Kosovo	DICT
+Kosovo	NAME
 ,	NONE
 Macedonia	DICT
 ,	NONE
@@ -44732,7 +44732,7 @@ had	DICT
 reduced	VERB
 poppy	IDENTITY
 cultivation	VERB
-Myanmar	DICT
+Myanmar	NAME
 remained	DICT
 the	NONE
 world	IDENTITY
@@ -45749,7 +45749,7 @@ in	NONE
 
 China	DICT
 awaits	VERB
-China	DICT
+China	NAME
 's	NONE
 reunification	DICT
 with	NONE
@@ -46146,7 +46146,7 @@ to	NONE
 an	NONE
 existing	VERB
 plant	IDENTITY
-and	DICT
+and	IDENTITY
 is	NONE
 projected	DICT
 to	NONE
@@ -46891,7 +46891,7 @@ due	DICT
 to	NONE
 concern	DICT
 from	NONE
-South	NAME
+South	DICT
 Korean	DICT
 government	VERB
 over	NONE
@@ -46932,7 +46932,7 @@ technology	IDENTITY
 transfer	VERB
 agreement	VERB
 with	NONE
-South	DICT
+South	NAME
 Korea	NAME
 's	NONE
 Hynix	DICT
@@ -47664,7 +47664,7 @@ war	IDENTITY
 dead	DICT
 stated	DICT
 the	NONE
-Yasukuni	DICT
+Yasukuni	NAME
 Shrine	NAME
 's	NONE
 website	IDENTITY
@@ -49669,7 +49669,7 @@ first	BLOCKED
 cruise	IDENTITY
 missile	IDENTITY
 enabling	VERB
-Taiwan	NAME
+Taiwan	DICT
 to	NONE
 hit	VERB
 major	IDENTITY
@@ -49982,7 +49982,7 @@ tensions	LEMMA
 
 China	DICT
 considers	VERB
-Taiwan	NAME
+Taiwan	DICT
 part	DICT
 of	NONE
 its	NONE
@@ -51000,7 +51000,7 @@ in	NONE
 Glasgow	DICT
 .	NONE
 
-Pakistan	NAME
+Pakistan	DICT
 admits	VERB
 that	NONE
 some	NONE
@@ -51739,7 +51739,7 @@ additionally	DICT
 confirmed	VERB
 the	NONE
 state-run	NONE
-Indian	NAME
+Indian	DICT
 Airlines	NAME
 '	NONE
 1.8	DICT
@@ -51988,7 +51988,7 @@ On	NONE
 19	BLOCKED
 September	BLOCKED
 2005	BLOCKED
-Spain	NAME
+Spain	DICT
 detained	VERB
 suspected	VERB
 neo-Nazi	IDENTITY
@@ -53553,7 +53553,7 @@ for	NONE
 an	NONE
 8	DICT
 billion	NONE
-U.S.	DICT
+U.S.	NAME
 dollar	IDENTITY
 -LRB-	BLOCKED
 6.8	BLOCKED
@@ -54017,7 +54017,7 @@ exporters	DICT
 
 France	DICT
 views	DICT
-China	NAME
+China	DICT
 as	NONE
 a	NONE
 strategic	IDENTITY
@@ -54333,7 +54333,7 @@ negotiations	VERB
 .	NONE
 
 20010830	BLOCKED
-UN	DICT
+UN	NAME
 undersecretary-general	IDENTITY
 for	NONE
 Disarmament	DICT
@@ -54642,7 +54642,7 @@ ensure	VERB
 implementation	VERB
 of	NONE
 the	NONE
-UN	DICT
+UN	NAME
 program	IDENTITY
 of	NONE
 action	DICT
@@ -55666,7 +55666,7 @@ over	NONE
 Islamic	DICT
 militants	LEMMA
 in	NONE
-Indonesia	NAME
+Indonesia	DICT
 ,	DICT
 but	DICT
 an	NONE
@@ -58199,7 +58199,7 @@ gave	DICT
 his	NONE
 life	IDENTITY
 for	NONE
-Kashmir	DICT
+Kashmir	NAME
 and	IDENTITY
 that	NONE
 Sadiqui	BLOCKED
@@ -60477,7 +60477,7 @@ resolve	VERB
 its	DICT
 issues	LEMMA
 with	NONE
-Pakistan	DICT
+Pakistan	NAME
 including	DICT
 the	NONE
 core	IDENTITY
@@ -61169,7 +61169,7 @@ Chief	IDENTITY
 system	IDENTITY
 engineer	DICT
 at	NONE
-KT	NAME
+KT	DICT
 freetel	DICT
 Kim	BLOCKED
 Chang-Rae	BLOCKED
@@ -61290,7 +61290,7 @@ Privately-owned	DICT
 Internet	IDENTITY
 service	IDENTITY
 provider	VERB
-timedotcom	DICT
+timedotcom	NAME
 in	NONE
 Malaysia	DICT
 stated	DICT
@@ -62203,7 +62203,7 @@ few	IDENTITY
 days	DICT
 after	IDENTITY
 the	NONE
-Singapore	DICT
+Singapore	NAME
 arrests	VERB
 in	NONE
 December	BLOCKED
@@ -62312,7 +62312,7 @@ planned	DICT
 to	NONE
 hijack	VERB
 a	NONE
-U.S.	DICT
+U.S.	NAME
 ,	DICT
 British	DICT
 or	IDENTITY
@@ -62449,7 +62449,7 @@ The	NONE
 defense	IDENTITY
 ministers	LEMMA
 of	NONE
-France	DICT
+France	NAME
 and	IDENTITY
 India	NAME
 met	DICT
@@ -62613,7 +62613,7 @@ defense	DICT
 equipment	IDENTITY
 .	NONE
 
-India	NAME
+India	DICT
 and	IDENTITY
 France	DICT
 will	DICT
@@ -62833,7 +62833,7 @@ the	NONE
 political	DICT
 reconstruction	VERB
 of	NONE
-Iraq	NAME
+Iraq	DICT
 should	DICT
 be	DICT
 the	NONE
@@ -62997,7 +62997,7 @@ Ali	BLOCKED
 Asghar	BLOCKED
 Ahmedi	BLOCKED
 and	IDENTITY
-Pakistan	NAME
+Pakistan	DICT
 's	NONE
 Interior	IDENTITY
 Ministry	NAME
@@ -63453,7 +63453,7 @@ North	DICT
 Korea	NAME
 .	NONE
 
-Busan	DICT
+Busan	NAME
 customs	LEMMA
 official	IDENTITY
 Koh	BLOCKED
@@ -63547,7 +63547,7 @@ a	NONE
 port	IDENTITY
 in	NONE
 northeastern	DICT
-North	NAME
+North	DICT
 Korea	NAME
 known	NONE
 as	NONE
@@ -63838,7 +63838,7 @@ politics	IDENTITY
 ;	DICT
 government	VERB
 
-North	NAME
+North	DICT
 Korean	DICT
 media	IDENTITY
 denies	DICT
@@ -63930,7 +63930,7 @@ vessel	IDENTITY
 was	DICT
 owned	VERB
 by	NONE
-North	NAME
+North	DICT
 Korea	NAME
 's	NONE
 ruling	DICT
@@ -63993,7 +63993,7 @@ that	NONE
 the	NONE
 people	DICT
 of	NONE
-North	DICT
+North	NAME
 Korea	NAME
 were	DICT
 involved	VERB
@@ -64032,7 +64032,7 @@ Korean	DICT
 officials	LEMMA
 clarify	DICT
 that	NONE
-North	DICT
+North	NAME
 Korean	DICT
 government	VERB
 strictly	DICT
@@ -64106,7 +64106,7 @@ the	NONE
 authority	IDENTITY
 of	NONE
 the	NONE
-DPRK	NAME
+DPRK	DICT
 and	IDENTITY
 attack	VERB
 the	NONE
@@ -64967,7 +64967,7 @@ has	DICT
 promised	VERB
 to	NONE
 assist	VERB
-emtac	NAME
+emtac	DICT
 in	NONE
 importing	VERB
 and	IDENTITY
@@ -65088,7 +65088,7 @@ COMPANY	IDENTITY
 ryss	DICT
 laboratory	DICT
 's	NONE
-Taiwan	NAME
+Taiwan	DICT
 subsidiary	IDENTITY
 and	IDENTITY
 Taiwan	DICT
@@ -65392,7 +65392,7 @@ of	NONE
 missiles	LEMMA
 aimed	DICT
 at	NONE
-Taiwan	DICT
+Taiwan	NAME
 and	IDENTITY
 the	NONE
 PRC	DICT
@@ -65705,7 +65705,7 @@ DPP	BLOCKED
 whip	IDENTITY
 at	NONE
 the	NONE
-Taiwan	DICT
+Taiwan	NAME
 legislature	DICT
 said	DICT
 on	NONE
@@ -66054,7 +66054,7 @@ due	NONE
 to	NONE
 arrive	VERB
 at	NONE
-Taiwan	NAME
+Taiwan	DICT
 by	NONE
 the	BLOCKED
 end	BLOCKED
@@ -67261,7 +67261,7 @@ demanded	VERB
 to	NONE
 search	VERB
 the	NONE
-kuwolsan	DICT
+kuwolsan	NAME
 's	NONE
 cargo	IDENTITY
 boxes	LEMMA
@@ -67940,7 +67940,7 @@ the	NONE
 inner	IDENTITY
 workings	DICT
 of	NONE
-North	NAME
+North	DICT
 Korea	NONE
 's	NONE
 missile	IDENTITY
@@ -68118,7 +68118,7 @@ missiles	LEMMA
 .	NONE
 
 The	NONE
-kuwolsan	NAME
+kuwolsan	DICT
 and	IDENTITY
 the	NONE
 crew	IDENTITY
@@ -70908,7 +70908,7 @@ military	IDENTITY
 hardware	IDENTITY
 and	IDENTITY
 protect	VERB
-Venezuela	DICT
+Venezuela	NAME
 from	NONE
 nations	LEMMA
 that	NONE
@@ -72657,7 +72657,7 @@ Committee	NAME
 .	NONE
 
 The	NONE
-South	DICT
+South	NAME
 African	NONE
 Foreign	IDENTITY
 Ministry	NAME
@@ -75439,7 +75439,7 @@ influence	DICT
 but	NONE
 also	IDENTITY
 reflect	VERB
-SCO	DICT
+SCO	NAME
 's	NONE
 principles	LEMMA
 of	NONE
@@ -75902,7 +75902,7 @@ technology	IDENTITY
 
 France	DICT
 and	IDENTITY
-India	NAME
+India	DICT
 will	NONE
 sign	VERB
 an	NONE
@@ -75969,7 +75969,7 @@ systems	LEMMA
 
 France	DICT
 and	IDENTITY
-India	DICT
+India	NAME
 will	NONE
 sign	VERB
 an	NONE
@@ -76069,7 +76069,7 @@ upgraded	VERB
 Mirage	DICT
 2002-5	BLOCKED
 to	NONE
-India	NAME
+India	DICT
 along	NONE
 with	NONE
 technology	IDENTITY
@@ -77227,7 +77227,7 @@ Africa	DICT
 .	NONE
 
 The	NONE
-South	NAME
+South	DICT
 African	DICT
 Foreign	DICT
 Affairs	NAME
@@ -77314,7 +77314,7 @@ America	NAME
 
 Trade	VERB
 between	NONE
-Brazil	NAME
+Brazil	DICT
 and	NONE
 South	DICT
 Africa	NAME
@@ -77343,7 +77343,7 @@ Brazil	DICT
 .	NONE
 
 The	NONE
-South	NAME
+South	DICT
 African	DICT
 Foreign	DICT
 Affairs	NAME
@@ -78608,7 +78608,7 @@ diplomatic	DICT
 strategy	IDENTITY
 and	IDENTITY
 that	NONE
-China	NAME
+China	DICT
 and	IDENTITY
 Europe	DICT
 developed	DICT
@@ -79256,7 +79256,7 @@ peace	IDENTITY
 and	IDENTITY
 tranquillity	IDENTITY
 in	NONE
-China	DICT
+China	NAME
 and	NONE
 Kyrgyzstan	NAME
 and	IDENTITY
@@ -80027,7 +80027,7 @@ to	NONE
 improved	VERB
 relations	LEMMA
 between	IDENTITY
-Hong	NAME
+Hong	DICT
 Kong	NAME
 and	NONE
 mainland	IDENTITY
@@ -80151,11 +80151,11 @@ stated	DICT
 that	NONE
 cooperation	VERB
 between	NONE
-Hong	DICT
+Hong	NAME
 Kong	NONE
 and	IDENTITY
 mainland	IDENTITY
-China	DICT
+China	NAME
 will	NONE
 facilitate	VERB
 universities	LEMMA
@@ -80296,7 +80296,7 @@ partnering	VERB
 with	NONE
 education	IDENTITY
 institutes	LEMMA
-Hong	DICT
+Hong	NAME
 Kong	NONE
 universities	LEMMA
 have	NONE

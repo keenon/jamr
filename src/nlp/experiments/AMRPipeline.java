@@ -68,6 +68,22 @@ public class AMRPipeline {
         }
     }
 
+    public static List<String> blockedVerbs = new ArrayList<String>(){{
+        add("be");
+        add("are");
+        add("but");
+    }};
+
+    public static List<String> blockedNames = new ArrayList<String>(){{
+        add("I");
+        add("i");
+        add("me");
+        add("my");
+        add("we");
+        add("us");
+        add("they");
+    }};
+
     private String getSRLSenseAtIndex(Annotation annotation, int index) {
         PredicateArgumentAnnotation srl = annotation.get(CuratorAnnotations.PropBankSRLAnnotation.class);
         if (srl == null) return "-"; // If we have no SRL on this example, then oh well
@@ -155,6 +171,36 @@ public class AMRPipeline {
                             .get(pair.second+1).get(CoreAnnotations.PartOfSpeechAnnotation.class);
                 });
 
+                // Token NER
+                add((pair) -> pair.first.annotation.get(CoreAnnotations.TokensAnnotation.class).get(pair.second).get(CoreAnnotations.NamedEntityTagAnnotation.class));
+                // Left bigram NER
+                add((pair) -> {
+                    String leftNER = "^";
+                    if (pair.second > 0) {
+                        leftNER = pair.first.annotation.get(CoreAnnotations.TokensAnnotation.class).get(pair.second-1).get(CoreAnnotations.NamedEntityTagAnnotation.class);
+                    }
+                    return leftNER+":"+pair.first.annotation.get(CoreAnnotations.TokensAnnotation.class).get(pair.second).get(CoreAnnotations.NamedEntityTagAnnotation.class);
+                });
+                // Right bigram NER
+                add((pair) -> {
+                    String rightNER = "$";
+                    if (pair.second < pair.first.tokens.length-1) {
+                        rightNER = pair.first.annotation.get(CoreAnnotations.TokensAnnotation.class).get(pair.second+1).get(CoreAnnotations.NamedEntityTagAnnotation.class);
+                    }
+                    return pair.first.annotation.get(CoreAnnotations.TokensAnnotation.class).get(pair.second).get(CoreAnnotations.NamedEntityTagAnnotation.class)+":"+rightNER;
+                });
+
+                // Get the thing we'll actually be predicting with the dictionary, in case that's useful information
+                // This should strongly bias against NULLs, in theory.
+                add((pair) -> pair.first.tokens[pair.second] + dictionaryLookup.predict(new Triple<>(pair.first, pair.second, pair.second)));
+
+                // Closest frame token
+                add((pair) -> {
+                    String lemma = pair.first.annotation.get(CoreAnnotations.TokensAnnotation.class).get(pair.second).get(CoreAnnotations.LemmaAnnotation.class);
+                    return frameManager.getClosestFrame(lemma);
+                });
+
+                /*
                 // Token dependency parent
                 add((pair) -> {
                     SemanticGraph graph = pair.first.annotation.get(CoreAnnotations.SentencesAnnotation.class).get(0)
@@ -243,25 +289,6 @@ public class AMRPipeline {
                 add((pair) -> {
                     String lemma = pair.first.annotation.get(CoreAnnotations.TokensAnnotation.class).get(pair.second).get(CoreAnnotations.LemmaAnnotation.class);
                     return frameManager.getClosestFrame(lemma);
-                });
-
-                // Token NER
-                add((pair) -> pair.first.annotation.get(CoreAnnotations.TokensAnnotation.class).get(pair.second).get(CoreAnnotations.NamedEntityTagAnnotation.class));
-                // Left bigram NER
-                add((pair) -> {
-                    String leftNER = "^";
-                    if (pair.second > 0) {
-                        leftNER = pair.first.annotation.get(CoreAnnotations.TokensAnnotation.class).get(pair.second-1).get(CoreAnnotations.NamedEntityTagAnnotation.class);
-                    }
-                    return leftNER+":"+pair.first.annotation.get(CoreAnnotations.TokensAnnotation.class).get(pair.second).get(CoreAnnotations.NamedEntityTagAnnotation.class);
-                });
-                // Right bigram NER
-                add((pair) -> {
-                    String rightNER = "$";
-                    if (pair.second < pair.first.tokens.length-1) {
-                        rightNER = pair.first.annotation.get(CoreAnnotations.TokensAnnotation.class).get(pair.second+1).get(CoreAnnotations.NamedEntityTagAnnotation.class);
-                    }
-                    return pair.first.annotation.get(CoreAnnotations.TokensAnnotation.class).get(pair.second).get(CoreAnnotations.NamedEntityTagAnnotation.class)+":"+rightNER;
                 });
 
                 add((pair) -> {
@@ -360,7 +387,6 @@ public class AMRPipeline {
                     }
                 });
 
-                /*
                 // Get the SRL lemma here
                 add((pair) -> {
                     return getSRLSenseAtIndex(pair.first.annotation, pair.second);
@@ -382,13 +408,6 @@ public class AMRPipeline {
                 add((pair) -> {
                     return getPrepSenseAtIndex(pair.first.annotation, pair.second);
                 });
-
-                /*
-                // Get coref chain existence
-                add((pair) -> {
-                     = pair.first.annotation.get(CoreAnnotations.TokensAnnotation.class).get(pair.second).get(CorefCoreAnnotations.CorefChainAnnotation.class);
-                    return "COREF";
-                });
                 */
             }},
             AMRPipeline::writeNerPlusPlusContext
@@ -398,12 +417,24 @@ public class AMRPipeline {
     LinearPipe<Triple<LabeledSequence,Integer,Integer>, String> dictionaryLookup = new LinearPipe<>(
             new ArrayList<Function<Triple<LabeledSequence,Integer,Integer>,Object>>(){{
 
-                // Input triple is (Seq, index into Seq for start of expression, index into Seq for end of expression)
+                // Use the concatenated tokens as the primary decider
 
                 add((triple) -> {
                     StringBuilder sb = new StringBuilder();
                     for (int i = triple.second; i <= triple.third; i++) {
-                        sb.append(triple.first.annotation.get(CoreAnnotations.TokensAnnotation.class).get(i).get(CoreAnnotations.LemmaAnnotation.class).toLowerCase());
+                        if (i < triple.first.annotation.get(CoreAnnotations.TokensAnnotation.class).size()) {
+                            sb.append(triple.first.annotation.get(CoreAnnotations.TokensAnnotation.class).get(i).word());
+                        }
+                        else {
+                            System.err.println("Had trouble featurizing:");
+                            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.err));
+                            AMRPipeline.writeDictionaryContext(triple, bw);
+                            try {
+                                bw.close();
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                        }
                     }
                     return sb.toString();
                 });
@@ -791,8 +822,20 @@ public class AMRPipeline {
         List<AMRNodeSet> mstData = loadCoNLLData(FULL_DATA ? "realdata/release-train-conll.txt" : ( TINY_DATA ? "data/train-3-conll.txt" : "data/train-"+trainDataSize+"-conll.txt"));
 
         System.out.println("Training");
-        nerPlusPlus.sigma = 0.5;
+        nerPlusPlus.sigma = 0.7;
         nerPlusPlus.train(getNERPlusPlusForClassifier(nerPlusPlusData));
+        nerPlusPlus.approvalFunction = (in, out) -> {
+            if (out.equals("DICT")) {
+                if (dictionaryLookup.predict(new Triple<>(in.first, in.second, in.second)) == null) return false;
+            }
+            if (out.equals("VERB")) {
+                if (blockedVerbs.contains(in.first.tokens[in.second])) return false;
+            }
+            if (out.equals("NAME")) {
+                if (blockedNames.contains(in.first.tokens[in.second])) return false;
+            }
+            return true;
+        };
 
         dictionaryLookup.type = LinearPipe.ClassifierType.BAYESIAN;
         dictionaryLookup.train(getDictionaryForClassifier(dictionaryData));
@@ -1195,7 +1238,10 @@ public class AMRPipeline {
 
         String[] labels = new String[tokens.length];
         for (int i = 0; i < tokens.length; i++) {
-            if (!blocked.contains(i)) {
+            if (tokens[i].equalsIgnoreCase("a")) {
+                labels[i] = "BLOCKED";
+            }
+            else if (!blocked.contains(i)) {
                 labels[i] = nerPlusPlus.predict(new Pair<>(labeledSequence, i));
             }
             else {
@@ -1752,6 +1798,23 @@ public class AMRPipeline {
     private static void justTrainNERPlusPlus() throws IOException {
         AMRPipeline pipeline = new AMRPipeline();
 
+        List<LabeledSequence> dictionaryData = loadManygenData("data/deft-train-manygen.txt");
+        pipeline.dictionaryLookup.type = LinearPipe.ClassifierType.BAYESIAN;
+        pipeline.dictionaryLookup.train(getDictionaryForClassifier(dictionaryData));
+
+        pipeline.nerPlusPlus.approvalFunction = (in, out) -> {
+            if (out.equals("DICT")) {
+                if (pipeline.dictionaryLookup.predict(new Triple<>(in.first, in.second, in.second)) == null) return false;
+            }
+            if (out.equals("VERB")) {
+                if (blockedVerbs.contains(in.first.tokens[in.second])) return false;
+            }
+            if (out.equals("NAME")) {
+                if (blockedNames.contains(in.first.tokens[in.second])) return false;
+            }
+            return true;
+        };
+
         // List<LabeledSequence> nerPlusPlusDataTrain = loadSequenceData("data/train-500-seq.txt");
         List<LabeledSequence> nerPlusPlusDataTrain = loadSequenceData("data/deft-train-seq.txt");
         List<LabeledSequence> nerPlusPlusDataTest = loadSequenceData("data/deft-dev-seq.txt");
@@ -1761,7 +1824,7 @@ public class AMRPipeline {
 
         double[] sigmas = new double[]{
                 // 0.001, 0.01, 0.1, 0.3, 0.5, 0.7, 0.9, 1.0, 3.0, 10.0, 100.0
-                0.5, 0.7
+                0.5, 0.7, 1.0, 1.3, 1.8, 3.0
                 // 0.1, 0.13, 0.18, 0.2, 0.3
         };
 
@@ -1784,8 +1847,9 @@ public class AMRPipeline {
 
         for (double i : sigmas) {
             pipeline.nerPlusPlus.sigma = i;
+            // pipeline.nerPlusPlus.automaticallyReweightTrainingData = false;
             pipeline.nerPlusPlus.train(dataTrain, typeClasses);
-            pipeline.nerPlusPlus.analyze(dataTrain, dataTest, "data/ner-plus-plus-sigma-"+(int)(i*1000));
+            pipeline.nerPlusPlus.analyze(dataTrain, dataTest, "data/proxy-dictionary-no-restrict-ner-plus-plus-sigma-"+(int)(i*1000));
         }
     }
 

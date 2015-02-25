@@ -26,6 +26,8 @@ echo "  ----- Evaluation on Test: Smatch (all stages) -----" | tee "${MODEL_DIR}
 ./cmd.test.decode.allstages
 "${JAMR_HOME}/scripts/smatch_v1_0/smatch_modified.py" --pr -f "${MODEL_DIR}/test.decode.allstages" "${TEST_FILE}" 2>&1 | tee -a "${MODEL_DIR}/RESULTS.txt"
 echo "" | tee -a "${MODEL_DIR}/RESULTS.txt"
+echo "  ----- Evaluation on Test: Spans -----" | tee -a "${MODEL_DIR}/RESULTS.txt"
+tail -n 3 "${MODEL_DIR}/test.decode.allstages.err" | tee -a "${MODEL_DIR}/RESULTS.txt"
 
 echo ""
 echo "  ----- Evaluation on Test: Smatch (stanford chunks) -----" | tee -a "${MODEL_DIR}/RESULTS.txt"
@@ -40,7 +42,5 @@ echo "  ----- Evaluation on Test: Smatch (gold concept ID) -----" | tee -a "${MO
 ./cmd.test.decode.stage2only
 "${JAMR_HOME}/scripts/smatch_v1_0/smatch_modified.py" --pr -f "${MODEL_DIR}/test.decode.stage2only" "${TEST_FILE}" 2>&1 | tee -a "${MODEL_DIR}/RESULTS.txt"
 echo "" | tee -a "${MODEL_DIR}/RESULTS.txt"
-echo "  ----- Evaluation on Test: Spans -----" | tee -a "${MODEL_DIR}/RESULTS.txt"
-tail -n 3 "${MODEL_DIR}/test.decode.allstages.err" | tee -a "${MODEL_DIR}/RESULTS.txt"
 echo ""
 
