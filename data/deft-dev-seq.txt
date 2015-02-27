@@ -325,7 +325,7 @@ bilateral	DICT
 relations	LEMMA
 with	NONE
 South	DICT
-Korean	NONE
+Korean	DICT
 Prime	DICT
 Minister	NONE
 Han	DICT
@@ -450,7 +450,7 @@ and	IDENTITY
 the	NONE
 removal	DICT
 of	NONE
-Hezbollah	NAME
+Hezbollah	DICT
 as	NONE
 a	NONE
 fighting	VERB
@@ -731,7 +731,7 @@ Abe	BLOCKED
 's	NONE
 claims	VERB
 that	NONE
-China	DICT
+China	NAME
 's	NONE
 satellite-destroying	DICT
 test	VERB
@@ -1118,7 +1118,7 @@ The	NONE
 Interior	DICT
 Ministry	NAME
 of	NONE
-Saudi	DICT
+Saudi	NAME
 Arabia	NAME
 stated	DICT
 on	NONE
@@ -1817,7 +1817,7 @@ a	NONE
 2-week	DICT
 trial	NONE
 in	NONE
-Hanoi	DICT
+Hanoi	NAME
 a	NONE
 Vietnamese	DICT
 court	NONE
@@ -2156,7 +2156,7 @@ of	NONE
 entry	VERB
 to	NONE
 the	NONE
-EU	DICT
+EU	NAME
 for	NONE
 individuals	LEMMA
 deemed	DICT
@@ -2477,7 +2477,7 @@ sovereignty	IDENTITY
 for	NONE
 Gibraltar	DICT
 and	IDENTITY
-Gibraltar	NAME
+Gibraltar	DICT
 's	NONE
 30000	BLOCKED
 inhabitants	DICT
@@ -3692,7 +3692,7 @@ designed	VERB
 to	NONE
 open	DICT
 up	NONE
-North	NAME
+North	DICT
 Korea	NONE
 and	IDENTITY
 the	NONE
@@ -3880,7 +3880,7 @@ in	NONE
 Beijing	DICT
 in	NONE
 070200	BLOCKED
-North	DICT
+North	NAME
 Korea	NAME
 agreed	VERB
 to	NONE
@@ -4308,7 +4308,7 @@ of	NONE
 militants	LEMMA
 .	NONE
 
-Indonesia	DICT
+Indonesia	NAME
 and	IDENTITY
 Australia	DICT
 are	DICT
@@ -4844,7 +4844,7 @@ to	NONE
 back	VERB
 Blair	BLOCKED
 's	NONE
-controversial	DICT
+controversial	NONE
 38-billion-dollar	DICT
 plan	VERB
 to	NONE
@@ -5690,7 +5690,7 @@ Middle	DICT
 East	NAME
 .	NONE
 
-Qatar	DICT
+Qatar	NAME
 's	NONE
 UN	DICT
 ambassador	IDENTITY
@@ -6041,7 +6041,7 @@ a	NONE
 stance	IDENTITY
 could	DICT
 diminish	VERB
-Indonesia	DICT
+Indonesia	NAME
 's	NONE
 standing	IDENTITY
 among	NONE
@@ -6249,7 +6249,7 @@ March	BLOCKED
 deployed	VERB
 troops	DICT
 to	NONE
-Nepal	DICT
+Nepal	NAME
 to	NONE
 monitor	VERB
 Nepal	DICT
@@ -6557,7 +6557,7 @@ Union	NAME
 adopted	DICT
 sanctions	DICT
 against	NONE
-North	NAME
+North	DICT
 Korea	NONE
 on	NONE
 March	BLOCKED
@@ -8927,7 +8927,7 @@ as	NONE
 The	NONE
 crisis	IDENTITY
 over	NONE
-Iran	DICT
+Iran	NAME
 's	NONE
 atomic	DICT
 program	IDENTITY
@@ -9678,7 +9678,7 @@ Taliban	DICT
 leaders	DICT
 including	DICT
 the	NONE
-Taliban	NAME
+Taliban	DICT
 's	NONE
 military	IDENTITY
 operations	LEMMA
@@ -10075,8 +10075,8 @@ million	NONE
 Australian	NONE
 dollars	DICT
 or	NONE
-582	NONE
-million	NONE
+582	BLOCKED
+million	BLOCKED
 United	DICT
 States	NONE
 dollars	LEMMA
@@ -11828,7 +11828,7 @@ the	NONE
 Democratic	DICT
 People	DICT
 's	NONE
-Republic	DICT
+Republic	NAME
 of	NONE
 Korea	NAME
 have	DICT
@@ -11886,7 +11886,7 @@ the	NONE
 Democratic	DICT
 People	DICT
 's	NONE
-Republic	NAME
+Republic	DICT
 of	NONE
 Korea	DICT
 .	NONE
@@ -12123,7 +12123,7 @@ the	NONE
 Democratic	DICT
 People	DICT
 's	NONE
-Republic	NAME
+Republic	DICT
 of	NONE
 Korea	DICT
 around	IDENTITY
@@ -13279,7 +13279,7 @@ executed	VERB
 in	NONE
 Riyadh	DICT
 ,	NONE
-Saudi	DICT
+Saudi	NAME
 Arabia	NAME
 .	NONE
 
@@ -13735,7 +13735,7 @@ June	BLOCKED
 .	NONE
 
 The	NONE
-Treaty	IDENTITY
+Treaty	NAME
 on	NAME
 Conventional	NAME
 Armed	NAME
@@ -14579,7 +14579,7 @@ Hamas	DICT
 does	DICT
 not	DICT
 dominate	VERB
-Bethlehem	NAME
+Bethlehem	DICT
 's	NONE
 Council	IDENTITY
 because	NONE
@@ -14589,8 +14589,8 @@ the	NONE
 15	BLOCKED
 councilmen	LEMMA
 are	DICT
-Christian	NONE
-and	NONE
+Christian	DICT
+and	DICT
 the	NONE
 mayor	IDENTITY
 of	NONE
@@ -14598,7 +14598,7 @@ Bethlehem	DICT
 is	DICT
 Christian	DICT
 and	IDENTITY
-not	NONE
+not	DICT
 a	NONE
 member	IDENTITY
 of	NONE
@@ -14755,7 +14755,7 @@ that	NONE
 sophisticated	IDENTITY
 laboratories	LEMMA
 inside	NONE
-Afghanistan	DICT
+Afghanistan	NAME
 are	NONE
 converting	VERB
 90	DICT
@@ -16828,7 +16828,7 @@ Russian	DICT
 Federation	NONE
 of	NONE
 the	NONE
-Treaty	NAME
+Treaty	IDENTITY
 on	NAME
 Conventional	NAME
 Forces	NAME
@@ -17204,7 +17204,7 @@ immediately	DICT
 commence	VERB
 talks	VERB
 with	NONE
-India	DICT
+India	NAME
 to	NONE
 prevent	VERB
 future	BLOCKED
@@ -17326,7 +17326,7 @@ sell	DICT
 attack	VERB
 helicopters	LEMMA
 to	NONE
-Myanmar	DICT
+Myanmar	NAME
 threatens	VERB
 a	NONE
 European	DICT
@@ -18278,7 +18278,7 @@ Union	NAME
 arms	LEMMA
 embargo	VERB
 against	NONE
-Myanmar	NAME
+Myanmar	DICT
 is	NONE
 under	NONE
 threat	DICT
@@ -18312,7 +18312,7 @@ Union	NAME
 arms	LEMMA
 embargo	VERB
 against	NONE
-Myanmar	DICT
+Myanmar	NAME
 is	NONE
 under	NONE
 threat	DICT
@@ -19050,7 +19050,7 @@ with	NONE
 the	NONE
 US	DICT
 over	NONE
-US	NAME
+US	DICT
 plans	VERB
 to	NONE
 deploy	VERB
@@ -19541,7 +19541,7 @@ concerns	DICT
 
 On	NONE
 070726	BLOCKED
-France	NAME
+France	DICT
 was	NONE
 criticized	VERB
 over	NONE
@@ -19681,7 +19681,7 @@ amount	DICT
 to	NONE
 eventually	DICT
 helping	VERB
-Libya	DICT
+Libya	NAME
 to	NONE
 acquire	VERB
 nuclear	NONE
@@ -19733,7 +19733,7 @@ to	NONE
 solar	NONE
 energy	IDENTITY
 because	NONE
-Libya	DICT
+Libya	NAME
 enjoys	VERB
 remarkable	IDENTITY
 levels	LEMMA
@@ -19903,7 +19903,7 @@ sea	IDENTITY
 water	IDENTITY
 to	NONE
 improve	VERB
-Libya	NAME
+Libya	DICT
 's	NONE
 supplies	DICT
 of	NONE
@@ -20249,7 +20249,7 @@ is	NONE
 close	DICT
 with	NONE
 the	NONE
-International	NAME
+International	DICT
 Atomic	NONE
 Energy	NAME
 Agency	NONE
@@ -21931,8 +21931,8 @@ and	IDENTITY
 marijuana	IDENTITY
 worth	DICT
 approximately	IDENTITY
-1.7	DICT
-million	NONE
+1.7	BLOCKED
+million	BLOCKED
 United	DICT
 States	NAME
 dollars	LEMMA
@@ -21962,8 +21962,8 @@ other	IDENTITY
 drugs	LEMMA
 worth	DICT
 approximately	IDENTITY
-1.7	DICT
-million	DICT
+1.7	BLOCKED
+million	BLOCKED
 United	DICT
 States	VERB
 dollars	LEMMA
@@ -23265,7 +23265,7 @@ September	BLOCKED
 ,	BLOCKED
 2007	BLOCKED
 that	NONE
-China	NAME
+China	DICT
 is	NONE
 a	NONE
 frequent	IDENTITY
@@ -23348,7 +23348,7 @@ The	NONE
 latest	IDENTITY
 incident	IDENTITY
 involves	VERB
-France	DICT
+France	NAME
 and	IDENTITY
 French	NONE
 Secretary	IDENTITY
@@ -23482,7 +23482,7 @@ cooperation	VERB
 .	NONE
 
 The	DICT
-North	NAME
+North	DICT
 Korean	DICT
 government	VERB
 has	NONE
@@ -23626,7 +23626,7 @@ is	NONE
 impoverished	VERB
 and	IDENTITY
 the	NONE
-North	DICT
+North	NAME
 Korean	NONE
 government	VERB
 has	NONE
@@ -23817,7 +23817,7 @@ economic	DICT
 benefits	LEMMA
 by	NONE
 ending	VERB
-Kazakhstan	DICT
+Kazakhstan	NAME
 's	NONE
 nuclear	DICT
 program	IDENTITY
@@ -24718,7 +24718,7 @@ and	NAME
 Analysis	NAME
 Wing	NAME
 informed	VERB
-India	DICT
+India	NAME
 's	NONE
 Market	IDENTITY
 Watch	NAME
@@ -25627,7 +25627,7 @@ converted	VERB
 to	NONE
 heroin	IDENTITY
 within	NONE
-Afghanistan	DICT
+Afghanistan	NAME
 and	IDENTITY
 the	NONE
 main	IDENTITY
@@ -26276,7 +26276,7 @@ Yushchenko	BLOCKED
 .	NONE
 
 The	NONE
-Eurasian	DICT
+Eurasian	NAME
 Youth	NONE
 Union	NONE
 stated	DICT
@@ -26488,7 +26488,7 @@ in	NONE
 the	NONE
 west	IDENTITY
 of	NONE
-Ukraine	DICT
+Ukraine	NAME
 .	NONE
 
 This	IDENTITY
@@ -27752,7 +27752,7 @@ number	DICT
 of	NONE
 executions	VERB
 in	NONE
-Iran	NAME
+Iran	DICT
 in	NONE
 2007	BLOCKED
 to	NONE
@@ -29007,7 +29007,7 @@ is	DICT
 a	NONE
 response	DICT
 to	NONE
-U.S.	NAME
+U.S.	DICT
 plans	VERB
 to	NONE
 establish	VERB
@@ -29898,13 +29898,13 @@ Party	NAME
 daily	DICT
 Nhan	DICT
 Dan	NAME
-newspaper	DICT
+newspaper	IDENTITY
 said	DICT
 that	NONE
 judges	VERB
 in	NONE
 the	NONE
-five-day	DICT
+five-day	NONE
 trial	IDENTITY
 in	NONE
 the	NONE
@@ -31091,7 +31091,7 @@ crime	IDENTITY
 
 Authorities	LEMMA
 in	NONE
-Myanmar	NAME
+Myanmar	DICT
 raided	VERB
 3	BLOCKED
 poppy	IDENTITY
@@ -31268,7 +31268,7 @@ Myanmar	DICT
 government	DICT
 has	NONE
 stated	DICT
-Myanmar	DICT
+Myanmar	NAME
 will	DICT
 become	VERB
 opium-free	DICT
@@ -31599,7 +31599,7 @@ Russia	DICT
 offered	VERB
 to	NONE
 help	VERB
-Libya	DICT
+Libya	NAME
 on	NONE
 December	BLOCKED
 19	BLOCKED
@@ -32341,7 +32341,7 @@ salutes	DICT
 the	NONE
 participation	DICT
 of	NONE
-Libya	NAME
+Libya	DICT
 in	NONE
 the	NONE
 work	VERB
@@ -32591,7 +32591,7 @@ deal	VERB
 between	NONE
 France	DICT
 and	IDENTITY
-Libya	DICT
+Libya	NAME
 by	NONE
 saying	DICT
 it	DICT
@@ -32904,7 +32904,7 @@ from	NONE
 nuclear	DICT
 knowledge	DICT
 in	NONE
-Libya	NAME
+Libya	DICT
 after	IDENTITY
 Libya	DICT
 's	NONE
@@ -33291,7 +33291,7 @@ remained	VERB
 limited	VERB
 .	NONE
 
-Vietnam	DICT
+Vietnam	NAME
 's	NONE
 mountainous	DICT
 northwest	IDENTITY
@@ -34358,7 +34358,7 @@ economy	IDENTITY
 ;	DICT
 weapons	LEMMA
 
-China	DICT
+China	NAME
 's	NONE
 military	IDENTITY
 budget	IDENTITY
@@ -34650,7 +34650,7 @@ the	NONE
 defense	DICT
 capability	DICT
 of	NONE
-Taiwan	DICT
+Taiwan	NAME
 in	NONE
 light	DICT
 of	NONE
@@ -34734,7 +34734,7 @@ days	LEMMA
 of	NONE
 silence	DICT
 that	NONE
-China	NAME
+China	DICT
 had	NONE
 fired	VERB
 a	NONE
@@ -35294,7 +35294,7 @@ violated	VERB
 the	NONE
 spirit	IDENTITY
 of	NONE
-China	NAME
+China	DICT
 's	NONE
 proclaimed	VERB
 position	IDENTITY
@@ -36497,7 +36497,7 @@ by	NONE
 the	NONE
 military	IDENTITY
 and	IDENTITY
-China	DICT
+China	NAME
 has	NONE
 been	NONE
 recently	BLOCKED
@@ -36738,7 +36738,7 @@ News	NAME
 Agency	NAME
 stated	DICT
 that	NONE
-China	DICT
+China	NAME
 secured	VERB
 the	NONE
 311	DICT
@@ -38226,7 +38226,7 @@ evidence	VERB
 indicating	DICT
 diversion	DICT
 of	NONE
-Iran	NAME
+Iran	DICT
 's	NONE
 nuclear	DICT
 activities	LEMMA
@@ -38837,7 +38837,7 @@ the	NONE
 Chairman	IDENTITY
 of	NONE
 the	NONE
-NSG	DICT
+NSG	NAME
 on	NONE
 17	BLOCKED
 March	BLOCKED
@@ -39303,7 +39303,7 @@ Israeli-specific	DICT
 request	VERB
 of	NONE
 the	NONE
-NSG	NAME
+NSG	DICT
 .	NONE
 
 Israel	DICT
@@ -39561,7 +39561,7 @@ Hill	BLOCKED
 stated	DICT
 the	NONE
 shutdown	VERB
-could	NONE
+could	DICT
 occur	DICT
 in	NONE
 a	NONE
@@ -39667,7 +39667,7 @@ in	NONE
 accounts	LEMMA
 linked	VERB
 to	NONE
-North	NAME
+North	DICT
 Korea	NONE
 held	DICT
 in	NONE
@@ -40086,7 +40086,7 @@ international	IDENTITY
 pressure	VERB
 to	NONE
 curb	VERB
-Iran	NAME
+Iran	DICT
 's	NONE
 nuclear	DICT
 projects	LEMMA
@@ -40807,7 +40807,7 @@ included	VERB
 the	NONE
 Government	DICT
 of	NONE
-Iran	DICT
+Iran	NAME
 and	NONE
 Iran	DICT
 's	NONE
@@ -40919,7 +40919,7 @@ as	NONE
 the	NONE
 standoff	IDENTITY
 with	NONE
-Iran	DICT
+Iran	NAME
 over	NONE
 Iran	DICT
 's	NONE

@@ -74,7 +74,7 @@ public class SequenceSystem {
                 return true;
             };
 
-            pipeline.nerPlusPlus.sigma = 3.0;
+            pipeline.nerPlusPlus.sigma = 0.7;
 
             if (DEBUG) System.out.println("Training NER++ classifier");
             pipeline.nerPlusPlus.train(nerPlusPlusForClassifier);
@@ -114,6 +114,11 @@ public class SequenceSystem {
 
         getManygenSystemForData(trainOnProxy ? "data/train-proxy-manygen.txt" : "data/deft-train-manygen.txt");
         getNERSystemForData(trainOnProxy ? "data/train-proxy-seq.txt" : "data/deft-train-seq.txt");
+
+        /*
+        getManygenSystemForData("data/deft-test-manygen.txt");
+        getNERSystemForData("data/deft-test-seq.txt");
+        */
     }
 
     StanfordCoreNLP cachedCore = null;
@@ -183,7 +188,7 @@ public class SequenceSystem {
         List<AMR> gen = pipeline.predictClusters(tokens, annotation);
 
         Set<Triple<Integer,Integer,String>> spans = new HashSet<>();
-        for (AMR cluster : gen) {
+        outer: for (AMR cluster : gen) {
             int minAlignment = Integer.MAX_VALUE;
             int maxAlignment = Integer.MIN_VALUE;
             for (AMR.Node node : cluster.nodes) {
@@ -192,6 +197,12 @@ public class SequenceSystem {
             }
             String amrText = cluster.toStringForSmatch();
             amrText = amrText.replaceAll("op[1-9]","op");
+
+            // Don't add duplicate nodes, cause SRL++ is too stupid to know to de-dupe
+            for (Triple<Integer,Integer,String> span : spans) {
+                if (span.third.equals(amrText)) continue outer;
+            }
+
             spans.add(new Triple<>(minAlignment, maxAlignment, amrText));
         }
 

@@ -117,6 +117,9 @@ public class AMRPipeline {
 
                 add((pair) -> embeddings.get(pair.first.tokens[pair.second]));
 
+                // Left embeddings exploded : 90,000 features.... omg
+                // add((pair) -> embeddings.get(pair.first.tokens[pair.second]));
+
                 // Left context
                 add((pair) -> {
                     if (pair.second == 0) return "^";
@@ -170,6 +173,17 @@ public class AMRPipeline {
                     else return myPOS+":"+pair.first.annotation.get(CoreAnnotations.TokensAnnotation.class)
                             .get(pair.second+1).get(CoreAnnotations.PartOfSpeechAnnotation.class);
                 });
+                // Left POS + Right POS
+                add((pair) -> {
+                    String leftPOS = "^";
+                    if (pair.second > 0) {
+                        leftPOS = pair.first.annotation.get(CoreAnnotations.TokensAnnotation.class)
+                                .get(pair.second - 1).get(CoreAnnotations.PartOfSpeechAnnotation.class);
+                    }
+                    if (pair.second >= pair.first.tokens.length-1) return leftPOS+":$";
+                    else return leftPOS+":"+pair.first.annotation.get(CoreAnnotations.TokensAnnotation.class)
+                            .get(pair.second+1).get(CoreAnnotations.PartOfSpeechAnnotation.class);
+                });
 
                 // Token NER
                 add((pair) -> pair.first.annotation.get(CoreAnnotations.TokensAnnotation.class).get(pair.second).get(CoreAnnotations.NamedEntityTagAnnotation.class));
@@ -189,15 +203,53 @@ public class AMRPipeline {
                     }
                     return pair.first.annotation.get(CoreAnnotations.TokensAnnotation.class).get(pair.second).get(CoreAnnotations.NamedEntityTagAnnotation.class)+":"+rightNER;
                 });
+                // Left NER + Right NER
+                add((pair) -> {
+                    String leftNER = "^";
+                    if (pair.second > 0) {
+                        leftNER = pair.first.annotation.get(CoreAnnotations.TokensAnnotation.class).get(pair.second-1).get(CoreAnnotations.NamedEntityTagAnnotation.class);
+                    }
+                    String rightNER = "$";
+                    if (pair.second < pair.first.tokens.length-1) {
+                        rightNER = pair.first.annotation.get(CoreAnnotations.TokensAnnotation.class).get(pair.second+1).get(CoreAnnotations.NamedEntityTagAnnotation.class);
+                    }
+                    return leftNER + rightNER;
+                });
 
-                // Get the thing we'll actually be predicting with the dictionary, in case that's useful information
-                // This should strongly bias against NULLs, in theory.
+                // Dictionary + token
                 add((pair) -> pair.first.tokens[pair.second] + dictionaryLookup.predict(new Triple<>(pair.first, pair.second, pair.second)));
 
-                // Closest frame token
+                // Closest frame
                 add((pair) -> {
                     String lemma = pair.first.annotation.get(CoreAnnotations.TokensAnnotation.class).get(pair.second).get(CoreAnnotations.LemmaAnnotation.class);
                     return frameManager.getClosestFrame(lemma);
+                });
+
+                // Get the thing we'll actually be predicting with the dictionary, in case that's useful information
+                // This should strongly bias against NULLs, in theory.
+                add((pair) -> dictionaryLookup.predict(new Triple<>(pair.first, pair.second, pair.second)));
+
+                // Closest frame + token
+                add((pair) -> {
+                    String lemma = pair.first.annotation.get(CoreAnnotations.TokensAnnotation.class).get(pair.second).get(CoreAnnotations.LemmaAnnotation.class);
+                    return pair.first.tokens[pair.second]+frameManager.getClosestFrame(lemma);
+                });
+
+                // Starts with non-, should probably be a DICT lookup
+                add((pair) -> {
+                    String word = pair.first.annotation.get(CoreAnnotations.TokensAnnotation.class).get(pair.second).word();
+                    if (word.length() < 3 || !word.substring(0,3).equalsIgnoreCase("non")) {
+                        return "NOT-NON";
+                    }
+                    else {
+                        return "NON";
+                    }
+                });
+
+                // Word length indicator, basically only useful for the single character case
+                add((pair) -> {
+                    String word = pair.first.annotation.get(CoreAnnotations.TokensAnnotation.class).get(pair.second).word();
+                    return Integer.toString(word.length());
                 });
 
                 /*

@@ -4,6 +4,7 @@ import edu.stanford.nlp.ling.CoreAnnotations;
 import edu.stanford.nlp.pipeline.Annotation;
 import nlp.stamr.AMR;
 import nlp.stamr.AMRSlurp;
+import nlp.stamr.annotation.AnnotationWrapper;
 import nlp.stamr.ontonotes.SRLSlurp;
 
 import java.io.BufferedWriter;
@@ -18,6 +19,7 @@ import java.util.*;
 public class AlignmentTester {
 
     public static void main(String[] args) throws IOException, InterruptedException {
+        /*
         AMR[] lpBank = AMRSlurp.slurp("src/test/resources/amr-bank-v1.2-human-assisted.txt", AMRSlurp.Format.LDC);
         AMR[] smallbank = new AMR[300];
         for (int i = 0; i < smallbank.length; i++) {
@@ -30,6 +32,7 @@ public class AlignmentTester {
 
         SRLSlurp.ignored = true;
         testBank(smallbank, folds, threads, iterations, "src/test/resources/experimental-results/smallbank-no-ontonotes");
+        */
 
         /*
         SRLSlurp.ignored = false;
@@ -47,12 +50,15 @@ public class AlignmentTester {
         SRLSlurp.ignored = false;
         testBank(bank, folds, threads, iterations, "src/test/resources/results/bigbank-with-ontonotes");
         */
+
+        AMR[] bank = AMRSlurp.slurp("data/training-500-subset.txt", AMRSlurp.Format.LDC);
+        testBankRegenerative(null, bank);
     }
 
     private static class AlignmentKeeper {
         Map<AMR.Node, Integer> mappings = new IdentityHashMap<AMR.Node, Integer>();
-
         Map<Integer,Integer> reverseSplit = new HashMap<>();
+        String[] originalUntokenized = null;
 
         public void saveAndConceal(AMR amr) {
             amr.matchesCache.clear();
@@ -66,10 +72,14 @@ public class AlignmentTester {
             }
 
             List<String> tokenized = new ArrayList<>();
-            Annotation annotation = amr.multiSentenceAnnotationWrapper.sentences.get(0).annotation;
-            for (int i = 0; i < annotation.get(CoreAnnotations.TokensAnnotation.class).size(); i++) {
-                tokenized.add(annotation.get(CoreAnnotations.TokensAnnotation.class).get(i).word());
+            for (AnnotationWrapper wrapper : amr.multiSentenceAnnotationWrapper.sentences) {
+                Annotation annotation = wrapper.annotation;
+                for (int i = 0; i < annotation.get(CoreAnnotations.TokensAnnotation.class).size(); i++) {
+                    tokenized.add(annotation.get(CoreAnnotations.TokensAnnotation.class).get(i).word());
+                }
             }
+
+            // Save a mapping between tokenized an untokenized
 
             int untokenizedCursor = 0;
             int tokenizedCursor = 0;
@@ -77,6 +87,12 @@ public class AlignmentTester {
             while (tokenizedCursor < tokenized.size()) {
                 String currentTokenized = tokenized.get(tokenizedCursor);
                 String currentUntokenized = amr.sourceText[untokenizedCursor];
+
+                /*
+                if (!(currentUntokenized.contains(currentTokenized))) {
+                    throw new IllegalStateException("Current tokenized: "+currentTokenized+", current untokenized: "+currentUntokenized+", don't agree");
+                }
+                */
 
                 reverseSplit.put(tokenizedCursor, untokenizedCursor);
 
@@ -97,9 +113,13 @@ public class AlignmentTester {
                     tokenizedCursor++;
                 }
             }
+
+            originalUntokenized = amr.sourceText;
+            amr.sourceText = tokenized.toArray(new String[tokenized.size()]);
         }
 
         public void restore(AMR amr) {
+            amr.sourceText = originalUntokenized;
             amr.matchesCache.clear();
             for (AMR.Node node : amr.nodes) {
                 if (mappings.containsKey(node)) {
@@ -113,9 +133,9 @@ public class AlignmentTester {
             int correct = 0;
             for (AMR.Node node : amr.nodes) {
                 if (mappings.containsKey(node)) {
-                    if (node.alignment == mappings.get(node)) correct++;
+                    if (reverseSplit.get(node.alignment).equals(mappings.get(node))) correct++;
                     else {
-                        node.testAlignment = node.alignment;
+                        node.testAlignment = reverseSplit.get(node.alignment);
                     }
                 }
             }

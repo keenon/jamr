@@ -157,16 +157,24 @@ public class AnnotationManager {
 
     public MultiSentenceAnnotationWrapper annotateMultiSentence(String str) {
 
-        // First check if we need to do multiple sentences here. If we do, then do that
-
-        Annotation an = new Annotation(str);
-        getSplitterPipeline().annotate(an);
+        // Never sentence split, it's annoying and stupid
 
         List<AnnotationWrapper> sentences = new ArrayList<AnnotationWrapper>();
+        sentences.add(annotate(str));
+
+        // First check if we need to do multiple sentences here. If we do, then do that
+
+        /*
+        Annotation an = new Annotation(str);
+        getSplitterPipeline().annotate(an);
+        List<AnnotationWrapper> sentences = new ArrayList<AnnotationWrapper>();
+
         for (CoreMap sentence : an.get(CoreAnnotations.SentencesAnnotation.class)) {
             sentences.add(annotate(sentence.toString()));
         }
         assert(sentences.size() > 0);
+        */
+
         return new MultiSentenceAnnotationWrapper(sentences);
     }
 

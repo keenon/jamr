@@ -31,8 +31,8 @@ public class DumpSequence {
     public static void main(String[] args) throws IOException {
         // getBetterRandomTrainSet();
         // getRandomDevSet();
-        dumpReleaseData();
-        // dumpProxyData();
+        // dumpReleaseData();
+        dumpProxyData();
         // dumpMicrodata();
         // dumpPreAligned();
         // dumpPreAlignedDev();
@@ -95,33 +95,45 @@ public class DumpSequence {
     }
 
     public static void dumpReleaseData() throws IOException {
-        AMR[] train = AMRSlurp.slurp("data/deft-amr-release-r3-proxy-train-aligned.txt", AMRSlurp.Format.LDC);
-        AMR[] dev = AMRSlurp.slurp("data/deft-amr-release-r3-proxy-dev-aligned.txt", AMRSlurp.Format.LDC);
-        AMR[] test = AMRSlurp.slurp("data/deft-amr-release-r3-proxy-test-aligned.txt", AMRSlurp.Format.LDC);
-        // retokenizeAndAlign(train, "data/deft-amr-release-r3-proxy-train-aligned.txt");
-        // retokenizeAndAlign(dev, "data/deft-amr-release-r3-proxy-dev-aligned.txt");
-        // retokenizeAndAlign(test, "data/deft-amr-release-r3-proxy-test-aligned.txt");
+        AMR[] train = AMRSlurp.slurp("data/deft-amr-release-r3-proxy-train.txt", AMRSlurp.Format.LDC);
+        AMR[] dev = AMRSlurp.slurp("data/deft-amr-release-r3-proxy-dev.txt", AMRSlurp.Format.LDC);
+        AMR[] test = AMRSlurp.slurp("data/deft-amr-release-r3-proxy-test.txt", AMRSlurp.Format.LDC);
 
-        // dumpSequences(train, "data/deft-train-seq.txt");
+        retokenizeAndAlign(train, "data/deft-amr-release-r3-proxy-train-aligned.txt");
+        retokenizeAndAlign(dev, "data/deft-amr-release-r3-proxy-dev-aligned.txt");
+        retokenizeAndAlign(test, "data/deft-amr-release-r3-proxy-test-aligned.txt");
+
+        dumpSequences(train, "data/deft-train-seq.txt");
         dumpManygenDictionaries(train, "data/deft-train-manygen.txt");
-        // dumpCONLL(train, "data/deft-train-conll.txt");
+        dumpCONLL(train, "data/deft-train-conll.txt");
 
-        // dumpSequences(dev, "data/deft-dev-seq.txt");
+        dumpSequences(dev, "data/deft-dev-seq.txt");
         dumpManygenDictionaries(dev, "data/deft-dev-manygen.txt");
-        // dumpCONLL(dev, "data/deft-dev-conll.txt");
+        dumpCONLL(dev, "data/deft-dev-conll.txt");
 
-        // dumpSequences(test, "data/deft-test-seq.txt");
+        dumpSequences(test, "data/deft-test-seq.txt");
         dumpManygenDictionaries(test, "data/deft-test-manygen.txt");
-        // dumpCONLL(test, "data/deft-test-conll.txt");
+        dumpCONLL(test, "data/deft-test-conll.txt");
     }
 
     public static void dumpProxyData() throws IOException {
-        AMR[] train = AMRSlurp.slurp("data/amr-release-1.0-training-proxy-aligned.txt", AMRSlurp.Format.LDC);
-        // retokenizeAndAlign(train, "data/amr-release-1.0-training-proxy-aligned.txt");
+        AMR[] train = AMRSlurp.slurp("data/amr-release-1.0-training-proxy.txt", AMRSlurp.Format.LDC);
+        /*
+        for (AMR amr : train) {
+            Annotation annotation = amr.multiSentenceAnnotationWrapper.sentences.get(0).annotation;
+            List<String> split = new ArrayList<>();
+            for (CoreLabel tok : annotation.get(CoreAnnotations.TokensAnnotation.class)) {
+                split.add(tok.word());
+            }
+            String[] toks = split.toArray(new String[split.size()]);
+            amr.sourceText = toks;
+        }
+        */
+        retokenizeAndAlign(train, "data/amr-release-1.0-training-proxy-aligned.txt");
 
-        // dumpSequences(train, "data/train-proxy-seq.txt");
+        dumpSequences(train, "data/train-proxy-seq.txt");
         dumpManygenDictionaries(train, "data/train-proxy-manygen.txt");
-        // dumpCONLL(train, "data/train-proxy-conll.txt");
+        dumpCONLL(train, "data/train-proxy-conll.txt");
     }
 
     public static void dumpTestData() throws IOException {
