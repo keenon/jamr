@@ -1,5 +1,6 @@
 package nlp.stamr.datagen;
 
+import edu.stanford.nlp.dcoref.CoNLL2011DocumentReader;
 import edu.stanford.nlp.dcoref.CorefChain;
 import edu.stanford.nlp.dcoref.CorefCoreAnnotations;
 import edu.stanford.nlp.ie.NumberNormalizer;
@@ -117,7 +118,7 @@ public class DumpSequence {
     }
 
     public static void dumpProxyData() throws IOException {
-        AMR[] train = AMRSlurp.slurp("data/amr-release-1.0-training-proxy.txt", AMRSlurp.Format.LDC);
+        AMR[] train = AMRSlurp.slurp("data/amr-release-1.0-training-proxy-aligned.txt", AMRSlurp.Format.LDC);
         /*
         for (AMR amr : train) {
             Annotation annotation = amr.multiSentenceAnnotationWrapper.sentences.get(0).annotation;
@@ -129,11 +130,11 @@ public class DumpSequence {
             amr.sourceText = toks;
         }
         */
-        retokenizeAndAlign(train, "data/amr-release-1.0-training-proxy-aligned.txt");
+        // retokenizeAndAlign(train, "data/amr-release-1.0-training-proxy-aligned.txt");
 
         dumpSequences(train, "data/train-proxy-seq.txt");
-        dumpManygenDictionaries(train, "data/train-proxy-manygen.txt");
-        dumpCONLL(train, "data/train-proxy-conll.txt");
+        // dumpManygenDictionaries(train, "data/train-proxy-manygen.txt");
+        // dumpCONLL(train, "data/train-proxy-conll.txt");
     }
 
     public static void dumpTestData() throws IOException {
@@ -212,6 +213,19 @@ public class DumpSequence {
     }
 
     public static String getType(AMR.Node node, int i, String[] tokens, Annotation annotation, AMR amr) {
+
+        // Do a DATE and PERSON type, which shouldn't effect things since we grab them deterministically higher up
+        // the pipeline
+
+        String ner = annotation.get(CoreAnnotations.TokensAnnotation.class).get(i).get(CoreAnnotations.NamedEntityTagAnnotation.class).toLowerCase();
+        if (ner.equals("person")) {
+            return "PERSON";
+        }
+        else if (ner.equals("date")) {
+            return "DATE";
+        }
+
+
         if (node.type == AMR.NodeType.QUOTE) {
             if (node.title.equalsIgnoreCase(tokens[i])) {
                 return "NAME";
@@ -342,8 +356,18 @@ public class DumpSequence {
             Set<Integer> blocked = pair.second;
             for (int i = 0; i < amr.sourceText.length; i++) {
                 String type = getType(amr, i);
-                if (blocked.contains(i)) type = "BLOCKED";
-                else typeCounter.incrementCount(type);
+                if (blocked.contains(i)) {
+                    if (type.equals("PERSON") || type.equals("DATE") || type.equals("VALUE")) {
+                        typeCounter.incrementCount(type);
+                    }
+                    type = "BLOCKED";
+                }
+                else {
+                    typeCounter.incrementCount(type);
+                    if (type.equals("PERSON") || type.equals("DATE") || type.equals("VALUE")) {
+                        type = "BLOCKED";
+                    }
+                }
                 bw.append(amr.sourceText[i]).append("\t").append(type).append("\n");
             }
             bw.append("\n");
