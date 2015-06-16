@@ -1,3 +1,34 @@
+Robust Subgraph Generation
+=================
+
+This system is built on the original JAMR code. The original JAMR code has its readme copied below.
+READ THAT FIRST.
+
+Assuming you've read the JAMR docs, here's how to run the Robust Subgraph Generation parser:
+
+First follow the instructions in the JAMR section on downloading all of its dependencies, then use
+the appropriate scripts/config_\*.sh to set up environment variables. Then run scripts/EVAL.sh script, which we've modified to do
+a comparison between our system and two variants of JAMR.
+
+This will run 3 different systems for comparison, JAMR, JAMR + Stanford Subgraph Generation, and JAMR + Gold Subgraphs.
+The Stanford Subgraph output will be titled \*.parsed-stanford-concepts. The system should then also output a RESULTS.txt
+file, assuming everything was set up correctly, which will list smatch scores (using the JAMR version of the smatch script,
+which also reports precision and recall).
+
+#Hacking
+
+DISCLAIMER:
+This is academic code, it's messy.
+
+The entry point for JAMR is AMRParser.scala. It's been modified to accept the flag "--stanford-chunk-gen".
+This will call into StanfordDecoder.decode() during the NER++ stage, which will in turn create
+an instance of nlp.experiments.SequenceSystem, which will load two models: a sequence tagger, and a dictionary tag chunk
+classifier.
+Pre-trained models (LDC2013E117), serialized, are included in data/deft-train-manygen-classifier.ser.gz and data/deft-train-seq-classifier.ser.gz.
+If no other configuration is provided, the SequenceSystem will automatically load these models.
+SequenceSystem is a good place to start if you want to hack on the NER++ components. If you're interested in
+improving SRL++, start in AMRParser.scala.
+
 JAMR - AMR Parser
 =================
 
