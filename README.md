@@ -11,7 +11,7 @@ the appropriate scripts/config_\*.sh to set up environment variables. Then run s
 a comparison between our system and two variants of JAMR.
 
 This will run 3 different systems for comparison, JAMR, JAMR + Stanford Subgraph Generation, and JAMR + Gold Subgraphs.
-The Stanford Subgraph output will be titled \*.parsed-stanford-concepts. The system should then also output a RESULTS.txt
+The Stanford Subgraph output will be titled \*.parsed-stanford-concepts. The system should then also output a \*.results
 file, assuming everything was set up correctly, which will list smatch scores (using the JAMR version of the smatch script,
 which also reports precision and recall).
 
@@ -28,6 +28,21 @@ Pre-trained models (LDC2013E117), serialized, are included in data/deft-train-ma
 If no other configuration is provided, the SequenceSystem will automatically load these models.
 SequenceSystem is a good place to start if you want to hack on the NER++ components. If you're interested in
 improving SRL++, start in AMRParser.scala.
+
+#To Insert Your Own NER++ System
+
+To implement your own NER++ system to compare against ours, we recommend taking the following steps:
+
+- Provide your own Decoder.scala implementation (look at StanfordDecoder/Decoder.scala for reference)
+- Add a flag to the flag parser in AMRParser.scala, ours is on line 36
+- Modify the if case on line 209 of AMRParser.scala to use your decoder if your decoder flag (from the last step) is present
+- Modify scripts/EVAL.sh to run another test using your system. Our test call is on lines 75-89, you can copy paste that and modify the 
+  call by replacing "--stanford-chunk-gen" with your own flag, and changing the "\*.parsed-stanford-concepts" and "\*.parsed-stanford-concepts.err" to your own unique extension
+- Copy lines 115-118 of scripts/EVAL.sh to run smatch against the output files you generated in the code your wrote in the last step, and tee it into the \*.results file
+
+#To Insert Your Own SRL++ System
+
+Good luck! That's all JAMR code, so crack out your Scala chops and figure it out. We still don't totally understand how it works, so won't be able to help you there.
 
 JAMR - AMR Parser
 =================
